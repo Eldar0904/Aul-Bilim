@@ -166,6 +166,10 @@
     KZ62: { kk: 'Ұлытау', en: 'Ulytau' },
     KZ63: { kk: 'ШҚО', en: 'East KZ' }
   };
+  var MAP_LABEL_POSITIONS = {
+    KZ11: { x: 575, y: 170 },
+    KZ35: { x: 600, y: 315 }
+  };
 
   document.addEventListener('DOMContentLoaded', function () {
     var stage = document.getElementById('map-stage');
@@ -208,9 +212,13 @@
         if (!label) return;
         var region = regionByMapId[mapId];
         var box = path.getBBox();
-        var text = el('text', {
+        var pos = MAP_LABEL_POSITIONS[mapId] || {
           x: box.x + box.width / 2,
-          y: box.y + box.height / 2,
+          y: box.y + box.height / 2
+        };
+        var text = el('text', {
+          x: pos.x,
+          y: pos.y,
           'class': 'map-label' + (region ? ' active' : ''),
           'data-map-label': mapId
         });
@@ -264,20 +272,8 @@
     }
 
     /* ---- tooltip ---- */
-    function showTip(r, evt) {
-      var rect = stage.getBoundingClientRect();
-      tip.innerHTML = bi(r.kk, r.en);
-      tip.style.left = (evt.clientX - rect.left) + 'px';
-      tip.style.top = (evt.clientY - rect.top) + 'px';
-      tip.classList.add('show');
-    }
     function hideTip() { tip.classList.remove('show'); }
 
-    svg.addEventListener('mousemove', function (e) {
-      if (current) return;
-      var id = e.target.getAttribute && e.target.getAttribute('data-region');
-      if (id) showTip(regionById(id), e); else hideTip();
-    });
     svg.addEventListener('mouseleave', hideTip);
 
     /* ---- zoom ---- */
