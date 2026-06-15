@@ -266,13 +266,10 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .map-grid { display: grid; grid-template-columns: 1fr; position: relative; }
 .map-wrap { position: relative; order: 1; }
 .map-wrap img { width: 100%; display: block; filter: hue-rotate(168deg) saturate(1.08) brightness(1.02); }
-.map-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
-.map-stats .s { background: rgba(255,255,255,0.7); border-radius: 14px; padding: 12px 14px; }
-.map-stats .s .n { font-family: var(--fh); font-weight: 900; font-size: 22px; color: var(--primary); line-height: 1; }
-.map-stats .s .l { font-size: 11px; margin-top: 4px; }
-
 /* ---------- INTERACTIVE MAP ---------- */
-.map-col { position: absolute; bottom: 32px; left: 32px; z-index: 4; max-width: 300px; background: rgba(255,255,255,0.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 24px; padding: 22px 24px; box-shadow: 0 8px 32px -8px rgba(27,79,138,0.22); }
+.map-col { position: absolute; top: 26px; left: 26px; z-index: 4; max-width: 250px; background: rgba(255,255,255,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 16px 20px; box-shadow: 0 8px 28px -10px rgba(27,79,138,0.22); }
+.map-intro .kicker { margin-bottom: 8px; }
+.map-intro h2 { font-size: 21px; line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
 .map-stage { position: relative; overflow: hidden; border-radius: 0; }
 .map-pan { position: relative; transform-origin: 0 0; transition: transform .72s cubic-bezier(.16,.84,.34,1); will-change: transform; }
 .map-pan img { display: block; width: 100%; }
@@ -518,9 +515,8 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .hero h1 { font-size: 40px; }
   .head h2 { font-size: 34px; }
   .why, .form-card { padding: 40px 26px; }
-  .map-col { left: 16px; bottom: 16px; max-width: 240px; padding: 16px 18px; }
-  .map-stats .s .n { font-size: 18px; }
-  .map-stats { gap: 8px; }
+  .map-col { left: 14px; top: 14px; max-width: 210px; padding: 13px 16px; }
+  .map-intro h2 { font-size: 18px; }
   .form-grid { grid-template-columns: 1fr; }
   .partner-cta .card { padding: 48px 26px; }
   .hero-badge { left: 0; }
