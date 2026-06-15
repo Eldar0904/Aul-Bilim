@@ -280,8 +280,6 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .map-hot polygon.hot { fill: transparent; stroke: transparent; stroke-width: 0; cursor: pointer; }
 .map-hot polygon.hot:hover { fill: transparent; }
 .map-hot polygon.hot.sel { fill: transparent; }
-.map-hot polygon.hot.active { fill: rgba(242,164,19,0.42); }
-.map-hot polygon.hot.active:hover { fill: rgba(242,164,19,0.42); }
 .map-hot .pin { fill: #fff; stroke: var(--accent-deep); stroke-width: 3; cursor: pointer; transition: opacity .3s; }
 .map-hot .pulse { fill: var(--accent); opacity: 0; transform-box: fill-box; transform-origin: center; pointer-events: none; animation: none; }
 .map-hot .pulse.hovered { animation: mappulse 1.6s ease-out infinite; }

@@ -77,7 +77,7 @@
     },
     {
       id: 'turkistan', kk: 'Түркістан облысы', en: 'Turkistan Region', total: 43,
-      active: true,
+      noPin: true,
       cx: 0.443, cy: 0.719,
       poly: '516,324 521,326 614,436 593,437 597,445 593,464 601,471 602,500 618,513 614,516 614,523 611,523 606,535 611,542 580,562 573,563 564,572 561,572 562,550 553,552 547,538 531,522 517,528 480,525 451,530 430,507 423,495 374,463 371,457 371,440 375,430 396,405 408,400 411,393 419,391 432,368 447,366 463,387 473,390 511,361 498,338 480,327',
       districts: [
@@ -91,8 +91,8 @@
     },
     {
       id: 'jambyl', kk: 'Жамбыл облысы', en: 'Jambyl Region', total: 32,
-      active: true,
-      cx: 0.62, cy: 0.79,
+      noPin: true,
+      cx: 0.601, cy: 0.81,
       poly: '614,436 757,436 758,435 781,437 779,463 771,467 779,472 780,477 791,487 792,495 796,499 806,502 812,514 812,542 820,549 848,552 852,576 818,604 772,628 716,642 660,635 612,614 580,592 561,572 564,572 573,563 580,562 611,542 606,535 611,523 614,523 614,516 618,513 602,500 601,471 593,464 597,445 593,437',
       districts: [
         { kk: 'Байзақ', en: 'Baizak', n: 6 },
@@ -141,18 +141,19 @@
 
     /* build hotspots + pins */
     REGIONS.forEach(function (r) {
-      var cls = 'hot' + (r.active ? ' active' : '');
-      var pg = el('polygon', { points: r.poly, 'class': cls, 'data-region': r.id });
+      var pg = el('polygon', { points: r.poly, 'class': 'hot', 'data-region': r.id });
       svg.appendChild(pg);
     });
     REGIONS.forEach(function (r) {
       var px = r.cx * VB_W, py = r.cy * VB_H;
       var p1 = el('circle', { cx: px, cy: py, r: 10, 'class': 'pulse', 'data-pulse': r.id });
       var p2 = el('circle', { cx: px, cy: py, r: 10, 'class': 'pulse pulse2', 'data-pulse': r.id });
-      var pin = el('circle', { cx: px, cy: py, r: 7, 'class': 'pin', 'data-region': r.id });
       svg.appendChild(p1);
       svg.appendChild(p2);
-      svg.appendChild(pin);
+      if (!r.noPin) {
+        var pin = el('circle', { cx: px, cy: py, r: 7, 'class': 'pin', 'data-region': r.id });
+        svg.appendChild(pin);
+      }
     });
 
     /* hover → pulse rings */
