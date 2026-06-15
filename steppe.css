@@ -265,7 +265,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .map-card { background: #fff; border-radius: 40px; padding: 0; overflow: hidden; box-shadow: 0 24px 60px -34px rgba(27,79,138,0.4); }
 .map-grid { display: grid; grid-template-columns: 1fr; position: relative; }
 .map-wrap { position: relative; order: 1; }
-.map-wrap img { width: 100%; display: block; filter: hue-rotate(168deg) saturate(1.08) brightness(1.02); }
+.map-wrap img { width: 100%; display: block; }
 /* ---------- INTERACTIVE MAP ---------- */
 .map-col { position: absolute; top: 26px; left: 26px; z-index: 4; max-width: 250px; background: rgba(255,255,255,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 16px 20px; box-shadow: 0 8px 28px -10px rgba(27,79,138,0.22); }
 .map-intro .kicker { margin-bottom: 8px; }
@@ -274,17 +274,16 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .map-pan { position: relative; transform-origin: 0 0; transition: transform .72s cubic-bezier(.16,.84,.34,1); will-change: transform; }
 .map-pan img { display: block; width: 100%; }
 .map-hot { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.map-hot polygon.hot { fill: transparent; stroke: transparent; stroke-width: 0; cursor: pointer; }
-.map-hot polygon.hot:hover { fill: transparent; }
-.map-hot polygon.hot.sel { fill: transparent; }
-.map-hot .pin { fill: #fff; stroke: var(--accent-deep); stroke-width: 3; cursor: pointer; transition: opacity .3s; }
+.map-hot .map-region { fill: #e7e3dd; stroke: rgba(255,255,255,0.92); stroke-width: 1.35; vector-effect: non-scaling-stroke; transition: fill .18s; }
+.map-hot .map-region.active { fill: #d99034; cursor: pointer; }
+.map-hot .map-region.active:hover { fill: #e49b3d; }
+.map-hot .map-region.sel { fill: #d99034; }
 .map-hot .pulse { fill: var(--accent); opacity: 0; transform-box: fill-box; transform-origin: center; pointer-events: none; animation: none; }
 .map-hot .pulse.hovered { animation: mappulse 1.6s ease-out infinite; }
 .map-hot .pulse.pulse2.hovered { animation-delay: 0.65s; }
 @keyframes mappulse { 0% { transform: scale(1); opacity: .55; } 70% { transform: scale(3.5); opacity: 0; } 100% { opacity: 0; } }
-.map-stage.zoomed .map-hot .pin,
 .map-stage.zoomed .map-hot .pulse { opacity: 0; pointer-events: none; }
-.map-stage.zoomed .map-hot polygon.hot:not(.sel) { pointer-events: none; }
+.map-stage.zoomed .map-hot .map-region.active:not(.sel) { pointer-events: none; }
 
 .map-tip { position: absolute; pointer-events: none; background: var(--ink); color: #fff; font-family: var(--fh); font-weight: 700; font-size: 13px; padding: 6px 11px; border-radius: 8px; transform: translate(-50%, -135%); opacity: 0; transition: opacity .15s; white-space: nowrap; z-index: 6; }
 .map-tip.show { opacity: 1; }
