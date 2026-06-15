@@ -8,7 +8,7 @@
  <defs>
   <style><![CDATA[
    #features path { fill: #e7e3dd; stroke: rgba(255,255,255,0.92); stroke-width: 1.35; vector-effect: non-scaling-stroke; }
-   #KZ11, #KZ15, #KZ19, #KZ31, #KZ35, #KZ39, #KZ43, #KZ55, #KZ61 { fill: #d99034; }
+   #KZ10, #KZ11, #KZ19, #KZ27, #KZ31, #KZ35, #KZ39, #KZ43, #KZ61 { fill: #d99034; }
   ]]></style>
  </defs>
  <g id="features">

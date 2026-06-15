@@ -11,17 +11,16 @@
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
   var REGIONS = [
     {
-      id: 'aktobe', kk: 'Ақтөбе облысы', en: 'Aktobe Region', total: 36,
-      mapId: 'KZ15',
-      cx: 0.152, cy: 0.432,
-      poly: '147,199 162,204 159,208 162,212 168,209 172,212 177,202 181,204 188,199 194,212 216,210 222,214 222,219 226,223 236,227 238,233 246,238 243,247 247,252 244,267 248,272 241,287 235,288 225,296 224,307 218,315 204,315 201,318 195,338 178,336 174,329 157,329 124,353 112,354 110,357 96,352 52,346 32,339 38,320 46,311 46,306 40,301 42,283 54,272 53,265 57,257 61,255 64,258 78,280 84,282 92,278 96,270 91,259 91,249 111,237 111,227 120,227 134,219 141,206 148,205',
+      id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', en: 'West Kazakhstan Region', total: 36,
+      mapId: 'KZ27',
+      cx: 0.11, cy: 0.41,
       districts: [
-        { kk: 'Алға', en: 'Alga', n: 7 },
-        { kk: 'Мұғалжар', en: 'Mugalzhar', n: 6 },
-        { kk: 'Хромтау', en: 'Khromtau', n: 8 },
-        { kk: 'Қобда', en: 'Qobda', n: 5 },
-        { kk: 'Мәртөк', en: 'Martok', n: 6 },
-        { kk: 'Шалқар', en: 'Shalqar', n: 4 }
+        { kk: 'Орал', en: 'Oral', n: 8 },
+        { kk: 'Бәйтерек', en: 'Baiterek', n: 6 },
+        { kk: 'Бөрлі', en: 'Borli', n: 6 },
+        { kk: 'Теректі', en: 'Terekti', n: 6 },
+        { kk: 'Ақжайық', en: 'Akzhaiyk', n: 5 },
+        { kk: 'Сырым', en: 'Syrym', n: 5 }
       ]
     },
     {
@@ -67,17 +66,16 @@
       ]
     },
     {
-      id: 'pavlodar', kk: 'Павлодар облысы', en: 'Pavlodar Region', total: 67,
-      mapId: 'KZ55',
-      cx: 0.857, cy: 0.485,
-      poly: '919,203 938,242 941,241 939,238 942,239 951,232 950,223 956,219 968,223 966,233 975,233 977,243 990,241 994,244 1005,244 1012,236 1018,237 1022,232 1031,232 1044,240 1055,265 1058,264 1073,272 1071,277 1079,291 1089,290 1097,292 1099,296 1106,296 1108,291 1120,283 1116,291 1122,294 1129,306 1135,308 1124,310 1119,315 1120,327 1115,334 1106,338 1095,338 1091,342 1086,358 1091,385 1086,393 1080,393 1067,402 1065,396 1043,396 1022,386 1019,388 1000,450 927,403 940,400 924,400 922,397 921,399 915,395 917,393 913,394 828,337 825,289 835,267 841,262 848,263 852,251 858,247 873,255 876,266 896,273 904,265 906,256 903,244 887,227 904,219 906,213 910,213',
+      id: 'abay', kk: 'Абай облысы', en: 'Abay Region', total: 67,
+      mapId: 'KZ10',
+      cx: 0.78, cy: 0.52,
       districts: [
-        { kk: 'Баянауыл', en: 'Bayanaul', n: 13 },
-        { kk: 'Ертіс', en: 'Ertis', n: 12 },
-        { kk: 'Май', en: 'May', n: 9 },
-        { kk: 'Успен', en: 'Uspen', n: 10 },
-        { kk: 'Шарбақты', en: 'Sharbakty', n: 11 },
-        { kk: 'Аққулы', en: 'Akkuly', n: 12 }
+        { kk: 'Семей', en: 'Semey', n: 13 },
+        { kk: 'Аягөз', en: 'Ayagoz', n: 12 },
+        { kk: 'Бесқарағай', en: 'Beskaragai', n: 10 },
+        { kk: 'Бородулиха', en: 'Borodulikha', n: 11 },
+        { kk: 'Жарма', en: 'Zharma', n: 11 },
+        { kk: 'Көкпекті', en: 'Kokpekti', n: 10 }
       ]
     },
     {
@@ -149,6 +147,25 @@
   function bi(kk, en) {
     return '<span lang="kk">' + kk + '</span><span lang="en">' + en + '</span>';
   }
+  var MAP_LABELS = {
+    KZ10: { kk: 'Абай', en: 'Abay' },
+    KZ11: { kk: 'Ақмола', en: 'Akmola' },
+    KZ15: { kk: 'Ақтөбе', en: 'Aktobe' },
+    KZ19: { kk: 'Алматы', en: 'Almaty' },
+    KZ23: { kk: 'Атырау', en: 'Atyrau' },
+    KZ27: { kk: 'БҚО', en: 'West KZ' },
+    KZ31: { kk: 'Жамбыл', en: 'Jambyl' },
+    KZ33: { kk: 'Жетісу', en: 'Jetisu' },
+    KZ35: { kk: 'Қарағанды', en: 'Karaganda' },
+    KZ39: { kk: 'Қостанай', en: 'Kostanay' },
+    KZ43: { kk: 'Қызылорда', en: 'Kyzylorda' },
+    KZ47: { kk: 'Маңғыстау', en: 'Mangystau' },
+    KZ55: { kk: 'Павлодар', en: 'Pavlodar' },
+    KZ59: { kk: 'СҚО', en: 'North KZ' },
+    KZ61: { kk: 'Түркістан', en: 'Turkestan' },
+    KZ62: { kk: 'Ұлытау', en: 'Ulytau' },
+    KZ63: { kk: 'ШҚО', en: 'East KZ' }
+  };
 
   document.addEventListener('DOMContentLoaded', function () {
     var stage = document.getElementById('map-stage');
@@ -168,6 +185,7 @@
       var doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
       var sourcePaths = doc.querySelectorAll('#features path[id]');
       var activePaths = [];
+      var labels = [];
 
       sourcePaths.forEach(function (sourcePath) {
         var mapId = sourcePath.getAttribute('id');
@@ -183,6 +201,32 @@
         svg.appendChild(path);
         if (region) activePaths.push({ region: region, path: path });
       });
+
+      svg.querySelectorAll('.map-region').forEach(function (path) {
+        var mapId = path.getAttribute('data-map-id');
+        var label = MAP_LABELS[mapId];
+        if (!label) return;
+        var region = regionByMapId[mapId];
+        var box = path.getBBox();
+        var text = el('text', {
+          x: box.x + box.width / 2,
+          y: box.y + box.height / 2,
+          'class': 'map-label' + (region ? ' active' : ''),
+          'data-map-label': mapId
+        });
+        if (region) text.setAttribute('data-region', region.id);
+        svg.appendChild(text);
+        labels.push({ node: text, label: label });
+      });
+
+      function syncLabels() {
+        var lang = document.documentElement.getAttribute('data-lang') || 'kk';
+        labels.forEach(function (item) {
+          item.node.textContent = item.label[lang] || item.label.kk;
+        });
+      }
+      syncLabels();
+      new MutationObserver(syncLabels).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
 
       activePaths.forEach(function (item) {
         var box = item.path.getBBox();

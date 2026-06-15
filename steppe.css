@@ -278,6 +278,9 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .map-hot .map-region.active { fill: #d99034; cursor: pointer; }
 .map-hot .map-region.active:hover { fill: #e49b3d; }
 .map-hot .map-region.sel { fill: #d99034; }
+.map-hot .map-label { fill: rgba(32,35,46,0.78); stroke: rgba(255,255,255,0.78); stroke-width: 3; paint-order: stroke; font-family: var(--fh); font-weight: 900; font-size: 18px; text-anchor: middle; dominant-baseline: middle; pointer-events: none; user-select: none; }
+.map-hot .map-label.active { fill: #fff; stroke: rgba(124,76,20,0.58); cursor: pointer; pointer-events: auto; filter: drop-shadow(0 2px 4px rgba(124,76,20,0.28)); transition: filter .18s, fill .18s, stroke .18s; }
+.map-hot .map-label.active:hover { fill: #fff8df; stroke: rgba(255,188,67,0.95); filter: drop-shadow(0 0 8px rgba(255,188,67,0.95)) drop-shadow(0 0 16px rgba(255,188,67,0.55)); }
 .map-hot .pulse { fill: var(--accent); opacity: 0; transform-box: fill-box; transform-origin: center; pointer-events: none; animation: none; }
 .map-hot .pulse.hovered { animation: mappulse 1.6s ease-out infinite; }
 .map-hot .pulse.pulse2.hovered { animation-delay: 0.65s; }
