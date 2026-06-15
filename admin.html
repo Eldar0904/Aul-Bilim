@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Әкімші — Aul Bilim CMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root {
+  --primary:#1B4F8A; --primary-dark:#143A6E; --primary-light:#2D6AB4;
+  --accent:#F2A413; --accent-deep:#E8820A; --accent-soft:#FFD27A;
+  --cream:#FBF5E9; --cream-deep:#F4E8D2;
+  --ink:#21232E; --body:#4A4A5E; --line:rgba(0,0,0,0.08);
+  --surface:#fff;
+  --sidebar:220px;
+  --topbar:62px;
+  --fh:'Raleway',sans-serif; --fb:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--fb);color:var(--ink);background:#F0EDE8;font-size:14px;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;}
+
+/* ── GATE ─────────────────────────────────────────────────── */
+#gate{
+  position:fixed;inset:0;background:var(--primary-dark);
+  display:flex;align-items:center;justify-content:center;z-index:9999;
+}
+.gate-card{
+  background:#fff;border-radius:24px;padding:48px 44px;width:360px;
+  box-shadow:0 32px 64px -24px rgba(0,0,0,0.5);text-align:center;
+}
+.gate-logo{font-family:var(--fh);font-weight:900;font-size:22px;color:var(--primary);margin-bottom:6px;}
+.gate-logo span{color:var(--accent-deep);}
+.gate-sub{font-size:13px;color:var(--body);margin-bottom:28px;}
+.gate-card input{
+  width:100%;padding:12px 15px;border:1.5px solid rgba(0,0,0,0.14);border-radius:10px;
+  font-family:var(--fb);font-size:15px;margin-bottom:14px;transition:border-color .18s;
+}
+.gate-card input:focus{outline:none;border-color:var(--accent);}
+.gate-card .btn{
+  width:100%;padding:13px;background:var(--primary);color:#fff;border:none;
+  border-radius:10px;font-family:var(--fh);font-weight:800;font-size:15px;
+  transition:background .18s;
+}
+.gate-card .btn:hover{background:var(--primary-dark);}
+.gate-err{color:#c0392b;font-size:13px;margin-top:10px;display:none;}
+.gate-hint{font-size:12px;color:#aaa;margin-top:16px;}
+
+/* ── LAYOUT ───────────────────────────────────────────────── */
+#app{display:none;height:100vh;overflow:hidden;}
+#app.show{display:flex;}
+
+/* sidebar */
+aside#sidebar{
+  width:var(--sidebar);flex:none;background:var(--ink);color:rgba(255,255,255,0.88);
+  display:flex;flex-direction:column;height:100vh;overflow-y:auto;
+}
+.sb-logo{
+  padding:20px 20px 16px;font-family:var(--fh);font-weight:900;font-size:18px;
+  color:#fff;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.sb-logo .sun{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--accent-soft),var(--accent) 70%);flex:none;}
+.sb-logo span{color:var(--accent-soft);}
+.sb-logo small{display:block;font-size:10px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-top:1px;text-transform:uppercase;}
+
+.sb-section{padding:14px 12px 6px;font-size:10.5px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
+.sb-page{
+  display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:8px;margin:2px 8px;
+  font-family:var(--fh);font-weight:700;font-size:13.5px;color:rgba(255,255,255,0.75);
+  transition:background .15s,color .15s;cursor:pointer;border:none;background:transparent;width:calc(100% - 16px);text-align:left;
+}
+.sb-page:hover{background:rgba(255,255,255,0.07);color:#fff;}
+.sb-page.active{background:var(--accent);color:var(--ink);}
+.sb-page .badge{
+  margin-left:auto;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);
+  font-size:10px;font-weight:700;padding:2px 7px;border-radius:100px;
+}
+.sb-page.active .badge{background:rgba(0,0,0,0.14);color:var(--ink);}
+
+.sb-bottom{margin-top:auto;padding:16px;border-top:1px solid rgba(255,255,255,0.08);}
+.sb-bottom button{
+  width:100%;padding:9px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.6);border-radius:8px;font-family:var(--fh);font-weight:700;font-size:12.5px;
+  transition:background .15s;
+}
+.sb-bottom button:hover{background:rgba(255,255,255,0.13);color:#fff;}
+
+/* main area */
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;}
+
+/* topbar */
+#topbar{
+  height:var(--topbar);flex:none;background:#fff;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;padding:0 28px;gap:16px;
+}
+#topbar h1{font-family:var(--fh);font-weight:900;font-size:18px;flex:1;}
+#topbar .tag{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--cream-deep);color:var(--accent-deep);padding:4px 10px;border-radius:100px;}
+#preview-link{
+  font-family:var(--fh);font-weight:700;font-size:13px;color:var(--primary);
+  display:inline-flex;align-items:center;gap:6px;padding:9px 16px;
+  border-radius:8px;border:1.5px solid rgba(27,79,138,0.2);transition:background .15s;
+}
+#preview-link:hover{background:rgba(27,79,138,0.05);}
+#save-btn{
+  font-family:var(--fh);font-weight:800;font-size:14px;
+  background:var(--primary);color:#fff;border:none;
+  padding:10px 22px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .18s;
+}
+#save-btn:hover{background:var(--primary-dark);}
+#save-btn.saved{background:#1a7a45;}
+#save-btn.saving{background:#888;cursor:wait;}
+
+/* tabs */
+#tabs{
+  flex:none;display:flex;gap:0;padding:0 28px;background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.tab-btn{
+  font-family:var(--fh);font-weight:700;font-size:13.5px;color:var(--body);
+  background:transparent;border:none;padding:13px 20px;border-bottom:2.5px solid transparent;
+  margin-bottom:-1px;transition:color .15s,border-color .15s;
+}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--accent);}
+.tab-btn:hover{color:var(--ink);}
+
+/* content */
+#content{flex:1;overflow-y:auto;padding:28px;}
+
+/* ── COPY PANEL ───────────────────────────────────────────── */
+.copy-loading{text-align:center;padding:60px;color:var(--body);font-family:var(--fh);}
+.copy-loading .spin{display:inline-block;width:32px;height:32px;border:3px solid rgba(27,79,138,0.2);border-top-color:var(--primary);border-radius:50%;animation:spin .7s linear infinite;margin-bottom:12px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.copy-group{background:#fff;border-radius:16px;margin-bottom:20px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.copy-group-head{
+  padding:14px 20px;background:var(--cream);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:10px;
+}
+.copy-group-head h3{font-family:var(--fh);font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--primary);}
+.copy-group-head .cnt{font-size:11px;font-family:var(--fh);font-weight:700;color:var(--body);background:var(--cream-deep);padding:2px 8px;border-radius:100px;}
+
+.copy-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line);}
+.copy-pair:last-child{border-bottom:none;}
+.copy-field{padding:14px 20px;}
+.copy-field + .copy-field{border-left:1px solid var(--line);}
+.copy-field label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);font-family:var(--fh);display:block;margin-bottom:6px;}
+.copy-field textarea{
+  width:100%;min-height:52px;resize:vertical;
+  font-family:var(--fb);font-size:14px;color:var(--ink);
+  border:1.5px solid transparent;border-radius:8px;padding:8px 10px;
+  background:rgba(0,0,0,0.02);transition:border-color .18s,background .18s;line-height:1.5;
+}
+.copy-field textarea:focus{outline:none;border-color:var(--accent);background:#fffdf5;}
+.copy-field textarea.changed{border-color:rgba(242,164,19,0.5);background:#fffdf5;}
+
+.copy-stat-row{padding:14px 20px;display:flex;align-items:center;gap:14px;}
+.copy-stat-row label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);font-family:var(--fh);width:80px;flex:none;}
+.copy-stat-row input{
+  flex:1;font-family:var(--fh);font-weight:800;font-size:22px;color:var(--primary);
+  border:1.5px solid transparent;border-radius:8px;padding:6px 10px;background:rgba(0,0,0,0.02);transition:border-color .18s;
+}
+.copy-stat-row input:focus{outline:none;border-color:var(--accent);background:#fffdf5;}
+.copy-stat-row input.changed{border-color:rgba(242,164,19,0.5);}
+
+/* ── MEDIA PANEL ──────────────────────────────────────────── */
+.media-intro{
+  background:#fff;border-radius:16px;padding:18px 22px;margin-bottom:22px;
+  display:flex;align-items:center;gap:14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  font-size:13.5px;color:var(--body);
+}
+.media-intro .ic{width:36px;height:36px;background:var(--accent-soft);border-radius:10px;display:grid;place-items:center;flex:none;color:var(--accent-deep);}
+
+.media-group{background:#fff;border-radius:16px;margin-bottom:20px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.media-group-head{padding:14px 20px;background:var(--cream);border-bottom:1px solid var(--line);}
+.media-group-head h3{font-family:var(--fh);font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--primary);}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;padding:20px;}
+.media-slot-wrap{display:flex;flex-direction:column;gap:8px;}
+.media-slot-wrap image-slot{display:block;width:100%;border-radius:12px;overflow:hidden;}
+.media-slot-label{font-family:var(--fh);font-weight:700;font-size:11.5px;color:var(--body);text-align:center;letter-spacing:0.04em;}
+
+/* ── TOAST ────────────────────────────────────────────────── */
+#toast{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:#fff;font-family:var(--fh);font-weight:700;font-size:13.5px;
+  padding:12px 24px;border-radius:100px;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;z-index:9000;
+}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+#toast.ok{background:#1a7a45;}
+#toast.err{background:#c0392b;}
+</style>
+</head>
+<body>
+
+<!-- ══ GATE ══════════════════════════════════════════════════ -->
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-logo">Aul&nbsp;<span>Bilim</span></div>
+    <p class="gate-sub">Мазмұнды басқару жүйесі</p>
+    <input type="password" id="pw-input" placeholder="Құпия сөз" />
+    <button class="btn" id="pw-btn">Кіру</button>
+    <p class="gate-err" id="pw-err">Құпия сөз қате — қайталаңыз.</p>
+    <p class="gate-hint">Кеңес: jelken + жыл</p>
+  </div>
+</div>
+
+<!-- ══ APP ════════════════════════════════════════════════════ -->
+<div id="app">
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sb-logo">
+      <span class="sun"></span>
+      <div><div>Aul <span>Bilim</span></div><small>CMS Әкімші</small></div>
+    </div>
+
+    <div class="sb-section">Беттер</div>
+    <button class="sb-page active" data-page="index.html">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Басты бет
+    </button>
+    <button class="sb-page" data-page="programs.html">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/></svg>
+      Бағдарламалар
+    </button>
+    <button class="sb-page" data-page="stories.html">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 10h16M4 14h10"/></svg>
+      Оқиғалар
+    </button>
+    <button class="sb-page" data-page="about.html">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Біз туралы
+    </button>
+    <button class="sb-page" data-page="REMOVED" style="display:none">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 108 0 4 4 0 00-8 0M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Серіктес
+    </button>
+
+    <div class="sb-bottom">
+      <button id="logout-btn">← Шығу</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div id="main">
+    <div id="topbar">
+      <h1 id="page-title">Home</h1>
+      <span class="tag" id="page-file">index.html</span>
+      <a id="preview-link" href="index.html" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        Алдын ала қарау
+      </a>
+      <button id="save-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Өзгерістерді сақтау
+      </button>
+    </div>
+
+    <div id="tabs">
+      <button class="tab-btn active" data-tab="copy">✏ Мәтін</button>
+      <button class="tab-btn" data-tab="media">🖼 Медиа</button>
+    </div>
+
+    <div id="content">
+      <div id="copy-panel"></div>
+      <div id="media-panel" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   AUL BILIM ADMIN — vanilla JS CMS
+   ══════════════════════════════════════════════════════════════ */
+
+const COPY_FILE = '.copy.state.json';
+const PASSWORD  = 'jelken2026';
+
+const PAGES = [
+  { id:'index.html',    label:'Басты бет',     slots:[
+    {id:'home-hero',    label:'Негізгі сурет'},
+    {id:'home-prog-1',  label:'Бағдарлама 01 — Жаңғырту'},
+    {id:'home-prog-2',  label:'Бағдарлама 02 — USTAZ'},
+    {id:'home-prog-3',  label:'Бағдарлама 03 — Samruk Umiti'},
+    {id:'home-story-1', label:'Оқиға 1 — Қарағанды'},
+    {id:'home-story-2', label:'Оқиға 2 — Қостанай'},
+    {id:'home-story-3', label:'Оқиға 3 — Ақмола'},
+  ]},
+  { id:'programs.html', label:'Бағдарламалар',  slots:[
+    {id:'prog-1', label:'Жаңғырту суреті'},
+    {id:'prog-2', label:'USTAZ суреті'},
+    {id:'prog-3', label:'Samruk Umiti суреті'},
+  ]},
+  { id:'stories.html',  label:'Оқиғалар',   slots:[
+    {id:'story-feat', label:'Таңдаулы оқиға'},
+    {id:'story-1',    label:'Оқиға 1 — Қостанай'},
+    {id:'story-2',    label:'Оқиға 2 — Ақмола'},
+    {id:'story-3',    label:'Оқиға 3 — Түркістан'},
+    {id:'story-4',    label:'Оқиға 4 — Алматы облысы'},
+    {id:'story-5',    label:'Оқиға 5 — Павлодар'},
+    {id:'story-6',    label:'Оқиға 6 — Ақтөбе'},
+  ]},
+  { id:'about.html',    label:'Біз туралы',     slots:[
+    {id:'about-mission', label:'Миссия суреті'},
+    {id:'about-team-1',  label:'Команда — Аружан'},
+    {id:'about-team-2',  label:'Команда — Даурен'},
+    {id:'about-team-3',  label:'Команда — Әсем'},
+    {id:'about-team-4',  label:'Команда — Нурлан'},
+  ]},
+  // partner.html removed
+];
+
+/* ── Shared copy state ─────────────────────────────────────── */
+let savedCopy = {};   // { 'index.html': { cp0: '...', cp1: '...' }, ... }
+let currentPage = 'index.html';
+let currentItems = []; // parsed copy items for current page
+let dirty = false;
+
+/* ── Auth ──────────────────────────────────────────────────── */
+document.getElementById('pw-btn').addEventListener('click', tryLogin);
+document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key==='Enter') tryLogin(); });
+
+function tryLogin() {
+  const val = document.getElementById('pw-input').value.trim();
+  const err = document.getElementById('pw-err');
+  if (val === PASSWORD) {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').classList.add('show');
+    init();
+  } else {
+    err.style.display = 'block';
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
+}
+document.getElementById('logout-btn').addEventListener('click', () => location.reload());
+
+/* ── Init ──────────────────────────────────────────────────── */
+async function init() {
+  await loadSavedCopy();
+  await switchPage('index.html');
+}
+
+/* ── Load the shared copy JSON ─────────────────────────────── */
+async function loadSavedCopy() {
+  try {
+    const r = await fetch(COPY_FILE + '?t=' + Date.now());
+    if (r.ok) savedCopy = await r.json();
+  } catch (e) { savedCopy = {}; }
+}
+
+/* ── Page switching ────────────────────────────────────────── */
+async function switchPage(pageId) {
+  currentPage = pageId;
+  const info = PAGES.find(p => p.id === pageId);
+
+  // Update sidebar
+  document.querySelectorAll('.sb-page').forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
+
+  // Update topbar
+  document.getElementById('page-title').textContent = info.label;
+  document.getElementById('page-file').textContent  = pageId;
+  document.getElementById('preview-link').href = pageId;
+
+  // Render active tab
+  const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
+  if (activeTab === 'copy') await renderCopy();
+  else renderMedia();
+}
+
+document.querySelectorAll('.sb-page').forEach(btn => {
+  btn.addEventListener('click', () => switchPage(btn.dataset.page));
+});
+
+/* ── Tabs ──────────────────────────────────────────────────── */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('copy-panel').style.display  = btn.dataset.tab === 'copy'  ? '' : 'none';
+    document.getElementById('media-panel').style.display = btn.dataset.tab === 'media' ? '' : 'none';
+    if (btn.dataset.tab === 'copy')  await renderCopy();
+    if (btn.dataset.tab === 'media') renderMedia();
+  });
+});
+
+/* ── Extract copy items from a page ───────────────────────── */
+function shouldSkip(el) {
+  if (!el || !el.tagName) return true;
+  const tag = el.tagName.toUpperCase();
+  if (['HTML','HEAD','BODY','SCRIPT','STYLE','SVG','PATH','BUTTON','A'].includes(tag)) return true;
+  if (el.closest) {
+    if (el.closest('nav') || el.closest('.lang-switch') || el.closest('.menu-btn') ||
+        el.closest('.pill') || el.closest('.text-link') || el.closest('.more') ||
+        el.closest('.crumbs') || el.closest('.foot-bottom') || el.closest('footer')) return true;
+  }
+  return false;
+}
+
+function getGroupLabel(el) {
+  const section = el.closest && (el.closest('section') || el.closest('header') || el.closest('article'));
+  if (!section) return 'Page';
+  // Use id if present
+  if (section.id) return section.id.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+  // First heading
+  const h = section.querySelector('h1,h2,h3');
+  if (h) {
+    // Use only EN text if bilingual, else full text
+    const en = h.querySelector('[lang="en"]');
+    return (en ? en.textContent : h.textContent).trim().slice(0, 48);
+  }
+  const cls = (section.className||'').split(' ').filter(Boolean)[0];
+  return cls || 'Section';
+}
+
+async function parsePage(pageId) {
+  try {
+    const r = await fetch(pageId + '?t=' + Date.now());
+    const html = await r.text();
+    const doc  = new DOMParser().parseFromString(html, 'text/html');
+    const items = [];
+    let idx = 0;
+
+    doc.querySelectorAll('[lang],.n,.big').forEach(el => {
+      if (shouldSkip(el)) return;
+      const langAttr = el.getAttribute('lang') || null;
+      const isLang   = !!langAttr;
+      const isStat   = !isLang && (el.classList.contains('n') || el.classList.contains('big'));
+      if (!isLang && !isStat) return;
+
+      // For lang pairs, only process KK here; EN is paired below
+      if (isLang && langAttr !== 'kk' && langAttr !== 'en') { idx++; return; }
+
+      items.push({
+        id:    'cp' + (idx++),
+        lang:   langAttr || 'stat',
+        text:   el.innerHTML,
+        group:  getGroupLabel(el),
+        tag:    el.tagName.toLowerCase(),
+        isStat: isStat,
+      });
+    });
+    return items;
+  } catch(e) {
+    return [];
+  }
+}
+
+/* ── Render copy panel ─────────────────────────────────────── */
+async function renderCopy() {
+  const panel = document.getElementById('copy-panel');
+  panel.innerHTML = `<div class="copy-loading"><div class="spin"></div><br>${currentPage} жүктелуде…</div>`;
+
+  const items = await parsePage(currentPage);
+  currentItems = items;
+  const pageSaved = savedCopy[currentPage] || {};
+
+  // Group items
+  const groups = {};
+  items.forEach(item => {
+    if (!groups[item.group]) groups[item.group] = [];
+    groups[item.group].push(item);
+  });
+
+  panel.innerHTML = '';
+
+  Object.entries(groups).forEach(([groupName, groupItems]) => {
+    // Pair kk+en items by sequential matching
+    const kkItems   = groupItems.filter(i => i.lang === 'kk');
+    const enItems   = groupItems.filter(i => i.lang === 'en');
+    const statItems = groupItems.filter(i => i.isStat);
+    const maxPairs  = Math.max(kkItems.length, enItems.length);
+    if (maxPairs === 0 && statItems.length === 0) return;
+
+    const card = document.createElement('div');
+    card.className = 'copy-group';
+
+    const head = document.createElement('div');
+    head.className = 'copy-group-head';
+    head.innerHTML = `<h3>${escHtml(groupName)}</h3><span class="cnt">${groupItems.length} өріс</span>`;
+    card.appendChild(head);
+
+    // Bilingual pairs
+    for (let i = 0; i < maxPairs; i++) {
+      const kk = kkItems[i];
+      const en = enItems[i];
+      const pair = document.createElement('div');
+      pair.className = 'copy-pair';
+
+      [kk, en].forEach(item => {
+        if (!item) { pair.appendChild(document.createElement('div')); return; }
+        const savedVal = pageSaved[item.id];
+        const currentVal = savedVal !== undefined ? savedVal : item.text;
+        const field = document.createElement('div');
+        field.className = 'copy-field';
+        const langLabel = item.lang === 'kk' ? '🇰🇿 Қазақша' : '🇬🇧 Ағылшынша';
+        field.innerHTML = `<label>${langLabel}</label>
+          <textarea data-id="${item.id}" data-orig="${escAttr(item.text)}">${escHtml(htmlToText(currentVal))}</textarea>`;
+        pair.appendChild(field);
+      });
+
+      card.appendChild(pair);
+    }
+
+    // Stat numbers (single-value)
+    statItems.forEach(item => {
+      const savedVal = pageSaved[item.id];
+      const currentVal = savedVal !== undefined ? savedVal : item.text;
+      const row = document.createElement('div');
+      row.className = 'copy-stat-row';
+      row.innerHTML = `<label>Статистика</label>
+        <input type="text" data-id="${item.id}" data-orig="${escAttr(item.text)}" value="${escHtml(htmlToText(currentVal))}" />`;
+      card.appendChild(row);
+    });
+
+    panel.appendChild(card);
+  });
+
+  // Mark changed fields
+  panel.querySelectorAll('textarea, input[type="text"]').forEach(el => {
+    const orig = el.dataset.orig || '';
+    if (htmlToText(el.value).trim() !== htmlToText(orig).trim()) el.classList.add('changed');
+    el.addEventListener('input', () => {
+      const changed = el.value.trim() !== htmlToText(el.dataset.orig || '').trim();
+      el.classList.toggle('changed', changed);
+      dirty = true;
+    });
+  });
+
+  if (items.length === 0) {
+    panel.innerHTML = '<div class="copy-loading">Бұл бетте өңдеуге болатын мәтін жоқ.</div>';
+  }
+}
+
+/* ── Render media panel ────────────────────────────────────── */
+function renderMedia() {
+  const panel = document.getElementById('media-panel');
+  const info  = PAGES.find(p => p.id === currentPage);
+  panel.innerHTML = '';
+
+  if (!info || !info.slots.length) {
+    panel.innerHTML = '<div class="copy-loading">Бұл бетте медиа орындары жоқ.</div>';
+    return;
+  }
+
+  const intro = document.createElement('div');
+  intro.className = 'media-intro';
+  intro.innerHTML = `<div class="ic"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    <span>Кез келген ұяшыққа сурет файлын сүйреңіз. Өзгерістер тікелей жалпыға қолжетімді сайтқа жіберіледі — жеке жариялау қадамы қажет емес.</span>`;
+  panel.appendChild(intro);
+
+  const group = document.createElement('div');
+  group.className = 'media-group';
+  group.innerHTML = `<div class="media-group-head"><h3>${info.label} — ${info.slots.length} орын</h3></div>`;
+
+  const grid = document.createElement('div');
+  grid.className = 'media-grid';
+
+  info.slots.forEach(slot => {
+    const wrap = document.createElement('div');
+    wrap.className = 'media-slot-wrap';
+
+    const slotEl = document.createElement('image-slot');
+    slotEl.id          = slot.id;
+    slotEl.setAttribute('shape', 'rounded');
+    slotEl.setAttribute('radius', '12');
+    slotEl.setAttribute('placeholder', slot.label);
+    slotEl.style.cssText = 'display:block;width:100%;aspect-ratio:4/3;';
+
+    const lbl = document.createElement('div');
+    lbl.className = 'media-slot-label';
+    lbl.textContent = slot.label;
+
+    wrap.appendChild(slotEl);
+    wrap.appendChild(lbl);
+    grid.appendChild(wrap);
+  });
+
+  group.appendChild(grid);
+  panel.appendChild(group);
+}
+
+/* ── Save ──────────────────────────────────────────────────── */
+document.getElementById('save-btn').addEventListener('click', saveChanges);
+
+async function saveChanges() {
+  const btn = document.getElementById('save-btn');
+  btn.textContent = 'Сақталуда…';
+  btn.classList.add('saving');
+
+  // Collect all field values for current page
+  const pageData = {};
+  document.querySelectorAll('#copy-panel [data-id]').forEach(el => {
+    pageData[el.dataset.id] = el.value || el.textContent;
+  });
+  savedCopy[currentPage] = pageData;
+
+  // Write to .copy.state.json
+  const json = JSON.stringify(savedCopy, null, 2);
+  const ok = await writeFile(COPY_FILE, json);
+
+  btn.classList.remove('saving');
+  if (ok) {
+    btn.textContent = '✓ Сақталды';
+    btn.classList.add('saved');
+    dirty = false;
+    toast('Өзгерістер сақталды — беттер жаңартылғанда жаңарады.', 'ok');
+    setTimeout(() => {
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Өзгерістерді сақтау';
+      btn.classList.remove('saved');
+    }, 3000);
+  } else {
+    btn.textContent = 'Save changes';
+    toast('Файлды жазу мүмкін болмады — жұмыс ортасынан тыс жасалуда?', 'err');
+  }
+}
+
+/* ── Write file via omelette bridge ────────────────────────── */
+async function writeFile(path, content) {
+  try {
+    if (window.omelette && typeof window.omelette.writeFile === 'function') {
+      await window.omelette.writeFile(path, content);
+      return true;
+    }
+    // Fallback: store in localStorage for testing
+    localStorage.setItem('aulbilim_admin_' + path, content);
+    return true;
+  } catch (e) {
+    console.error('writeFile failed:', e);
+    return false;
+  }
+}
+
+/* ── Toast ─────────────────────────────────────────────────── */
+function toast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className   = 'show ' + (type||'');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.className = '', 3800);
+}
+
+/* ── Helpers ───────────────────────────────────────────────── */
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escAttr(s) {
+  return String(s||'').replace(/"/g,'&quot;').replace(/\n/g,' ');
+}
+function htmlToText(html) {
+  const d = document.createElement('div');
+  d.innerHTML = html || '';
+  return d.textContent || d.innerText || '';
+}
+
+/* Warn on unsaved changes */
+window.addEventListener('beforeunload', e => {
+  if (dirty) { e.preventDefault(); e.returnValue = ''; }
+});
+</script>
+</body>
+</html>

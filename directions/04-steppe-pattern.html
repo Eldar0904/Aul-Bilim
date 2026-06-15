@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aul Bilim — Steppe Pattern</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #102E54;
+    --navy-2: #0B2votes; --navy-2: #0A2240;
+    --primary: #1B4F8A;
+    --gold: #E8A000;
+    --gold-light: #F5C84B;
+    --terra: #C75B39;
+    --teal: #1E8B7E;
+    --cream: #F7F1E4;
+    --cream-2: #EFE6D2;
+    --ink: #1B2330;
+    --body: #45506180; --body: #455061;
+    --fh: 'Raleway', sans-serif;
+    --fb: 'Inter', sans-serif;
+    /* ornamental gold zigzag band */
+    --orn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cg fill='none' stroke='%23E8A000' stroke-width='2'%3E%3Cpath d='M0 12 L12 2 L24 12 L36 2 L48 12'/%3E%3Cpath d='M0 22 L12 12 L24 22 L36 12 L48 22'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--fb); color: var(--body); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  h1,h2,h3,h4 { font-family: var(--fh); color: var(--ink); line-height: 1.05; font-weight: 800; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 30px; }
+
+  .orn-band { height: 18px; background-image: var(--orn); background-size: 48px 24px; background-repeat: repeat-x; background-position: center; opacity: 0.9; }
+
+  /* medallion */
+  .medallion { width: 100%; height: 100%; }
+
+  /* NAV */
+  nav.bar { position: sticky; top: 0; z-index: 50; background: var(--navy); }
+  .bar-in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { font-family: var(--fh); font-weight: 900; font-size: 21px; color: #fff; display: flex; align-items: center; gap: 11px; }
+  .logo .dia { width: 30px; height: 30px; flex: none; }
+  .logo span { color: var(--gold-light); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-family: var(--fh); font-weight: 600; font-size: 15px; color: rgba(255,255,255,0.82); transition: color .2s; }
+  .nav-links a:hover { color: var(--gold-light); }
+  .btn-gold { font-family: var(--fh); font-weight: 800; font-size: 14.5px; background: var(--gold); color: var(--navy); padding: 11px 22px; border-radius: 4px; transition: background .2s; white-space: nowrap; position: relative; }
+  .btn-gold:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .hero::before { content:""; position:absolute; inset:0; opacity:0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23E8A000' stroke-width='1.4'%3E%3Cpath d='M60 10 C40 30 40 50 60 60 C80 50 80 30 60 10 Z'/%3E%3Cpath d='M60 110 C40 90 40 70 60 60 C80 70 80 90 60 110 Z'/%3E%3Cpath d='M10 60 C30 40 50 40 60 60 C50 80 30 80 10 60 Z'/%3E%3Cpath d='M110 60 C90 40 70 40 60 60 C70 80 90 80 110 60 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 150px 150px; }
+  .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 54px; align-items: center; padding: 76px 0 84px; }
+  .kicker-orn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--fh); font-weight: 700; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 26px; }
+  .kicker-orn::before, .kicker-orn::after { content:""; width: 26px; height: 10px; background-image: var(--orn); background-size: 24px 12px; opacity: 0.9; }
+  .hero h1 { color: #fff; font-size: 64px; font-weight: 900; letter-spacing: -0.025em; line-height: 1.04; margin-bottom: 24px; }
+  .hero h1 .g { color: var(--gold-light); }
+  .hero p.lead { font-size: 19px; color: rgba(255,255,255,0.82); max-width: 32ch; margin-bottom: 34px; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn-lg { font-family: var(--fh); font-weight: 800; font-size: 16px; padding: 15px 30px; border-radius: 4px; background: var(--gold); color: var(--navy); transition: transform .16s, background .16s; }
+  .btn-lg:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-out { font-family: var(--fh); font-weight: 700; font-size: 15px; padding: 15px 26px; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 4px; color: #fff; }
+  .btn-out:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+  .hero-art { position: relative; }
+  .hero-art .med { position: absolute; inset: -8% ; z-index: 0; opacity: 0.85; }
+  .hero-art .frame { position: relative; z-index: 2; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 6px solid var(--gold); box-shadow: 0 30px 70px -24px rgba(0,0,0,0.6); }
+  .hero-art .frame img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-art .frame::after { content:""; position:absolute; inset:0; background: radial-gradient(circle at 50% 120%, rgba(16,46,84,0.6), transparent 55%); }
+  .hero-chip { position: absolute; z-index: 3; bottom: 8%; left: -6%; background: var(--terra); color: #fff; border-radius: 6px; padding: 14px 20px; box-shadow: 0 16px 34px -14px rgba(0,0,0,0.5); }
+  .hero-chip .n { font-family: var(--fh); font-weight: 900; font-size: 30px; line-height: 1; }
+  .hero-chip .l { font-size: 12px; margin-top: 4px; opacity: 0.92; }
+
+  /* SECTION */
+  section.block { padding: 86px 0; }
+  .alt { background: var(--cream-2); }
+  .head { max-width: 640px; margin-bottom: 48px; }
+  .head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .head .kick { display: inline-flex; align-items: center; gap: 10px; font-family: var(--fh); font-weight: 800; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); margin-bottom: 14px; }
+  .head .kick::before { content:""; width: 26px; height: 10px; background-image: var(--orn); background-size: 24px 12px; }
+  .head.center .kick::after { content:""; width: 26px; height: 10px; background-image: var(--orn); background-size: 24px 12px; }
+  .head h2 { font-size: 42px; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .head p { font-size: 18px; }
+
+  /* PROGRAMS */
+  .progs { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+  .prog { background: #fff; border-radius: 10px; padding: 34px 28px; position: relative; box-shadow: 0 14px 38px -22px rgba(16,46,84,0.4); border-top: 4px solid var(--gold); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; overflow: hidden; }
+  .prog:nth-child(2) { border-top-color: var(--teal); }
+  .prog:nth-child(3) { border-top-color: var(--terra); }
+  .prog:hover { transform: translateY(-5px); box-shadow: 0 24px 50px -24px rgba(16,46,84,0.5); }
+  .prog::after { content:""; position:absolute; right:-20px; bottom:-20px; width: 90px; height: 90px; opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23102E54' stroke-width='2'%3E%3Cpath d='M30 4 C14 18 14 30 30 30 C46 30 46 18 30 4Z'/%3E%3Cpath d='M30 56 C14 42 14 30 30 30 C46 30 46 42 30 56Z'/%3E%3C/g%3E%3C/svg%3E"); background-size: contain; }
+  .prog .ic { width: 60px; height: 60px; border-radius: 8px; display: grid; place-items: center; margin-bottom: 20px; }
+  .prog:nth-child(1) .ic { background: #FCEFC9; color: var(--gold); }
+  .prog:nth-child(2) .ic { background: #CFEAE5; color: var(--teal); }
+  .prog:nth-child(3) .ic { background: #F6DBD0; color: var(--terra); }
+  .prog .ic svg { width: 30px; height: 30px; }
+  .prog h3 { font-size: 22px; margin-bottom: 11px; }
+  .prog p { font-size: 15px; flex: 1; }
+  .prog .more { font-family: var(--fh); font-weight: 700; color: var(--primary); margin-top: 20px; }
+
+  /* WHY band with pattern */
+  .why { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .why .orn-band { opacity: 0.8; }
+  .why-in { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; padding: 72px 0; }
+  .why h2 { color: #fff; font-size: 38px; margin-bottom: 18px; }
+  .why h2 .g { color: var(--gold-light); }
+  .why p { color: rgba(255,255,255,0.82); font-size: 17px; }
+  .why .cells { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .why .cell { border: 1.5px solid rgba(232,160,0,0.35); border-radius: 8px; padding: 24px 20px; background: rgba(255,255,255,0.04); }
+  .why .cell .n { font-family: var(--fh); font-weight: 900; font-size: 40px; color: var(--gold-light); line-height: 1; }
+  .why .cell .l { font-size: 13px; color: rgba(255,255,255,0.78); margin-top: 6px; }
+
+  /* STORIES */
+  .stories { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+  .story { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 14px 38px -24px rgba(16,46,84,0.42); transition: transform .2s; }
+  .story:hover { transform: translateY(-5px); }
+  .story .ph { aspect-ratio: 16/11; position: relative; }
+  .story:nth-child(1) .ph { background: linear-gradient(150deg, var(--primary), var(--navy)); }
+  .story:nth-child(2) .ph { background: linear-gradient(150deg, var(--teal), #155f56); }
+  .story:nth-child(3) .ph { background: linear-gradient(150deg, var(--terra), #993f24); }
+  .story .ph::after { content:""; position:absolute; inset:0; opacity:0.14; background-image: var(--orn); background-size: 32px 16px; }
+  .story .rg { position: absolute; left: 14px; top: 14px; z-index: 2; background: var(--gold); color: var(--navy); font-family: var(--fh); font-weight: 800; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 11px; border-radius: 3px; }
+  .story .tx { padding: 24px 24px 28px; }
+  .story h3 { font-size: 19px; margin-bottom: 10px; line-height: 1.25; }
+  .story p { font-size: 14.5px; }
+
+  /* PARTNER */
+  .partner { background: var(--gold); position: relative; overflow: hidden; }
+  .partner .orn-band { filter: brightness(0.4) sepia(1) saturate(2); opacity: 0.3; }
+  .partner-in { text-align: center; padding: 74px 0 80px; position: relative; z-index: 2; }
+  .partner h2 { font-size: 46px; letter-spacing: -0.02em; color: var(--navy); margin-bottom: 16px; }
+  .partner p { color: #5a4205; font-size: 18px; max-width: 50ch; margin: 0 auto 30px; font-weight: 500; }
+  .partner .btn-lg { background: var(--navy); color: #fff; }
+  .partner .btn-lg:hover { background: var(--navy-2); }
+  .partner .btn-out { border-color: rgba(16,46,84,0.5); color: var(--navy); }
+  .partner .btn-out:hover { border-color: var(--navy); color: var(--navy); }
+  .partner .hero-cta { justify-content: center; }
+
+  /* FOOTER */
+  footer { background: var(--navy-2); color: rgba(255,255,255,0.66); padding: 56px 0 30px; }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .foot-grid .logo { color: #fff; margin-bottom: 14px; }
+  .foot-grid p { font-size: 14.5px; max-width: 34ch; }
+  .foot-grid h4 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px; }
+  .foot-grid a { display: block; font-size: 14.5px; margin-bottom: 11px; }
+  .foot-grid a:hover { color: var(--gold-light); }
+  .foot-bottom { padding-top: 22px; display: flex; justify-content: space-between; font-size: 13px; flex-wrap: wrap; gap: 10px; }
+
+  @media (max-width: 920px) {
+    .hero-grid, .why-in, .foot-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 48px; }
+    .progs, .stories { grid-template-columns: 1fr; }
+    .hero-art { max-width: 420px; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="bar">
+  <div class="wrap bar-in">
+    <div class="logo">
+      <svg class="dia" viewBox="0 0 30 30" fill="none"><path d="M15 2 C8 9 8 15 15 15 C22 15 22 9 15 2Z" fill="#E8A000"/><path d="M15 28 C8 21 8 15 15 15 C22 15 22 21 15 28Z" fill="#F5C84B"/></svg>
+      Aul <span>Bilim</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Programs</a><a href="#">Impact</a><a href="#">Stories</a><a href="#">About</a>
+      <a class="btn-gold" href="#">Become a Partner</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker-orn">Jelken Foundation</span>
+      <h1>Every child deserves a <span class="g">brilliant</span> classroom.</h1>
+      <p class="lead">We equip rural schools and train village teachers — so children across Kazakhstan's countryside learn as well as any city child.</p>
+      <div class="hero-cta">
+        <a class="btn-lg" href="#">Become a Partner →</a>
+        <a class="btn-out" href="#">Our Work</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg class="med" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+        <g stroke="#E8A000" stroke-width="1.5" fill="none" opacity="0.5">
+          <circle cx="100" cy="100" r="96"/>
+          <circle cx="100" cy="100" r="78" stroke-dasharray="6 6"/>
+        </g>
+      </svg>
+      <div class="frame"><img src="hero.png" alt="A village child learning with modern equipment" /></div>
+      <div class="hero-chip"><div class="n">7</div><div class="l">regions reached</div></div>
+    </div>
+  </div>
+  <div class="orn-band"></div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <span class="kick">What we do</span>
+      <h2>Three ways we change a child's odds</h2>
+      <p>From equipping classrooms to guiding orphaned teenagers into careers — every programme meets a village where it is.</p>
+    </div>
+    <div class="progs">
+      <article class="prog">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3>School Fit-Out</h3>
+        <p>We furnish and equip rural classrooms from scratch — modern desks, science labs, digital tools, and everything a great lesson needs.</p>
+        <a class="more" href="#">Learn more →</a>
+      </article>
+      <article class="prog">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7M6 11v4c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-4"/></svg></div>
+        <h3>Teacher Training</h3>
+        <p>Through USTAZ Coworking centres, rural teachers join workshops, mentoring, and professional communities — closing the gap with city educators.</p>
+        <a class="more" href="#">Learn more →</a>
+      </article>
+      <article class="prog">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6a5.5 5.5 0 00-9-1.7l-.8.8-.8-.8a5.5 5.5 0 00-7.8 7.8l8.6 8.6 8.6-8.6a5.5 5.5 0 001-6.1z"/></svg></div>
+        <h3>Child Mentorship</h3>
+        <p>Our Samruk Umiti programme guides teenagers from orphanages through career choices, college applications, and their first steps into adult life.</p>
+        <a class="more" href="#">Learn more →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="orn-band"></div>
+  <div class="wrap why-in">
+    <div>
+      <h2>Why a <span class="g">classroom</span> changes everything</h2>
+      <p>A rural school may have one teacher covering five subjects, with furniture from the 1990s. A child's environment shapes what they believe they can become — so we rebuild it, together with the people who live there.</p>
+    </div>
+    <div class="cells">
+      <div class="cell"><div class="n">300+</div><div class="l">classrooms equipped</div></div>
+      <div class="cell"><div class="n">450+</div><div class="l">teachers trained</div></div>
+      <div class="cell"><div class="n">7</div><div class="l">regions of Kazakhstan</div></div>
+      <div class="cell"><div class="n">120</div><div class="l">partner schools</div></div>
+    </div>
+  </div>
+  <div class="orn-band"></div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="head center">
+      <span class="kick">Stories from villages</span>
+      <h2>Real people. Real change.</h2>
+    </div>
+    <div class="stories">
+      <article class="story">
+        <div class="ph"><span class="rg">Karagandy</span></div>
+        <div class="tx"><h3>From chalk to a chemistry lab</h3><p>School No. 86 hadn't seen new equipment in twenty years. Then we arrived — and the science lessons changed overnight.</p></div>
+      </article>
+      <article class="story">
+        <div class="ph"><span class="rg">Kostanay</span></div>
+        <div class="tx"><h3>A teacher who wouldn't stop learning</h3><p>Aizat taught physics with broken instruments for years. After USTAZ, she became the mentor other teachers now call first.</p></div>
+      </article>
+      <article class="story">
+        <div class="ph"><span class="rg">Akmola</span></div>
+        <div class="tx"><h3>The classroom that changed a village</h3><p>In Akkol, parents drove children to the city for tutoring. Now the tutors come from the village — and no one is leaving.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="partner">
+  <div class="orn-band"></div>
+  <div class="wrap partner-in">
+    <h2>Partner with us</h2>
+    <p>Corporate partners, government bodies, and individual donors — together we bring real, lasting change to schools and teachers.</p>
+    <div class="hero-cta">
+      <a class="btn-lg" href="#">Become a Partner →</a>
+      <a class="btn-out" href="#">About Us</a>
+    </div>
+  </div>
+  <div class="orn-band"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="font-size:21px;">Aul <span style="color:var(--gold-light)">Bilim</span></div>
+        <p>Aul Bilim equips schools, trains teachers, and supports children across rural Kazakhstan — because every village deserves a future.</p>
+      </div>
+      <div><h4>Explore</h4><a href="#">Programs</a><a href="#">Impact</a><a href="#">Stories</a><a href="#">About</a></div>
+      <div><h4>Contact</h4><a href="#">Astana, Kazakhstan</a><a href="#">hello@aulbilim.kz</a><a href="#">Become a Partner</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2025 Jelken Foundation · Non-profit organisation</span><span>Steppe Pattern direction</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

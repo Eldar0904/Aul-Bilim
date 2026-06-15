@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aul Bilim — Creative Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --primary: #1B4F8A;
+    --accent: #E8A000;
+    --ink: #16202E;
+    --body: #4A5566;
+    --bg: #11233B;
+    --bg-2: #0C1B2F;
+    --card: #FFFFFF;
+    --fh: 'Raleway', sans-serif;
+    --fb: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--fb); background: var(--bg); color: #fff; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  h1,h2,h3 { font-family: var(--fh); line-height: 1.1; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  /* HEADER */
+  header.top { padding: 56px 0 12px; text-align: center; position: relative; }
+  header.top .eyebrow { font-family: var(--fh); font-weight: 800; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  header.top h1 { font-size: 46px; font-weight: 900; letter-spacing: -0.025em; margin-bottom: 16px; }
+  header.top h1 b { color: var(--accent); }
+  header.top p { max-width: 60ch; margin: 0 auto; color: rgba(255,255,255,0.72); font-size: 17px; }
+  .legend { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-top: 26px; font-size: 13.5px; color: rgba(255,255,255,0.7); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+  /* GRID */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 40px 0 70px; }
+
+  .opt { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .opt-head { display: flex; align-items: flex-start; gap: 14px; padding: 22px 24px 18px; }
+  .opt-num { font-family: var(--fh); font-weight: 900; font-size: 15px; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; flex: none; color: #fff; }
+  .opt:nth-child(1) .opt-num { background: linear-gradient(135deg,#F2A413,#E8820A); }
+  .opt:nth-child(2) .opt-num { background: linear-gradient(135deg,#1B4F8A,#0F2E54); }
+  .opt:nth-child(3) .opt-num { background: linear-gradient(135deg,#E0623C,#C77F00); }
+  .opt:nth-child(4) .opt-num { background: linear-gradient(135deg,#102E54,#E8A000); }
+  .opt-head h3 { font-size: 21px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; }
+  .opt-head .tagline { font-size: 13.5px; color: rgba(255,255,255,0.62); margin-top: 3px; }
+  .opt-head .open { margin-left: auto; flex: none; font-family: var(--fh); font-weight: 700; font-size: 13px; color: var(--ink); background: #fff; padding: 9px 15px; border-radius: 9px; transition: transform .15s, background .15s; white-space: nowrap; }
+  .opt-head .open:hover { transform: translateY(-2px); background: var(--accent); color: #1a1a1a; }
+
+  .desc { padding: 0 24px 18px; font-size: 14px; color: rgba(255,255,255,0.66); }
+  .tags { padding: 0 24px 20px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .tags span { font-family: var(--fh); font-weight: 700; font-size: 11.5px; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.78); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 5px 11px; border-radius: 100px; white-space: nowrap; }
+
+  /* browser window preview */
+  .win { margin: 0 16px 18px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.14); background: #fff; box-shadow: 0 20px 50px -24px rgba(0,0,0,0.7); }
+  .win-bar { height: 34px; background: #E9ECF1; display: flex; align-items: center; gap: 7px; padding: 0 13px; border-bottom: 1px solid #D6DAE1; }
+  .win-bar i { width: 11px; height: 11px; border-radius: 50%; }
+  .win-bar i:nth-child(1){background:#FF5F57;} .win-bar i:nth-child(2){background:#FEBC2E;} .win-bar i:nth-child(3){background:#28C840;}
+  .win-bar .addr { margin-left: 12px; font-size: 11px; color: #7A8190; background: #fff; border-radius: 6px; padding: 4px 12px; font-family: var(--fb); flex: 1; max-width: 280px; }
+  .shot { display: block; position: relative; height: 340px; overflow: hidden; background: #fff; }
+  .shot img { width: 100%; display: block; }
+  .shot::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04); pointer-events: none; }
+  .shot .hint { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); background: rgba(16,32,55,0.9); color: #fff; font-size: 12px; font-weight: 600; padding: 7px 14px; border-radius: 100px; pointer-events: none; backdrop-filter: blur(4px); opacity: 0; transition: opacity .2s; }
+  .shot:hover .hint { opacity: 1; }
+
+  footer.note { text-align: center; padding: 0 0 60px; color: rgba(255,255,255,0.5); font-size: 14px; }
+  footer.note b { color: rgba(255,255,255,0.8); font-weight: 600; }
+
+  @media (max-width: 980px) {
+    .grid { grid-template-columns: 1fr; }
+    .scaler { height: 300px; }
+    .scaler iframe { transform: scale(0.4640); }
+    header.top h1 { font-size: 34px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Aul Bilim · Jelken Foundation</div>
+    <h1>Four ways to make it feel like a <b>movement</b></h1>
+    <p>Same trusted bones — the deep-blue &amp; steppe-gold palette, Raleway + Inter, and your real programs and stories. Four creative directions that trade "official and plain" for positive, human, and exciting.</p>
+    <div class="legend">
+      <span><i style="background:#F2A413"></i> Warm</span>
+      <span><i style="background:#1B4F8A"></i> Bold</span>
+      <span><i style="background:#E0623C"></i> Playful</span>
+      <span><i style="background:linear-gradient(135deg,#102E54,#E8A000)"></i> Cultural</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+
+    <article class="opt">
+      <div class="opt-head">
+        <div class="opt-num">01</div>
+        <div>
+          <h3>Steppe Sunrise</h3>
+          <div class="tagline">Warm optimism</div>
+        </div>
+        <a class="open" href="directions/01-steppe-sunrise.html" target="_blank" rel="noopener">Open full ↗</a>
+      </div>
+      <p class="desc">Gold-forward and sunny. Soft organic shapes, rounded photo frames, a hand-drawn underline, and a scrolling ribbon of region names. Hope you can feel.</p>
+      <div class="tags"><span>Sunrise gradients</span><span>Rounded</span><span>Friendly</span></div>
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="addr">aulbilim.kz · sunrise</span></div>
+        <a class="shot" href="directions/01-steppe-sunrise.html" target="_blank" rel="noopener">
+          <img src="screenshots/thumb-01.png" alt="Steppe Sunrise preview" />
+          <span class="hint">Open full page ↗</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="opt">
+      <div class="opt-head">
+        <div class="opt-num">02</div>
+        <div>
+          <h3>Bold Poster</h3>
+          <div class="tagline">Editorial scale</div>
+        </div>
+        <a class="open" href="directions/02-bold-poster.html" target="_blank" rel="noopener">Open full ↗</a>
+      </div>
+      <p class="desc">Confident and loud. Oversized uppercase headlines, hard color-blocking, a duotone hero photo, an impact ticker, and stories laid out like a magazine.</p>
+      <div class="tags"><span>Oversized type</span><span>Color blocks</span><span>Duotone</span></div>
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="addr">aulbilim.kz · poster</span></div>
+        <a class="shot" href="directions/02-bold-poster.html" target="_blank" rel="noopener">
+          <img src="screenshots/thumb-02.png" alt="Bold Poster preview" />
+          <span class="hint">Open full page ↗</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="opt">
+      <div class="opt-head">
+        <div class="opt-num">03</div>
+        <div>
+          <h3>Paper &amp; Craft</h3>
+          <div class="tagline">Handmade collage</div>
+        </div>
+        <a class="open" href="directions/03-paper-craft.html" target="_blank" rel="noopener">Open full ↗</a>
+      </div>
+      <p class="desc">A scrapbook from the field. Kraft-paper texture, taped polaroids, sticker buttons, doodles and handwritten notes from the kids themselves. The most human of the four.</p>
+      <div class="tags"><span>Paper texture</span><span>Tape &amp; stickers</span><span>Handwritten</span></div>
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="addr">aulbilim.kz · craft</span></div>
+        <a class="shot" href="directions/03-paper-craft.html" target="_blank" rel="noopener">
+          <img src="screenshots/thumb-03.png" alt="Paper &amp; Craft preview" />
+          <span class="hint">Open full page ↗</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="opt">
+      <div class="opt-head">
+        <div class="opt-num">04</div>
+        <div>
+          <h3>Steppe Pattern</h3>
+          <div class="tagline">Cultural vibrancy</div>
+        </div>
+        <a class="open" href="directions/04-steppe-pattern.html" target="_blank" rel="noopener">Open full ↗</a>
+      </div>
+      <p class="desc">Rooted in place. Kazakh ornamental motifs frame the layout, a gold medallion holds the hero photo, and a richer palette adds terracotta and teal to the blue &amp; gold.</p>
+      <div class="tags"><span>Kazakh ornament</span><span>Medallion</span><span>Saturated</span></div>
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="addr">aulbilim.kz · pattern</span></div>
+        <a class="shot" href="directions/04-steppe-pattern.html" target="_blank" rel="noopener">
+          <img src="screenshots/thumb-04.png" alt="Steppe Pattern preview" />
+          <span class="hint">Open full page ↗</span>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="note">
+  <div class="wrap">
+    <p>All four keep your content, palette family, and type system intact — they only change the <b>feeling</b>. Tell me which direction to take further, or mix elements across them.</p>
+  </div>
+</footer>
+
+</body>
+</html>

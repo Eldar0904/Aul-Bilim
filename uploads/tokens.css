@@ -1,0 +1,77 @@
+/* tokens.css — design variables only. No selectors except :root. */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  /* PRIMARY — deep blue: trust, education, Kazakh sky */
+  --color-primary:       #1B4F8A;
+  --color-primary-dark:  #143A6E;
+  --color-primary-light: #2D6AB4;
+  --color-primary-tint:  #E8EFF8;
+
+  /* ACCENT — steppe gold: hope, sun, future */
+  --color-accent:        #E8A000;
+  --color-accent-dark:   #C48500;
+  --color-accent-light:  #F5C040;
+  --color-accent-tint:   #FEF6E4;
+  /* AA-compliant amber for small text labels on light backgrounds (5.07:1) */
+  --color-accent-label:  #8B6000;
+
+  /* NEUTRALS */
+  --color-bg:            #F7F5F0;
+  --color-bg-alt:        #EDEAE3;
+  --color-surface:       #FFFFFF;
+  --color-border:        #DDDAD3;
+
+  /* TEXT */
+  --color-text:          #1C1C2E;
+  --color-text-body:     #3D3D56;
+  --color-text-muted:    #5A5A80; /* darkened from #7878A0 → now 5.3:1 on light bg */
+
+  /* FONTS */
+  --font-heading: 'Raleway', sans-serif;
+  --font-body:    'Inter',   sans-serif;
+
+  /* TYPE SCALE — desktop */
+  --text-h1:   3.25rem;
+  --text-h2:   2.25rem;
+  --text-h3:   1.5rem;
+  --text-body: 1.0625rem;
+  --text-sm:   0.875rem;
+
+  /* SPACING */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* SHAPE */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* SHADOWS */
+  --shadow-card:  0 2px 12px rgba(27, 79, 138, 0.08);
+  --shadow-hover: 0 6px 24px rgba(27, 79, 138, 0.16);
+
+  /* MOTION */
+  --transition: 0.22s ease;
+
+  /* LAYOUT */
+  --container-max: 1160px;
+  --container-pad: 1.25rem;
+}
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  :root {
+    /* Type scale */
+    --text-h1: 2.125rem;
+    --text-h2: 1.625rem;
+    --text-h3: 1.25rem;
+    /* Tighten vertical rhythm on small screens */
+    --space-xl:  2.5rem;
+    --space-2xl: 3.75rem;
+  }
+}

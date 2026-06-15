@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jelken Foundation — Әр балаға тең мүмкіндіктер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue: #3461E0;
+    --blue-strong: #2A53C9;
+    --blue-accent: #6E9BF6;
+    --ink: #1A2233;
+    --ink-soft: #39414F;
+    --muted: #6B7385;
+    --muted-2: #8A92A3;
+    --bg: #F3F6FC;
+    --bg-2: #EAF0FA;
+    --card: #FFFFFF;
+    --line: #E4E9F2;
+    --shadow: 0 18px 40px -18px rgba(28, 50, 110, 0.28);
+    --shadow-sm: 0 8px 24px -12px rgba(28, 50, 110, 0.22);
+    --maxw: 1200px;
+
+    /* tweakable */
+    --hero-overlay: linear-gradient(96deg, rgba(13,22,46,0.94) 0%, rgba(15,26,55,0.82) 38%, rgba(20,34,70,0.30) 70%, rgba(20,34,70,0.12) 100%);
+    --map-filter: none;
+    --head-font: 'Manrope', system-ui, sans-serif;
+    --head-weight: 800;
+    --head-track: -1px;
+    --head-track-hero: -1.5px;
+    --hero-leading: 1.03;
+    --card-radius: 22px;
+    --btn-radius: 12px;
+    --card-shadow: 0 18px 40px -18px rgba(28, 50, 110, 0.28);
+    --card-shadow-hover: 0 28px 52px -20px rgba(28, 50, 110, 0.38);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  img { display: block; max-width: 100%; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .logo .mark { width: 46px; height: 36px; flex: none; }
+
+  .logo .word {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo .word b {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+  }
+  .logo .word span {
+    font-weight: 600;
+    font-size: 11.5px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  nav.links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+  }
+  nav.links a {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    transition: color 0.18s ease;
+    position: relative;
+  }
+  nav.links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -7px;
+    width: 0; height: 2px;
+    background: var(--blue);
+    border-radius: 2px;
+    transition: width 0.22s ease;
+  }
+  nav.links a:hover { color: var(--blue); }
+  nav.links a:hover::after { width: 100%; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #16203a;
+    background-image: var(--hero-overlay), url('assets/hero4.png');
+    background-size: cover;
+    transition: background-color 0.45s ease;
+    background-position: 64% center;
+  }
+
+  .hero-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  .hero-content { max-width: 640px; padding: 70px 0; }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 22px;
+    border: 1px solid rgba(255,255,255,0.32);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    color: #EAF1FF;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+
+  .hero h1 {
+    font-family: var(--head-font);
+    font-size: 70px;
+    font-weight: var(--head-weight);
+    line-height: var(--hero-leading);
+    letter-spacing: var(--head-track-hero);
+    color: #fff;
+    margin-bottom: 26px;
+  }
+  .hero h1 .accent { color: var(--blue-accent); }
+
+  .hero p.lead {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: rgba(233, 239, 250, 0.82);
+    max-width: 540px;
+    margin-bottom: 38px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 17px 30px;
+    border-radius: var(--btn-radius);
+    box-shadow: 0 16px 34px -14px rgba(52, 97, 224, 0.55);
+    transition: transform 0.16s ease;
+  }
+  .btn-primary:hover { background-color: var(--blue-strong); transform: translateY(-2px); }
+  .btn-primary svg { width: 20px; height: 20px; }
+
+  .hero-arrows {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .hero-arrows button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background 0.16s ease;
+    backdrop-filter: blur(4px);
+  }
+  .hero-arrows button:hover { background: rgba(255,255,255,0.2); }
+  .hero-arrows .prev { left: 22px; }
+  .hero-arrows .next { right: 22px; }
+
+  /* ---------- Partners ---------- */
+  .partners {
+    background: #fff;
+    padding: 56px 0 60px;
+    border-bottom: 1px solid var(--line);
+  }
+  .partners .eyebrow {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 30px;
+  }
+  .partners .strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .partners .strip img {
+    width: 100%;
+    max-width: 880px;
+    opacity: 0.92;
+  }
+
+  /* ---------- Directions ---------- */
+  .directions { padding: 96px 0 104px; }
+
+  .sec-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 52px;
+  }
+  .eyebrow {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+  .sec-head h2 {
+    font-family: var(--head-font);
+    font-size: 46px;
+    font-weight: var(--head-weight);
+    letter-spacing: var(--head-track);
+    line-height: 1.05;
+    color: var(--ink);
+  }
+  .sec-head p {
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--muted);
+    max-width: 380px;
+    text-align: right;
+    line-height: 1.55;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+  }
+  .card .photo {
+    aspect-ratio: 350 / 236;
+    overflow: hidden;
+  }
+  .card .photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  .card .body {
+    padding: 30px 30px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .card .body h3 {
+    font-family: var(--head-font);
+    font-size: 25px;
+    font-weight: var(--head-weight);
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .card .body p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .card .more {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .card .more svg { width: 18px; height: 18px; transition: transform 0.18s ease; }
+  .card:hover .more svg { transform: translateX(4px); }
+
+  /* ---------- Map ---------- */
+  .map-section {
+    background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+    padding: 96px 0 110px;
+  }
+  .map-section h2 {
+    text-align: center;
+    font-family: var(--head-font);
+    font-size: 46px;
+    font-weight: var(--head-weight);
+    letter-spacing: var(--head-track);
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .map-section .sub {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0 auto 48px;
+  }
+  .map-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .map-wrap img {
+    width: 100%;
+    max-width: 1000px;
+    filter: var(--map-filter);
+    transition: filter 0.45s ease;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 880px;
+    margin: 56px auto 0;
+  }
+  .stat {
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--card-radius);
+    padding: 30px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .stat .num {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--blue);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  .stat .label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site {
+    background: #0F1A33;
+    color: #C7D2E8;
+    padding: 70px 0 36px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .foot-brand .logo .word b { color: #fff; }
+  .foot-brand .logo .word span { color: #8FA0C2; }
+  .foot-brand p {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #93A2C2;
+    max-width: 300px;
+  }
+  .foot-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .foot-col a, .foot-col p.line {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #A7B4D1;
+    margin-bottom: 13px;
+    transition: color 0.16s ease;
+  }
+  .foot-col a:hover { color: #fff; }
+  .foot-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    font-size: 14px;
+    color: #7E8DAF;
+  }
+  .foot-bottom .socials { display: flex; gap: 14px; }
+  .foot-bottom .socials a {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.16);
+    display: grid; place-items: center;
+    color: #C7D2E8;
+    transition: background 0.16s ease, border-color 0.16s ease;
+  }
+  .foot-bottom .socials a:hover { background: var(--blue); border-color: var(--blue); color:#fff; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1000px) {
+    .cards { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    .sec-head { grid-template-columns: 1fr; }
+    .sec-head p { text-align: left; max-width: none; }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    nav.links { display: none; }
+    .hero h1 { font-size: 52px; }
+  }
+  @media (max-width: 560px) {
+    .wrap, .hero-inner { padding: 0 22px; }
+    .hero h1 { font-size: 40px; }
+    .stats { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <svg class="mark" viewBox="0 0 46 36" fill="none" aria-hidden="true">
+        <path d="M24 3 L24 26 L5 26 Z" fill="#2F6BFF"/>
+        <path d="M26 8 L26 26 L41 26 Z" fill="#6E9BF6"/>
+        <path d="M3 29 Q23 37 43 29 L39 26.5 L7 26.5 Z" fill="#1B3A8F"/>
+      </svg>
+      <span class="word">
+        <b>jelken</b>
+        <span>foundation</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#about">Жоба жайлы</a>
+      <a href="#schools">Мектептер</a>
+      <a href="#equip">Жабдықтау</a>
+      <a href="#teach">Оқыту</a>
+      <a href="#mentor">Тәлімгерлік</a>
+      <a href="#contact">Байланыс</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="about">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="badge">Білім берудің болашағына инвестициялар</span>
+      <h1>Әр балаға <span class="accent">тең мүмкіндіктер</span></h1>
+      <p class="lead">Қазақстандағы жастардың білім беру және әлеуметтік бастамалар арқылы жан-жақты дамуына жәрдемдесу – біздің басты миссиямыз.</p>
+      <a class="btn-primary" href="#schools">
+        Қолдау көрсетілген мектептермен танысу
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-arrows">
+    <button class="prev" aria-label="Алдыңғы"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="next" aria-label="Келесі"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="partners">
+  <p class="eyebrow">Біздің серіктестер</p>
+  <div class="wrap strip">
+    <img src="assets/partners.png" alt="Серіктестер: Білім-Инновация, Qazaqstan halqyna, Jelken Foundation" />
+  </div>
+</section>
+
+<!-- ============ DIRECTIONS ============ -->
+<section class="directions" id="equip">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Білім беру бастамалары</p>
+        <h2>Біздің бағыттар</h2>
+      </div>
+      <p>Біз Қазақстанның әр түкпіріндегі балалар мен мұғалімдер үшін заманауи білім ортасын құрамыз.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="photo"><img src="assets/card1.png" alt="Мектептер үшін" /></div>
+        <div class="body">
+          <h3>Мектептерді жаңғырту</h3>
+          <p>Ауыл мектептерін заманауи физика, химия, биология және STEM кабинеттерімен толық жабдықтау. Тең мүмкіндіктер.</p>
+          <a class="more" href="#schools">Толығырақ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="card" id="teach">
+        <div class="photo"><img src="assets/card2.png" alt="Мұғалімдер үшін" /></div>
+        <div class="body">
+          <h3>Оқыту курстары</h3>
+          <p>Жас педагогтардың кәсіби өсуіне, тәжірибе алмасуына және семинарлар өткізуіне арналған заманауи кеңістіктер (Астана, Петропавл).</p>
+          <a class="more" href="#teach">Толығырақ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="card" id="mentor">
+        <div class="photo"><img src="assets/card3.png" alt="Мұғалімдер үшін" /></div>
+        <div class="body">
+          <h3>Тәлімгерлік</h3>
+          <p>Балалар үйлерінің тәрбиеленушілерін кәсіпке бағдарлау, олардың колледждерге түсуіне және жұмысқа орналасуына қолдау.</p>
+          <a class="more" href="#mentor">Толығырақ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section class="map-section" id="schools">
+  <div class="wrap">
+    <h2>Жоба жүргізілген аймақтар</h2>
+    <p class="sub">Қазақстанның онға жуық өңірінде мектептер заманауи кабинеттермен жабдықталды.</p>
+    <div class="map-wrap">
+      <img src="assets/map.png" alt="Жоба жүргізілген аймақтар картасы" />
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">300+</div><div class="label">Жабдықталған мектеп</div></div>
+      <div class="stat"><div class="num">7</div><div class="label">Қамтылған өңір</div></div>
+      <div class="stat"><div class="num">15&nbsp;000+</div><div class="label">Оқушы мен мұғалім</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#">
+          <svg class="mark" viewBox="0 0 46 36" fill="none" aria-hidden="true">
+            <path d="M24 3 L24 26 L5 26 Z" fill="#2F6BFF"/>
+            <path d="M26 8 L26 26 L41 26 Z" fill="#6E9BF6"/>
+            <path d="M3 29 Q23 37 43 29 L39 26.5 L7 26.5 Z" fill="#1B3A8F"/>
+          </svg>
+          <span class="word"><b>jelken</b><span>foundation</span></span>
+        </a>
+        <p>Қазақстандағы балалар мен мұғалімдер үшін тең білім мүмкіндіктерін жасайтын қоғамдық қор.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Бағыттар</h4>
+        <a href="#equip">Мектептерді жаңғырту</a>
+        <a href="#teach">Оқыту курстары</a>
+        <a href="#mentor">Тәлімгерлік</a>
+        <a href="#schools">Мектептер</a>
+      </div>
+      <div class="foot-col">
+        <h4>Қор туралы</h4>
+        <a href="#about">Жоба жайлы</a>
+        <a href="#schools">Аймақтар</a>
+        <a href="#contact">Серіктестер</a>
+        <a href="#contact">Жаңалықтар</a>
+      </div>
+      <div class="foot-col">
+        <h4>Байланыс</h4>
+        <p class="line">Астана қ., Қазақстан</p>
+        <a href="mailto:info@jelken.kz">info@jelken.kz</a>
+        <a href="tel:+77000000000">+7 700 000 00 00</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Jelken Foundation. Барлық құқықтар қорғалған.</span>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 4.2 2.9 11.5c-1 .4-1 1.8.1 2.1l4.7 1.5 1.8 5.6c.3.8 1.3 1 1.9.4l2.6-2.5 4.7 3.5c.7.5 1.7.1 1.9-.7L23.9 5.4c.2-1-.8-1.7-2.1-1.2Z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TWEAKS ============ -->
+<div id="tweak-root"></div>
+<style>
+  .tw-moods { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 2px; }
+  .tw-mood {
+    display: flex; align-items: center; gap: 9px;
+    padding: 9px 11px; border-radius: 10px;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    color: #E6E9F2; font: 600 13px/1 'Manrope', sans-serif;
+    cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .tw-mood:hover { background: rgba(255,255,255,0.09); }
+  .tw-mood.on { border-color: #fff; background: rgba(255,255,255,0.14); }
+  .tw-dot { width: 30px; height: 18px; border-radius: 6px; flex: none; }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const THEMES = {
+  ocean: {
+    blue: '#3461E0', strong: '#2A53C9', accent: '#6E9BF6',
+    bg: '#F3F6FC', bg2: '#EAF0FA',
+    overlay: 'linear-gradient(96deg, rgba(13,22,46,0.94) 0%, rgba(15,26,55,0.82) 38%, rgba(20,34,70,0.30) 70%, rgba(20,34,70,0.12) 100%)',
+    map: 'none', swatch: ['#3461E0', '#6E9BF6']
+  },
+  sunrise: {
+    blue: '#E1672F', strong: '#C8551F', accent: '#F4A361',
+    bg: '#FBF4EE', bg2: '#F7E7D8',
+    overlay: 'linear-gradient(96deg, rgba(46,24,13,0.94) 0%, rgba(60,30,15,0.82) 38%, rgba(80,42,20,0.30) 70%, rgba(80,42,20,0.12) 100%)',
+    map: 'hue-rotate(-190deg) saturate(1.15)', swatch: ['#E1672F', '#F4A361']
+  },
+  forest: {
+    blue: '#1E8A5B', strong: '#176E48', accent: '#5FC08C',
+    bg: '#EFF6F1', bg2: '#E0F0E6',
+    overlay: 'linear-gradient(96deg, rgba(10,33,23,0.94) 0%, rgba(13,42,29,0.82) 38%, rgba(18,58,40,0.30) 70%, rgba(18,58,40,0.12) 100%)',
+    map: 'hue-rotate(-85deg) saturate(0.85)', swatch: ['#1E8A5B', '#5FC08C']
+  },
+  midnight: {
+    blue: '#5A63E0', strong: '#474FC8', accent: '#9AA0F5',
+    bg: '#F1F1FA', bg2: '#E5E6F6',
+    overlay: 'linear-gradient(96deg, rgba(12,12,30,0.96) 0%, rgba(18,18,42,0.86) 38%, rgba(26,26,58,0.34) 70%, rgba(26,26,58,0.14) 100%)',
+    map: 'hue-rotate(22deg) saturate(1.1)', swatch: ['#5A63E0', '#9AA0F5']
+  }
+};
+
+const VOICES = {
+  geometric: { font: "'Manrope', system-ui, sans-serif", weight: 800, track: '-1px', trackHero: '-1.5px', leading: '1.03' },
+  editorial: { font: "'Lora', Georgia, serif", weight: 700, track: '-0.3px', trackHero: '-0.5px', leading: '1.06' },
+  condensed: { font: "'Oswald', sans-serif", weight: 600, track: '0px', trackHero: '-0.5px', leading: '1.14' }
+};
+
+function applyTweaks(t) {
+  const r = document.documentElement.style;
+  const th = THEMES[t.mood] || THEMES.ocean;
+  r.setProperty('--blue', th.blue);
+  r.setProperty('--blue-strong', th.strong);
+  r.setProperty('--blue-accent', th.accent);
+  r.setProperty('--bg', th.bg);
+  r.setProperty('--bg-2', th.bg2);
+  r.setProperty('--hero-overlay', th.overlay);
+  r.setProperty('--map-filter', th.map);
+
+  const v = VOICES[t.voice] || VOICES.geometric;
+  r.setProperty('--head-font', v.font);
+  r.setProperty('--head-weight', v.weight);
+  r.setProperty('--head-track', v.track);
+  r.setProperty('--head-track-hero', v.trackHero);
+  r.setProperty('--hero-leading', v.leading);
+
+  const s = Math.max(0, Math.min(100, t.softness)) / 100;
+  r.setProperty('--card-radius', (4 + s * 26).toFixed(1) + 'px');
+  r.setProperty('--btn-radius', (3 + s * 15).toFixed(1) + 'px');
+  const y = (8 + s * 16).toFixed(0), blur = (18 + s * 34).toFixed(0), spread = (-14 - s * 6).toFixed(0), a = (0.16 + s * 0.16).toFixed(2);
+  r.setProperty('--card-shadow', `0 ${y}px ${blur}px ${spread}px rgba(28,50,110,${a})`);
+  const yh = (12 + s * 24).toFixed(0), blurh = (26 + s * 40).toFixed(0), ah = (0.22 + s * 0.18).toFixed(2);
+  r.setProperty('--card-shadow-hover', `0 ${yh}px ${blurh}px -20px rgba(28,50,110,${ah})`);
+}
+
+const TWEAK_DEFAULTS = { mood: 'ocean', voice: 'geometric', softness: 62 };
+const MOOD_LABELS = { ocean: 'Ocean', sunrise: 'Sunrise', forest: 'Forest', midnight: 'Midnight' };
+
+function TweakApp() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  React.useEffect(() => { applyTweaks(t); }, [t]);
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection label="Brand mood" />
+      <div className="tw-moods">
+        {Object.keys(THEMES).map((k) => (
+          <button key={k} className={"tw-mood" + (t.mood === k ? " on" : "")}
+                  onClick={() => setTweak('mood', k)}>
+            <span className="tw-dot" style={{ background: `linear-gradient(135deg, ${THEMES[k].swatch[0]}, ${THEMES[k].swatch[1]})` }}></span>
+            {MOOD_LABELS[k]}
+          </button>
+        ))}
+      </div>
+      <TweakSection label="Headline voice" />
+      <TweakRadio label="Typeface" value={t.voice}
+                  options={[{ value: 'geometric', label: 'Geometric' }, { value: 'editorial', label: 'Editorial' }, { value: 'condensed', label: 'Condensed' }]}
+                  onChange={(v) => setTweak('voice', v)} />
+      <TweakSection label="Form" />
+      <TweakSlider label="Softness" value={t.softness} min={0} max={100} unit=""
+                   onChange={(v) => setTweak('softness', v)} />
+    </TweaksPanel>
+  );
+}
+
+applyTweaks(TWEAK_DEFAULTS);
+ReactDOM.createRoot(document.getElementById('tweak-root')).render(<TweakApp />);
+</script>
+
+</body>
+</html>

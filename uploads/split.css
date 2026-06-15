@@ -1,0 +1,33 @@
+/* split.css — two-column text + image layout */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+/* Flip: image left, text right */
+.split--reverse .split__image { order: -1; }
+
+.split__text .section__label { margin-bottom: var(--space-xs); }
+.split__text h2              { margin-bottom: var(--space-sm); }
+.split__text p               { color: var(--color-text-body); margin-bottom: var(--space-md); }
+
+.split__image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  aspect-ratio: 4 / 3;
+}
+
+.split__image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .split                       { grid-template-columns: 1fr; }
+  .split__image                { order: -1; }
+  .split--reverse .split__image { order: -1; }
+}

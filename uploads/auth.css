@@ -1,0 +1,9 @@
+/* auth.css — Firebase auth state hooks.
+   Toggled by js/auth.js adding/removing .logged-in on <body>.
+   No visual effect until login is wired in. */
+
+[data-requires-auth]  { display: none; }
+[data-hide-when-auth] { display: block; }
+
+body.logged-in [data-requires-auth]  { display: block; }
+body.logged-in [data-hide-when-auth] { display: none; }

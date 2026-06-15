@@ -1,0 +1,37 @@
+/* stats.css — full-width stat number strip */
+
+.stats-strip {
+  background: var(--color-primary);
+  padding-block: var(--space-xl);
+}
+
+.stats-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.stat-item__number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-accent-light);
+  line-height: 1;
+}
+
+.stat-item__label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .stats-strip__grid  { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+  .stat-item__number  { font-size: 2rem; }
+}
+
+@media (max-width: 420px) {
+  .stats-strip__grid  { grid-template-columns: 1fr; }
+}

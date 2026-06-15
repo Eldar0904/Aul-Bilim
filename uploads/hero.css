@@ -1,0 +1,106 @@
+/* hero.css — full-height hero section with image, overlay, and stats row */
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-primary-dark);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 58, 110, 0.88) 0%,
+    rgba(27, 79, 138, 0.65) 55%,
+    rgba(232, 160, 0, 0.18) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 700px;
+  padding-block: var(--space-xl);
+}
+
+.hero__label {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: var(--space-md);
+}
+
+.hero__title {
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  opacity: 0.88;
+  max-width: 58ch;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* Stats row */
+.hero__stats {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero__stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-accent-light);
+  line-height: 1;
+}
+
+.hero__stat-label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .hero           { min-height: 100svh; align-items: flex-end; }
+  /* Push content clear of the 68px sticky nav */
+  .hero__content  { padding-top: calc(68px + var(--space-md)); }
+  .hero__subtitle { font-size: 1rem; }
+  .hero__stats    { gap: var(--space-md); }
+  .hero__stat-number { font-size: 1.75rem; }
+}

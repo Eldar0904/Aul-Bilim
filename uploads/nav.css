@@ -1,0 +1,54 @@
+/* nav.css — sticky navigation and language switcher */
+
+.nav { position: sticky; top: 0; z-index: 100; background: var(--color-surface); border-bottom: 1px solid var(--color-border); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+
+.nav__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+
+.nav__logo { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; color: var(--color-primary); letter-spacing: -0.01em; line-height: 1.2; }
+.nav__logo span { color: var(--color-accent); }
+
+.nav__links { display: flex; align-items: center; gap: var(--space-md); }
+
+.nav__link {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-body);
+  transition: color var(--transition);
+  position: relative;
+}
+.nav__link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--color-accent); transition: width var(--transition); }
+.nav__link:hover, .nav__link.active { color: var(--color-primary); }
+.nav__link:hover::after, .nav__link.active::after { width: 100%; }
+
+/* Language switcher */
+.lang-switcher { display: flex; gap: 2px; align-items: center; margin-left: var(--space-sm); padding-left: var(--space-sm); border-left: 1px solid var(--color-border); }
+/* Enlarged touch target: padding 8/12 gives ~40px height at default font size */
+.lang-switcher__btn { padding: 8px 12px; min-height: 36px; border-radius: 4px; font-size: var(--text-sm); font-weight: 700; font-family: var(--font-heading); color: var(--color-text-muted); transition: var(--transition); cursor: pointer; }
+.lang-switcher__btn.active, .lang-switcher__btn:hover { background: var(--color-primary-tint); color: var(--color-primary); }
+.lang-switcher__btn:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+
+/* Mobile hamburger */
+.nav__toggle { display: none; flex-direction: column; gap: 5px; padding: 10px; cursor: pointer; min-width: 44px; min-height: 44px; justify-content: center; }
+.nav__toggle span { display: block; width: 24px; height: 2px; background: var(--color-text); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+/* Hamburger → X animation when drawer is open */
+.nav__toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav__toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav__toggle:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; border-radius: var(--radius-sm); }
+
+@media (max-width: 768px) {
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: fixed; inset: 68px 0 0 0;
+    background: var(--color-surface);
+    flex-direction: column; align-items: flex-start;
+    padding: var(--space-lg) var(--container-pad);
+    gap: var(--space-md);
+    transform: translateX(100%); transition: transform 0.3s ease;
+    border-top: 1px solid var(--color-border); overflow-y: auto;
+  }
+  .nav__links.open { transform: translateX(0); }
+  .nav__link { font-size: 1.1rem; }
+  .lang-switcher { margin-left: 0; padding-left: 0; border-left: none; padding-top: var(--space-sm); border-top: 1px solid var(--color-border); width: 100%; }
+}
