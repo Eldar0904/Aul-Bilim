@@ -1,0 +1,14 @@
+node_modules/
+tmp_modules/
+
+# Raw local media uploads stay out of Git. Commit only web-ready assets.
+assets/photos/
+
+# Large archives and source media files.
+*.zip
+*.7z
+*.rar
+*.mov
+*.mp4
+*.heic
+*.HEIC

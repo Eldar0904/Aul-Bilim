@@ -147,7 +147,6 @@ function sharedSection() {
       ['Аймақтар', 'Regions'],
       ['Оқиғалар', 'Stories'],
       ['Біз туралы', 'About'],
-      ['Серіктес болу →', 'Become a Partner →'],
       ['ҚАЗ', '(language switch)'],
       ['ENG', '(language switch)'],
     ]),
@@ -412,7 +411,6 @@ function indexPage() {
     biTable([
       ['Бізбен бірге жарқын дала құрыңыз', 'Build a brighter steppe with us'],
       ['Корпоративтік серіктестер, мемлекеттік органдар және жеке демеушілер — бірге біз мектептерге және оларды ұстап тұрған ұстаздарға нақты, тұрақты өзгеріс әкелеміз.', 'Corporate partners, government bodies, and individual donors — together we bring real, lasting change to schools and the teachers who hold them together.'],
-      ['Серіктес болу →', 'Become a Partner →'],
       ['Қор туралы →', 'About the Foundation →'],
     ]),
     pageBreak(),
@@ -482,7 +480,6 @@ function programsPage() {
     biTable([
       ['Бір бағдарламаны бірге алып барайық', 'Let\'s take one programme further, together'],
       ['Сізге қай бағыт жақын? Бір сыныпты жабдықтаңыз, бір USTAZ орталығын қолдаңыз немесе бір баланың тәлімгері болыңыз.', 'Which direction speaks to you? Equip a single classroom, back a USTAZ centre, or stand behind one child as a mentor.'],
-      ['Серіктес болу →', 'Become a Partner →'],
       ['Оқиғаларды көру →', 'See the stories →'],
     ]),
     pageBreak(),
@@ -556,7 +553,6 @@ function storiesPage() {
     biTable([
       ['Келесі оқиғаның авторы болыңыз', 'Help write the next story'],
       ['Әр жабдықталған сынып пен қолдау тапқан бала жаңа оқиға бастайды. Сіздің қолдауыңыз оны мүмкін етеді.', 'Every equipped classroom and supported child begins a new story. Your support is what makes the next one possible.'],
-      ['Серіктес болу →', 'Become a Partner →'],
       ['Бағдарламалар →', 'Our programmes →'],
     ]),
     pageBreak(),
@@ -634,7 +630,6 @@ function aboutPage() {
     biTable([
       ['Бізбен бірге жұмыс істеңіз', 'Work alongside us'],
       ['Демеуші, серіктес немесе ерікті — Aul Bilim-ге қосылудың көп жолы бар. Қайдан бастарыңызды бірге ойлайық.', 'Donor, partner or volunteer — there are many ways to join Aul Bilim. Let\'s figure out where you fit, together.'],
-      ['Серіктес болу →', 'Become a Partner →'],
       ['Оқиғаларды көру →', 'See the stories →'],
     ]),
     pageBreak(),
