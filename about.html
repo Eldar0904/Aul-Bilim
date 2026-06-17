@@ -11,6 +11,7 @@
 </head>
 <body>
 <div class="grain"></div>
+<a class="skip-link" href="#main-content"><span lang="kk">Негізгі мазмұнға өту</span><span lang="en">Skip to main content</span></a>
 
 <!-- ============ NAV ============ -->
 <nav class="bar">
@@ -32,6 +33,7 @@
     </div>
   </div>
 </nav>
+<main id="main-content">
 
 <!-- ============ PAGE HERO ============ -->
 <header class="page-hero center">
@@ -141,6 +143,7 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
+</main>
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
@@ -157,7 +160,7 @@
       </div>
       <div>
         <h4><span lang="kk">Байланыс</span><span lang="en">Contact</span></h4>
-        <a href="#"><span lang="kk">Астана, Қазақстан</span><span lang="en">Astana, Kazakhstan</span></a>
+        <span class="footer-address"><span lang="kk">Астана, Қазақстан</span><span lang="en">Astana, Kazakhstan</span></span>
         <a href="mailto:hello@aulbilim.kz">hello@aulbilim.kz</a>
         <a href="partner.html"><span lang="kk">Серіктес болу</span><span lang="en">Become a Partner</span></a>
       </div>
@@ -170,7 +173,9 @@
 </footer>
 
 <script src="site.js"></script>
+<script src="uploads/firebase-config.js"></script>
+<script src="uploads/db.js"></script>
+<script src="uploads/content-loader.js"></script>
 <script src="image-slot.js"></script>
-<script src="editor.js"></script>
 </body>
 </html>

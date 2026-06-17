@@ -15,7 +15,9 @@
     root.setAttribute('data-lang', lang);
     try { localStorage.setItem(STORE, lang); } catch (e) {}
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('on', b.getAttribute('data-set') === lang);
+      var isCurrent = b.getAttribute('data-set') === lang;
+      b.classList.toggle('on', isCurrent);
+      b.setAttribute('aria-pressed', isCurrent ? 'true' : 'false');
     });
     // swap <html lang> + per-page <title>
     root.setAttribute('lang', lang === 'kk' ? 'kk' : 'en');
@@ -40,9 +42,24 @@
     var btn = document.querySelector('.menu-btn');
     var links = document.querySelector('.nav-links');
     if (btn && links) {
-      btn.addEventListener('click', function () { links.classList.toggle('open'); });
+      if (!links.id) links.id = 'site-nav-links';
+      btn.setAttribute('aria-controls', links.id);
+      btn.setAttribute('aria-expanded', 'false');
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
       links.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () { links.classList.remove('open'); });
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          links.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
       });
     }
 

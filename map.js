@@ -202,6 +202,10 @@
         });
         path.setAttribute('data-map-id', mapId);
         path.setAttribute('aria-label', sourcePath.getAttribute('name') || mapId);
+        if (region) {
+          path.setAttribute('tabindex', '0');
+          path.setAttribute('role', 'button');
+        }
         svg.appendChild(path);
         if (region) activePaths.push({ region: region, path: path });
       });
@@ -222,7 +226,12 @@
           'class': 'map-label' + (region ? ' active' : ''),
           'data-map-label': mapId
         });
-        if (region) text.setAttribute('data-region', region.id);
+        if (region) {
+          text.setAttribute('data-region', region.id);
+          text.setAttribute('tabindex', '0');
+          text.setAttribute('role', 'button');
+          text.setAttribute('aria-label', (label.kk || label.en) + ' облысы');
+        }
         svg.appendChild(text);
         labels.push({ node: text, label: label });
       });
@@ -264,6 +273,12 @@
     svg.addEventListener('mouseout', function (e) {
       var id = e.target.getAttribute && e.target.getAttribute('data-region');
       if (id) svg.querySelectorAll('[data-pulse="' + id + '"]').forEach(function (p) { p.classList.remove('hovered'); });
+    });
+    svg.addEventListener('keydown', function (e) {
+      var id = e.target.getAttribute && e.target.getAttribute('data-region');
+      if (!id || (e.key !== 'Enter' && e.key !== ' ')) return;
+      e.preventDefault();
+      openRegion(id);
     });
 
     function regionById(id) {

@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="uploads/firebase-config.js"></script>
+<script src="uploads/auth.js"></script>
+<script src="uploads/content-schema.js"></script>
+<script src="uploads/db.js"></script>
 <script src="image-slot.js"></script>
 <style>
 :root {
@@ -181,6 +185,9 @@ aside#sidebar{
 .media-slot-wrap{display:flex;flex-direction:column;gap:8px;}
 .media-slot-wrap image-slot{display:block;width:100%;border-radius:12px;overflow:hidden;}
 .media-slot-label{font-family:var(--fh);font-weight:700;font-size:11.5px;color:var(--body);text-align:center;letter-spacing:0.04em;}
+.media-meta{display:grid;gap:7px;margin-top:4px;}
+.media-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:12.5px var(--fb);background:#fff;}
+.media-meta input:focus{outline:none;border-color:var(--accent);}
 
 /* ── TOAST ────────────────────────────────────────────────── */
 #toast{
@@ -200,10 +207,11 @@ aside#sidebar{
   <div class="gate-card">
     <div class="gate-logo">Aul&nbsp;<span>Bilim</span></div>
     <p class="gate-sub">Мазмұнды басқару жүйесі</p>
-    <input type="password" id="pw-input" placeholder="Құпия сөз" />
+    <input type="email" id="email-input" placeholder="Email" autocomplete="username" />
+    <input type="password" id="pw-input" placeholder="Құпия сөз" autocomplete="current-password" />
     <button class="btn" id="pw-btn">Кіру</button>
-    <p class="gate-err" id="pw-err">Құпия сөз қате — қайталаңыз.</p>
-    <p class="gate-hint">Кеңес: jelken + жыл</p>
+    <p class="gate-err" id="pw-err">Кіру мүмкін болмады. Firebase конфигурациясын және тіркелгіні тексеріңіз.</p>
+    <p class="gate-hint">Firebase Auth арқылы қорғалған әкімші кіруі.</p>
   </div>
 </div>
 
@@ -279,7 +287,6 @@ aside#sidebar{
    ══════════════════════════════════════════════════════════════ */
 
 const COPY_FILE = '.copy.state.json';
-const PASSWORD  = 'jelken2026';
 
 const PAGES = [
   { id:'index.html',    label:'Басты бет',     slots:[
@@ -317,28 +324,50 @@ const PAGES = [
 
 /* ── Shared copy state ─────────────────────────────────────── */
 let savedCopy = {};   // { 'index.html': { cp0: '...', cp1: '...' }, ... }
+let savedContent = {};
 let currentPage = 'index.html';
 let currentItems = []; // parsed copy items for current page
 let dirty = false;
 
 /* ── Auth ──────────────────────────────────────────────────── */
 document.getElementById('pw-btn').addEventListener('click', tryLogin);
+document.getElementById('email-input').addEventListener('keydown', e => { if (e.key==='Enter') tryLogin(); });
 document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key==='Enter') tryLogin(); });
 
-function tryLogin() {
+async function tryLogin() {
+  const email = document.getElementById('email-input').value.trim();
   const val = document.getElementById('pw-input').value.trim();
   const err = document.getElementById('pw-err');
-  if (val === PASSWORD) {
+  const btn = document.getElementById('pw-btn');
+  err.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Кіру…';
+  const result = await window.cmsAuth.login(email, val);
+  btn.disabled = false;
+  btn.textContent = 'Кіру';
+  if (result.success) {
     document.getElementById('gate').style.display = 'none';
     document.getElementById('app').classList.add('show');
     init();
   } else {
+    err.textContent = result.error || 'Кіру мүмкін болмады.';
     err.style.display = 'block';
     document.getElementById('pw-input').value = '';
     document.getElementById('pw-input').focus();
   }
 }
-document.getElementById('logout-btn').addEventListener('click', () => location.reload());
+document.getElementById('logout-btn').addEventListener('click', async () => {
+  await window.cmsAuth.logout();
+  location.reload();
+});
+
+window.cmsAuth.onAuthStateChanged(session => {
+  if (session && !document.getElementById('app').classList.contains('show')) {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').classList.add('show');
+    init();
+  }
+});
 
 /* ── Init ──────────────────────────────────────────────────── */
 async function init() {
@@ -349,6 +378,12 @@ async function init() {
 /* ── Load the shared copy JSON ─────────────────────────────── */
 async function loadSavedCopy() {
   try {
+    const content = await window.db.getSiteContent();
+    if (content && content.pages) {
+      savedContent = content;
+      savedCopy = content.pages;
+      return;
+    }
     const r = await fetch(COPY_FILE + '?t=' + Date.now());
     if (r.ok) savedCopy = await r.json();
   } catch (e) { savedCopy = {}; }
@@ -562,6 +597,7 @@ function renderMedia() {
   grid.className = 'media-grid';
 
   info.slots.forEach(slot => {
+    const meta = (savedContent.media && savedContent.media[slot.id]) || {};
     const wrap = document.createElement('div');
     wrap.className = 'media-slot-wrap';
 
@@ -575,9 +611,17 @@ function renderMedia() {
     const lbl = document.createElement('div');
     lbl.className = 'media-slot-label';
     lbl.textContent = slot.label;
+    const metaForm = document.createElement('div');
+    metaForm.className = 'media-meta';
+    metaForm.innerHTML = `
+      <input type="text" data-media-id="${slot.id}" data-media-field="altKk" placeholder="Alt мәтін (қазақша)" value="${escAttr(meta.altKk || '')}" />
+      <input type="text" data-media-id="${slot.id}" data-media-field="altEn" placeholder="Alt text (English)" value="${escAttr(meta.altEn || '')}" />
+      <input type="url" data-media-id="${slot.id}" data-media-field="embedUrl" placeholder="YouTube/video URL (optional)" value="${escAttr(meta.embedUrl || '')}" />
+    `;
 
     wrap.appendChild(slotEl);
     wrap.appendChild(lbl);
+    wrap.appendChild(metaForm);
     grid.appendChild(wrap);
   });
 
@@ -593,16 +637,25 @@ async function saveChanges() {
   btn.textContent = 'Сақталуда…';
   btn.classList.add('saving');
 
-  // Collect all field values for current page
-  const pageData = {};
-  document.querySelectorAll('#copy-panel [data-id]').forEach(el => {
-    pageData[el.dataset.id] = el.value || el.textContent;
-  });
-  savedCopy[currentPage] = pageData;
+  // Collect copy values only when the copy panel is visible.
+  if (document.getElementById('copy-panel').style.display !== 'none') {
+    const pageData = {};
+    document.querySelectorAll('#copy-panel [data-id]').forEach(el => {
+      pageData[el.dataset.id] = el.value || el.textContent;
+    });
+    savedCopy[currentPage] = pageData;
+  }
 
-  // Write to .copy.state.json
-  const json = JSON.stringify(savedCopy, null, 2);
-  const ok = await writeFile(COPY_FILE, json);
+  const media = Object.assign({}, savedContent.media || {});
+  document.querySelectorAll('[data-media-id][data-media-field]').forEach(el => {
+    const id = el.dataset.mediaId;
+    const field = el.dataset.mediaField;
+    media[id] = media[id] || {};
+    media[id][field] = el.value;
+  });
+  savedContent = Object.assign({}, savedContent, { pages: savedCopy, media: media });
+  const result = await window.db.saveSiteContent(savedContent);
+  const ok = result && result.success;
 
   btn.classList.remove('saving');
   if (ok) {

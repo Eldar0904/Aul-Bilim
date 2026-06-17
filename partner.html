@@ -11,6 +11,7 @@
 </head>
 <body>
 <div class="grain"></div>
+<a class="skip-link" href="#main-content"><span lang="kk">Негізгі мазмұнға өту</span><span lang="en">Skip to main content</span></a>
 
 <!-- ============ NAV ============ -->
 <nav class="bar">
@@ -32,6 +33,7 @@
     </div>
   </div>
 </nav>
+<main id="main-content">
 
 <!-- ============ PAGE HERO ============ -->
 <header class="page-hero">
@@ -113,40 +115,37 @@
       <form id="partner-form" novalidate>
         <div class="form-grid">
           <div class="field">
-            <label><span lang="kk">Атыңыз</span><span lang="en">Your name</span></label>
-            <input type="text" name="name" placeholder="—" required />
+            <label for="partner-name"><span lang="kk">Атыңыз</span><span lang="en">Your name</span></label>
+            <input id="partner-name" type="text" name="name" placeholder="—" autocomplete="name" required />
           </div>
           <div class="field">
-            <label><span lang="kk">Ұйым</span><span lang="en">Organisation</span></label>
-            <input type="text" name="org" placeholder="—" />
+            <label for="partner-org"><span lang="kk">Ұйым</span><span lang="en">Organisation</span></label>
+            <input id="partner-org" type="text" name="org" placeholder="—" autocomplete="organization" />
           </div>
           <div class="field">
-            <label><span lang="kk">Email</span><span lang="en">Email</span></label>
-            <input type="email" name="email" placeholder="—" required />
+            <label for="partner-email"><span lang="kk">Email</span><span lang="en">Email</span></label>
+            <input id="partner-email" type="email" name="email" placeholder="—" autocomplete="email" required />
           </div>
           <div class="field">
-            <label><span lang="kk">Телефон</span><span lang="en">Phone</span></label>
-            <input type="tel" name="phone" placeholder="—" />
+            <label for="partner-phone"><span lang="kk">Телефон</span><span lang="en">Phone</span></label>
+            <input id="partner-phone" type="tel" name="phone" placeholder="—" autocomplete="tel" />
           </div>
           <div class="field full">
-            <label><span lang="kk">Серіктестік түрі</span><span lang="en">Partnership type</span></label>
-            <select name="type">
-              <option lang="kk" value="corporate">Корпоративтік серіктестік</option>
-              <option lang="en" value="corporate">Corporate partnership</option>
-              <option lang="kk" value="government">Мемлекеттік ынтымақтастық</option>
-              <option lang="en" value="government">Government collaboration</option>
-              <option lang="kk" value="individual">Жеке демеушілік</option>
-              <option lang="en" value="individual">Individual giving</option>
+            <label for="partner-type"><span lang="kk">Серіктестік түрі</span><span lang="en">Partnership type</span></label>
+            <select id="partner-type" name="type">
+              <option value="corporate">Корпоративтік серіктестік / Corporate partnership</option>
+              <option value="government">Мемлекеттік ынтымақтастық / Government collaboration</option>
+              <option value="individual">Жеке демеушілік / Individual giving</option>
             </select>
           </div>
           <div class="field full">
-            <label><span lang="kk">Хабарлама</span><span lang="en">Message</span></label>
-            <textarea name="message" placeholder="—"></textarea>
+            <label for="partner-message"><span lang="kk">Хабарлама</span><span lang="en">Message</span></label>
+            <textarea id="partner-message" name="message" placeholder="—"></textarea>
           </div>
         </div>
         <div class="btn-row" style="margin-top:26px; align-items:center;">
           <button type="submit" class="pill sun"><span lang="kk">Сұранысты жіберу →</span><span lang="en">Send enquiry →</span></button>
-          <span id="form-note" style="font-size:14px; color:var(--accent-deep); font-family:var(--fh); font-weight:700; display:none;">
+          <span id="form-note" aria-live="polite" style="font-size:14px; color:var(--accent-deep); font-family:var(--fh); font-weight:700; display:none;">
             <span lang="kk">Рақмет! Біз жақын арада хабарласамыз.</span><span lang="en">Thank you! We'll be in touch shortly.</span>
           </span>
         </div>
@@ -156,6 +155,7 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
+</main>
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
@@ -172,7 +172,7 @@
       </div>
       <div>
         <h4><span lang="kk">Байланыс</span><span lang="en">Contact</span></h4>
-        <a href="#"><span lang="kk">Астана, Қазақстан</span><span lang="en">Astana, Kazakhstan</span></a>
+        <span class="footer-address"><span lang="kk">Астана, Қазақстан</span><span lang="en">Astana, Kazakhstan</span></span>
         <a href="mailto:hello@aulbilim.kz">hello@aulbilim.kz</a>
         <a href="partner.html"><span lang="kk">Серіктес болу</span><span lang="en">Become a Partner</span></a>
       </div>
@@ -185,14 +185,30 @@
 </footer>
 
 <script src="site.js"></script>
-<script src="image-slot.js"></script>
-<script src="editor.js"></script>
+<script src="uploads/firebase-config.js"></script>
+<script src="uploads/db.js"></script>
+<script src="uploads/content-loader.js"></script>
 <script>
-  document.getElementById('partner-form').addEventListener('submit', function (e) {
+  document.getElementById('partner-form').addEventListener('submit', async function (e) {
     e.preventDefault();
     var note = document.getElementById('form-note');
-    note.style.display = 'inline';
-    this.reset();
+    if (!this.reportValidity()) return;
+    var submit = this.querySelector('button[type="submit"]');
+    var data = Object.fromEntries(new FormData(this).entries());
+    submit.disabled = true;
+    try {
+      var result = await window.db.submitContactForm(data);
+      if (!result.success) throw new Error(result.error || 'Submit failed');
+      note.style.display = 'inline';
+      this.reset();
+    } catch (err) {
+      note.style.display = 'inline';
+      note.textContent = document.documentElement.getAttribute('data-lang') === 'en'
+        ? 'Sorry, something went wrong. Please email hello@aulbilim.kz.'
+        : 'Қате шықты. hello@aulbilim.kz поштасына жазыңыз.';
+    } finally {
+      submit.disabled = false;
+    }
   });
 </script>
 </body>

@@ -75,8 +75,14 @@
 
   function load() {
     if (loadP) return loadP;
-    loadP = fetch(STATE_FILE)
+    const dbContent = window.db && window.db.getSiteContent
+      ? window.db.getSiteContent().then((content) => content && content.media ? content.media : null).catch(() => null)
+      : Promise.resolve(null);
+    const sidecar = fetch(STATE_FILE)
       .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null);
+    loadP = Promise.all([sidecar, dbContent])
+      .then(([j, dbSlots]) => dbSlots || j)
       .then((j) => {
         // Merge: sidecar loses to any in-memory change that raced ahead of
         // the fetch (drop or clear) so neither is clobbered by hydration.
@@ -109,9 +115,20 @@
   function save() {
     if (saving) { saveDirty = true; return; }
     const w = window.omelette && window.omelette.writeFile;
-    if (!w) return;
+    const dbSave = window.db && window.db.saveSiteContent;
+    if (!w && !dbSave) return;
     saving = true;
-    Promise.resolve(w(STATE_FILE, JSON.stringify(slots)))
+    const writes = [];
+    if (w) writes.push(Promise.resolve(w(STATE_FILE, JSON.stringify(slots))));
+    if (dbSave) writes.push(window.db.getSiteContent().then((content) => {
+      content = content || {};
+      content.media = content.media || {};
+      Object.keys(slots).forEach((id) => {
+        content.media[id] = Object.assign({}, content.media[id] || {}, slots[id]);
+      });
+      return window.db.saveSiteContent(content);
+    }));
+    Promise.all(writes)
       .catch(() => {})
       .then(() => { saving = false; if (saveDirty) { saveDirty = false; save(); } });
   }
@@ -125,6 +142,19 @@
     const v = slots[id];
     if (!v) return null;
     return typeof v === 'string' ? { u: v, s: 1, x: 0, y: 0 } : v;
+  }
+
+  function toYoutubeEmbed(url) {
+    if (!url) return '';
+    try {
+      const u = new URL(url);
+      let id = '';
+      if (u.hostname.includes('youtu.be')) id = u.pathname.slice(1);
+      if (u.hostname.includes('youtube.com')) id = u.searchParams.get('v') || u.pathname.split('/').pop();
+      return id ? 'https://www.youtube.com/embed/' + encodeURIComponent(id) : '';
+    } catch (e) {
+      return '';
+    }
   }
 
   function setSlot(id, val) {
@@ -169,6 +199,7 @@
     // inside-mask crop and the outside-mask spill stay pixel-aligned.
     '.frame img{position:absolute;max-width:none;transform:translate(-50%,-50%);' +
     '  -webkit-user-drag:none;user-select:none;touch-action:none}' +
+    '.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:none}' +
     // Reframe mode (double-click): the full image spills past the mask. The
     // spill layer is sized to the IMAGE bounds so its corners are where the
     // resize handles belong. The ghost <img> inside is translucent; the real
@@ -238,6 +269,7 @@
         '<style>' + stylesheet + '</style>' +
         '<div class="frame" part="frame">' +
         '  <img part="image" alt="" draggable="false" style="display:none">' +
+        '  <iframe part="embed" title="Embedded media" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' +
         '  <div class="empty" part="empty">' + icon +
         '    <div class="cap"></div>' +
         '    <div class="sub">or <u>browse files</u></div></div>' +
@@ -254,6 +286,7 @@
       this._frame = root.querySelector('.frame');
       this._ring = root.querySelector('.ring');
       this._img = root.querySelector('.frame img');
+      this._embed = root.querySelector('.frame iframe');
       this._empty = root.querySelector('.empty');
       this._cap = root.querySelector('.cap');
       this._sub = root.querySelector('.sub');
@@ -593,7 +626,7 @@
       this._ring.style.display = mask ? 'none' : '';
 
       // Controls and reframe entry gate on this so share links stay read-only.
-      const editable = !!(window.omelette && window.omelette.writeFile);
+      const editable = !!((window.omelette && window.omelette.writeFile) || (window.cmsAuth && window.cmsAuth.requireAuth && window.cmsAuth.requireAuth()));
       this.toggleAttribute('data-editable', editable);
       this._sub.style.display = editable ? '' : 'none';
 
@@ -603,6 +636,7 @@
       // (Claude wrote it into the HTML) so it passes through unchanged.
       let stored = this.id ? getSlot(this.id) : this._local;
       if (stored && stored.u && !/^data:image\//i.test(stored.u)) stored = null;
+      const embedUrl = stored && stored.embedUrl ? toYoutubeEmbed(stored.embedUrl) : '';
       const srcAttr = this.getAttribute('src') || '';
       this._userUrl = (stored && stored.u) || null;
       const url = this._userUrl || srcAttr;
@@ -617,7 +651,16 @@
       this._cap.textContent = this.getAttribute('placeholder') || 'Drop an image';
       // Toggle via style.display — the [hidden] attribute alone loses to
       // the display:flex / display:block rules in the stylesheet above.
-      if (url) {
+      if (embedUrl) {
+        this._embed.src = embedUrl;
+        this._embed.style.display = 'block';
+        this._img.style.display = 'none';
+        this._empty.style.display = 'none';
+        this.setAttribute('data-filled', '');
+        this._sub.textContent = 'Embedded video';
+      } else if (url) {
+        this._embed.style.display = 'none';
+        this._embed.removeAttribute('src');
         if (this._img.getAttribute('src') !== url) {
           this._img.src = url;
           this._ghost.src = url;
@@ -628,6 +671,8 @@
         this._clampView();
         this._applyView();
       } else {
+        this._embed.style.display = 'none';
+        this._embed.removeAttribute('src');
         this._img.style.display = 'none';
         this._img.removeAttribute('src');
         this._ghost.removeAttribute('src');
