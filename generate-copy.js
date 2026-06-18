@@ -176,8 +176,10 @@ function indexPage() {
 
     h2('Hero'),
     biTable([
-      ['Ауыл — білім желкені: Әр балаға заманауи мектеп', 'The village sail of education: a modern school for every child.'],
-      ['Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен, жаратылыстану зертханаларымен және цифрлық технологиямен толық жабдықтап, ұстаздардың біліктілігін жетілдіреміз әрі тұрақты тәлімгерлік қолдау көрсетеміз.', 'To deliver quality education to students in every corner of our country, we fully equip schools with modern furniture, science labs, and digital technology, develop teachers\' skills, and provide ongoing mentorship support.'],
+      ['Ауыл — білім желкені', 'The village sail of education'],
+      ['Әр балаға заманауи мектеп', 'A modern school for every child'],
+      ['Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен, жаратылыстану зертханаларымен және цифрлық технологиямен толық жабдықтаймыз.', 'To deliver quality education across our country, we fully equip schools with modern furniture, science labs, and digital technology.'],
+      ['Ұстаздардың біліктілігін жетілдіреміз әрі тұрақты тәлімгерлік қолдау көрсетеміз.', 'We develop teachers\' skills and provide ongoing mentorship support.'],
       ['Жобамен танысу →', 'Explore our projects →'],
       ['Толығырақ →', 'Learn more →'],
     ]),
