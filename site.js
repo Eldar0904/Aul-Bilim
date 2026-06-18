@@ -63,13 +63,95 @@
       });
     }
 
-    // active nav link by filename
-    var here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a[href]').forEach(function (a) {
-      var href = a.getAttribute('href');
-      if (href === here || (here === 'index.html' && href === 'index.html')) {
-        a.classList.add('active');
+    // active nav link by page + program hash
+    function setActiveNav() {
+      var here = location.pathname.split('/').pop() || 'index.html';
+      var hash = (location.hash || '').replace(/^#/, '').toLowerCase();
+      document.querySelectorAll('.nav-links a[href]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        var active = false;
+        if (href === here) {
+          active = true;
+        } else if (href.indexOf('programs.html#') === 0 && here === 'programs.html') {
+          active = href.slice('programs.html#'.length).toLowerCase() === hash;
+        }
+        a.classList.toggle('active', active);
+      });
+    }
+    setActiveNav();
+    window.addEventListener('hashchange', setActiveNav);
+
+    // programs.html — hub vs detail views (#fitout, #ustaz, #samruk)
+    var hubIntro = document.getElementById('programs-hub-intro');
+    if (hubIntro) {
+      var slugs = ['fitout', 'ustaz', 'samruk'];
+      var defaultTitle = { kk: null, en: null };
+      var titleEl = document.querySelector('title');
+      if (titleEl) {
+        defaultTitle.kk = titleEl.getAttribute('data-kk');
+        defaultTitle.en = titleEl.getAttribute('data-en');
       }
-    });
+
+      function applyProgramsView() {
+        var hash = (location.hash || '').replace(/^#/, '').toLowerCase();
+        var slug = slugs.indexOf(hash) >= 0 ? hash : null;
+
+        hubIntro.hidden = !!slug;
+        document.querySelectorAll('#programs-cards .dir-card').forEach(function (card) {
+          var href = (card.getAttribute('href') || '').replace(/^.*#/, '');
+          card.classList.toggle('is-active', slug === href);
+          card.setAttribute('aria-current', slug === href ? 'page' : 'false');
+        });
+        slugs.forEach(function (id) {
+          var view = document.getElementById('program-' + id);
+          if (view) view.hidden = slug !== id;
+        });
+
+        var main = document.getElementById('main-content');
+        if (main) main.classList.toggle('prog-page', !!slug);
+
+        if (titleEl) {
+          if (slug) {
+            var detail = document.getElementById('program-' + slug);
+            var lang = getLang();
+            var custom = detail && detail.getAttribute('data-title-' + lang);
+            if (custom) titleEl.textContent = custom;
+          } else {
+            var fallback = defaultTitle[getLang()];
+            if (fallback) titleEl.textContent = fallback;
+          }
+        }
+
+        if (slug) window.scrollTo(0, 0);
+      }
+
+      applyProgramsView();
+      window.addEventListener('hashchange', applyProgramsView);
+    }
+
+    // index.html — reset map/schools drill-down when navigating to #regions
+    var here = location.pathname.split('/').pop() || 'index.html';
+    if (here === 'index.html' || here === '') {
+      function resetMapIfNeeded() {
+        if (!window.AulBilimMap) return;
+        var hash = (location.hash || '').replace(/^#/, '').toLowerCase();
+        if (!hash || hash === 'regions') window.AulBilimMap.reset();
+        else window.AulBilimMap.applyHash();
+      }
+
+      window.addEventListener('hashchange', resetMapIfNeeded);
+
+      document.querySelectorAll('a[href="#regions"], a[href="index.html#regions"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (window.AulBilimMap) window.AulBilimMap.reset();
+        });
+      });
+
+      document.querySelectorAll('a.logo[href="index.html"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (window.AulBilimMap) window.AulBilimMap.reset();
+        });
+      });
+    }
   });
 })();

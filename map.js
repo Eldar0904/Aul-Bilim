@@ -138,6 +138,133 @@
     }
   ];
 
+  REGIONS.forEach(function (r) {
+    if (r.id === 'kostanay') {
+      r.stats = { schools: '63', cabinets: '107', teachers: '1200+' };
+      r.desc = {
+        kk: 'Біздің бағдарлама аясында Қостанай облысының мектептерінде заманауи жабдықтар орнатылып, физика, химия және биология зертханалары жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across Kostanay Region have received modern equipment; physics, chemistry and biology laboratories have been fully fitted out, and teacher training is underway to raise professional skills.'
+      };
+      r.schools = [
+        {
+          id: 'rudny-1',
+          kk: 'Рудный ЖОББМ №1',
+          en: 'Rudny Secondary School No. 1',
+          location: { kk: 'Рудный', en: 'Rudny' },
+          badge: { kk: 'Толық жабдықталған', en: 'Fully equipped' },
+          desc: {
+            kk: 'Физика, химия және биология зертханалары заманауи жабдықтармен толық жабдықталды.',
+            en: 'Physics, chemistry and biology labs fully equipped with modern apparatus.'
+          },
+          teachers: 21,
+          image: 'assets/optimized/home-fitout-classroom.jpg'
+        },
+        {
+          id: 'arkalyk-9',
+          kk: 'Ы. Алтынсарин атындағы №9 гимназия',
+          en: 'Y. Altynsarin Gymnasium No. 9',
+          location: { kk: 'Арқалық', en: 'Arkalyk' },
+          badge: { kk: 'Зертхана', en: 'Laboratory' },
+          desc: {
+            kk: 'Химия және биология кабинеттері жаңа жиһазбен және демонстрациялық жабдықтармен жабдықталды.',
+            en: 'Chemistry and biology classrooms fitted with new furniture and demonstration equipment.'
+          },
+          teachers: 18,
+          image: 'assets/optimized/program-fitout-detail.jpg'
+        },
+        {
+          id: 'lisakovsk',
+          kk: 'Лисаковск қалалық №3 мектеп-гимназиясы',
+          en: 'Lisakovsk City School-Gymnasium No. 3',
+          location: { kk: 'Лисаковск', en: 'Lisakovsk' },
+          badge: { kk: 'STEM', en: 'STEM' },
+          desc: {
+            kk: 'STEM кабинеті цифрлық технологиялар мен инженерлік жобаларға арналған.',
+            en: 'STEM classroom designed for digital technology and engineering projects.'
+          },
+          teachers: 24,
+          image: 'assets/optimized/home-fitout-classroom.jpg'
+        },
+        {
+          id: 'mendykara',
+          kk: 'Меңдіқара аудандық №2 мектебі',
+          en: 'Mendykara District School No. 2',
+          location: { kk: 'Меңдіқара', en: 'Mendykara' },
+          badge: { kk: 'Зертхана', en: 'Laboratory' },
+          desc: {
+            kk: 'Ауыл мектебінде алғаш рет толық функционалды химия зертханасы ашылды.',
+            en: 'First fully functional chemistry laboratory opened in this rural school.'
+          },
+          teachers: 14,
+          image: 'assets/optimized/program-fitout-detail.jpg'
+        },
+        {
+          id: 'karabalyq',
+          kk: 'Қарабалық аудандық №5 мектебі',
+          en: 'Qarabalyq District School No. 5',
+          location: { kk: 'Қарабалық', en: 'Qarabalyq' },
+          badge: { kk: 'Толық жабдықталған', en: 'Fully equipped' },
+          desc: {
+            kk: 'Физика кабинеті заманауи демонстрациялық жабдықтармен жаңартылды.',
+            en: 'Physics classroom renovated with modern demonstration equipment.'
+          },
+          teachers: 16,
+          image: 'assets/optimized/home-fitout-classroom.jpg'
+        },
+        {
+          id: 'sarykol',
+          kk: 'Сарыкöl аудандық №1 мектебі',
+          en: 'Sarykol District School No. 1',
+          location: { kk: 'Сарыкöl', en: 'Sarykol' },
+          badge: { kk: 'Зертхана', en: 'Laboratory' },
+          desc: {
+            kk: 'Биология зертханасы микроскоптар мен модельдермен толық жабдықталды.',
+            en: 'Biology lab fully equipped with microscopes and models.'
+          },
+          teachers: 12,
+          image: 'assets/optimized/program-fitout-detail.jpg'
+        },
+        {
+          id: 'denisov',
+          kk: 'Денисов аудандық №3 мектебі',
+          en: 'Denisov District School No. 3',
+          location: { kk: 'Денисов', en: 'Denisov' },
+          badge: { kk: 'STEM', en: 'STEM' },
+          desc: {
+            kk: 'Цифрлық кабинет робототехника және программалауға арналған.',
+            en: 'Digital classroom designed for robotics and programming.'
+          },
+          teachers: 15,
+          image: 'assets/optimized/home-fitout-classroom.jpg'
+        },
+        {
+          id: 'auliekol',
+          kk: 'Әулиекөл аудандық №4 мектебі',
+          en: 'Auliekol District School No. 4',
+          location: { kk: 'Әулиекөл', en: 'Auliekol' },
+          badge: { kk: 'Толық жабдықталған', en: 'Fully equipped' },
+          desc: {
+            kk: 'Сыныптар заманауи жиһазбен ауыстырылып, зертханалар жабдықталды.',
+            en: 'Classrooms replaced with modern furniture and laboratories equipped.'
+          },
+          teachers: 19,
+          image: 'assets/optimized/program-fitout-detail.jpg'
+        }
+      ];
+    } else {
+      r.stats = {
+        schools: String(r.total),
+        cabinets: String(Math.round(r.total * 2.5)),
+        teachers: '500+'
+      };
+      r.desc = {
+        kk: 'Біз осы өңірдегі аудандық мектептермен жұмыс істейміз — заманауи жабдықтар, зертханалар және ұстаздарды оқыту.',
+        en: 'We work with district schools across this region — modern equipment, laboratories, and teacher training.'
+      };
+      r.schools = [];
+    }
+  });
+
   var SVGNS = 'http://www.w3.org/2000/svg';
   function el(tag, attrs) {
     var n = document.createElementNS(SVGNS, tag);
@@ -168,8 +295,34 @@
   };
   var MAP_LABEL_POSITIONS = {
     KZ11: { x: 575, y: 170 },
-    KZ35: { x: 600, y: 315 }
+    KZ19: { x: 895, y: 508 },
+    KZ35: { x: 658, y: 332 },
+    KZ61: { x: 618, y: 542 }
   };
+
+  function polyCentroid(polyStr) {
+    var sumX = 0, sumY = 0, n = 0;
+    polyStr.trim().split(/\s+/).forEach(function (pair) {
+      var p = pair.split(',');
+      if (p.length !== 2) return;
+      sumX += parseFloat(p[0]);
+      sumY += parseFloat(p[1]);
+      n++;
+    });
+    return n ? { x: sumX / n, y: sumY / n } : null;
+  }
+
+  function regionLabelPos(region, mapId, box) {
+    if (MAP_LABEL_POSITIONS[mapId]) return MAP_LABEL_POSITIONS[mapId];
+    if (region && region.poly) {
+      var c = polyCentroid(region.poly);
+      if (c) return c;
+    }
+    if (region && region.cx != null) {
+      return { x: region.cx * VB_W, y: region.cy * VB_H };
+    }
+    return { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+  }
 
   document.addEventListener('DOMContentLoaded', function () {
     var stage = document.getElementById('map-stage');
@@ -178,9 +331,16 @@
     var tip = document.getElementById('map-tip');
     var intro = document.getElementById('map-intro');
     var panel = document.getElementById('region-panel');
-    if (!stage || !pan || !svg) return;
+    var mapBlock = document.getElementById('regions');
+    var schoolsBlock = document.getElementById('region-schools');
+    var schoolsRoot = document.getElementById('region-schools-root');
+    var mapCol = document.querySelector('.map-col');
+    if (!stage || !pan || !svg || !panel) return;
 
     var current = null;
+    var view = 'map';
+    var syncingHash = false;
+    var mapReady = false;
 
     var regionByMapId = {};
     REGIONS.forEach(function (r) { regionByMapId[r.mapId] = r; });
@@ -216,10 +376,7 @@
         if (!label) return;
         var region = regionByMapId[mapId];
         var box = path.getBBox();
-        var pos = MAP_LABEL_POSITIONS[mapId] || {
-          x: box.x + box.width / 2,
-          y: box.y + box.height / 2
-        };
+        var pos = regionLabelPos(region, mapId, box);
         var text = el('text', {
           x: pos.x,
           y: pos.y,
@@ -256,6 +413,8 @@
         svg.appendChild(p1);
         svg.appendChild(p2);
       });
+      mapReady = true;
+      applyMapViewFromHash();
     }
 
     fetch('assets/kazakhstan-admin1-current.svg')
@@ -263,6 +422,8 @@
       .then(buildCurrentMap)
       .catch(function () {
         svg.setAttribute('aria-label', 'Map could not be loaded');
+        mapReady = true;
+        applyMapViewFromHash();
       });
 
     /* hover → pulse rings */
@@ -303,19 +464,119 @@
       pan.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + SCALE + ')';
     }
 
-    function openRegion(id) {
+    function parseMapHash() {
+      var hash = (location.hash || '').replace(/^#/, '').toLowerCase();
+      if (!hash || hash === 'regions') return { view: 'map' };
+      if (hash.indexOf('region-') !== 0) return { view: 'map' };
+      if (hash.slice(-8) === '-schools') {
+        return { view: 'schools', id: hash.slice(7, -8) };
+      }
+      return { view: 'region', id: hash.slice(7) };
+    }
+
+    function setMapHash(hash, replace) {
+      if (syncingHash) return;
+      var path = location.pathname + location.search + (hash ? '#' + hash : '#regions');
+      var state = { mapHash: hash || 'regions' };
+      if (replace) history.replaceState(state, '', path);
+      else history.pushState(state, '', path);
+    }
+
+    function lockSchoolsScroll() {
+      document.body.classList.add('map-schools-open');
+      if (schoolsBlock) {
+        schoolsBlock.scrollTop = 0;
+      }
+    }
+
+    function unlockSchoolsScroll() {
+      document.body.classList.remove('map-schools-open');
+    }
+
+    function hideSchoolsSection() {
+      unlockSchoolsScroll();
+      if (schoolsBlock) schoolsBlock.hidden = true;
+      if (schoolsRoot) schoolsRoot.innerHTML = '';
+      if (mapBlock) mapBlock.hidden = false;
+    }
+
+    function renderSchoolCard(s, i) {
+      return '<article class="school-card" style="animation-delay:' + (0.05 * i) + 's">' +
+        '<div class="school-card-photo">' +
+          '<img src="' + s.image + '" alt="" loading="lazy" />' +
+          '<span class="school-card-badge">' + bi(s.badge.kk, s.badge.en) + '</span>' +
+        '</div>' +
+        '<div class="school-card-body">' +
+          '<p class="school-card-loc">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>' +
+            bi(s.location.kk, s.location.en) +
+          '</p>' +
+          '<h4>' + bi(s.kk, s.en) + '</h4>' +
+          '<p class="school-card-desc">' + bi(s.desc.kk, s.desc.en) + '</p>' +
+          '<div class="school-card-foot">' +
+            '<span class="school-card-teachers">' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
+              s.teachers + ' ' + bi('мұғалім', 'teachers') +
+            '</span>' +
+            '<span class="school-card-link" aria-hidden="true">↗</span>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }
+
+    function renderSchoolsSection(r) {
+      if (!schoolsRoot || !schoolsBlock) return;
+      var schools = r.schools || [];
+      var gridHtml = schools.length
+        ? '<div class="schools-grid">' + schools.map(renderSchoolCard).join('') + '</div>'
+        : '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'School list coming soon') + '</div>';
+
+      schoolsRoot.innerHTML =
+        '<div class="region-schools-nav">' +
+          '<button type="button" class="region-schools-back" id="region-schools-map">' +
+            '← ' + bi('Картаны көру', 'Go to map') +
+          '</button>' +
+          '<button type="button" class="region-schools-back" id="region-schools-back">' +
+            '← ' + bi('Басты бетке', 'Go to home page') +
+          '</button>' +
+        '</div>' +
+        '<h2 class="region-schools-title">' +
+          '<span lang="kk"><span class="hl">Қолдау көрсетілген</span> мектептер</span>' +
+          '<span lang="en"><span class="hl">Supported</span> schools</span>' +
+        '</h2>' +
+        '<div class="region-schools-hero">' +
+          '<div class="region-schools-hero-copy">' +
+            '<span class="kicker"><span lang="kk">Жобалар аймағы</span><span lang="en">Project region</span></span>' +
+            '<h3>' + bi(r.kk, r.en) + '</h3>' +
+            '<p>' + bi(r.desc.kk, r.desc.en) + '</p>' +
+          '</div>' +
+          '<div class="region-schools-stats">' +
+            '<div class="rss-cell stat-wide"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'schools') + '</div></div>' +
+            '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + bi('кабинет', 'classrooms') + '</div></div>' +
+            '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + bi('оқытылған ұстаз', 'teachers trained') + '</div></div>' +
+          '</div>' +
+        '</div>' +
+        '<h3 class="schools-grid-head">' +
+          bi('Жаңғыртылған мектептер (' + schools.length + ')', 'Renovated schools (' + schools.length + ')') +
+        '</h3>' +
+        gridHtml;
+
+      document.getElementById('region-schools-map').addEventListener('click', goToMap);
+      document.getElementById('region-schools-back').addEventListener('click', goHome);
+    }
+
+    function activateRegion(id) {
       var r = regionById(id);
-      if (!r) return;
+      if (!r) return null;
       current = r;
+      view = 'region';
       hideTip();
       stage.classList.add('zoomed');
-      // mark selected polygon
       svg.querySelectorAll('.hot').forEach(function (p) {
         p.classList.toggle('sel', p.getAttribute('data-region') === id);
       });
       applyZoom(r);
 
-      // build districts
       var chips = r.districts.map(function (d, i) {
         return '<div class="district" style="animation-delay:' + (0.06 * i + 0.15) + 's">' +
           '<span class="dn">' + bi(d.kk, d.en) + '</span>' +
@@ -324,40 +585,112 @@
       }).join('');
 
       panel.innerHTML =
-        '<button class="region-back" id="region-back">' +
-          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>' +
-          bi('Барлық аймақтар', 'All regions') +
+        '<button type="button" class="region-back" id="region-back">' +
+          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>' +
+          bi('Картаны көру', 'Go to map') +
         '</button>' +
-        '<div class="region-head"><h3>' + bi(r.kk, r.en) + '</h3>' +
-          '<span class="tot">' + r.total + ' ' + bi('мектеп', 'schools') + '</span></div>' +
-        '<p class="region-sub">' + bi('Біз жұмыс істейтін аудандар', 'Districts where we work') + '</p>' +
-        '<div class="district-grid">' + chips + '</div>';
+        '<div class="region-head"><h3>' + bi(r.kk, r.en) + '</h3></div>' +
+        '<button type="button" class="region-schools-cta-card" id="region-schools-cta">' +
+          '<span class="cta-text">' + bi('Мектептерді көру', 'View schools') + '</span>' +
+          '<span class="cta-arrow" aria-hidden="true">→</span>' +
+        '</button>' +
+        '<div class="district-list">' + chips + '</div>';
 
       intro.classList.add('hide');
       panel.classList.add('show');
-      document.getElementById('region-back').addEventListener('click', closeRegion);
-
-      // on stacked (mobile) layouts the panel sits above the map — bring it into view
-      if (window.innerWidth <= 980) {
-        var card = stage.closest('.map-card') || panel;
-        var top = card.getBoundingClientRect().top + window.scrollY - 20;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-      }
+      if (mapCol) mapCol.classList.add('region-open');
+      document.getElementById('region-back').addEventListener('click', goToMap);
+      document.getElementById('region-schools-cta').addEventListener('click', function () {
+        openSchools(r.id);
+      });
+      return r;
     }
 
-    function closeRegion() {
+    function showMapView(opts) {
+      hideSchoolsSection();
       current = null;
+      view = 'map';
       stage.classList.remove('zoomed');
       pan.style.transform = 'none';
       svg.querySelectorAll('.hot').forEach(function (p) { p.classList.remove('sel'); });
       panel.classList.remove('show');
       intro.classList.remove('hide');
+      if (mapCol) mapCol.classList.remove('region-open');
+      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('regions', !!(opts && opts.replaceHash));
+      if (mapBlock && !(opts && opts.noScroll)) {
+        mapBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
+
+    function showRegionView(id, opts) {
+      if (!mapReady) return;
+      hideSchoolsSection();
+      var r = activateRegion(id);
+      if (!r) return;
+      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-' + id, !!(opts && opts.replaceHash));
+    }
+
+    function showSchoolsView(id, opts) {
+      if (!mapReady || !schoolsBlock || !mapBlock) return;
+      var r = activateRegion(id);
+      if (!r) return;
+      current = r;
+      view = 'schools';
+      renderSchoolsSection(r);
+      mapBlock.hidden = true;
+      schoolsBlock.hidden = false;
+      lockSchoolsScroll();
+      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-' + id + '-schools', !!(opts && opts.replaceHash));
+    }
+
+    function openSchools(id) {
+      showSchoolsView(id, { replaceHash: true });
+    }
+
+    function openRegion(id) {
+      showRegionView(id);
+    }
+
+    function goToMap() {
+      showMapView({ replaceHash: true });
+    }
+
+    function goHome() {
+      showMapView({ skipHash: true, noScroll: true });
+      syncingHash = true;
+      history.replaceState({}, '', location.pathname + location.search);
+      syncingHash = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function applyMapViewFromHash() {
+      if (!mapReady) return;
+      var parsed = parseMapHash();
+      syncingHash = true;
+      if (parsed.view === 'schools' && parsed.id && regionById(parsed.id)) {
+        showSchoolsView(parsed.id, { skipHash: true });
+      } else if (parsed.view === 'region' && parsed.id && regionById(parsed.id)) {
+        showRegionView(parsed.id, { skipHash: true });
+      } else if (view !== 'map') {
+        showMapView({ skipHash: true, noScroll: true });
+      }
+      syncingHash = false;
+    }
+
+    window.AulBilimMap = {
+      reset: function () {
+        showMapView({ replaceHash: true });
+      },
+      applyHash: applyMapViewFromHash
+    };
 
     svg.addEventListener('click', function (e) {
       var id = e.target.getAttribute && e.target.getAttribute('data-region');
       if (id) openRegion(id);
     });
+
+    window.addEventListener('hashchange', applyMapViewFromHash);
+    window.addEventListener('popstate', applyMapViewFromHash);
 
     window.addEventListener('resize', function () {
       if (current) applyZoom(current);

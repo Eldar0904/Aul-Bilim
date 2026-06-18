@@ -180,8 +180,6 @@ function indexPage() {
       ['Әр балаға заманауи мектеп', 'A modern school for every child'],
       ['Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен, жаратылыстану зертханаларымен және цифрлық технологиямен толық жабдықтаймыз.', 'To deliver quality education across our country, we fully equip schools with modern furniture, science labs, and digital technology.'],
       ['Ұстаздардың біліктілігін жетілдіреміз әрі тұрақты тәлімгерлік қолдау көрсетеміз.', 'We develop teachers\' skills and provide ongoing mentorship support.'],
-      ['Жобамен танысу →', 'Explore our projects →'],
-      ['Толығырақ →', 'Learn more →'],
     ]),
 
     h2('Stat Strip'),
@@ -192,62 +190,41 @@ function indexPage() {
       ['15 000+  оқушы мен ұстаз', '15 000+  students & teachers'],
     ]),
 
-    h2('Partners'),
-    biTable([
-      ['Серіктестеріміз', 'Our partners'],
-    ]),
-
     h2('Programs Section'),
     biTable([
+      ['Білім беру бастамалары', 'Educational initiatives'],
       ['Біздің бағыттар', 'What we do'],
-      ['Ауыл әлеуетін арттырудың біртұтас экожүйесі', 'A Holistic Ecosystem for Rural Empowerment'],
-      ['Біз сырттан келетін уақытша көмекке сенбейміз. Ортаны түбегейлі өзгертетін, мұғалімді күшейтетін және балаға бағыт беретін үш өзара байланысты бағдарламаны ұсынамыз. Сыныптарды заманауи жабдықтаудан бастап, үлкен өмірге қадам басқан жасөспірімдерге жол көрсетуге дейін — әрбір бастамамыз ауылдың шынайы мұқтаждығына негізделген.', 'We don\'t believe in temporary aid. We deploy three interconnected programs that transform the physical environment, empower the educator, and guide the child. From rebuilding classrooms to mentoring teenagers transitioning into adult careers—every initiative meets a village at its true, specific point of need.'],
+      ['Біз Қазақстанның әр түкпіріндегі балалар мен мұғалімдер үшін заманауи білім ортасын құрамыз.', 'We create a modern educational environment for children and teachers in every corner of Kazakhstan.'],
     ]),
 
-    h3('Program 01 — School Fit-Out'),
+    h3('Card 1 — School Fit-Out'),
     biTable([
-      ['01 · Мектептерді жаңғырту', '01 · School Fit-Out'],
-      ['Сынып қабырғалары бала арманының ауқымын айқындайды.', 'Infrastructure dictates the scale of a child\'s ambition.'],
-      ['Біз ескірген парталардан бастап заманауи зертханаларға дейін толық жабдықтаймыз. Орта өзгергенде, оқушының мақсаты да өзгереді.', 'We fully equip rural classrooms from the ground up, replacing worn-out desks with functioning, modern learning spaces. When we upgrade a classroom, we upgrade what a student believes is possible.'],
-      ['✓  Заманауи парталар мен сынып жиһазы', '✓  Modern desks and classroom furniture'],
-      ['✓  Физика, химия, биология зертханалары', '✓  Physics, chemistry and biology labs'],
-      ['✓  Цифрлық тақталар мен ноутбуктер', '✓  Digital boards and laptops'],
-      ['✓  STEM және робототехника жинақтары', '✓  STEM and robotics kits'],
-      ['Толығырақ →', 'Learn more →'],
+      ['Мектептер үшін', 'For schools'],
+      ['Мектептерді жаңғырту', 'School Fit-Out'],
+      ['Ауыл мектептерін заманауи жиһазбен, жаратылыстану зертханаларымен және озық цифрлық технологиялармен толық жабдықтаймыз.', 'We fully equip rural schools with modern furniture, natural science laboratories, and advanced digital technologies.'],
     ]),
 
-    h3('Program 02 — Teacher Training / USTAZ'),
+    h3('Card 2 — Teacher Training / USTAZ'),
     biTable([
-      ['02 · Ұстаздарды оқыту · USTAZ', '02 · Teacher Training · USTAZ'],
-      ['Ауыл ұстазы жалғыз қалмауы үшін', 'So a village teacher never stands alone'],
-      ['USTAZ коворкинг орталықтары ауыл педагогтарына кәсіби өсуге, тәжірибе алмасуға және бірге жұмыс істеуге кеңістік береді — қала мен ауыл арасындағы алшақтықты жабады.', 'USTAZ coworking centres provide rural educators with dedicated spaces to collaborate, swap experiences, and scale their professional skills—effectively bridging the urban-rural divide.'],
-      ['✓  USTAZ коворкинг кеңістіктері', '✓  USTAZ coworking spaces'],
-      ['✓  Пәндік семинарлар мен шеберханалар', '✓  Subject workshops and masterclasses'],
-      ['✓  Тәжірибелі тәлімгерлермен жұмыс', '✓  Work with experienced mentors'],
-      ['✓  Кәсіби қауымдастық пен желі', '✓  A professional community and network'],
-      ['Толығырақ →', 'Learn more →'],
+      ['Мұғалімдер үшін', 'For teachers'],
+      ['Оқыту курстары', 'Teacher Training · USTAZ'],
+      ['Мұғалімдердің әлеуетін арттыру арқылы білім сапасын жаңа деңгейге көтереміз.', "By developing teachers' potential, we elevate the quality of education to a new level."],
     ]),
 
-    h3('Program 03 — Child Mentorship / Samruk Umiti'),
+    h3('Card 3 — Child Mentorship / Samruk Umiti'),
     biTable([
-      ['03 · Тәлімгерлік · Samruk Umiti', '03 · Child Mentorship · Samruk Umiti'],
-      ['Ересек өмірге сенімді алғашқы қадам', 'A confident first step into adult life'],
-      ['Samruk Umiti балалар үйі тәрбиеленушілерін жалғыз қалдырмайды: кәсіп таңдау, оқуға түсу және алғашқы жұмысқа орналасудың әр кезеңінде тұрақты тәлімгер қасында болады.', 'Samruk Umiti ensures that youth leaving orphanages navigate their critical transition independently: choosing a path, applying to college, and landing a first job with a steady mentor at their side.'],
-      ['✓  Жеке кәсіптік бағдарлау', '✓  One-on-one career guidance'],
-      ['✓  Колледж бен ЖОО-ға түсуге көмек', '✓  Help applying to college and university'],
-      ['✓  Алғашқы жұмысқа орналасу қолдауы', '✓  Support landing a first job'],
-      ['✓  Тұрақты тәлімгер-серіктес', '✓  A steady mentor and companion'],
-      ['Толығырақ →', 'Learn more →'],
+      ['Жасөспірімдерге', 'For youth'],
+      ['Тәлімгерлік', 'Child Mentorship · Samruk Umiti'],
+      ['Тәжірибелі мамандармен тығыз байланыс орнатып, кәсіби өсу жолында бірге жүреміз.', 'We build close connections with experienced professionals and walk together on the path of professional growth.'],
     ]),
 
     h2('Why Section'),
     biTable([
-      ['Неліктен сынып бәрін өзгертеді', 'Why a classroom changes everything'],
-      ['Ауыл мектебінде бір мұғалім бес пәнді оқытуы мүмкін, жиһазы 90-жылдардан қалған. Бала өзін кім бола алатынын қоршаған ортасынан түсінеді — сондықтан біз оны жергілікті тұрғындармен бірге қайта құрамыз.', 'A rural school may have one teacher covering five subjects, with furniture from the 1990s. A child\'s environment shapes what they believe they can become — so we rebuild it, together with the people who live there.'],
-      ['300+  жабдықталған сынып', '300+  classrooms equipped'],
-      ['450+  оқытылған ұстаз', '450+  teachers trained'],
-      ['9  Қазақстан өңірі', '9  regions of Kazakhstan'],
-      ['120  серіктес мектеп', '120  partner schools'],
+      ['Өзгерістер циклі', 'Cycle of change'],
+      ['Заманауи орта', 'Modern environment'],
+      ['Білікті мұғалімдер', 'Qualified teachers'],
+      ['Белсенді оқушылар', 'Engaged students'],
+      ['Әр қадам келесісін күшейтеді', 'Each step strengthens the next'],
     ]),
 
     h2('Regions / Map Section'),
@@ -255,9 +232,28 @@ function indexPage() {
       ['Аймақтар', 'Where we work'],
       ['Қазақстанның тоғыз өңірінде', 'Across nine regions'],
       ['Бөлектелген аймақты басыңыз', 'Tap a highlighted region'],
-      ['Барлық аймақтар', 'All regions'],
+      ['Картаны көру', 'Go to map — back from region panel'],
+      ['Барлық мектептерді көру →', 'View all schools →'],
+      ['Мектептерді көру', 'View schools'],
       ['Біз жұмыс істейтін аудандар', 'Districts where we work'],
       ['[n] мектеп', '[n] schools'],
+    ]),
+
+    h3('Region schools section (View C)'),
+    biTable([
+      ['← Картаны көру', '← Go to map — back to full map (from schools list or region panel)'],
+      ['← Басты бетке', '← Go to home page — from schools list'],
+      ['Қолдау көрсетілген мектептер', 'Supported schools'],
+      ['Жобалар аймағы', 'Project region'],
+      ['мектеп', 'schools'],
+      ['кабинет', 'classrooms'],
+      ['оқытылған ұстаз', 'teachers trained'],
+      ['Жаңғыртылған мектептер (n)', 'Renovated schools (n)'],
+      ['мұғалім', 'teachers'],
+      ['Мектептер тізімі жақында қосылады', 'School list coming soon'],
+      ['Толық жабдықталған', 'Fully equipped'],
+      ['Зертхана', 'Laboratory'],
+      ['STEM', 'STEM'],
     ]),
 
     h3('Region names (map panel headings)'),
@@ -384,36 +380,6 @@ function indexPage() {
       ['Райымбек', 'Raiymbek — 6 schools'],
     ]),
 
-    h2('Stories Preview'),
-    biTable([
-      ['Ауылдардан оқиғалар', 'Stories from villages'],
-      ['Нақты адамдар. Нақты өзгеріс.', 'Real people. Real change.'],
-    ]),
-
-    h3('Story card 1 — Қарағанды'),
-    biTable([
-      ['Бордан химия зертханасына дейін', 'From chalk to a chemistry lab'],
-      ['№86 мектеп жиырма жыл бойы жаңа жабдық көрмеген. Біз келдік — және химия сабақтары бір түнде өзгерді.', 'School No. 86 hadn\'t seen new equipment in twenty years. Then we arrived — and the science lessons changed overnight.'],
-    ]),
-
-    h3('Story card 2 — Қостанай'),
-    biTable([
-      ['Оқуын тоқтатпаған ұстаз', 'A teacher who wouldn\'t stop learning'],
-      ['Айзат жылдар бойы сынған құралдармен физика оқытты. USTAZ-дан кейін ол басқа мұғалімдер бірінші болып хабарласатын тәлімгерге айналды.', 'Aizat taught physics with broken instruments for years. After USTAZ, she became the mentor other teachers now call first.'],
-    ]),
-
-    h3('Story card 3 — Ақмола'),
-    biTable([
-      ['Бір ауылды өзгерткен сынып', 'The classroom that changed a village'],
-      ['Ақкөлде ата-аналар балаларын қалаға репетиторға апаратын. Енді ұстаздар ауылдың өзінен — және ешкім кетпейді.', 'In Akkol, parents drove children to the city for tutoring. Now the tutors come from the village — and no one is leaving.'],
-    ]),
-
-    h2('Partner CTA'),
-    biTable([
-      ['Бізбен бірге жарқын дала құрыңыз', 'Build a brighter steppe with us'],
-      ['Корпоративтік серіктестер, мемлекеттік органдар және жеке демеушілер — бірге біз мектептерге және оларды ұстап тұрған ұстаздарға нақты, тұрақты өзгеріс әкелеміз.', 'Corporate partners, government bodies, and individual donors — together we bring real, lasting change to schools and the teachers who hold them together.'],
-      ['Қор туралы →', 'About the Foundation →'],
-    ]),
     pageBreak(),
   ];
 }

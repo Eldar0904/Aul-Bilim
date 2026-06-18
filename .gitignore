@@ -3,6 +3,10 @@ tmp_modules/
 
 # Raw local media uploads stay out of Git. Commit only web-ready assets.
 assets/photos/
+_previews/
+_previews_fhb/
+assets/DSC*.JPG
+assets/DSC*.jpg
 
 # Large archives and source media files.
 *.zip
