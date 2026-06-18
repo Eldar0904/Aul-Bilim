@@ -171,16 +171,15 @@ function indexPage() {
 
     h2('Page Title'),
     biTable([
-      ['Aul Bilim — Ауыл - білім желкені', 'Aul Bilim — The village sail of education'],
+      ['Aul Bilim — Ауыл — білім желкені', 'Aul Bilim — The village sail of education'],
     ]),
 
     h2('Hero'),
     biTable([
-      ['Jelken қоры', 'Jelken Foundation'],
-      ['Ауыл - білім желкені', 'The village sail of education.'],
-      ['Біз ауыл мектептерін жабдықтап, ұстаздарды оқытамыз — Қазақстанның әр түкпіріндегі балалар қала балаларымен тең білім алсын.', 'We equip rural schools and train village teachers — so children across Kazakhstan\'s countryside learn as well as any city child.'],
-      ['Бағдарламаларды қарау →', 'Check out our programs →'],
-      ['Аймақтарды қарау →', 'Look at the regions →'],
+      ['Ауыл — білім желкені: Әр балаға заманауи мектеп', 'The village sail of education: a modern school for every child.'],
+      ['Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен, жаратылыстану зертханаларымен және цифрлық технологиямен толық жабдықтап, ұстаздардың біліктілігін жетілдіреміз әрі тұрақты тәлімгерлік қолдау көрсетеміз.', 'To deliver quality education to students in every corner of our country, we fully equip schools with modern furniture, science labs, and digital technology, develop teachers\' skills, and provide ongoing mentorship support.'],
+      ['Жобамен танысу →', 'Explore our projects →'],
+      ['Толығырақ →', 'Learn more →'],
     ]),
 
     h2('Stat Strip'),
