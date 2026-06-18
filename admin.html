@@ -586,7 +586,7 @@ function renderMedia() {
   const intro = document.createElement('div');
   intro.className = 'media-intro';
   intro.innerHTML = `<div class="ic"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-    <span>Кез келген ұяшыққа сурет файлын сүйреңіз. Өзгерістер тікелей жалпыға қолжетімді сайтқа жіберіледі — жеке жариялау қадамы қажет емес.</span>`;
+    <span>Free-plan mode: paste an image URL or a committed asset path such as <strong>assets/optimized/home-hero-students.jpg</strong>. Direct file uploads are disabled.</span>`;
   panel.appendChild(intro);
 
   const group = document.createElement('div');
@@ -614,10 +614,15 @@ function renderMedia() {
     const metaForm = document.createElement('div');
     metaForm.className = 'media-meta';
     metaForm.innerHTML = `
+      <input type="text" data-media-id="${slot.id}" data-media-field="u" placeholder="Image URL or asset path" value="${escAttr(meta.u || '')}" />
       <input type="text" data-media-id="${slot.id}" data-media-field="altKk" placeholder="Alt мәтін (қазақша)" value="${escAttr(meta.altKk || '')}" />
       <input type="text" data-media-id="${slot.id}" data-media-field="altEn" placeholder="Alt text (English)" value="${escAttr(meta.altEn || '')}" />
       <input type="url" data-media-id="${slot.id}" data-media-field="embedUrl" placeholder="YouTube/video URL (optional)" value="${escAttr(meta.embedUrl || '')}" />
     `;
+
+    metaForm.querySelectorAll('input').forEach(input => {
+      input.addEventListener('input', () => { dirty = true; });
+    });
 
     wrap.appendChild(slotEl);
     wrap.appendChild(lbl);
