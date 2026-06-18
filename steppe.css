@@ -184,8 +184,13 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
   font-size: 72px; font-weight: 900; letter-spacing: -0.03em;
   color: #fff; margin-bottom: 22px; line-height: 1.04;
   text-wrap: pretty;
+  text-shadow: 0 2px 16px rgba(10, 30, 65, 0.55), 0 1px 3px rgba(0, 0, 0, 0.35);
 }
-.hero-fb h1 .mark svg path { stroke: var(--accent-soft); }
+.hero-fb h1 .mark {
+  color: var(--accent);
+  text-shadow: 0 2px 20px rgba(10, 30, 65, 0.7), 0 0 28px rgba(242, 164, 19, 0.22);
+}
+.hero-fb h1 .mark svg path { stroke: var(--accent-deep); stroke-width: 7; }
 .hero-fb p.lead {
   font-size: 19px; line-height: 1.65; max-width: 56ch;
   margin-bottom: 36px; color: rgba(255,255,255,0.82);
