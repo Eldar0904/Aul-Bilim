@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=7" />
+<link rel="stylesheet" href="steppe.css?v=11" />
 </head>
 <body>
 <div class="grain"></div>
@@ -87,11 +87,21 @@
 <header class="prog-page-hero" style="background-image:url('assets/optimized/home-fitout-classroom.jpg')">
   <image-slot id="prog-1" class="prog-page-hero-slot" src="assets/optimized/home-fitout-classroom.jpg" shape="rect" placeholder="Drop a program hero photo"></image-slot>
   <div class="wrap">
-    <div class="crumbs crumbs-light"><a href="index.html">Басты бет</a> <span>·</span> <a href="programs.html">Бағдарламалар</a> <span>·</span> <span lang="kk">Мектептерді жаңғырту</span><span lang="en">School Fit-Out</span></div>
-    <div class="dir-panel-hero-in">
-      <h2><span lang="kk">Мектептерді <span class="hl">жаңғырту</span> бағдарламасы</span><span lang="en">School <span class="hl">Fit-Out</span> programme</span></h2>
-      <p><span lang="kk">Ауыл мектептерін заманауи жиһазбен, жаратылыстану зертханаларымен және озық цифрлық технологиялармен толық жабдықтаймыз.</span><span lang="en">We fully equip rural schools with modern furniture, natural science laboratories, and advanced digital technologies.</span></p>
-      <a class="prog-hero-cta" href="#prog-content-fitout"><span lang="kk">Толығырақ білу ↓</span><span lang="en">Learn more ↓</span></a>
+    <div class="prog-hero-grid">
+      <div class="dir-panel-hero-in">
+        <h2><span lang="kk">Инновациялық <span class="hl">кабинеттер</span> құру</span><span lang="en">Building <span class="hl">innovative</span> classrooms</span></h2>
+        <p><span lang="kk">Біз балалардың уақытын қызықты әрі нәтижелі өткізуіне әсер ететін заманауи сынып ортасын, зертханалық практиканы және STEM инфрақұрылымын бір кешенге біріктіреміз.</span><span lang="en">We bring modern classrooms, hands-on lab practice and STEM infrastructure together in one integrated package — so children's time at school is engaging and productive.</span></p>
+      </div>
+      <div class="prog-hero-stats" aria-label="Programme impact">
+        <div class="prog-hero-stat">
+          <div class="n">120</div>
+          <div class="l"><span lang="kk">Серіктес мектеп</span><span lang="en">Partner schools</span></div>
+        </div>
+        <div class="prog-hero-stat">
+          <div class="n">300+</div>
+          <div class="l"><span lang="kk">Жабдықталған сынып</span><span lang="en">Classrooms equipped</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -100,24 +110,71 @@
   <div class="wrap">
     <div class="dir-panel-body">
       <div class="dir-sec-head">
-        <h3 class="dir-sec-title"><span lang="kk">Бағдарлама неден тұрады?</span><span lang="en">What does the programme include?</span></h3>
-        <p class="dir-sec-lead"><span lang="kk">Жаңғырту жобасы заманауи сынып ортасын, зертханалық практиканы және STEM инфрақұрылымын бір кешенде қамтиды — балаларға толыққанды оқу мүмкіндігін береді.</span><span lang="en">The fit-out programme covers modern classrooms, lab practice and STEM infrastructure in one integrated package — giving children a complete learning environment.</span></p>
+        <h3 class="dir-sec-title"><span lang="kk">Жабдықтау үш бағыттан тұрады</span><span lang="en">The fit-out spans three directions</span></h3>
       </div>
       <div class="dir-feats">
-        <div class="dir-feat">
-          <div class="dir-feat-ic tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div>
-          <h4><span lang="kk">Сынып жиһазы</span><span lang="en">Classroom furniture</span></h4>
-          <p><span lang="kk">Заманауи парталар, орындықтар және оқуға ыңғайлы жиһаз — балалардың күніне комфортты орта. Эргономика мен функционалдылық бірге.</span><span lang="en">Modern desks, chairs and ergonomic furniture that make every school day comfortable — function and ergonomics combined.</span></p>
+        <div class="dir-feat dir-feat--carousel">
+          <div class="feat-carousel" data-carousel aria-roledescription="carousel" tabindex="0">
+            <div class="feat-carousel-viewport">
+              <div class="feat-carousel-track">
+                <figure class="feat-carousel-slide"><img src="assets/optimized/home-fitout-classroom.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-classroom.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/about-team-classroom.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/program-fitout-detail.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/home-story-classroom.jpg" alt="" /></figure>
+              </div>
+            </div>
+            <button type="button" class="feat-carousel-arrow feat-carousel-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button type="button" class="feat-carousel-arrow feat-carousel-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+            <div class="feat-carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+          </div>
+          <div class="dir-feat-body">
+            <div class="dir-feat-ic tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div>
+            <h4><span lang="kk">Сынып жиһазы</span><span lang="en">Classroom furniture</span></h4>
+            <p><span lang="kk">Сабақ уақытында баланың қозғалысы еркін, отырысы ыңғайлы болуы керек. Біз ұсынатын заманауи жиһаз эргономикалық стандарттарға сай жасалған. Ол оқушының денсаулығын сақтап, зейінін тек сабаққа аударуға көмектеседі.</span><span lang="en">During lessons, children need freedom to move and comfortable seating. Our modern furniture meets ergonomic standards — protecting students' health and helping them focus entirely on learning.</span></p>
+          </div>
         </div>
-        <div class="dir-feat">
-          <div class="dir-feat-ic tone-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v7l3 4v2H6v-2l3-4V3z"/><path d="M10 14v4M14 14v4"/></svg></div>
-          <h4><span lang="kk">Зертханалар</span><span lang="en">Science labs</span></h4>
-          <p><span lang="kk">Физика, химия және биология кабинеттерін заманауи жабдықпен жабдықтау. Практикалық сабақтар мен зертханалық тәжірибелерге толық мүмкіндік.</span><span lang="en">Equipping physics, chemistry and biology rooms with modern lab equipment for hands-on lessons and experiments.</span></p>
+        <div class="dir-feat dir-feat--carousel">
+          <div class="feat-carousel" data-carousel aria-roledescription="carousel" tabindex="0">
+            <div class="feat-carousel-viewport">
+              <div class="feat-carousel-track">
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-feature-lab.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/home-story-lab-team.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-project.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-discussion.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/program-fitout-detail.jpg" alt="" /></figure>
+              </div>
+            </div>
+            <button type="button" class="feat-carousel-arrow feat-carousel-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button type="button" class="feat-carousel-arrow feat-carousel-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+            <div class="feat-carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+          </div>
+          <div class="dir-feat-body">
+            <div class="dir-feat-ic tone-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v7l3 4v2H6v-2l3-4V3z"/><path d="M10 14v4M14 14v4"/></svg></div>
+            <h4><span lang="kk">Зертханалар</span><span lang="en">Science labs</span></h4>
+            <p><span lang="kk">Теорияны практикаға айналдырамыз. Жаратылыстану кабинеттерін заманауи зертханалық құралдармен жабдықтаймыз. Оқушылар құрғақ формула жаттамай, ғылыми тәжірибелерді өз қолдарымен жасап көреді.</span><span lang="en">We turn theory into practice. We equip science classrooms with modern laboratory tools so students experience experiments hands-on — not just memorising dry formulas.</span></p>
+          </div>
         </div>
-        <div class="dir-feat">
-          <div class="dir-feat-ic tone-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
-          <h4><span lang="kk">Цифрлық жабдық</span><span lang="en">Digital equipment</span></h4>
-          <p><span lang="kk">Интерактивті тақталар, ноутбуктер және STEM жинақтары — заманауи оқыту әдістеріне дайын инфрақұрылым.</span><span lang="en">Interactive boards, laptops and STEM kits — infrastructure ready for modern teaching methods.</span></p>
+        <div class="dir-feat dir-feat--carousel">
+          <div class="feat-carousel" data-carousel aria-roledescription="carousel" tabindex="0">
+            <div class="feat-carousel-viewport">
+              <div class="feat-carousel-track">
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-students.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-project.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/about-team-workshop.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/home-story-regional-group.jpg" alt="" /></figure>
+                <figure class="feat-carousel-slide"><img src="assets/optimized/stories-classroom.jpg" alt="" /></figure>
+              </div>
+            </div>
+            <button type="button" class="feat-carousel-arrow feat-carousel-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button type="button" class="feat-carousel-arrow feat-carousel-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+            <div class="feat-carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+          </div>
+          <div class="dir-feat-body">
+            <div class="dir-feat-ic tone-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+            <h4><span lang="kk">Цифрлық жабдық</span><span lang="en">Digital equipment</span></h4>
+            <p><span lang="kk">Бормен жазатын тақталардың уақыты өтті. Интерактивті панельдер, ноутбуктер және STEM жинақтары арқылы мектепте толыққанды цифрлық экожүйе құрамыз. Бұл мұғалімге сабақты қызықты өткізуге, ал оқушыға ақпаратты тез меңгеруге мүмкіндік береді.</span><span lang="en">The era of chalkboards is over. Through interactive panels, laptops and STEM kits, we build a complete digital ecosystem in schools — giving teachers engaging lessons and students faster ways to grasp information.</span></p>
+          </div>
         </div>
       </div>
       <div class="dir-cycle-block">

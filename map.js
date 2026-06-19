@@ -293,31 +293,20 @@
     KZ62: { kk: 'Ұлытау', en: 'Ulytau' },
     KZ63: { kk: 'ШҚО', en: 'East KZ' }
   };
-  var MAP_LABEL_POSITIONS = {
-    KZ11: { x: 575, y: 170 },
-    KZ19: { x: 895, y: 508 },
-    KZ35: { x: 658, y: 332 },
-    KZ61: { x: 618, y: 542 }
-  };
 
-  function polyCentroid(polyStr) {
-    var sumX = 0, sumY = 0, n = 0;
-    polyStr.trim().split(/\s+/).forEach(function (pair) {
-      var p = pair.split(',');
-      if (p.length !== 2) return;
-      sumX += parseFloat(p[0]);
-      sumY += parseFloat(p[1]);
-      n++;
+  function readSvgLabelPositions(doc) {
+    var positions = {};
+    doc.querySelectorAll('#label_points circle[id]').forEach(function (circle) {
+      var id = circle.getAttribute('id');
+      var x = parseFloat(circle.getAttribute('cx'));
+      var y = parseFloat(circle.getAttribute('cy'));
+      if (id && !isNaN(x) && !isNaN(y)) positions[id] = { x: x, y: y };
     });
-    return n ? { x: sumX / n, y: sumY / n } : null;
+    return positions;
   }
 
-  function regionLabelPos(region, mapId, box) {
-    if (MAP_LABEL_POSITIONS[mapId]) return MAP_LABEL_POSITIONS[mapId];
-    if (region && region.poly) {
-      var c = polyCentroid(region.poly);
-      if (c) return c;
-    }
+  function regionLabelPos(svgLabelPositions, region, mapId, box) {
+    if (svgLabelPositions[mapId]) return svgLabelPositions[mapId];
     if (region && region.cx != null) {
       return { x: region.cx * VB_W, y: region.cy * VB_H };
     }
@@ -341,6 +330,7 @@
     var view = 'map';
     var syncingHash = false;
     var mapReady = false;
+    var zoomAnimTimer = null;
 
     var regionByMapId = {};
     REGIONS.forEach(function (r) { regionByMapId[r.mapId] = r; });
@@ -348,6 +338,7 @@
     function buildCurrentMap(svgText) {
       var doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
       var sourcePaths = doc.querySelectorAll('#features path[id]');
+      var svgLabelPositions = readSvgLabelPositions(doc);
       var activePaths = [];
       var labels = [];
 
@@ -376,7 +367,7 @@
         if (!label) return;
         var region = regionByMapId[mapId];
         var box = path.getBBox();
-        var pos = regionLabelPos(region, mapId, box);
+        var pos = regionLabelPos(svgLabelPositions, region, mapId, box);
         var text = el('text', {
           x: pos.x,
           y: pos.y,
@@ -413,6 +404,7 @@
         svg.appendChild(p1);
         svg.appendChild(p2);
       });
+      pan.classList.add('is-ready');
       mapReady = true;
       applyMapViewFromHash();
     }
@@ -453,6 +445,14 @@
     svg.addEventListener('mouseleave', hideTip);
 
     /* ---- zoom ---- */
+    function beginMapAnim() {
+      stage.classList.add('is-animating');
+      clearTimeout(zoomAnimTimer);
+      zoomAnimTimer = setTimeout(function () {
+        stage.classList.remove('is-animating');
+      }, 760);
+    }
+
     function applyZoom(r) {
       var W = pan.clientWidth, H = pan.clientHeight;
       var Px = r.cx * W, Py = r.cy * H;
@@ -460,8 +460,9 @@
       var ty = H / 2 - SCALE * Py;
       tx = Math.min(0, Math.max(W * (1 - SCALE), tx));
       ty = Math.min(0, Math.max(H * (1 - SCALE), ty));
+      beginMapAnim();
       pan.style.transformOrigin = '0 0';
-      pan.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + SCALE + ')';
+      pan.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0) scale(' + SCALE + ')';
     }
 
     function parseMapHash() {
@@ -611,6 +612,7 @@
       current = null;
       view = 'map';
       stage.classList.remove('zoomed');
+      beginMapAnim();
       pan.style.transform = 'none';
       svg.querySelectorAll('.hot').forEach(function (p) { p.classList.remove('sel'); });
       panel.classList.remove('show');

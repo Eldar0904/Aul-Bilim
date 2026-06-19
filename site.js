@@ -129,6 +129,50 @@
       window.addEventListener('hashchange', applyProgramsView);
     }
 
+    // feature card image carousels
+    document.querySelectorAll('[data-carousel]').forEach(function (root) {
+      var track = root.querySelector('.feat-carousel-track');
+      var slides = track ? Array.prototype.slice.call(track.children) : [];
+      var dotsWrap = root.querySelector('.feat-carousel-dots');
+      var prev = root.querySelector('.feat-carousel-prev');
+      var next = root.querySelector('.feat-carousel-next');
+      if (!track || !slides.length || !dotsWrap) return;
+
+      var index = 0;
+      var count = slides.length;
+
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'feat-carousel-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', 'Image ' + (i + 1) + ' of ' + count);
+        dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+        dot.addEventListener('click', function () { go(i); });
+        dotsWrap.appendChild(dot);
+      });
+
+      var dots = Array.prototype.slice.call(dotsWrap.children);
+
+      function go(i) {
+        index = (i + count) % count;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach(function (dot, n) {
+          var active = n === index;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+      }
+
+      if (prev) prev.addEventListener('click', function () { go(index - 1); });
+      if (next) next.addEventListener('click', function () { go(index + 1); });
+
+      root.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1); }
+      });
+    });
+
     // index.html — reset map/schools drill-down when navigating to #regions
     var here = location.pathname.split('/').pop() || 'index.html';
     if (here === 'index.html' || here === '') {
