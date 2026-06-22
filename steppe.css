@@ -886,6 +886,18 @@ body.map-schools-open .region-schools-block {
   gap: 22px;
   margin-bottom: 44px;
 }
+.dir-feats--pair { grid-template-columns: repeat(2, 1fr); }
+.dir-feat--rich h4 { font-size: 18px; margin-bottom: 12px; line-height: 1.3; }
+.dir-feat-intro { margin-bottom: 18px; }
+.dir-feat-points { display: grid; gap: 14px; }
+.dir-feat-point strong {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.dir-feat-point p { margin: 0; }
 .dir-feat {
   background: var(--surface);
   border-radius: 20px;
@@ -1251,6 +1263,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .dir-head { grid-template-columns: 1fr; gap: 20px; }
   .dir-head-aside { max-width: none; text-align: left; }
   .dir-feats { grid-template-columns: 1fr 1fr; }
+  .dir-feats--pair { grid-template-columns: 1fr; }
   .why-grid, .prog-row, .split { grid-template-columns: 1fr; gap: 36px; }
   .prog-row.flip .prog-media { order: 0; }
   .prog-media .media-slot { min-height: 320px; }
