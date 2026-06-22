@@ -855,7 +855,7 @@ body.map-schools-open .region-schools-block {
 
 .dir-panel-body { padding: 48px 40px 44px; background: var(--cream); }
 
-.dir-sec-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+.dir-sec-head { text-align: center; max-width: min(980px, 100%); margin: 0 auto 36px; }
 .dir-sec-title {
   font-size: 28px;
   letter-spacing: -0.02em;
@@ -875,6 +875,9 @@ body.map-schools-open .region-schools-block {
 .dir-sec-title.left::after { margin-left: 0; }
 .dir-sec-lead { font-size: 16px; line-height: 1.6; margin-top: 18px; color: var(--body); }
 .dir-sec-line { display: block; }
+@media (min-width: 860px) {
+  .dir-sec-line { white-space: nowrap; }
+}
 .dir-sec-sub { font-size: 15px; color: var(--body); margin-bottom: 24px; }
 
 .dir-feats {
