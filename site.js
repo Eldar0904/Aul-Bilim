@@ -64,18 +64,34 @@
     }
 
     // active nav link by page + program hash
+    function navPageName() {
+      var part = location.pathname.split('/').pop() || '';
+      if (!part || part === 'index.html') return 'index.html';
+      return part;
+    }
+
     function setActiveNav() {
-      var here = location.pathname.split('/').pop() || 'index.html';
+      var here = navPageName();
       var hash = (location.hash || '').replace(/^#/, '').toLowerCase();
       document.querySelectorAll('.nav-links a[href]').forEach(function (a) {
-        var href = a.getAttribute('href');
+        var href = a.getAttribute('href') || '';
+        var parts = href.split('#');
+        var linkPage = parts[0] || 'index.html';
+        var linkHash = (parts[1] || '').toLowerCase();
+        if (linkPage === './') linkPage = 'index.html';
+
         var active = false;
-        if (href === here) {
-          active = true;
-        } else if (href.indexOf('programs.html#') === 0 && here === 'programs.html') {
-          active = href.slice('programs.html#'.length).toLowerCase() === hash;
+        if (linkHash) {
+          active = here === linkPage && hash === linkHash;
+        } else if (linkPage === 'index.html') {
+          active = here === 'index.html';
+        } else {
+          active = here === linkPage && !hash;
         }
+
         a.classList.toggle('active', active);
+        if (active) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
       });
     }
     setActiveNav();
