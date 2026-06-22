@@ -343,9 +343,10 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .map-wrap { position: relative; order: 1; }
 .map-wrap img { width: 100%; display: block; }
 /* ---------- INTERACTIVE MAP ---------- */
-.map-col { position: absolute; top: 26px; left: 26px; z-index: 4; max-width: 250px; background: rgba(255,255,255,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 16px 20px; box-shadow: 0 8px 28px -10px rgba(27,79,138,0.22); }
+.map-col { position: absolute; top: 26px; left: 26px; z-index: 4; max-width: 300px; background: rgba(255,255,255,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 16px 20px; box-shadow: 0 8px 28px -10px rgba(27,79,138,0.22); }
 .map-intro .kicker { margin-bottom: 8px; }
-.map-intro h2 { font-size: 18px; line-height: 1.35; letter-spacing: -0.01em; margin: 0; font-weight: 600; }
+.map-intro h2 { font-size: 17px; line-height: 1.32; letter-spacing: -0.01em; margin: 0; font-weight: 600; }
+.map-intro-line { display: block; }
 .map-stage { position: relative; overflow: hidden; border-radius: 0; contain: layout paint; isolation: isolate; }
 .map-pan { position: relative; transform-origin: 0 0; transition: transform .72s cubic-bezier(.16,.84,.34,1); backface-visibility: hidden; width: 100%; aspect-ratio: 1000 / 549; }
 .map-stage.is-animating .map-pan { will-change: transform; }
@@ -1286,9 +1287,9 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .head h2 { font-size: 34px; }
   .why, .form-card { padding: 40px 26px; }
   .why .dir-cycle-step { max-width: none; }
-  .map-col { left: 14px; top: 14px; max-width: 210px; padding: 13px 16px; }
-  .map-col.region-open { max-width: 240px; padding: 10px 12px; }
-  .map-intro h2 { font-size: 18px; }
+  .map-col { left: 14px; top: 14px; max-width: 248px; padding: 13px 16px; }
+  .map-col.region-open { max-width: 260px; padding: 10px 12px; }
+  .map-intro h2 { font-size: 15.5px; line-height: 1.3; }
   .region-schools-hero { padding: 28px 24px; }
   .schools-grid { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
