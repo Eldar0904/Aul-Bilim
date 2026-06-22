@@ -1149,6 +1149,85 @@ body.map-schools-open .region-schools-block {
 .feat-list li .ck { width: 26px; height: 26px; border-radius: 8px; background: var(--accent-soft); color: var(--accent-deep); display: grid; place-items: center; flex: none; margin-top: 2px; }
 .feat-list li .ck svg { width: 15px; height: 15px; }
 
+/* ---------- ABOUT page ---------- */
+.about-mission { padding-top: 12px; padding-bottom: 20px; }
+.about-mission-in {
+  max-width: min(920px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+.about-mission-title {
+  font-size: clamp(28px, 4vw, 36px);
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+.about-mission-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  margin: 14px auto 0;
+}
+.about-mission-in p {
+  font-size: 17px;
+  line-height: 1.68;
+  color: var(--body);
+  margin: 0;
+}
+
+.about-partners { padding-top: 24px; padding-bottom: 48px; }
+.about-partners .head { max-width: 720px; margin-bottom: 40px; }
+.about-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.about-partner-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 28px 24px 26px;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 36px -26px rgba(27,79,138,0.28);
+  display: flex;
+  flex-direction: column;
+}
+.about-partner-logo {
+  height: 52px;
+  margin-bottom: 22px;
+  background-image: url('img/partners.png');
+  background-repeat: no-repeat;
+  background-size: 300% auto;
+}
+.about-partner-logo--bi { background-position: 0% center; }
+.about-partner-logo--kh { background-position: 50% center; }
+.about-partner-logo--jf { background-position: 100% center; }
+.about-partner-logo--local {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(27,79,138,0.08);
+  color: var(--primary);
+}
+.about-partner-logo--local svg { width: 28px; height: 28px; }
+.about-partner-card h3 {
+  font-size: 16px;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  min-height: 2.7em;
+}
+.about-partner-meta {
+  font-size: 14px;
+  line-height: 1.58;
+  color: var(--body);
+  margin: 0 0 12px;
+}
+.about-partner-meta:last-child { margin-bottom: 0; }
+.about-partner-meta strong { color: var(--ink); font-weight: 700; }
+
 /* ---------- VALUES (about) ---------- */
 .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .value { background: #fff; border-radius: 24px; padding: 32px 28px; box-shadow: 0 14px 40px -26px rgba(27,79,138,0.32); }
@@ -1298,6 +1377,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .prog-media .media-slot { min-height: 320px; }
   .steps { grid-template-columns: 1fr 1fr; }
   .team { grid-template-columns: 1fr 1fr; }
+  .about-partner-grid { grid-template-columns: 1fr 1fr; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .page-hero h1 { font-size: 42px; }
   .schools-grid { grid-template-columns: 1fr 1fr; }
@@ -1320,7 +1400,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .nav-links.open a { padding: 10px 0; font-size: 17px; width: 100%; }
   .menu-btn { display: grid; place-items: center; }
   nav.bar { position: sticky; }
-  .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
+  .progs, .stories, .values, .ways, .dir-cards, .steps, .team, .about-partner-grid { grid-template-columns: 1fr; }
   .dir-feats, .dir-results-stats { grid-template-columns: 1fr; }
   .feat-carousel-arrow { opacity: 1; }
   .dir-panel-body { padding: 36px 24px; }
