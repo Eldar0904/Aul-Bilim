@@ -1183,7 +1183,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 .foot-grid a { display: block; font-size: 14.5px; margin-bottom: 11px; transition: color .2s; }
 .foot-grid a:hover { color: var(--accent-soft); }
 .footer-address { display: block; font-size: 14.5px; margin-bottom: 11px; }
-.foot-bottom { padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; flex-wrap: wrap; gap: 10px; color: rgba(255,255,255,0.72); }
+.foot-bottom { padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; flex-wrap: wrap; gap: 8px; color: rgba(255,255,255,0.62); }
 
 /* ---------- IMAGE-SLOT wiring ---------- */
 
