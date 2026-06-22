@@ -1183,118 +1183,16 @@ body.map-schools-open .region-schools-block {
   padding-top: 8px;
   padding-bottom: 36px;
 }
-.coop-model-title {
-  font-size: clamp(30px, 4.5vw, 42px);
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  margin-bottom: 36px;
-  line-height: 1.1;
-}
-.coop-model-title-accent { color: var(--primary-light); }
-
-.coop-model-diagram {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr) minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  gap: 26px 22px;
-  max-width: 980px;
+.coop-model-figure {
   margin: 0 auto;
-  position: relative;
+  max-width: 1120px;
 }
-.coop-model-arrows {
-  position: absolute;
-  inset: 0;
+.coop-model-figure img {
+  display: block;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
+  height: auto;
+  border-radius: 18px;
 }
-
-.coop-card {
-  position: relative;
-  z-index: 1;
-  background: #fff;
-  border-radius: 22px;
-  padding: 22px 22px 20px;
-  border: 1px solid var(--line);
-  box-shadow: 0 14px 40px -28px rgba(27,79,138,0.32);
-}
-.coop-card--top { grid-column: 2; grid-row: 1; }
-.coop-card--left { grid-column: 1; grid-row: 2; align-self: center; }
-.coop-card--hub { grid-column: 2; grid-row: 2; }
-.coop-card--right { grid-column: 3; grid-row: 2; align-self: center; }
-
-.coop-card--hub {
-  background: linear-gradient(180deg, #3b8fd9 0%, #1b5fa8 100%);
-  border-color: transparent;
-  color: #fff;
-  box-shadow: 0 18px 48px -24px rgba(27,79,138,0.55);
-}
-.coop-card--hub .coop-card-org { color: rgba(255,255,255,0.88); }
-.coop-card--hub .coop-card-list { color: #fff; }
-
-.coop-card-logo {
-  width: 100%;
-  max-width: 168px;
-  height: 48px;
-  border-radius: 14px;
-  margin-bottom: 16px;
-  background-image: url('img/partners.png');
-  background-repeat: no-repeat;
-  background-size: 300% 100%;
-  background-color: #fff;
-  border: 1px solid rgba(27,79,138,0.08);
-}
-.coop-card-logo--bi { background-position: 0% 50%; }
-.coop-card-logo--kh { background-position: 50% 50%; }
-.coop-card-logo--jf { background-position: 100% 50%; }
-.coop-card-logo--hub {
-  background-color: rgba(255,255,255,0.96);
-  border-color: transparent;
-}
-.coop-card-logo--local {
-  display: grid;
-  place-items: center;
-  background: rgba(46,125,80,0.12);
-  color: #2e7d50;
-  border: none;
-}
-.coop-card-logo--local svg { width: 28px; height: 28px; }
-
-.coop-card h3 {
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  line-height: 1.25;
-}
-.coop-card--kh h3 { color: #c2187a; }
-.coop-card--bi h3 { color: #5b3f8f; }
-.coop-card--local h3 { color: #2e7d50; }
-.coop-card--hub h3 { color: #fff; }
-
-.coop-card-org {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--body);
-  margin: 0 0 14px;
-  line-height: 1.35;
-}
-.coop-card-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 6px;
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.coop-card--kh .coop-card-list { color: #c2187a; }
-.coop-card--bi .coop-card-list { color: #5b3f8f; }
-.coop-card--local .coop-card-list { color: #2e7d50; }
 
 .about-partners { padding-top: 24px; padding-bottom: 48px; }
 .about-partners .head { max-width: 720px; margin-bottom: 40px; }
@@ -1498,21 +1396,6 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .steps { grid-template-columns: 1fr 1fr; }
   .team { grid-template-columns: 1fr 1fr; }
   .about-partner-grid { grid-template-columns: 1fr 1fr; }
-  .coop-model-diagram {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 18px;
-  }
-  .coop-model-arrows { display: none; }
-  .coop-card--top,
-  .coop-card--left,
-  .coop-card--hub,
-  .coop-card--right {
-    grid-column: auto;
-    grid-row: auto;
-    align-self: stretch;
-  }
-  .coop-card--hub { grid-column: 1 / -1; order: -1; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .page-hero h1 { font-size: 42px; }
   .schools-grid { grid-template-columns: 1fr 1fr; }
@@ -1537,7 +1420,6 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .menu-btn { display: grid; place-items: center; }
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team, .about-partner-grid { grid-template-columns: 1fr; }
-  .coop-model-diagram { grid-template-columns: 1fr; }
   .dir-feats, .dir-results-stats { grid-template-columns: 1fr; }
   .feat-carousel-arrow { opacity: 1; }
   .dir-panel-body { padding: 36px 24px; }
