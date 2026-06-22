@@ -684,11 +684,7 @@ body.map-schools-open .region-schools-block {
   flex-direction: column;
 }
 #main-content.prog-page .programs-view.prog-page:not([hidden]) { order: 0; }
-#main-content.prog-page #programs-cards {
-  order: 1;
-  padding-top: 0;
-  padding-bottom: 48px;
-}
+#main-content.prog-page #programs-cards { display: none; }
 #main-content.prog-page #programs-hub { display: none; }
 .dir-card.is-active {
   box-shadow: 0 18px 48px -22px rgba(27,79,138,0.42);
