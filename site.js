@@ -141,6 +141,7 @@
         }
 
         if (slug) window.scrollTo(0, 0);
+        setActiveNav();
       }
 
       applyProgramsView();
