@@ -880,6 +880,35 @@ body.map-schools-open .region-schools-block {
 }
 .dir-sec-sub { font-size: 15px; color: var(--body); margin-bottom: 24px; }
 
+#prog-content-samruk .dir-sec-head {
+  max-width: min(1040px, 100%);
+  margin-bottom: 40px;
+}
+#prog-content-samruk .dir-sec-lead {
+  font-size: 17px;
+  line-height: 1.65;
+}
+#prog-content-samruk .dir-sec-points {
+  max-width: min(1040px, 100%);
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  gap: 32px;
+}
+#prog-content-samruk .dir-sec-point strong {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+#prog-content-samruk .dir-sec-point p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--body);
+}
+
 .dir-feats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
