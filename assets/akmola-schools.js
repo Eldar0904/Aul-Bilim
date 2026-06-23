@@ -146,9 +146,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Сатемиров Серик Карбаевұлы",
         "en": "Director: Сатемиров Серик Карбаевич"
       },
-      "image": "assets/optimized/ondiris/ondiris-hero.png",
+      "image": "assets/optimized/ondiris/ondiris-building.png",
       "gallery": [
-        "assets/optimized/ondiris/ondiris-hero.png",
+        "assets/optimized/ondiris/ondiris-building.png",
+        "assets/optimized/ondiris/ondiris-classroom-1.png",
         "assets/optimized/ondiris/ondiris-classroom-2.png",
         "assets/optimized/ondiris/ondiris-classroom-3.png",
         "assets/optimized/ondiris/ondiris-classroom-4.png",
