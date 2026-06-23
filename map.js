@@ -521,6 +521,15 @@
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    function renderRegionStats(r) {
+      if (!r.stats) return '';
+      return '<div class="region-schools-stats-bar">' +
+        '<div class="rss-cell"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'schools') + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + bi('кабинет', 'classrooms') + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + bi('оқытылған ұстаз', 'teachers trained') + '</div></div>' +
+      '</div>';
+    }
+
     function renderSchoolsSection(r) {
       if (!schoolsRoot || !schoolsBlock) return;
       var schools = r.schools || [];
@@ -548,8 +557,9 @@
               '</div>' +
             '</div>'
           : '') +
+        renderRegionStats(r) +
         '<h3 class="schools-grid-head">' +
-          bi('Жаңғыртылған мектептер (' + schools.length + ')', 'Renovated schools (' + schools.length + ')') +
+          bi('Жаңғыртылған мектептер', 'Renovated schools') +
         '</h3>' +
         gridHtml;
 
