@@ -132,8 +132,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-astrakhan-1",
       "districtKey": "Астраханский",
-      "kk": "Ондирис мектебі",
-      "en": "Ондирис Secondary School",
+      "kk": "Өндіріс мектебі",
+      "en": "Production Secondary School",
       "location": {
         "kk": "Астрахан ауданы",
         "en": "Astrakhan District"
@@ -143,7 +143,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Сатемиров Серик Карбаевич",
+        "kk": "Директоры: Сатемиров Серик Карбаевұлы",
         "en": "Director: Сатемиров Серик Карбаевич"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -162,7 +162,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ищанова Зарина Тайпаковна",
+        "kk": "Директоры: Ищанова Зарина Тайпакқызы",
         "en": "Director: Ищанова Зарина Тайпаковна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -170,8 +170,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-astrakhan-3",
       "districtKey": "Астраханский",
-      "kk": "Основная мектебі села Караколь",
-      "en": "Основная Secondary School села Караколь",
+      "kk": "Караколь мектебі",
+      "en": "Караколь Secondary School",
       "location": {
         "kk": "Астрахан ауданы",
         "en": "Astrakhan District"
@@ -181,7 +181,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Габдуллина Гульшехизада Сапаргалиевна",
+        "kk": "Директоры: Габдуллина Гульшехизада Сапаргалиқызы",
         "en": "Director: Габдуллина Гульшехизада Сапаргалиевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -200,7 +200,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Айтпаева Асем Жолдыбаевна",
+        "kk": "Директоры: Айтпаева Асем Жолдыбақызы",
         "en": "Director: Айтпаева Асем Жолдыбаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -208,8 +208,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-shortandy-2",
       "districtKey": "Шортандинский",
-      "kk": "Основная мектебі села Ключи",
-      "en": "Основная Secondary School села Ключи",
+      "kk": "Ключи мектебі",
+      "en": "Ключи Secondary School",
       "location": {
         "kk": "Шортанды ауданы",
         "en": "Shortandy District"
@@ -219,7 +219,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Амержанова АлимаКдирбаевна",
+        "kk": "Директоры: Амержанова АлимаКдирбаевна",
         "en": "Director: Амержанова АлимаКдирбаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -227,8 +227,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-shortandy-3",
       "districtKey": "Шортандинский",
-      "kk": "Основная мектебі села Мыктыколь",
-      "en": "Основная Secondary School села Мыктыколь",
+      "kk": "Мыктыколь мектебі",
+      "en": "Мыктыколь Secondary School",
       "location": {
         "kk": "Шортанды ауданы",
         "en": "Shortandy District"
@@ -238,7 +238,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Бекей Досан",
+        "kk": "Директоры: Бекей Досан",
         "en": "Director: Бекей Досан"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -246,8 +246,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-arshaly-1",
       "districtKey": "Аршалинский",
-      "kk": "Основная мектебі станции Бабатай",
-      "en": "Основная Secondary School станции Бабатай",
+      "kk": "Бабатай мектебі",
+      "en": "Бабатай Secondary School",
       "location": {
         "kk": "Аршалы ауданы",
         "en": "Arshaly District"
@@ -257,7 +257,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Миралиев Бауыржан Койшибекович",
+        "kk": "Директоры: Миралиев Бауыржан Койшибековұлы",
         "en": "Director: Миралиев Бауыржан Койшибекович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -276,7 +276,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Мусинов Тахир Хасимович",
+        "kk": "Директоры: Мусинов Тахир Хасимовұлы",
         "en": "Director: Мусинов Тахир Хасимович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -284,7 +284,7 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-arshaly-3",
       "districtKey": "Аршалинский",
-      "kk": "Абая атындағы мектебі",
+      "kk": "ени Абая атындағы мектебі",
       "en": "Абая Secondary School",
       "location": {
         "kk": "Аршалы ауданы",
@@ -295,7 +295,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Халым Толеуиш",
+        "kk": "Директоры: Халым Толеуиш",
         "en": "Director: Халым Толеуиш"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -314,7 +314,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Алтынбек Дағыстан",
+        "kk": "Директоры: Алтынбек Дағыстан",
         "en": "Director: Алтынбек Дағыстан"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -333,8 +333,8 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Омарова Г.Б.",
-        "en": "Director: Омарова Г.Б."
+        "kk": "Директоры: Омарова Г.Б",
+        "en": "Director: Омарова Г.Б"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -352,7 +352,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Нарижняя Тамара Николаевна (ответственная)",
+        "kk": "Директоры: Нарижняя Тамара Николаевна (ответственная)",
         "en": "Director: Нарижняя Тамара Николаевна (ответственная)"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -360,8 +360,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-akkol-1",
       "districtKey": "Аккольский",
-      "kk": "Основная мектебі села Амангельды отдел образования по Аккольскому району управления образования Акмолинской области",
-      "en": "Основная Secondary School села Амангельды отдел образования по Аккольскому району управления образования Акмолинской обл",
+      "kk": "Амангельды мектебі",
+      "en": "Амангельды Secondary School",
       "location": {
         "kk": "Ақкөл ауданы",
         "en": "Akkol District"
@@ -371,7 +371,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Муратбек Хадыр",
+        "kk": "Директоры: Муратбек Хадыр",
         "en": "Director: Муратбек Хадыр"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -379,8 +379,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-akkol-2",
       "districtKey": "Аккольский",
-      "kk": "Общеобразовательная  мектебі села Кеңес отдел образования по Аккольскому району управления образования Акмолинской облас",
-      "en": "Общеобразовательная  School села Кеңес отдел образования по Аккольскому району управления образования Акмолинской област",
+      "kk": "Кеңес мектебі",
+      "en": "Кеңес Secondary School",
       "location": {
         "kk": "Ақкөл ауданы",
         "en": "Akkol District"
@@ -390,7 +390,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Канди Бахшагуль",
+        "kk": "Директоры: Канди Бахшагуль",
         "en": "Director: Канди Бахшагуль"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -398,8 +398,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-akkol-3",
       "districtKey": "Аккольский",
-      "kk": "Основная мектебі села Барап отдел образования по Аккольскому району управления образования Акмолинской области",
-      "en": "Основная Secondary School села Барап отдел образования по Аккольскому району управления образования Акмолинской области",
+      "kk": "Барап мектебі",
+      "en": "Барап Secondary School",
       "location": {
         "kk": "Ақкөл ауданы",
         "en": "Akkol District"
@@ -409,7 +409,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Утюпова Гаухар Тилеукешовна",
+        "kk": "Директоры: Утюпова Гаухар Тилеукешқызы",
         "en": "Director: Утюпова Гаухар Тилеукешовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -428,7 +428,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Ахамбаева Надежда Владимировна",
+        "kk": "Директоры: Ахамбаева Надежда Владимирқызы",
         "en": "Director: Ахамбаева Надежда Владимировна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -436,8 +436,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-esil-2",
       "districtKey": "Есильский",
-      "kk": "Основная мектебі села Бузулук",
-      "en": "Основная Secondary School села Бузулук",
+      "kk": "Бузулук мектебі",
+      "en": "Бузулук Secondary School",
       "location": {
         "kk": "Есіл ауданы",
         "en": "Esil District"
@@ -447,7 +447,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ахметова Динара Куанышевна",
+        "kk": "Директоры: Ахметова Динара Куанышқызы",
         "en": "Director: Ахметова Динара Куанышевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -455,8 +455,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-esil-3",
       "districtKey": "Есильский",
-      "kk": "Основная мектебі села Сурган",
-      "en": "Основная Secondary School села Сурган",
+      "kk": "Сурган мектебі",
+      "en": "Сурган Secondary School",
       "location": {
         "kk": "Есіл ауданы",
         "en": "Esil District"
@@ -466,7 +466,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Сысоева Ирина Николаевна",
+        "kk": "Директоры: Сысоева Ирина Николақызы",
         "en": "Director: Сысоева Ирина Николаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -485,7 +485,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Серикбаева Балжан Тулегеновна",
+        "kk": "Директоры: Серикбаева Балжан Тулегенқызы",
         "en": "Director: Серикбаева Балжан Тулегеновна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -504,7 +504,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Бурчиц Александра Юрьевна",
+        "kk": "Директоры: Бурчиц Александра Юрьқызы",
         "en": "Director: Бурчиц Александра Юрьевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -523,7 +523,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Кабамбаева Зауреш Калиевна",
+        "kk": "Директоры: Кабамбаева Зауреш Калиқызы",
         "en": "Director: Кабамбаева Зауреш Калиевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -542,7 +542,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кайкина Анара Айтпаевна",
+        "kk": "Директоры: Кайкина Анара Айтпақызы",
         "en": "Director: Кайкина Анара Айтпаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -550,8 +550,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-zharkain-2",
       "districtKey": "Жаркаинский",
-      "kk": "Основная мектебі села Шойындыколь",
-      "en": "Основная Secondary School села Шойындыколь",
+      "kk": "Шойындыколь мектебі",
+      "en": "Шойындыколь Secondary School",
       "location": {
         "kk": "Жаркаин ауданы",
         "en": "Zharkain District"
@@ -561,7 +561,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ахметова Гульнар Кажмухамбетовна",
+        "kk": "Директоры: Ахметова Гульнар Кажмухамбетқызы",
         "en": "Director: Ахметова Гульнар Кажмухамбетовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -569,8 +569,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-zharkain-3",
       "districtKey": "Жаркаинский",
-      "kk": "Основная мектебі села Ушкарасу",
-      "en": "Основная Secondary School села Ушкарасу",
+      "kk": "Ушкарасу мектебі",
+      "en": "Ушкарасу Secondary School",
       "location": {
         "kk": "Жаркаин ауданы",
         "en": "Zharkain District"
@@ -580,7 +580,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Нурканова Рабига Салимжановна",
+        "kk": "Директоры: Нурканова Рабига Салимжанқызы",
         "en": "Director: Нурканова Рабига Салимжановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -588,8 +588,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-sandyktau-1",
       "districtKey": "Сандыктауский",
-      "kk": "Основная мектебі села Новоромановка",
-      "en": "Основная Secondary School села Новоромановка",
+      "kk": "Новоромановка мектебі",
+      "en": "Новоромановка Secondary School",
       "location": {
         "kk": "Сандықтау ауданы",
         "en": "Sandyktau District"
@@ -599,7 +599,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Пономарев Игорь Вячеславович",
+        "kk": "Директоры: Пономарев Игорь Вячеславовұлы",
         "en": "Director: Пономарев Игорь Вячеславович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -607,8 +607,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-sandyktau-2",
       "districtKey": "Сандыктауский",
-      "kk": "Основная мектебі села Петровка",
-      "en": "Основная Secondary School села Петровка",
+      "kk": "Петровка мектебі",
+      "en": "Петровка Secondary School",
       "location": {
         "kk": "Сандықтау ауданы",
         "en": "Sandyktau District"
@@ -618,7 +618,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ганин Сергей Владимирович",
+        "kk": "Директоры: Ганин Сергей Владимировұлы",
         "en": "Director: Ганин Сергей Владимирович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -626,8 +626,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-sandyktau-3",
       "districtKey": "Сандыктауский",
-      "kk": "Основная мектебі села Владимировка",
-      "en": "Основная Secondary School села Владимировка",
+      "kk": "Владимировка мектебі",
+      "en": "Владимировка Secondary School",
       "location": {
         "kk": "Сандықтау ауданы",
         "en": "Sandyktau District"
@@ -637,7 +637,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Жаксыбаев Бактияр Сабетович",
+        "kk": "Директоры: Жаксыбаев Бактияр Сабетовұлы",
         "en": "Director: Жаксыбаев Бактияр Сабетович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -645,8 +645,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-atbasar-1",
       "districtKey": "Атбасарский",
-      "kk": "№2 села Бастау мектебі",
-      "en": "№2 села Бастау Secondary School",
+      "kk": "Бастау №2 мектебі",
+      "en": "Бастау №2 Secondary School",
       "location": {
         "kk": "Атбасар ауданы",
         "en": "Atbasar District"
@@ -656,7 +656,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Харахыз Бахытгуль",
+        "kk": "Директоры: Харахыз Бахытгуль",
         "en": "Director: Харахыз Бахытгуль"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -675,7 +675,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Утегенова Баян Талгатовна",
+        "kk": "Директоры: Утегенова Баян Талгатқызы",
         "en": "Director: Утегенова Баян Талгатовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -694,7 +694,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Амантаева Аяулы Каирбековна",
+        "kk": "Директоры: Амантаева Аяулы Каирбекқызы",
         "en": "Director: Амантаева Аяулы Каирбековна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -713,7 +713,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Темирбек Ерболат",
+        "kk": "Директоры: Темирбек Ерболат",
         "en": "Director: Темирбек Ерболат"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -732,7 +732,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Сануар Бердигул",
+        "kk": "Директоры: Сануар Бердигул",
         "en": "Director: Сануар Бердигул"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -740,8 +740,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-stepnogorsk-3",
       "districtKey": "Степногорск",
-      "kk": "мектебі поселка Аксу",
-      "en": "Основная School поселка Аксу",
+      "kk": "Аксу мектебі",
+      "en": "Аксу Secondary School",
       "location": {
         "kk": "Степногорск қ.",
         "en": "Stepnogorsk city"
@@ -751,7 +751,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Медрисова Енлык Катрановна",
+        "kk": "Директоры: Медрисова Енлык Катранқызы",
         "en": "Director: Медрисова Енлык Катрановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -770,7 +770,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Жапан Баянгонос",
+        "kk": "Директоры: Жапан Баянгонос",
         "en": "Director: Жапан Баянгонос"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -778,8 +778,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-tselinograd-2",
       "districtKey": "Целиноградский",
-      "kk": "Основная мектебі села Раздольное",
-      "en": "Основная Secondary School села Раздольное",
+      "kk": "Раздольное мектебі",
+      "en": "Раздольное Secondary School",
       "location": {
         "kk": "Целиноград ауданы",
         "en": "Tselinograd District"
@@ -789,7 +789,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Мукатаев Айдын Балапанович",
+        "kk": "Директоры: Мукатаев Айдын Балапановұлы",
         "en": "Director: Мукатаев Айдын Балапанович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -797,8 +797,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-tselinograd-3",
       "districtKey": "Целиноградский",
-      "kk": "Основная мектебі села Мортык",
-      "en": "Основная Secondary School села Мортык",
+      "kk": "Мортык мектебі",
+      "en": "Мортык Secondary School",
       "location": {
         "kk": "Целиноград ауданы",
         "en": "Tselinograd District"
@@ -808,7 +808,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Джамалиев Болат Мажитович",
+        "kk": "Директоры: Джамалиев Болат Мажитовұлы",
         "en": "Director: Джамалиев Болат Мажитович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -827,7 +827,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Трысбаева Асел Еркеновна",
+        "kk": "Директоры: Трысбаева Асел Еркенқызы",
         "en": "Director: Трысбаева Асел Еркеновна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -835,8 +835,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-egindykol-2",
       "districtKey": "Егиндыкольский",
-      "kk": "Основная мектебі села Тоганас",
-      "en": "Основная Secondary School села Тоганас",
+      "kk": "Тоганас мектебі",
+      "en": "Тоганас Secondary School",
       "location": {
         "kk": "Егиндыкөл ауданы",
         "en": "Egindykol District"
@@ -846,7 +846,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Бокишев Талгат Кабдоллаевич",
+        "kk": "Директоры: Бокишев Талгат Кабдоллаевұлы",
         "en": "Director: Бокишев Талгат Кабдоллаевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -854,8 +854,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-egindykol-3",
       "districtKey": "Егиндыкольский",
-      "kk": "Основная мектебі села Коркем",
-      "en": "Основная Secondary School села Коркем",
+      "kk": "Коркем мектебі",
+      "en": "Коркем Secondary School",
       "location": {
         "kk": "Егиндыкөл ауданы",
         "en": "Egindykol District"
@@ -865,7 +865,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Мухамедиярова Шынар Жаксыкелдиновна",
+        "kk": "Директоры: Мухамедиярова Шынар Жаксыкелдинқызы",
         "en": "Director: Мухамедиярова Шынар Жаксыкелдиновна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -884,7 +884,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Шопанова Жанар Мейрембаевна",
+        "kk": "Директоры: Шопанова Жанар Мейрембақызы",
         "en": "Director: Шопанова Жанар Мейрембаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -903,7 +903,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Кошкарбаев Жомартжан Қалмұрзаұлы",
+        "kk": "Директоры: Кошкарбаев Жомартжан Қалмұрзаұлы",
         "en": "Director: Кошкарбаев Жомартжан Қалмұрзаұлы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -911,8 +911,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-korgalzhyn-3",
       "districtKey": "Коргалжынский",
-      "kk": "им.Ш.Уалиханова села Караегин мектебі",
-      "en": "им.Ш.Уалиханова села Караегин Secondary School",
+      "kk": "Ш.Уалиханова атындағы мектебі",
+      "en": "Ш.Уалиханова села Караегин Secondary School",
       "location": {
         "kk": "Коргалжын ауданы",
         "en": "Korgalzhyn District"
@@ -922,7 +922,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Касенова Арнагуль Нуржановна",
+        "kk": "Директоры: Касенова Арнагуль Нуржанқызы",
         "en": "Director: Касенова Арнагуль Нуржановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -930,8 +930,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-ereymentau-1",
       "districtKey": "Ерейментауский",
-      "kk": "Основная мектебі села Ажы",
-      "en": "Основная Secondary School села Ажы",
+      "kk": "Ажы мектебі",
+      "en": "Ажы Secondary School",
       "location": {
         "kk": "Ерейmentau ауданы",
         "en": "Ereymentau District"
@@ -941,7 +941,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Ахметова Айтжамал Рахимбековна",
+        "kk": "Директоры: Ахметова Айтжамал Рахимбекқызы",
         "en": "Director: Ахметова Айтжамал Рахимбековна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -949,8 +949,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-ereymentau-2",
       "districtKey": "Ерейментауский",
-      "kk": "Основная мектебі села Бестогай",
-      "en": "Основная Secondary School села Бестогай",
+      "kk": "Бестогай мектебі",
+      "en": "Бестогай Secondary School",
       "location": {
         "kk": "Ерейmentau ауданы",
         "en": "Ereymentau District"
@@ -960,7 +960,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Каппасова Гульнар Еркеновна",
+        "kk": "Директоры: Каппасова Гульнар Еркенқызы",
         "en": "Director: Каппасова Гульнар Еркеновна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -968,8 +968,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-ereymentau-3",
       "districtKey": "Ерейментауский",
-      "kk": "Основная мектебі села Енбек",
-      "en": "Основная Secondary School села Енбек",
+      "kk": "Енбек мектебі",
+      "en": "Енбек Secondary School",
       "location": {
         "kk": "Ерейmentau ауданы",
         "en": "Ereymentau District"
@@ -979,7 +979,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Табулдина Жулдыз Тлеубаевна",
+        "kk": "Директоры: Табулдина Жулдыз Тлеубақызы",
         "en": "Director: Табулдина Жулдыз Тлеубаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -998,7 +998,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Садуова Гульнар Сериковна",
+        "kk": "Директоры: Садуова Гульнар Серикқызы",
         "en": "Director: Садуова Гульнар Сериковна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1006,7 +1006,7 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-birjan-sal-2",
       "districtKey": "Биржан Сал",
-      "kk": "Кудукагаш Р.Елебаева атындағы мектебі мектебі",
+      "kk": "Кудукагаш Р.Елебаева атындағы мектебі",
       "en": "Кудукагаш Р.Елебаева Secondary School",
       "location": {
         "kk": "Биржан Сal ауданы",
@@ -1017,7 +1017,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Садвакасов Алтай Ногербекович",
+        "kk": "Директоры: Садвакасов Алтай Ногербековұлы",
         "en": "Director: Садвакасов Алтай Ногербекович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1025,8 +1025,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-birjan-sal-3",
       "districtKey": "Биржан Сал",
-      "kk": "Основная мектебі села Мамай",
-      "en": "Основная Secondary School села Мамай",
+      "kk": "Мамай мектебі",
+      "en": "Мамай Secondary School",
       "location": {
         "kk": "Биржан Сal ауданы",
         "en": "Birjan Sal District"
@@ -1036,7 +1036,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Рамазанова Самал Тулешевна",
+        "kk": "Директоры: Рамазанова Самал Тулешқызы",
         "en": "Director: Рамазанова Самал Тулешевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1055,7 +1055,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кинабаева Акмарал Аманкуловна",
+        "kk": "Директоры: Кинабаева Акмарал Аманкулқызы",
         "en": "Director: Кинабаева Акмарал Аманкуловна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1074,7 +1074,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Даирова Калимаш Егинбаевна",
+        "kk": "Директоры: Даирова Калимаш Егинбақызы",
         "en": "Director: Даирова Калимаш Егинбаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1082,8 +1082,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-bulandy-3",
       "districtKey": "Буландинский",
-      "kk": "№1  села Никольское мектебі",
-      "en": "№1  села Никольское Secondary School",
+      "kk": "Николь №1 мектебі",
+      "en": "Николь №1 Secondary School",
       "location": {
         "kk": "Бұланды ауданы",
         "en": "Bulandy District"
@@ -1093,7 +1093,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Аймихан Мырзабек",
+        "kk": "Директоры: Аймихан Мырзабек",
         "en": "Director: Аймихан Мырзабек"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1112,7 +1112,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Султанбек Талант",
+        "kk": "Директоры: Султанбек Талант",
         "en": "Director: Султанбек Талант"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1131,7 +1131,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Егубаева Гульзат Кожековна",
+        "kk": "Директоры: Егубаева Гульзат Кожекқызы",
         "en": "Director: Егубаева Гульзат Кожековна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1139,8 +1139,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-zerendi-3",
       "districtKey": "Зерендинский",
-      "kk": "Основная мектебі села Ортагаш",
-      "en": "Основная Secondary School села Ортагаш",
+      "kk": "Ортагаш мектебі",
+      "en": "Ортагаш Secondary School",
       "location": {
         "kk": "Зеренді ауданы",
         "en": "Zerendi District"
@@ -1150,7 +1150,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Каирбай Бахытбек Хасенович",
+        "kk": "Директоры: Каирбай Бахытбек Хасеновұлы",
         "en": "Director: Каирбай Бахытбек Хасенович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"

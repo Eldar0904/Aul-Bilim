@@ -7,6 +7,7 @@ from school_data_utils import (
     BADGES,
     EXCEL,
     IMAGES,
+    build_school_desc,
     clean_director,
     short_name,
     short_name_en,
@@ -133,18 +134,6 @@ def main() -> None:
             address = ""
         full = str(row["school"]).strip()
 
-        desc_kk = []
-        desc_en = []
-        if director:
-            desc_kk.append(f"Директор: {director}")
-            desc_en.append(f"Director: {director}")
-        if address:
-            desc_kk.append(f"Мекенжай: {address}")
-            desc_en.append(f"Address: {address}")
-        if not desc_kk:
-            desc_kk.append("Aul Bilim жобасы аясындағы мектеп.")
-            desc_en.append("School supported under the Aul Bilim programme.")
-
         schools.append(
             {
                 "id": f"abay-{meta['slug']}-{idx}",
@@ -153,7 +142,7 @@ def main() -> None:
                 "en": short_name_en(full),
                 "location": {"kk": meta["kk"], "en": meta["en"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
-                "desc": {"kk": " ".join(desc_kk), "en": " ".join(desc_en)},
+                "desc": build_school_desc(director=director, address=address),
                 "image": IMAGES[len(schools) % len(IMAGES)],
             }
         )

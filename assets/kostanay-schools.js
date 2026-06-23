@@ -132,8 +132,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-altynsarin-1",
       "districtKey": "Алтынсаринский",
-      "kk": "Больше-Чураковская мектебі",
-      "en": "Больше-Чураковская Secondary School",
+      "kk": "Больше-Чураков мектебі",
+      "en": "Больше-Чураков Secondary School",
       "location": {
         "kk": "Алтынсарин ауданы",
         "en": "Altynsarin District"
@@ -143,7 +143,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Лингер Алена Викторовна",
+        "kk": "Директоры: Лингер Алена Викторқызы",
         "en": "Director: Лингер Алена Викторовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -151,7 +151,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-altynsarin-2",
       "districtKey": "Алтынсаринский",
-      "kk": "Омара Шипина атындағы мектебі",
+      "kk": "ени Омара Шипина атындағы мектебі",
       "en": "Омара Шипина Secondary School",
       "location": {
         "kk": "Алтынсарин ауданы",
@@ -162,7 +162,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Кішібай Сағира Қабажайқызы",
+        "kk": "Директоры: Кішібай Сағира Қабажайқызы",
         "en": "Director: Кішібай Сағира Қабажайқызы"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -170,8 +170,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-altynsarin-3",
       "districtKey": "Алтынсаринский",
-      "kk": "Жанасуская основная мектебі",
-      "en": "Жанасуская основная Secondary School",
+      "kk": "Жанасу мектебі",
+      "en": "Жанасу Secondary School",
       "location": {
         "kk": "Алтынсарин ауданы",
         "en": "Altynsarin District"
@@ -181,7 +181,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Агибаев Туремрат Каиржанович",
+        "kk": "Директоры: Агибаев Туремрат Каиржановұлы",
         "en": "Director: Агибаев Туремрат Каиржанович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -189,8 +189,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-amangeldy-1",
       "districtKey": "Амангельдинский",
-      "kk": "Жасбуынская мектебі",
-      "en": "Жасбуынская Secondary School",
+      "kk": "Жасбуын мектебі",
+      "en": "Жасбуын Secondary School",
       "location": {
         "kk": "Амангелді ауданы",
         "en": "Amangeldy District"
@@ -200,7 +200,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Әбдуахит Әділхан Әбдіғалымұлы",
+        "kk": "Директоры: Әбдуахит Әділхан Әбдіғалымұлы",
         "en": "Director: Әбдуахит Әділхан Әбдіғалымұлы"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -208,8 +208,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-amangeldy-2",
       "districtKey": "Амангельдинский",
-      "kk": "Амантогайская мектебі",
-      "en": "Амантогайская Secondary School",
+      "kk": "Амантогай мектебі",
+      "en": "Амантогай Secondary School",
       "location": {
         "kk": "Амангелді ауданы",
         "en": "Amangeldy District"
@@ -219,7 +219,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Аубакиров Бакытжан Габдылуахитович",
+        "kk": "Директоры: Аубакиров Бакытжан Габдылуахитовұлы",
         "en": "Director: Аубакиров Бакытжан Габдылуахитович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -227,8 +227,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-amangeldy-3",
       "districtKey": "Амангельдинский",
-      "kk": "Кумкешуская мектебі",
-      "en": "Кумкешуская Secondary School",
+      "kk": "Кумкешу мектебі",
+      "en": "Кумкешу Secondary School",
       "location": {
         "kk": "Амангелді ауданы",
         "en": "Amangeldy District"
@@ -238,7 +238,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Клышбаева Арайлым Кумисбаевна",
+        "kk": "Директоры: Клышбаева Арайлым Кумисбақызы",
         "en": "Director: Клышбаева Арайлым Кумисбаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -246,8 +246,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-auliekol-1",
       "districtKey": "Аулиекольксий",
-      "kk": "Сулукольская мектебі им. Ш. Шаяхметова",
-      "en": "Сулукольская Secondary School им. Ш. Шаяхметова",
+      "kk": "Сулуколь мектебі Ш. Шаяхметова мектебі",
+      "en": "Сулуколь Secondary School Ш. Шаяхметова Secondary School",
       "location": {
         "kk": "Әулиекөл ауданы",
         "en": "Auliekol District"
@@ -257,7 +257,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Абденова Гульжан Жумановна",
+        "kk": "Директоры: Абденова Гульжан Жуманқызы",
         "en": "Director: Абденова Гульжан Жумановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -265,8 +265,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-auliekol-2",
       "districtKey": "Аулиекольксий",
-      "kk": "Коктальская мектебі",
-      "en": "Коктальская Secondary School",
+      "kk": "Кокталь мектебі",
+      "en": "Кокталь Secondary School",
       "location": {
         "kk": "Әулиекөл ауданы",
         "en": "Auliekol District"
@@ -276,7 +276,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ислямова Нургуль Мешитбаевна",
+        "kk": "Директоры: Ислямова Нургуль Мешитбақызы",
         "en": "Director: Ислямова Нургуль Мешитбаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -284,8 +284,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-auliekol-3",
       "districtKey": "Аулиекольксий",
-      "kk": "Тимофеевская мектебі",
-      "en": "Тимофеевская Secondary School",
+      "kk": "Тимофеев мектебі",
+      "en": "Тимофеев Secondary School",
       "location": {
         "kk": "Әулиекөл ауданы",
         "en": "Auliekol District"
@@ -295,7 +295,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Капишева Сауле Айтбаевна",
+        "kk": "Директоры: Капишева Сауле Айтбақызы",
         "en": "Director: Капишева Сауле Айтбаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -303,8 +303,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-denisov-1",
       "districtKey": "Денисовский",
-      "kk": "Аятская мектебі академика Т.Б. Даркамбаева атындағы мектебі",
-      "en": "Аятская Secondary School академика Т.Б. Даркамбаева Secondary School",
+      "kk": "Аят мектебі академика Т.Б. Даркамбаева атындағы мектебі",
+      "en": "Аят Secondary School академика Т.Б. Даркамбаева Secondary School",
       "location": {
         "kk": "Денисов ауданы",
         "en": "Denisov District"
@@ -314,7 +314,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Утарбаева Сауле Закарияевна",
+        "kk": "Директоры: Утарбаева Сауле Закарияқызы",
         "en": "Director: Утарбаева Сауле Закарияевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -322,8 +322,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-denisov-2",
       "districtKey": "Денисовский",
-      "kk": "Свердловская обшеобразовательная мектебі",
-      "en": "Свердловская обшеобразовательная School",
+      "kk": "Свердлов мектебі",
+      "en": "Свердлов School Secondary School",
       "location": {
         "kk": "Денисов ауданы",
         "en": "Denisov District"
@@ -333,7 +333,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Аденова Анара Сагидокасовна",
+        "kk": "Директоры: Аденова Анара Сагидокасқызы",
         "en": "Director: Аденова Анара Сагидокасовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -341,8 +341,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-denisov-3",
       "districtKey": "Денисовский",
-      "kk": "Приреченская мектебі",
-      "en": "Приреченская Secondary School",
+      "kk": "Приречен мектебі",
+      "en": "Приречен Secondary School",
       "location": {
         "kk": "Денисов ауданы",
         "en": "Denisov District"
@@ -352,7 +352,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Дворянчиков Дмитрий Олегович",
+        "kk": "Директоры: Дворянчиков Дмитрий Олеговұлы",
         "en": "Director: Дворянчиков Дмитрий Олегович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -360,8 +360,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-zhangeldy-1",
       "districtKey": "Жангелдинский",
-      "kk": "Каратубекская мектебі",
-      "en": "Каратубекская Secondary School",
+      "kk": "Каратубек мектебі",
+      "en": "Каратубек Secondary School",
       "location": {
         "kk": "Жангелдин ауданы",
         "en": "Zhangeldy District"
@@ -371,7 +371,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кенжегалиев Данияр Орынбасарович",
+        "kk": "Директоры: Кенжегалиев Данияр Орынбасаровұлы",
         "en": "Director: Кенжегалиев Данияр Орынбасарович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -379,7 +379,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-zhangeldy-2",
       "districtKey": "Жангелдинский",
-      "kk": "М. Дулатова атындағы мектебі",
+      "kk": "ени М. Дулатова атындағы мектебі",
       "en": "М. Дулатова Secondary School",
       "location": {
         "kk": "Жангелдин ауданы",
@@ -390,7 +390,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Фазылова Динара Сабитовна",
+        "kk": "Директоры: Фазылова Динара Сабитқызы",
         "en": "Director: Фазылова Динара Сабитовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -398,7 +398,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-zhangeldy-3",
       "districtKey": "Жангелдинский",
-      "kk": "К, Топаева атындағы мектебі",
+      "kk": "К. Топаева атындағы мектебі",
       "en": "К, Топаева Secondary School",
       "location": {
         "kk": "Жангелдин ауданы",
@@ -409,7 +409,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Жадаев Нуржан Елгонович",
+        "kk": "Директоры: Жадаев Нуржан Елгоновұлы",
         "en": "Director: Жадаев Нуржан Елгонович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -428,7 +428,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Валеева Мадина Болатовна",
+        "kk": "Директоры: Валеева Мадина Болатқызы",
         "en": "Director: Валеева Мадина Болатовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -447,7 +447,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Танжарикова Гульнар Тулегеновна",
+        "kk": "Директоры: Танжарикова Гульнар Тулегенқызы",
         "en": "Director: Танжарикова Гульнар Тулегеновна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -455,8 +455,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-zhitikara-3",
       "districtKey": "Житикаринский",
-      "kk": "Забеловская мектебі",
-      "en": "Забеловская Secondary School",
+      "kk": "Забелов мектебі",
+      "en": "Забелов Secondary School",
       "location": {
         "kk": "Жітікara ауданы",
         "en": "Zhitikara District"
@@ -466,7 +466,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Бисикеев Рамир Жумагулович",
+        "kk": "Директоры: Бисикеев Рамир Жумагуловұлы",
         "en": "Director: Бисикеев Рамир Жумагулович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -474,8 +474,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kamysty-1",
       "districtKey": "Камыстинский",
-      "kk": "Бестюбинская мектебі",
-      "en": "Бестюбинская Secondary School",
+      "kk": "Бестюбин мектебі",
+      "en": "Бестюбин Secondary School",
       "location": {
         "kk": "Камысты ауданы",
         "en": "Kamysty District"
@@ -485,7 +485,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кунтуаров Саги Утешевич",
+        "kk": "Директоры: Кунтуаров Саги Утешевұлы",
         "en": "Director: Кунтуаров Саги Утешевич"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -493,8 +493,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kamysty-2",
       "districtKey": "Камыстинский",
-      "kk": "Камыстинская мектебі№2 мектебі",
-      "en": "Камыстинская Secondary School№2 Secondary School",
+      "kk": "Камыстин мектебі№2 мектебі",
+      "en": "Камыстин Secondary School№2 Secondary School",
       "location": {
         "kk": "Камысты ауданы",
         "en": "Kamysty District"
@@ -504,7 +504,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Абеуов Жанабай Казымбекович",
+        "kk": "Директоры: Абеуов Жанабай Казымбековұлы",
         "en": "Director: Абеуов Жанабай Казымбекович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -512,8 +512,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kamysty-3",
       "districtKey": "Камыстинский",
-      "kk": "Адаевская мектебі",
-      "en": "Адаевская Secondary School",
+      "kk": "Адаев мектебі",
+      "en": "Адаев Secondary School",
       "location": {
         "kk": "Камысты ауданы",
         "en": "Kamysty District"
@@ -523,7 +523,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Степанова Наталья Николаевна",
+        "kk": "Директоры: Степанова Наталья Николақызы",
         "en": "Director: Степанова Наталья Николаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -531,8 +531,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kamysty-4",
       "districtKey": "Камыстинский",
-      "kk": "Карабатырская мектебі",
-      "en": "Карабатырская Secondary School",
+      "kk": "Карабатыр мектебі",
+      "en": "Карабатыр Secondary School",
       "location": {
         "kk": "Камысты ауданы",
         "en": "Kamysty District"
@@ -542,7 +542,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Амангелді Аскар Абатұлы",
+        "kk": "Директоры: Амангелді Аскар Абатұлы",
         "en": "Director: Амангелді Аскар Абатұлы"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -550,8 +550,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kamysty-5",
       "districtKey": "Камыстинский",
-      "kk": "Клочковская мектебі",
-      "en": "Клочковская Secondary School",
+      "kk": "Клочков мектебі",
+      "en": "Клочков Secondary School",
       "location": {
         "kk": "Камысты ауданы",
         "en": "Kamysty District"
@@ -561,7 +561,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Арстамбаев Азамат Бахитович",
+        "kk": "Директоры: Арстамбаев Азамат Бахитовұлы",
         "en": "Director: Арстамбаев Азамат Бахитович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -569,8 +569,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-qarabalyq-1",
       "districtKey": "Карабалыкский",
-      "kk": "Боскольская мектебі",
-      "en": "Боскольская Secondary School",
+      "kk": "Босколь мектебі",
+      "en": "Босколь Secondary School",
       "location": {
         "kk": "Қараbалыq ауданы",
         "en": "Qarabalyq District"
@@ -580,7 +580,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Алфутов Юрий Васильевич",
+        "kk": "Директоры: Алфутов Юрий Васильевұлы",
         "en": "Director: Алфутов Юрий Васильевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -588,8 +588,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-qarabalyq-2",
       "districtKey": "Карабалыкский",
-      "kk": "Михайловская мектебі",
-      "en": "Михайловская Secondary School",
+      "kk": "Михайлов мектебі",
+      "en": "Михайлов Secondary School",
       "location": {
         "kk": "Қараbалыq ауданы",
         "en": "Qarabalyq District"
@@ -599,7 +599,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Тасанова Гульфия Боранбаевна",
+        "kk": "Директоры: Тасанова Гульфия Боранбақызы",
         "en": "Director: Тасанова Гульфия Боранбаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -618,7 +618,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Раева Гаухар Адылкановна",
+        "kk": "Директоры: Раева Гаухар Адылканқызы",
         "en": "Director: Раева Гаухар Адылкановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -626,7 +626,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-qarasu-1",
       "districtKey": "Карасуский",
-      "kk": "Ыбырая Алтынсарина атындағы мектебі",
+      "kk": "ени Ыбырая Алтынсарина атындағы мектебі",
       "en": "Ыбырая Алтынсарина Secondary School",
       "location": {
         "kk": "Қарасу ауданы",
@@ -637,7 +637,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Аргингазина Айгуль Танатовна",
+        "kk": "Директоры: Аргингазина Айгуль Танатқызы",
         "en": "Director: Аргингазина Айгуль Танатовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -645,8 +645,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-qarasu-2",
       "districtKey": "Карасуский",
-      "kk": "Карамырзинская мектебі",
-      "en": "Карамырзинская Secondary School",
+      "kk": "Карамырзин мектебі",
+      "en": "Карамырзин Secondary School",
       "location": {
         "kk": "Қарасу ауданы",
         "en": "Qarasu District"
@@ -656,7 +656,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Тюлегенова Гульшат Тулегеновна",
+        "kk": "Директоры: Тюлегенова Гульшат Тулегенқызы",
         "en": "Director: Тюлегенова Гульшат Тулегеновна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -675,7 +675,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Габдулин Хамит Валеевич",
+        "kk": "Директоры: Габдулин Хамит Валеевұлы",
         "en": "Director: Габдулин Хамит Валеевич"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -683,8 +683,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-1",
       "districtKey": "Костанайский",
-      "kk": "Московская мектебі",
-      "en": "Московская Secondary School",
+      "kk": "Москов мектебі",
+      "en": "Москов Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -694,7 +694,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Сагнаев Амангельды Набиевич",
+        "kk": "Директоры: Сагнаев Амангельды Набиевұлы",
         "en": "Director: Сагнаев Амангельды Набиевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -702,7 +702,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-2",
       "districtKey": "Костанайский",
-      "kk": "К. Каримова атындағы мектебі",
+      "kk": "ени К. Каримова атындағы мектебі",
       "en": "К. Каримова Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
@@ -713,7 +713,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Ибраева Салтанат Кенжехановна",
+        "kk": "Директоры: Ибраева Салтанат Кенжеханқызы",
         "en": "Director: Ибраева Салтанат Кенжехановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -732,7 +732,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Садакбаев Руслан Жусипбекович",
+        "kk": "Директоры: Садакбаев Руслан Жусипбековұлы",
         "en": "Director: Садакбаев Руслан Жусипбекович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -740,8 +740,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-4",
       "districtKey": "Костанайский",
-      "kk": "Абайская основная мектебі",
-      "en": "Абайская основная Secondary School",
+      "kk": "Абай мектебі",
+      "en": "Абай Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -751,7 +751,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Нугыманов Канат Умирзакович",
+        "kk": "Директоры: Нугыманов Канат Умирзаковұлы",
         "en": "Director: Нугыманов Канат Умирзакович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -759,8 +759,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-5",
       "districtKey": "Костанайский",
-      "kk": "Половниковская мектебі",
-      "en": "Половниковская Secondary School",
+      "kk": "Половников мектебі",
+      "en": "Половников Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -770,7 +770,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Абдыгалиева Айгуль Сайрановна",
+        "kk": "Директоры: Абдыгалиева Айгуль Сайранқызы",
         "en": "Director: Абдыгалиева Айгуль Сайрановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -778,8 +778,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-6",
       "districtKey": "Костанайский",
-      "kk": "Надеждинская мектебі",
-      "en": "Надеждинская Secondary School",
+      "kk": "Надеждин мектебі",
+      "en": "Надеждин Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -789,7 +789,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ермагамбетов Амангельды Мырзаканович",
+        "kk": "Директоры: Ермагамбетов Амангельды Мырзакановұлы",
         "en": "Director: Ермагамбетов Амангельды Мырзаканович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -797,8 +797,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mendykara-1",
       "districtKey": "Мендыкаринский",
-      "kk": "Сосновская мектебі",
-      "en": "Сосновская Secondary School",
+      "kk": "Соснов мектебі",
+      "en": "Соснов Secondary School",
       "location": {
         "kk": "Меңдіқara ауданы",
         "en": "Mendykara District"
@@ -808,16 +808,16 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: и.о. директора Федорова Ольга Александровна",
-        "en": "Director: и.о. директора Федорова Ольга Александровна"
+        "kk": "Директоры: а.о. директора Федорова Ольга Александрқызы",
+        "en": "Director: Acting директора Федорова Ольга Александровна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-mendykara-2",
       "districtKey": "Мендыкаринский",
-      "kk": "Джангильдинская мектебі",
-      "en": "Джангильдинская Secondary School",
+      "kk": "Джангильдин мектебі",
+      "en": "Джангильдин Secondary School",
       "location": {
         "kk": "Меңдіқara ауданы",
         "en": "Mendykara District"
@@ -827,7 +827,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Крупко Валентина Николаевна",
+        "kk": "Директоры: Крупко Валентина Николақызы",
         "en": "Director: Крупко Валентина Николаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -835,8 +835,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mendykara-3",
       "districtKey": "Мендыкаринский",
-      "kk": "Буденновская мектебі",
-      "en": "Буденновская Secondary School",
+      "kk": "Буденнов мектебі",
+      "en": "Буденнов Secondary School",
       "location": {
         "kk": "Меңдіқara ауданы",
         "en": "Mendykara District"
@@ -846,7 +846,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Тобылбаев Дархан Мажитович",
+        "kk": "Директоры: Тобылбаев Дархан Мажитовұлы",
         "en": "Director: Тобылбаев Дархан Мажитович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -854,8 +854,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-nauryzym-1",
       "districtKey": "Наурызымский",
-      "kk": "Дамдинская мектебі",
-      "en": "Дамдинская Secondary School",
+      "kk": "Дамдин мектебі",
+      "en": "Дамдин Secondary School",
       "location": {
         "kk": "Наурызым ауданы",
         "en": "Nauryzym District"
@@ -865,7 +865,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Кузембаев Муратбек Баяханович",
+        "kk": "Директоры: Кузембаев Муратбек Баяхановұлы",
         "en": "Director: Кузембаев Муратбек Баяханович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -873,8 +873,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-nauryzym-2",
       "districtKey": "Наурызымский",
-      "kk": "Улендинская основная мектебі",
-      "en": "Улендинская основная Secondary School",
+      "kk": "Улендин мектебі",
+      "en": "Улендин Secondary School",
       "location": {
         "kk": "Наурызым ауданы",
         "en": "Nauryzym District"
@@ -884,7 +884,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Исмагулов Ерболат Кереевич",
+        "kk": "Директоры: Исмагулов Ерболат Кереевұлы",
         "en": "Director: Исмагулов Ерболат Кереевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -892,8 +892,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-nauryzym-3",
       "districtKey": "Наурызымский",
-      "kk": "Мерекенская основная мектебі",
-      "en": "Мерекенская основная Secondary School",
+      "kk": "Мерекен мектебі",
+      "en": "Мерекен Secondary School",
       "location": {
         "kk": "Наурызым ауданы",
         "en": "Nauryzym District"
@@ -903,7 +903,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Сағымбай Нұрлан Еркешұлы",
+        "kk": "Директоры: Сағымбай Нұрлан Еркешұлы",
         "en": "Director: Сағымбай Нұрлан Еркешұлы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -922,7 +922,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Юнусова Анастасия Владиславовна",
+        "kk": "Директоры: Юнусова Анастасия Владиславқызы",
         "en": "Director: Юнусова Анастасия Владиславовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -930,8 +930,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mailin-2",
       "districtKey": "Б. Майлина",
-      "kk": "Красносельская мектебі",
-      "en": "Красносельская Secondary School",
+      "kk": "Красносель мектебі",
+      "en": "Красносель Secondary School",
       "location": {
         "kk": "Б. Майлин ауданы",
         "en": "B. Mailin District"
@@ -941,7 +941,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Аксененко Вадим Юрьевич",
+        "kk": "Директоры: Аксененко Вадим Юрьевұлы",
         "en": "Director: Аксененко Вадим Юрьевич"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -949,8 +949,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mailin-3",
       "districtKey": "Б. Майлина",
-      "kk": "Асенкритовская мектебі",
-      "en": "Асенкритовская Secondary School",
+      "kk": "Асенкритов мектебі",
+      "en": "Асенкритов Secondary School",
       "location": {
         "kk": "Б. Майлин ауданы",
         "en": "B. Mailin District"
@@ -960,7 +960,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Баяков Марат Алтынбекович",
+        "kk": "Директоры: Баяков Марат Алтынбековұлы",
         "en": "Director: Баяков Марат Алтынбекович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -968,8 +968,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mailin-4",
       "districtKey": "Б. Майлина",
-      "kk": "Тобольская мектебі отдела #2 образования района Беимбета Майлина",
-      "en": "Тобольская Secondary School отдела #2 образования района Беимбета Майлина",
+      "kk": "Тоболь мектебі",
+      "en": "Тоболь Secondary School",
       "location": {
         "kk": "Б. Майлин ауданы",
         "en": "B. Mailin District"
@@ -979,7 +979,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Алиева Гульнар Расуловна",
+        "kk": "Директоры: Алиева Гульнар Расулқызы",
         "en": "Director: Алиева Гульнар Расуловна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -987,7 +987,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mailin-5",
       "districtKey": "Б. Майлина",
-      "kk": "Сапара Ергалиева атындағы мектебі",
+      "kk": "ени Сапара Ергалиева атындағы мектебі",
       "en": "Сапара Ергалиева Secondary School",
       "location": {
         "kk": "Б. Майлин ауданы",
@@ -998,7 +998,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Коскадамова Тамаша Шамелевна",
+        "kk": "Директоры: Коскадамова Тамаша Шамелқызы",
         "en": "Director: Коскадамова Тамаша Шамелевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1006,8 +1006,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-sarykol-1",
       "districtKey": "Сарыкольский",
-      "kk": "Краснодонская мектебі",
-      "en": "Краснодонская Secondary School",
+      "kk": "Краснодон мектебі",
+      "en": "Краснодон Secondary School",
       "location": {
         "kk": "Сariesköl ауданы",
         "en": "Sarykol District"
@@ -1017,7 +1017,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Ларёва Лида Георгиевна",
+        "kk": "Директоры: Ларёва Лида Георгиқызы",
         "en": "Director: Ларёва Лида Георгиевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1025,8 +1025,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-sarykol-2",
       "districtKey": "Сарыкольский",
-      "kk": "Барвиновская мектебі",
-      "en": "Барвиновская Secondary School",
+      "kk": "Барвинов мектебі",
+      "en": "Барвинов Secondary School",
       "location": {
         "kk": "Сariesköl ауданы",
         "en": "Sarykol District"
@@ -1036,7 +1036,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Кусаинов Толебай Жуматович",
+        "kk": "Директоры: Кусаинов Толебай Жуматовұлы",
         "en": "Director: Кусаинов Толебай Жуматович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1044,8 +1044,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-sarykol-3",
       "districtKey": "Сарыкольский",
-      "kk": "Крыловская мектебі",
-      "en": "Крыловская Secondary School",
+      "kk": "Крылов мектебі",
+      "en": "Крылов Secondary School",
       "location": {
         "kk": "Сariesköl ауданы",
         "en": "Sarykol District"
@@ -1055,7 +1055,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Позднякова Нина Алексеевна",
+        "kk": "Директоры: Позднякова Нина Алексеқызы",
         "en": "Director: Позднякова Нина Алексеевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1063,8 +1063,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-uzunkol-1",
       "districtKey": "Узункольский",
-      "kk": "Ершовская мектебі",
-      "en": "Ершовская Secondary School",
+      "kk": "Ершов мектебі",
+      "en": "Ершов Secondary School",
       "location": {
         "kk": "Ұзынköл ауданы",
         "en": "Uzunkol District"
@@ -1074,7 +1074,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Есимбекова Назгуль Каирбековна",
+        "kk": "Директоры: Есимбекова Назгуль Каирбекқызы",
         "en": "Director: Есимбекова Назгуль Каирбековна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1082,8 +1082,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-uzunkol-2",
       "districtKey": "Узункольский",
-      "kk": "Пресногорьковская мектебі",
-      "en": "Пресногорьковская Secondary School",
+      "kk": "Пресногорьков мектебі",
+      "en": "Пресногорьков Secondary School",
       "location": {
         "kk": "Ұзынköл ауданы",
         "en": "Uzunkol District"
@@ -1093,7 +1093,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Байтемирова Клара Низамуттеновна",
+        "kk": "Директоры: Байтемирова Клара Низамуттенқызы",
         "en": "Director: Байтемирова Клара Низамуттеновна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1101,8 +1101,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-uzunkol-3",
       "districtKey": "Узункольский",
-      "kk": "Суворовская мектебі",
-      "en": "Суворовская Secondary School",
+      "kk": "Суворов мектебі",
+      "en": "Суворов Secondary School",
       "location": {
         "kk": "Ұзынköл ауданы",
         "en": "Uzunkol District"
@@ -1112,7 +1112,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Шайкин Тулеген Оразаевич",
+        "kk": "Директоры: Шайкин Тулеген Оразаевұлы",
         "en": "Director: Шайкин Тулеген Оразаевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1120,8 +1120,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-fedorov-1",
       "districtKey": "Федоровский",
-      "kk": "Успеновская мектебі",
-      "en": "Успеновская Secondary School",
+      "kk": "Успенов мектебі",
+      "en": "Успенов Secondary School",
       "location": {
         "kk": "Федорov ауданы",
         "en": "Fedorov District"
@@ -1131,7 +1131,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Жарыс Майрагуль",
+        "kk": "Директоры: Жарыс Майрагуль",
         "en": "Director: Жарыс Майрагуль"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1139,8 +1139,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-fedorov-2",
       "districtKey": "Федоровский",
-      "kk": "Кенаральская мектебі",
-      "en": "Кенаральская Secondary School",
+      "kk": "Кенараль мектебі",
+      "en": "Кенараль Secondary School",
       "location": {
         "kk": "Федорov ауданы",
         "en": "Fedorov District"
@@ -1150,7 +1150,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Олейник Светлана Михайловна",
+        "kk": "Директоры: Олейник Светлана Михайлқызы",
         "en": "Director: Олейник Светлана Михайловна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1158,8 +1158,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-fedorov-3",
       "districtKey": "Федоровский",
-      "kk": "Ленинская мектебі",
-      "en": "Ленинская Secondary School",
+      "kk": "Ленин мектебі",
+      "en": "Ленин Secondary School",
       "location": {
         "kk": "Федорov ауданы",
         "en": "Fedorov District"
@@ -1169,7 +1169,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Айжан Сейдахметова",
+        "kk": "Директоры: Айжан Сейдахметова",
         "en": "Director: Айжан Сейдахметова"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1188,7 +1188,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Куанышкалиев Дидар Галиаскарович",
+        "kk": "Директоры: Куанышкалиев Дидар Галиаскаровұлы",
         "en": "Director: Куанышкалиев Дидар Галиаскарович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1196,8 +1196,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-rudny-1",
       "districtKey": "г. Рудный",
-      "kk": "Перцевская основная мектебі",
-      "en": "Перцевская основная Secondary School",
+      "kk": "Перцев мектебі",
+      "en": "Перцев Secondary School",
       "location": {
         "kk": "Рудный қ.",
         "en": "Rudny city"
@@ -1207,7 +1207,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Шмидт Ирина Викоровна",
+        "kk": "Директоры: Шмидт Ирина Викорқызы",
         "en": "Director: Шмидт Ирина Викоровна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1215,7 +1215,7 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-1",
       "districtKey": "г. Аркалык",
-      "kk": "А.Макаренко атындағы мектебі",
+      "kk": "ени А.Макаренко атындағы мектебі",
       "en": "А.Макаренко Secondary School",
       "location": {
         "kk": "Арқалық қ.",
@@ -1226,7 +1226,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Муханбетжанова Гульбара Рамазановна",
+        "kk": "Директоры: Муханбетжанова Гульбара Рамазанқызы",
         "en": "Director: Муханбетжанова Гульбара Рамазановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1234,8 +1234,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-2",
       "districtKey": "г. Аркалык",
-      "kk": "Ангарская основная мектебі",
-      "en": "Ангарская основная Secondary School",
+      "kk": "Ангар мектебі",
+      "en": "Ангар Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1245,7 +1245,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Досмағанбетов Гайдар Кайсарович",
+        "kk": "Директоры: Досмағанбетов Гайдар Кайсаровұлы",
         "en": "Director: Досмағанбетов Гайдар Кайсарович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1253,8 +1253,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-3",
       "districtKey": "г. Аркалык",
-      "kk": "Основная мектебі Т. Аубакирова атындағы мектебі",
-      "en": "Основная Secondary School Т. Аубакирова Basic Secondary School",
+      "kk": "мектебі Т. Аубакирова атындағы мектебі",
+      "en": "Secondary School Т. Аубакирова Basic Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1264,7 +1264,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Курмашева Аякоз Абилкасимовна",
+        "kk": "Директоры: Курмашева Аякоз Абилкасимқызы",
         "en": "Director: Курмашева Аякоз Абилкасимовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1272,8 +1272,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-4",
       "districtKey": "г. Аркалык",
-      "kk": "№3 им. Б.Майлина мектебі",
-      "en": "№3 им. Б.Майлина Secondary School",
+      "kk": "№3 Б.Майлина мектебі",
+      "en": "№3 Б.Майлина Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1283,7 +1283,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Ахатов Нурдаулет Ахатулы",
+        "kk": "Директоры: Ахатов Нурдаулет Ахатулы",
         "en": "Director: Ахатов Нурдаулет Ахатулы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1291,8 +1291,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-5",
       "districtKey": "г. Аркалык",
-      "kk": "Караторгайская основная мектебі",
-      "en": "Караторгайская основная Secondary School",
+      "kk": "Караторгай мектебі",
+      "en": "Караторгай Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1302,7 +1302,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Кокабаев Канат Басжанович",
+        "kk": "Директоры: Кокабаев Канат Басжановұлы",
         "en": "Director: Кокабаев Канат Басжанович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1310,8 +1310,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-6",
       "districtKey": "г. Аркалык",
-      "kk": "Каиндинская основная мектебі",
-      "en": "Каиндинская основная Secondary School",
+      "kk": "Каиндин мектебі",
+      "en": "Каиндин Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1321,7 +1321,7 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Айтбаев Талгат Абатович",
+        "kk": "Директоры: Айтбаев Талгат Абатовұлы",
         "en": "Director: Айтбаев Талгат Абатович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"

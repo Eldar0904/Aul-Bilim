@@ -7,6 +7,8 @@ from school_data_utils import (
     BADGES,
     EXCEL,
     IMAGES,
+    build_school_desc,
+    clean_director,
     short_name,
     short_name_en,
     write_region_js,
@@ -96,18 +98,7 @@ def main() -> None:
                 "en": short_name_en(full),
                 "location": {"kk": meta["kk"], "en": meta["en"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
-                "desc": {
-                    "kk": (
-                        f"Мекенжай: {address}"
-                        if address
-                        else "Aul Bilim жобасы аясындағы мектеп."
-                    ),
-                    "en": (
-                        f"Address: {address}"
-                        if address
-                        else "School supported under the Aul Bilim programme."
-                    ),
-                },
+                "desc": build_school_desc(address=address),
                 "image": IMAGES[len(schools) % len(IMAGES)],
             }
         )

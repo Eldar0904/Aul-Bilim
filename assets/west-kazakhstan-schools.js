@@ -101,7 +101,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Турсыналиева Айнур Галимовна",
+        "kk": "Директоры: Турсыналиева Айнур Галимқызы",
         "en": "Director: Турсыналиева Айнур Галимовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -120,7 +120,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Куанышева Фазиля Куанышкызы",
+        "kk": "Директоры: Куанышева Фазиля Куанышкызы",
         "en": "Director: Куанышева Фазиля Куанышкызы"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -128,8 +128,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-akzhaik-3",
       "districtKey": "Акжаикский район",
-      "kk": "Мойылды",
-      "en": "Мойылды",
+      "kk": "Мойылды мектебі",
+      "en": "Мойылды Secondary School",
       "location": {
         "kk": "Ақжайық ауданы",
         "en": "Akzhaik District"
@@ -139,7 +139,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Кенжегалиева Агила Ижановна",
+        "kk": "Директоры: Кенжегалиева Агила Ижанқызы",
         "en": "Director: Кенжегалиева Агила Ижановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -147,8 +147,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-1",
       "districtKey": "Район Байтерек",
-      "kk": "им.Ш.Уалиханова",
-      "en": "Сош им.Ш.Уалиханова",
+      "kk": "Ш.Уалиханова атындағы мектебі",
+      "en": "Ш.Уалиханова Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -158,7 +158,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кабанкина Вера Петровна",
+        "kk": "Директоры: Кабанкина Вера Петрқызы",
         "en": "Director: Кабанкина Вера Петровна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -166,8 +166,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-2",
       "districtKey": "Район Байтерек",
-      "kk": "им.И.Есенберлина",
-      "en": "Сош им.И.Есенберлина",
+      "kk": "И.Есенберлина атындағы мектебі",
+      "en": "И.Есенберлина Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -177,7 +177,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Нурмухамбетова Жанаргуль Шамратовна",
+        "kk": "Директоры: Нурмухамбетова Жанаргуль Шамратқызы",
         "en": "Director: Нурмухамбетова Жанаргуль Шамратовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -185,8 +185,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-3",
       "districtKey": "Район Байтерек",
-      "kk": "комплекс",
-      "en": "комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -196,7 +196,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Сайбалиева Айзада Саламатовна",
+        "kk": "Директоры: Сайбалиева Айзада Саламатқызы",
         "en": "Director: Сайбалиева Айзада Саламатовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -204,8 +204,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-bokeyordy-1",
       "districtKey": "Бокейординский район",
-      "kk": "им. К.Сагырбаева",
-      "en": "Сош им. К.Сагырбаева",
+      "kk": "К.Сагырбаева атындағы мектебі",
+      "en": "К.Сагырбаева Secondary School",
       "location": {
         "kk": "Бокейорды ауданы",
         "en": "Bokeyordy District"
@@ -215,7 +215,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Султаниярова Зинаида Самиголлаевна",
+        "kk": "Директоры: Султаниярова Зинаида Самиголлақызы",
         "en": "Director: Султаниярова Зинаида Самиголлаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -223,8 +223,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-bokeyordy-2",
       "districtKey": "Бокейординский район",
-      "kk": "им.Т.Масина",
-      "en": "Сош им.Т.Масина",
+      "kk": "Т.Масина атындағы мектебі",
+      "en": "Т.Масина Secondary School",
       "location": {
         "kk": "Бокейорды ауданы",
         "en": "Bokeyordy District"
@@ -234,7 +234,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: ЕСЕНБАЕВА ЗИЯДА ТОЛЕМИСОВНА",
+        "kk": "Директоры: ЕСЕНБАЕВА ЗИЯДА ТОЛЕМИСқызы",
         "en": "Director: ЕСЕНБАЕВА ЗИЯДА ТОЛЕМИСОВНА"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -242,8 +242,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-bokeyordy-3",
       "districtKey": "Бокейординский район",
-      "kk": "им.А.Кусаинова",
-      "en": "Сош им.А.Кусаинова",
+      "kk": "А.Кусаинова атындағы мектебі",
+      "en": "А.Кусаинова Secondary School",
       "location": {
         "kk": "Бокейорды ауданы",
         "en": "Bokeyordy District"
@@ -253,7 +253,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: АМИРГАЛИЕВА НУРСУЛУ САБИТОВНА",
+        "kk": "Директоры: АМИРГАЛИЕВА НУРСУЛУ САБИТқызы",
         "en": "Director: АМИРГАЛИЕВА НУРСУЛУ САБИТОВНА"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -261,8 +261,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-1",
       "districtKey": "Бурлинский район",
-      "kk": "Облавский комплекс",
-      "en": "Облавский комплекс",
+      "kk": "Облав мектебі",
+      "en": "Облав Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -272,16 +272,16 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: ИО Мангеева Магрипа Кайргалиевна +",
-        "en": "Director: ИО Мангеева Магрипа Кайргалиевна +"
+        "kk": "Директоры: а.о. Мангеева Магрипа Кайргалиқызы",
+        "en": "Director: Acting Мангеева Магрипа Кайргалиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "bko-burlin-2",
       "districtKey": "Бурлинский район",
-      "kk": "Успеновский комплекс",
-      "en": "Успеновский комплекс",
+      "kk": "Успенов мектебі",
+      "en": "Успенов Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -291,7 +291,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Зайнуллин Ғарифолла Сидешович",
+        "kk": "Директоры: Зайнуллин Ғарифолла Сидешовұлы",
         "en": "Director: Зайнуллин Ғарифолла Сидешович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -299,8 +299,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-3",
       "districtKey": "Бурлинский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -310,7 +310,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Таменова Гулбакыт Маратовна",
+        "kk": "Директоры: Таменова Гулбакыт Маратқызы",
         "en": "Director: Таменова Гулбакыт Маратовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -318,8 +318,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhangala-1",
       "districtKey": "Жангалинский район",
-      "kk": "им.А.Жангелдина",
-      "en": "Сош им.А.Жангелдина",
+      "kk": "А.Жангелдина атындағы мектебі",
+      "en": "А.Жангелдина Secondary School",
       "location": {
         "kk": "Жаңғала ауданы",
         "en": "Zhangala District"
@@ -329,7 +329,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Әбіл Арайлым Әдиетқызы",
+        "kk": "Директоры: Әбіл Арайлым Әдиетқызы",
         "en": "Director: Әбіл Арайлым Әдиетқызы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -337,8 +337,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhangala-2",
       "districtKey": "Жангалинский район",
-      "kk": "им.Абая",
-      "en": "Сош им.Абая",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
       "location": {
         "kk": "Жаңғала ауданы",
         "en": "Zhangala District"
@@ -348,7 +348,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Жумагулова Жазира Молдагалиевна",
+        "kk": "Директоры: Жумагулова Жазира Молдагалиқызы",
         "en": "Director: Жумагулова Жазира Молдагалиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -356,8 +356,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhangala-3",
       "districtKey": "Жангалинский район",
-      "kk": "Айдарханская Сош",
-      "en": "Айдарханская Сош",
+      "kk": "Айдархан мектебі",
+      "en": "Айдархан Secondary School",
       "location": {
         "kk": "Жаңғала ауданы",
         "en": "Zhangala District"
@@ -367,7 +367,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Қабиева Сымбат Мұратқызы",
+        "kk": "Директоры: Қабиева Сымбат Мұратқызы",
         "en": "Director: Қабиева Сымбат Мұратқызы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -375,8 +375,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhanibek-1",
       "districtKey": "Жанибекский район",
-      "kk": "им.О.Сахипова",
-      "en": "Сош им.О.Сахипова",
+      "kk": "О.Сахипова атындағы мектебі",
+      "en": "О.Сахипова Secondary School",
       "location": {
         "kk": "Жаныбек ауданы",
         "en": "Zhanibek District"
@@ -386,7 +386,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Мендигалиев Жандос Жуматаевич сот",
+        "kk": "Директоры: Мендигалиев Жандос Жуматаевич сот",
         "en": "Director: Мендигалиев Жандос Жуматаевич сот"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -394,8 +394,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhanibek-2",
       "districtKey": "Жанибекский район",
-      "kk": "им.Х.Халиуллина",
-      "en": "Сош им.Х.Халиуллина",
+      "kk": "Х.Халиуллина атындағы мектебі",
+      "en": "Х.Халиуллина Secondary School",
       "location": {
         "kk": "Жаныбек ауданы",
         "en": "Zhanibek District"
@@ -405,7 +405,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Алипкалиев Елдос Саматович",
+        "kk": "Директоры: Алипкалиев Елдос Саматовұлы",
         "en": "Director: Алипкалиев Елдос Саматович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -413,8 +413,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhanibek-3",
       "districtKey": "Жанибекский район",
-      "kk": "Узынкольская Сош",
-      "en": "Узынкольская Сош",
+      "kk": "Узынколь мектебі",
+      "en": "Узынколь Secondary School",
       "location": {
         "kk": "Жаныбек ауданы",
         "en": "Zhanibek District"
@@ -424,7 +424,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Дишенова Лунаргуль Наурзбайовна",
+        "kk": "Директоры: Дишенова Лунаргуль Наурзбайқызы",
         "en": "Director: Дишенова Лунаргуль Наурзбайовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -432,8 +432,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-kaztalov-1",
       "districtKey": "Казталовский район",
-      "kk": "Теренкольская Сош",
-      "en": "Теренкольская Сош",
+      "kk": "Теренколь мектебі",
+      "en": "Теренколь Secondary School",
       "location": {
         "kk": "Қазталов ауданы",
         "en": "Kaztalov District"
@@ -443,16 +443,16 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Бектенова Лаззат Базарбаевна 87774769897 мектеп директоры",
-        "en": "Director: Бектенова Лаззат Базарбаевна 87774769897 мектеп директоры"
+        "kk": "Директоры: Бектенова Лаззат Базарбаевна мектеп директоры",
+        "en": "Director: Бектенова Лаззат Базарбаевна мектеп директоры"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "bko-kaztalov-2",
       "districtKey": "Казталовский район",
-      "kk": "Жанажол",
-      "en": "Сош Жанажол",
+      "kk": "Жанажол мектебі",
+      "en": "Жанажол Secondary School",
       "location": {
         "kk": "Қазталов ауданы",
         "en": "Kaztalov District"
@@ -462,7 +462,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Койшина Адеми Манарбековна",
+        "kk": "Директоры: Койшина Адеми Манарбекқызы",
         "en": "Director: Койшина Адеми Манарбековна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -470,8 +470,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-kaztalov-3",
       "districtKey": "Казталовский район",
-      "kk": "ООШ им.М.Жунисова",
-      "en": "ООШ им.М.Жунисова",
+      "kk": "ООШ М.Жунисова мектебі",
+      "en": "ООШ М.Жунисова Secondary School",
       "location": {
         "kk": "Қазталов ауданы",
         "en": "Kaztalov District"
@@ -481,7 +481,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Муштанов Кайырлы Ержанович",
+        "kk": "Директоры: Муштанов Кайырлы Ержановұлы",
         "en": "Director: Муштанов Кайырлы Ержанович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -489,8 +489,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-1",
       "districtKey": "Каратобинский район",
-      "kk": "мектебі-ясли-детский сад",
-      "en": "School-ясли-детский сад",
+      "kk": "мектебі",
+      "en": "School Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
         "en": "Karatobe District"
@@ -500,7 +500,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Бисекенова Светлана Сагидоллиевна",
+        "kk": "Директоры: Бисекенова Светлана Сагидоллиқызы",
         "en": "Director: Бисекенова Светлана Сагидоллиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -508,8 +508,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-2",
       "districtKey": "Каратобинский район",
-      "kk": "Основная мектебі Үшағаш",
-      "en": "Основная Secondary School Үшағаш",
+      "kk": "мектебі Үшағаш мектебі",
+      "en": "Secondary School Үшағаш Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
         "en": "Karatobe District"
@@ -519,7 +519,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Зейнуллин Канат Серикович",
+        "kk": "Директоры: Зейнуллин Канат Сериковұлы",
         "en": "Director: Зейнуллин Канат Серикович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -527,8 +527,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-3",
       "districtKey": "Каратобинский район",
-      "kk": "Основная мектебі Алакөл",
-      "en": "Основная Secondary School Алакөл",
+      "kk": "мектебі Алакөл мектебі",
+      "en": "Secondary School Алакөл Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
         "en": "Karatobe District"
@@ -538,7 +538,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Тулегенова Тансулу Калиевна",
+        "kk": "Директоры: Тулегенова Тансулу Калиқызы",
         "en": "Director: Тулегенова Тансулу Калиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -546,8 +546,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-syrym-1",
       "districtKey": "Сырымский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -557,7 +557,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Балмаганбетов Гиният Тельманович",
+        "kk": "Директоры: Балмаганбетов Гиният Тельмановұлы",
         "en": "Director: Балмаганбетов Гиният Тельманович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -565,8 +565,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-syrym-2",
       "districtKey": "Сырымский район",
-      "kk": "Комплекс мектебі-ясли-детский сад",
-      "en": "Комплекс School-ясли-детский сад",
+      "kk": "мектебі",
+      "en": "School Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -576,7 +576,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Тажгалиев Аскербек Сериккалиевич",
+        "kk": "Директоры: Тажгалиев Аскербек Сериккалиевұлы",
         "en": "Director: Тажгалиев Аскербек Сериккалиевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -584,7 +584,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-syrym-3",
       "districtKey": "Сырымский район",
-      "kk": "мектебі Жырақұдық",
+      "kk": "Жырақұдық мектебі",
       "en": "Жырақұдық Secondary School",
       "location": {
         "kk": "Сырым ауданы",
@@ -595,7 +595,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Аткаев Расул Бауыржанович",
+        "kk": "Директоры: Аткаев Расул Бауыржановұлы",
         "en": "Director: Аткаев Расул Бауыржанович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -603,8 +603,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-taskala-1",
       "districtKey": "Таскалинский район",
-      "kk": "мектебі-ясли-сад",
-      "en": "School-ясли-сад",
+      "kk": "мектебі-ясли-сад мектебі",
+      "en": "School-ясли-сад Secondary School",
       "location": {
         "kk": "Тасқала ауданы",
         "en": "Taskala District"
@@ -614,7 +614,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Батыргалиев Мейрим Абугалиевич",
+        "kk": "Директоры: Батыргалиев Мейрим Абугалиевұлы",
         "en": "Director: Батыргалиев Мейрим Абугалиевич"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -622,8 +622,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-taskala-2",
       "districtKey": "Таскалинский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Тасқала ауданы",
         "en": "Taskala District"
@@ -633,7 +633,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Мергенева Самал Жуламановна",
+        "kk": "Директоры: Мергенева Самал Жуламанқызы",
         "en": "Director: Мергенева Самал Жуламановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -641,7 +641,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-taskala-3",
       "districtKey": "Таскалинский район",
-      "kk": "мектебі Мерей",
+      "kk": "Мерей мектебі",
       "en": "Мерей Secondary School",
       "location": {
         "kk": "Тасқала ауданы",
@@ -652,7 +652,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Директор Жангирова Улбике Изтелоувна",
+        "kk": "Директоры: Директор Жангирова Улбике Изтелоувна",
         "en": "Director: Директор Жангирова Улбике Изтелоувна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -660,8 +660,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-chingirlay-1",
       "districtKey": "Чингирлауский район",
-      "kk": "Основная средняя образовательная мектебі села Ақтау",
-      "en": "Основная средняя образовательная School села Ақтау",
+      "kk": "Ақтау мектебі",
+      "en": "Ақтау Secondary School",
       "location": {
         "kk": "Шыңғірлау ауданы",
         "en": "Chingirlay District"
@@ -671,7 +671,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Буранбаев Азамат Адилбекович",
+        "kk": "Директоры: Буранбаев Азамат Адилбековұлы",
         "en": "Director: Буранбаев Азамат Адилбекович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -679,8 +679,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-chingirlay-2",
       "districtKey": "Чингирлауский район",
-      "kk": "Амангелдинская основная мектебі",
-      "en": "Амангелдинская основная Secondary School",
+      "kk": "Амангелдин мектебі",
+      "en": "Амангелдин Secondary School",
       "location": {
         "kk": "Шыңғірлау ауданы",
         "en": "Chingirlay District"
@@ -690,7 +690,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Саркулов Есен Максотович",
+        "kk": "Директоры: Саркулов Есен Максотовұлы",
         "en": "Director: Саркулов Есен Максотович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -698,8 +698,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-chingirlay-3",
       "districtKey": "Чингирлауский район",
-      "kk": "Основная средняя образовательная мектебі - сад села Ардақ",
-      "en": "Основная средняя образовательная School - сад села Ардақ",
+      "kk": "Ардақ мектебі",
+      "en": "Ардақ Secondary School",
       "location": {
         "kk": "Шыңғірлау ауданы",
         "en": "Chingirlay District"
@@ -709,7 +709,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Кабдыгалиева Лаззат Бауржановна",
+        "kk": "Директоры: Кабдыгалиева Лаззат Бауржанқызы",
         "en": "Director: Кабдыгалиева Лаззат Бауржановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -717,8 +717,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-4",
       "districtKey": "Район Байтерек",
-      "kk": "Кировская основная мектебі",
-      "en": "Кировская основная Secondary School",
+      "kk": "Киров мектебі",
+      "en": "Киров Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -728,7 +728,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Сырымов Аманжол Азаматулы",
+        "kk": "Директоры: Сырымов Аманжол Азаматулы",
         "en": "Director: Сырымов Аманжол Азаматулы"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -736,8 +736,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-5",
       "districtKey": "Район Байтерек",
-      "kk": "Володарская мектебі",
-      "en": "Володарская Secondary School",
+      "kk": "Володар мектебі",
+      "en": "Володар Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -747,7 +747,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Муханбетжанова Нуржамал Николаевна",
+        "kk": "Директоры: Муханбетжанова Нуржамал Николақызы",
         "en": "Director: Муханбетжанова Нуржамал Николаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -755,8 +755,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-6",
       "districtKey": "Район Байтерек",
-      "kk": "Чировская мектебі",
-      "en": "Чировская Basic Secondary School",
+      "kk": "Чиров мектебі",
+      "en": "Чиров Basic Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -766,7 +766,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Усманова Лунара Утегеновна",
+        "kk": "Директоры: Усманова Лунара Утегенқызы",
         "en": "Director: Усманова Лунара Утегеновна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -774,8 +774,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-7",
       "districtKey": "Район Байтерек",
-      "kk": "СОШ им. К.Кайсенова",
-      "en": "СОШ им. К.Кайсенова",
+      "kk": "К.Кайсенова атындағы мектебі",
+      "en": "К.Кайсенова Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -785,16 +785,16 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Жиналиева Гульмира Мендыбаевна тел:",
-        "en": "Director: Жиналиева Гульмира Мендыбаевна тел:"
+        "kk": "Директоры: Жиналиева Гульмира Мендыбақызы",
+        "en": "Director: Жиналиева Гульмира Мендыбаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "bko-baiterek-8",
       "districtKey": "Район Байтерек",
-      "kk": "Чувашинская мектебі",
-      "en": "Чувашинская Secondary School",
+      "kk": "Чувашин мектебі",
+      "en": "Чувашин Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -804,7 +804,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Губашев Алиби Салыкович",
+        "kk": "Директоры: Губашев Алиби Салыковұлы",
         "en": "Director: Губашев Алиби Салыкович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -812,8 +812,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-9",
       "districtKey": "Район Байтерек",
-      "kk": "Макаровская мектебі",
-      "en": "Макаровская Secondary School",
+      "kk": "Макаров мектебі",
+      "en": "Макаров Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -823,7 +823,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Сарсенгалиева Татьяна Нурмангалиевна",
+        "kk": "Директоры: Сарсенгалиева Татьяна Нурмангалиқызы",
         "en": "Director: Сарсенгалиева Татьяна Нурмангалиевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -831,8 +831,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-4",
       "districtKey": "Бурлинский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -842,7 +842,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Шундыбаева Оксана Калаповна",
+        "kk": "Директоры: Шундыбаева Оксана Калапқызы",
         "en": "Director: Шундыбаева Оксана Калаповна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -850,8 +850,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-5",
       "districtKey": "Бурлинский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -861,7 +861,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Исмурзиева Асия Кабдулмажитқызы",
+        "kk": "Директоры: Исмурзиева Асия Кабдулмажитқызы",
         "en": "Director: Исмурзиева Асия Кабдулмажитқызы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -869,7 +869,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-6",
       "districtKey": "Бурлинский район",
-      "kk": "мектебі Кеңтүбек»",
+      "kk": "Кеңтүбек» мектебі",
       "en": "Кеңтүбек» Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
@@ -880,7 +880,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Тастайбекова Гульжиян Лескалиевна",
+        "kk": "Директоры: Тастайбекова Гульжиян Лескалиқызы",
         "en": "Director: Тастайбекова Гульжиян Лескалиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -888,7 +888,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-7",
       "districtKey": "Бурлинский район",
-      "kk": "мектебі Жарсуат",
+      "kk": "Жарсуат мектебі",
       "en": "Жарсуат Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
@@ -899,7 +899,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Садыков Марат Тулегенович",
+        "kk": "Директоры: Садыков Марат Тулегеновұлы",
         "en": "Director: Садыков Марат Тулегенович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -907,8 +907,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-8",
       "districtKey": "Бурлинский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -918,7 +918,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Курмангалиева Акмарал Канесовна",
+        "kk": "Директоры: Курмангалиева Акмарал Канесқызы",
         "en": "Director: Курмангалиева Акмарал Канесовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -926,8 +926,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-9",
       "districtKey": "Бурлинский район",
-      "kk": "Комплекс",
-      "en": "Комплекс",
+      "kk": " мектебі",
+      "en": " Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -937,7 +937,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Кажиекова Жадыра Кобландиевна",
+        "kk": "Директоры: Кажиекова Жадыра Кобландиқызы",
         "en": "Director: Кажиекова Жадыра Кобландиевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -945,7 +945,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-1",
       "districtKey": "Теректинский район",
-      "kk": "И.Алтынсарина атындағы мектебі",
+      "kk": "ени И.Алтынсарина атындағы мектебі",
       "en": "И.Алтынсарина Secondary School",
       "location": {
         "kk": "Теректі ауданы",
@@ -956,16 +956,16 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Ахметкалиева Айгул Уразаевна +",
-        "en": "Director: Ахметкалиева Айгул Уразаевна +"
+        "kk": "Директоры: Ахметкалиева Айгул Уразақызы",
+        "en": "Director: Ахметкалиева Айгул Уразаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "bko-terekty-2",
       "districtKey": "Теректинский район",
-      "kk": "Основная мектебі Қоғалытүбек",
-      "en": "Основная Secondary School Қоғалытүбек",
+      "kk": "мектебі Қоғалытүбек мектебі",
+      "en": "Secondary School Қоғалытүбек Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -975,7 +975,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Искаков Берик Кадырович",
+        "kk": "Директоры: Искаков Берик Кадыровұлы",
         "en": "Director: Искаков Берик Кадырович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -983,8 +983,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-3",
       "districtKey": "Теректинский район",
-      "kk": "Основная мектебі Восход",
-      "en": "Основная Secondary School Восход",
+      "kk": "мектебі Восход мектебі",
+      "en": "Secondary School Восход Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -994,7 +994,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Бегилова Гулден Махамбетовна",
+        "kk": "Директоры: Бегилова Гулден Махамбетқызы",
         "en": "Director: Бегилова Гулден Махамбетовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1002,8 +1002,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-4",
       "districtKey": "Теректинский район",
-      "kk": "Покатиловская мектебі",
-      "en": "Покатиловская Secondary School",
+      "kk": "Покатилов мектебі",
+      "en": "Покатилов Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1013,7 +1013,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Габдрахимов Медет Бауыржанович",
+        "kk": "Директоры: Габдрахимов Медет Бауыржановұлы",
         "en": "Director: Габдрахимов Медет Бауыржанович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1021,8 +1021,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-5",
       "districtKey": "Теректинский район",
-      "kk": "Чапаевская мектебі",
-      "en": "Чапаевская Secondary School",
+      "kk": "Чапаев мектебі",
+      "en": "Чапаев Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1032,7 +1032,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Абугалиев Мирас Галиаскарович",
+        "kk": "Директоры: Абугалиев Мирас Галиаскаровұлы",
         "en": "Director: Абугалиев Мирас Галиаскарович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1040,8 +1040,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-6",
       "districtKey": "Теректинский район",
-      "kk": "Приреченская мектебі",
-      "en": "Приреченская Secondary School",
+      "kk": "Приречен мектебі",
+      "en": "Приречен Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1051,7 +1051,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Бекмуханов Тулеген Сагидоллинович",
+        "kk": "Директоры: Бекмуханов Тулеген Сагидоллиновұлы",
         "en": "Director: Бекмуханов Тулеген Сагидоллинович"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1059,8 +1059,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-akzhaik-4",
       "districtKey": "Акжаикский район",
-      "kk": "Бударинский комплекс мектебі-ясли-сад",
-      "en": "Бударинский комплекс School-ясли-сад",
+      "kk": "Бударин мектебі-ясли-сад мектебі",
+      "en": "Бударин School-ясли-сад Secondary School",
       "location": {
         "kk": "Ақжайық ауданы",
         "en": "Akzhaik District"
@@ -1070,7 +1070,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Тлегенова Гульжанат Амангельдиевна",
+        "kk": "Директоры: Тлегенова Гульжанат Амангельдиқызы",
         "en": "Director: Тлегенова Гульжанат Амангельдиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1089,7 +1089,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Сабырова С.К",
+        "kk": "Директоры: Сабырова С.К",
         "en": "Director: Сабырова С.К"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1097,8 +1097,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-akzhaik-6",
       "districtKey": "Акжаикский район",
-      "kk": "им. К.Байсыкова мектебі",
-      "en": "им. К.Байсыкова Secondary School",
+      "kk": "К.Байсыкова атындағы мектебі",
+      "en": "К.Байсыкова Secondary School",
       "location": {
         "kk": "Ақжайық ауданы",
         "en": "Akzhaik District"
@@ -1108,7 +1108,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Утепбергенова Нуржамал Утепбергеновна",
+        "kk": "Директоры: Утепбергенова Нуржамал Утепбергенқызы",
         "en": "Director: Утепбергенова Нуржамал Утепбергеновна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1116,8 +1116,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-10",
       "districtKey": "Район Байтерек",
-      "kk": "Мичуринский комплекс",
-      "en": "Мичуринский комплекс",
+      "kk": "Мичурин мектебі",
+      "en": "Мичурин Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -1127,7 +1127,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кенжебаева Алмагуль Алгалиевна",
+        "kk": "Директоры: Кенжебаева Алмагуль Алгалиқызы",
         "en": "Director: Кенжебаева Алмагуль Алгалиевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1135,8 +1135,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-11",
       "districtKey": "Район Байтерек",
-      "kk": "Трекинская мектебі №1",
-      "en": "Трекинская Secondary School №1",
+      "kk": "Трекин мектебі №1 мектебі",
+      "en": "Трекин Secondary School №1 Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -1146,7 +1146,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Мамешева Райса Исанжановна",
+        "kk": "Директоры: Мамешева Райса Исанжанқызы",
         "en": "Director: Мамешева Райса Исанжановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1154,8 +1154,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-12",
       "districtKey": "Район Байтерек",
-      "kk": "Рубежинский комплекс \"мектебі-ясли-детский сад",
-      "en": "Рубежинский комплекс \"School-ясли-детский сад",
+      "kk": "Рубежин мектебі",
+      "en": "Рубежин \"School Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -1165,7 +1165,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Утегенова Айымгул Абзаловна",
+        "kk": "Директоры: Утегенова Айымгул Абзалқызы",
         "en": "Director: Утегенова Айымгул Абзаловна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1173,7 +1173,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-burlin-10",
       "districtKey": "Бурлинский район",
-      "kk": "мектебі №1 Бөрлі",
+      "kk": "№1 Бөрлі мектебі",
       "en": "№1 Бөрлі Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
@@ -1184,7 +1184,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Бергалиева Шнар Маратовна",
+        "kk": "Директоры: Бергалиева Шнар Маратқызы",
         "en": "Director: Бергалиева Шнар Маратовна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1192,7 +1192,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-bokeyordy-4",
       "districtKey": "Бокейординский район",
-      "kk": "мектебі Б.Жаникешева атындағы мектебі",
+      "kk": "ени Б.Жаникешева атындағы мектебі",
       "en": "Б.Жаникешева Secondary School",
       "location": {
         "kk": "Бокейорды ауданы",
@@ -1203,7 +1203,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Құбайтов Ерхан Болатұлы",
+        "kk": "Директоры: Құбайтов Ерхан Болатұлы",
         "en": "Director: Құбайтов Ерхан Болатұлы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1222,7 +1222,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Есенгалиева Бегайым Тулеугалиевна",
+        "kk": "Директоры: Есенгалиева Бегайым Тулеугалиқызы",
         "en": "Director: Есенгалиева Бегайым Тулеугалиевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1230,7 +1230,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhangala-5",
       "districtKey": "Жангалинский район",
-      "kk": "М.Мирманова атындағы мектебі",
+      "kk": "ени М.Мирманова атындағы мектебі",
       "en": "М.Мирманова Secondary School",
       "location": {
         "kk": "Жаңғала ауданы",
@@ -1241,7 +1241,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кубашова Шынар Конарбаевна",
+        "kk": "Директоры: Кубашова Шынар Конарбақызы",
         "en": "Director: Кубашова Шынар Конарбаевна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1249,8 +1249,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhanibek-4",
       "districtKey": "Жанибекский район",
-      "kk": "мектебі-лицей №1",
-      "en": "School-лицей №1",
+      "kk": "мектебі-лицей №1 мектебі",
+      "en": "School-лицей №1 Secondary School",
       "location": {
         "kk": "Жаныбек ауданы",
         "en": "Zhanibek District"
@@ -1260,7 +1260,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Кубаева Гульнар Кабдрешевна",
+        "kk": "Директоры: Кубаева Гульнар Кабдрешқызы",
         "en": "Director: Кубаева Гульнар Кабдрешевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1268,7 +1268,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-kaztalov-4",
       "districtKey": "Казталовский район",
-      "kk": "Г.Молдашева атындағы мектебі",
+      "kk": "ени Г.Молдашева атындағы мектебі",
       "en": "Г.Молдашева Secondary School",
       "location": {
         "kk": "Қазталов ауданы",
@@ -1279,7 +1279,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Жексенова Маншук Избасаровна",
+        "kk": "Директоры: Жексенова Маншук Избасарқызы",
         "en": "Director: Жексенова Маншук Избасаровна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1287,7 +1287,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-kaztalov-5",
       "districtKey": "Казталовский район",
-      "kk": "мектебі Бостандык",
+      "kk": "Бостандык мектебі",
       "en": "Бостандык Secondary School",
       "location": {
         "kk": "Қазталов ауданы",
@@ -1298,7 +1298,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Даулетияров Дархан Каримуллинович",
+        "kk": "Директоры: Даулетияров Дархан Каримуллиновұлы",
         "en": "Director: Даулетияров Дархан Каримуллинович"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1306,7 +1306,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-4",
       "districtKey": "Каратобинский район",
-      "kk": "мектебі Мухита атындағы мектебі",
+      "kk": "ени Мухита атындағы мектебі",
       "en": "Мухита Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
@@ -1317,7 +1317,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Қайырғалиев Мәди Аманжолұлы",
+        "kk": "Директоры: Қайырғалиев Мәди Аманжолұлы",
         "en": "Director: Қайырғалиев Мәди Аманжолұлы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1336,7 +1336,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Нұрымова Ақмарал Ерсайынқызы",
+        "kk": "Директоры: Нұрымова Ақмарал Ерсайынқызы",
         "en": "Director: Нұрымова Ақмарал Ерсайынқызы"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1344,8 +1344,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-syrym-4",
       "districtKey": "Сырымский район",
-      "kk": "Комплекс \"мектебі-ясли-детский сад\" Жанша Досмухамедова атындағы мектебі",
-      "en": "Комплекс \"School-ясли-детский сад\" Жанша Досмухамедова Secondary School",
+      "kk": "мектебі \" Жанша Досмухамедова атындағы мектебі",
+      "en": "School \" Жанша Досмухамедова Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -1355,7 +1355,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кулмуханова Нуржауган Жанатауовна",
+        "kk": "Директоры: Кулмуханова Нуржауган Жанатауқызы",
         "en": "Director: Кулмуханова Нуржауган Жанатауовна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1363,8 +1363,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-7",
       "districtKey": "Теректинский район",
-      "kk": "Акжайык",
-      "en": "СОШ Акжайык",
+      "kk": "Акжайык мектебі",
+      "en": "Акжайык Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1374,7 +1374,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Какижанова Шолпан Бижановна",
+        "kk": "Директоры: Какижанова Шолпан Бижанқызы",
         "en": "Director: Какижанова Шолпан Бижановна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1382,8 +1382,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-8",
       "districtKey": "Теректинский район",
-      "kk": "Хамзы Есенжанова атындағы мектебі",
-      "en": "СОШ Хамзы Есенжанова Secondary School",
+      "kk": "ени Хамзы Есенжанова атындағы мектебі",
+      "en": "Хамзы Есенжанова Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1393,7 +1393,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Директор: Қайырқұл Шынар Самиғоллоқызы",
+        "kk": "Директоры: Қайырқұл Шынар Самиғоллоқызы",
         "en": "Director: Қайырқұл Шынар Самиғоллоқызы"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1412,15 +1412,15 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Султанов Данияр Амангельдиевич директор +",
-        "en": "Director: Султанов Данияр Амангельдиевич директор +"
+        "kk": "Директоры: Султанов Данияр Амангельдиевич директор",
+        "en": "Director: Султанов Данияр Амангельдиевич директор"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "bko-chingirlay-4",
       "districtKey": "Чингирлауский район",
-      "kk": "мектебі А.Тихоненко атындағы мектебі",
+      "kk": "ени А.Тихоненко атындағы мектебі",
       "en": "А.Тихоненко Secondary School",
       "location": {
         "kk": "Шыңғірлау ауданы",
@@ -1431,7 +1431,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Китарова Лайла Толыбаевна моб",
+        "kk": "Директоры: Китарова Лайла Толыбаевна моб",
         "en": "Director: Китарова Лайла Толыбаевна моб"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"

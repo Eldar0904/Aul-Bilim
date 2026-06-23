@@ -85,18 +85,11 @@
       ]
     },
     {
-      id: 'almaty', kk: 'Алматы облысы', en: 'Almaty Region', total: 43,
+      id: 'almaty', kk: 'Алматы облысы', en: 'Almaty Region', total: 50,
       mapId: 'KZ19',
       cx: 0.761, cy: 0.742,
       poly: '828,340 999,450 996,452 1001,456 1008,458 1006,468 1000,464 989,467 986,461 982,460 966,467 940,472 933,478 939,483 950,484 946,492 946,507 959,544 949,546 947,550 952,553 942,559 944,578 935,569 923,568 915,556 863,552 859,549 848,552 820,549 812,542 815,532 804,528 812,514 812,508 806,502 796,499 792,495 791,487 780,477 779,472 771,467 779,463 777,449 781,437 758,435',
-      districts: [
-        { kk: 'Еңбекшіқазақ', en: 'Enbekshikazakh', n: 9 },
-        { kk: 'Қарасай', en: 'Karasai', n: 8 },
-        { kk: 'Талғар', en: 'Talgar', n: 7 },
-        { kk: 'Іле', en: 'Ile', n: 6 },
-        { kk: 'Жамбыл', en: 'Zhambyl', n: 7 },
-        { kk: 'Райымбек', en: 'Raiymbek', n: 6 }
-      ]
+      districts: []
     }
   ];
 
@@ -153,6 +146,15 @@
       desc: {
         kk: 'Біздің бағдарлама аясында Қызылорда облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
         en: 'Under our programme, schools across Kyzylorda Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+      }
+    },
+    {
+      id: 'almaty',
+      global: 'ALMATY_SCHOOLS',
+      stats: { cabinets: '125', teachers: '900+' },
+      desc: {
+        kk: 'Біздің бағдарлама аясында Алматы облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across Almaty Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
       }
     }
   ];
