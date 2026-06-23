@@ -429,11 +429,16 @@
     }
 
     function hideSchoolsSection() {
+      closeSchoolModal();
       unlockSchoolsScroll();
       if (schoolsBlock) schoolsBlock.hidden = true;
       if (schoolsRoot) schoolsRoot.innerHTML = '';
       if (mapBlock) mapBlock.hidden = false;
     }
+
+    var flatSchools = [];
+    var schoolModal = null;
+    var schoolModalContent = null;
 
     function schoolGalleryImages(s) {
       if (s.gallery && s.gallery.length) {
@@ -499,16 +504,102 @@
       });
     }
 
+    function ensureSchoolModal() {
+      if (schoolModal) return;
+      schoolModal = document.getElementById('school-modal');
+      schoolModalContent = document.getElementById('school-modal-content');
+      if (!schoolModal || !schoolModalContent) return;
+
+      schoolModal.querySelectorAll('[data-school-modal-close]').forEach(function (el) {
+        el.addEventListener('click', closeSchoolModal);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && schoolModal && !schoolModal.hidden) {
+          closeSchoolModal();
+        }
+      });
+    }
+
+    function renderSchoolModalContent(s) {
+      var uid = 'modal-' + (s.id || 'school');
+      var teachersHtml = s.teachers != null
+        ? '<p class="school-modal-teachers">' +
+            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
+            s.teachers + ' ' + bi('мұғалім', 'teachers') +
+          '</p>'
+        : '';
+
+      return renderSchoolGallery(s, uid) +
+        '<div class="school-modal-body">' +
+          '<p class="school-card-loc">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>' +
+            bi(s.location.kk, s.location.en) +
+          '</p>' +
+          '<h2 id="school-modal-title">' + bi(s.kk, s.en) + '</h2>' +
+          '<p class="school-modal-desc">' + bi(s.desc.kk, s.desc.en) + '</p>' +
+          renderSchoolVideo(s) +
+          teachersHtml +
+        '</div>';
+    }
+
+    function openSchoolModal(s) {
+      ensureSchoolModal();
+      if (!schoolModal || !schoolModalContent || !s) return;
+
+      schoolModalContent.innerHTML = renderSchoolModalContent(s);
+      bindSchoolCardGallery(schoolModalContent);
+
+      schoolModal.hidden = false;
+      schoolModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('school-modal-open');
+
+      var closeBtn = schoolModal.querySelector('.school-modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeSchoolModal() {
+      if (!schoolModal || !schoolModalContent) return;
+
+      schoolModal.hidden = true;
+      schoolModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('school-modal-open');
+      schoolModalContent.innerHTML = '';
+    }
+
+    function bindSchoolCards(root) {
+      if (!root) return;
+      root.querySelectorAll('.school-card.is-clickable').forEach(function (card) {
+        function openFromCard() {
+          var idx = parseInt(card.getAttribute('data-school-index'), 10);
+          if (!isNaN(idx) && flatSchools[idx]) {
+            openSchoolModal(flatSchools[idx]);
+          }
+        }
+
+        card.addEventListener('click', openFromCard);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openFromCard();
+          }
+        });
+      });
+    }
+
     function renderSchoolCard(s, i) {
-      var uid = s.id || ('school-card-' + i);
+      var preview = schoolGalleryImages(s)[0] || s.image || '';
       var teachersHtml = s.teachers != null
         ? '<span class="school-card-teachers">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
             s.teachers + ' ' + bi('мұғалім', 'teachers') +
           '</span>'
         : '';
-      return '<article class="school-card" style="animation-delay:' + (0.05 * i) + 's" data-school-id="' + uid + '">' +
-        renderSchoolGallery(s, uid) +
+      var openLabel = bi('Мектеп карточкасын ашу', 'Open school card');
+      return '<article class="school-card is-clickable" style="animation-delay:' + (0.05 * i) + 's" data-school-index="' + i + '" tabindex="0" role="button" aria-label="' + openLabel + ': ' + bi(s.kk, s.en) + '">' +
+        (preview
+          ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
+          : '<div class="school-card-photo school-card-photo--empty"></div>') +
         '<div class="school-card-body">' +
           '<p class="school-card-loc">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>' +
@@ -516,7 +607,6 @@
           '</p>' +
           '<h4>' + bi(s.kk, s.en) + '</h4>' +
           '<p class="school-card-desc">' + bi(s.desc.kk, s.desc.en) + '</p>' +
-          renderSchoolVideo(s) +
           '<div class="school-card-foot">' +
             teachersHtml +
             '<span class="school-card-link" aria-hidden="true">↗</span>' +
@@ -528,6 +618,7 @@
     function renderSchoolsGrid(r) {
       var schools = r.schools || [];
       if (!schools.length) {
+        flatSchools = [];
         return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'School list coming soon') + '</div>';
       }
 
@@ -550,6 +641,7 @@
       }
 
       var cardIdx = 0;
+      flatSchools = [];
       var html = '';
       groups.forEach(function (g, gi) {
         var sectionId = g.slug ? 'district-' + g.slug : 'district-' + gi;
@@ -560,6 +652,7 @@
         }
         html += '<div class="schools-grid">';
         g.schools.forEach(function (s) {
+          flatSchools.push(s);
           html += renderSchoolCard(s, cardIdx++);
         });
         html += '</div></section>';
@@ -635,7 +728,7 @@
           scrollToDistrict(btn.getAttribute('data-district-target'));
         });
       });
-      bindSchoolCardGallery(schoolsRoot);
+      bindSchoolCards(schoolsRoot);
     }
 
     function activateRegion(id) {

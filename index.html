@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=31" />
+<link rel="stylesheet" href="steppe.css?v=32" />
 </head>
 <body>
 <div class="grain"></div>
@@ -180,6 +180,13 @@
 <section class="region-schools-block" id="region-schools" hidden>
   <div class="wrap" id="region-schools-root"></div>
 </section>
+<div class="school-modal" id="school-modal" hidden aria-hidden="true">
+  <div class="school-modal-backdrop" data-school-modal-close tabindex="-1"></div>
+  <div class="school-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="school-modal-title">
+    <button type="button" class="school-modal-close" data-school-modal-close aria-label="Close">×</button>
+    <div class="school-modal-content" id="school-modal-content"></div>
+  </div>
+</div>
 
 <!-- ============ FOOTER ============ -->
 </main>
@@ -223,6 +230,6 @@
 <script src="assets/abay-schools.js?v=3"></script>
 <script src="assets/kyzylorda-schools.js?v=3"></script>
 <script src="assets/almaty-schools.js?v=3"></script>
-<script src="map.js?v=25"></script>
+<script src="map.js?v=26"></script>
 </body>
 </html>
