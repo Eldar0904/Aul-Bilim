@@ -477,7 +477,7 @@
         r.districtGroups.forEach(function (d) {
           var list = byKey[d.key];
           if (list && list.length) {
-            groups.push({ kk: d.kk, en: d.en, schools: list });
+            groups.push({ key: d.key, slug: d.slug, kk: d.kk, en: d.en, schools: list });
           }
         });
       } else {
@@ -486,8 +486,9 @@
 
       var cardIdx = 0;
       var html = '';
-      groups.forEach(function (g) {
-        html += '<section class="schools-district-group">';
+      groups.forEach(function (g, gi) {
+        var sectionId = g.slug ? 'district-' + g.slug : 'district-' + gi;
+        html += '<section class="schools-district-group" id="' + sectionId + '">';
         if (g.kk) {
           html += '<h4 class="schools-district-head">' + bi(g.kk, g.en) +
             ' <span class="schools-district-count">(' + g.schools.length + ' ' + bi('мектеп', 'schools') + ')</span></h4>';
@@ -501,36 +502,30 @@
       return html;
     }
 
-    function regionChipLabel(r) {
-      var label = MAP_LABELS[r.mapId];
-      if (label) return label;
-      return {
-        kk: r.kk.replace(/\s*облысы\s*$/, '').trim(),
-        en: r.en.replace(/\s*Region\s*$/, '').trim()
-      };
-    }
+    function renderDistrictChips(r) {
+      var districts = r.districtGroups || [];
+      if (!districts.length) return '';
 
-    function regionsWithSchools() {
-      return REGIONS.filter(function (reg) {
-        return reg.schools && reg.schools.length;
-      });
-    }
-
-    function renderRegionChips(currentId) {
-      return regionsWithSchools().map(function (reg, i) {
-        var label = regionChipLabel(reg);
-        var active = reg.id === currentId ? ' is-active' : '';
-        return '<button type="button" class="region-chip' + active + '" data-region-id="' + reg.id + '" style="animation-delay:' + (0.04 * i) + 's">' +
-          '<span class="region-chip-name">' + bi(label.kk, label.en) + '</span>' +
-          '<span class="region-chip-count">' + reg.stats.schools + ' ' + bi('мектеп', 'schools') + '</span>' +
+      return districts.map(function (d, i) {
+        var target = d.slug ? 'district-' + d.slug : 'district-' + i;
+        return '<button type="button" class="region-chip district-chip" data-district-target="' + target + '" style="animation-delay:' + (0.04 * i) + 's">' +
+          '<span class="region-chip-name">' + bi(d.kk, d.en) + '</span>' +
+          '<span class="region-chip-count">' + d.n + ' ' + bi('мектеп', 'schools') + '</span>' +
         '</button>';
       }).join('');
+    }
+
+    function scrollToDistrict(targetId) {
+      var el = document.getElementById(targetId);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function renderSchoolsSection(r) {
       if (!schoolsRoot || !schoolsBlock) return;
       var schools = r.schools || [];
       var gridHtml = renderSchoolsGrid(r);
+      var districtChips = renderDistrictChips(r);
 
       schoolsRoot.innerHTML =
         '<div class="region-schools-nav">' +
@@ -544,12 +539,15 @@
         '<h2 class="region-schools-title">' +
           '<span lang="kk"><span class="hl">Қолдау көрсетілген</span> мектептер</span>' +
           '<span lang="en"><span class="hl">Supported</span> schools</span>' +
+          ' — ' + bi(r.kk, r.en) +
         '</h2>' +
-        '<div class="region-schools-hero region-schools-hero--chips">' +
-          '<div class="region-chip-list" role="navigation" aria-label="Regions">' +
-            renderRegionChips(r.id) +
-          '</div>' +
-        '</div>' +
+        (districtChips
+          ? '<div class="region-schools-hero region-schools-hero--chips">' +
+              '<div class="region-chip-list" role="navigation" aria-label="Districts">' +
+                districtChips +
+              '</div>' +
+            '</div>'
+          : '') +
         '<h3 class="schools-grid-head">' +
           bi('Жаңғыртылған мектептер (' + schools.length + ')', 'Renovated schools (' + schools.length + ')') +
         '</h3>' +
@@ -557,10 +555,9 @@
 
       document.getElementById('region-schools-map').addEventListener('click', goToMap);
       document.getElementById('region-schools-back').addEventListener('click', goHome);
-      schoolsRoot.querySelectorAll('.region-chip').forEach(function (btn) {
+      schoolsRoot.querySelectorAll('.district-chip').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          var id = btn.getAttribute('data-region-id');
-          if (id && id !== r.id) openSchools(id);
+          scrollToDistrict(btn.getAttribute('data-district-target'));
         });
       });
     }

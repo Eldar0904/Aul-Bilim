@@ -508,7 +508,10 @@ body.map-schools-open .region-schools-block {
   background: #fff;
   border-color: var(--primary);
   box-shadow: 0 0 0 1px rgba(27,79,138,0.12);
-  cursor: default;
+}
+.district-chip:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 .region-chip-name {
   font-family: var(--fh);
@@ -551,6 +554,7 @@ body.map-schools-open .region-schools-block {
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--body);
 }
 .schools-district-group + .schools-district-group { margin-top: 40px; }
+.schools-district-group { scroll-margin-top: 96px; }
 .schools-district-head {
   font-family: var(--fh);
   font-size: clamp(17px, 2.2vw, 20px);
