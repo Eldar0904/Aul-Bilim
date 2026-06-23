@@ -501,6 +501,32 @@
       return html;
     }
 
+    function regionChipLabel(r) {
+      var label = MAP_LABELS[r.mapId];
+      if (label) return label;
+      return {
+        kk: r.kk.replace(/\s*облысы\s*$/, '').trim(),
+        en: r.en.replace(/\s*Region\s*$/, '').trim()
+      };
+    }
+
+    function regionsWithSchools() {
+      return REGIONS.filter(function (reg) {
+        return reg.schools && reg.schools.length;
+      });
+    }
+
+    function renderRegionChips(currentId) {
+      return regionsWithSchools().map(function (reg, i) {
+        var label = regionChipLabel(reg);
+        var active = reg.id === currentId ? ' is-active' : '';
+        return '<button type="button" class="region-chip' + active + '" data-region-id="' + reg.id + '" style="animation-delay:' + (0.04 * i) + 's">' +
+          '<span class="region-chip-name">' + bi(label.kk, label.en) + '</span>' +
+          '<span class="region-chip-count">' + reg.stats.schools + ' ' + bi('мектеп', 'schools') + '</span>' +
+        '</button>';
+      }).join('');
+    }
+
     function renderSchoolsSection(r) {
       if (!schoolsRoot || !schoolsBlock) return;
       var schools = r.schools || [];
@@ -520,10 +546,11 @@
           '<span lang="en"><span class="hl">Supported</span> schools</span>' +
         '</h2>' +
         '<div class="region-schools-hero">' +
-          '<div class="region-schools-hero-copy">' +
-            '<span class="kicker"><span lang="kk">Жобалар аймағы</span><span lang="en">Project region</span></span>' +
+          '<div class="region-schools-hero-main">' +
             '<h3>' + bi(r.kk, r.en) + '</h3>' +
-            '<p>' + bi(r.desc.kk, r.desc.en) + '</p>' +
+            '<div class="region-chip-list" role="navigation" aria-label="Regions">' +
+              renderRegionChips(r.id) +
+            '</div>' +
           '</div>' +
           '<div class="region-schools-stats">' +
             '<div class="rss-cell stat-wide"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'schools') + '</div></div>' +
@@ -538,6 +565,12 @@
 
       document.getElementById('region-schools-map').addEventListener('click', goToMap);
       document.getElementById('region-schools-back').addEventListener('click', goHome);
+      schoolsRoot.querySelectorAll('.region-chip').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-region-id');
+          if (id && id !== r.id) openSchools(id);
+        });
+      });
     }
 
     function activateRegion(id) {
@@ -616,6 +649,7 @@
       mapBlock.hidden = true;
       schoolsBlock.hidden = false;
       lockSchoolsScroll();
+      schoolsBlock.scrollTop = 0;
       if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-' + id + '-schools', !!(opts && opts.replaceHash));
     }
 
