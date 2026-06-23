@@ -29,11 +29,21 @@ def _clean_school_title(name: str, suffix: str) -> str:
     return name[:120]
 
 
+def clean_director(value) -> str:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return ""
+    text = re.sub(r"\s+", " ", str(value).strip())
+    text = re.sub(r"\s*\d[\d\s]{8,}\d?\s*$", "", text).strip(" ,")
+    return text[:100]
+
+
 def short_name(full: str) -> str:
     m = re.search(r"[«\"]([^»\"]+)[»\"]", full)
     name = m.group(1).strip() if m else full.strip()
     name = re.sub(r"\s*отдела образования.*$", "", name, flags=re.I).strip()
     name = re.sub(r"^КГУ\s*", "", name, flags=re.I).strip()
+    name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
+    name = re.sub(r"^Сош\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
         (r"общеобразовательная школа", "мектебі"),
         (r"основная средняя школа", "мектебі"),
@@ -42,7 +52,16 @@ def short_name(full: str) -> str:
         (r"школа", "мектебі"),
     ):
         name = re.sub(pattern, repl, name, flags=re.I)
+    m = re.match(r"^мектебі\s+(.+)$", name, flags=re.I)
+    if m:
+        name = f"{m.group(1).strip()} мектебі"
     return _clean_school_title(name.strip(), "мектебі")
+
+
+def _title_case_en(name: str) -> str:
+    if re.match(r"^[a-z]", name):
+        return name[0].upper() + name[1:]
+    return name
 
 
 def short_name_en(full: str) -> str:
@@ -50,6 +69,7 @@ def short_name_en(full: str) -> str:
     name = m.group(1).strip() if m else full.strip()
     name = re.sub(r"\s*отдела образования.*$", "", name, flags=re.I).strip()
     name = re.sub(r"^KGU\s*", "", name, flags=re.I).strip()
+    name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
         (r"общеобразовательная школа", "Secondary School"),
         (r"основная средняя школа", "Basic Secondary School"),
@@ -58,7 +78,10 @@ def short_name_en(full: str) -> str:
         (r"школа", "School"),
     ):
         name = re.sub(pattern, repl, name, flags=re.I)
-    return _clean_school_title(name.strip(), "Secondary School")
+    m = re.match(r"^Secondary School\s+(.+)$", name, flags=re.I)
+    if m:
+        name = f"{m.group(1).strip()} Secondary School"
+    return _title_case_en(_clean_school_title(name.strip(), "Secondary School"))
 
 
 def build_region_payload(
@@ -95,7 +118,7 @@ def build_region_payload(
         idx = district_counts[dist_key]
         meta = district_meta[dist_key]
 
-        director = str(row["director"]).strip() if pd.notna(row["director"]) else ""
+        director = clean_director(row.get("director", ""))
         full = str(row["school"]).strip()
 
         schools.append(

@@ -11,17 +11,11 @@
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
   var REGIONS = [
     {
-      id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', en: 'West Kazakhstan Region', total: 36,
+      id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', en: 'West Kazakhstan Region', total: 71,
       mapId: 'KZ27',
       cx: 0.11, cy: 0.41,
-      districts: [
-        { kk: 'Орал', en: 'Oral', n: 8 },
-        { kk: 'Бәйтерек', en: 'Baiterek', n: 6 },
-        { kk: 'Бөрлі', en: 'Borli', n: 6 },
-        { kk: 'Теректі', en: 'Terekti', n: 6 },
-        { kk: 'Ақжайық', en: 'Akzhaiyk', n: 5 },
-        { kk: 'Сырым', en: 'Syrym', n: 5 }
-      ]
+      zoomScale: 3.1,
+      districts: []
     },
     {
       id: 'kostanay', kk: 'Қостанай облысы', en: 'Kostanay Region', total: 63,
@@ -126,6 +120,15 @@
   ];
 
   var REGION_SCHOOL_PACKS = [
+    {
+      id: 'west-kazakhstan',
+      global: 'WEST_KAZAKHSTAN_SCHOOLS',
+      stats: { cabinets: '118', teachers: '1050+' },
+      desc: {
+        kk: 'Біздің бағдарлама аясында Батыс Қазақстан облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across West Kazakhstan Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+      }
+    },
     {
       id: 'kostanay',
       global: 'KOSTANAY_SCHOOLS',
