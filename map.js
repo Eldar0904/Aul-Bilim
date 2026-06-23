@@ -32,18 +32,11 @@
       districts: []
     },
     {
-      id: 'akmola', kk: 'Ақмола облысы', en: 'Akmola Region', total: 36,
+      id: 'akmola', kk: 'Ақмола облысы', en: 'Akmola Region', total: 54,
       mapId: 'KZ11',
       cx: 0.604, cy: 0.288,
       poly: '657,113 663,113 665,120 671,121 669,126 675,127 681,133 688,125 695,125 702,131 710,127 715,133 713,143 716,147 728,148 733,144 744,143 748,155 775,164 776,191 771,196 770,204 781,208 774,210 765,220 776,224 774,246 778,250 792,249 794,255 801,256 805,263 799,269 802,274 812,268 835,265 825,288 689,266 685,263 683,265 623,255 619,254 615,247 613,253 588,249 593,178 599,176 599,171 611,176 618,172 618,165 625,163 636,152 639,138 630,125 638,115 647,114 653,121 653,116',
-      districts: [
-        { kk: 'Бурабай', en: 'Burabay', n: 8 },
-        { kk: 'Зеренді', en: 'Zerendi', n: 6 },
-        { kk: 'Атбасар', en: 'Atbasar', n: 5 },
-        { kk: 'Целиноград', en: 'Tselinograd', n: 7 },
-        { kk: 'Шортанды', en: 'Shortandy', n: 5 },
-        { kk: 'Аршалы', en: 'Arshaly', n: 5 }
-      ]
+      districts: []
     },
     {
       id: 'karaganda', kk: 'Қарағанды облысы', en: 'Karaganda Region', total: 67,
@@ -132,29 +125,54 @@
     }
   ];
 
-  function applyKostanayData() {
-    var data = window.KOSTANAY_SCHOOLS;
-    if (!data) return;
-    for (var i = 0; i < REGIONS.length; i++) {
-      if (REGIONS[i].id !== 'kostanay') continue;
-      var r = REGIONS[i];
-      r.total = data.schools.length;
-      r.districts = data.districts.map(function (d) {
-        return { kk: d.kk, en: d.en, n: d.n };
-      });
-      r.schools = data.schools;
-      r.stats = { schools: String(data.schools.length), cabinets: '107', teachers: '1200+' };
-      r.desc = {
+  var REGION_SCHOOL_PACKS = [
+    {
+      id: 'kostanay',
+      global: 'KOSTANAY_SCHOOLS',
+      stats: { cabinets: '107', teachers: '1200+' },
+      desc: {
         kk: 'Біздің бағдарлама аясында Қостанай облысының мектептерінде заманауи жабдықтар орнатылып, физика, химия және биология зертханалары жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
         en: 'Under our programme, schools across Kostanay Region have received modern equipment; physics, chemistry and biology laboratories have been fully fitted out, and teacher training is underway to raise professional skills.'
-      };
-      break;
+      }
+    },
+    {
+      id: 'akmola',
+      global: 'AKMOLA_SCHOOLS',
+      stats: { cabinets: '92', teachers: '950+' },
+      desc: {
+        kk: 'Біздің бағдарлама аясында Ақмола облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across Akmola Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+      }
     }
+  ];
+
+  function applyRegionSchoolsData() {
+    REGION_SCHOOL_PACKS.forEach(function (pack) {
+      var data = window[pack.global];
+      if (!data) return;
+      for (var i = 0; i < REGIONS.length; i++) {
+        if (REGIONS[i].id !== pack.id) continue;
+        var r = REGIONS[i];
+        r.total = data.schools.length;
+        r.districtGroups = data.districts;
+        r.districts = data.districts.map(function (d) {
+          return { kk: d.kk, en: d.en, n: d.n };
+        });
+        r.schools = data.schools;
+        r.stats = {
+          schools: String(data.schools.length),
+          cabinets: pack.stats.cabinets,
+          teachers: pack.stats.teachers
+        };
+        r.desc = pack.desc;
+        break;
+      }
+    });
   }
-  applyKostanayData();
+  applyRegionSchoolsData();
 
   REGIONS.forEach(function (r) {
-    if (r.id === 'kostanay') return;
+    if (r.schools && r.schools.length) return;
     r.stats = {
       schools: String(r.total),
       cabinets: String(Math.round(r.total * 2.5)),
@@ -438,14 +456,14 @@
       }
 
       var groups = [];
-      if (r.id === 'kostanay' && window.KOSTANAY_SCHOOLS && window.KOSTANAY_SCHOOLS.districts) {
+      if (r.districtGroups && r.districtGroups.length) {
         var byKey = {};
         schools.forEach(function (s) {
           var key = s.districtKey || s.location.kk;
           if (!byKey[key]) byKey[key] = [];
           byKey[key].push(s);
         });
-        window.KOSTANAY_SCHOOLS.districts.forEach(function (d) {
+        r.districtGroups.forEach(function (d) {
           var list = byKey[d.key];
           if (list && list.length) {
             groups.push({ kk: d.kk, en: d.en, schools: list });
