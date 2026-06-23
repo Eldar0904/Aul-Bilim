@@ -545,17 +545,9 @@
           '<span lang="kk"><span class="hl">Қолдау көрсетілген</span> мектептер</span>' +
           '<span lang="en"><span class="hl">Supported</span> schools</span>' +
         '</h2>' +
-        '<div class="region-schools-hero">' +
-          '<div class="region-schools-hero-main">' +
-            '<h3>' + bi(r.kk, r.en) + '</h3>' +
-            '<div class="region-chip-list" role="navigation" aria-label="Regions">' +
-              renderRegionChips(r.id) +
-            '</div>' +
-          '</div>' +
-          '<div class="region-schools-stats">' +
-            '<div class="rss-cell stat-wide"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'schools') + '</div></div>' +
-            '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + bi('кабинет', 'classrooms') + '</div></div>' +
-            '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + bi('оқытылған ұстаз', 'teachers trained') + '</div></div>' +
+        '<div class="region-schools-hero region-schools-hero--chips">' +
+          '<div class="region-chip-list" role="navigation" aria-label="Regions">' +
+            renderRegionChips(r.id) +
           '</div>' +
         '</div>' +
         '<h3 class="schools-grid-head">' +
