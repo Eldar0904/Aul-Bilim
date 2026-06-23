@@ -146,9 +146,13 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Сатемиров Серик Карбаевұлы",
         "en": "Director: Сатемиров Серик Карбаевич"
       },
-      "image": "assets/optimized/ondiris-mektebi.png",
+      "image": "assets/optimized/ondiris/ondiris-hero.png",
       "gallery": [
-        "assets/optimized/ondiris-mektebi.png"
+        "assets/optimized/ondiris/ondiris-hero.png",
+        "assets/optimized/ondiris/ondiris-classroom-2.png",
+        "assets/optimized/ondiris/ondiris-classroom-3.png",
+        "assets/optimized/ondiris/ondiris-classroom-4.png",
+        "assets/optimized/ondiris/ondiris-plaque.png"
       ]
     },
     {
@@ -1009,7 +1013,7 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-birjan-sal-2",
       "districtKey": "Биржан Сал",
-      "kk": "Кудукагаш Р.Елебаева атындағы мектебі",
+      "kk": "Р.Елебаева атындағы мектебі",
       "en": "Кудукагаш Р.Елебаева Secondary School",
       "location": {
         "kk": "Биржан Сal ауданы",

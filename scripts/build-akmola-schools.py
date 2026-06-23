@@ -6,12 +6,18 @@ from school_data_utils import build_region_payload, write_region_js
 OUT = Path(__file__).resolve().parents[1] / "assets" / "akmola-schools.js"
 
 SCHOOL_IMAGES = {
-    "akmola-astrakhan-1": "assets/optimized/ondiris-mektebi.png",
+    "akmola-astrakhan-1": "assets/optimized/ondiris/ondiris-hero.png",
 }
 
 SCHOOL_MEDIA = {
     "akmola-astrakhan-1": {
-        "gallery": ["assets/optimized/ondiris-mektebi.png"],
+        "gallery": [
+            "assets/optimized/ondiris/ondiris-hero.png",
+            "assets/optimized/ondiris/ondiris-classroom-2.png",
+            "assets/optimized/ondiris/ondiris-classroom-3.png",
+            "assets/optimized/ondiris/ondiris-classroom-4.png",
+            "assets/optimized/ondiris/ondiris-plaque.png",
+        ],
         # "youtube": "VIDEO_ID",
     },
 }
