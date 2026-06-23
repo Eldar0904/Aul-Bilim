@@ -101,7 +101,7 @@ window.AKMOLA_SCHOOLS = {
     },
     {
       "key": "Ерейментауский",
-      "kk": "Ерейментау ауданы",
+      "kk": "Ерейmentau ауданы",
       "en": "Ereymentau District",
       "slug": "ereymentau",
       "n": 3
@@ -170,8 +170,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-astrakhan-3",
       "districtKey": "Астраханский",
-      "kk": "Караколь мектебі",
-      "en": "Караколь Secondary School",
+      "kk": "Основная мектебі села Караколь",
+      "en": "Основная Secondary School села Караколь",
       "location": {
         "kk": "Астрахан ауданы",
         "en": "Astrakhan District"
@@ -208,8 +208,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-shortandy-2",
       "districtKey": "Шортандинский",
-      "kk": "Ключи мектебі",
-      "en": "Ключи Secondary School",
+      "kk": "Основная мектебі села Ключи",
+      "en": "Основная Secondary School села Ключи",
       "location": {
         "kk": "Шортанды ауданы",
         "en": "Shortandy District"
@@ -227,8 +227,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-shortandy-3",
       "districtKey": "Шортандинский",
-      "kk": "Мыктыколь мектебі",
-      "en": "Мыктыколь Secondary School",
+      "kk": "Основная мектебі села Мыктыколь",
+      "en": "Основная Secondary School села Мыктыколь",
       "location": {
         "kk": "Шортанды ауданы",
         "en": "Shortandy District"
@@ -246,8 +246,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-arshaly-1",
       "districtKey": "Аршалинский",
-      "kk": "мектебі станции Бабатай",
-      "en": "Basic Secondary School станции Бабатай",
+      "kk": "Основная мектебі станции Бабатай",
+      "en": "Основная Secondary School станции Бабатай",
       "location": {
         "kk": "Аршалы ауданы",
         "en": "Arshaly District"
@@ -284,8 +284,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-arshaly-3",
       "districtKey": "Аршалинский",
-      "kk": "мектебі имени Абая села Булаксай",
-      "en": "Secondary School имени Абая села Булаксай",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
       "location": {
         "kk": "Аршалы ауданы",
         "en": "Arshaly District"
@@ -360,8 +360,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-akkol-1",
       "districtKey": "Аккольский",
-      "kk": "Амангельды отдел образования по Аккольскому району управления образования Акмолинской области мектебі",
-      "en": "Амангельды отдел образования по Аккольскому району управления образования Акмолинской области Secondary School",
+      "kk": "Основная мектебі села Амангельды отдел образования по Аккольскому району управления образования Акмолинской области",
+      "en": "Основная Secondary School села Амангельды отдел образования по Аккольскому району управления образования Акмолинской обл",
       "location": {
         "kk": "Ақкөл ауданы",
         "en": "Akkol District"
@@ -398,8 +398,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-akkol-3",
       "districtKey": "Аккольский",
-      "kk": "Барап отдел образования по Аккольскому району управления образования Акмолинской области мектебі",
-      "en": "Барап отдел образования по Аккольскому району управления образования Акмолинской области Secondary School",
+      "kk": "Основная мектебі села Барап отдел образования по Аккольскому району управления образования Акмолинской области",
+      "en": "Основная Secondary School села Барап отдел образования по Аккольскому району управления образования Акмолинской области",
       "location": {
         "kk": "Ақкөл ауданы",
         "en": "Akkol District"
@@ -436,8 +436,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-esil-2",
       "districtKey": "Есильский",
-      "kk": "Бузулук мектебі",
-      "en": "Бузулук Secondary School",
+      "kk": "Основная мектебі села Бузулук",
+      "en": "Основная Secondary School села Бузулук",
       "location": {
         "kk": "Есіл ауданы",
         "en": "Esil District"
@@ -455,8 +455,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-esil-3",
       "districtKey": "Есильский",
-      "kk": "Сурган мектебі",
-      "en": "Сурган Secondary School",
+      "kk": "Основная мектебі села Сурган",
+      "en": "Основная Secondary School села Сурган",
       "location": {
         "kk": "Есіл ауданы",
         "en": "Esil District"
@@ -542,16 +542,16 @@ window.AKMOLA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Кайкина Анара Айтпаевна 87753598401",
-        "en": "Director: Кайкина Анара Айтпаевна 87753598401"
+        "kk": "Директор: Кайкина Анара Айтпаевна",
+        "en": "Director: Кайкина Анара Айтпаевна"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "akmola-zharkain-2",
       "districtKey": "Жаркаинский",
-      "kk": "Шойындыколь мектебі",
-      "en": "Шойындыколь Secondary School",
+      "kk": "Основная мектебі села Шойындыколь",
+      "en": "Основная Secondary School села Шойындыколь",
       "location": {
         "kk": "Жаркаин ауданы",
         "en": "Zharkain District"
@@ -569,8 +569,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-zharkain-3",
       "districtKey": "Жаркаинский",
-      "kk": "Ушкарасу мектебі",
-      "en": "Ушкарасу Secondary School",
+      "kk": "Основная мектебі села Ушкарасу",
+      "en": "Основная Secondary School села Ушкарасу",
       "location": {
         "kk": "Жаркаин ауданы",
         "en": "Zharkain District"
@@ -588,8 +588,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-sandyktau-1",
       "districtKey": "Сандыктауский",
-      "kk": "Новоромановка мектебі",
-      "en": "Новоромановка Secondary School",
+      "kk": "Основная мектебі села Новоромановка",
+      "en": "Основная Secondary School села Новоромановка",
       "location": {
         "kk": "Сандықтау ауданы",
         "en": "Sandyktau District"
@@ -607,8 +607,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-sandyktau-2",
       "districtKey": "Сандыктауский",
-      "kk": "Петровка мектебі",
-      "en": "Петровка Secondary School",
+      "kk": "Основная мектебі села Петровка",
+      "en": "Основная Secondary School села Петровка",
       "location": {
         "kk": "Сандықтау ауданы",
         "en": "Sandyktau District"
@@ -626,8 +626,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-sandyktau-3",
       "districtKey": "Сандыктауский",
-      "kk": "Владимировка мектебі",
-      "en": "Владимировка Secondary School",
+      "kk": "Основная мектебі села Владимировка",
+      "en": "Основная Secondary School села Владимировка",
       "location": {
         "kk": "Сандықтау ауданы",
         "en": "Sandyktau District"
@@ -645,8 +645,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-atbasar-1",
       "districtKey": "Атбасарский",
-      "kk": "мектебі №2 села Бастау",
-      "en": "Secondary School №2 села Бастау",
+      "kk": "№2 села Бастау мектебі",
+      "en": "№2 села Бастау Secondary School",
       "location": {
         "kk": "Атбасар ауданы",
         "en": "Atbasar District"
@@ -740,7 +740,7 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-stepnogorsk-3",
       "districtKey": "Степногорск",
-      "kk": "Основная мектебі поселка Аксу",
+      "kk": "мектебі поселка Аксу",
       "en": "Основная School поселка Аксу",
       "location": {
         "kk": "Степногорск қ.",
@@ -778,8 +778,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-tselinograd-2",
       "districtKey": "Целиноградский",
-      "kk": "Раздольное мектебі",
-      "en": "Раздольное Secondary School",
+      "kk": "Основная мектебі села Раздольное",
+      "en": "Основная Secondary School села Раздольное",
       "location": {
         "kk": "Целиноград ауданы",
         "en": "Tselinograd District"
@@ -797,8 +797,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-tselinograd-3",
       "districtKey": "Целиноградский",
-      "kk": "«мектебі села Мортык",
-      "en": "КГУ «Basic Secondary School села Мортык",
+      "kk": "Основная мектебі села Мортык",
+      "en": "Основная Secondary School села Мортык",
       "location": {
         "kk": "Целиноград ауданы",
         "en": "Tselinograd District"
@@ -835,8 +835,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-egindykol-2",
       "districtKey": "Егиндыкольский",
-      "kk": "Тоганас мектебі",
-      "en": "Тоганас Secondary School",
+      "kk": "Основная мектебі села Тоганас",
+      "en": "Основная Secondary School села Тоганас",
       "location": {
         "kk": "Егиндыкөл ауданы",
         "en": "Egindykol District"
@@ -854,8 +854,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-egindykol-3",
       "districtKey": "Егиндыкольский",
-      "kk": "Коркем мектебі",
-      "en": "Коркем Secondary School",
+      "kk": "Основная мектебі села Коркем",
+      "en": "Основная Secondary School села Коркем",
       "location": {
         "kk": "Егиндыкөл ауданы",
         "en": "Egindykol District"
@@ -911,8 +911,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-korgalzhyn-3",
       "districtKey": "Коргалжынский",
-      "kk": "мектебі им.Ш.Уалиханова села Караегин",
-      "en": "Secondary School им.Ш.Уалиханова села Караегин",
+      "kk": "им.Ш.Уалиханова села Караегин мектебі",
+      "en": "им.Ш.Уалиханова села Караегин Secondary School",
       "location": {
         "kk": "Коргалжын ауданы",
         "en": "Korgalzhyn District"
@@ -930,10 +930,10 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-ereymentau-1",
       "districtKey": "Ерейментауский",
-      "kk": "Ажы мектебі",
-      "en": "Ажы Secondary School",
+      "kk": "Основная мектебі села Ажы",
+      "en": "Основная Secondary School села Ажы",
       "location": {
-        "kk": "Ерейментау ауданы",
+        "kk": "Ерейmentau ауданы",
         "en": "Ereymentau District"
       },
       "badge": {
@@ -949,10 +949,10 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-ereymentau-2",
       "districtKey": "Ерейментауский",
-      "kk": "Бестогай мектебі",
-      "en": "Бестогай Secondary School",
+      "kk": "Основная мектебі села Бестогай",
+      "en": "Основная Secondary School села Бестогай",
       "location": {
-        "kk": "Ерейментау ауданы",
+        "kk": "Ерейmentau ауданы",
         "en": "Ereymentau District"
       },
       "badge": {
@@ -968,10 +968,10 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-ereymentau-3",
       "districtKey": "Ерейментауский",
-      "kk": "Енбек мектебі",
-      "en": "Енбек Secondary School",
+      "kk": "Основная мектебі села Енбек",
+      "en": "Основная Secondary School села Енбек",
       "location": {
-        "kk": "Ерейментау ауданы",
+        "kk": "Ерейmentau ауданы",
         "en": "Ereymentau District"
       },
       "badge": {
@@ -1006,8 +1006,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-birjan-sal-2",
       "districtKey": "Биржан Сал",
-      "kk": "Кудукагаш имени Р.Елебаева мектебі",
-      "en": "Кудукагаш имени Р.Елебаева Secondary School",
+      "kk": "Кудукагаш Р.Елебаева атындағы мектебі мектебі",
+      "en": "Кудукагаш Р.Елебаева Secondary School",
       "location": {
         "kk": "Биржан Сal ауданы",
         "en": "Birjan Sal District"
@@ -1025,8 +1025,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-birjan-sal-3",
       "districtKey": "Биржан Сал",
-      "kk": "Мамай мектебі",
-      "en": "Мамай Secondary School",
+      "kk": "Основная мектебі села Мамай",
+      "en": "Основная Secondary School села Мамай",
       "location": {
         "kk": "Биржан Сal ауданы",
         "en": "Birjan Sal District"
@@ -1082,8 +1082,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-bulandy-3",
       "districtKey": "Буландинский",
-      "kk": "мектебі №1  села Никольское",
-      "en": "Secondary School №1  села Никольское",
+      "kk": "№1  села Никольское мектебі",
+      "en": "№1  села Никольское Secondary School",
       "location": {
         "kk": "Бұланды ауданы",
         "en": "Bulandy District"
@@ -1131,16 +1131,16 @@ window.AKMOLA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Директор: Егубаева Гульзат Кожековна,",
-        "en": "Director: Егубаева Гульзат Кожековна,"
+        "kk": "Директор: Егубаева Гульзат Кожековна",
+        "en": "Director: Егубаева Гульзат Кожековна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "akmola-zerendi-3",
       "districtKey": "Зерендинский",
-      "kk": "Ортагаш мектебі",
-      "en": "Ортагаш Secondary School",
+      "kk": "Основная мектебі села Ортагаш",
+      "en": "Основная Secondary School села Ортагаш",
       "location": {
         "kk": "Зеренді ауданы",
         "en": "Zerendi District"

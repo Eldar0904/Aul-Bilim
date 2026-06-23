@@ -49,6 +49,55 @@ def _extract_quoted_name(full: str) -> str:
     return text
 
 
+def _strip_trailing_school_noise(name: str) -> str:
+    name = re.sub(r"\s+с\s+государственным\s+языком\s+обучения.*$", "", name, flags=re.I)
+    name = re.sub(r"\s+города\s+.+$", "", name, flags=re.I)
+    name = re.sub(r"\s+[A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ-]+ского\s+районного.*$", "", name, flags=re.I)
+    name = re.sub(r"\s+села\s+.+$", "", name, flags=re.I)
+    return name.strip(" ,-")
+
+
+def _fix_imeni_kk(name: str) -> str:
+    name = name.strip()
+    m = re.match(r"^имени\s+(.+?)(?:\s+мектебі)?$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} атындағы мектебі"
+    m = re.match(r"^мектебі\s+имени\s+(.+)$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} атындағы мектебі"
+    m = re.match(r"^(.+?)\s+имени\s+(.+?)(?:\s+мектебі)?$", name, re.I)
+    if m:
+        prefix = re.sub(r"^мектебі\s+", "", m.group(1).strip(), flags=re.I).strip()
+        person = _strip_trailing_school_noise(m.group(2))
+        if not prefix or prefix.lower() in {"мектебі", "средняя", "основная", "ош", "сош"}:
+            return f"{person} атындағы мектебі"
+        return f"{prefix} {person} атындағы мектебі"
+    return name
+
+
+def _fix_imeni_en(name: str) -> str:
+    name = name.strip()
+    school_suffix = "Basic Secondary School" if re.search(r"basic|основная", name, re.I) else "Secondary School"
+    m = re.match(r"^имени\s+(.+?)(?:\s+(?:Secondary School|Basic Secondary School|School|мектебі))?$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} {school_suffix}"
+    m = re.match(r"^(?:Secondary School|Basic Secondary School|School|мектебі)\s+имени\s+(.+)$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} {school_suffix}"
+    m = re.match(r"^(.+?)\s+имени\s+(.+?)(?:\s+(?:Secondary School|Basic Secondary School|School|мектебі))?$", name, re.I)
+    if m:
+        prefix = re.sub(r"^(?:Secondary School|Basic Secondary School|School|мектебі)\s+", "", m.group(1).strip(), flags=re.I).strip()
+        person = _strip_trailing_school_noise(m.group(2))
+        if not prefix or re.match(r"^(Secondary School|Basic Secondary School|School|мектебі)$", prefix, re.I):
+            return f"{person} {school_suffix}"
+        return f"{prefix} {person} {school_suffix}"
+    return name
+
+
 def _looks_like_boilerplate(name: str) -> bool:
     return bool(
         re.search(
@@ -73,8 +122,12 @@ def _fallback_school_title(full: str) -> str | None:
     return None
 
 
+def _normalize_extracted_name(name: str) -> str:
+    return re.sub(r'^["\']+|["\']+$', "", name.strip()).strip()
+
+
 def short_name(full: str) -> str:
-    name = _extract_quoted_name(full)
+    name = _normalize_extracted_name(_extract_quoted_name(full))
     if _looks_like_boilerplate(name):
         fallback = _fallback_school_title(full)
         if fallback:
@@ -99,6 +152,8 @@ def short_name(full: str) -> str:
     m = re.match(r"^мектебі\s+(.+)$", name, flags=re.I)
     if m:
         name = f"{m.group(1).strip()} мектебі"
+    name = _fix_imeni_kk(name)
+    name = _normalize_extracted_name(name)
     return _clean_school_title(name.strip(), "мектебі")
 
 
@@ -109,13 +164,14 @@ def _title_case_en(name: str) -> str:
 
 
 def short_name_en(full: str) -> str:
-    name = _extract_quoted_name(full)
+    name = _normalize_extracted_name(_extract_quoted_name(full))
     if _looks_like_boilerplate(name):
         fallback = _fallback_school_title(full)
         if fallback:
             name = fallback
     name = re.sub(r"\s*отдела образования.*$", "", name, flags=re.I).strip()
-    name = re.sub(r"^KGU\s*", "", name, flags=re.I).strip()
+    name = re.sub(r"^KGU\s*[\"']?", "", name, flags=re.I).strip()
+    name = re.sub(r"^КГУ\s*[\"']?", "", name, flags=re.I).strip()
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
         (r"орта мектебі", "Secondary School"),
@@ -131,6 +187,12 @@ def short_name_en(full: str) -> str:
     m = re.match(r"^Secondary School\s+(.+)$", name, flags=re.I)
     if m:
         name = f"{m.group(1).strip()} Secondary School"
+    name = _fix_imeni_en(name)
+    name = re.sub(r"\s+атындағы\s+(?:Secondary School|Basic Secondary School)$", r" Secondary School", name, flags=re.I)
+    m = re.search(r"^(.+?)\s+атындағы\s+(?:Secondary School|Basic Secondary School)?$", name, re.I)
+    if m:
+        name = f"{m.group(1).strip()} Secondary School"
+    name = _normalize_extracted_name(name)
     return _title_case_en(_clean_school_title(name.strip(), "Secondary School"))
 
 

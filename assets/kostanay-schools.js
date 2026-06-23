@@ -1,4 +1,4 @@
-/* Auto-generated — Kostanay schools from Жоба мектер тізімі.xlsx */
+/* Auto-generated — Kostanay schools from Жоба мектер тізімі (1).xlsx */
 window.KOSTANAY_SCHOOLS = {
   "districts": [
     {
@@ -38,7 +38,7 @@ window.KOSTANAY_SCHOOLS = {
     },
     {
       "key": "Житикаринский",
-      "kk": "Жітікара ауданы",
+      "kk": "Жітікara ауданы",
       "en": "Zhitikara District",
       "slug": "zhitikara",
       "n": 3
@@ -52,7 +52,7 @@ window.KOSTANAY_SCHOOLS = {
     },
     {
       "key": "Карабалыкский",
-      "kk": "Қарабалық ауданы",
+      "kk": "Қараbалыq ауданы",
       "en": "Qarabalyq District",
       "slug": "qarabalyq",
       "n": 3
@@ -73,7 +73,7 @@ window.KOSTANAY_SCHOOLS = {
     },
     {
       "key": "Мендыкаринский",
-      "kk": "Мөндікара ауданы",
+      "kk": "Меңдіқara ауданы",
       "en": "Mendykara District",
       "slug": "mendykara",
       "n": 3
@@ -94,7 +94,7 @@ window.KOSTANAY_SCHOOLS = {
     },
     {
       "key": "Сарыкольский",
-      "kk": "Сарыкөл ауданы",
+      "kk": "Сariesköl ауданы",
       "en": "Sarykol District",
       "slug": "sarykol",
       "n": 3
@@ -108,7 +108,7 @@ window.KOSTANAY_SCHOOLS = {
     },
     {
       "key": "Федоровский",
-      "kk": "Федоров ауданы",
+      "kk": "Федорov ауданы",
       "en": "Fedorov District",
       "slug": "fedorov",
       "n": 4
@@ -151,8 +151,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-altynsarin-2",
       "districtKey": "Алтынсаринский",
-      "kk": "мектебі имени Омара Шипина",
-      "en": "Secondary School имени Омара Шипина",
+      "kk": "Омара Шипина атындағы мектебі",
+      "en": "Омара Шипина Secondary School",
       "location": {
         "kk": "Алтынсарин ауданы",
         "en": "Altynsarin District"
@@ -170,8 +170,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-altynsarin-3",
       "districtKey": "Алтынсаринский",
-      "kk": "Жанасуская мектебі",
-      "en": "Жанасуская Basic Secondary School",
+      "kk": "Жанасуская основная мектебі",
+      "en": "Жанасуская основная Secondary School",
       "location": {
         "kk": "Алтынсарин ауданы",
         "en": "Altynsarin District"
@@ -303,8 +303,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-denisov-1",
       "districtKey": "Денисовский",
-      "kk": "Аятская мектебі имени академика Т.Б. Даркамбаева",
-      "en": "Аятская Secondary School имени академика Т.Б. Даркамбаева",
+      "kk": "Аятская мектебі академика Т.Б. Даркамбаева атындағы мектебі",
+      "en": "Аятская Secondary School академика Т.Б. Даркамбаева Secondary School",
       "location": {
         "kk": "Денисов ауданы",
         "en": "Denisov District"
@@ -379,8 +379,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-zhangeldy-2",
       "districtKey": "Жангелдинский",
-      "kk": "мектебі имени М. Дулатова Жангельдинского районного",
-      "en": "Secondary School имени М. Дулатова Жангельдинского районного",
+      "kk": "М. Дулатова атындағы мектебі",
+      "en": "М. Дулатова Secondary School",
       "location": {
         "kk": "Жангелдин ауданы",
         "en": "Zhangeldy District"
@@ -398,8 +398,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-zhangeldy-3",
       "districtKey": "Жангелдинский",
-      "kk": "мектебі имени К, Топаева Жангельдинского районного",
-      "en": "Secondary School имени К, Топаева Жангельдинского районного",
+      "kk": "К, Топаева атындағы мектебі",
+      "en": "К, Топаева Secondary School",
       "location": {
         "kk": "Жангелдин ауданы",
         "en": "Zhangeldy District"
@@ -420,7 +420,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Степная мектебі",
       "en": "Степная Secondary School",
       "location": {
-        "kk": "Жітікара ауданы",
+        "kk": "Жітікara ауданы",
         "en": "Zhitikara District"
       },
       "badge": {
@@ -439,7 +439,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Пригородная мектебі",
       "en": "Пригородная Secondary School",
       "location": {
-        "kk": "Жітікара ауданы",
+        "kk": "Жітікara ауданы",
         "en": "Zhitikara District"
       },
       "badge": {
@@ -458,7 +458,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Забеловская мектебі",
       "en": "Забеловская Secondary School",
       "location": {
-        "kk": "Жітікара ауданы",
+        "kk": "Жітікara ауданы",
         "en": "Zhitikara District"
       },
       "badge": {
@@ -572,7 +572,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Боскольская мектебі",
       "en": "Боскольская Secondary School",
       "location": {
-        "kk": "Қарабалық ауданы",
+        "kk": "Қараbалыq ауданы",
         "en": "Qarabalyq District"
       },
       "badge": {
@@ -591,7 +591,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Михайловская мектебі",
       "en": "Михайловская Secondary School",
       "location": {
-        "kk": "Қарабалық ауданы",
+        "kk": "Қараbалыq ауданы",
         "en": "Qarabalyq District"
       },
       "badge": {
@@ -610,7 +610,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Станционная мектебі",
       "en": "Станционная Secondary School",
       "location": {
-        "kk": "Қарабалық ауданы",
+        "kk": "Қараbалыq ауданы",
         "en": "Qarabalyq District"
       },
       "badge": {
@@ -626,8 +626,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-qarasu-1",
       "districtKey": "Карасуский",
-      "kk": "мектебі имени Ыбырая Алтынсарина с государственным языком обучения",
-      "en": "Secondary School имени Ыбырая Алтынсарина с государственным языком обучения",
+      "kk": "Ыбырая Алтынсарина атындағы мектебі",
+      "en": "Ыбырая Алтынсарина Secondary School",
       "location": {
         "kk": "Қарасу ауданы",
         "en": "Qarasu District"
@@ -702,8 +702,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-2",
       "districtKey": "Костанайский",
-      "kk": "мектебі имени К. Каримова",
-      "en": "Secondary School имени К. Каримова",
+      "kk": "К. Каримова атындағы мектебі",
+      "en": "К. Каримова Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -713,16 +713,16 @@ window.KOSTANAY_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Директор: Ибраева Салтанат Кенжехановна,",
-        "en": "Director: Ибраева Салтанат Кенжехановна,"
+        "kk": "Директор: Ибраева Салтанат Кенжехановна",
+        "en": "Director: Ибраева Салтанат Кенжехановна"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-kostanay-district-3",
       "districtKey": "Костанайский",
-      "kk": "мектебі села Қостомар",
-      "en": "Secondary School села Қостомар",
+      "kk": "Қостомар мектебі",
+      "en": "Қостомар Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -740,8 +740,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kostanay-district-4",
       "districtKey": "Костанайский",
-      "kk": "Абайская мектебі",
-      "en": "Абайская Basic Secondary School",
+      "kk": "Абайская основная мектебі",
+      "en": "Абайская основная Secondary School",
       "location": {
         "kk": "Қостанай ауданы",
         "en": "Kostanay District"
@@ -800,7 +800,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Сосновская мектебі",
       "en": "Сосновская Secondary School",
       "location": {
-        "kk": "Мөндікара ауданы",
+        "kk": "Меңдіқara ауданы",
         "en": "Mendykara District"
       },
       "badge": {
@@ -819,7 +819,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Джангильдинская мектебі",
       "en": "Джангильдинская Secondary School",
       "location": {
-        "kk": "Мөндікара ауданы",
+        "kk": "Меңдіқara ауданы",
         "en": "Mendykara District"
       },
       "badge": {
@@ -838,7 +838,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Буденновская мектебі",
       "en": "Буденновская Secondary School",
       "location": {
-        "kk": "Мөндікара ауданы",
+        "kk": "Меңдіқara ауданы",
         "en": "Mendykara District"
       },
       "badge": {
@@ -873,8 +873,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-nauryzym-2",
       "districtKey": "Наурызымский",
-      "kk": "Улендинская мектебі",
-      "en": "Улендинская Basic Secondary School",
+      "kk": "Улендинская основная мектебі",
+      "en": "Улендинская основная Secondary School",
       "location": {
         "kk": "Наурызым ауданы",
         "en": "Nauryzym District"
@@ -892,8 +892,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-nauryzym-3",
       "districtKey": "Наурызымский",
-      "kk": "Мерекенская мектебі",
-      "en": "Мерекенская Basic Secondary School",
+      "kk": "Мерекенская основная мектебі",
+      "en": "Мерекенская основная Secondary School",
       "location": {
         "kk": "Наурызым ауданы",
         "en": "Nauryzym District"
@@ -987,8 +987,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mailin-5",
       "districtKey": "Б. Майлина",
-      "kk": "мектебі имени Сапара Ергалиева",
-      "en": "Secondary School имени Сапара Ергалиева",
+      "kk": "Сапара Ергалиева атындағы мектебі",
+      "en": "Сапара Ергалиева Secondary School",
       "location": {
         "kk": "Б. Майлин ауданы",
         "en": "B. Mailin District"
@@ -1009,7 +1009,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Краснодонская мектебі",
       "en": "Краснодонская Secondary School",
       "location": {
-        "kk": "Сарыкөл ауданы",
+        "kk": "Сariesköl ауданы",
         "en": "Sarykol District"
       },
       "badge": {
@@ -1028,7 +1028,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Барвиновская мектебі",
       "en": "Барвиновская Secondary School",
       "location": {
-        "kk": "Сарыкөл ауданы",
+        "kk": "Сariesköl ауданы",
         "en": "Sarykol District"
       },
       "badge": {
@@ -1047,7 +1047,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Крыловская мектебі",
       "en": "Крыловская Secondary School",
       "location": {
-        "kk": "Сарыкөл ауданы",
+        "kk": "Сariesköl ауданы",
         "en": "Sarykol District"
       },
       "badge": {
@@ -1123,7 +1123,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Успеновская мектебі",
       "en": "Успеновская Secondary School",
       "location": {
-        "kk": "Федоров ауданы",
+        "kk": "Федорov ауданы",
         "en": "Fedorov District"
       },
       "badge": {
@@ -1142,7 +1142,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Кенаральская мектебі",
       "en": "Кенаральская Secondary School",
       "location": {
-        "kk": "Федоров ауданы",
+        "kk": "Федорov ауданы",
         "en": "Fedorov District"
       },
       "badge": {
@@ -1161,7 +1161,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Ленинская мектебі",
       "en": "Ленинская Secondary School",
       "location": {
-        "kk": "Федоров ауданы",
+        "kk": "Федорov ауданы",
         "en": "Fedorov District"
       },
       "badge": {
@@ -1180,7 +1180,7 @@ window.KOSTANAY_SCHOOLS = {
       "kk": "Новошумная мектебі",
       "en": "Новошумная Secondary School",
       "location": {
-        "kk": "Федоров ауданы",
+        "kk": "Федорov ауданы",
         "en": "Fedorov District"
       },
       "badge": {
@@ -1196,8 +1196,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-rudny-1",
       "districtKey": "г. Рудный",
-      "kk": "Перцевская мектебі",
-      "en": "Перцевская Basic Secondary School",
+      "kk": "Перцевская основная мектебі",
+      "en": "Перцевская основная Secondary School",
       "location": {
         "kk": "Рудный қ.",
         "en": "Rudny city"
@@ -1215,8 +1215,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-1",
       "districtKey": "г. Аркалык",
-      "kk": "мектебі имени А.Макаренко",
-      "en": "Secondary School имени А.Макаренко",
+      "kk": "А.Макаренко атындағы мектебі",
+      "en": "А.Макаренко Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1234,8 +1234,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-2",
       "districtKey": "г. Аркалык",
-      "kk": "Ангарская мектебі",
-      "en": "Ангарская Basic Secondary School",
+      "kk": "Ангарская основная мектебі",
+      "en": "Ангарская основная Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1253,8 +1253,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-3",
       "districtKey": "г. Аркалык",
-      "kk": "мектебі имени Т. Аубакирова",
-      "en": "Basic Secondary School имени Т. Аубакирова",
+      "kk": "Основная мектебі Т. Аубакирова атындағы мектебі",
+      "en": "Основная Secondary School Т. Аубакирова Basic Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1272,8 +1272,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-4",
       "districtKey": "г. Аркалык",
-      "kk": "мектебі №3 им. Б.Майлина",
-      "en": "Secondary School №3 им. Б.Майлина",
+      "kk": "№3 им. Б.Майлина мектебі",
+      "en": "№3 им. Б.Майлина Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1291,8 +1291,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-5",
       "districtKey": "г. Аркалык",
-      "kk": "Караторгайская мектебі",
-      "en": "Караторгайская Basic Secondary School",
+      "kk": "Караторгайская основная мектебі",
+      "en": "Караторгайская основная Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"
@@ -1310,8 +1310,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-arkalyk-6",
       "districtKey": "г. Аркалык",
-      "kk": "Каиндинская мектебі",
-      "en": "Каиндинская Basic Secondary School",
+      "kk": "Каиндинская основная мектебі",
+      "en": "Каиндинская основная Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"

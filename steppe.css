@@ -597,14 +597,6 @@ body.map-schools-open .region-schools-block {
 }
 .school-card-photo { position: relative; aspect-ratio: 16 / 11; overflow: hidden; background: var(--cream-deep); }
 .school-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.school-card-badge {
-  position: absolute; left: 12px; top: 12px;
-  background: rgba(255,255,255,0.94);
-  color: var(--accent-deep);
-  font-family: var(--fh); font-weight: 800; font-size: 10px;
-  letter-spacing: 0.04em; text-transform: uppercase;
-  padding: 5px 10px; border-radius: 100px;
-}
 .school-card-body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; }
 .school-card-loc {
   font-family: var(--fh); font-weight: 700; font-size: 12.5px;

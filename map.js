@@ -443,7 +443,6 @@
       return '<article class="school-card" style="animation-delay:' + (0.05 * i) + 's">' +
         '<div class="school-card-photo">' +
           '<img src="' + s.image + '" alt="" loading="lazy" />' +
-          '<span class="school-card-badge">' + bi(s.badge.kk, s.badge.en) + '</span>' +
         '</div>' +
         '<div class="school-card-body">' +
           '<p class="school-card-loc">' +

@@ -83,8 +83,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-abai-district-1",
       "districtKey": "Абайский",
-      "kk": "имени С.Бекбосынова мектебі",
-      "en": "имени С.Бекбосынова Secondary School",
+      "kk": "С.Бекбосынова атындағы мектебі",
+      "en": "С.Бекбосынова Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -121,8 +121,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-abai-district-3",
       "districtKey": "Абайский",
-      "kk": "имени Шакарима мектебі",
-      "en": "имени Шакарима Secondary School",
+      "kk": "Шакарима атындағы мектебі",
+      "en": "Шакарима Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -140,8 +140,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-aqsuat-1",
       "districtKey": "Ақсуат",
-      "kk": "имени Сасан би мектебі",
-      "en": "имени Сасан би Secondary School",
+      "kk": "Сасан би атындағы мектебі",
+      "en": "Сасан би Secondary School",
       "location": {
         "kk": "Ақсуат ауданы",
         "en": "Aqsuat District"
@@ -197,8 +197,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-ayagoz-1",
       "districtKey": "Аягозский",
-      "kk": "имени Ж.Жабаева",
-      "en": "имени Ж.Жабаева",
+      "kk": "Ж.Жабаева атындағы мектебі",
+      "en": "Ж.Жабаева Secondary School",
       "location": {
         "kk": "Аягөз ауданы",
         "en": "Ayagoz District"
@@ -235,8 +235,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-ayagoz-3",
       "districtKey": "Аягозский",
-      "kk": "имени Б.Майлина",
-      "en": "имени Б.Майлина",
+      "kk": "Б.Майлина атындағы мектебі",
+      "en": "Б.Майлина Secondary School",
       "location": {
         "kk": "Аягөз ауданы",
         "en": "Ayagoz District"
@@ -273,8 +273,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-beskaragai-2",
       "districtKey": "Бескарагайский",
-      "kk": "имени Нурлыбека Баймуратова мектебі",
-      "en": "имени Нурлыбека Баймуратова Secondary School",
+      "kk": "Нурлыбека Баймуратова атындағы мектебі",
+      "en": "Нурлыбека Баймуратова Secondary School",
       "location": {
         "kk": "Бесқарағай ауданы",
         "en": "Beskaragai District"
@@ -330,8 +330,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-borodulikha-2",
       "districtKey": "Бородулихинский",
-      "kk": "имени М.Ауэзова мектебі",
-      "en": "имени М.Ауэзова Secondary School",
+      "kk": "М.Ауэзова атындағы мектебі",
+      "en": "М.Ауэзова Secondary School",
       "location": {
         "kk": "Бородулих ауданы",
         "en": "Borodulikha District"
@@ -387,8 +387,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-zharma-2",
       "districtKey": "Жарминский",
-      "kk": "имени Д. Калматаева мектебі",
-      "en": "имени Д. Калматаева Secondary School",
+      "kk": "Д. Калматаева атындағы мектебі",
+      "en": "Д. Калматаева Secondary School",
       "location": {
         "kk": "Жарма ауданы",
         "en": "Zharma District"
@@ -425,7 +425,7 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-zhana-semey-1",
       "districtKey": "Жаңасемей",
-      "kk": "Булакская средняя общеобразовательная мектебі",
+      "kk": "Булакская средняя мектебі",
       "en": "Булакская средняя Secondary School",
       "location": {
         "kk": "Жаңасемей ауданы",
@@ -463,7 +463,7 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-zhana-semey-3",
       "districtKey": "Жаңасемей",
-      "kk": "Турксибская средняя общеобразовательная мектебі",
+      "kk": "Турксибская средняя мектебі",
       "en": "Турксибская средняя Secondary School",
       "location": {
         "kk": "Жаңасемей ауданы",
@@ -596,8 +596,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-urzhar-1",
       "districtKey": "Урджарский",
-      "kk": "мектебі-сад имени К.Игенбайұлы",
-      "en": "Secondary School-сад имени К.Игенбайұлы",
+      "kk": "мектебі-сад К.Игенбайұлы атындағы мектебі",
+      "en": "Secondary School-сад К.Игенбайұлы Secondary School",
       "location": {
         "kk": "Өржар ауданы",
         "en": "Urzhar District"
@@ -615,8 +615,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-urzhar-2",
       "districtKey": "Урджарский",
-      "kk": "имени Ауэзова мектебі",
-      "en": "имени Ауэзова Secondary School",
+      "kk": "Ауэзова атындағы мектебі",
+      "en": "Ауэзова Secondary School",
       "location": {
         "kk": "Өржар ауданы",
         "en": "Urzhar District"
@@ -691,7 +691,7 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-kurchatov-3",
       "districtKey": "г. Курчатов",
-      "kk": "Букенчинская средняя общеобразовательная мектебі",
+      "kk": "Букенчинская средняя мектебі",
       "en": "Букенчинская средняя Secondary School",
       "location": {
         "kk": "Көршатов қ.",

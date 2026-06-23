@@ -86,8 +86,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-3",
       "districtKey": "Караганда",
-      "kk": "№11 мектебі",
-      "en": "Basic Secondary School №11",
+      "kk": "Основная мектебі №11",
+      "en": "Основная Secondary School №11",
       "location": {
         "kk": "Қараганды қ.",
         "en": "Karaganda city"
@@ -143,8 +143,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-6",
       "districtKey": "Караганда",
-      "kk": "имени Жакыпа Акбаева мектебі",
-      "en": "имени Жакыпа Акбаева Secondary School",
+      "kk": "Жакыпа Акбаева атындағы мектебі",
+      "en": "Жакыпа Акбаева Secondary School",
       "location": {
         "kk": "Қараганды қ.",
         "en": "Karaganda city"
@@ -162,8 +162,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-7",
       "districtKey": "Караганда",
-      "kk": "имени Ю.Н.Павлова мектебі",
-      "en": "имени Ю.Н.Павлова Secondary School",
+      "kk": "Ю.Н.Павлова атындағы мектебі",
+      "en": "Ю.Н.Павлова Secondary School",
       "location": {
         "kk": "Қараганды қ.",
         "en": "Karaganda city"
@@ -238,8 +238,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-11",
       "districtKey": "Караганда",
-      "kk": "имени академика Е.А.Букетова мектебі",
-      "en": "имени академика Е.А.Букетова Secondary School",
+      "kk": "академика Е.А.Букетова атындағы мектебі",
+      "en": "академика Е.А.Букетова Secondary School",
       "location": {
         "kk": "Қараганды қ.",
         "en": "Karaganda city"
@@ -314,8 +314,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-15",
       "districtKey": "Караганда",
-      "kk": "имени Габидена Мустафина мектебі",
-      "en": "имени Габидена Мустафина Secondary School",
+      "kk": "Габидена Мустафина атындағы мектебі",
+      "en": "Габидена Мустафина Secondary School",
       "location": {
         "kk": "Қараганды қ.",
         "en": "Karaganda city"
@@ -371,8 +371,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-1",
       "districtKey": "Абай",
-      "kk": "имени Прокофия Корниенко мектебі",
-      "en": "имени Прокофия Корниенко Secondary School",
+      "kk": "Прокофия Корниенко атындағы мектебі",
+      "en": "Прокофия Корниенко Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -409,8 +409,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-3",
       "districtKey": "Абай",
-      "kk": "ОШ имени Касыма Аманжолова",
-      "en": "ОШ имени Касыма Аманжолова",
+      "kk": "Касыма Аманжолова атындағы мектебі",
+      "en": "ОШ Касыма Аманжолова Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -466,8 +466,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-6",
       "districtKey": "Абай",
-      "kk": "Опорная мектебі (ресурсный центр) имени Ыбырая Алтынсарина",
-      "en": "Опорная School (ресурсный центр) имени Ыбырая Алтынсарина",
+      "kk": "Опорная мектебі (ресурсный центр) Ыбырая Алтынсарина\" атындағы мектебі",
+      "en": "Опорная School (ресурсный центр) Ыбырая Алтынсарина\" Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -485,8 +485,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-7",
       "districtKey": "Абай",
-      "kk": "Опорная мектебі (ресурсный центр) имени Абая",
-      "en": "Опорная School (ресурсный центр) имени Абая",
+      "kk": "Опорная мектебі (ресурсный центр) Абая атындағы мектебі",
+      "en": "Опорная School (ресурсный центр) Абая Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -523,8 +523,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-9",
       "districtKey": "Абай",
-      "kk": "«мектебі №9",
-      "en": "КГУ «Secondary School №9",
+      "kk": "№9 мектебі",
+      "en": "№9 Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -542,8 +542,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-10",
       "districtKey": "Абай",
-      "kk": "Опорная мектебі (ресурсный центр) имени Бауыржана Момышулы",
-      "en": "Опорная School (ресурсный центр) имени Бауыржана Момышулы",
+      "kk": "Опорная мектебі (ресурсный центр) Бауыржана Момышулы атындағы мектебі",
+      "en": "Опорная School (ресурсный центр) Бауыржана Момышулы Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -561,8 +561,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-11",
       "districtKey": "Абай",
-      "kk": "имени Мукагали Макатаева мектебі",
-      "en": "имени Мукагали Макатаева Secondary School",
+      "kk": "Мукагали Макатаева\" атындағы мектебі",
+      "en": "Мукагали Макатаева\" Secondary School",
       "location": {
         "kk": "Абай ауданы",
         "en": "Abai District"
@@ -751,8 +751,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-1",
       "districtKey": "Каркаралинск",
-      "kk": "Средняя мектебі №2 имени Алимхана Ермекова города Каркаралинска",
-      "en": "Средняя Secondary School №2 имени Алимхана Ермекова города Каркаралинска",
+      "kk": "Средняя мектебі №2 Алимхана Ермекова атындағы мектебі",
+      "en": "Средняя Secondary School №2 Алимхана Ермекова Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
         "en": "Karkaraly city"
@@ -808,8 +808,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-4",
       "districtKey": "Каркаралинск",
-      "kk": "Средняя мектебі имени Нуркена Абдирова №10 села Жарлы",
-      "en": "Средняя Secondary School имени Нуркена Абдирова №10 села Жарлы",
+      "kk": "Средняя мектебі Нуркена Абдирова №10 атындағы мектебі",
+      "en": "Средняя Secondary School Нуркена Абдирова №10 Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
         "en": "Karkaraly city"
@@ -827,8 +827,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-5",
       "districtKey": "Каркаралинск",
-      "kk": "\"Средняя мектебі №12 имени Алибека Буркитбаева",
-      "en": "КГУ \"Средняя Secondary School №12 имени Алибека Буркитбаева",
+      "kk": "Средняя мектебі №12 Алибека Буркитбаева атындағы мектебі",
+      "en": "Средняя Secondary School №12 Алибека Буркитбаева Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
         "en": "Karkaraly city"
@@ -922,8 +922,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-10",
       "districtKey": "Каркаралинск",
-      "kk": "Опорная мектебі (ресурсный центр) в базе средней общеобразовательной школы №43 имени Кажыкена Смайылова села Егиндыбулак",
-      "en": "Опорная School (ресурсный центр) в базе средней общеобразовательной школы №43 имени Кажыкена Смайылова села Егиндыбулак",
+      "kk": "Опорная мектебі (ресурсный центр) в базе средней общеобразовательной школы №43 Кажыкена Смайылова атындағы мектебі",
+      "en": "Опорная School (ресурсный центр) в базе средней общеобразовательной школы №43 Кажыкена Смайылова Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
         "en": "Karkaraly city"
@@ -1321,8 +1321,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-temirtau-21",
       "districtKey": "Темиртау",
-      "kk": "мектебі-лицей имени Б.Момышулы",
-      "en": "School-лицей имени Б.Момышулы",
+      "kk": "мектебі-лицей Б.Момышулы атындағы мектебі",
+      "en": "School-лицей Б.Момышулы Secondary School",
       "location": {
         "kk": "Теміртау қ.",
         "en": "Temirtau city"
@@ -1473,8 +1473,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-1",
       "districtKey": "Шахтинск",
-      "kk": "– гимназия имени Шокана Уалиханова мектебі",
-      "en": "School – гимназия имени Шокана Уалиханова",
+      "kk": "– гимназия Шокана Уалиханова атындағы мектебі",
+      "en": "– гимназия Шокана Уалиханова Secondary School",
       "location": {
         "kk": "Шахтинск қ.",
         "en": "Shakhtinsk city"
@@ -1511,8 +1511,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-3",
       "districtKey": "Шахтинск",
-      "kk": "имени Евнея Букетова мектебі",
-      "en": "имени Евнея Букетова Secondary School",
+      "kk": "Евнея Букетова атындағы мектебі",
+      "en": "Евнея Букетова Secondary School",
       "location": {
         "kk": "Шахтинск қ.",
         "en": "Shakhtinsk city"
@@ -1606,8 +1606,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-8",
       "districtKey": "Шахтинск",
-      "kk": "имени Санжара Асфендиярова мектебі",
-      "en": "имени Санжара Асфендиярова Secondary School",
+      "kk": "Санжара Асфендиярова атындағы мектебі",
+      "en": "Санжара Асфендиярова Secondary School",
       "location": {
         "kk": "Шахтинск қ.",
         "en": "Shakhtinsk city"
@@ -1663,8 +1663,8 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-11",
       "districtKey": "Шахтинск",
-      "kk": "мектебі-лицей имени А.Букейханова",
-      "en": "School-лицей имени А.Букейханова",
+      "kk": "мектебі-лицей А.Букейханова атындағы мектебі",
+      "en": "School-лицей А.Букейханова Secondary School",
       "location": {
         "kk": "Шахтинск қ.",
         "en": "Shakhtinsk city"

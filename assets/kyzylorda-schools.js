@@ -94,7 +94,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-aral-3",
       "districtKey": "Аральский район",
       "kk": "№57 Е.Көшербаев атындағы мектебі",
-      "en": "№57 Е.Көшербаев атындағы Secondary School",
+      "en": "№57 Е.Көшербаев Secondary School",
       "location": {
         "kk": "Арал ауданы",
         "en": "Aral District"
@@ -455,7 +455,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhalagash-1",
       "districtKey": "Жалагашский район",
       "kk": "№202 Зейнолла Жарқынбаев атындағы мектебі",
-      "en": "№202 Зейнолла Жарқынбаев атындағы Secondary School",
+      "en": "№202 Зейнолла Жарқынбаев Secondary School",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -702,7 +702,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-syrdarya-7",
       "districtKey": "Сырдарьинский район",
       "kk": "№132 Т.Айтбаев атындағы мектебі",
-      "en": "№132 Т.Айтбаев атындағы Secondary School",
+      "en": "№132 Т.Айтбаев Secondary School",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -759,7 +759,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-shieli-3",
       "districtKey": "Шиелийский район",
       "kk": "№251 М.Әуезов атындағы мектебі",
-      "en": "№251 М.Әуезов атындағы Secondary School",
+      "en": "№251 М.Әуезов Secondary School",
       "location": {
         "kk": "Шиелі ауданы",
         "en": "Shieli District"
@@ -1024,7 +1024,7 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-aral-9",
       "districtKey": "Аральский район",
-      "kk": "\"мектебі №22",
+      "kk": "мектебі №22",
       "en": "Коммунальное государственное учреждение \"Secondary School №22",
       "location": {
         "kk": "Арал ауданы",
@@ -1062,8 +1062,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-aral-11",
       "districtKey": "Аральский район",
-      "kk": "Основная мектебі №227 имени А.Мустафаева",
-      "en": "Основная Secondary School №227 имени А.Мустафаева",
+      "kk": "Основная мектебі №227 А.Мустафаева атындағы мектебі",
+      "en": "Основная Secondary School №227 А.Мустафаева Basic Secondary School",
       "location": {
         "kk": "Арал ауданы",
         "en": "Aral District"
