@@ -296,13 +296,13 @@
       new MutationObserver(syncLabels).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
 
       activePaths.forEach(function (item) {
+        var mapId = item.region.mapId;
         var box = item.path.getBBox();
-        var px = box.x + box.width / 2;
-        var py = box.y + box.height / 2;
-        item.region.cx = px / VB_W;
-        item.region.cy = py / VB_H;
-        var p1 = el('circle', { cx: px, cy: py, r: 7, 'class': 'pulse', 'data-pulse': item.region.id });
-        var p2 = el('circle', { cx: px, cy: py, r: 7, 'class': 'pulse pulse2', 'data-pulse': item.region.id });
+        var pos = regionLabelPos(svgLabelPositions, item.region, mapId, box);
+        item.region.cx = pos.x / VB_W;
+        item.region.cy = pos.y / VB_H;
+        var p1 = el('circle', { cx: pos.x, cy: pos.y, r: 7, 'class': 'pulse', 'data-pulse': item.region.id });
+        var p2 = el('circle', { cx: pos.x, cy: pos.y, r: 7, 'class': 'pulse pulse2', 'data-pulse': item.region.id });
         svg.appendChild(p1);
         svg.appendChild(p2);
       });
