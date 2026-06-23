@@ -42,6 +42,7 @@ def short_name(full: str) -> str:
     name = m.group(1).strip() if m else full.strip()
     name = re.sub(r"\s*отдела образования.*$", "", name, flags=re.I).strip()
     name = re.sub(r"^КГУ\s*", "", name, flags=re.I).strip()
+    name = re.sub(r"^Коммунальное государственное учреждение\s*", "", name, flags=re.I).strip()
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     name = re.sub(r"^Сош\s+", "", name, flags=re.I).strip()
     for pattern, repl in (

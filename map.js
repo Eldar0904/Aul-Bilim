@@ -33,18 +33,12 @@
       districts: []
     },
     {
-      id: 'karaganda', kk: 'Қарағанды облысы', en: 'Karaganda Region', total: 67,
+      id: 'karaganda', kk: 'Қарағанды облысы', en: 'Karaganda Region', total: 86,
       mapId: 'KZ35',
       cx: 0.583, cy: 0.515,
+      zoomScale: 2.95,
       poly: '587,250 591,250 592,254 593,251 598,251 824,289 828,339 757,436 615,436 520,324',
-      districts: [
-        { kk: 'Абай', en: 'Abai', n: 12 },
-        { kk: 'Бұқар жырау', en: 'Bukhar-Zhyrau', n: 14 },
-        { kk: 'Қарқаралы', en: 'Karkaraly', n: 9 },
-        { kk: 'Нұра', en: 'Nura', n: 10 },
-        { kk: 'Осакаров', en: 'Osakarov', n: 11 },
-        { kk: 'Шет', en: 'Shet', n: 11 }
-      ]
+      districts: []
     },
     {
       id: 'abay', kk: 'Абай облысы', en: 'Abay Region', total: 67,
@@ -145,6 +139,15 @@
       desc: {
         kk: 'Біздің бағдарлама аясында Ақмола облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
         en: 'Under our programme, schools across Akmola Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+      }
+    },
+    {
+      id: 'karaganda',
+      global: 'KARAGANDA_SCHOOLS',
+      stats: { cabinets: '145', teachers: '1300+' },
+      desc: {
+        kk: 'Біздің бағдарлама аясында Қарағанды облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across Karaganda Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
       }
     }
   ];
