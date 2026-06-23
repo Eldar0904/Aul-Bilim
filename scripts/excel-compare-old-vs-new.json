@@ -1,0 +1,210 @@
+{
+  "old_file": "c:\\Users\\Pine\\Documents\\PINE\\PR\\Жоба мектер тізімі.xlsx",
+  "new_file": "c:\\Users\\Pine\\Documents\\PINE\\PR\\Жоба мектер тізімі (1).xlsx",
+  "old": [
+    {
+      "index": 0,
+      "name": "Караганда 86 ",
+      "cols": 5,
+      "school_rows": 5
+    },
+    {
+      "index": 1,
+      "name": "Акмола МКШ 54 ",
+      "cols": 5,
+      "school_rows": 54
+    },
+    {
+      "index": 2,
+      "name": "Костанай 63 МКШ",
+      "cols": 5,
+      "school_rows": 63
+    },
+    {
+      "index": 3,
+      "name": "Абай МКШ",
+      "cols": 9,
+      "school_rows": 36
+    },
+    {
+      "index": 4,
+      "name": "КЗО ФХБ",
+      "cols": 9,
+      "school_rows": 50
+    },
+    {
+      "index": 5,
+      "name": "КЗО МКШ",
+      "cols": 8,
+      "school_rows": 8
+    },
+    {
+      "index": 6,
+      "name": "ЗКО МКШ",
+      "cols": 11,
+      "school_rows": 51
+    },
+    {
+      "index": 7,
+      "name": "ЗКО ФХБ",
+      "cols": 11,
+      "school_rows": 20
+    },
+    {
+      "index": 8,
+      "name": "Жамбыл МКШ",
+      "cols": 10,
+      "school_rows": 12
+    },
+    {
+      "index": 9,
+      "name": "Жамбыл ФХБ ",
+      "cols": 8,
+      "school_rows": 11
+    }
+  ],
+  "new": [
+    {
+      "index": 0,
+      "name": "Караганда 86 ",
+      "cols": 5,
+      "school_rows": 5
+    },
+    {
+      "index": 1,
+      "name": "Акмола МКШ 54 ",
+      "cols": 5,
+      "school_rows": 54
+    },
+    {
+      "index": 2,
+      "name": "Костанай 63 МКШ",
+      "cols": 5,
+      "school_rows": 63
+    },
+    {
+      "index": 3,
+      "name": "Абай МКШ",
+      "cols": 9,
+      "school_rows": 36
+    },
+    {
+      "index": 4,
+      "name": "КЗО ФХБ",
+      "cols": 9,
+      "school_rows": 50
+    },
+    {
+      "index": 5,
+      "name": "КЗО МКШ",
+      "cols": 8,
+      "school_rows": 8
+    },
+    {
+      "index": 6,
+      "name": "ЗКО МКШ",
+      "cols": 11,
+      "school_rows": 51
+    },
+    {
+      "index": 7,
+      "name": "ЗКО ФХБ",
+      "cols": 11,
+      "school_rows": 20
+    },
+    {
+      "index": 8,
+      "name": "Жамбыл МКШ",
+      "cols": 10,
+      "school_rows": 12
+    },
+    {
+      "index": 9,
+      "name": "Жамбыл ФХБ ",
+      "cols": 8,
+      "school_rows": 11
+    }
+  ],
+  "diff": [
+    {
+      "name": "Абай МКШ",
+      "old_schools": 36,
+      "new_schools": 36,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "Акмола МКШ 54 ",
+      "old_schools": 54,
+      "new_schools": 54,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "Жамбыл МКШ",
+      "old_schools": 12,
+      "new_schools": 12,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "Жамбыл ФХБ ",
+      "old_schools": 11,
+      "new_schools": 11,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "ЗКО МКШ",
+      "old_schools": 51,
+      "new_schools": 51,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "ЗКО ФХБ",
+      "old_schools": 20,
+      "new_schools": 20,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "КЗО МКШ",
+      "old_schools": 8,
+      "new_schools": 8,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "КЗО ФХБ",
+      "old_schools": 50,
+      "new_schools": 50,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "Караганда 86 ",
+      "old_schools": 5,
+      "new_schools": 5,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    },
+    {
+      "name": "Костанай 63 МКШ",
+      "old_schools": 63,
+      "new_schools": 63,
+      "delta": 0,
+      "in_old": true,
+      "in_new": true
+    }
+  ]
+}

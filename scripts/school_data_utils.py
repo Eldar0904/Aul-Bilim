@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-EXCEL = Path(r"c:\Users\Pine\Documents\PINE\PR\Жоба мектер тізімі.xlsx")
+EXCEL = Path(r"c:\Users\Pine\Documents\PINE\PR\Жоба мектер тізімі (1).xlsx")
 
 IMAGES = [
     "assets/optimized/home-fitout-classroom.jpg",
@@ -37,15 +37,56 @@ def clean_director(value) -> str:
     return text[:100]
 
 
+def _extract_quoted_name(full: str) -> str:
+    text = str(full).strip().strip('"').strip("'")
+    if "«" in text:
+        tail = text.rsplit("«", 1)[-1].split("»")[0].strip()
+        if tail:
+            return tail
+    m = re.search(r'"([^"]{2,120})"', text)
+    if m:
+        return m.group(1).strip()
+    return text
+
+
+def _looks_like_boilerplate(name: str) -> bool:
+    return bool(
+        re.search(
+            r"білім бөлімінің|басқармасының|отдела образования|управления образования",
+            name,
+            re.I,
+        )
+    ) and not re.search(r"№\s*\d", name)
+
+
+def _fallback_school_title(full: str) -> str | None:
+    m = re.search(
+        r"№\s*\d+\s*[^«»\"]{0,100}?(?:мектеб|мектеп|орта|школа|лицей|гимназ)",
+        full,
+        re.I,
+    )
+    if m:
+        return m.group(0).strip()
+    m = re.search(r"№\s*\d+", full)
+    if m:
+        return f"{m.group(0).strip()} мектебі"
+    return None
+
+
 def short_name(full: str) -> str:
-    m = re.search(r"[«\"]([^»\"]+)[»\"]", full)
-    name = m.group(1).strip() if m else full.strip()
+    name = _extract_quoted_name(full)
+    if _looks_like_boilerplate(name):
+        fallback = _fallback_school_title(full)
+        if fallback:
+            name = fallback
     name = re.sub(r"\s*отдела образования.*$", "", name, flags=re.I).strip()
     name = re.sub(r"^КГУ\s*", "", name, flags=re.I).strip()
     name = re.sub(r"^Коммунальное государственное учреждение\s*", "", name, flags=re.I).strip()
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     name = re.sub(r"^Сош\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
+        (r"орта мектебі", "мектебі"),
+        (r"орта мектеб", "мектебі"),
         (r"средняя школа", "мектебі"),
         (r"основная школа", "мектебі"),
         (r"основная общеобразовательная школа", "мектебі"),
@@ -68,12 +109,17 @@ def _title_case_en(name: str) -> str:
 
 
 def short_name_en(full: str) -> str:
-    m = re.search(r"[«\"]([^»\"]+)[»\"]", full)
-    name = m.group(1).strip() if m else full.strip()
+    name = _extract_quoted_name(full)
+    if _looks_like_boilerplate(name):
+        fallback = _fallback_school_title(full)
+        if fallback:
+            name = fallback
     name = re.sub(r"\s*отдела образования.*$", "", name, flags=re.I).strip()
     name = re.sub(r"^KGU\s*", "", name, flags=re.I).strip()
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
+        (r"орта мектебі", "Secondary School"),
+        (r"орта мектеб", "Secondary School"),
         (r"средняя школа", "Secondary School"),
         (r"основная общеобразовательная школа", "Basic Secondary School"),
         (r"общеобразовательная школа", "Secondary School"),

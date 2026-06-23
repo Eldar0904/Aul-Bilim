@@ -48,18 +48,11 @@
       districts: []
     },
     {
-      id: 'kyzylorda', kk: 'Қызылорда облысы', en: 'Kyzylorda Region', total: 43,
+      id: 'kyzylorda', kk: 'Қызылорда облысы', en: 'Kyzylorda Region', total: 58,
       mapId: 'KZ43',
       cx: 0.443, cy: 0.719,
       poly: '516,324 521,326 614,436 593,437 597,445 593,464 601,471 602,500 618,513 614,516 614,523 611,523 606,535 611,542 580,562 573,563 564,572 561,572 562,550 553,552 547,538 531,522 517,528 480,525 451,530 430,507 423,495 374,463 371,457 371,440 375,430 396,405 408,400 411,393 419,391 432,368 447,366 463,387 473,390 511,361 498,338 480,327',
-      districts: [
-        { kk: 'Арал', en: 'Aral', n: 7 },
-        { kk: 'Қазалы', en: 'Kazaly', n: 7 },
-        { kk: 'Қармақшы', en: 'Karmakshy', n: 7 },
-        { kk: 'Жалағаш', en: 'Zhalagash', n: 7 },
-        { kk: 'Сырдария', en: 'Syrdarya', n: 8 },
-        { kk: 'Шиелі', en: 'Shieli', n: 7 }
-      ]
+      districts: []
     },
     {
       id: 'turkistan', kk: 'Түркістан облысы', en: 'Turkistan Region', total: 43,
@@ -151,6 +144,15 @@
       desc: {
         kk: 'Біздің бағдарлама аясында Абай облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
         en: 'Under our programme, schools across Abay Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+      }
+    },
+    {
+      id: 'kyzylorda',
+      global: 'KYZYLORDA_SCHOOLS',
+      stats: { cabinets: '116', teachers: '1100+' },
+      desc: {
+        kk: 'Біздің бағдарлама аясында Қызылорда облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across Kyzylorda Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
       }
     }
   ];
