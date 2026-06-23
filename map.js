@@ -24,18 +24,12 @@
       ]
     },
     {
-      id: 'kostanay', kk: 'Қостанай облысы', en: 'Kostanay Region', total: 43,
+      id: 'kostanay', kk: 'Қостанай облысы', en: 'Kostanay Region', total: 63,
       mapId: 'KZ39',
-      cx: 0.426, cy: 0.265,
+      cx: 0.426, cy: 0.28,
+      zoomScale: 3.05,
       poly: '556,66 562,72 562,87 568,92 559,98 559,102 564,109 561,117 567,124 570,136 561,142 563,153 560,156 559,170 567,175 576,174 577,177 592,178 588,244 583,248 587,249 519,323 480,326 479,320 470,320 461,308 464,304 459,295 464,293 463,289 468,280 476,278 476,273 466,255 464,245 460,243 459,229 455,225 452,227 447,217 441,219 437,212 426,210 421,204 408,202 410,196 399,193 397,189 402,189 409,182 415,182 425,173 416,158 425,145 436,143 439,146 450,147 455,141 453,137 441,131 437,133 428,128 430,122 435,124 439,117 422,115 430,107 424,101 430,102 432,96 439,101 451,101 454,97 462,97 460,100 465,104 468,95 481,94 482,90 488,91 496,87 502,89 506,87 505,84 518,81 525,83 531,80 537,84 539,73 545,69 553,70',
-      districts: [
-        { kk: 'Меңдіқара', en: 'Mendykara', n: 8 },
-        { kk: 'Әулиекөл', en: 'Auliekol', n: 7 },
-        { kk: 'Денисов', en: 'Denisov', n: 6 },
-        { kk: 'Қарабалық', en: 'Qarabalyq', n: 7 },
-        { kk: 'Сарыкөл', en: 'Sarykol', n: 8 },
-        { kk: 'Федоров', en: 'Fedorov', n: 7 }
-      ]
+      districts: []
     },
     {
       id: 'akmola', kk: 'Ақмола облысы', en: 'Akmola Region', total: 36,
@@ -138,131 +132,39 @@
     }
   ];
 
-  REGIONS.forEach(function (r) {
-    if (r.id === 'kostanay') {
-      r.stats = { schools: '63', cabinets: '107', teachers: '1200+' };
+  function applyKostanayData() {
+    var data = window.KOSTANAY_SCHOOLS;
+    if (!data) return;
+    for (var i = 0; i < REGIONS.length; i++) {
+      if (REGIONS[i].id !== 'kostanay') continue;
+      var r = REGIONS[i];
+      r.total = data.schools.length;
+      r.districts = data.districts.map(function (d) {
+        return { kk: d.kk, en: d.en, n: d.n };
+      });
+      r.schools = data.schools;
+      r.stats = { schools: String(data.schools.length), cabinets: '107', teachers: '1200+' };
       r.desc = {
         kk: 'Біздің бағдарлама аясында Қостанай облысының мектептерінде заманауи жабдықтар орнатылып, физика, химия және биология зертханалары жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
         en: 'Under our programme, schools across Kostanay Region have received modern equipment; physics, chemistry and biology laboratories have been fully fitted out, and teacher training is underway to raise professional skills.'
       };
-      r.schools = [
-        {
-          id: 'rudny-1',
-          kk: 'Рудный ЖОББМ №1',
-          en: 'Rudny Secondary School No. 1',
-          location: { kk: 'Рудный', en: 'Rudny' },
-          badge: { kk: 'Толық жабдықталған', en: 'Fully equipped' },
-          desc: {
-            kk: 'Физика, химия және биология зертханалары заманауи жабдықтармен толық жабдықталды.',
-            en: 'Physics, chemistry and biology labs fully equipped with modern apparatus.'
-          },
-          teachers: 21,
-          image: 'assets/optimized/home-fitout-classroom.jpg'
-        },
-        {
-          id: 'arkalyk-9',
-          kk: 'Ы. Алтынсарин атындағы №9 гимназия',
-          en: 'Y. Altynsarin Gymnasium No. 9',
-          location: { kk: 'Арқалық', en: 'Arkalyk' },
-          badge: { kk: 'Зертхана', en: 'Laboratory' },
-          desc: {
-            kk: 'Химия және биология кабинеттері жаңа жиһазбен және демонстрациялық жабдықтармен жабдықталды.',
-            en: 'Chemistry and biology classrooms fitted with new furniture and demonstration equipment.'
-          },
-          teachers: 18,
-          image: 'assets/optimized/program-fitout-detail.jpg'
-        },
-        {
-          id: 'lisakovsk',
-          kk: 'Лисаковск қалалық №3 мектеп-гимназиясы',
-          en: 'Lisakovsk City School-Gymnasium No. 3',
-          location: { kk: 'Лисаковск', en: 'Lisakovsk' },
-          badge: { kk: 'STEM', en: 'STEM' },
-          desc: {
-            kk: 'STEM кабинеті цифрлық технологиялар мен инженерлік жобаларға арналған.',
-            en: 'STEM classroom designed for digital technology and engineering projects.'
-          },
-          teachers: 24,
-          image: 'assets/optimized/home-fitout-classroom.jpg'
-        },
-        {
-          id: 'mendykara',
-          kk: 'Меңдіқара аудандық №2 мектебі',
-          en: 'Mendykara District School No. 2',
-          location: { kk: 'Меңдіқара', en: 'Mendykara' },
-          badge: { kk: 'Зертхана', en: 'Laboratory' },
-          desc: {
-            kk: 'Ауыл мектебінде алғаш рет толық функционалды химия зертханасы ашылды.',
-            en: 'First fully functional chemistry laboratory opened in this rural school.'
-          },
-          teachers: 14,
-          image: 'assets/optimized/program-fitout-detail.jpg'
-        },
-        {
-          id: 'karabalyq',
-          kk: 'Қарабалық аудандық №5 мектебі',
-          en: 'Qarabalyq District School No. 5',
-          location: { kk: 'Қарабалық', en: 'Qarabalyq' },
-          badge: { kk: 'Толық жабдықталған', en: 'Fully equipped' },
-          desc: {
-            kk: 'Физика кабинеті заманауи демонстрациялық жабдықтармен жаңартылды.',
-            en: 'Physics classroom renovated with modern demonstration equipment.'
-          },
-          teachers: 16,
-          image: 'assets/optimized/home-fitout-classroom.jpg'
-        },
-        {
-          id: 'sarykol',
-          kk: 'Сарыкöl аудандық №1 мектебі',
-          en: 'Sarykol District School No. 1',
-          location: { kk: 'Сарыкöl', en: 'Sarykol' },
-          badge: { kk: 'Зертхана', en: 'Laboratory' },
-          desc: {
-            kk: 'Биология зертханасы микроскоптар мен модельдермен толық жабдықталды.',
-            en: 'Biology lab fully equipped with microscopes and models.'
-          },
-          teachers: 12,
-          image: 'assets/optimized/program-fitout-detail.jpg'
-        },
-        {
-          id: 'denisov',
-          kk: 'Денисов аудандық №3 мектебі',
-          en: 'Denisov District School No. 3',
-          location: { kk: 'Денисов', en: 'Denisov' },
-          badge: { kk: 'STEM', en: 'STEM' },
-          desc: {
-            kk: 'Цифрлық кабинет робототехника және программалауға арналған.',
-            en: 'Digital classroom designed for robotics and programming.'
-          },
-          teachers: 15,
-          image: 'assets/optimized/home-fitout-classroom.jpg'
-        },
-        {
-          id: 'auliekol',
-          kk: 'Әулиекөл аудандық №4 мектебі',
-          en: 'Auliekol District School No. 4',
-          location: { kk: 'Әулиекөл', en: 'Auliekol' },
-          badge: { kk: 'Толық жабдықталған', en: 'Fully equipped' },
-          desc: {
-            kk: 'Сыныптар заманауи жиһазбен ауыстырылып, зертханалар жабдықталды.',
-            en: 'Classrooms replaced with modern furniture and laboratories equipped.'
-          },
-          teachers: 19,
-          image: 'assets/optimized/program-fitout-detail.jpg'
-        }
-      ];
-    } else {
-      r.stats = {
-        schools: String(r.total),
-        cabinets: String(Math.round(r.total * 2.5)),
-        teachers: '500+'
-      };
-      r.desc = {
-        kk: 'Біз осы өңірдегі аудандық мектептермен жұмыс істейміз — заманауи жабдықтар, зертханалар және ұстаздарды оқыту.',
-        en: 'We work with district schools across this region — modern equipment, laboratories, and teacher training.'
-      };
-      r.schools = [];
+      break;
     }
+  }
+  applyKostanayData();
+
+  REGIONS.forEach(function (r) {
+    if (r.id === 'kostanay') return;
+    r.stats = {
+      schools: String(r.total),
+      cabinets: String(Math.round(r.total * 2.5)),
+      teachers: '500+'
+    };
+    r.desc = {
+      kk: 'Біз осы өңірдегі аудандық мектептермен жұмыс істейміз — заманауи жабдықтар, зертханалар және ұстаздарды оқыту.',
+      en: 'We work with district schools across this region — modern equipment, laboratories, and teacher training.'
+    };
+    r.schools = [];
   });
 
   var SVGNS = 'http://www.w3.org/2000/svg';
@@ -454,15 +356,16 @@
     }
 
     function applyZoom(r) {
+      var scale = r.zoomScale || SCALE;
       var W = pan.clientWidth, H = pan.clientHeight;
       var Px = r.cx * W, Py = r.cy * H;
-      var tx = W / 2 - SCALE * Px;
-      var ty = H / 2 - SCALE * Py;
-      tx = Math.min(0, Math.max(W * (1 - SCALE), tx));
-      ty = Math.min(0, Math.max(H * (1 - SCALE), ty));
+      var tx = W / 2 - scale * Px;
+      var ty = H / 2 - scale * Py;
+      tx = Math.min(0, Math.max(W * (1 - scale), tx));
+      ty = Math.min(0, Math.max(H * (1 - scale), ty));
       beginMapAnim();
       pan.style.transformOrigin = '0 0';
-      pan.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0) scale(' + SCALE + ')';
+      pan.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0) scale(' + scale + ')';
     }
 
     function parseMapHash() {
@@ -502,6 +405,12 @@
     }
 
     function renderSchoolCard(s, i) {
+      var teachersHtml = s.teachers != null
+        ? '<span class="school-card-teachers">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
+            s.teachers + ' ' + bi('мұғалім', 'teachers') +
+          '</span>'
+        : '';
       return '<article class="school-card" style="animation-delay:' + (0.05 * i) + 's">' +
         '<div class="school-card-photo">' +
           '<img src="' + s.image + '" alt="" loading="lazy" />' +
@@ -515,22 +424,58 @@
           '<h4>' + bi(s.kk, s.en) + '</h4>' +
           '<p class="school-card-desc">' + bi(s.desc.kk, s.desc.en) + '</p>' +
           '<div class="school-card-foot">' +
-            '<span class="school-card-teachers">' +
-              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
-              s.teachers + ' ' + bi('мұғалім', 'teachers') +
-            '</span>' +
+            teachersHtml +
             '<span class="school-card-link" aria-hidden="true">↗</span>' +
           '</div>' +
         '</div>' +
       '</article>';
     }
 
+    function renderSchoolsGrid(r) {
+      var schools = r.schools || [];
+      if (!schools.length) {
+        return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'School list coming soon') + '</div>';
+      }
+
+      var groups = [];
+      if (r.id === 'kostanay' && window.KOSTANAY_SCHOOLS && window.KOSTANAY_SCHOOLS.districts) {
+        var byKey = {};
+        schools.forEach(function (s) {
+          var key = s.districtKey || s.location.kk;
+          if (!byKey[key]) byKey[key] = [];
+          byKey[key].push(s);
+        });
+        window.KOSTANAY_SCHOOLS.districts.forEach(function (d) {
+          var list = byKey[d.key];
+          if (list && list.length) {
+            groups.push({ kk: d.kk, en: d.en, schools: list });
+          }
+        });
+      } else {
+        groups.push({ kk: '', en: '', schools: schools });
+      }
+
+      var cardIdx = 0;
+      var html = '';
+      groups.forEach(function (g) {
+        html += '<section class="schools-district-group">';
+        if (g.kk) {
+          html += '<h4 class="schools-district-head">' + bi(g.kk, g.en) +
+            ' <span class="schools-district-count">(' + g.schools.length + ' ' + bi('мектеп', 'schools') + ')</span></h4>';
+        }
+        html += '<div class="schools-grid">';
+        g.schools.forEach(function (s) {
+          html += renderSchoolCard(s, cardIdx++);
+        });
+        html += '</div></section>';
+      });
+      return html;
+    }
+
     function renderSchoolsSection(r) {
       if (!schoolsRoot || !schoolsBlock) return;
       var schools = r.schools || [];
-      var gridHtml = schools.length
-        ? '<div class="schools-grid">' + schools.map(renderSchoolCard).join('') + '</div>'
-        : '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'School list coming soon') + '</div>';
+      var gridHtml = renderSchoolsGrid(r);
 
       schoolsRoot.innerHTML =
         '<div class="region-schools-nav">' +

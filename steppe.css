@@ -412,7 +412,11 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 .region-schools-cta-card:hover { background: var(--accent); color: var(--ink); transform: translateY(-1px); }
 .region-schools-cta-card .cta-text { flex: 1; min-width: 0; }
 .region-schools-cta-card .cta-arrow { flex: none; font-size: 16px; line-height: 1; opacity: 0.9; }
-.district-list { display: flex; flex-direction: column; gap: 6px; }
+.district-list {
+  display: flex; flex-direction: column; gap: 6px;
+  max-height: min(42vh, 360px); overflow-y: auto;
+  padding-right: 4px;
+}
 .district { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
 .district .dn { font-family: var(--fh); font-weight: 700; font-size: 12.5px; color: var(--ink); line-height: 1.2; }
 .district .dc { font-family: var(--fh); font-weight: 800; font-size: 10px; color: var(--primary); background: #fff; border-radius: 100px; padding: 2px 8px; flex: none; white-space: nowrap; }
@@ -498,6 +502,17 @@ body.map-schools-open .region-schools-block {
   font-family: var(--fh); font-weight: 700; font-size: 11px;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--body);
 }
+.schools-district-group + .schools-district-group { margin-top: 40px; }
+.schools-district-head {
+  font-family: var(--fh);
+  font-size: clamp(17px, 2.2vw, 20px);
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--cream-deep);
+}
+.schools-district-count { font-weight: 600; color: var(--body); font-size: 14px; }
 .schools-grid-head {
   font-size: clamp(22px, 3vw, 28px);
   letter-spacing: -0.02em;
@@ -534,7 +549,8 @@ body.map-schools-open .region-schools-block {
 }
 .school-card-body h4 { font-size: 16px; line-height: 1.25; margin-bottom: 10px; }
 .school-card-desc { font-size: 13.5px; line-height: 1.55; flex: 1; margin-bottom: 14px; }
-.school-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.school-card-foot { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+.school-card-foot:has(.school-card-teachers) { justify-content: space-between; }
 .school-card-teachers {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--fh); font-weight: 700; font-size: 12.5px;
