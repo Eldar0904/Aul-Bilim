@@ -146,7 +146,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Сатемиров Серик Карбаевұлы",
         "en": "Director: Сатемиров Серик Карбаевич"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/ondiris-mektebi.png",
+      "gallery": [
+        "assets/optimized/ondiris-mektebi.png"
+      ]
     },
     {
       "id": "akmola-astrakhan-2",

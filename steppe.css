@@ -595,8 +595,49 @@ body.map-schools-open .region-schools-block {
   box-shadow: 0 12px 36px -24px rgba(27,79,138,0.28);
   display: flex; flex-direction: column;
 }
-.school-card-photo { position: relative; aspect-ratio: 16 / 11; overflow: hidden; background: var(--cream-deep); }
-.school-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.school-card-gallery { background: var(--cream-deep); }
+.school-card-gallery-main {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+.school-card-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.school-card-gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.school-card-gallery-thumb {
+  flex: none;
+  width: 56px;
+  height: 42px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  opacity: 0.72;
+  transition: opacity .18s, border-color .18s;
+}
+.school-card-gallery-thumb.is-active,
+.school-card-gallery-thumb:hover {
+  opacity: 1;
+  border-color: var(--primary);
+}
+.school-card-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .school-card-body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; }
 .school-card-loc {
   font-family: var(--fh); font-weight: 700; font-size: 12.5px;
@@ -605,6 +646,31 @@ body.map-schools-open .region-schools-block {
 }
 .school-card-body h4 { font-size: 16px; line-height: 1.25; margin-bottom: 10px; }
 .school-card-desc { font-size: 13.5px; line-height: 1.55; flex: 1; margin-bottom: 14px; }
+.school-card-video { margin-bottom: 14px; }
+.school-card-video-label {
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 8px;
+}
+.school-card-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+.school-card-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .school-card-foot { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
 .school-card-foot:has(.school-card-teachers) { justify-content: space-between; }
 .school-card-teachers {

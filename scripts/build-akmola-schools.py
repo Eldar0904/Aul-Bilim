@@ -5,6 +5,17 @@ from school_data_utils import build_region_payload, write_region_js
 
 OUT = Path(__file__).resolve().parents[1] / "assets" / "akmola-schools.js"
 
+SCHOOL_IMAGES = {
+    "akmola-astrakhan-1": "assets/optimized/ondiris-mektebi.png",
+}
+
+SCHOOL_MEDIA = {
+    "akmola-astrakhan-1": {
+        "gallery": ["assets/optimized/ondiris-mektebi.png"],
+        # "youtube": "VIDEO_ID",
+    },
+}
+
 DISTRICT_LABELS = [
     {"kk": "Астрахан ауданы", "en": "Astrakhan District", "slug": "astrakhan"},
     {"kk": "Шортанды ауданы", "en": "Shortandy District", "slug": "shortandy"},
@@ -29,6 +40,16 @@ DISTRICT_LABELS = [
 
 def main() -> None:
     payload = build_region_payload(1, DISTRICT_LABELS, "akmola")
+    for school in payload["schools"]:
+        image = SCHOOL_IMAGES.get(school["id"])
+        if image:
+            school["image"] = image
+        media = SCHOOL_MEDIA.get(school["id"])
+        if media:
+            if media.get("gallery"):
+                school["gallery"] = media["gallery"]
+            if media.get("youtube"):
+                school["youtube"] = media["youtube"]
     write_region_js(OUT, "AKMOLA_SCHOOLS", payload, "Akmola schools from Жоба мектер тізімі.xlsx")
     print(
         f"Wrote {len(payload['schools'])} schools, "
