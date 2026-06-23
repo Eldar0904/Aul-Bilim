@@ -41,17 +41,11 @@
       districts: []
     },
     {
-      id: 'abay', kk: 'Абай облысы', en: 'Abay Region', total: 67,
+      id: 'abay', kk: 'Абай облысы', en: 'Abay Region', total: 36,
       mapId: 'KZ10',
       cx: 0.78, cy: 0.52,
-      districts: [
-        { kk: 'Семей', en: 'Semey', n: 13 },
-        { kk: 'Аягөз', en: 'Ayagoz', n: 12 },
-        { kk: 'Бесқарағай', en: 'Beskaragai', n: 10 },
-        { kk: 'Бородулиха', en: 'Borodulikha', n: 11 },
-        { kk: 'Жарма', en: 'Zharma', n: 11 },
-        { kk: 'Көкпекті', en: 'Kokpekti', n: 10 }
-      ]
+      zoomScale: 2.9,
+      districts: []
     },
     {
       id: 'kyzylorda', kk: 'Қызылорда облысы', en: 'Kyzylorda Region', total: 43,
@@ -148,6 +142,15 @@
       desc: {
         kk: 'Біздің бағдарлама аясында Қарағанды облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
         en: 'Under our programme, schools across Karaganda Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+      }
+    },
+    {
+      id: 'abay',
+      global: 'ABAY_SCHOOLS',
+      stats: { cabinets: '72', teachers: '680+' },
+      desc: {
+        kk: 'Біздің бағдарлама аясында Абай облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
+        en: 'Under our programme, schools across Abay Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
       }
     }
   ];

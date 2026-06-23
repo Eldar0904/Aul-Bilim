@@ -46,9 +46,11 @@ def short_name(full: str) -> str:
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     name = re.sub(r"^Сош\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
+        (r"средняя школа", "мектебі"),
+        (r"основная школа", "мектебі"),
+        (r"основная общеобразовательная школа", "мектебі"),
         (r"общеобразовательная школа", "мектебі"),
         (r"основная средняя школа", "мектебі"),
-        (r"средняя школа", "мектебі"),
         (r"школа-гимназия", "гимназия"),
         (r"школа", "мектебі"),
     ):
@@ -72,9 +74,10 @@ def short_name_en(full: str) -> str:
     name = re.sub(r"^KGU\s*", "", name, flags=re.I).strip()
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     for pattern, repl in (
+        (r"средняя школа", "Secondary School"),
+        (r"основная общеобразовательная школа", "Basic Secondary School"),
         (r"общеобразовательная школа", "Secondary School"),
         (r"основная средняя школа", "Basic Secondary School"),
-        (r"средняя школа", "Secondary School"),
         (r"школа-гимназия", "School-Gymnasium"),
         (r"школа", "School"),
     ):
