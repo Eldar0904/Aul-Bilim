@@ -96,6 +96,7 @@
     }
     setActiveNav();
     window.addEventListener('hashchange', setActiveNav);
+    window.addEventListener('pageshow', setActiveNav);
 
     // programs.html — hub vs detail views (#fitout, #ustaz, #samruk)
     var hubIntro = document.getElementById('programs-hub-intro');
