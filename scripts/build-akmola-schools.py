@@ -19,7 +19,7 @@ SCHOOL_MEDIA = {
             "assets/optimized/ondiris/ondiris-classroom-4.png",
             "assets/optimized/ondiris/ondiris-plaque.png",
         ],
-        # "youtube": "VIDEO_ID",
+        "youtube": "Kn1wxXwTf7I",
     },
 }
 

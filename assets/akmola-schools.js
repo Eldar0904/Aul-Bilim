@@ -154,7 +154,8 @@ window.AKMOLA_SCHOOLS = {
         "assets/optimized/ondiris/ondiris-classroom-3.png",
         "assets/optimized/ondiris/ondiris-classroom-4.png",
         "assets/optimized/ondiris/ondiris-plaque.png"
-      ]
+      ],
+      "youtube": "Kn1wxXwTf7I"
     },
     {
       "id": "akmola-astrakhan-2",
