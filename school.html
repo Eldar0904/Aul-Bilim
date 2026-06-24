@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=33" />
+<link rel="stylesheet" href="steppe.css?v=34" />
 </head>
 <body>
 <div class="grain"></div>
@@ -56,14 +56,19 @@
       <p class="school-page-teachers" id="school-teachers" hidden></p>
     </div>
 
-    <section class="school-gallery-block" id="school-gallery-block" hidden>
-      <h2><span lang="kk">Фото галерея</span><span lang="en">Photo gallery</span></h2>
-      <div class="school-gallery-grid" id="school-gallery-grid"></div>
-    </section>
-
-    <section class="school-video-block" id="school-video-block">
-      <h2><span lang="kk">Бейне</span><span lang="en">Video</span></h2>
-      <div class="school-video-frame" id="school-video-frame"></div>
+    <section class="school-media-split">
+      <div class="school-carousel-col" id="school-carousel-col">
+        <div class="school-carousel" id="school-carousel">
+          <div class="school-carousel-track" id="school-carousel-track"></div>
+        </div>
+        <div class="school-carousel-controls">
+          <button type="button" class="school-carousel-arrow" id="school-carousel-prev" aria-label="Previous photo">←</button>
+          <button type="button" class="school-carousel-arrow" id="school-carousel-next" aria-label="Next photo">→</button>
+        </div>
+      </div>
+      <div class="school-video-col">
+        <div class="school-video-frame" id="school-video-frame"></div>
+      </div>
     </section>
   </div>
 </main>
@@ -110,6 +115,6 @@
 <script src="assets/abay-schools.js?v=3"></script>
 <script src="assets/kyzylorda-schools.js?v=3"></script>
 <script src="assets/almaty-schools.js?v=3"></script>
-<script src="school.js?v=1"></script>
+<script src="school.js?v=2"></script>
 </body>
 </html>
