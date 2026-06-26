@@ -198,11 +198,111 @@
     if (coopRoot) {
       var coopZones = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-zone'));
       var activeZone = null;
+      var coopStage = coopRoot.querySelector('.coop-diagram-stage');
+      var coopLinksSvg = coopRoot.querySelector('.coop-links');
+      var coopDotsGroup = coopLinksSvg && coopLinksSvg.querySelector('.coop-link-dots');
+      var coopLinkDefs = [
+        { id: 'coop-link-kh', hub: 'top', partner: 'kh', target: 'bottom', bend: 0.12 },
+        { id: 'coop-link-bi', hub: 'left', partner: 'bi', target: 'right', bend: 0.14 },
+        { id: 'coop-link-local', hub: 'right', partner: 'local', target: 'left', bend: 0.14 }
+      ];
+      var coopLinkTimer = null;
+      var coopReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function coopCardRect(zoneClass, containerRect) {
+        var zone = coopRoot.querySelector(zoneClass);
+        var card = zone && zone.querySelector('.coop-card');
+        if (!card) return null;
+        var rect = card.getBoundingClientRect();
+        return {
+          left: rect.left - containerRect.left,
+          top: rect.top - containerRect.top,
+          right: rect.right - containerRect.left,
+          bottom: rect.bottom - containerRect.top,
+          cx: rect.left - containerRect.left + rect.width / 2,
+          cy: rect.top - containerRect.top + rect.height / 2
+        };
+      }
+
+      function coopAnchor(rect, side) {
+        if (!rect) return null;
+        if (side === 'top') return { x: rect.cx, y: rect.top };
+        if (side === 'bottom') return { x: rect.cx, y: rect.bottom };
+        if (side === 'left') return { x: rect.left, y: rect.cy };
+        if (side === 'right') return { x: rect.right, y: rect.cy };
+        return { x: rect.cx, y: rect.cy };
+      }
+
+      function coopQuadPath(start, end, bend) {
+        var mx = (start.x + end.x) / 2;
+        var my = (start.y + end.y) / 2;
+        var dx = end.x - start.x;
+        var dy = end.y - start.y;
+        var len = Math.sqrt(dx * dx + dy * dy) || 1;
+        var px = -dy / len;
+        var py = dx / len;
+        var cx = mx + px * len * bend;
+        var cy = my + py * len * bend;
+        return 'M' + start.x.toFixed(1) + ' ' + start.y.toFixed(1) +
+          ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
+          ' ' + end.x.toFixed(1) + ' ' + end.y.toFixed(1);
+      }
+
+      function coopBuildDots(pathId, duration) {
+        if (!coopDotsGroup || coopReducedMotion) return '';
+        var dots = '';
+        var offsets = ['0s', (duration * 0.33).toFixed(2) + 's', (duration * 0.66).toFixed(2) + 's'];
+        for (var i = 0; i < offsets.length; i++) {
+          dots += '<circle class="coop-link-dot" r="3.5">' +
+            '<animateMotion dur="' + duration + 's" repeatCount="indefinite" begin="' + offsets[i] + '" rotate="auto">' +
+            '<mpath href="#' + pathId + '"></mpath>' +
+            '</animateMotion></circle>';
+        }
+        return dots;
+      }
+
+      function updateCoopLinks() {
+        if (!coopStage || !coopLinksSvg) return;
+        if (window.innerWidth <= 900) return;
+
+        var stageRect = coopStage.getBoundingClientRect();
+        var width = Math.max(1, Math.round(stageRect.width));
+        var height = Math.max(1, Math.round(stageRect.height));
+        var jf = coopCardRect('.coop-zone--jf', stageRect);
+        if (!jf) return;
+
+        coopLinksSvg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+        coopLinksSvg.setAttribute('width', width);
+        coopLinksSvg.setAttribute('height', height);
+
+        var dotsHtml = '';
+        coopLinkDefs.forEach(function (link) {
+          var pathEl = coopLinksSvg.querySelector('#' + link.id);
+          var partner = coopCardRect('.coop-zone--' + link.partner, stageRect);
+          if (!pathEl || !partner) return;
+
+          var start = coopAnchor(jf, link.hub);
+          var end = coopAnchor(partner, link.target);
+          if (!start || !end) return;
+
+          pathEl.setAttribute('d', coopQuadPath(start, end, link.bend));
+          pathEl.classList.toggle('is-active', !!(activeZone && activeZone.classList.contains('coop-zone--' + link.partner)));
+          dotsHtml += coopBuildDots(link.id, 3.6);
+        });
+
+        if (coopDotsGroup) coopDotsGroup.innerHTML = dotsHtml;
+      }
+
+      function scheduleCoopLinks() {
+        window.clearTimeout(coopLinkTimer);
+        coopLinkTimer = window.setTimeout(updateCoopLinks, 80);
+      }
 
       function updateCoopPadding() {
         if (!activeZone) {
           coopRoot.classList.remove('has-open-drop');
           coopRoot.style.removeProperty('--coop-drop-pad');
+          scheduleCoopLinks();
           return;
         }
 
@@ -220,6 +320,7 @@
           coopRoot.classList.remove('has-open-drop');
           coopRoot.style.removeProperty('--coop-drop-pad');
         }
+        scheduleCoopLinks();
       }
 
       function closeCoopZone(zone) {
@@ -237,13 +338,17 @@
           drop.setAttribute('aria-hidden', 'true');
         }
         if (activeZone === zone) activeZone = null;
-        window.setTimeout(updateCoopPadding, 430);
+        window.setTimeout(function () {
+          updateCoopPadding();
+          scheduleCoopLinks();
+        }, 430);
       }
 
       function closeAllCoopZones() {
         coopZones.forEach(closeCoopZone);
         activeZone = null;
         updateCoopPadding();
+        scheduleCoopLinks();
       }
 
       function openCoopZone(zone) {
@@ -266,7 +371,10 @@
         drop.style.maxHeight = height + 'px';
         activeZone = zone;
 
-        window.requestAnimationFrame(updateCoopPadding);
+        window.requestAnimationFrame(function () {
+          updateCoopPadding();
+          scheduleCoopLinks();
+        });
       }
 
       coopZones.forEach(function (zone) {
@@ -292,7 +400,22 @@
         closeAllCoopZones();
       });
 
-      window.addEventListener('resize', updateCoopPadding);
+      window.addEventListener('resize', function () {
+        updateCoopPadding();
+        scheduleCoopLinks();
+      });
+
+      if (coopStage && window.ResizeObserver) {
+        var coopResizeObserver = new ResizeObserver(scheduleCoopLinks);
+        coopResizeObserver.observe(coopStage);
+      }
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(scheduleCoopLinks);
+      }
+
+      window.addEventListener('load', scheduleCoopLinks);
+      scheduleCoopLinks();
     }
 
     // index.html — reset map/schools drill-down when navigating to #regions

@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=40" />
+<link rel="stylesheet" href="steppe.css?v=41" />
 </head>
 <body>
 <div class="grain"></div>
@@ -58,15 +58,13 @@
         </header>
 
         <div class="coop-diagram-stage">
-          <svg class="coop-arrows" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <marker id="coop-arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-                <polygon points="0 0, 8 4, 0 8" fill="var(--primary-light)" />
-              </marker>
-            </defs>
-            <path d="M500 360 L500 185" marker-end="url(#coop-arrowhead)" />
-            <path d="M500 360 L175 360" marker-end="url(#coop-arrowhead)" />
-            <path d="M500 360 L825 360" marker-end="url(#coop-arrowhead)" />
+          <svg class="coop-links" aria-hidden="true">
+            <g class="coop-link-lines">
+              <path id="coop-link-kh" class="coop-link-path" data-partner="kh" />
+              <path id="coop-link-bi" class="coop-link-path" data-partner="bi" />
+              <path id="coop-link-local" class="coop-link-path" data-partner="local" />
+            </g>
+            <g class="coop-link-dots"></g>
           </svg>
 
           <div class="coop-diagram-grid" role="tablist" aria-label="Partners">
@@ -191,7 +189,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/db.js"></script>
 <script src="uploads/content-loader.js"></script>
