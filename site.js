@@ -295,7 +295,29 @@
 
       function scheduleCoopLinks() {
         window.clearTimeout(coopLinkTimer);
-        coopLinkTimer = window.setTimeout(updateCoopLinks, 80);
+        coopLinkTimer = window.setTimeout(function () {
+          syncCoopCardSizes();
+          updateCoopLinks();
+        }, 80);
+      }
+
+      function syncCoopCardSizes() {
+        if (window.innerWidth <= 900) {
+          coopRoot.style.removeProperty('--coop-card-width');
+          coopRoot.style.removeProperty('--coop-card-height');
+          return;
+        }
+
+        coopRoot.style.removeProperty('--coop-card-width');
+        coopRoot.style.removeProperty('--coop-card-height');
+
+        window.requestAnimationFrame(function () {
+          var jfFlip = coopRoot.querySelector('.coop-zone--jf .coop-card-flip');
+          if (!jfFlip) return;
+          var rect = jfFlip.getBoundingClientRect();
+          if (rect.width > 0) coopRoot.style.setProperty('--coop-card-width', Math.round(rect.width) + 'px');
+          if (rect.height > 0) coopRoot.style.setProperty('--coop-card-height', Math.round(rect.height) + 'px');
+        });
       }
 
       function setCoopFlipped(zone, flipped) {

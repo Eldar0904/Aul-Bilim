@@ -1631,15 +1631,15 @@ body.map-schools-open .region-schools-block {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr);
+  grid-template-columns: 1fr minmax(0, 1.18fr) 1fr;
   grid-template-rows: auto auto;
   gap: 26px 22px;
   align-items: start;
 }
-.coop-zone--kh { grid-column: 2; grid-row: 1; max-width: 420px; margin: 0 auto; width: 100%; }
-.coop-zone--bi { grid-column: 1; grid-row: 2; }
-.coop-zone--jf { grid-column: 2; grid-row: 2; }
-.coop-zone--local { grid-column: 3; grid-row: 2; }
+.coop-zone--kh { grid-column: 2; grid-row: 1; width: 100%; margin: 0 auto; }
+.coop-zone--bi { grid-column: 1; grid-row: 2; width: var(--coop-card-width, 100%); justify-self: end; }
+.coop-zone--jf { grid-column: 2; grid-row: 2; width: 100%; }
+.coop-zone--local { grid-column: 3; grid-row: 2; width: var(--coop-card-width, 100%); justify-self: start; }
 
 .coop-zone {
   position: relative;
@@ -1671,6 +1671,7 @@ body.map-schools-open .region-schools-block {
   display: grid;
   transform-style: preserve-3d;
   transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  height: var(--coop-card-height, auto);
 }
 .coop-zone.is-flipped .coop-flip-inner {
   transform: rotateY(180deg);
@@ -1678,6 +1679,7 @@ body.map-schools-open .region-schools-block {
 
 .coop-card {
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 22px 24px;
   border-radius: 16px;
@@ -1686,7 +1688,7 @@ body.map-schools-open .region-schools-block {
   text-align: left;
   display: flex;
   box-sizing: border-box;
-  min-height: 118px;
+  min-height: 0;
   transition: box-shadow 0.2s ease;
 }
 .coop-card--front,
@@ -1699,10 +1701,11 @@ body.map-schools-open .region-schools-block {
   transform: rotateY(180deg);
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
 }
 .coop-card--horizontal {
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 18px;
 }
 .coop-card--front {
@@ -1880,10 +1883,10 @@ body.map-schools-open .region-schools-block {
     grid-template-rows: auto auto auto;
     gap: 18px;
   }
-  .coop-zone--kh { grid-column: 1 / -1; grid-row: 1; max-width: 420px; }
-  .coop-zone--bi { grid-column: 1; grid-row: 2; }
-  .coop-zone--jf { grid-column: 2; grid-row: 2; }
-  .coop-zone--local { grid-column: 1 / -1; grid-row: 3; max-width: 420px; margin: 0 auto; width: 100%; }
+  .coop-zone--kh { grid-column: 1 / -1; grid-row: 1; max-width: none; width: 100%; }
+  .coop-zone--bi { grid-column: 1; grid-row: 2; width: 100%; justify-self: stretch; }
+  .coop-zone--jf { grid-column: 2; grid-row: 2; width: 100%; }
+  .coop-zone--local { grid-column: 1 / -1; grid-row: 3; max-width: none; width: 100%; justify-self: stretch; }
   .coop-links { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
