@@ -193,75 +193,106 @@
       });
     });
 
-    // about.html — cooperation model hotspots
+    // about.html — cooperation model card dropdowns
     var coopRoot = document.getElementById('coop-interactive');
     if (coopRoot) {
-      var coopDrop = document.getElementById('coop-detail-drop');
-      var coopHotspots = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-hotspot'));
-      var coopDetails = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-detail'));
-      var activePartner = null;
+      var coopZones = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-zone'));
+      var activeZone = null;
 
-      function closeCoopDetail() {
-        var closing = activePartner;
-        activePartner = null;
-        coopHotspots.forEach(function (btn) {
-          btn.classList.remove('is-active');
-          btn.setAttribute('aria-selected', 'false');
-        });
-        if (coopDrop) {
-          coopDrop.style.maxHeight = '0px';
-          coopDrop.classList.remove('is-open');
-          coopDrop.setAttribute('aria-hidden', 'true');
-          window.setTimeout(function () {
-            if (!activePartner && closing) {
-              coopDetails.forEach(function (panel) { panel.hidden = true; });
-            }
-          }, 420);
+      function updateCoopPadding() {
+        if (!activeZone) {
+          coopRoot.classList.remove('has-open-drop');
+          coopRoot.style.removeProperty('--coop-drop-pad');
+          return;
+        }
+
+        var drop = activeZone.querySelector('.coop-zone-drop');
+        var figure = coopRoot.querySelector('.coop-model-figure');
+        if (!drop || !figure) return;
+
+        var figureRect = figure.getBoundingClientRect();
+        var dropRect = drop.getBoundingClientRect();
+        var overflow = Math.ceil(dropRect.bottom - figureRect.bottom + 24);
+        if (overflow > 0) {
+          coopRoot.classList.add('has-open-drop');
+          coopRoot.style.setProperty('--coop-drop-pad', overflow + 'px');
         } else {
-          coopDetails.forEach(function (panel) { panel.hidden = true; });
+          coopRoot.classList.remove('has-open-drop');
+          coopRoot.style.removeProperty('--coop-drop-pad');
         }
       }
 
-      function openCoopDetail(partner) {
-        var panel = coopRoot.querySelector('.coop-detail[data-partner="' + partner + '"]');
-        if (!panel || !coopDrop) return;
-
-        coopDetails.forEach(function (p) { p.hidden = true; });
-        panel.hidden = false;
-
-        coopHotspots.forEach(function (btn) {
-          var on = btn.getAttribute('data-partner') === partner;
-          btn.classList.toggle('is-active', on);
-          btn.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-
-        activePartner = partner;
-        coopDrop.setAttribute('aria-hidden', 'false');
-        coopDrop.classList.add('is-open');
-        coopDrop.style.maxHeight = panel.scrollHeight + 'px';
-
-        window.requestAnimationFrame(function () {
-          coopDrop.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
+      function closeCoopZone(zone) {
+        if (!zone) return;
+        var hit = zone.querySelector('.coop-zone-hit');
+        var drop = zone.querySelector('.coop-zone-drop');
+        zone.classList.remove('is-open');
+        if (hit) {
+          hit.classList.remove('is-active');
+          hit.setAttribute('aria-selected', 'false');
+          hit.setAttribute('aria-expanded', 'false');
+        }
+        if (drop) {
+          drop.style.maxHeight = '0px';
+          drop.setAttribute('aria-hidden', 'true');
+        }
+        if (activeZone === zone) activeZone = null;
+        window.setTimeout(updateCoopPadding, 430);
       }
 
-      coopHotspots.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var partner = btn.getAttribute('data-partner');
-          if (activePartner === partner) closeCoopDetail();
-          else openCoopDetail(partner);
+      function closeAllCoopZones() {
+        coopZones.forEach(closeCoopZone);
+        activeZone = null;
+        updateCoopPadding();
+      }
+
+      function openCoopZone(zone) {
+        var hit = zone.querySelector('.coop-zone-hit');
+        var drop = zone.querySelector('.coop-zone-drop');
+        var detail = zone.querySelector('.coop-detail');
+        if (!hit || !drop || !detail) return;
+
+        if (activeZone && activeZone !== zone) closeCoopZone(activeZone);
+
+        zone.classList.add('is-open');
+        hit.classList.add('is-active');
+        hit.setAttribute('aria-selected', 'true');
+        hit.setAttribute('aria-expanded', 'true');
+        drop.setAttribute('aria-hidden', 'false');
+        drop.style.maxHeight = '999px';
+        var height = detail.offsetHeight;
+        drop.style.maxHeight = '0px';
+        void drop.offsetHeight;
+        drop.style.maxHeight = height + 'px';
+        activeZone = zone;
+
+        window.requestAnimationFrame(updateCoopPadding);
+      }
+
+      coopZones.forEach(function (zone) {
+        var hit = zone.querySelector('.coop-zone-hit');
+        if (!hit) return;
+        hit.addEventListener('click', function (e) {
+          e.stopPropagation();
+          if (activeZone === zone) {
+            closeCoopZone(zone);
+            return;
+          }
+          openCoopZone(zone);
         });
       });
 
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && activePartner) closeCoopDetail();
+        if (e.key === 'Escape' && activeZone) closeAllCoopZones();
       });
 
-      coopRoot.addEventListener('click', function (e) {
-        if (!activePartner) return;
-        if (e.target.closest('.coop-hotspot') || e.target.closest('.coop-detail-drop')) return;
-        closeCoopDetail();
+      document.addEventListener('click', function (e) {
+        if (!activeZone) return;
+        if (e.target.closest('.coop-zone')) return;
+        closeAllCoopZones();
       });
+
+      window.addEventListener('resize', updateCoopPadding);
     }
 
     // index.html — reset map/schools drill-down when navigating to #regions

@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=36" />
+<link rel="stylesheet" href="steppe.css?v=37" />
 </head>
 <body>
 <div class="grain"></div>
@@ -51,44 +51,57 @@
     <div class="coop-interactive" id="coop-interactive">
       <figure class="coop-model-figure">
         <img src="img/cooperation-model-ru.png" alt="Модель сотрудничества" width="1200" height="675" loading="lazy" decoding="async" />
-        <div class="coop-hotspots" role="tablist" aria-label="Partners">
-          <button type="button" class="coop-hotspot coop-hotspot--kh" data-partner="kh" role="tab" aria-controls="coop-detail-drop" aria-selected="false" aria-label="Қазақстан халқына">
-            <span class="coop-hotspot-label" lang="kk">Қазақстан халқына</span>
-            <span class="coop-hotspot-label" lang="en">Qazaqstan Halqyina</span>
-          </button>
-          <button type="button" class="coop-hotspot coop-hotspot--bi" data-partner="bi" role="tab" aria-controls="coop-detail-drop" aria-selected="false" aria-label="Білім-Инновация">
-            <span class="coop-hotspot-label" lang="kk">Білім-Инновация</span>
-            <span class="coop-hotspot-label" lang="en">Bilim-Innovation</span>
-          </button>
-          <button type="button" class="coop-hotspot coop-hotspot--jf" data-partner="jf" role="tab" aria-controls="coop-detail-drop" aria-selected="false" aria-label="Jelken foundation">
-            <span class="coop-hotspot-label" lang="kk">Jelken foundation</span>
-            <span class="coop-hotspot-label" lang="en">Jelken Foundation</span>
-          </button>
-          <button type="button" class="coop-hotspot coop-hotspot--local" data-partner="local" role="tab" aria-controls="coop-detail-drop" aria-selected="false" aria-label="Жергілікті білім басқармалары">
-            <span class="coop-hotspot-label" lang="kk">Жергілікті білім басқармалары</span>
-            <span class="coop-hotspot-label" lang="en">Local education departments</span>
-          </button>
+        <div class="coop-zones" role="tablist" aria-label="Partners">
+          <div class="coop-zone coop-zone--kh">
+            <button type="button" class="coop-zone-hit" data-partner="kh" role="tab" aria-controls="coop-drop-kh" aria-selected="false" aria-expanded="false" aria-label="Қазақстан халқына">
+              <span class="coop-zone-hit-label" lang="kk">Қазақстан халқына</span>
+              <span class="coop-zone-hit-label" lang="en">Qazaqstan Halqyina</span>
+            </button>
+            <div class="coop-zone-drop" id="coop-drop-kh" role="tabpanel" aria-hidden="true">
+              <div class="coop-detail">
+                <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Жобаның бас демеушісі.</span><span lang="en">Lead sponsor of the project.</span></p>
+                <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Ауыл мектептерін заманауи жаратылыстану-математика, цифрлық және әмбебап кабинеттермен жабдықтауға қайырымдылық қаражат бөледі.</span><span lang="en">Allocates charitable funding to equip village schools with modern STEM, digital and universal learning classrooms.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="coop-zone coop-zone--bi">
+            <button type="button" class="coop-zone-hit" data-partner="bi" role="tab" aria-controls="coop-drop-bi" aria-selected="false" aria-expanded="false" aria-label="Білім-Инновация">
+              <span class="coop-zone-hit-label" lang="kk">Білім-Инновация</span>
+              <span class="coop-zone-hit-label" lang="en">Bilim-Innovation</span>
+            </button>
+            <div class="coop-zone-drop" id="coop-drop-bi" role="tabpanel" aria-hidden="true">
+              <div class="coop-detail">
+                <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Академиялық серіктес.</span><span lang="en">Academic partner.</span></p>
+                <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Педагогтердің біліктілігін арттыру курстарын ұйымдастырады, білімін диагностикалайды және оқу жылы бойы тұрақты тәлімгерлік (менторлық) қолдау көрсетеді.</span><span lang="en">Organises professional development courses for teachers, assesses their knowledge, and provides ongoing mentorship support throughout the school year.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="coop-zone coop-zone--jf">
+            <button type="button" class="coop-zone-hit" data-partner="jf" role="tab" aria-controls="coop-drop-jf" aria-selected="false" aria-expanded="false" aria-label="Jelken foundation">
+              <span class="coop-zone-hit-label" lang="kk">Jelken foundation</span>
+              <span class="coop-zone-hit-label" lang="en">Jelken Foundation</span>
+            </button>
+            <div class="coop-zone-drop" id="coop-drop-jf" role="tabpanel" aria-hidden="true">
+              <div class="coop-detail">
+                <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Жобаның бас операторы.</span><span lang="en">Lead operator of the project.</span></p>
+                <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Жобаның барлық кезеңдерін үйлестіреді, мектептерге инвентаризация жүргізіп, жабдықтардың сатып алынуы мен сапалы жеткізілуін қадағалайды.</span><span lang="en">Coordinates all project stages, carries out school inventories, and oversees procurement and quality delivery of equipment.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="coop-zone coop-zone--local">
+            <button type="button" class="coop-zone-hit" data-partner="local" role="tab" aria-controls="coop-drop-local" aria-selected="false" aria-expanded="false" aria-label="Жергілікті білім басқармалары">
+              <span class="coop-zone-hit-label" lang="kk">Жергілікті білім басқармалары</span>
+              <span class="coop-zone-hit-label" lang="en">Local education departments</span>
+            </button>
+            <div class="coop-zone-drop" id="coop-drop-local" role="tabpanel" aria-hidden="true">
+              <div class="coop-detail">
+                <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Инфрақұрылымдық серіктес.</span><span lang="en">Infrastructure partner.</span></p>
+                <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Оқу кабинеттерін жөндеуден өткізеді, интернет жылдамдығын қамтамасыз етеді және онлайн-сабақтардың, біліктілік курстарының жүзеге асуын қаржыландырып, ұйымдастырады.</span><span lang="en">Renovates classrooms, provides internet connectivity, and funds and organises online lessons and qualification courses.</span></p>
+              </div>
+            </div>
+          </div>
         </div>
       </figure>
-
-      <div class="coop-detail-drop" id="coop-detail-drop" role="tabpanel" aria-hidden="true">
-        <article class="coop-detail" data-partner="kh" hidden>
-          <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Жобаның бас демеушісі.</span><span lang="en">Lead sponsor of the project.</span></p>
-          <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Ауыл мектептерін заманауи жаратылыстану-математика, цифрлық және әмбебап кабинеттермен жабдықтауға қайырымдылық қаражат бөледі.</span><span lang="en">Allocates charitable funding to equip village schools with modern STEM, digital and universal learning classrooms.</span></p>
-        </article>
-        <article class="coop-detail" data-partner="jf" hidden>
-          <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Жобаның бас операторы.</span><span lang="en">Lead operator of the project.</span></p>
-          <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Жобаның барлық кезеңдерін үйлестіреді, мектептерге инвентаризация жүргізіп, жабдықтардың сатып алынуы мен сапалы жеткізілуін қадағалайды.</span><span lang="en">Coordinates all project stages, carries out school inventories, and oversees procurement and quality delivery of equipment.</span></p>
-        </article>
-        <article class="coop-detail" data-partner="bi" hidden>
-          <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Академиялық серіктес.</span><span lang="en">Academic partner.</span></p>
-          <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Педагогтердің біліктілігін арттыру курстарын ұйымдастырады, білімін диагностикалайды және оқу жылы бойы тұрақты тәлімгерлік (менторлық) қолдау көрсетеді.</span><span lang="en">Organises professional development courses for teachers, assesses their knowledge, and provides ongoing mentorship support throughout the school year.</span></p>
-        </article>
-        <article class="coop-detail" data-partner="local" hidden>
-          <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Инфрақұрылымдық серіктес.</span><span lang="en">Infrastructure partner.</span></p>
-          <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Оқу кабинеттерін жөндеуден өткізеді, интернет жылдамдығын қамтамасыз етеді және онлайн-сабақтардың, біліктілік курстарының жүзеге асуын қаржыландырып, ұйымдастырады.</span><span lang="en">Renovates classrooms, provides internet connectivity, and funds and organises online lessons and qualification courses.</span></p>
-        </article>
-      </div>
     </div>
   </div>
 </section>
@@ -123,7 +136,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=4"></script>
+<script src="site.js?v=5"></script>
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/db.js"></script>
 <script src="uploads/content-loader.js"></script>
