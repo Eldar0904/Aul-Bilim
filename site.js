@@ -193,6 +193,77 @@
       });
     });
 
+    // about.html — cooperation model hotspots
+    var coopRoot = document.getElementById('coop-interactive');
+    if (coopRoot) {
+      var coopDrop = document.getElementById('coop-detail-drop');
+      var coopHotspots = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-hotspot'));
+      var coopDetails = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-detail'));
+      var activePartner = null;
+
+      function closeCoopDetail() {
+        var closing = activePartner;
+        activePartner = null;
+        coopHotspots.forEach(function (btn) {
+          btn.classList.remove('is-active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+        if (coopDrop) {
+          coopDrop.style.maxHeight = '0px';
+          coopDrop.classList.remove('is-open');
+          coopDrop.setAttribute('aria-hidden', 'true');
+          window.setTimeout(function () {
+            if (!activePartner && closing) {
+              coopDetails.forEach(function (panel) { panel.hidden = true; });
+            }
+          }, 420);
+        } else {
+          coopDetails.forEach(function (panel) { panel.hidden = true; });
+        }
+      }
+
+      function openCoopDetail(partner) {
+        var panel = coopRoot.querySelector('.coop-detail[data-partner="' + partner + '"]');
+        if (!panel || !coopDrop) return;
+
+        coopDetails.forEach(function (p) { p.hidden = true; });
+        panel.hidden = false;
+
+        coopHotspots.forEach(function (btn) {
+          var on = btn.getAttribute('data-partner') === partner;
+          btn.classList.toggle('is-active', on);
+          btn.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+
+        activePartner = partner;
+        coopDrop.setAttribute('aria-hidden', 'false');
+        coopDrop.classList.add('is-open');
+        coopDrop.style.maxHeight = panel.scrollHeight + 'px';
+
+        window.requestAnimationFrame(function () {
+          coopDrop.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+
+      coopHotspots.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var partner = btn.getAttribute('data-partner');
+          if (activePartner === partner) closeCoopDetail();
+          else openCoopDetail(partner);
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && activePartner) closeCoopDetail();
+      });
+
+      coopRoot.addEventListener('click', function (e) {
+        if (!activePartner) return;
+        if (e.target.closest('.coop-hotspot') || e.target.closest('.coop-detail-drop')) return;
+        closeCoopDetail();
+      });
+    }
+
     // index.html — reset map/schools drill-down when navigating to #regions
     var here = location.pathname.split('/').pop() || 'index.html';
     if (here === 'index.html' || here === '') {
