@@ -1636,7 +1636,7 @@ body.map-schools-open .region-schools-block {
   gap: 26px 22px;
   align-items: start;
 }
-.coop-zone--kh { grid-column: 2; grid-row: 1; max-width: 320px; margin: 0 auto; width: 100%; }
+.coop-zone--kh { grid-column: 2; grid-row: 1; max-width: 420px; margin: 0 auto; width: 100%; }
 .coop-zone--bi { grid-column: 1; grid-row: 2; }
 .coop-zone--jf { grid-column: 2; grid-row: 2; }
 .coop-zone--local { grid-column: 3; grid-row: 2; }
@@ -1646,60 +1646,98 @@ body.map-schools-open .region-schools-block {
   z-index: 1;
   min-width: 0;
 }
-.coop-zone.is-open { z-index: 6; }
+.coop-zone.is-flipped { z-index: 6; }
+
+.coop-card-flip {
+  perspective: 1100px;
+  width: 100%;
+}
+
+.coop-zone-hit {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+  position: relative;
+}
+
+.coop-flip-inner {
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.coop-zone.is-flipped .coop-flip-inner {
+  transform: rotateY(180deg);
+}
 
 .coop-card {
   width: 100%;
   margin: 0;
-  padding: 24px 22px 22px;
+  padding: 22px 24px;
   border-radius: 16px;
   border: 0;
   background: #fff;
-  text-align: center;
-  cursor: pointer;
+  text-align: left;
   display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 118px;
+  transition: box-shadow 0.2s ease;
+}
+.coop-card--front,
+.coop-card--back {
+  grid-area: 1 / 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.coop-card--back {
+  transform: rotateY(180deg);
   align-items: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  justify-content: center;
 }
-.coop-card:hover { transform: translateY(-2px); }
-.coop-card.is-active { transform: translateY(-2px); }
-
-.coop-card--kh {
-  box-shadow: 0 14px 34px -14px rgba(232, 72, 122, 0.42);
-}
-.coop-card--kh.is-active,
-.coop-card--kh:hover {
-  box-shadow: 0 18px 40px -12px rgba(232, 72, 122, 0.5);
-}
-.coop-card--bi {
-  box-shadow: 0 14px 34px -14px rgba(88, 62, 158, 0.38);
-}
-.coop-card--bi.is-active,
-.coop-card--bi:hover {
-  box-shadow: 0 18px 40px -12px rgba(88, 62, 158, 0.48);
-}
-.coop-card--local {
-  box-shadow: 0 14px 34px -14px rgba(46, 140, 90, 0.36);
-}
-.coop-card--local.is-active,
-.coop-card--local:hover {
-  box-shadow: 0 18px 40px -12px rgba(46, 140, 90, 0.46);
-}
-
-.coop-card--jf,
 .coop-card--horizontal {
   flex-direction: row;
   align-items: flex-start;
-  text-align: left;
   gap: 18px;
-  padding: 22px 24px;
+}
+.coop-card--front {
+  transition: box-shadow 0.2s ease;
+}
+
+.coop-card--kh.coop-card--front {
+  box-shadow: 0 14px 34px -14px rgba(232, 72, 122, 0.42);
+}
+.coop-zone-hit:hover .coop-card--kh.coop-card--front,
+.coop-zone-hit.is-active .coop-card--kh.coop-card--front {
+  box-shadow: 0 18px 40px -12px rgba(232, 72, 122, 0.5);
+}
+.coop-card--bi.coop-card--front {
+  box-shadow: 0 14px 34px -14px rgba(88, 62, 158, 0.38);
+}
+.coop-zone-hit:hover .coop-card--bi.coop-card--front,
+.coop-zone-hit.is-active .coop-card--bi.coop-card--front {
+  box-shadow: 0 18px 40px -12px rgba(88, 62, 158, 0.48);
+}
+.coop-card--local.coop-card--front {
+  box-shadow: 0 14px 34px -14px rgba(46, 140, 90, 0.36);
+}
+.coop-zone-hit:hover .coop-card--local.coop-card--front,
+.coop-zone-hit.is-active .coop-card--local.coop-card--front {
+  box-shadow: 0 18px 40px -12px rgba(46, 140, 90, 0.46);
+}
+
+.coop-card--jf.coop-card--front {
   color: #fff;
   background: linear-gradient(180deg, #4a9fd4 0%, #2f8fd4 42%, #1b4f8a 100%);
   box-shadow: 0 18px 42px -14px rgba(27, 79, 138, 0.48);
 }
-.coop-card--jf.is-active,
-.coop-card--jf:hover {
+.coop-zone-hit:hover .coop-card--jf.coop-card--front,
+.coop-zone-hit.is-active .coop-card--jf.coop-card--front {
   box-shadow: 0 22px 48px -12px rgba(27, 79, 138, 0.55);
 }
 .coop-card-main {
@@ -1711,15 +1749,9 @@ body.map-schools-open .region-schools-block {
 
 .coop-card-logo {
   flex: none;
-  width: 64px;
-  height: 64px;
-  margin-bottom: 16px;
-  display: block;
-}
-.coop-card--jf .coop-card-logo {
-  margin-bottom: 0;
   width: 72px;
   height: 72px;
+  display: block;
 }
 .coop-card--jf .coop-card-logo img {
   background: #fff;
@@ -1789,6 +1821,31 @@ body.map-schools-open .region-schools-block {
 .coop-card--local .coop-card-points li::before { color: #2e8c5a; }
 .coop-card--jf .coop-card-points li::before { color: rgba(255, 255, 255, 0.92); }
 
+.coop-card--back {
+  background: #fff;
+  box-shadow: 0 14px 34px -14px rgba(27, 79, 138, 0.22);
+  border: 1px solid rgba(27, 79, 138, 0.1);
+}
+.coop-card--back.coop-card--kh {
+  box-shadow: 0 14px 34px -14px rgba(232, 72, 122, 0.28);
+  border-color: rgba(232, 72, 122, 0.18);
+}
+.coop-card--back.coop-card--bi {
+  box-shadow: 0 14px 34px -14px rgba(88, 62, 158, 0.24);
+  border-color: rgba(88, 62, 158, 0.16);
+}
+.coop-card--back.coop-card--local {
+  box-shadow: 0 14px 34px -14px rgba(46, 140, 90, 0.22);
+  border-color: rgba(46, 140, 90, 0.16);
+}
+.coop-card--back.coop-card--jf {
+  box-shadow: 0 18px 42px -14px rgba(27, 79, 138, 0.35);
+  border-color: rgba(27, 79, 138, 0.2);
+}
+.coop-card-back-body {
+  width: 100%;
+}
+
 .coop-zone-hit-label {
   position: absolute;
   width: 1px;
@@ -1802,32 +1859,11 @@ body.map-schools-open .region-schools-block {
 }
 .coop-zone-hit:focus-visible {
   outline: none;
+}
+.coop-zone-hit:focus-visible .coop-card--front {
   box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--accent);
 }
 
-.coop-zone-drop {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: max-height 0.42s ease, opacity 0.28s ease, visibility 0s linear 0.42s;
-}
-.coop-zone.is-open .coop-zone-drop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: max-height 0.42s ease, opacity 0.28s ease, visibility 0s;
-}
-
-.coop-detail {
-  margin-top: 12px;
-  background: #fff;
-  border-radius: 14px;
-  border: 1px solid rgba(27, 79, 138, 0.1);
-  padding: 16px 18px;
-  box-shadow: 0 10px 28px -18px rgba(27, 79, 138, 0.28);
-}
 .coop-detail-line {
   font-size: 14px;
   line-height: 1.58;
@@ -1837,11 +1873,6 @@ body.map-schools-open .region-schools-block {
 .coop-detail-line:last-child { margin-bottom: 0; }
 .coop-detail-line strong { color: var(--ink); font-weight: 700; }
 
-.coop-interactive.has-open-drop {
-  padding-bottom: var(--coop-drop-pad, 0px);
-  transition: padding-bottom 0.42s ease;
-}
-
 @media (max-width: 900px) {
   .coop-diagram { padding: 24px 18px 28px; }
   .coop-diagram-grid {
@@ -1849,15 +1880,14 @@ body.map-schools-open .region-schools-block {
     grid-template-rows: auto auto auto;
     gap: 18px;
   }
-  .coop-zone--kh { grid-column: 1 / -1; grid-row: 1; max-width: 340px; }
+  .coop-zone--kh { grid-column: 1 / -1; grid-row: 1; max-width: 420px; }
   .coop-zone--bi { grid-column: 1; grid-row: 2; }
   .coop-zone--jf { grid-column: 2; grid-row: 2; }
-  .coop-zone--local { grid-column: 1 / -1; grid-row: 3; max-width: 340px; margin: 0 auto; width: 100%; }
-  .coop-card--jf { flex-direction: column; align-items: center; text-align: center; }
-  .coop-card--jf .coop-card-logo { margin-bottom: 12px; }
+  .coop-zone--local { grid-column: 1 / -1; grid-row: 3; max-width: 420px; margin: 0 auto; width: 100%; }
   .coop-links { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .coop-flip-inner { transition: none; }
   .coop-link-dots { display: none; }
 }
 @media (max-width: 560px) {

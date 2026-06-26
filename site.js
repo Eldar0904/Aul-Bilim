@@ -193,7 +193,7 @@
       });
     });
 
-    // about.html — cooperation model card dropdowns
+    // about.html — cooperation model flip cards
     var coopRoot = document.getElementById('coop-interactive');
     if (coopRoot) {
       var coopZones = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-zone'));
@@ -211,9 +211,9 @@
 
       function coopCardRect(zoneClass, containerRect) {
         var zone = coopRoot.querySelector(zoneClass);
-        var card = zone && zone.querySelector('.coop-card');
-        if (!card) return null;
-        var rect = card.getBoundingClientRect();
+        var flip = zone && zone.querySelector('.coop-card-flip');
+        if (!flip) return null;
+        var rect = flip.getBoundingClientRect();
         return {
           left: rect.left - containerRect.left,
           top: rect.top - containerRect.top,
@@ -298,83 +298,41 @@
         coopLinkTimer = window.setTimeout(updateCoopLinks, 80);
       }
 
-      function updateCoopPadding() {
-        if (!activeZone) {
-          coopRoot.classList.remove('has-open-drop');
-          coopRoot.style.removeProperty('--coop-drop-pad');
-          scheduleCoopLinks();
-          return;
+      function setCoopFlipped(zone, flipped) {
+        if (!zone) return;
+        var hit = zone.querySelector('.coop-zone-hit');
+        var front = zone.querySelector('.coop-card--front');
+        var back = zone.querySelector('.coop-card--back');
+        zone.classList.toggle('is-flipped', flipped);
+        if (hit) {
+          hit.classList.toggle('is-active', flipped);
+          hit.setAttribute('aria-selected', flipped ? 'true' : 'false');
+          hit.setAttribute('aria-expanded', flipped ? 'true' : 'false');
         }
-
-        var drop = activeZone.querySelector('.coop-zone-drop');
-        var stage = coopRoot.querySelector('.coop-diagram-stage');
-        if (!drop || !stage) return;
-
-        var stageRect = stage.getBoundingClientRect();
-        var dropRect = drop.getBoundingClientRect();
-        var overflow = Math.ceil(dropRect.bottom - stageRect.bottom + 24);
-        if (overflow > 0) {
-          coopRoot.classList.add('has-open-drop');
-          coopRoot.style.setProperty('--coop-drop-pad', overflow + 'px');
-        } else {
-          coopRoot.classList.remove('has-open-drop');
-          coopRoot.style.removeProperty('--coop-drop-pad');
-        }
-        scheduleCoopLinks();
+        if (front) front.setAttribute('aria-hidden', flipped ? 'true' : 'false');
+        if (back) back.setAttribute('aria-hidden', flipped ? 'false' : 'true');
       }
 
       function closeCoopZone(zone) {
         if (!zone) return;
-        var hit = zone.querySelector('.coop-zone-hit');
-        var drop = zone.querySelector('.coop-zone-drop');
-        zone.classList.remove('is-open');
-        if (hit) {
-          hit.classList.remove('is-active');
-          hit.setAttribute('aria-selected', 'false');
-          hit.setAttribute('aria-expanded', 'false');
-        }
-        if (drop) {
-          drop.style.maxHeight = '0px';
-          drop.setAttribute('aria-hidden', 'true');
-        }
+        setCoopFlipped(zone, false);
         if (activeZone === zone) activeZone = null;
-        window.setTimeout(function () {
-          updateCoopPadding();
-          scheduleCoopLinks();
-        }, 430);
+        scheduleCoopLinks();
       }
 
       function closeAllCoopZones() {
-        coopZones.forEach(closeCoopZone);
+        coopZones.forEach(function (zone) {
+          setCoopFlipped(zone, false);
+        });
         activeZone = null;
-        updateCoopPadding();
         scheduleCoopLinks();
       }
 
       function openCoopZone(zone) {
-        var hit = zone.querySelector('.coop-zone-hit');
-        var drop = zone.querySelector('.coop-zone-drop');
-        var detail = zone.querySelector('.coop-detail');
-        if (!hit || !drop || !detail) return;
-
         if (activeZone && activeZone !== zone) closeCoopZone(activeZone);
-
-        zone.classList.add('is-open');
-        hit.classList.add('is-active');
-        hit.setAttribute('aria-selected', 'true');
-        hit.setAttribute('aria-expanded', 'true');
-        drop.setAttribute('aria-hidden', 'false');
-        drop.style.maxHeight = '999px';
-        var height = detail.offsetHeight;
-        drop.style.maxHeight = '0px';
-        void drop.offsetHeight;
-        drop.style.maxHeight = height + 'px';
+        setCoopFlipped(zone, true);
         activeZone = zone;
-
-        window.requestAnimationFrame(function () {
-          updateCoopPadding();
-          scheduleCoopLinks();
-        });
+        scheduleCoopLinks();
       }
 
       coopZones.forEach(function (zone) {
@@ -382,7 +340,7 @@
         if (!hit) return;
         hit.addEventListener('click', function (e) {
           e.stopPropagation();
-          if (activeZone === zone) {
+          if (zone.classList.contains('is-flipped')) {
             closeCoopZone(zone);
             return;
           }
@@ -400,10 +358,7 @@
         closeAllCoopZones();
       });
 
-      window.addEventListener('resize', function () {
-        updateCoopPadding();
-        scheduleCoopLinks();
-      });
+      window.addEventListener('resize', scheduleCoopLinks);
 
       if (coopStage && window.ResizeObserver) {
         var coopResizeObserver = new ResizeObserver(scheduleCoopLinks);
