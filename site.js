@@ -207,12 +207,12 @@
         }
 
         var drop = activeZone.querySelector('.coop-zone-drop');
-        var figure = coopRoot.querySelector('.coop-model-figure');
-        if (!drop || !figure) return;
+        var stage = coopRoot.querySelector('.coop-diagram-stage');
+        if (!drop || !stage) return;
 
-        var figureRect = figure.getBoundingClientRect();
+        var stageRect = stage.getBoundingClientRect();
         var dropRect = drop.getBoundingClientRect();
-        var overflow = Math.ceil(dropRect.bottom - figureRect.bottom + 24);
+        var overflow = Math.ceil(dropRect.bottom - stageRect.bottom + 24);
         if (overflow > 0) {
           coopRoot.classList.add('has-open-drop');
           coopRoot.style.setProperty('--coop-drop-pad', overflow + 'px');
