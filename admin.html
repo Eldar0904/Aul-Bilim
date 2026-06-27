@@ -6,7 +6,8 @@
 <title>Әкімші — Aul Bilim CMS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="steppe.css?v=43" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js"></script>
 <script src="uploads/content-schema.js"></script>
@@ -213,23 +214,22 @@ aside#sidebar{
 .school-list-item.active{background:rgba(27,79,138,0.08);}
 .school-list-name{display:block;font-family:var(--fh);font-weight:700;font-size:13px;color:var(--ink);line-height:1.3;}
 .school-list-meta{display:block;font-size:11px;color:var(--body);margin-top:2px;}
-.schools-editor{padding:24px 28px;overflow-y:auto;min-height:0;}
-#school-editor-empty{color:var(--body);font-size:15px;padding:40px 0;}
-#school-editor{display:none;max-width:720px;}
-.school-editor-head{margin-bottom:20px;}
-.school-editor-head h2{font-family:var(--fh);font-size:22px;margin-bottom:4px;}
-.school-editor-head p{color:var(--body);font-size:13px;}
-.school-editor-status{font-size:12px;color:var(--primary);margin-top:8px;}
-.school-field{margin-bottom:18px;}
-.school-field label{display:block;font-family:var(--fh);font-weight:700;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--body);margin-bottom:6px;}
-.school-field input,.school-field textarea{width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;font:14px var(--fb);background:#fff;}
-.school-field textarea{min-height:100px;resize:vertical;line-height:1.5;}
-.school-field input:focus,.school-field textarea:focus{outline:none;border-color:var(--accent);}
-.school-field-hint{font-size:11.5px;color:#888;margin-top:5px;}
-.school-preview{margin-top:20px;padding:16px;background:var(--cream);border-radius:14px;}
-.school-preview-hero{width:100%;max-height:200px;object-fit:cover;border-radius:10px;display:block;}
-.school-preview-empty{padding:40px;text-align:center;color:var(--body);background:#fff;border-radius:10px;border:1px dashed var(--line);}
-.school-preview-meta{font-size:12px;color:var(--body);margin-top:8px;}
+.schools-editor{padding:0;overflow-y:auto;min-height:0;background:var(--cream,#FBF5E9);}
+#school-editor-empty{color:var(--body);font-size:15px;padding:40px 28px;}
+#school-editor{display:none;width:100%;}
+.school-editor-status{font-size:12px;color:var(--primary);padding:12px 24px 0;font-family:var(--fh);font-weight:700;}
+.admin-school-preview .school-page{background:var(--cream,#FBF5E9);}
+.admin-school-edit{margin-top:12px;padding:14px 16px;background:rgba(27,79,138,0.05);border:1px dashed rgba(27,79,138,0.22);border-radius:14px;}
+.admin-school-edit label{display:block;font-family:var(--fh);font-weight:800;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--primary);margin-bottom:8px;}
+.admin-school-edit input,.admin-school-edit textarea{width:100%;padding:10px 12px;border:1.5px solid rgba(27,79,138,0.18);border-radius:10px;font:13px var(--fb);background:#fff;}
+.admin-school-edit textarea{min-height:88px;resize:vertical;line-height:1.5;}
+.admin-school-edit input:focus,.admin-school-edit textarea:focus{outline:none;border-color:var(--accent);}
+.admin-school-edit-hint{font-size:11.5px;color:var(--body);margin-top:6px;}
+.admin-school-edit-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+.admin-preview-lang{display:flex;gap:6px;margin-bottom:10px;}
+.admin-preview-lang button{border:1.5px solid rgba(27,79,138,0.2);background:#fff;border-radius:100px;padding:5px 12px;font-family:var(--fh);font-weight:800;font-size:11px;color:var(--primary);cursor:pointer;}
+.admin-preview-lang button.is-on{background:var(--primary);color:#fff;border-color:var(--primary);}
+@media (max-width:900px){.admin-school-edit-row{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -327,37 +327,79 @@ aside#sidebar{
               <p style="margin-top:8px;font-size:13px;">Мектеп таңдаңыз — сурет, галерея, YouTube және мәтінді өңдеу.</p>
             </div>
             <div id="school-editor">
-              <div class="school-editor-head">
-                <h2 id="school-editor-title"></h2>
-                <p id="school-editor-sub"></p>
-                <p class="school-editor-status" id="school-editor-status"></p>
+              <p class="school-editor-status" id="school-editor-status"></p>
+              <div class="admin-school-preview">
+                <main class="school-page">
+                  <header class="school-hero">
+                    <img id="admin-school-hero-img" src="" alt="" />
+                    <div class="school-hero-overlay"></div>
+                    <div class="school-hero-content wrap">
+                      <p class="school-hero-loc" id="admin-school-hero-loc"></p>
+                      <h1 id="admin-school-hero-title"></h1>
+                    </div>
+                  </header>
+
+                  <div class="wrap">
+                    <div class="admin-school-edit">
+                      <label for="school-field-image">Негізгі сурет (hero)</label>
+                      <input type="text" id="school-field-image" placeholder="assets/optimized/… немесе https://…" />
+                    </div>
+                  </div>
+
+                  <div class="wrap school-page-body">
+                    <nav class="school-page-nav">
+                      <span class="school-page-back">← Мектептер тізіміне</span>
+                    </nav>
+
+                    <div class="school-page-intro">
+                      <p class="school-page-region" id="admin-school-region"></p>
+                      <div class="admin-preview-lang" id="admin-preview-lang">
+                        <button type="button" data-admin-lang="kk" class="is-on">ҚАЗ</button>
+                        <button type="button" data-admin-lang="en">ENG</button>
+                      </div>
+                      <p class="school-page-desc" id="admin-school-desc"></p>
+                      <p class="school-page-teachers" id="admin-school-teachers" hidden></p>
+
+                      <div class="admin-school-edit" style="margin-top:16px">
+                        <label for="school-field-desc-kk">Сипаттама — Қазақша</label>
+                        <textarea id="school-field-desc-kk" rows="3"></textarea>
+                        <label for="school-field-desc-en" style="margin-top:12px">Сипаттама — English</label>
+                        <textarea id="school-field-desc-en" rows="3"></textarea>
+                        <label for="school-field-teachers" style="margin-top:12px">Мұғалім саны</label>
+                        <input type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" />
+                      </div>
+                    </div>
+
+                    <section class="school-media-split">
+                      <div class="school-carousel-col" id="admin-school-carousel-col">
+                        <div class="school-carousel" id="admin-school-carousel">
+                          <div class="school-carousel-track" id="admin-school-carousel-track"></div>
+                        </div>
+                        <div class="school-carousel-controls">
+                          <button type="button" class="school-carousel-arrow" id="admin-school-carousel-prev" aria-label="Previous">←</button>
+                          <button type="button" class="school-carousel-arrow" id="admin-school-carousel-next" aria-label="Next">→</button>
+                        </div>
+                      </div>
+                      <div class="school-video-col">
+                        <div class="school-video-frame" id="admin-school-video-frame"></div>
+                      </div>
+                    </section>
+
+                    <div class="admin-school-edit-row" style="margin-top:16px">
+                      <div class="admin-school-edit" style="margin-top:0">
+                        <label for="school-field-gallery">Фото галерея</label>
+                        <textarea id="school-field-gallery" placeholder="assets/optimized/…&#10;бір URL — бір жол"></textarea>
+                        <p class="admin-school-edit-hint">Карусель суреттері — әр URL жаңа жолдан.</p>
+                      </div>
+                      <div class="admin-school-edit" style="margin-top:0">
+                        <label for="school-field-youtube">YouTube бейне</label>
+                        <input type="text" id="school-field-youtube" placeholder="https://youtube.com/watch?v=…" />
+                        <p class="admin-school-edit-hint">URL немесе видео ID (мыс. Kn1wxXwTf7I).</p>
+                      </div>
+                    </div>
+                  </div>
+                </main>
               </div>
-              <div class="school-field">
-                <label for="school-field-image">Hero image URL</label>
-                <input type="text" id="school-field-image" placeholder="assets/optimized/… or https://…" />
-              </div>
-              <div class="school-field">
-                <label for="school-field-gallery">Gallery URLs (one per line)</label>
-                <textarea id="school-field-gallery" placeholder="assets/optimized/…"></textarea>
-                <p class="school-field-hint">Carousel photos — one URL per line.</p>
-              </div>
-              <div class="school-field">
-                <label for="school-field-youtube">YouTube URL or video ID</label>
-                <input type="text" id="school-field-youtube" placeholder="https://youtube.com/watch?v=… or Kn1wxXwTf7I" />
-              </div>
-              <div class="school-field">
-                <label for="school-field-desc-kk">Description (қазақша)</label>
-                <textarea id="school-field-desc-kk" rows="3"></textarea>
-              </div>
-              <div class="school-field">
-                <label for="school-field-desc-en">Description (English)</label>
-                <textarea id="school-field-desc-en" rows="3"></textarea>
-              </div>
-              <div class="school-field">
-                <label for="school-field-teachers">Teachers count (optional)</label>
-                <input type="number" id="school-field-teachers" min="0" step="1" placeholder="e.g. 24" />
-              </div>
-              <div class="school-preview" id="school-editor-preview"></div>
             </div>
           </div>
         </div>

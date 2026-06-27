@@ -1,5 +1,5 @@
 /**
- * Admin school browser — browse all schools, edit media/copy overrides in Firestore.
+ * Admin school browser — WYSIWYG preview matching school.html layout.
  */
 window.adminSchools = (function () {
   'use strict';
@@ -8,8 +8,13 @@ window.adminSchools = (function () {
   var allSchools = [];
   var selectedId = null;
   var selectedRegionId = null;
+  var selectedEntry = null;
   var dirty = false;
   var overrideCache = {};
+  var previewLang = 'kk';
+  var carouselTimer = null;
+  var carouselIndex = 0;
+  var carouselImagesList = [];
 
   function esc(s) {
     return String(s || '')
@@ -49,6 +54,27 @@ window.adminSchools = (function () {
     return !!(school.image || (school.gallery && school.gallery.length) || school.youtube);
   }
 
+  function heroImage(s) {
+    return s.image || (s.gallery && s.gallery[0]) || '';
+  }
+
+  function carouselImages(s) {
+    var list = (s.gallery && s.gallery.length)
+      ? s.gallery.filter(function (src) { return !!src; })
+      : [];
+    if (list.length) return list;
+    var hero = heroImage(s);
+    return hero ? [hero] : [];
+  }
+
+  function youtubeEmbedId(value) {
+    if (!value) return null;
+    var v = String(value).trim();
+    if (/^[a-zA-Z0-9_-]{11}$/.test(v)) return v;
+    var m = v.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|shorts\/|watch\?v=))([a-zA-Z0-9_-]{11})/);
+    return m ? m[1] : null;
+  }
+
   function formValues() {
     var galleryRaw = (document.getElementById('school-field-gallery') || {}).value || '';
     var gallery = galleryRaw.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
@@ -67,31 +93,169 @@ window.adminSchools = (function () {
     };
   }
 
-  function mergedPreview(entry, override) {
+  function mergedSchool(entry, override) {
     var base = entry.base;
     var o = override || {};
+    var merged = Object.assign({}, base);
+    if (o.image) merged.image = o.image;
+    if (o.gallery && o.gallery.length) merged.gallery = o.gallery.slice();
+    if (o.youtube) merged.youtube = o.youtube;
+    if (o.desc) {
+      merged.desc = Object.assign({}, base.desc || {});
+      if (o.desc.kk) merged.desc.kk = o.desc.kk;
+      if (o.desc.en) merged.desc.en = o.desc.en;
+    }
+    if (o.teachers != null) merged.teachers = o.teachers;
+    return merged;
+  }
+
+  function mergedFromForm(entry) {
+    var base = entry.base;
+    var f = formValues();
     return {
-      image: o.image || base.image || '',
-      gallery: (o.gallery && o.gallery.length) ? o.gallery : (base.gallery || []),
-      youtube: o.youtube || base.youtube || '',
+      image: f.image || base.image || '',
+      gallery: f.gallery.length ? f.gallery : (base.gallery || []),
+      youtube: f.youtube || base.youtube || '',
       desc: {
-        kk: (o.desc && o.desc.kk) || (base.desc && base.desc.kk) || '',
-        en: (o.desc && o.desc.en) || (base.desc && base.desc.en) || ''
+        kk: f.desc.kk || (base.desc && base.desc.kk) || '',
+        en: f.desc.en || (base.desc && base.desc.en) || ''
       },
-      teachers: o.teachers != null ? o.teachers : base.teachers
+      teachers: f.teachers != null ? f.teachers : base.teachers,
+      location: base.location,
+      kk: entry.kk,
+      en: entry.en
     };
   }
 
-  function updatePreview(entry) {
-    var preview = document.getElementById('school-editor-preview');
-    if (!preview || !entry) return;
-    var m = mergedPreview(entry, formValues());
-    var hero = m.image || (m.gallery[0] || '');
-    var yt = m.youtube;
-    preview.innerHTML =
-      (hero ? '<img class="school-preview-hero" src="' + esc(hero) + '" alt="" />' : '<div class="school-preview-empty">Hero image</div>') +
-      (m.gallery.length ? '<p class="school-preview-meta">' + m.gallery.length + ' carousel image(s)</p>' : '') +
-      (yt ? '<p class="school-preview-meta">YouTube: ' + esc(yt) + '</p>' : '<p class="school-preview-meta">No video</p>');
+  function stopCarousel() {
+    if (carouselTimer) {
+      clearInterval(carouselTimer);
+      carouselTimer = null;
+    }
+  }
+
+  function setCarouselSlide(index) {
+    var track = document.getElementById('admin-school-carousel-track');
+    if (!track || !carouselImagesList.length) return;
+    carouselIndex = (index + carouselImagesList.length) % carouselImagesList.length;
+    track.querySelectorAll('.school-carousel-slide').forEach(function (slide, i) {
+      slide.classList.toggle('is-active', i === carouselIndex);
+    });
+  }
+
+  function startCarousel() {
+    stopCarousel();
+    if (carouselImagesList.length <= 1) return;
+    carouselTimer = setInterval(function () {
+      setCarouselSlide(carouselIndex + 1);
+    }, 2500);
+  }
+
+  function setupCarousel(images) {
+    stopCarousel();
+    var col = document.getElementById('admin-school-carousel-col');
+    var track = document.getElementById('admin-school-carousel-track');
+    var prevBtn = document.getElementById('admin-school-carousel-prev');
+    var nextBtn = document.getElementById('admin-school-carousel-next');
+    var carousel = document.getElementById('admin-school-carousel');
+
+    carouselImagesList = images.slice();
+    if (!col || !track) return;
+
+    if (!images.length) {
+      col.hidden = true;
+      track.innerHTML = '';
+      return;
+    }
+
+    col.hidden = false;
+    carouselIndex = 0;
+    track.innerHTML = images.map(function (src, i) {
+      return '<div class="school-carousel-slide' + (i === 0 ? ' is-active' : '') + '">' +
+        '<img src="' + esc(src) + '" alt="" loading="' + (i === 0 ? 'eager' : 'lazy') + '" />' +
+      '</div>';
+    }).join('');
+
+    var multi = images.length > 1;
+    if (prevBtn) prevBtn.hidden = !multi;
+    if (nextBtn) nextBtn.hidden = !multi;
+    if (prevBtn) {
+      prevBtn.onclick = function () { setCarouselSlide(carouselIndex - 1); startCarousel(); };
+    }
+    if (nextBtn) {
+      nextBtn.onclick = function () { setCarouselSlide(carouselIndex + 1); startCarousel(); };
+    }
+    if (carousel) {
+      carousel.onmouseenter = stopCarousel;
+      carousel.onmouseleave = startCarousel;
+    }
+    startCarousel();
+  }
+
+  function renderVideo(frame, school) {
+    if (!frame) return;
+    var id = youtubeEmbedId(school.youtube);
+    if (id) {
+      frame.innerHTML =
+        '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="YouTube video" loading="lazy" ' +
+          'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      frame.classList.remove('is-placeholder');
+      return;
+    }
+    frame.innerHTML =
+      '<div class="school-video-placeholder" aria-hidden="true">' +
+        '<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>' +
+        '<p>Бейне жақында қосылады</p>' +
+      '</div>';
+    frame.classList.add('is-placeholder');
+  }
+
+  function renderLivePage(entry, school) {
+    var region = REGIONS.find(function (r) { return r.id === entry.regionId; });
+    var hero = heroImage(school);
+    var images = carouselImages(school);
+    var lang = previewLang;
+
+    var heroImg = document.getElementById('admin-school-hero-img');
+    var heroLoc = document.getElementById('admin-school-hero-loc');
+    var heroTitle = document.getElementById('admin-school-hero-title');
+    var regionEl = document.getElementById('admin-school-region');
+    var descEl = document.getElementById('admin-school-desc');
+    var teachersEl = document.getElementById('admin-school-teachers');
+    var videoFrame = document.getElementById('admin-school-video-frame');
+
+    if (heroTitle) heroTitle.textContent = lang === 'en' ? (entry.en || entry.kk) : entry.kk;
+    if (heroLoc && school.location) {
+      heroLoc.textContent = lang === 'en' ? school.location.en : school.location.kk;
+    }
+    if (heroImg) {
+      heroImg.src = hero || '';
+      heroImg.alt = entry.kk;
+      heroImg.hidden = !hero;
+    }
+    if (regionEl && region) {
+      regionEl.textContent = lang === 'en' ? region.en : region.kk;
+    }
+    if (descEl && school.desc) {
+      descEl.textContent = lang === 'en' ? school.desc.en : school.desc.kk;
+    }
+    if (teachersEl) {
+      if (school.teachers != null) {
+        teachersEl.hidden = false;
+        teachersEl.textContent = school.teachers + ' ' + (lang === 'en' ? 'teachers' : 'мұғалім');
+      } else {
+        teachersEl.hidden = true;
+        teachersEl.textContent = '';
+      }
+    }
+
+    setupCarousel(images);
+    renderVideo(videoFrame, school);
+  }
+
+  function refreshPreview() {
+    if (!selectedEntry) return;
+    renderLivePage(selectedEntry, mergedFromForm(selectedEntry));
   }
 
   async function selectSchool(id) {
@@ -99,7 +263,9 @@ window.adminSchools = (function () {
     var entry = allSchools.find(function (s) { return s.id === id; });
     if (!entry) return;
 
+    selectedEntry = entry;
     selectedRegionId = entry.regionId;
+
     document.querySelectorAll('.school-list-item').forEach(function (el) {
       el.classList.toggle('active', el.dataset.id === id);
     });
@@ -108,9 +274,6 @@ window.adminSchools = (function () {
     var empty = document.getElementById('school-editor-empty');
     if (empty) empty.style.display = 'none';
     if (editor) editor.style.display = '';
-
-    document.getElementById('school-editor-title').textContent = entry.kk;
-    document.getElementById('school-editor-sub').textContent = entry.en + ' · ' + entry.regionKk;
 
     var previewLink = document.getElementById('preview-link');
     if (previewLink) previewLink.href = schoolPageUrl(entry);
@@ -121,20 +284,22 @@ window.adminSchools = (function () {
       overrideCache[id] = override || null;
     }
 
-    var m = mergedPreview(entry, override);
-    document.getElementById('school-field-image').value = m.image || '';
-    document.getElementById('school-field-gallery').value = (m.gallery || []).join('\n');
-    document.getElementById('school-field-youtube').value = m.youtube || '';
-    document.getElementById('school-field-desc-kk').value = m.desc.kk || '';
-    document.getElementById('school-field-desc-en').value = m.desc.en || '';
-    document.getElementById('school-field-teachers').value = m.teachers != null ? String(m.teachers) : '';
+    var merged = mergedSchool(entry, override);
+    document.getElementById('school-field-image').value = merged.image || '';
+    document.getElementById('school-field-gallery').value = (merged.gallery || []).join('\n');
+    document.getElementById('school-field-youtube').value = merged.youtube || '';
+    document.getElementById('school-field-desc-kk').value = (merged.desc && merged.desc.kk) || '';
+    document.getElementById('school-field-desc-en').value = (merged.desc && merged.desc.en) || '';
+    document.getElementById('school-field-teachers').value = merged.teachers != null ? String(merged.teachers) : '';
 
     var status = document.getElementById('school-editor-status');
     if (status) {
-      status.textContent = override ? 'Firestore override loaded' : (hasMedia(entry.base) ? 'Using built-in defaults' : 'No media yet');
+      status.textContent = override
+        ? 'Firestore: сақталған өзгерістер'
+        : (hasMedia(entry.base) ? 'Әдепкі деректер' : 'Медиа әлі толтырылмаған');
     }
 
-    updatePreview(entry);
+    renderLivePage(entry, merged);
     dirty = false;
   }
 
@@ -188,10 +353,23 @@ window.adminSchools = (function () {
       el.addEventListener('input', function () {
         dirty = true;
         window.dirty = true;
-        var entry = allSchools.find(function (s) { return s.id === selectedId; });
-        if (entry) updatePreview(entry);
+        refreshPreview();
       });
     });
+
+    var langBar = document.getElementById('admin-preview-lang');
+    if (langBar && !langBar.dataset.bound) {
+      langBar.dataset.bound = '1';
+      langBar.querySelectorAll('[data-admin-lang]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          previewLang = btn.dataset.adminLang;
+          langBar.querySelectorAll('[data-admin-lang]').forEach(function (b) {
+            b.classList.toggle('is-on', b === btn);
+          });
+          refreshPreview();
+        });
+      });
+    }
   }
 
   function render() {
@@ -214,7 +392,7 @@ window.adminSchools = (function () {
 
   async function save() {
     if (!selectedId) {
-      return { success: false, error: 'Select a school first' };
+      return { success: false, error: 'Алдымен мектеп таңдаңыз' };
     }
     var data = formValues();
     var result = await window.db.saveSchoolContent(selectedId, data);
@@ -223,7 +401,7 @@ window.adminSchools = (function () {
       dirty = false;
       renderList();
       var status = document.getElementById('school-editor-status');
-      if (status) status.textContent = 'Saved to Firestore';
+      if (status) status.textContent = 'Сақталды — school.html бетінде көрінеді';
     }
     return result;
   }
