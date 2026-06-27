@@ -3,7 +3,7 @@
    URL: school.html?region=akmola&id=akmola-astrakhan-1
    ============================================================ */
 (function () {
-  var REGIONS = [
+  var REGIONS = window.AUL_BILIM_SCHOOL_REGIONS || [
     { id: 'west-kazakhstan', global: 'WEST_KAZAKHSTAN_SCHOOLS', kk: 'Батыс Қазақстан облысы', en: 'West Kazakhstan Region' },
     { id: 'kostanay', global: 'KOSTANAY_SCHOOLS', kk: 'Қостанай облысы', en: 'Kostanay Region' },
     { id: 'akmola', global: 'AKMOLA_SCHOOLS', kk: 'Ақмола облысы', en: 'Akmola Region' },
@@ -28,6 +28,21 @@
       region: (params.get('region') || '').trim(),
       id: (params.get('id') || '').trim()
     };
+  }
+
+  function mergeSchoolOverride(base, override) {
+    if (!override) return base;
+    var merged = Object.assign({}, base);
+    if (override.image) merged.image = override.image;
+    if (override.gallery && override.gallery.length) merged.gallery = override.gallery.slice();
+    if (override.youtube) merged.youtube = override.youtube;
+    if (override.desc) {
+      merged.desc = Object.assign({}, base.desc || {});
+      if (override.desc.kk) merged.desc.kk = override.desc.kk;
+      if (override.desc.en) merged.desc.en = override.desc.en;
+    }
+    if (override.teachers != null) merged.teachers = override.teachers;
+    return merged;
   }
 
   function findSchool(regionId, schoolId) {
@@ -124,7 +139,7 @@
     carouselIndex = 0;
     track.innerHTML = images.map(function (src, i) {
       return '<div class="school-carousel-slide' + (i === 0 ? ' is-active' : '') + '">' +
-        '<img src="' + src + '" alt="" loading="' + (i === 0 ? 'eager' : 'lazy') + '" />' +
+        '<img src="' + src.replace(/"/g, '&quot;') + '" alt="" loading="' + (i === 0 ? 'eager' : 'lazy') + '" />' +
       '</div>';
     }).join('');
 
@@ -238,9 +253,18 @@
     if (videoFrame) renderVideo(videoFrame, school);
   }
 
-  function init() {
+  async function init() {
     var params = parseParams();
-    renderPage(findSchool(params.region, params.id));
+    var result = findSchool(params.region, params.id);
+    if (result && window.db && window.db.getSchoolContent) {
+      try {
+        var override = await window.db.getSchoolContent(params.id);
+        if (override) {
+          result.school = mergeSchoolOverride(result.school, override);
+        }
+      } catch (e) { /* use static defaults */ }
+    }
+    renderPage(result);
   }
 
   document.addEventListener('DOMContentLoaded', init);

@@ -3,6 +3,7 @@ window.db = (function () {
 
   var LOCAL_CONTENT = 'aulbilim_content_draft';
   var LOCAL_ENQUIRIES = 'aulbilim_enquiries';
+  var LOCAL_SCHOOLS = 'aulbilim_schools';
 
   function config() {
     return window.AUL_BILIM_FIREBASE_CONFIG || null;
@@ -139,13 +140,65 @@ window.db = (function () {
     return content && content.stories ? content.stories : null;
   }
 
+  function localSchoolsMap() {
+    try { return JSON.parse(localStorage.getItem(LOCAL_SCHOOLS) || '{}'); } catch (e) { return {}; }
+  }
+
+  function setLocalSchoolsMap(map) {
+    localStorage.setItem(LOCAL_SCHOOLS, JSON.stringify(map || {}));
+  }
+
+  async function getSchoolContent(schoolId) {
+    if (!schoolId) return null;
+    if (!hasBackend()) {
+      var local = localSchoolsMap();
+      return local[schoolId] || null;
+    }
+    var res = await fetch(documentUrl('schools/items/' + encodeURIComponent(schoolId)), { headers: authHeaders() });
+    if (res.status === 404) return null;
+    if (!res.ok) return null;
+    return fromDocument(await res.json());
+  }
+
+  async function saveSchoolContent(schoolId, data) {
+    if (!schoolId) return { success: false, error: 'Missing school id' };
+    var payload = Object.assign({}, data, {
+      schoolId: schoolId,
+      updatedAt: new Date().toISOString()
+    });
+    if (!hasBackend()) {
+      var local = localSchoolsMap();
+      local[schoolId] = payload;
+      setLocalSchoolsMap(local);
+      return { success: true, mode: 'local' };
+    }
+    var path = 'schools/items/' + encodeURIComponent(schoolId);
+    var body = JSON.stringify(toDocument(payload));
+    var res = await fetch(documentUrl(path), {
+      method: 'PATCH',
+      headers: authHeaders(),
+      body: body
+    });
+    if (res.status === 404) {
+      res = await fetch(collectionUrl('schools/items') + '?documentId=' + encodeURIComponent(schoolId), {
+        method: 'POST',
+        headers: authHeaders(),
+        body: body
+      });
+    }
+    if (!res.ok) return { success: false, error: await res.text() };
+    return { success: true };
+  }
+
   return {
     submitContactForm: submitContactForm,
     getSiteContent: getSiteContent,
     saveSiteContent: saveSiteContent,
     saveMediaAsset: saveMediaAsset,
     getImpactData: getImpactData,
-    getStories: getStories
+    getStories: getStories,
+    getSchoolContent: getSchoolContent,
+    saveSchoolContent: saveSchoolContent
   };
 
 })();
