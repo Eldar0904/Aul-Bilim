@@ -10,7 +10,6 @@
   var PAGE_META = {
     home:     { label: 'Басты бет',     file: 'index.html',    preview: 'index.html' },
     programs: { label: 'Бағдарламалар', file: 'programs.html', preview: 'programs.html' },
-    stories:  { label: 'Оқиғалар',      file: 'stories.html',  preview: 'stories.html' },
     about:    { label: 'Біз туралы',    file: 'about.html',    preview: 'about.html' },
     schools:  { label: 'Мектептер',     file: 'school.html',   preview: 'school.html' }
   };
