@@ -17,7 +17,7 @@ window.KARAGANDA_SCHOOLS = {
     },
     {
       "key": "Сарань",
-      "kk": "Сарань қ.",
+      "kk": "Саран қ.",
       "en": "Saran city",
       "slug": "saran",
       "n": 7
@@ -38,7 +38,7 @@ window.KARAGANDA_SCHOOLS = {
     },
     {
       "key": "Шахтинск",
-      "kk": "Шахтинск қ.",
+      "kk": "Шахтин қ.",
       "en": "Shakhtinsk city",
       "slug": "shakhtinsk",
       "n": 11
@@ -86,7 +86,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-3",
       "districtKey": "Караганда",
-      "kk": "мектебі №11 мектебі",
+      "kk": "№11 мектебі",
       "en": "Secondary School №11 Secondary School",
       "location": {
         "kk": "Қараганды қ.",
@@ -143,7 +143,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-6",
       "districtKey": "Караганда",
-      "kk": "ени Жакыпа Акбаева атындағы мектебі",
+      "kk": "Жакыпа Акбаева атындағы мектебі",
       "en": "Жакыпа Акбаева Secondary School",
       "location": {
         "kk": "Қараганды қ.",
@@ -162,7 +162,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-7",
       "districtKey": "Караганда",
-      "kk": "ени Ю.Н.Павлова атындағы мектебі",
+      "kk": "Ю.Н.Павлова атындағы мектебі",
       "en": "Ю.Н.Павлова Secondary School",
       "location": {
         "kk": "Қараганды қ.",
@@ -238,7 +238,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-11",
       "districtKey": "Караганда",
-      "kk": "ени академика Е.А.Букетова атындағы мектебі",
+      "kk": "академика Е.А.Букетова атындағы мектебі",
       "en": "академика Е.А.Букетова Secondary School",
       "location": {
         "kk": "Қараганды қ.",
@@ -314,7 +314,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karaganda-city-15",
       "districtKey": "Караганда",
-      "kk": "ени Габидена Мустафина атындағы мектебі",
+      "kk": "Габидена Мустафина атындағы мектебі",
       "en": "Габидена Мустафина Secondary School",
       "location": {
         "kk": "Қараганды қ.",
@@ -371,7 +371,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-1",
       "districtKey": "Абай",
-      "kk": "ени Прокофия Корниенко атындағы мектебі",
+      "kk": "Прокофия Корниенко атындағы мектебі",
       "en": "Прокофия Корниенко Secondary School",
       "location": {
         "kk": "Абай ауданы",
@@ -382,7 +382,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, Поселеок Топар, көшesi Сары-Арка, 46 100116",
+        "kk": "Мекенжай: Қарағанды облысы, Поселеок Топар, көш. Сары-Арка, 46 100116",
         "en": "Address: Karaganda Region, Поселеок Топар, Street Сары-Арка, 46 100116"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -420,7 +420,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, ауылы Дубовка, көшesi Касыма Аманжолова, 21 101204",
+        "kk": "Мекенжай: Қарағанды облысы, ауылы Дубовка, көш. Касыма Аманжолова, 21 101204",
         "en": "Address: Karaganda Region, village Дубовка, Street Касыма Аманжолова, 21 101204"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -439,7 +439,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы Абай ауданы ел. Карабас көшesi Бейбітшілік құр. 1",
+        "kk": "Мекенжай: Қарағанды облысы Абай ауданы ел. Карабас көш. Бейбітшілік құр. 1",
         "en": "Address: Karaganda Region Абайский district settl. Карабас Street Бейбітшілік Bldg. 1"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -466,7 +466,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-6",
       "districtKey": "Абай",
-      "kk": " мектебі",
+      "kk": "Ыбырая Алтынсарина\" атындағы мектебі",
       "en": "School Secondary School",
       "location": {
         "kk": "Абай ауданы",
@@ -485,7 +485,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-7",
       "districtKey": "Абай",
-      "kk": " мектебі",
+      "kk": "Абая атындағы мектебі",
       "en": "School Secondary School",
       "location": {
         "kk": "Абай ауданы",
@@ -515,7 +515,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, ау. Қулаайгыр көшesi Бейбітшілік құр. 1 А",
+        "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, ау. Қулаайгыр көш. Бейбітшілік құр. 1 А",
         "en": "Address: Karaganda Region, Абайский district, v. Қулаайгыр Street Бейбітшілік құрылыс 1 А"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -542,7 +542,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-10",
       "districtKey": "Абай",
-      "kk": " мектебі",
+      "kk": "Бауыржана Момышулы атындағы мектебі",
       "en": "School Secondary School",
       "location": {
         "kk": "Абай ауданы",
@@ -561,7 +561,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-abai-11",
       "districtKey": "Абай",
-      "kk": "ени Мукагали Макатаева\" атындағы мектебі",
+      "kk": "Мукагали Макатаева\" атындағы мектебі",
       "en": "Мукагали Макатаева Secondary School",
       "location": {
         "kk": "Абай ауданы",
@@ -610,7 +610,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, ау. Жартас, көшesi Мектеп құр. 1А 100107",
+        "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, ау. Жартас, көш. Мектеп құр. 1А 100107",
         "en": "Address: Karaganda Region, Абайский district, v. Жартас, Street Мектеп Bldg. 1А 100107"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -621,7 +621,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "мектебі-лицей №1 мектебі",
       "en": "School-лицей №1 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -629,7 +629,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, көшesi Жамбыла, құр. 50",
+        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, көш. Жамбыла, құр. 50",
         "en": "Address: Karaganda Region, city Сарань, Street Жамбыла, Bldg. 50"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -640,7 +640,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№ 2 мектебі",
       "en": "№ 2 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -648,7 +648,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, көшesi Ушакова, 8/1",
+        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, көш. Ушакова, 8/1",
         "en": "Address: Karaganda Region, city Сарань, Street Ушакова, 8/1"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -659,7 +659,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№6 мектебі",
       "en": "№6 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -678,7 +678,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "мектебі-интернат №7 мектебі",
       "en": "School-интернат №7 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -697,7 +697,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№13 мектебі",
       "en": "№13 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -705,7 +705,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: Караганди область, қала Сарань, елдімекен Актас, көшesi Бейбітшілік құр. 7",
+        "kk": "Мекенжай: Караганди облысы, қала Сарань, елдімекен Актас, көш. Бейбітшілік құр. 7",
         "en": "Address: Карагандиская область, city Сарань, settlement Актас, Street Бейбітшілік Bldg. 7"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -716,7 +716,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№16 мектебі",
       "en": "№16 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -724,7 +724,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, елдімекен Актас, көшesi Космиче, құр. 11",
+        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, елдімекен Актас, көш. Космиче, құр. 11",
         "en": "Address: Karaganda Region, city Сарань, settlement Актас, Street Космическая, Bldg. 11"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -735,7 +735,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "гимназия № 17 мектебі",
       "en": "School-Gymnasium № 17 Secondary School",
       "location": {
-        "kk": "Сарань қ.",
+        "kk": "Саран қ.",
         "en": "Saran city"
       },
       "badge": {
@@ -743,7 +743,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, көшesi Абая, 25а",
+        "kk": "Мекенжай: Қарағанды облысы, қала Сарань, көш. Абая, 25а",
         "en": "Address: Karaganda Region, city Сарань, Street Абая, 25а"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -751,7 +751,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-1",
       "districtKey": "Каркаралинск",
-      "kk": "мектебі №2 Алимхана Ермекова атындағы мектебі",
+      "kk": "Алимхана Ермекова атындағы мектебі",
       "en": "Secondary School №2 Алимхана Ермекова Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
@@ -770,7 +770,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-2",
       "districtKey": "Каркаралинск",
-      "kk": " мектебі",
+      "kk": "№4 мектебі",
       "en": "School Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
@@ -789,7 +789,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-3",
       "districtKey": "Каркаралинск",
-      "kk": " мектебі",
+      "kk": "№8 мектебі",
       "en": "School Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
@@ -808,7 +808,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-4",
       "districtKey": "Каркаралинск",
-      "kk": "мектебі Нуркена Абдирова №10 атындағы мектебі",
+      "kk": "Нуркена Абдирова №10 атындағы мектебі",
       "en": "Secondary School Нуркена Абдирова №10 Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
@@ -827,7 +827,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-5",
       "districtKey": "Каркаралинск",
-      "kk": "мектебі №12 Алибека Буркитбаева атындағы мектебі",
+      "kk": "Алибека Буркитбаева атындағы мектебі",
       "en": "Secondary School №12 Алибека Буркитбаева Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
@@ -876,7 +876,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы Каркаралин ауданы елдімекен Карагайлы көшesi Ленина 45 корп. А инд 100814",
+        "kk": "Мекенжай: Қарағанды облысы Каркаралин ауданы елдімекен Карагайлы көш. Ленина 45 корп. А инд 100814",
         "en": "Address: Karaganda Region Каркаралинский district settlement Карагайлы Street Ленина 45 Bldg. А инд 100814"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -922,7 +922,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-karkaraly-10",
       "districtKey": "Каркаралинск",
-      "kk": " мектебі",
+      "kk": "Кажыкена Смайылова атындағы мектебі",
       "en": "School Secondary School",
       "location": {
         "kk": "Қаркаралы қ.",
@@ -933,7 +933,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: 100810, Қарағанды облысы, Каркаралин ауданы, ауылы Ениндыбулак, көшesi Казыбек би14",
+        "kk": "Мекенжай: 100810, Қарағанды облысы, Каркаралин ауданы, ауылы Ениндыбулак, көш. Казыбек би14",
         "en": "Address: 100810, Karaganda Region, Каркаралинский district, village Ениндыбулак, Street Казыбек би14"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -971,7 +971,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы г Темиртау көшesi Абая құр. 39/2",
+        "kk": "Мекенжай: Қарағанды облысы г Темиртау көш. Абая құр. 39/2",
         "en": "Address: Karaganda Region г Темиртау Street Абая Bldg. 39/2"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1009,7 +1009,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көшesi Чернышевского 106/1",
+        "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көш. Чернышевского 106/1",
         "en": "Address: Karaganda Region, Темиртау, Street Чернышевского 106/1"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1047,7 +1047,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: Карагандинской область, қ. Темиртау Амангельды ст 7Б",
+        "kk": "Мекенжай: Карагандинской облысы, қ. Темиртау Амангельды ст 7Б",
         "en": "Address: Карагандинской область, Темиртау Амангельды ст 7Б"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1066,7 +1066,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көшesi Северная, ст-е 36",
+        "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көш. Северная, ст-е 36",
         "en": "Address: Karaganda Region, Темиртау, Street Северная, ст-е 36"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1321,7 +1321,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-temirtau-21",
       "districtKey": "Темиртау",
-      "kk": "мектебі-лицей Б.Момышулы атындағы мектебі",
+      "kk": "Б.Момышулы атындағы мектебі",
       "en": "School-лицей Б.Момышулы Secondary School",
       "location": {
         "kk": "Теміртау қ.",
@@ -1408,7 +1408,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қала Темиртау, елдімекен Актау, көшesi Индустриальная, үй 4.",
+        "kk": "Мекенжай: Қарағанды облысы, қала Темиртау, елдімекен Актау, көш. Индустриальная, үй 4.",
         "en": "Address: Karaganda Region, city Темиртау, settlement Актау, Street Индустриальная, No. 4."
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1446,7 +1446,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Laboratory"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көшesi Блюхера, құр. 3",
+        "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көш. Блюхера, құр. 3",
         "en": "Address: Karaganda Region, Темиртау, Street Блюхера, Bldg. 3"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1476,7 +1476,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "гимназия Шокана Уалиханова атындағы мектебі",
       "en": "гимназия Шокана Уалиханова Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1484,7 +1484,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Мекенжай: Қарағанды облысы, қала Шахтинск, көшesi парковая 23/1, 101601",
+        "kk": "Мекенжай: Қарағанды облысы, қала Шахтинск, көш. парковая 23/1, 101601",
         "en": "Address: Karaganda Region, city Шахтинск, Street парковая 23/1, 101601"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1495,7 +1495,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№2 мектебі",
       "en": "№2 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1511,10 +1511,10 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-3",
       "districtKey": "Шахтинск",
-      "kk": "ени Евнея Букетова атындағы мектебі",
+      "kk": "Евнея Букетова атындағы мектебі",
       "en": "Евнея Букетова Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1522,7 +1522,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Fully equipped"
       },
       "desc": {
-        "kk": "Мекенжай: 101600, Қарағанды облысы, қала Шахтинск, көшesi Парковая, ғим. 35А",
+        "kk": "Мекенжай: 101600, Қарағанды облысы, қала Шахтинск, көш. Парковая, ғим. 35А",
         "en": "Address: 101600, Karaganda Region, city Шахтинск, Street Парковая, Bldg. 35А"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
@@ -1533,7 +1533,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№ 4 мектебі",
       "en": "№ 4 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1541,7 +1541,7 @@ window.KARAGANDA_SCHOOLS = {
         "en": "Programme school"
       },
       "desc": {
-        "kk": "Мекенжай: елдімекен Долинка, көшesi Парковая ғим. 24Б, инд. 101604",
+        "kk": "Мекенжай: елдімекен Долинка, көш. Парковая ғим. 24Б, инд. 101604",
         "en": "Address: settlement Долинка, Street Парковая Bldg. 24Б, индекс 101604"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
@@ -1552,7 +1552,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№6 мектебі",
       "en": "№6 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1571,7 +1571,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№7 мектебі",
       "en": "№7 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1590,7 +1590,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№8 мектебі",
       "en": "№8 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1606,10 +1606,10 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-8",
       "districtKey": "Шахтинск",
-      "kk": "ени Санжара Асфендиярова атындағы мектебі",
+      "kk": "Санжара Асфендиярова атындағы мектебі",
       "en": "Санжара Асфендиярова Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1628,7 +1628,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№11 мектебі",
       "en": "№11 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1647,7 +1647,7 @@ window.KARAGANDA_SCHOOLS = {
       "kk": "№ 12 мектебі",
       "en": "№ 12 Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {
@@ -1663,10 +1663,10 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-shakhtinsk-11",
       "districtKey": "Шахтинск",
-      "kk": "мектебі-лицей А.Букейханова атындағы мектебі",
+      "kk": "А.Букейханова атындағы мектебі",
       "en": "School-лицей А.Букейханова Secondary School",
       "location": {
-        "kk": "Шахтинск қ.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city"
       },
       "badge": {

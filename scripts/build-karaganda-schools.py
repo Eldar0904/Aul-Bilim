@@ -29,7 +29,7 @@ DISTRICT_META = {
         "slug": "abai",
     },
     "Сарань": {
-        "kk": "\u0421\u0430\u0440\u0430\u043d\u044c \u049b.",
+        "kk": "Саран қ.",
         "en": "Saran city",
         "slug": "saran",
     },
@@ -44,7 +44,7 @@ DISTRICT_META = {
         "slug": "temirtau",
     },
     "Шахтинск": {
-        "kk": "\u0428\u0430\u0445\u0442\u0438\u043d\u0441\u043a \u049b.",
+        "kk": "Шахтин қ.",
         "en": "Shakhtinsk city",
         "slug": "shakhtinsk",
     },

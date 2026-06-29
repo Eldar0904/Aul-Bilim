@@ -196,6 +196,20 @@ def _fix_numbered_school_title(name: str) -> str:
     return re.sub(r"\s+", " ", name).strip(" ,-")
 
 
+def _fix_named_village_school(name: str) -> str:
+    m = re.match(
+        r"^([A-ZА-ЯӘІҢҒҮҰҚӨҺ][A-Za-zА-Яа-яӘәІіҢңҒғҮүҰұҚқӨөҺһ\.\s]+?)\s+села\s+(.+)$",
+        name,
+        re.I,
+    )
+    if m:
+        person = re.sub(r"\s+", " ", m.group(1)).strip(" .")
+        place = _normalize_mektebi_suffix(m.group(2).strip())
+        if person and place:
+            return f"{person} атындағы {place} мектебі"
+    return name
+
+
 def _polish_kk_title(name: str) -> str:
     name = _strip_russian_admin_tail(name)
     name = re.sub(r'^КГУ\s*["\']?', "", name, flags=re.I).strip()
@@ -207,6 +221,7 @@ def _polish_kk_title(name: str) -> str:
     name = _fix_kk_lexicon(name)
     name = re.sub(r"\s+", " ", name).strip(" ,-")
     name = _fix_numbered_school_title(name)
+    name = _fix_named_village_school(name)
     return name
 
 
@@ -346,6 +361,34 @@ _ADDRESS_KK_RULES: tuple[tuple[str, str], ...] = (
     (r"квартал", "кв."),
     (r"индекс", "инд."),
     (r"инд\.\s*", "инд. "),
+    (r"а/о\b", "а.о."),
+    (r"область", "облысы"),
+    (r"\bобл\.\s+", "обл. "),
+    (r"Шиелийский", "Шиелі"),
+    (r"Шиелий", "Шиелі"),
+    (r"Кармакшинский", "Қармақшы"),
+    (r"Кармакши", "Қармақшы"),
+    (r"Жалагашский", "Жалағаш"),
+    (r"Жалагаш", "Жалағаш"),
+    (r"Аральский", "Арал"),
+    (r"Казалинский", "Қазалы"),
+    (r"Сырдарьинский", "Сырдария"),
+    (r"Жанакорганский", "Жаңақорған"),
+    (r"Абайский", "Абай"),
+    (r"Кокпектинский", "Көкпекті"),
+    (r"Кокпекты", "Көкпекті"),
+    (r"Бескарагайский", "Бесқарағай"),
+    (r"Бородулихинский", "Бородулих"),
+    (r"Жарминский", "Жарма"),
+    (r"Урджарский", "Өржар"),
+    (r"Аягузский", "Аягөз"),
+    (r"Аягузсий", "Аягөз"),
+    (r"Аксуатский", "Ақсуат"),
+    (r"Ақсуатский", "Ақсуат"),
+    (r"Школьная", "Мектеп"),
+    (r"Школьная\b", "Мектеп"),
+    (r"көшesi", "көш."),
+    (r"көш\.\s*", "көш. "),
 )
 
 _ADDRESS_EN_RULES: tuple[tuple[str, str], ...] = (
@@ -388,12 +431,44 @@ _ADDRESS_EN_RULES: tuple[tuple[str, str], ...] = (
 )
 
 
+def _latin_homoglyphs_to_cyrillic(text: str) -> str:
+    return text.translate(
+        str.maketrans(
+            {
+                "A": "А",
+                "B": "В",
+                "C": "С",
+                "E": "Е",
+                "H": "Н",
+                "I": "І",
+                "K": "К",
+                "M": "М",
+                "O": "О",
+                "P": "Р",
+                "T": "Т",
+                "X": "Х",
+                "a": "а",
+                "c": "с",
+                "e": "е",
+                "i": "і",
+                "k": "к",
+                "m": "м",
+                "o": "о",
+                "p": "р",
+                "t": "т",
+                "x": "х",
+            }
+        )
+    )
+
+
 def localize_address_kk(address: str) -> str:
     text = _clean_address_text(address)
     for pattern, repl in _ADDRESS_KK_RULES:
         text = re.sub(pattern, repl, text, flags=re.I)
     text = _fix_russian_place_adjective(text)
-    return re.sub(r"\s+", " ", text).strip(" ,")
+    text = re.sub(r"\s+", " ", text).strip(" ,")
+    return _latin_homoglyphs_to_cyrillic(text)
 
 
 def localize_address_en(address: str) -> str:
@@ -505,6 +580,8 @@ def _extract_quoted_name(full: str) -> str:
 
 def _strip_trailing_school_noise(name: str) -> str:
     name = re.sub(r"\s+с\s+государственным\s+языком\s+обучения.*$", "", name, flags=re.I)
+    name = re.sub(r"\s+отдела\s+образования.*$", "", name, flags=re.I)
+    name = re.sub(r"\s+управления\s+образования.*$", "", name, flags=re.I)
     name = re.sub(r"\s+города\s+.+$", "", name, flags=re.I)
     name = re.sub(r"\s+[A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ-]+ского\s+районного.*$", "", name, flags=re.I)
     name = re.sub(r"\s+села\s+.+$", "", name, flags=re.I)
@@ -532,11 +609,15 @@ def _fix_imeni_kk(name: str) -> str:
     if m:
         person = _strip_trailing_school_noise(m.group(1))
         return f"{person} атындағы мектебі"
-    m = re.match(r"^им\.?\s*(.+?)(?:\s+мектебі)?$", name, re.I)
+    m = re.match(r"^имени\.\s+(.+?)(?:\s+мектебі)?$", name, re.I)
     if m:
         person = _strip_trailing_school_noise(m.group(1))
         return f"{person} атындағы мектебі"
     m = re.match(r"^имени\s+(.+?)(?:\s+мектебі)?$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} атындағы мектебі"
+    m = re.match(r"^им\.\s+(.+?)(?:\s+мектебі)?$", name, re.I)
     if m:
         person = _strip_trailing_school_noise(m.group(1))
         return f"{person} атындағы мектебі"
@@ -607,7 +688,70 @@ def _normalize_extracted_name(name: str) -> str:
     return re.sub(r'^["\']+|["\']+$', "", name.strip()).strip()
 
 
+def _extract_imeni_from_boilerplate(full: str) -> str | None:
+    m = re.search(r"(?i)имени\.?\s+([^\"«»]+?)\s*[\"«»]?\s*$", full.strip())
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        if person:
+            return f"{person} атындағы мектебі"
+    return None
+
+
+def _extract_from_kgu_boilerplate(full: str) -> str | None:
+    m = re.search(
+        r"(?i)средняя\s+школа\s+села\s+([A-Za-zА-Яа-яӘәІіҢңҒғҮүҰұҚқӨөҺһ\-]+)",
+        full,
+    )
+    if m:
+        return f"{m.group(1).strip()} мектебі"
+    m = re.search(
+        r"(?i)\sимени\s+([A-Za-zА-Яа-яӘәІіҢңҒғҮүҰұҚқӨөҺһ\.\s]+?)\s+с\s+",
+        full,
+    )
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        if person:
+            return f"{person} атындағы мектебі"
+    return None
+
+
+def _extract_complex_kindergarten_name(full: str) -> str | None:
+    m = re.search(
+        r"(?i)(?:кгу\s*)?(?:комплекс\s*)?(?:[\"«]?)(?:школа[\s\-–]*ясли[\s\-–]*детский\s+сад)"
+        r"(?:[\"»]?)\s*[\"«»]?\s*([^\"«»]+?)\s*[\"«»]?\s*$",
+        full,
+    )
+    if m:
+        place = re.sub(r"\s+", " ", m.group(1)).strip(" ,-")
+        if place.lower().startswith("имени"):
+            return None
+        if place and place.lower() not in {"комплекс", "школа", "мектебі"}:
+            return f"{place} мектебі"
+    return None
+
+
+def _finalize_imeni_kk(name: str) -> str:
+    m = re.match(r"^имени\.\s*(.+?)\s+мектебі\s*$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} атындағы мектебі"
+    m = re.match(r"^имени\s+(.+?)\s+мектебі\s*$", name, re.I)
+    if m:
+        person = _strip_trailing_school_noise(m.group(1))
+        return f"{person} атындағы мектебі"
+    return name
+
+
 def short_name(full: str) -> str:
+    for resolver in (
+        _extract_imeni_from_boilerplate,
+        _extract_from_kgu_boilerplate,
+        _extract_complex_kindergarten_name,
+    ):
+        resolved = resolver(full)
+        if resolved:
+            return resolved[:120]
+
     name = _normalize_extracted_name(_extract_quoted_name(full))
     if _looks_like_boilerplate(name):
         fallback = _fallback_school_title(full)
@@ -617,6 +761,7 @@ def short_name(full: str) -> str:
     name = _strip_russian_admin_tail(name)
     name = re.sub(r"^КГУ\s*", "", name, flags=re.I).strip()
     name = re.sub(r"^Коммунальное государственное учреждение\s*", "", name, flags=re.I).strip()
+    name = re.sub(r"^государственного учреждения\s+", "", name, flags=re.I).strip()
     name = re.sub(r"^ОСШ\s+", "", name, flags=re.I).strip()
     name = re.sub(r"^Сош\s+", "", name, flags=re.I).strip()
     name = re.sub(r"(?i)\s+с\s+дошкольным\s+мини-центром\b", "", name).strip()
@@ -640,7 +785,20 @@ def short_name(full: str) -> str:
     name = _fix_imeni_kk(name)
     name = _polish_kk_title(name)
     name = _normalize_extracted_name(name)
-    return _clean_school_title(name.strip(), "мектебі")
+    name = _clean_school_title(name.strip(), "мектебі")
+    bare = re.sub(r"\s+", " ", name).strip().lower()
+    if not bare or bare in {"мектебі", "мектеп", "гимназия"}:
+        fb = _fallback_school_title(full)
+        if fb:
+            return short_name(f'"{fb}"')
+        quoted = _extract_quoted_name(full).strip()
+        if quoted and quoted.lower() not in {"комплекс", "мектебі", "мектеп"}:
+            rescue = _fix_imeni_kk(quoted)
+            rescue = _polish_kk_title(rescue)
+            rescue = _clean_school_title(rescue, "мектебі")
+            if rescue.strip().lower() not in {"мектебі", "мектеп", ""}:
+                return _finalize_imeni_kk(rescue)
+    return _finalize_imeni_kk(name)
 
 
 def _title_case_en(name: str) -> str:
