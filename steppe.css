@@ -1866,7 +1866,10 @@ body.map-schools-open .region-schools-block {
   gap: 18px;
 }
 .coop-card--front {
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.22s ease;
+}
+.coop-zone:not(.is-flipped) .coop-zone-hit:hover .coop-card--front {
+  transform: translateY(-4px);
 }
 
 .coop-card--kh.coop-card--front {
@@ -2057,6 +2060,10 @@ body.map-schools-open .region-schools-block {
 }
 @media (prefers-reduced-motion: reduce) {
   .coop-flip-inner { transition: none; }
+  .coop-card--front { transition: box-shadow 0.2s ease; }
+  .coop-zone:not(.is-flipped) .coop-zone-hit:hover .coop-card--front {
+    transform: none;
+  }
 }
 @media (max-width: 560px) {
   .coop-diagram-grid { grid-template-columns: 1fr; }
