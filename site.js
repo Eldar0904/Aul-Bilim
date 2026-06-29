@@ -114,13 +114,8 @@
         var slug = slugs.indexOf(hash) >= 0 ? hash : null;
 
         hubIntro.hidden = !!slug;
-        var cardsSection = document.getElementById('programs-cards');
-        if (cardsSection) cardsSection.hidden = !!slug;
-        document.querySelectorAll('#programs-cards .dir-card').forEach(function (card) {
-          var href = (card.getAttribute('href') || '').replace(/^.*#/, '');
-          card.classList.toggle('is-active', slug === href);
-          card.setAttribute('aria-current', slug === href ? 'page' : 'false');
-        });
+        var programsHub = document.getElementById('programs-hub');
+        if (programsHub) programsHub.hidden = !!slug;
         slugs.forEach(function (id) {
           var view = document.getElementById('program-' + id);
           if (view) view.hidden = slug !== id;

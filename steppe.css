@@ -1076,13 +1076,7 @@ body.map-schools-open .region-schools-block {
   flex-direction: column;
 }
 #main-content.prog-page .programs-view.prog-page:not([hidden]) { order: 0; }
-#main-content.prog-page #programs-cards { display: none; }
 #main-content.prog-page #programs-hub { display: none; }
-.dir-card.is-active {
-  box-shadow: 0 18px 48px -22px rgba(27,79,138,0.42);
-  outline: 2px solid var(--accent-soft);
-  outline-offset: 2px;
-}
 
 .prog-page-hero {
   position: relative;
@@ -1174,18 +1168,30 @@ body.map-schools-open .region-schools-block {
   background: linear-gradient(180deg, rgba(20,58,110,0.25) 0%, rgba(20,58,110,0.88) 100%);
 }
 .prog-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: clamp(28px, 5vw, 56px);
+  max-width: 720px;
+}
+@media (max-width: 1100px) {
+  .prog-page-hero .prog-hero-grid .dir-panel-hero-in h2 {
+    white-space: normal;
+    font-size: clamp(26px, 4.2vw, 40px);
+  }
+}
+.prog-page-hero .prog-hero-grid .dir-panel-hero-in h2 {
+  font-size: clamp(28px, 3.4vw, 44px);
+  white-space: nowrap;
+  margin-bottom: 18px;
+}
+.prog-page-hero .prog-hero-grid .dir-panel-hero-in p {
+  max-width: 52ch;
+  margin-bottom: 0;
 }
 .prog-hero-stats {
   display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 1fr));
-  gap: clamp(24px, 4vw, 48px);
-  padding-bottom: 4px;
+  grid-template-columns: repeat(2, minmax(120px, max-content));
+  gap: clamp(32px, 6vw, 64px);
+  margin-top: 28px;
 }
-.prog-hero-stat { text-align: center; }
+.prog-hero-stat { text-align: left; }
 .prog-hero-stat .n {
   font-family: var(--fh);
   font-weight: 900;
@@ -2089,8 +2095,8 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .dir-panel-body { padding: 36px 24px; }
   .prog-page-hero { min-height: min(58vh, 520px); }
   .prog-page-hero > .wrap { padding-bottom: 36px; }
-  .prog-hero-grid { grid-template-columns: 1fr; }
-  .prog-hero-stats { justify-self: start; }
+  .prog-hero-grid { max-width: none; }
+  .prog-hero-stats { grid-template-columns: 1fr 1fr; }
   .prog-page-hero .prog-hero-grid .dir-panel-hero-in { padding: 0; }
   .dir-panel-hero-in { padding: 28px 24px 32px; }
   .dir-cycle-arrow { display: none; }
