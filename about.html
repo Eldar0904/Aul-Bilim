@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=45" />
+<link rel="stylesheet" href="steppe.css?v=46" />
 </head>
 <body>
 <div class="grain"></div>
@@ -45,107 +45,143 @@
   </div>
 </section>
 
-<!-- ============ COOPERATION MODEL (hub layout) ============ -->
+<!-- ============ COOPERATION MODEL (interactive) ============ -->
 <section class="block about-coop" id="about-coop">
   <div class="wrap">
-    <header class="coop-hub-head">
-      <span class="kicker"><span lang="kk">Серіктестік моделі</span><span lang="en">Partnership model</span></span>
-      <p class="coop-hub-lead"><span lang="kk">Картаны басыңыз — серіктестің үлесін ашыңыз</span><span lang="en">Tap a card to reveal each partner's contribution</span></p>
-    </header>
+    <div class="coop-interactive" id="coop-interactive">
+      <div class="coop-diagram">
+        <header class="coop-diagram-head">
+          <h2 class="coop-diagram-title">МОДЕЛЬ <span class="coop-diagram-title-accent">СОТРУДНИЧЕСТВА</span></h2>
+          <div class="coop-diagram-mark" aria-hidden="true">
+            <img src="img/coop/jelken-logo.svg?v=2" alt="" width="44" height="44" />
+          </div>
+        </header>
 
-    <div class="coop-hub" id="coop-hub">
-      <div class="coop-hub-grid" role="list" aria-label="Partners">
-        <article class="coop-hub-card coop-hub-card--kh" data-partner="kh" role="listitem">
-          <button type="button" class="coop-hub-card-hit" aria-expanded="false">
-            <span class="coop-hub-card-inner">
-              <span class="coop-hub-face coop-hub-face--front">
-                <span class="coop-hub-logo coop-hub-logo--kh"><img src="img/coop/logo-kh.png?v=2" alt="" width="64" height="48" /></span>
-                <span class="coop-hub-role"><span lang="kk">Бас серіктес</span><span lang="en">Lead Partner</span></span>
-                <span class="coop-hub-name"><span lang="kk">Қазақстан Халқына</span><span lang="en">Qazaqstan Halqyina</span></span>
-                <span class="coop-hub-tags">
-                  <span class="coop-hub-tag"><span lang="kk">Қаржыландыру</span><span lang="en">Funding</span></span>
-                  <span class="coop-hub-tag"><span lang="kk">Бағыт-бағдар</span><span lang="en">Direction</span></span>
-                </span>
-              </span>
-              <span class="coop-hub-face coop-hub-face--back coop-hub-face--kh" aria-hidden="true">
-                <span class="coop-hub-back-label"><span lang="kk">Үлесі</span><span lang="en">Contribution</span></span>
-                <p><span lang="kk">Ауыл мектептерін заманауи жаратылыстану-математика, цифрлық және әмбебап кабинеттермен жабдықтауға қайырымдылық қаражат бөледі.</span><span lang="en">Allocates charitable funding to equip village schools with modern STEM, digital and universal learning classrooms.</span></p>
-              </span>
-            </span>
-          </button>
-        </article>
+        <div class="coop-diagram-stage">
+          <svg class="coop-links" aria-hidden="true">
+            <g class="coop-link-lines">
+              <path id="coop-link-kh" class="coop-link-path" data-partner="kh" />
+              <path id="coop-link-bi" class="coop-link-path" data-partner="bi" />
+              <path id="coop-link-local" class="coop-link-path" data-partner="local" />
+            </g>
+            <g class="coop-link-dots"></g>
+          </svg>
 
-        <div class="coop-hub-conn coop-hub-conn--h coop-hub-conn--top" aria-hidden="true"></div>
+          <div class="coop-diagram-grid" role="tablist" aria-label="Partners">
+            <div class="coop-zone coop-zone--kh">
+              <div class="coop-card-flip">
+                <button type="button" class="coop-zone-hit" data-partner="kh" role="tab" aria-selected="false" aria-expanded="false">
+                  <span class="coop-zone-hit-label" lang="kk">Қазақстан халқына</span>
+                  <span class="coop-zone-hit-label" lang="en">Qazaqstan Halqyina</span>
+                  <span class="coop-flip-inner">
+                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--kh">
+                      <span class="coop-card-logo coop-card-logo--kh"><img src="img/coop/logo-kh.png?v=2" alt="" width="64" height="64" /></span>
+                      <span class="coop-card-main">
+                        <span class="coop-card-role">ГЕНЕРАЛЬНЫЙ ПАРТНЕР</span>
+                        <span class="coop-card-org">(ОФ «ҚАЗАҚСТАН ХАЛҚЫНА»)</span>
+                        <ul class="coop-card-points">
+                          <li>ФИНАНСИРОВАНИЕ</li>
+                          <li>ЦЕЛЕПОЛАГАНИЕ</li>
+                        </ul>
+                      </span>
+                    </span>
+                    <span class="coop-card coop-card--back coop-card--kh" aria-hidden="true">
+                      <span class="coop-card-back-body">
+                        <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Жобаның бас демеушісі.</span><span lang="en">Lead sponsor of the project.</span></p>
+                        <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Ауыл мектептерін заманауи жаратылыстану-математика, цифрлық және әмбебап кабинеттермен жабдықтауға қайырымдылық қаражат бөледі.</span><span lang="en">Allocates charitable funding to equip village schools with modern STEM, digital and universal learning classrooms.</span></p>
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
 
-        <article class="coop-hub-card coop-hub-card--bi" data-partner="bi" role="listitem">
-          <button type="button" class="coop-hub-card-hit" aria-expanded="false">
-            <span class="coop-hub-card-inner">
-              <span class="coop-hub-face coop-hub-face--front">
-                <span class="coop-hub-logo coop-hub-logo--bi"><img src="img/coop/logo-bi.png?v=2" alt="" width="56" height="56" /></span>
-                <span class="coop-hub-role"><span lang="kk">Академиялық серіктес</span><span lang="en">Academic Partner</span></span>
-                <span class="coop-hub-name"><span lang="kk">Білім-Инновация</span><span lang="en">Bilim-Innovation</span></span>
-                <span class="coop-hub-tags">
-                  <span class="coop-hub-tag"><span lang="kk">Әдістеме</span><span lang="en">Methodology</span></span>
-                  <span class="coop-hub-tag"><span lang="kk">Кадр даярлау</span><span lang="en">Staff training</span></span>
-                </span>
-              </span>
-              <span class="coop-hub-face coop-hub-face--back coop-hub-face--bi" aria-hidden="true">
-                <span class="coop-hub-back-label"><span lang="kk">Үлесі</span><span lang="en">Contribution</span></span>
-                <p><span lang="kk">Педагогтердің біліктілігін арттыру курстарын ұйымдастырады, білімін диагностикалайды және оқу жылы бойы тұрақты тәлімгерлік қолдау көрсетеді.</span><span lang="en">Organises professional development courses for teachers, assesses their knowledge, and provides ongoing mentorship support throughout the school year.</span></p>
-              </span>
-            </span>
-          </button>
-        </article>
+            <div class="coop-zone coop-zone--bi">
+              <div class="coop-card-flip">
+                <button type="button" class="coop-zone-hit" data-partner="bi" role="tab" aria-selected="false" aria-expanded="false">
+                  <span class="coop-zone-hit-label" lang="kk">Білім-Инновация</span>
+                  <span class="coop-zone-hit-label" lang="en">Bilim-Innovation</span>
+                  <span class="coop-flip-inner">
+                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--bi">
+                      <span class="coop-card-logo coop-card-logo--bi"><img src="img/coop/logo-bi.png?v=2" alt="" width="64" height="64" /></span>
+                      <span class="coop-card-main">
+                        <span class="coop-card-role">АКАДЕМИЧЕСКИЙ ПАРТНЕР</span>
+                        <span class="coop-card-org">(МОФ «БІЛІМ-ИННОВАЦИЯ»)</span>
+                        <ul class="coop-card-points">
+                          <li>МЕТОДОЛОГИЯ</li>
+                          <li>ОБУЧЕНИЕ КАДРОВ</li>
+                        </ul>
+                      </span>
+                    </span>
+                    <span class="coop-card coop-card--back coop-card--bi" aria-hidden="true">
+                      <span class="coop-card-back-body">
+                        <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Академиялық серіктес.</span><span lang="en">Academic partner.</span></p>
+                        <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Педагогтердің біліктілігін арттыру курстарын ұйымдастырады, білімін диагностикалайды және оқу жылы бойы тұрақты тәлімгерлік (менторлық) қолдау көрсетеді.</span><span lang="en">Organises professional development courses for teachers, assesses their knowledge, and provides ongoing mentorship support throughout the school year.</span></p>
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
 
-        <div class="coop-hub-conn coop-hub-conn--v coop-hub-conn--left" aria-hidden="true"></div>
+            <div class="coop-zone coop-zone--jf">
+              <div class="coop-card-flip">
+                <button type="button" class="coop-zone-hit" data-partner="jf" role="tab" aria-selected="false" aria-expanded="false">
+                  <span class="coop-zone-hit-label" lang="kk">Jelken foundation</span>
+                  <span class="coop-zone-hit-label" lang="en">Jelken Foundation</span>
+                  <span class="coop-flip-inner">
+                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--jf">
+                      <span class="coop-card-logo coop-card-logo--jf"><img src="img/coop/jelken-logo.svg?v=2" alt="" width="64" height="64" /></span>
+                      <span class="coop-card-main">
+                        <span class="coop-card-role">ОПЕРАТОР ПРОЕКТА</span>
+                        <span class="coop-card-org">(ОФ «JELKEN FOUNDATION»)</span>
+                        <ul class="coop-card-points">
+                          <li>КООРДИНАЦИЯ</li>
+                          <li>МОНИТОРИНГ</li>
+                          <li>ОТЧЕТНОСТЬ</li>
+                        </ul>
+                      </span>
+                    </span>
+                    <span class="coop-card coop-card--back coop-card--jf" aria-hidden="true">
+                      <span class="coop-card-back-body">
+                        <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Жобаның бас операторы.</span><span lang="en">Lead operator of the project.</span></p>
+                        <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Жобаның барлық кезеңдерін үйлестіреді, мектептерге инвентаризация жүргізіп, жабдықтардың сатып алынуы мен сапалы жеткізілуін қадағалайды.</span><span lang="en">Coordinates all project stages, carries out school inventories, and oversees procurement and quality delivery of equipment.</span></p>
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
 
-        <div class="coop-hub-center" aria-hidden="true">
-          <div class="coop-hub-center-badge">Aul<br>Bilim</div>
+            <div class="coop-zone coop-zone--local">
+              <div class="coop-card-flip">
+                <button type="button" class="coop-zone-hit" data-partner="local" role="tab" aria-selected="false" aria-expanded="false">
+                  <span class="coop-zone-hit-label" lang="kk">Жергілікті білім басқармалары</span>
+                  <span class="coop-zone-hit-label" lang="en">Local education departments</span>
+                  <span class="coop-flip-inner">
+                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--local">
+                      <span class="coop-card-logo coop-card-logo--local"><img src="img/coop/logo-local.png" alt="" width="64" height="64" /></span>
+                      <span class="coop-card-main">
+                        <span class="coop-card-role">МЕСТНЫЕ ОРГАНЫ</span>
+                        <span class="coop-card-org">(МИО)</span>
+                        <ul class="coop-card-points">
+                          <li>АДМИНИСТРАТИВНАЯ ПОДДЕРЖКА</li>
+                          <li>ПОДГОТОВКА ПОМЕЩЕНИЙ</li>
+                        </ul>
+                      </span>
+                    </span>
+                    <span class="coop-card coop-card--back coop-card--local" aria-hidden="true">
+                      <span class="coop-card-back-body">
+                        <p class="coop-detail-line"><strong><span lang="kk">Рөлі:</span><span lang="en">Role:</span></strong> <span lang="kk">Инфрақұрылымдық серіктес.</span><span lang="en">Infrastructure partner.</span></p>
+                        <p class="coop-detail-line"><strong><span lang="kk">Үлесі:</span><span lang="en">Contribution:</span></strong> <span lang="kk">Оқу кабинеттерін жөндеуден өткізеді, интернет жылдамдығын қамтамасыз етеді және онлайн-сабақтардың, біліктілік курстарының жүзеге асуын қаржыландырып, ұйымдастырады.</span><span lang="en">Renovates classrooms, provides internet connectivity, and funds and organises online lessons and qualification courses.</span></p>
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="coop-hub-conn coop-hub-conn--v coop-hub-conn--right" aria-hidden="true"></div>
-
-        <article class="coop-hub-card coop-hub-card--jf" data-partner="jf" role="listitem">
-          <button type="button" class="coop-hub-card-hit" aria-expanded="false">
-            <span class="coop-hub-card-inner">
-              <span class="coop-hub-face coop-hub-face--front">
-                <span class="coop-hub-logo coop-hub-logo--jf"><img src="img/coop/jelken-logo.svg?v=2" alt="" width="48" height="48" /></span>
-                <span class="coop-hub-role"><span lang="kk">Жоба операторы</span><span lang="en">Project Operator</span></span>
-                <span class="coop-hub-name">Jelken Foundation</span>
-                <span class="coop-hub-tags">
-                  <span class="coop-hub-tag"><span lang="kk">Үйлестіру</span><span lang="en">Coordination</span></span>
-                  <span class="coop-hub-tag"><span lang="kk">Мониторинг</span><span lang="en">Monitoring</span></span>
-                </span>
-              </span>
-              <span class="coop-hub-face coop-hub-face--back coop-hub-face--jf" aria-hidden="true">
-                <span class="coop-hub-back-label"><span lang="kk">Үлесі</span><span lang="en">Contribution</span></span>
-                <p><span lang="kk">Жобаның барлық кезеңдерін үйлестіреді, мектептерге инвентаризация жүргізіп, жабдықтардың сатып алынуы мен сапалы жеткізілуін қадағалайды.</span><span lang="en">Coordinates all project stages, carries out school inventories, and oversees procurement and quality delivery of equipment.</span></p>
-              </span>
-            </span>
-          </button>
-        </article>
-
-        <div class="coop-hub-conn coop-hub-conn--h coop-hub-conn--bottom" aria-hidden="true"></div>
-
-        <article class="coop-hub-card coop-hub-card--local" data-partner="local" role="listitem">
-          <button type="button" class="coop-hub-card-hit" aria-expanded="false">
-            <span class="coop-hub-card-inner">
-              <span class="coop-hub-face coop-hub-face--front">
-                <span class="coop-hub-logo coop-hub-logo--local"><img src="img/coop/logo-local.png" alt="" width="48" height="48" /></span>
-                <span class="coop-hub-role"><span lang="kk">Инфрақұрылым серіктесі</span><span lang="en">Infrastructure Partner</span></span>
-                <span class="coop-hub-name"><span lang="kk">Жергілікті білім басқармалары</span><span lang="en">Local education departments</span></span>
-                <span class="coop-hub-tags">
-                  <span class="coop-hub-tag"><span lang="kk">Әкімшілік</span><span lang="en">Administration</span></span>
-                  <span class="coop-hub-tag"><span lang="kk">Үй-жай дайындау</span><span lang="en">Premises prep</span></span>
-                </span>
-              </span>
-              <span class="coop-hub-face coop-hub-face--back coop-hub-face--local" aria-hidden="true">
-                <span class="coop-hub-back-label"><span lang="kk">Үлесі</span><span lang="en">Contribution</span></span>
-                <p><span lang="kk">Оқу кабинеттерін жөндеуден өткізеді, интернет жылдамдығын қамтамасыз етеді және онлайн-сабақтар мен біліктілік курстарын ұйымдастырады.</span><span lang="en">Renovates classrooms, provides internet connectivity, and funds and organises online lessons and qualification courses.</span></p>
-              </span>
-            </span>
-          </button>
-        </article>
       </div>
     </div>
   </div>
@@ -181,7 +217,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=10"></script>
+<script src="site.js?v=11"></script>
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/db.js"></script>
 <script src="uploads/copy-bindings.js"></script>
