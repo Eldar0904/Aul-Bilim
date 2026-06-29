@@ -197,14 +197,12 @@
       var activeZone = null;
       var coopStage = coopRoot.querySelector('.coop-diagram-stage');
       var coopLinksSvg = coopRoot.querySelector('.coop-links');
-      var coopDotsGroup = coopLinksSvg && coopLinksSvg.querySelector('.coop-link-dots');
       var coopLinkDefs = [
         { id: 'coop-link-kh', hub: 'top', partner: 'kh', target: 'bottom', bend: 0.12 },
         { id: 'coop-link-bi', hub: 'left', partner: 'bi', target: 'right', bend: 0.14 },
         { id: 'coop-link-local', hub: 'right', partner: 'local', target: 'left', bend: 0.14 }
       ];
       var coopLinkTimer = null;
-      var coopReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function coopCardRect(zoneClass, containerRect) {
         var zone = coopRoot.querySelector(zoneClass);
@@ -245,19 +243,6 @@
           ' ' + end.x.toFixed(1) + ' ' + end.y.toFixed(1);
       }
 
-      function coopBuildDots(pathId, duration) {
-        if (!coopDotsGroup || coopReducedMotion) return '';
-        var dots = '';
-        var offsets = ['0s', (duration * 0.33).toFixed(2) + 's', (duration * 0.66).toFixed(2) + 's'];
-        for (var i = 0; i < offsets.length; i++) {
-          dots += '<circle class="coop-link-dot" r="3.5">' +
-            '<animateMotion dur="' + duration + 's" repeatCount="indefinite" begin="' + offsets[i] + '" rotate="auto">' +
-            '<mpath href="#' + pathId + '"></mpath>' +
-            '</animateMotion></circle>';
-        }
-        return dots;
-      }
-
       function updateCoopLinks() {
         if (!coopStage || !coopLinksSvg) return;
         if (window.innerWidth <= 900) return;
@@ -272,7 +257,6 @@
         coopLinksSvg.setAttribute('width', width);
         coopLinksSvg.setAttribute('height', height);
 
-        var dotsHtml = '';
         coopLinkDefs.forEach(function (link) {
           var pathEl = coopLinksSvg.querySelector('#' + link.id);
           var partner = coopCardRect('.coop-zone--' + link.partner, stageRect);
@@ -284,10 +268,7 @@
 
           pathEl.setAttribute('d', coopQuadPath(start, end, link.bend));
           pathEl.classList.toggle('is-active', !!(activeZone && activeZone.classList.contains('coop-zone--' + link.partner)));
-          dotsHtml += coopBuildDots(link.id, 3.6);
         });
-
-        if (coopDotsGroup) coopDotsGroup.innerHTML = dotsHtml;
       }
 
       function scheduleCoopLinks() {

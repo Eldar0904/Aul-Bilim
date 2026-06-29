@@ -1749,9 +1749,9 @@ body.map-schools-open .region-schools-block {
 .coop-interactive { max-width: 1120px; margin: 0 auto; }
 
 .coop-diagram {
-  background: #eceef2;
-  border-radius: 20px;
-  padding: 34px 34px 38px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
 }
 .coop-diagram-head {
   display: flex;
@@ -1791,20 +1791,14 @@ body.map-schools-open .region-schools-block {
 }
 .coop-link-path {
   fill: none;
-  stroke: #2f8fd4;
-  stroke-width: 2;
-  stroke-dasharray: 6 8;
+  stroke: rgba(27, 79, 138, 0.22);
+  stroke-width: 1.5;
   stroke-linecap: round;
-  opacity: 0.55;
-  transition: opacity 0.2s ease, stroke-width 0.2s ease;
+  transition: stroke 0.2s ease, stroke-width 0.2s ease, opacity 0.2s ease;
 }
 .coop-link-path.is-active {
-  opacity: 0.9;
-  stroke-width: 2.5;
-}
-.coop-link-dot {
-  fill: #2f8fd4;
-  opacity: 0.85;
+  stroke: rgba(232, 130, 10, 0.55);
+  stroke-width: 2;
 }
 
 .coop-diagram-grid {
@@ -2074,7 +2068,7 @@ body.map-schools-open .region-schools-block {
 .coop-detail-line strong { color: var(--ink); font-weight: 700; }
 
 @media (max-width: 900px) {
-  .coop-diagram { padding: 24px 18px 28px; }
+  .coop-diagram { padding: 0; }
   .coop-diagram-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -2088,7 +2082,6 @@ body.map-schools-open .region-schools-block {
 }
 @media (prefers-reduced-motion: reduce) {
   .coop-flip-inner { transition: none; }
-  .coop-link-dots { display: none; }
 }
 @media (max-width: 560px) {
   .coop-diagram-grid { grid-template-columns: 1fr; }
