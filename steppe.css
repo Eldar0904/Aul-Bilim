@@ -1932,9 +1932,27 @@ body.map-schools-open .region-schools-block {
 
 .coop-card-logo {
   flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.coop-card-logo--kh {
+  width: 88px;
+  height: 52px;
+}
+.coop-card-logo--bi {
   width: 72px;
   height: 72px;
-  display: block;
+}
+.coop-card--jf .coop-card-logo {
+  width: 72px;
+  height: 72px;
+}
+.coop-card--local .coop-card-logo {
+  width: 72px;
+  height: 72px;
 }
 .coop-card--jf .coop-card-logo img {
   background: #fff;
@@ -1946,11 +1964,6 @@ body.map-schools-open .region-schools-block {
   height: 100%;
   object-fit: contain;
   display: block;
-  border-radius: 12px;
-}
-.coop-card--kh .coop-card-logo img,
-.coop-card--bi .coop-card-logo img {
-  mix-blend-mode: lighten;
 }
 
 .coop-card-role {
