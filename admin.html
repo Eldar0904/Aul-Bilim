@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kk">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,232 +12,13 @@
 <script src="uploads/auth.js"></script>
 <script src="uploads/content-schema.js"></script>
 <script src="uploads/db.js"></script>
-<script src="image-slot.js"></script>
-<style>
-:root {
-  --primary:#1B4F8A; --primary-dark:#143A6E; --primary-light:#2D6AB4;
-  --accent:#F2A413; --accent-deep:#E8820A; --accent-soft:#FFD27A;
-  --cream:#FBF5E9; --cream-deep:#F4E8D2;
-  --ink:#21232E; --body:#4A4A5E; --line:rgba(0,0,0,0.08);
-  --surface:#fff;
-  --sidebar:220px;
-  --topbar:62px;
-  --fh:'Raleway',sans-serif; --fb:'Inter',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--fb);color:var(--ink);background:#F0EDE8;font-size:14px;line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-button{cursor:pointer;}
-
-/* ── GATE ─────────────────────────────────────────────────── */
-#gate{
-  position:fixed;inset:0;background:var(--primary-dark);
-  display:flex;align-items:center;justify-content:center;z-index:9999;
-}
-.gate-card{
-  background:#fff;border-radius:24px;padding:48px 44px;width:360px;
-  box-shadow:0 32px 64px -24px rgba(0,0,0,0.5);text-align:center;
-}
-.gate-logo{font-family:var(--fh);font-weight:900;font-size:22px;color:var(--primary);margin-bottom:6px;}
-.gate-logo span{color:var(--accent-deep);}
-.gate-sub{font-size:13px;color:var(--body);margin-bottom:28px;}
-.gate-card input{
-  width:100%;padding:12px 15px;border:1.5px solid rgba(0,0,0,0.14);border-radius:10px;
-  font-family:var(--fb);font-size:15px;margin-bottom:14px;transition:border-color .18s;
-}
-.gate-card input:focus{outline:none;border-color:var(--accent);}
-.gate-card .btn{
-  width:100%;padding:13px;background:var(--primary);color:#fff;border:none;
-  border-radius:10px;font-family:var(--fh);font-weight:800;font-size:15px;
-  transition:background .18s;
-}
-.gate-card .btn:hover{background:var(--primary-dark);}
-.gate-err{color:#c0392b;font-size:13px;margin-top:10px;display:none;}
-.gate-hint{font-size:12px;color:#aaa;margin-top:16px;}
-
-/* ── LAYOUT ───────────────────────────────────────────────── */
-#app{display:none;height:100vh;overflow:hidden;}
-#app.show{display:flex;}
-
-/* sidebar */
-aside#sidebar{
-  width:var(--sidebar);flex:none;background:var(--ink);color:rgba(255,255,255,0.88);
-  display:flex;flex-direction:column;height:100vh;overflow-y:auto;
-}
-.sb-logo{
-  padding:20px 20px 16px;font-family:var(--fh);font-weight:900;font-size:18px;
-  color:#fff;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.08);
-}
-.sb-logo .sun{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--accent-soft),var(--accent) 70%);flex:none;}
-.sb-logo span{color:var(--accent-soft);}
-.sb-logo small{display:block;font-size:10px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-top:1px;text-transform:uppercase;}
-
-.sb-section{padding:14px 12px 6px;font-size:10.5px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
-.sb-page{
-  display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:8px;margin:2px 8px;
-  font-family:var(--fh);font-weight:700;font-size:13.5px;color:rgba(255,255,255,0.75);
-  transition:background .15s,color .15s;cursor:pointer;border:none;background:transparent;width:calc(100% - 16px);text-align:left;
-}
-.sb-page:hover{background:rgba(255,255,255,0.07);color:#fff;}
-.sb-page.active{background:var(--accent);color:var(--ink);}
-.sb-page .badge{
-  margin-left:auto;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);
-  font-size:10px;font-weight:700;padding:2px 7px;border-radius:100px;
-}
-.sb-page.active .badge{background:rgba(0,0,0,0.14);color:var(--ink);}
-
-.sb-bottom{margin-top:auto;padding:16px;border-top:1px solid rgba(255,255,255,0.08);}
-.sb-bottom button{
-  width:100%;padding:9px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);
-  color:rgba(255,255,255,0.6);border-radius:8px;font-family:var(--fh);font-weight:700;font-size:12.5px;
-  transition:background .15s;
-}
-.sb-bottom button:hover{background:rgba(255,255,255,0.13);color:#fff;}
-
-/* main area */
-#main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;}
-
-/* topbar */
-#topbar{
-  height:var(--topbar);flex:none;background:#fff;border-bottom:1px solid var(--line);
-  display:flex;align-items:center;padding:0 28px;gap:16px;
-}
-#topbar h1{font-family:var(--fh);font-weight:900;font-size:18px;flex:1;}
-#topbar .tag{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--cream-deep);color:var(--accent-deep);padding:4px 10px;border-radius:100px;}
-#preview-link{
-  font-family:var(--fh);font-weight:700;font-size:13px;color:var(--primary);
-  display:inline-flex;align-items:center;gap:6px;padding:9px 16px;
-  border-radius:8px;border:1.5px solid rgba(27,79,138,0.2);transition:background .15s;
-}
-#preview-link:hover{background:rgba(27,79,138,0.05);}
-#save-btn{
-  font-family:var(--fh);font-weight:800;font-size:14px;
-  background:var(--primary);color:#fff;border:none;
-  padding:10px 22px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .18s;
-}
-#save-btn:hover{background:var(--primary-dark);}
-#save-btn.saved{background:#1a7a45;}
-#save-btn.saving{background:#888;cursor:wait;}
-
-/* tabs */
-#tabs{
-  flex:none;display:flex;gap:0;padding:0 28px;background:#fff;
-  border-bottom:1px solid var(--line);
-}
-.tab-btn{
-  font-family:var(--fh);font-weight:700;font-size:13.5px;color:var(--body);
-  background:transparent;border:none;padding:13px 20px;border-bottom:2.5px solid transparent;
-  margin-bottom:-1px;transition:color .15s,border-color .15s;
-}
-.tab-btn.active{color:var(--primary);border-bottom-color:var(--accent);}
-.tab-btn:hover{color:var(--ink);}
-
-/* content */
-#content{flex:1;overflow-y:auto;padding:28px;}
-
-/* ── COPY PANEL ───────────────────────────────────────────── */
-.copy-loading{text-align:center;padding:60px;color:var(--body);font-family:var(--fh);}
-.copy-loading .spin{display:inline-block;width:32px;height:32px;border:3px solid rgba(27,79,138,0.2);border-top-color:var(--primary);border-radius:50%;animation:spin .7s linear infinite;margin-bottom:12px;}
-@keyframes spin{to{transform:rotate(360deg);}}
-
-.copy-group{background:#fff;border-radius:16px;margin-bottom:20px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
-.copy-group-head{
-  padding:14px 20px;background:var(--cream);border-bottom:1px solid var(--line);
-  display:flex;align-items:center;gap:10px;
-}
-.copy-group-head h3{font-family:var(--fh);font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--primary);}
-.copy-group-head .cnt{font-size:11px;font-family:var(--fh);font-weight:700;color:var(--body);background:var(--cream-deep);padding:2px 8px;border-radius:100px;}
-
-.copy-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line);}
-.copy-pair:last-child{border-bottom:none;}
-.copy-field{padding:14px 20px;}
-.copy-field + .copy-field{border-left:1px solid var(--line);}
-.copy-field label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);font-family:var(--fh);display:block;margin-bottom:6px;}
-.copy-field textarea{
-  width:100%;min-height:52px;resize:vertical;
-  font-family:var(--fb);font-size:14px;color:var(--ink);
-  border:1.5px solid transparent;border-radius:8px;padding:8px 10px;
-  background:rgba(0,0,0,0.02);transition:border-color .18s,background .18s;line-height:1.5;
-}
-.copy-field textarea:focus{outline:none;border-color:var(--accent);background:#fffdf5;}
-.copy-field textarea.changed{border-color:rgba(242,164,19,0.5);background:#fffdf5;}
-
-.copy-stat-row{padding:14px 20px;display:flex;align-items:center;gap:14px;}
-.copy-stat-row label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);font-family:var(--fh);width:80px;flex:none;}
-.copy-stat-row input{
-  flex:1;font-family:var(--fh);font-weight:800;font-size:22px;color:var(--primary);
-  border:1.5px solid transparent;border-radius:8px;padding:6px 10px;background:rgba(0,0,0,0.02);transition:border-color .18s;
-}
-.copy-stat-row input:focus{outline:none;border-color:var(--accent);background:#fffdf5;}
-.copy-stat-row input.changed{border-color:rgba(242,164,19,0.5);}
-
-/* ── MEDIA PANEL ──────────────────────────────────────────── */
-.media-intro{
-  background:#fff;border-radius:16px;padding:18px 22px;margin-bottom:22px;
-  display:flex;align-items:center;gap:14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);
-  font-size:13.5px;color:var(--body);
-}
-.media-intro .ic{width:36px;height:36px;background:var(--accent-soft);border-radius:10px;display:grid;place-items:center;flex:none;color:var(--accent-deep);}
-
-.media-group{background:#fff;border-radius:16px;margin-bottom:20px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
-.media-group-head{padding:14px 20px;background:var(--cream);border-bottom:1px solid var(--line);}
-.media-group-head h3{font-family:var(--fh);font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--primary);}
-.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;padding:20px;}
-.media-slot-wrap{display:flex;flex-direction:column;gap:8px;}
-.media-slot-wrap image-slot{display:block;width:100%;border-radius:12px;overflow:hidden;}
-.media-slot-label{font-family:var(--fh);font-weight:700;font-size:11.5px;color:var(--body);text-align:center;letter-spacing:0.04em;}
-.media-meta{display:grid;gap:7px;margin-top:4px;}
-.media-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:12.5px var(--fb);background:#fff;}
-.media-meta input:focus{outline:none;border-color:var(--accent);}
-
-/* ── TOAST ────────────────────────────────────────────────── */
-#toast{
-  position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);
-  background:var(--ink);color:#fff;font-family:var(--fh);font-weight:700;font-size:13.5px;
-  padding:12px 24px;border-radius:100px;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;z-index:9000;
-}
-#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-#toast.ok{background:#1a7a45;}
-#toast.err{background:#c0392b;}
-
-/* ── SCHOOLS PANEL ─────────────────────────────────────────── */
-#schools-panel{display:none;height:calc(100vh - var(--topbar) - 52px);overflow:hidden;}
-.schools-layout{display:grid;grid-template-columns:320px 1fr;height:100%;gap:0;}
-.schools-sidebar{background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;}
-.schools-sidebar-head{padding:16px;border-bottom:1px solid var(--line);}
-.schools-sidebar-head input,.schools-sidebar-head select{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:13px var(--fb);margin-bottom:8px;}
-.schools-sidebar-head input:focus,.schools-sidebar-head select:focus{outline:none;border-color:var(--accent);}
-.schools-count{font-size:12px;color:var(--body);margin-top:4px;}
-#school-list{flex:1;overflow-y:auto;padding:8px;}
-.school-list-item{display:block;width:100%;text-align:left;padding:10px 12px;border:0;border-radius:10px;background:transparent;cursor:pointer;margin-bottom:2px;}
-.school-list-item:hover{background:var(--cream);}
-.school-list-item.active{background:rgba(27,79,138,0.08);}
-.school-list-name{display:block;font-family:var(--fh);font-weight:700;font-size:13px;color:var(--ink);line-height:1.3;}
-.school-list-meta{display:block;font-size:11px;color:var(--body);margin-top:2px;}
-.schools-editor{padding:0;overflow-y:auto;min-height:0;background:var(--cream,#FBF5E9);}
-#school-editor-empty{color:var(--body);font-size:15px;padding:40px 28px;}
-#school-editor{display:none;width:100%;}
-.school-editor-status{font-size:12px;color:var(--primary);padding:12px 24px 0;font-family:var(--fh);font-weight:700;}
-.admin-school-preview .school-page{background:var(--cream,#FBF5E9);}
-.admin-school-edit{margin-top:12px;padding:14px 16px;background:rgba(27,79,138,0.05);border:1px dashed rgba(27,79,138,0.22);border-radius:14px;}
-.admin-school-edit label{display:block;font-family:var(--fh);font-weight:800;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--primary);margin-bottom:8px;}
-.admin-school-edit input,.admin-school-edit textarea{width:100%;padding:10px 12px;border:1.5px solid rgba(27,79,138,0.18);border-radius:10px;font:13px var(--fb);background:#fff;}
-.admin-school-edit textarea{min-height:88px;resize:vertical;line-height:1.5;}
-.admin-school-edit input:focus,.admin-school-edit textarea:focus{outline:none;border-color:var(--accent);}
-.admin-school-edit-hint{font-size:11.5px;color:var(--body);margin-top:6px;}
-.admin-school-edit-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
-.admin-preview-lang{display:flex;gap:6px;margin-bottom:10px;}
-.admin-preview-lang button{border:1.5px solid rgba(27,79,138,0.2);background:#fff;border-radius:100px;padding:5px 12px;font-family:var(--fh);font-weight:800;font-size:11px;color:var(--primary);cursor:pointer;}
-.admin-preview-lang button.is-on{background:var(--primary);color:#fff;border-color:var(--primary);}
-@media (max-width:900px){.admin-school-edit-row{grid-template-columns:1fr;}}
-</style>
+<link rel="stylesheet" href="admin.css?v=1" />
 </head>
 <body>
 
-<!-- ══ GATE ══════════════════════════════════════════════════ -->
 <div id="gate">
   <div class="gate-card">
-    <div class="gate-logo">Aul&nbsp;<span>Bilim</span></div>
+    <div class="gate-logo"><span class="sun"></span>Aul&nbsp;<span>Bilim</span></div>
     <p class="gate-sub">Мазмұнды басқару жүйесі</p>
     <input type="email" id="email-input" placeholder="Email" autocomplete="username" />
     <input type="password" id="pw-input" placeholder="Құпия сөз" autocomplete="current-password" />
@@ -247,40 +28,35 @@ aside#sidebar{
   </div>
 </div>
 
-<!-- ══ APP ════════════════════════════════════════════════════ -->
 <div id="app">
 
-  <!-- Sidebar -->
+  <!-- ─── Sidebar ─────────────────────────────── -->
   <aside id="sidebar">
     <div class="sb-logo">
       <span class="sun"></span>
       <div><div>Aul <span>Bilim</span></div><small>CMS Әкімші</small></div>
     </div>
-
     <div class="sb-section">Беттер</div>
-    <button class="sb-page active" data-page="index.html">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+
+    <button class="sb-page active" data-page="home">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       Басты бет
     </button>
-    <button class="sb-page" data-page="programs.html">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/></svg>
+    <button class="sb-page" data-page="programs">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14v7"></path></svg>
       Бағдарламалар
     </button>
-    <button class="sb-page" data-page="stories.html">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 10h16M4 14h10"/></svg>
+    <button class="sb-page" data-page="stories">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 10h16M4 14h10"></path></svg>
       Оқиғалар
     </button>
-    <button class="sb-page" data-page="about.html">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    <button class="sb-page" data-page="about">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
       Біз туралы
     </button>
     <button class="sb-page" data-page="schools">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><path d="M9 22V12h6v10"></path></svg>
       Мектептер
-    </button>
-    <button class="sb-page" data-page="REMOVED" style="display:none">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 108 0 4 4 0 00-8 0M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-      Серіктес
     </button>
 
     <div class="sb-bottom">
@@ -288,594 +64,506 @@ aside#sidebar{
     </div>
   </aside>
 
-  <!-- Main -->
+  <!-- ─── Main ──────────────────────────────────── -->
   <div id="main">
+
+    <!-- Topbar -->
     <div id="topbar">
-      <h1 id="page-title">Home</h1>
-      <span class="tag" id="page-file">index.html</span>
+      <h1 id="page-title">Басты бет</h1>
+      <span class="top-tag" id="page-file">index.html</span>
       <a id="preview-link" href="index.html" target="_blank">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"></path></svg>
         Алдын ала қарау
       </a>
       <button id="save-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
         Өзгерістерді сақтау
       </button>
     </div>
 
-    <div id="tabs">
-      <button class="tab-btn active" data-tab="copy">✏ Мәтін</button>
-      <button class="tab-btn" data-tab="media">🖼 Медиа</button>
-    </div>
-
+    <!-- Content -->
     <div id="content">
-      <div id="copy-panel"></div>
-      <div id="media-panel" style="display:none;"></div>
-      <div id="schools-panel">
-        <div class="schools-layout">
-          <aside class="schools-sidebar">
-            <div class="schools-sidebar-head">
-              <select id="school-filter-region" aria-label="Filter by region"></select>
-              <input type="search" id="school-search" placeholder="Мектеп атауы немесе ID…" autocomplete="off" />
-              <p class="schools-count" id="school-list-count">—</p>
+
+      <!-- ════════════════════════════════════════
+           HOME  index.html
+      ════════════════════════════════════════════ -->
+      <div class="page-view active" data-view="home">
+
+        <!-- Hero -->
+        <div class="as" style="margin-top:20px;">
+          <div class="as-head"><h3>Hero — Басты сурет</h3><span class="badge">index.html · Толық ені</span></div>
+          <div class="img-slot" style="aspect-ratio:21/8;" data-slot="home-hero">
+            <img class="img-slot-preview" alt="">
+            <div class="img-slot-info">
+              <svg class="img-slot-ic" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span class="img-slot-lbl">Басты hero суреті</span>
+              <span class="img-slot-dim">1920 × 740 px · JPG жоғары сапа</span>
             </div>
-            <div id="school-list"></div>
-          </aside>
-          <div class="schools-editor">
-            <div id="school-editor-empty">
-              <p>Choose a school from the list to edit hero image, gallery, YouTube link, and description.</p>
-              <p style="margin-top:8px;font-size:13px;">Мектеп таңдаңыз — сурет, галерея, YouTube және мәтінді өңдеу.</p>
+            <div class="img-slot-bar">
+              <input type="text" placeholder="assets/optimized/home-hero-students.jpg немесе https://…" data-slot-id="home-hero" data-slot-field="u">
             </div>
-            <div id="school-editor">
-              <p class="school-editor-status" id="school-editor-status"></p>
-              <div class="admin-school-preview">
-                <main class="school-page">
-                  <header class="school-hero">
-                    <img id="admin-school-hero-img" src="" alt="" />
-                    <div class="school-hero-overlay"></div>
-                    <div class="school-hero-content wrap">
-                      <p class="school-hero-loc" id="admin-school-hero-loc"></p>
-                      <h1 id="admin-school-hero-title"></h1>
-                    </div>
-                  </header>
+          </div>
+          <div class="as-body" style="display:grid;gap:14px;padding-top:16px;">
+            <div class="tf-pair">
+              <div class="tf"><label>Тақырып — Қазақша</label><textarea rows="2" data-page="index.html" data-key="hero-h1-kk" placeholder="Ауыл — білім желкені"></textarea></div>
+              <div class="tf"><label>Heading — English</label><textarea rows="2" data-page="index.html" data-key="hero-h1-en" placeholder="The village sail of education"></textarea></div>
+            </div>
+            <div class="tf-pair">
+              <div class="tf"><label>Lead — Қазақша</label><textarea rows="3" data-page="index.html" data-key="hero-lead-kk"></textarea></div>
+              <div class="tf"><label>Lead — English</label><textarea rows="3" data-page="index.html" data-key="hero-lead-en"></textarea></div>
+            </div>
+          </div>
+        </div>
 
-                  <div class="wrap">
-                    <div class="admin-school-edit">
-                      <label for="school-field-image">Негізгі сурет (hero)</label>
-                      <input type="text" id="school-field-image" placeholder="assets/optimized/… немесе https://…" />
-                    </div>
-                  </div>
-
-                  <div class="wrap school-page-body">
-                    <nav class="school-page-nav">
-                      <span class="school-page-back">← Мектептер тізіміне</span>
-                    </nav>
-
-                    <div class="school-page-intro">
-                      <p class="school-page-region" id="admin-school-region"></p>
-                      <div class="admin-preview-lang" id="admin-preview-lang">
-                        <button type="button" data-admin-lang="kk" class="is-on">ҚАЗ</button>
-                        <button type="button" data-admin-lang="en">ENG</button>
-                      </div>
-                      <p class="school-page-desc" id="admin-school-desc"></p>
-                      <p class="school-page-teachers" id="admin-school-teachers" hidden></p>
-
-                      <div class="admin-school-edit" style="margin-top:16px">
-                        <label for="school-field-desc-kk">Сипаттама — Қазақша</label>
-                        <textarea id="school-field-desc-kk" rows="3"></textarea>
-                        <label for="school-field-desc-en" style="margin-top:12px">Сипаттама — English</label>
-                        <textarea id="school-field-desc-en" rows="3"></textarea>
-                        <label for="school-field-teachers" style="margin-top:12px">Мұғалім саны</label>
-                        <input type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" />
-                      </div>
-                    </div>
-
-                    <section class="school-media-split">
-                      <div class="school-carousel-col" id="admin-school-carousel-col">
-                        <div class="school-carousel" id="admin-school-carousel">
-                          <div class="school-carousel-track" id="admin-school-carousel-track"></div>
-                        </div>
-                        <div class="school-carousel-controls">
-                          <button type="button" class="school-carousel-arrow" id="admin-school-carousel-prev" aria-label="Previous">←</button>
-                          <button type="button" class="school-carousel-arrow" id="admin-school-carousel-next" aria-label="Next">→</button>
-                        </div>
-                      </div>
-                      <div class="school-video-col">
-                        <div class="school-video-frame" id="admin-school-video-frame"></div>
-                      </div>
-                    </section>
-
-                    <div class="admin-school-edit-row" style="margin-top:16px">
-                      <div class="admin-school-edit" style="margin-top:0">
-                        <label for="school-field-gallery">Фото галерея</label>
-                        <textarea id="school-field-gallery" placeholder="assets/optimized/…&#10;бір URL — бір жол"></textarea>
-                        <p class="admin-school-edit-hint">Карусель суреттері — әр URL жаңа жолдан.</p>
-                      </div>
-                      <div class="admin-school-edit" style="margin-top:0">
-                        <label for="school-field-youtube">YouTube бейне</label>
-                        <input type="text" id="school-field-youtube" placeholder="https://youtube.com/watch?v=…" />
-                        <p class="admin-school-edit-hint">URL немесе видео ID (мыс. Kn1wxXwTf7I).</p>
-                      </div>
-                    </div>
-                  </div>
-                </main>
+        <!-- Stat strip -->
+        <div class="as">
+          <div class="as-head"><h3>Статистика жолағы</h3><span class="badge">4 сан</span></div>
+          <div class="as-body">
+            <div class="stat-editor">
+              <div class="stat-cell">
+                <input class="sn" type="text" data-page="index.html" data-key="stat-1-n" placeholder="300+">
+                <input class="sl" type="text" data-page="index.html" data-key="stat-1-l-kk" placeholder="жабдықталған сынып"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-1-l-en" placeholder="жабдықталған сынып">
+              </div>
+              <div class="stat-cell">
+                <input class="sn" type="text" data-page="index.html" data-key="stat-2-n" placeholder="450+">
+                <input class="sl" type="text" data-page="index.html" data-key="stat-2-l-kk" placeholder="оқытылған ұстаз"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-2-l-en" placeholder="оқытылған ұстаз">
+              </div>
+              <div class="stat-cell">
+                <input class="sn" type="text" data-page="index.html" data-key="stat-3-n" placeholder="9">
+                <input class="sl" type="text" data-page="index.html" data-key="stat-3-l-kk" placeholder="Қазақстан өңірі"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-3-l-en" placeholder="Қазақстан өңірі">
+              </div>
+              <div class="stat-cell">
+                <input class="sn" type="text" data-page="index.html" data-key="stat-4-n" placeholder="15 000+">
+                <input class="sl" type="text" data-page="index.html" data-key="stat-4-l-kk" placeholder="оқушы мен ұстаз"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-4-l-en" placeholder="оқушы мен ұстаз">
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+        <!-- Program cards -->
+        <div class="as">
+          <div class="as-head"><h3>Бағдарлама карточкалары</h3><span class="badge">3 карточка</span></div>
+          <div class="as-body">
+            <div class="prog-cards">
+
+              <div class="prog-card">
+                <div class="img-slot" style="aspect-ratio:3/2;" data-slot="home-prog-1">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info">
+                    <svg class="img-slot-ic" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    <span class="img-slot-lbl">Жаңғырту суреті</span>
+                    <span class="img-slot-dim">720 × 480 px</span>
+                  </div>
+                  <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/home-fitout-classroom.jpg" data-slot-id="home-prog-1" data-slot-field="u"></div>
+                </div>
+                <div class="prog-card-body">
+                  <div class="tf"><label>Атау — ҚАЗ</label><input type="text" data-page="index.html" data-key="prog-1-kk" placeholder="Инновациялық кабинеттер құру"></div>
+                  <div class="tf"><label>Title — ENG</label><input type="text" data-page="index.html" data-key="prog-1-en" placeholder="Building innovative classrooms"></div>
+                </div>
+              </div>
+
+              <div class="prog-card">
+                <div class="img-slot" style="aspect-ratio:3/2;" data-slot="home-prog-2">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info">
+                    <svg class="img-slot-ic" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    <span class="img-slot-lbl">USTAZ суреті</span>
+                    <span class="img-slot-dim">720 × 480 px</span>
+                  </div>
+                  <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/home-ustaz-session.jpg" data-slot-id="home-prog-2" data-slot-field="u"></div>
+                </div>
+                <div class="prog-card-body">
+                  <div class="tf"><label>Атау — ҚАЗ</label><input type="text" data-page="index.html" data-key="prog-2-kk" placeholder="Оқыту курстары"></div>
+                  <div class="tf"><label>Title — ENG</label><input type="text" data-page="index.html" data-key="prog-2-en" placeholder="Teacher Training · USTAZ"></div>
+                </div>
+              </div>
+
+              <div class="prog-card">
+                <div class="img-slot" style="aspect-ratio:3/2;" data-slot="home-prog-3">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info">
+                    <svg class="img-slot-ic" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    <span class="img-slot-lbl">Samruk суреті</span>
+                    <span class="img-slot-dim">720 × 480 px</span>
+                  </div>
+                  <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/home-mentorship-circle.jpg" data-slot-id="home-prog-3" data-slot-field="u"></div>
+                </div>
+                <div class="prog-card-body">
+                  <div class="tf"><label>Атау — ҚАЗ</label><input type="text" data-page="index.html" data-key="prog-3-kk" placeholder="Тәлімгерлік"></div>
+                  <div class="tf"><label>Title — ENG</label><input type="text" data-page="index.html" data-key="prog-3-en" placeholder="Child Mentorship · Samruk Umiti"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="height:24px;"></div>
+      </div><!-- /home -->
+
+
+      <!-- ════════════════════════════════════════
+           PROGRAMS  programs.html
+      ════════════════════════════════════════════ -->
+      <div class="page-view" data-view="programs">
+
+        <div style="background:#fff;margin:20px 20px 0;border-radius:18px 18px 0 0;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+          <div class="prog-tabs">
+            <button class="prog-tab active" data-prog="fitout">Инновациялық кабинеттер</button>
+            <button class="prog-tab" data-prog="ustaz">Оқыту курстары · USTAZ</button>
+            <button class="prog-tab" data-prog="samruk">Тәлімгерлік · Samruk Umiti</button>
+          </div>
+        </div>
+
+        <!-- Fitout panel -->
+        <div class="prog-panel active" data-prog-panel="fitout">
+          <div class="as" style="margin-top:0;border-radius:0 0 18px 18px;">
+            <div class="as-head"><h3>Hero — Инновациялық кабинеттер</h3><span class="badge">programs.html · prog-1</span></div>
+            <div class="img-slot" style="aspect-ratio:21/7;" data-slot="prog-1">
+              <img class="img-slot-preview" alt="">
+              <div class="img-slot-info">
+                <svg class="img-slot-ic" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span class="img-slot-lbl">Fit-Out Program Hero</span>
+                <span class="img-slot-dim">1920 × 640 px · JPG жоғары сапа</span>
+              </div>
+              <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/home-fitout-classroom.jpg" data-slot-id="prog-1" data-slot-field="u"></div>
+            </div>
+          </div>
+
+          <div class="as">
+            <div class="as-head"><h3>Carousel 1 — Сынып жиһазы</h3><span class="badge">5 сурет</span></div>
+            <div class="as-body">
+              <div class="car-grid">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-1-1"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№1</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-1-1" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-1-2"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№2</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-1-2" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-1-3"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№3</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-1-3" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-1-4"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№4</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-1-4" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-1-5"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№5</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-1-5" data-slot-field="u"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="as">
+            <div class="as-head"><h3>Carousel 2 — Зертханалар</h3><span class="badge">5 сурет</span></div>
+            <div class="as-body">
+              <div class="car-grid">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-2-1"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№1</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-2-1" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-2-2"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№2</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-2-2" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-2-3"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№3</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-2-3" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-2-4"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№4</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-2-4" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-2-5"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№5</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-2-5" data-slot-field="u"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="as">
+            <div class="as-head"><h3>Carousel 3 — Цифрлық жабдық</h3><span class="badge">5 сурет</span></div>
+            <div class="as-body">
+              <div class="car-grid">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-3-1"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№1</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-3-1" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-3-2"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№2</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-3-2" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-3-3"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№3</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-3-3" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-3-4"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№4</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-3-4" data-slot-field="u"></div></div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="fitout-car-3-5"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">№5</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="fitout-car-3-5" data-slot-field="u"></div></div>
+              </div>
+            </div>
+          </div>
+          <div style="height:24px;"></div>
+        </div><!-- /fitout panel -->
+
+        <!-- USTAZ panel -->
+        <div class="prog-panel" data-prog-panel="ustaz">
+          <div class="as" style="margin-top:0;border-radius:0 0 18px 18px;">
+            <div class="as-head"><h3>Hero — Оқыту курстары · USTAZ</h3><span class="badge">programs.html · prog-2</span></div>
+            <div class="img-slot" style="aspect-ratio:21/7;" data-slot="prog-2">
+              <img class="img-slot-preview" alt="">
+              <div class="img-slot-info">
+                <svg class="img-slot-ic" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span class="img-slot-lbl">USTAZ Program Hero</span>
+                <span class="img-slot-dim">1920 × 640 px · JPG жоғары сапа</span>
+              </div>
+              <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/home-ustaz-session.jpg" data-slot-id="prog-2" data-slot-field="u"></div>
+            </div>
+          </div>
+          <div style="height:24px;"></div>
+        </div><!-- /ustaz panel -->
+
+        <!-- Samruk panel -->
+        <div class="prog-panel" data-prog-panel="samruk">
+          <div class="as" style="margin-top:0;border-radius:0 0 18px 18px;">
+            <div class="as-head"><h3>Hero — Тәлімгерлік · Samruk Umiti</h3><span class="badge">programs.html · prog-3</span></div>
+            <div class="img-slot" style="aspect-ratio:21/7;" data-slot="prog-3">
+              <img class="img-slot-preview" alt="">
+              <div class="img-slot-info">
+                <svg class="img-slot-ic" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <span class="img-slot-lbl">Mentorship Program Hero</span>
+                <span class="img-slot-dim">1920 × 640 px · JPG жоғары сапа</span>
+              </div>
+              <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/home-mentorship-circle.jpg" data-slot-id="prog-3" data-slot-field="u"></div>
+            </div>
+          </div>
+          <div style="height:24px;"></div>
+        </div><!-- /samruk panel -->
+
+      </div><!-- /programs -->
+
+
+      <!-- ════════════════════════════════════════
+           STORIES  stories.html
+      ════════════════════════════════════════════ -->
+      <div class="page-view" data-view="stories">
+
+        <div class="as" style="margin-top:20px;">
+          <div class="as-head"><h3>Таңдаулы оқиға</h3><span class="badge">stories.html · Толық ені</span></div>
+          <div class="img-slot" style="aspect-ratio:16/6;" data-slot="story-feat">
+            <img class="img-slot-preview" alt="">
+            <div class="img-slot-info">
+              <svg class="img-slot-ic" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span class="img-slot-lbl">Таңдаулы оқиға суреті</span>
+              <span class="img-slot-dim">1600 × 600 px · JPG жоғары сапа</span>
+            </div>
+            <div class="img-slot-bar"><input type="text" placeholder="assets/optimized/stories-feature-hero.jpg" data-slot-id="story-feat" data-slot-field="u"></div>
+          </div>
+          <div class="as-body" style="padding-top:14px;">
+            <div class="tf-pair">
+              <div class="tf"><label>Тақырып — ҚАЗ</label><textarea rows="2" data-page="stories.html" data-key="feat-title-kk"></textarea></div>
+              <div class="tf"><label>Title — ENG</label><textarea rows="2" data-page="stories.html" data-key="feat-title-en"></textarea></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="as">
+          <div class="as-head"><h3>Оқиға карточкалары</h3><span class="badge">6 оқиға</span></div>
+          <div class="as-body">
+            <div class="story-grid">
+
+              <div class="story-card">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-1"><img class="img-slot-preview" alt=""><div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl">Оқиға 1 — Қостанай</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="story-1" data-slot-field="u"></div></div>
+                <div class="story-card-body"><div class="tf"><label>Тақырып — ҚАЗ</label><input type="text" data-page="stories.html" data-key="story-1-kk"></div><div class="tf"><label>Title — ENG</label><input type="text" data-page="stories.html" data-key="story-1-en"></div></div>
+              </div>
+
+              <div class="story-card">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-2"><img class="img-slot-preview" alt=""><div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl">Оқиға 2 — Ақмола</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="story-2" data-slot-field="u"></div></div>
+                <div class="story-card-body"><div class="tf"><label>Тақырып — ҚАЗ</label><input type="text" data-page="stories.html" data-key="story-2-kk"></div><div class="tf"><label>Title — ENG</label><input type="text" data-page="stories.html" data-key="story-2-en"></div></div>
+              </div>
+
+              <div class="story-card">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-3"><img class="img-slot-preview" alt=""><div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl">Оқиға 3 — Түркістан</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="story-3" data-slot-field="u"></div></div>
+                <div class="story-card-body"><div class="tf"><label>Тақырып — ҚАЗ</label><input type="text" data-page="stories.html" data-key="story-3-kk"></div><div class="tf"><label>Title — ENG</label><input type="text" data-page="stories.html" data-key="story-3-en"></div></div>
+              </div>
+
+              <div class="story-card">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-4"><img class="img-slot-preview" alt=""><div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl">Оқиға 4 — Алматы обл.</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="story-4" data-slot-field="u"></div></div>
+                <div class="story-card-body"><div class="tf"><label>Тақырып — ҚАЗ</label><input type="text" data-page="stories.html" data-key="story-4-kk"></div><div class="tf"><label>Title — ENG</label><input type="text" data-page="stories.html" data-key="story-4-en"></div></div>
+              </div>
+
+              <div class="story-card">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-5"><img class="img-slot-preview" alt=""><div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl">Оқиға 5 — Павлодар</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="story-5" data-slot-field="u"></div></div>
+                <div class="story-card-body"><div class="tf"><label>Тақырып — ҚАЗ</label><input type="text" data-page="stories.html" data-key="story-5-kk"></div><div class="tf"><label>Title — ENG</label><input type="text" data-page="stories.html" data-key="story-5-en"></div></div>
+              </div>
+
+              <div class="story-card">
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-6"><img class="img-slot-preview" alt=""><div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl">Оқиға 6 — Ақтөбе</span></div><div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="story-6" data-slot-field="u"></div></div>
+                <div class="story-card-body"><div class="tf"><label>Тақырып — ҚАЗ</label><input type="text" data-page="stories.html" data-key="story-6-kk"></div><div class="tf"><label>Title — ENG</label><input type="text" data-page="stories.html" data-key="story-6-en"></div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="height:24px;"></div>
+      </div><!-- /stories -->
+
+
+      <!-- ════════════════════════════════════════
+           ABOUT  about.html
+      ════════════════════════════════════════════ -->
+      <div class="page-view" data-view="about">
+
+        <div class="as" style="margin-top:20px;">
+          <div class="as-head"><h3>Миссия мәтіні</h3><span class="badge">about.html</span></div>
+          <div class="as-body">
+            <div class="tf-pair">
+              <div class="tf"><label>Миссия — Қазақша</label><textarea rows="5" data-page="about.html" data-key="mission-kk" placeholder="Ауыл мен қала мектептері арасындағы білім сапасының алшақтығын жою…"></textarea></div>
+              <div class="tf"><label>Mission — English</label><textarea rows="5" data-page="about.html" data-key="mission-en" placeholder="To close the quality gap between rural and urban schools…"></textarea></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="as">
+          <div class="as-head"><h3>Миссия суреті + Команда фотолары</h3><span class="badge">5 сурет</span></div>
+          <div class="as-body">
+            <div class="team-grid">
+
+              <div>
+                <div class="img-slot" style="aspect-ratio:4/3;" data-slot="about-mission">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info"><svg class="img-slot-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span class="img-slot-lbl" style="font-size:9.5px;">Миссия суреті</span></div>
+                  <div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="about-mission" data-slot-field="u"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="img-slot" style="aspect-ratio:1;" data-slot="about-team-1">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info"><svg class="img-slot-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg><span class="img-slot-lbl" style="font-size:9.5px;">Аружан</span></div>
+                  <div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="about-team-1" data-slot-field="u"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="img-slot" style="aspect-ratio:1;" data-slot="about-team-2">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info"><svg class="img-slot-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg><span class="img-slot-lbl" style="font-size:9.5px;">Даурен</span></div>
+                  <div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="about-team-2" data-slot-field="u"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="img-slot" style="aspect-ratio:1;" data-slot="about-team-3">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info"><svg class="img-slot-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg><span class="img-slot-lbl" style="font-size:9.5px;">Әсем</span></div>
+                  <div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="about-team-3" data-slot-field="u"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="img-slot" style="aspect-ratio:1;" data-slot="about-team-4">
+                  <img class="img-slot-preview" alt="">
+                  <div class="img-slot-info"><svg class="img-slot-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg><span class="img-slot-lbl" style="font-size:9.5px;">Нурлан</span></div>
+                  <div class="img-slot-bar"><input type="text" placeholder="URL…" data-slot-id="about-team-4" data-slot-field="u"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="height:24px;"></div>
+      </div><!-- /about -->
+
+
+      <!-- ════════════════════════════════════════
+           SCHOOLS  school.html
+      ════════════════════════════════════════════ -->
+      <div id="schools-panel" data-view="schools">
+        <div class="schools-layout">
+
+          <!-- Left: school browser -->
+          <aside class="schools-sb">
+            <div class="schools-sb-head">
+              <select id="school-filter-region" aria-label="Облыс сүзгісі"></select>
+              <input type="search" id="school-search" placeholder="Мектеп атауы немесе ID…" autocomplete="off">
+              <p class="school-count" id="school-list-count">—</p>
+            </div>
+            <div id="school-list"></div>
+          </aside>
+
+          <!-- Right: school editor -->
+          <div class="schools-editor">
+            <div id="school-editor-empty">
+              <p>Тізімнен мектепті таңдаңыз.</p>
+              <p>Hero сурет, галерея, YouTube бейне және сипаттаманы өңдеңіз.</p>
+            </div>
+
+            <div id="school-editor">
+              <p class="se-status" id="school-editor-status"></p>
+
+              <!-- Hero image preview -->
+              <div style="margin:16px 16px 0;border-radius:16px;overflow:hidden;background:var(--ink);position:relative;">
+                <header class="school-hero" style="min-height:200px;">
+                  <img id="admin-school-hero-img" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.75;">
+                  <div class="school-hero-overlay"></div>
+                  <div class="school-hero-content wrap">
+                    <p class="school-hero-loc" id="admin-school-hero-loc"></p>
+                    <h1 id="admin-school-hero-title" style="font-size:clamp(18px,2.5vw,28px);"></h1>
+                  </div>
+                </header>
+                <div style="padding:12px 16px;background:rgba(27,79,138,0.06);border-top:1px solid var(--line);">
+                  <label class="se-label" for="school-field-image">Hero сурет URL</label>
+                  <input class="se-input" type="text" id="school-field-image" placeholder="assets/optimized/… немесе https://…">
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div style="margin:14px 16px 0;background:#fff;border-radius:14px;padding:16px 18px;">
+                <div class="admin-preview-lang" id="admin-preview-lang">
+                  <button type="button" data-admin-lang="kk" class="is-on">ҚАЗ</button>
+                  <button type="button" data-admin-lang="en">ENG</button>
+                </div>
+                <p class="school-page-region" id="admin-school-region" style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;"></p>
+                <p class="school-page-desc" id="admin-school-desc" style="font-size:13.5px;color:var(--body);margin-bottom:10px;"></p>
+                <p class="school-page-teachers" id="admin-school-teachers" hidden="" style="font-size:13px;color:var(--primary);font-family:var(--fh);font-weight:700;"></p>
+                <div class="se-row2" style="margin-top:14px;">
+                  <div><label class="se-label" for="school-field-desc-kk">Сипаттама — Қазақша</label><textarea class="se-textarea" id="school-field-desc-kk" rows="4"></textarea></div>
+                  <div><label class="se-label" for="school-field-desc-en">Description — English</label><textarea class="se-textarea" id="school-field-desc-en" rows="4"></textarea></div>
+                </div>
+                <div style="margin-top:12px;">
+                  <label class="se-label" for="school-field-teachers">Мұғалімдер саны</label>
+                  <input class="se-input" type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" style="width:160px;">
+                </div>
+              </div>
+
+              <!-- Gallery carousel preview -->
+              <div style="margin:14px 16px 0;background:#fff;border-radius:14px;overflow:hidden;">
+                <div style="padding:12px 16px;border-bottom:1px solid var(--line);">
+                  <p class="se-label" style="margin:0;">Фото галерея</p>
+                </div>
+                <div style="padding:16px;">
+                  <!-- Carousel rendered by admin-schools.js -->
+                  <div class="school-carousel-col" id="admin-school-carousel-col">
+                    <div class="school-carousel" id="admin-school-carousel">
+                      <div class="school-carousel-track" id="admin-school-carousel-track"></div>
+                    </div>
+                    <div class="school-carousel-controls">
+                      <button type="button" class="school-carousel-arrow" id="admin-school-carousel-prev" aria-label="Previous">←</button>
+                      <button type="button" class="school-carousel-arrow" id="admin-school-carousel-next" aria-label="Next">→</button>
+                    </div>
+                  </div>
+                  <div style="margin-top:14px;">
+                    <label class="se-label" for="school-field-gallery">Галерея URL тізімі <span style="font-weight:400;text-transform:none;font-family:var(--fb);color:var(--body);">— бір URL, бір жол</span></label>
+                    <textarea class="se-textarea" id="school-field-gallery" rows="5" placeholder="assets/optimized/school-photo-1.jpg
+assets/optimized/school-photo-2.jpg
+https://…"></textarea>
+                    <p class="se-hint">Carousel суреттері — әр URL жаңа жолдан. Алғашқы сурет Hero ретінде де пайдаланылады.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- YouTube -->
+              <div style="margin:14px 16px 20px;background:#fff;border-radius:14px;overflow:hidden;">
+                <div style="padding:12px 16px;border-bottom:1px solid var(--line);">
+                  <p class="se-label" style="margin:0;">YouTube бейне</p>
+                </div>
+                <div style="padding:16px;">
+                  <div class="yt-slot">
+                    <div class="yt-slot-frame" id="admin-school-video-frame">
+                      <div class="yt-slot-empty">
+                        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" opacity=".6"></polygon></svg>
+                        <span>YouTube URL енгізіңіз</span>
+                      </div>
+                    </div>
+                    <div class="yt-slot-bar">
+                      <span class="yt-lbl">YouTube</span>
+                      <input type="text" id="school-field-youtube" placeholder="https://youtube.com/watch?v=… немесе видео ID (мыс. Kn1wxXwTf7I)">
+                    </div>
+                  </div>
+                  <p class="se-hint" style="margin-top:8px;">Толық YouTube URL немесе тек видео ID — екеуі де жұмыс істейді.</p>
+                </div>
+              </div>
+
+            </div><!-- #school-editor -->
+          </div><!-- .schools-editor -->
+        </div><!-- .schools-layout -->
+      </div><!-- #schools-panel -->
+
+    </div><!-- #content -->
+  </div><!-- #main -->
+
+</div><!-- #app -->
 
 <div id="toast"></div>
-
-<script>
-/* ══════════════════════════════════════════════════════════════
-   AUL BILIM ADMIN — vanilla JS CMS
-   ══════════════════════════════════════════════════════════════ */
-
-const COPY_FILE = '.copy.state.json';
-
-const PAGES = [
-  { id:'index.html',    label:'Басты бет',     slots:[
-    {id:'home-hero',    label:'Негізгі сурет'},
-    {id:'home-prog-1',  label:'Бағдарлама 01 — Жаңғырту'},
-    {id:'home-prog-2',  label:'Бағдарлама 02 — USTAZ'},
-    {id:'home-prog-3',  label:'Бағдарлама 03 — Samruk Umiti'},
-  ]},
-  { id:'programs.html', label:'Бағдарламалар',  slots:[
-    {id:'prog-1', label:'Жаңғырту суреті'},
-    {id:'prog-2', label:'USTAZ суреті'},
-    {id:'prog-3', label:'Samruk Umiti суреті'},
-  ]},
-  { id:'stories.html',  label:'Оқиғалар',   slots:[
-    {id:'story-feat', label:'Таңдаулы оқиға'},
-    {id:'story-1',    label:'Оқиға 1 — Қостанай'},
-    {id:'story-2',    label:'Оқиға 2 — Ақмола'},
-    {id:'story-3',    label:'Оқиға 3 — Түркістан'},
-    {id:'story-4',    label:'Оқиға 4 — Алматы облысы'},
-    {id:'story-5',    label:'Оқиға 5 — Павлодар'},
-    {id:'story-6',    label:'Оқиға 6 — Ақтөбе'},
-  ]},
-  { id:'about.html',    label:'Біз туралы',     slots:[
-    {id:'about-mission', label:'Миссия суреті'},
-    {id:'about-team-1',  label:'Команда — Аружан'},
-    {id:'about-team-2',  label:'Команда — Даурен'},
-    {id:'about-team-3',  label:'Команда — Әсем'},
-    {id:'about-team-4',  label:'Команда — Нурлан'},
-  ]},
-  // partner.html removed
-];
-
-/* ── Shared copy state ─────────────────────────────────────── */
-let savedCopy = {};   // { 'index.html': { cp0: '...', cp1: '...' }, ... }
-let savedContent = {};
-let currentPage = 'index.html';
-let currentItems = []; // parsed copy items for current page
-let dirty = false;
-
-/* ── Auth ──────────────────────────────────────────────────── */
-document.getElementById('pw-btn').addEventListener('click', tryLogin);
-document.getElementById('email-input').addEventListener('keydown', e => { if (e.key==='Enter') tryLogin(); });
-document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key==='Enter') tryLogin(); });
-
-async function tryLogin() {
-  const email = document.getElementById('email-input').value.trim();
-  const val = document.getElementById('pw-input').value.trim();
-  const err = document.getElementById('pw-err');
-  const btn = document.getElementById('pw-btn');
-  err.style.display = 'none';
-  btn.disabled = true;
-  btn.textContent = 'Кіру…';
-  const result = await window.cmsAuth.login(email, val);
-  btn.disabled = false;
-  btn.textContent = 'Кіру';
-  if (result.success) {
-    document.getElementById('gate').style.display = 'none';
-    document.getElementById('app').classList.add('show');
-    init();
-  } else {
-    err.textContent = result.error || 'Кіру мүмкін болмады.';
-    err.style.display = 'block';
-    document.getElementById('pw-input').value = '';
-    document.getElementById('pw-input').focus();
-  }
-}
-document.getElementById('logout-btn').addEventListener('click', async () => {
-  await window.cmsAuth.logout();
-  location.reload();
-});
-
-window.cmsAuth.onAuthStateChanged(session => {
-  if (session && !document.getElementById('app').classList.contains('show')) {
-    document.getElementById('gate').style.display = 'none';
-    document.getElementById('app').classList.add('show');
-    init();
-  }
-});
-
-/* ── Init ──────────────────────────────────────────────────── */
-async function init() {
-  await loadSavedCopy();
-  await switchPage('index.html');
-}
-
-/* ── Load the shared copy JSON ─────────────────────────────── */
-async function loadSavedCopy() {
-  try {
-    const content = await window.db.getSiteContent();
-    if (content && content.pages) {
-      savedContent = content;
-      savedCopy = content.pages;
-      return;
-    }
-    const r = await fetch(COPY_FILE + '?t=' + Date.now());
-    if (r.ok) savedCopy = await r.json();
-  } catch (e) { savedCopy = {}; }
-}
-
-/* ── Page switching ────────────────────────────────────────── */
-async function switchPage(pageId) {
-  currentPage = pageId;
-  window.currentPage = pageId;
-  const isSchools = pageId === 'schools';
-  const info = isSchools ? { label: 'Мектептер', id: 'schools' } : PAGES.find(p => p.id === pageId);
-
-  document.querySelectorAll('.sb-page').forEach(b => {
-    b.classList.toggle('active', isSchools ? b.dataset.page === 'schools' : b.dataset.page === pageId);
-  });
-
-  document.getElementById('page-title').textContent = info.label;
-  document.getElementById('page-file').textContent = isSchools ? 'school.html' : pageId;
-  if (!isSchools) document.getElementById('preview-link').href = pageId;
-
-  document.getElementById('tabs').style.display = isSchools ? 'none' : '';
-  const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
-  document.getElementById('copy-panel').style.display  = isSchools ? 'none' : (activeTab === 'copy'  ? '' : 'none');
-  document.getElementById('media-panel').style.display = isSchools ? 'none' : (activeTab === 'media' ? '' : 'none');
-  document.getElementById('schools-panel').style.display = isSchools ? '' : 'none';
-
-  if (isSchools) window.adminSchools.render();
-  else if (activeTab === 'copy') await renderCopy();
-  else renderMedia();
-}
-
-document.querySelectorAll('.sb-page').forEach(btn => {
-  btn.addEventListener('click', () => switchPage(btn.dataset.page));
-});
-
-/* ── Tabs ──────────────────────────────────────────────────── */
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', async () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('copy-panel').style.display  = btn.dataset.tab === 'copy'  ? '' : 'none';
-    document.getElementById('media-panel').style.display = btn.dataset.tab === 'media' ? '' : 'none';
-    if (btn.dataset.tab === 'copy')  await renderCopy();
-    if (btn.dataset.tab === 'media') renderMedia();
-  });
-});
-
-/* ── Extract copy items from a page ───────────────────────── */
-function shouldSkip(el) {
-  if (!el || !el.tagName) return true;
-  const tag = el.tagName.toUpperCase();
-  if (['HTML','HEAD','BODY','SCRIPT','STYLE','SVG','PATH','BUTTON','A'].includes(tag)) return true;
-  if (el.closest) {
-    if (el.closest('nav') || el.closest('.lang-switch') || el.closest('.menu-btn') ||
-        el.closest('.pill') || el.closest('.text-link') || el.closest('.more') ||
-        el.closest('.crumbs') || el.closest('.foot-bottom') || el.closest('footer')) return true;
-  }
-  return false;
-}
-
-function getGroupLabel(el) {
-  const section = el.closest && (el.closest('section') || el.closest('header') || el.closest('article'));
-  if (!section) return 'Page';
-  // Use id if present
-  if (section.id) return section.id.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
-  // First heading
-  const h = section.querySelector('h1,h2,h3');
-  if (h) {
-    // Use only EN text if bilingual, else full text
-    const en = h.querySelector('[lang="en"]');
-    return (en ? en.textContent : h.textContent).trim().slice(0, 48);
-  }
-  const cls = (section.className||'').split(' ').filter(Boolean)[0];
-  return cls || 'Section';
-}
-
-async function parsePage(pageId) {
-  try {
-    const r = await fetch(pageId + '?t=' + Date.now());
-    const html = await r.text();
-    const doc  = new DOMParser().parseFromString(html, 'text/html');
-    const items = [];
-    let idx = 0;
-
-    doc.querySelectorAll('[lang],.n,.big').forEach(el => {
-      if (shouldSkip(el)) return;
-      const langAttr = el.getAttribute('lang') || null;
-      const isLang   = !!langAttr;
-      const isStat   = !isLang && (el.classList.contains('n') || el.classList.contains('big'));
-      if (!isLang && !isStat) return;
-
-      // For lang pairs, only process KK here; EN is paired below
-      if (isLang && langAttr !== 'kk' && langAttr !== 'en') { idx++; return; }
-
-      items.push({
-        id:    'cp' + (idx++),
-        lang:   langAttr || 'stat',
-        text:   el.innerHTML,
-        group:  getGroupLabel(el),
-        tag:    el.tagName.toLowerCase(),
-        isStat: isStat,
-      });
-    });
-    return items;
-  } catch(e) {
-    return [];
-  }
-}
-
-/* ── Render copy panel ─────────────────────────────────────── */
-async function renderCopy() {
-  const panel = document.getElementById('copy-panel');
-  panel.innerHTML = `<div class="copy-loading"><div class="spin"></div><br>${currentPage} жүктелуде…</div>`;
-
-  const items = await parsePage(currentPage);
-  currentItems = items;
-  const pageSaved = savedCopy[currentPage] || {};
-
-  // Group items
-  const groups = {};
-  items.forEach(item => {
-    if (!groups[item.group]) groups[item.group] = [];
-    groups[item.group].push(item);
-  });
-
-  panel.innerHTML = '';
-
-  Object.entries(groups).forEach(([groupName, groupItems]) => {
-    // Pair kk+en items by sequential matching
-    const kkItems   = groupItems.filter(i => i.lang === 'kk');
-    const enItems   = groupItems.filter(i => i.lang === 'en');
-    const statItems = groupItems.filter(i => i.isStat);
-    const maxPairs  = Math.max(kkItems.length, enItems.length);
-    if (maxPairs === 0 && statItems.length === 0) return;
-
-    const card = document.createElement('div');
-    card.className = 'copy-group';
-
-    const head = document.createElement('div');
-    head.className = 'copy-group-head';
-    head.innerHTML = `<h3>${escHtml(groupName)}</h3><span class="cnt">${groupItems.length} өріс</span>`;
-    card.appendChild(head);
-
-    // Bilingual pairs
-    for (let i = 0; i < maxPairs; i++) {
-      const kk = kkItems[i];
-      const en = enItems[i];
-      const pair = document.createElement('div');
-      pair.className = 'copy-pair';
-
-      [kk, en].forEach(item => {
-        if (!item) { pair.appendChild(document.createElement('div')); return; }
-        const savedVal = pageSaved[item.id];
-        const currentVal = savedVal !== undefined ? savedVal : item.text;
-        const field = document.createElement('div');
-        field.className = 'copy-field';
-        const langLabel = item.lang === 'kk' ? '🇰🇿 Қазақша' : '🇬🇧 Ағылшынша';
-        field.innerHTML = `<label>${langLabel}</label>
-          <textarea data-id="${item.id}" data-orig="${escAttr(item.text)}">${escHtml(htmlToText(currentVal))}</textarea>`;
-        pair.appendChild(field);
-      });
-
-      card.appendChild(pair);
-    }
-
-    // Stat numbers (single-value)
-    statItems.forEach(item => {
-      const savedVal = pageSaved[item.id];
-      const currentVal = savedVal !== undefined ? savedVal : item.text;
-      const row = document.createElement('div');
-      row.className = 'copy-stat-row';
-      row.innerHTML = `<label>Статистика</label>
-        <input type="text" data-id="${item.id}" data-orig="${escAttr(item.text)}" value="${escHtml(htmlToText(currentVal))}" />`;
-      card.appendChild(row);
-    });
-
-    panel.appendChild(card);
-  });
-
-  // Mark changed fields
-  panel.querySelectorAll('textarea, input[type="text"]').forEach(el => {
-    const orig = el.dataset.orig || '';
-    if (htmlToText(el.value).trim() !== htmlToText(orig).trim()) el.classList.add('changed');
-    el.addEventListener('input', () => {
-      const changed = el.value.trim() !== htmlToText(el.dataset.orig || '').trim();
-      el.classList.toggle('changed', changed);
-      dirty = true;
-    });
-  });
-
-  if (items.length === 0) {
-    panel.innerHTML = '<div class="copy-loading">Бұл бетте өңдеуге болатын мәтін жоқ.</div>';
-  }
-}
-
-/* ── Render media panel ────────────────────────────────────── */
-function renderMedia() {
-  const panel = document.getElementById('media-panel');
-  const info  = PAGES.find(p => p.id === currentPage);
-  panel.innerHTML = '';
-
-  if (!info || !info.slots.length) {
-    panel.innerHTML = '<div class="copy-loading">Бұл бетте медиа орындары жоқ.</div>';
-    return;
-  }
-
-  const intro = document.createElement('div');
-  intro.className = 'media-intro';
-  intro.innerHTML = `<div class="ic"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-    <span>Free-plan mode: paste an image URL or a committed asset path such as <strong>assets/optimized/home-hero-students.jpg</strong>. Direct file uploads are disabled.</span>`;
-  panel.appendChild(intro);
-
-  const group = document.createElement('div');
-  group.className = 'media-group';
-  group.innerHTML = `<div class="media-group-head"><h3>${info.label} — ${info.slots.length} орын</h3></div>`;
-
-  const grid = document.createElement('div');
-  grid.className = 'media-grid';
-
-  info.slots.forEach(slot => {
-    const meta = (savedContent.media && savedContent.media[slot.id]) || {};
-    const wrap = document.createElement('div');
-    wrap.className = 'media-slot-wrap';
-
-    const slotEl = document.createElement('image-slot');
-    slotEl.id          = slot.id;
-    slotEl.setAttribute('shape', 'rounded');
-    slotEl.setAttribute('radius', '12');
-    slotEl.setAttribute('placeholder', slot.label);
-    slotEl.style.cssText = 'display:block;width:100%;aspect-ratio:4/3;';
-
-    const lbl = document.createElement('div');
-    lbl.className = 'media-slot-label';
-    lbl.textContent = slot.label;
-    const metaForm = document.createElement('div');
-    metaForm.className = 'media-meta';
-    metaForm.innerHTML = `
-      <input type="text" data-media-id="${slot.id}" data-media-field="u" placeholder="Image URL or asset path" value="${escAttr(meta.u || '')}" />
-      <input type="text" data-media-id="${slot.id}" data-media-field="altKk" placeholder="Alt мәтін (қазақша)" value="${escAttr(meta.altKk || '')}" />
-      <input type="text" data-media-id="${slot.id}" data-media-field="altEn" placeholder="Alt text (English)" value="${escAttr(meta.altEn || '')}" />
-      <input type="url" data-media-id="${slot.id}" data-media-field="embedUrl" placeholder="YouTube/video URL (optional)" value="${escAttr(meta.embedUrl || '')}" />
-    `;
-
-    metaForm.querySelectorAll('input').forEach(input => {
-      input.addEventListener('input', () => { dirty = true; });
-    });
-
-    wrap.appendChild(slotEl);
-    wrap.appendChild(lbl);
-    wrap.appendChild(metaForm);
-    grid.appendChild(wrap);
-  });
-
-  group.appendChild(grid);
-  panel.appendChild(group);
-}
-
-/* ── Save ──────────────────────────────────────────────────── */
-document.getElementById('save-btn').addEventListener('click', saveChanges);
-
-async function saveChanges() {
-  const btn = document.getElementById('save-btn');
-  btn.textContent = 'Сақталуда…';
-  btn.classList.add('saving');
-
-  if (currentPage === 'schools') {
-    const result = await window.adminSchools.save();
-    btn.classList.remove('saving');
-    if (result && result.success) {
-      btn.textContent = '✓ Сақталды';
-      btn.classList.add('saved');
-      dirty = false;
-      toast('Мектеп сақталды — school.html бетінде көрінеді.', 'ok');
-      setTimeout(() => {
-        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Өзгерістерді сақтау';
-        btn.classList.remove('saved');
-      }, 3000);
-    } else {
-      btn.textContent = 'Save changes';
-      toast(result && result.error ? result.error : 'Сақтау сәтсіз аяқталды', 'err');
-    }
-    return;
-  }
-
-  // Collect copy values only when the copy panel is visible.
-  if (document.getElementById('copy-panel').style.display !== 'none') {
-    const pageData = {};
-    document.querySelectorAll('#copy-panel [data-id]').forEach(el => {
-      pageData[el.dataset.id] = el.value || el.textContent;
-    });
-    savedCopy[currentPage] = pageData;
-  }
-
-  const media = Object.assign({}, savedContent.media || {});
-  document.querySelectorAll('[data-media-id][data-media-field]').forEach(el => {
-    const id = el.dataset.mediaId;
-    const field = el.dataset.mediaField;
-    media[id] = media[id] || {};
-    media[id][field] = el.value;
-  });
-  savedContent = Object.assign({}, savedContent, { pages: savedCopy, media: media });
-  const result = await window.db.saveSiteContent(savedContent);
-  const ok = result && result.success;
-
-  btn.classList.remove('saving');
-  if (ok) {
-    btn.textContent = '✓ Сақталды';
-    btn.classList.add('saved');
-    dirty = false;
-    toast('Өзгерістер сақталды — беттер жаңартылғанда жаңарады.', 'ok');
-    setTimeout(() => {
-      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Өзгерістерді сақтау';
-      btn.classList.remove('saved');
-    }, 3000);
-  } else {
-    btn.textContent = 'Save changes';
-    toast('Файлды жазу мүмкін болмады — жұмыс ортасынан тыс жасалуда?', 'err');
-  }
-}
-
-/* ── Write file via omelette bridge ────────────────────────── */
-async function writeFile(path, content) {
-  try {
-    if (window.omelette && typeof window.omelette.writeFile === 'function') {
-      await window.omelette.writeFile(path, content);
-      return true;
-    }
-    // Fallback: store in localStorage for testing
-    localStorage.setItem('aulbilim_admin_' + path, content);
-    return true;
-  } catch (e) {
-    console.error('writeFile failed:', e);
-    return false;
-  }
-}
-
-/* ── Toast ─────────────────────────────────────────────────── */
-function toast(msg, type) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className   = 'show ' + (type||'');
-  clearTimeout(t._t);
-  t._t = setTimeout(() => t.className = '', 3800);
-}
-
-/* ── Helpers ───────────────────────────────────────────────── */
-function escHtml(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function escAttr(s) {
-  return String(s||'').replace(/"/g,'&quot;').replace(/\n/g,' ');
-}
-function htmlToText(html) {
-  const d = document.createElement('div');
-  d.innerHTML = html || '';
-  return d.textContent || d.innerText || '';
-}
-
-/* Warn on unsaved changes */
-window.addEventListener('beforeunload', e => {
-  if (dirty || (window.adminSchools && window.adminSchools.isDirty())) {
-    e.preventDefault();
-    e.returnValue = '';
-  }
-});
-</script>
+<script src="admin-cms.js?v=1"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=3"></script>
 <script src="assets/akmola-schools.js?v=7"></script>
