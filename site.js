@@ -195,108 +195,6 @@
     if (coopRoot) {
       var coopZones = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-zone'));
       var activeZone = null;
-      var coopStage = coopRoot.querySelector('.coop-diagram-stage');
-      var coopLinksSvg = coopRoot.querySelector('.coop-links');
-      var coopLinkDefs = [
-        { id: 'coop-link-kh', hub: 'top', partner: 'kh', target: 'bottom', bend: 0.12 },
-        { id: 'coop-link-bi', hub: 'left', partner: 'bi', target: 'right', bend: 0.14 },
-        { id: 'coop-link-local', hub: 'right', partner: 'local', target: 'left', bend: 0.14 }
-      ];
-      var coopLinkTimer = null;
-
-      function coopCardRect(zoneClass, containerRect) {
-        var zone = coopRoot.querySelector(zoneClass);
-        var flip = zone && zone.querySelector('.coop-card-flip');
-        if (!flip) return null;
-        var rect = flip.getBoundingClientRect();
-        return {
-          left: rect.left - containerRect.left,
-          top: rect.top - containerRect.top,
-          right: rect.right - containerRect.left,
-          bottom: rect.bottom - containerRect.top,
-          cx: rect.left - containerRect.left + rect.width / 2,
-          cy: rect.top - containerRect.top + rect.height / 2
-        };
-      }
-
-      function coopAnchor(rect, side) {
-        if (!rect) return null;
-        if (side === 'top') return { x: rect.cx, y: rect.top };
-        if (side === 'bottom') return { x: rect.cx, y: rect.bottom };
-        if (side === 'left') return { x: rect.left, y: rect.cy };
-        if (side === 'right') return { x: rect.right, y: rect.cy };
-        return { x: rect.cx, y: rect.cy };
-      }
-
-      function coopQuadPath(start, end, bend) {
-        var mx = (start.x + end.x) / 2;
-        var my = (start.y + end.y) / 2;
-        var dx = end.x - start.x;
-        var dy = end.y - start.y;
-        var len = Math.sqrt(dx * dx + dy * dy) || 1;
-        var px = -dy / len;
-        var py = dx / len;
-        var cx = mx + px * len * bend;
-        var cy = my + py * len * bend;
-        return 'M' + start.x.toFixed(1) + ' ' + start.y.toFixed(1) +
-          ' Q' + cx.toFixed(1) + ' ' + cy.toFixed(1) +
-          ' ' + end.x.toFixed(1) + ' ' + end.y.toFixed(1);
-      }
-
-      function updateCoopLinks() {
-        if (!coopStage || !coopLinksSvg) return;
-        if (window.innerWidth <= 900) return;
-
-        var stageRect = coopStage.getBoundingClientRect();
-        var width = Math.max(1, Math.round(stageRect.width));
-        var height = Math.max(1, Math.round(stageRect.height));
-        var jf = coopCardRect('.coop-zone--jf', stageRect);
-        if (!jf) return;
-
-        coopLinksSvg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
-        coopLinksSvg.setAttribute('width', width);
-        coopLinksSvg.setAttribute('height', height);
-
-        coopLinkDefs.forEach(function (link) {
-          var pathEl = coopLinksSvg.querySelector('#' + link.id);
-          var partner = coopCardRect('.coop-zone--' + link.partner, stageRect);
-          if (!pathEl || !partner) return;
-
-          var start = coopAnchor(jf, link.hub);
-          var end = coopAnchor(partner, link.target);
-          if (!start || !end) return;
-
-          pathEl.setAttribute('d', coopQuadPath(start, end, link.bend));
-          pathEl.classList.toggle('is-active', !!(activeZone && activeZone.classList.contains('coop-zone--' + link.partner)));
-        });
-      }
-
-      function scheduleCoopLinks() {
-        window.clearTimeout(coopLinkTimer);
-        coopLinkTimer = window.setTimeout(function () {
-          syncCoopCardSizes();
-          updateCoopLinks();
-        }, 80);
-      }
-
-      function syncCoopCardSizes() {
-        if (window.innerWidth <= 900) {
-          coopRoot.style.removeProperty('--coop-card-width');
-          coopRoot.style.removeProperty('--coop-card-height');
-          return;
-        }
-
-        coopRoot.style.removeProperty('--coop-card-width');
-        coopRoot.style.removeProperty('--coop-card-height');
-
-        window.requestAnimationFrame(function () {
-          var jfFlip = coopRoot.querySelector('.coop-zone--jf .coop-card-flip');
-          if (!jfFlip) return;
-          var rect = jfFlip.getBoundingClientRect();
-          if (rect.width > 0) coopRoot.style.setProperty('--coop-card-width', Math.round(rect.width) + 'px');
-          if (rect.height > 0) coopRoot.style.setProperty('--coop-card-height', Math.round(rect.height) + 'px');
-        });
-      }
 
       function setCoopFlipped(zone, flipped) {
         if (!zone) return;
@@ -317,7 +215,6 @@
         if (!zone) return;
         setCoopFlipped(zone, false);
         if (activeZone === zone) activeZone = null;
-        scheduleCoopLinks();
       }
 
       function closeAllCoopZones() {
@@ -325,14 +222,12 @@
           setCoopFlipped(zone, false);
         });
         activeZone = null;
-        scheduleCoopLinks();
       }
 
       function openCoopZone(zone) {
         if (activeZone && activeZone !== zone) closeCoopZone(activeZone);
         setCoopFlipped(zone, true);
         activeZone = zone;
-        scheduleCoopLinks();
       }
 
       coopZones.forEach(function (zone) {
@@ -357,20 +252,6 @@
         if (e.target.closest('.coop-zone')) return;
         closeAllCoopZones();
       });
-
-      window.addEventListener('resize', scheduleCoopLinks);
-
-      if (coopStage && window.ResizeObserver) {
-        var coopResizeObserver = new ResizeObserver(scheduleCoopLinks);
-        coopResizeObserver.observe(coopStage);
-      }
-
-      if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(scheduleCoopLinks);
-      }
-
-      window.addEventListener('load', scheduleCoopLinks);
-      scheduleCoopLinks();
     }
 
     // index.html — reset map/schools drill-down when navigating to #regions

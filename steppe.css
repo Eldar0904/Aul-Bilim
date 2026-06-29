@@ -1778,58 +1778,40 @@ body.map-schools-open .region-schools-block {
 .coop-diagram-stage {
   position: relative;
   overflow: visible;
-  min-height: 470px;
-}
-.coop-links {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  overflow: visible;
-}
-.coop-link-path {
-  fill: none;
-  stroke: rgba(27, 79, 138, 0.22);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  transition: stroke 0.2s ease, stroke-width 0.2s ease, opacity 0.2s ease;
-}
-.coop-link-path.is-active {
-  stroke: rgba(232, 130, 10, 0.55);
-  stroke-width: 2;
 }
 
 .coop-diagram-grid {
-  position: relative;
-  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr minmax(0, 1.18fr) 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: auto auto;
-  gap: 26px 22px;
-  align-items: start;
+  gap: 22px;
+  align-items: stretch;
 }
-.coop-zone--kh { grid-column: 2; grid-row: 1; width: 100%; margin: 0 auto; }
-.coop-zone--bi { grid-column: 1; grid-row: 2; width: var(--coop-card-width, 100%); justify-self: end; }
-.coop-zone--jf { grid-column: 2; grid-row: 2; width: 100%; }
-.coop-zone--local { grid-column: 3; grid-row: 2; width: var(--coop-card-width, 100%); justify-self: start; }
+.coop-zone--kh { grid-column: 2; grid-row: 1; }
+.coop-zone--bi { grid-column: 1; grid-row: 2; }
+.coop-zone--jf { grid-column: 2; grid-row: 2; }
+.coop-zone--local { grid-column: 3; grid-row: 2; }
 
 .coop-zone {
   position: relative;
   z-index: 1;
   min-width: 0;
+  display: flex;
 }
 .coop-zone.is-flipped { z-index: 6; }
 
 .coop-card-flip {
   perspective: 1100px;
   width: 100%;
+  min-height: 188px;
+  height: 100%;
 }
 
 .coop-zone-hit {
   display: block;
   width: 100%;
+  height: 100%;
+  min-height: 188px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1845,7 +1827,8 @@ body.map-schools-open .region-schools-block {
   display: grid;
   transform-style: preserve-3d;
   transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
-  height: var(--coop-card-height, auto);
+  min-height: 188px;
+  height: 100%;
 }
 .coop-zone.is-flipped .coop-flip-inner {
   transform: rotateY(180deg);
@@ -1926,25 +1909,18 @@ body.map-schools-open .region-schools-block {
 
 .coop-card-logo {
   flex: none;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
   overflow: hidden;
 }
-.coop-card-logo--kh {
-  width: 88px;
-  height: 52px;
-}
-.coop-card-logo--bi {
-  width: 72px;
-  height: 72px;
-}
-.coop-card--jf .coop-card-logo {
-  width: 72px;
-  height: 72px;
-}
-.coop-card--local .coop-card-logo {
+.coop-card-logo--kh,
+.coop-card-logo--bi,
+.coop-card-logo--jf,
+.coop-card-logo--local {
   width: 72px;
   height: 72px;
 }
@@ -2077,8 +2053,7 @@ body.map-schools-open .region-schools-block {
   .coop-zone--kh { grid-column: 1 / -1; grid-row: 1; max-width: none; width: 100%; }
   .coop-zone--bi { grid-column: 1; grid-row: 2; width: 100%; justify-self: stretch; }
   .coop-zone--jf { grid-column: 2; grid-row: 2; width: 100%; }
-  .coop-zone--local { grid-column: 1 / -1; grid-row: 3; max-width: none; width: 100%; justify-self: stretch; }
-  .coop-links { display: none; }
+  .coop-zone--local { grid-column: 1 / -1; grid-row: 3; }
 }
 @media (prefers-reduced-motion: reduce) {
   .coop-flip-inner { transition: none; }
@@ -2097,6 +2072,9 @@ body.map-schools-open .region-schools-block {
   .coop-zone--jf { grid-row: 3; }
   .coop-zone--local { grid-row: 4; }
   .coop-card { padding: 18px 16px; }
+  .coop-card-flip,
+  .coop-zone-hit,
+  .coop-flip-inner { min-height: 168px; }
 }
 
 /* ---------- VALUES (about) ---------- */
