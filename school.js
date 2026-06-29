@@ -17,6 +17,7 @@
   var carouselTimer = null;
   var carouselIndex = 0;
   var carouselImagesList = [];
+  var MAP_HERO_REGIONS = { akmola: true };
 
   function bi(kk, en) {
     return document.documentElement.getAttribute('data-lang') === 'en' ? en : kk;
@@ -42,6 +43,10 @@
       if (override.desc.en) merged.desc.en = override.desc.en;
     }
     if (override.teachers != null) merged.teachers = override.teachers;
+    if (override.mapsUrl) merged.mapsUrl = override.mapsUrl;
+    if (override.mapsQuery) merged.mapsQuery = override.mapsQuery;
+    if (override.lat != null) merged.lat = override.lat;
+    if (override.lng != null) merged.lng = override.lng;
     return merged;
   }
 
@@ -74,12 +79,42 @@
     return s.image || (s.gallery && s.gallery[0]) || '';
   }
 
-  function carouselImages(s) {
+  function schoolMapEnabled(regionId, school) {
+    if (!MAP_HERO_REGIONS[regionId]) return false;
+    if (school.mapsUrl) return true;
+    if (school.lat != null && school.lng != null) return true;
+    return !!school.mapsQuery;
+  }
+
+  function mapsClickUrl(school) {
+    if (school.mapsUrl) return String(school.mapsUrl).trim();
+    if (school.lat != null && school.lng != null) {
+      return 'https://www.google.com/maps/search/?api=1&query=' +
+        encodeURIComponent(school.lat + ',' + school.lng);
+    }
+    if (school.mapsQuery) {
+      return 'https://www.google.com/maps/search/?api=1&query=' +
+        encodeURIComponent(school.mapsQuery);
+    }
+    return '';
+  }
+
+  function staticMapPreviewUrl(lat, lng) {
+    return 'https://staticmap.openstreetmap.de/staticmap.php?center=' + lat + ',' + lng +
+      '&zoom=11&size=1200x600&maptype=mapnik&markers=' + lat + ',' + lng + ',red-pushpin';
+  }
+
+  function carouselImages(s, regionId) {
     var list = (s.gallery && s.gallery.length)
       ? s.gallery.filter(function (src) { return !!src; })
       : [];
-    if (list.length) return list;
     var hero = heroImage(s);
+    if (schoolMapEnabled(regionId, s) && hero) {
+      if (!list.length || list.indexOf(hero) === -1) {
+        list = [hero].concat(list);
+      }
+    }
+    if (list.length) return list;
     return hero ? [hero] : [];
   }
 
@@ -186,6 +221,35 @@
     frame.classList.add('is-placeholder');
   }
 
+  function renderHero(regionId, school, name) {
+    var hero = heroImage(school);
+    var heroImg = document.getElementById('school-hero-img');
+    var mapLink = document.getElementById('school-hero-map');
+    var mapImg = document.getElementById('school-hero-map-img');
+    var useMap = schoolMapEnabled(regionId, school);
+    var mapUrl = mapsClickUrl(school);
+
+    if (useMap && mapLink && mapImg && mapUrl) {
+      if (school.lat != null && school.lng != null) {
+        mapImg.src = staticMapPreviewUrl(school.lat, school.lng);
+      } else {
+        mapImg.removeAttribute('src');
+      }
+      mapImg.alt = bi('Ауыл картасы', 'Village map') + ' — ' + name;
+      mapLink.href = mapUrl;
+      mapLink.hidden = false;
+      if (heroImg) heroImg.hidden = true;
+      return;
+    }
+
+    if (mapLink) mapLink.hidden = true;
+    if (heroImg) {
+      heroImg.src = hero || '';
+      heroImg.alt = name;
+      heroImg.hidden = !hero;
+    }
+  }
+
   function renderPage(result) {
     var main = document.getElementById('main-content');
     var notFound = document.getElementById('school-not-found');
@@ -198,15 +262,13 @@
 
     var region = result.region;
     var school = result.school;
-    var hero = heroImage(school);
-    var images = carouselImages(school);
+    var images = carouselImages(school, region.id);
 
     if (notFound) notFound.hidden = true;
     if (main) main.hidden = false;
 
     var titleEl = document.getElementById('school-hero-title');
     var locEl = document.getElementById('school-hero-loc');
-    var heroImg = document.getElementById('school-hero-img');
     var backLink = document.getElementById('school-back-link');
     var regionEl = document.getElementById('school-region');
     var descEl = document.getElementById('school-desc');
@@ -223,11 +285,7 @@
 
     if (titleEl) titleEl.textContent = name;
     if (locEl) locEl.textContent = bi(school.location.kk, school.location.en);
-    if (heroImg) {
-      heroImg.src = hero || '';
-      heroImg.alt = name;
-      heroImg.hidden = !hero;
-    }
+    renderHero(region.id, school, name);
 
     if (backLink) {
       backLink.href = 'index.html#region-' + region.id + '-schools';

@@ -436,6 +436,58 @@ def build_school_desc(director: str = "", address: str = "") -> dict[str, str]:
     return {"kk": " ".join(parts_kk), "en": " ".join(parts_en)}
 
 
+def extract_address_from_desc(desc: dict | None) -> str:
+    if not desc:
+        return ""
+    for key in ("kk", "en"):
+        text = str(desc.get(key, "")).strip()
+        match = re.search(r"(?:Мекенжай|Address)\s*:\s*(.+)$", text, flags=re.I)
+        if match:
+            return _clean_address_text(match.group(1))
+    return ""
+
+
+_VILLAGE_PATTERNS: tuple[re.Pattern[str], ...] = (
+    re.compile(
+        r"(?:ауылы|ауданы,?\s*ауылы|ау\.|село|с\.|поселок|пос\.|п\.|village|v\.)\s*"
+        r"([A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ0-9][A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ0-9\s\-']{0,60}?)"
+        r"(?:\s*,|\s+көш|\s+ул|\s+St\.|$)",
+        flags=re.I,
+    ),
+)
+
+
+def extract_village_name(address: str) -> str:
+    text = _clean_address_text(address)
+    if not text:
+        return ""
+    for pattern in _VILLAGE_PATTERNS:
+        match = pattern.search(text)
+        if match:
+            village = re.sub(r"\s+", " ", match.group(1)).strip(" ,.-")
+            if village:
+                return village
+    return ""
+
+
+def build_maps_query(
+    region_en: str,
+    district_en: str,
+    desc: dict | None = None,
+) -> str:
+    address = extract_address_from_desc(desc)
+    village = extract_village_name(address) if address else ""
+    parts: list[str] = []
+    if village:
+        parts.append(village)
+    if district_en:
+        parts.append(district_en)
+    if region_en:
+        parts.append(region_en)
+    parts.append("Kazakhstan")
+    return ", ".join(parts)
+
+
 def _extract_quoted_name(full: str) -> str:
     text = str(full).strip().strip('"').strip("'")
     if "«" in text:

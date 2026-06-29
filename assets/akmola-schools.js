@@ -147,6 +147,7 @@ window.AKMOLA_SCHOOLS = {
         "en": "Director: Сатемиров Серик Карбаевич"
       },
       "image": "assets/optimized/ondiris/ondiris-building.png",
+      "mapsQuery": "Astrakhan District, Akmola Region, Kazakhstan",
       "gallery": [
         "assets/optimized/ondiris/ondiris-building.png",
         "assets/optimized/ondiris/ondiris-classroom-1.png",
@@ -155,7 +156,9 @@ window.AKMOLA_SCHOOLS = {
         "assets/optimized/ondiris/ondiris-classroom-4.png",
         "assets/optimized/ondiris/ondiris-plaque.png"
       ],
-      "youtube": "Kn1wxXwTf7I"
+      "youtube": "Kn1wxXwTf7I",
+      "lat": 51.527182,
+      "lng": 69.56515
     },
     {
       "id": "akmola-astrakhan-2",
@@ -174,7 +177,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Ищанова Зарина Тайпакқызы",
         "en": "Director: Ищанова Зарина Тайпаковна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Astrakhan District, Akmola Region, Kazakhstan",
+      "lat": 51.527182,
+      "lng": 69.56515
     },
     {
       "id": "akmola-astrakhan-3",
@@ -193,7 +199,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Габдуллина Гульшехизада Сапаргалиқызы",
         "en": "Director: Габдуллина Гульшехизада Сапаргалиевна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Astrakhan District, Akmola Region, Kazakhstan",
+      "lat": 51.527182,
+      "lng": 69.56515
     },
     {
       "id": "akmola-shortandy-1",
@@ -212,7 +221,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Айтпаева Асем Жолдыбақызы",
         "en": "Director: Айтпаева Асем Жолдыбаевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Shortandy District, Akmola Region, Kazakhstan",
+      "lat": 51.567936,
+      "lng": 70.826949
     },
     {
       "id": "akmola-shortandy-2",
@@ -231,7 +243,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Амержанова АлимаКдирбаевна",
         "en": "Director: Амержанова АлимаКдирбаевна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Shortandy District, Akmola Region, Kazakhstan",
+      "lat": 51.567936,
+      "lng": 70.826949
     },
     {
       "id": "akmola-shortandy-3",
@@ -250,7 +265,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Бекей Досан",
         "en": "Director: Бекей Досан"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Shortandy District, Akmola Region, Kazakhstan",
+      "lat": 51.567936,
+      "lng": 70.826949
     },
     {
       "id": "akmola-arshaly-1",
@@ -269,7 +287,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Миралиев Бауыржан Койшибековұлы",
         "en": "Director: Миралиев Бауыржан Койшибекович"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Arshaly District, Akmola Region, Kazakhstan",
+      "lat": 50.928787,
+      "lng": 72.458563
     },
     {
       "id": "akmola-arshaly-2",
@@ -288,7 +309,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Мусинов Тахир Хасимовұлы",
         "en": "Director: Мусинов Тахир Хасимович"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Arshaly District, Akmola Region, Kazakhstan",
+      "lat": 50.928787,
+      "lng": 72.458563
     },
     {
       "id": "akmola-arshaly-3",
@@ -307,7 +331,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Халым Толеуиш",
         "en": "Director: Халым Толеуиш"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Arshaly District, Akmola Region, Kazakhstan",
+      "lat": 50.928787,
+      "lng": 72.458563
     },
     {
       "id": "akmola-burabay-1",
@@ -326,7 +353,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Алтынбек Дағыстан",
         "en": "Director: Алтынбек Дағыстан"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Burabay District, Akmola Region, Kazakhstan",
+      "lat": 52.919556,
+      "lng": 70.151717
     },
     {
       "id": "akmola-burabay-2",
@@ -345,7 +375,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Омарова Г.Б",
         "en": "Director: Омарова Г.Б"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Burabay District, Akmola Region, Kazakhstan",
+      "lat": 52.919556,
+      "lng": 70.151717
     },
     {
       "id": "akmola-burabay-3",
@@ -364,7 +397,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Нарижняя Тамара Николаевна (ответственная)",
         "en": "Director: Нарижняя Тамара Николаевна (ответственная)"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Burabay District, Akmola Region, Kazakhstan",
+      "lat": 52.919556,
+      "lng": 70.151717
     },
     {
       "id": "akmola-akkol-1",
@@ -383,7 +419,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Муратбек Хадыр",
         "en": "Director: Муратбек Хадыр"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Akkol District, Akmola Region, Kazakhstan",
+      "lat": 52.227265,
+      "lng": 71.318884
     },
     {
       "id": "akmola-akkol-2",
@@ -402,7 +441,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Канди Бахшагуль",
         "en": "Director: Канди Бахшагуль"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Akkol District, Akmola Region, Kazakhstan",
+      "lat": 52.227265,
+      "lng": 71.318884
     },
     {
       "id": "akmola-akkol-3",
@@ -421,7 +463,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Утюпова Гаухар Тилеукешқызы",
         "en": "Director: Утюпова Гаухар Тилеукешовна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Akkol District, Akmola Region, Kazakhstan",
+      "lat": 52.227265,
+      "lng": 71.318884
     },
     {
       "id": "akmola-esil-1",
@@ -440,7 +485,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Ахамбаева Надежда Владимирқызы",
         "en": "Director: Ахамбаева Надежда Владимировна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Esil District, Akmola Region, Kazakhstan",
+      "lat": 51.890589,
+      "lng": 66.324169
     },
     {
       "id": "akmola-esil-2",
@@ -459,7 +507,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Ахметова Динара Куанышқызы",
         "en": "Director: Ахметова Динара Куанышевна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Esil District, Akmola Region, Kazakhstan",
+      "lat": 51.890589,
+      "lng": 66.324169
     },
     {
       "id": "akmola-esil-3",
@@ -478,7 +529,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Сысоева Ирина Николақызы",
         "en": "Director: Сысоева Ирина Николаевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Esil District, Akmola Region, Kazakhstan",
+      "lat": 51.890589,
+      "lng": 66.324169
     },
     {
       "id": "akmola-zhaksy-1",
@@ -497,7 +551,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Серикбаева Балжан Тулегенқызы",
         "en": "Director: Серикбаева Балжан Тулегеновна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Zhaksy District, Akmola Region, Kazakhstan",
+      "lat": 51.668842,
+      "lng": 67.413911
     },
     {
       "id": "akmola-zhaksy-2",
@@ -516,7 +573,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Бурчиц Александра Юрьқызы",
         "en": "Director: Бурчиц Александра Юрьевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Zhaksy District, Akmola Region, Kazakhstan",
+      "lat": 51.668842,
+      "lng": 67.413911
     },
     {
       "id": "akmola-zhaksy-3",
@@ -535,7 +595,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Кабамбаева Зауреш Калиқызы",
         "en": "Director: Кабамбаева Зауреш Калиевна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Zhaksy District, Akmola Region, Kazakhstan",
+      "lat": 51.668842,
+      "lng": 67.413911
     },
     {
       "id": "akmola-zharkain-1",
@@ -554,7 +617,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Кайкина Анара Айтпақызы",
         "en": "Director: Кайкина Анара Айтпаевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Zharkain District, Akmola Region, Kazakhstan",
+      "lat": 51.082642,
+      "lng": 66.492768
     },
     {
       "id": "akmola-zharkain-2",
@@ -573,7 +639,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Ахметова Гульнар Кажмухамбетқызы",
         "en": "Director: Ахметова Гульнар Кажмухамбетовна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Zharkain District, Akmola Region, Kazakhstan",
+      "lat": 51.082642,
+      "lng": 66.492768
     },
     {
       "id": "akmola-zharkain-3",
@@ -592,7 +661,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Нурканова Рабига Салимжанқызы",
         "en": "Director: Нурканова Рабига Салимжановна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Zharkain District, Akmola Region, Kazakhstan",
+      "lat": 51.082642,
+      "lng": 66.492768
     },
     {
       "id": "akmola-sandyktau-1",
@@ -611,7 +683,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Пономарев Игорь Вячеславовұлы",
         "en": "Director: Пономарев Игорь Вячеславович"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Sandyktau District, Akmola Region, Kazakhstan",
+      "lat": 52.3975,
+      "lng": 68.733072
     },
     {
       "id": "akmola-sandyktau-2",
@@ -630,7 +705,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Ганин Сергей Владимировұлы",
         "en": "Director: Ганин Сергей Владимирович"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Sandyktau District, Akmola Region, Kazakhstan",
+      "lat": 52.3975,
+      "lng": 68.733072
     },
     {
       "id": "akmola-sandyktau-3",
@@ -649,7 +727,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Жаксыбаев Бактияр Сабетовұлы",
         "en": "Director: Жаксыбаев Бактияр Сабетович"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Sandyktau District, Akmola Region, Kazakhstan",
+      "lat": 52.3975,
+      "lng": 68.733072
     },
     {
       "id": "akmola-atbasar-1",
@@ -668,7 +749,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Харахыз Бахытгуль",
         "en": "Director: Харахыз Бахытгуль"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Atbasar District, Akmola Region, Kazakhstan",
+      "lat": 51.391597,
+      "lng": 68.468359
     },
     {
       "id": "akmola-atbasar-2",
@@ -687,7 +771,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Утегенова Баян Талгатқызы",
         "en": "Director: Утегенова Баян Талгатовна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Atbasar District, Akmola Region, Kazakhstan",
+      "lat": 51.391597,
+      "lng": 68.468359
     },
     {
       "id": "akmola-atbasar-3",
@@ -706,7 +793,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Амантаева Аяулы Каирбекқызы",
         "en": "Director: Амантаева Аяулы Каирбековна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Atbasar District, Akmola Region, Kazakhstan",
+      "lat": 51.391597,
+      "lng": 68.468359
     },
     {
       "id": "akmola-stepnogorsk-1",
@@ -725,7 +815,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Темирбек Ерболат",
         "en": "Director: Темирбек Ерболат"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Stepnogorsk city, Akmola Region, Kazakhstan",
+      "lat": 52.35965,
+      "lng": 71.891233
     },
     {
       "id": "akmola-stepnogorsk-2",
@@ -744,7 +837,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Сануар Бердигул",
         "en": "Director: Сануар Бердигул"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Stepnogorsk city, Akmola Region, Kazakhstan",
+      "lat": 52.35965,
+      "lng": 71.891233
     },
     {
       "id": "akmola-stepnogorsk-3",
@@ -763,7 +859,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Медрисова Енлык Катранқызы",
         "en": "Director: Медрисова Енлык Катрановна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Stepnogorsk city, Akmola Region, Kazakhstan",
+      "lat": 52.35965,
+      "lng": 71.891233
     },
     {
       "id": "akmola-tselinograd-1",
@@ -782,7 +881,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Жапан Баянгонос",
         "en": "Director: Жапан Баянгонос"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Tselinograd District, Akmola Region, Kazakhstan",
+      "lat": 51.367582,
+      "lng": 71.771642
     },
     {
       "id": "akmola-tselinograd-2",
@@ -801,7 +903,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Мукатаев Айдын Балапановұлы",
         "en": "Director: Мукатаев Айдын Балапанович"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Tselinograd District, Akmola Region, Kazakhstan",
+      "lat": 51.367582,
+      "lng": 71.771642
     },
     {
       "id": "akmola-tselinograd-3",
@@ -820,7 +925,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Джамалиев Болат Мажитовұлы",
         "en": "Director: Джамалиев Болат Мажитович"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Tselinograd District, Akmola Region, Kazakhstan",
+      "lat": 51.367582,
+      "lng": 71.771642
     },
     {
       "id": "akmola-egindykol-1",
@@ -839,7 +947,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Трысбаева Асел Еркенқызы",
         "en": "Director: Трысбаева Асел Еркеновна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Egindykol District, Akmola Region, Kazakhstan",
+      "lat": 51.051454,
+      "lng": 69.479669
     },
     {
       "id": "akmola-egindykol-2",
@@ -858,7 +969,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Бокишев Талгат Кабдоллаевұлы",
         "en": "Director: Бокишев Талгат Кабдоллаевич"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Egindykol District, Akmola Region, Kazakhstan",
+      "lat": 51.051454,
+      "lng": 69.479669
     },
     {
       "id": "akmola-egindykol-3",
@@ -877,7 +991,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Мухамедиярова Шынар Жаксыкелдинқызы",
         "en": "Director: Мухамедиярова Шынар Жаксыкелдиновна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Egindykol District, Akmola Region, Kazakhstan",
+      "lat": 51.051454,
+      "lng": 69.479669
     },
     {
       "id": "akmola-korgalzhyn-1",
@@ -896,7 +1013,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Шопанова Жанар Мейрембақызы",
         "en": "Director: Шопанова Жанар Мейрембаевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Korgalzhyn District, Akmola Region, Kazakhstan",
+      "lat": 50.574376,
+      "lng": 69.785771
     },
     {
       "id": "akmola-korgalzhyn-2",
@@ -915,7 +1035,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Кошкарбаев Жомартжан Қалмұрзаұлы",
         "en": "Director: Кошкарбаев Жомартжан Қалмұрзаұлы"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Korgalzhyn District, Akmola Region, Kazakhstan",
+      "lat": 50.574376,
+      "lng": 69.785771
     },
     {
       "id": "akmola-korgalzhyn-3",
@@ -934,7 +1057,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Касенова Арнагуль Нуржанқызы",
         "en": "Director: Касенова Арнагуль Нуржановна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Korgalzhyn District, Akmola Region, Kazakhstan",
+      "lat": 50.574376,
+      "lng": 69.785771
     },
     {
       "id": "akmola-ereymentau-1",
@@ -953,7 +1079,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Ахметова Айтжамал Рахимбекқызы",
         "en": "Director: Ахметова Айтжамал Рахимбековна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Ereymentau District, Akmola Region, Kazakhstan",
+      "lat": 51.854839,
+      "lng": 72.998767
     },
     {
       "id": "akmola-ereymentau-2",
@@ -972,7 +1101,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Каппасова Гульнар Еркенқызы",
         "en": "Director: Каппасова Гульнар Еркеновна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Ereymentau District, Akmola Region, Kazakhstan",
+      "lat": 51.854839,
+      "lng": 72.998767
     },
     {
       "id": "akmola-ereymentau-3",
@@ -991,7 +1123,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Табулдина Жулдыз Тлеубақызы",
         "en": "Director: Табулдина Жулдыз Тлеубаевна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Ereymentau District, Akmola Region, Kazakhstan",
+      "lat": 51.854839,
+      "lng": 72.998767
     },
     {
       "id": "akmola-birjan-sal-1",
@@ -1010,7 +1145,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Садуова Гульнар Серикқызы",
         "en": "Director: Садуова Гульнар Сериковна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Birjan Sal District, Akmola Region, Kazakhstan",
+      "lat": 52.873101,
+      "lng": 71.165745
     },
     {
       "id": "akmola-birjan-sal-2",
@@ -1029,7 +1167,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Садвакасов Алтай Ногербековұлы",
         "en": "Director: Садвакасов Алтай Ногербекович"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Birjan Sal District, Akmola Region, Kazakhstan",
+      "lat": 52.873101,
+      "lng": 71.165745
     },
     {
       "id": "akmola-birjan-sal-3",
@@ -1048,7 +1189,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Рамазанова Самал Тулешқызы",
         "en": "Director: Рамазанова Самал Тулешевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Birjan Sal District, Akmola Region, Kazakhstan",
+      "lat": 52.873101,
+      "lng": 71.165745
     },
     {
       "id": "akmola-bulandy-1",
@@ -1067,7 +1211,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Кинабаева Акмарал Аманкулқызы",
         "en": "Director: Кинабаева Акмарал Аманкуловна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Bulandy District, Akmola Region, Kazakhstan",
+      "lat": 52.232407,
+      "lng": 70.04557
     },
     {
       "id": "akmola-bulandy-2",
@@ -1086,7 +1233,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Даирова Калимаш Егинбақызы",
         "en": "Director: Даирова Калимаш Егинбаевна"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Bulandy District, Akmola Region, Kazakhstan",
+      "lat": 52.232407,
+      "lng": 70.04557
     },
     {
       "id": "akmola-bulandy-3",
@@ -1105,7 +1255,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Аймихан Мырзабек",
         "en": "Director: Аймихан Мырзабек"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Bulandy District, Akmola Region, Kazakhstan",
+      "lat": 52.232407,
+      "lng": 70.04557
     },
     {
       "id": "akmola-zerendi-1",
@@ -1124,7 +1277,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Султанбек Талант",
         "en": "Director: Султанбек Талант"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Zerendi District, Akmola Region, Kazakhstan",
+      "lat": 53.11739,
+      "lng": 69.185578
     },
     {
       "id": "akmola-zerendi-2",
@@ -1143,7 +1299,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Егубаева Гульзат Кожекқызы",
         "en": "Director: Егубаева Гульзат Кожековна"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "mapsQuery": "Zerendi District, Akmola Region, Kazakhstan",
+      "lat": 53.11739,
+      "lng": 69.185578
     },
     {
       "id": "akmola-zerendi-3",
@@ -1162,7 +1321,10 @@ window.AKMOLA_SCHOOLS = {
         "kk": "Директоры: Каирбай Бахытбек Хасеновұлы",
         "en": "Director: Каирбай Бахытбек Хасенович"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "mapsQuery": "Zerendi District, Akmola Region, Kazakhstan",
+      "lat": 53.11739,
+      "lng": 69.185578
     }
   ]
 };

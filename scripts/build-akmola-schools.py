@@ -1,9 +1,12 @@
 """Generate assets/akmola-schools.js from Excel sheet."""
+import argparse
 from pathlib import Path
 
-from school_data_utils import build_region_payload, write_region_js
+from geocode_maps import geocode_schools
+from school_data_utils import build_maps_query, build_region_payload, write_region_js
 
 OUT = Path(__file__).resolve().parents[1] / "assets" / "akmola-schools.js"
+REGION_EN = "Akmola Region"
 
 SCHOOL_IMAGES = {
     "akmola-astrakhan-1": "assets/optimized/ondiris/ondiris-building.png",
@@ -46,8 +49,21 @@ DISTRICT_LABELS = [
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--geocode",
+        action="store_true",
+        help="Fetch lat/lng from Nominatim for each mapsQuery (slow; cached)",
+    )
+    args = parser.parse_args()
+
     payload = build_region_payload(1, DISTRICT_LABELS, "akmola")
     for school in payload["schools"]:
+        school["mapsQuery"] = build_maps_query(
+            REGION_EN,
+            school["location"]["en"],
+            school.get("desc"),
+        )
         image = SCHOOL_IMAGES.get(school["id"])
         if image:
             school["image"] = image
@@ -57,6 +73,11 @@ def main() -> None:
                 school["gallery"] = media["gallery"]
             if media.get("youtube"):
                 school["youtube"] = media["youtube"]
+
+    if args.geocode:
+        ok, failed = geocode_schools(payload["schools"])
+        print(f"Geocoded: {ok} ok, {failed} without coordinates")
+
     write_region_js(OUT, "AKMOLA_SCHOOLS", payload, "Akmola schools from Жоба мектер тізімі.xlsx")
     print(
         f"Wrote {len(payload['schools'])} schools, "
