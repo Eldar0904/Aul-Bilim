@@ -272,15 +272,19 @@ window.adminSchools = (function () {
 
     var editor = document.getElementById('school-editor');
     var empty = document.getElementById('school-editor-empty');
-    if (empty) empty.style.display = 'none';
-    if (editor) editor.style.display = '';
+    if (empty) empty.classList.add('is-hidden');
+    if (editor) editor.classList.add('is-open');
 
     var previewLink = document.getElementById('preview-link');
     if (previewLink) previewLink.href = schoolPageUrl(entry);
 
     var override = overrideCache[id];
     if (override === undefined) {
-      override = await window.db.getSchoolContent(id);
+      try {
+        override = await window.db.getSchoolContent(id);
+      } catch (e) {
+        override = null;
+      }
       overrideCache[id] = override || null;
     }
 

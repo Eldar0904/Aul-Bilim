@@ -225,9 +225,11 @@ aside#sidebar {
 /* Schools editor */
 .schools-editor { overflow-y: auto; background: #ECEAE5; min-height: 0; }
 #school-editor-empty { padding: 40px 28px; color: var(--body); }
+#school-editor-empty.is-hidden { display: none; }
 #school-editor-empty p { font-size: 15px; line-height: 1.6; }
 #school-editor-empty p + p { margin-top: 8px; font-size: 13px; }
 #school-editor { display: none; }
+#school-editor.is-open { display: block; }
 .se-status { font-size: 11.5px; color: var(--primary); font-family: var(--fh); font-weight: 700; padding: 12px 20px 0; }
 
 /* School hero preview wrapper */
