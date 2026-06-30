@@ -1974,6 +1974,12 @@ body.map-schools-open .region-schools-block {
   padding: 10px;
   box-sizing: border-box;
 }
+.coop-card-logo--local img {
+  background: #fff;
+  padding: 4px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
 .coop-card-logo img {
   width: 100%;
   height: 100%;

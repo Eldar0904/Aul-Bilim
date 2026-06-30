@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ringGrad" x1="40" y1="32" x2="216" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E3D7A"/>
+      <stop offset="0.5" stop-color="#1B4F8A"/>
+      <stop offset="1" stop-color="#0A2F5E"/>
+    </linearGradient>
+    <radialGradient id="skyGrad" cx="128" cy="108" r="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8EBFA"/>
+      <stop offset="0.55" stop-color="#A8D0F0"/>
+      <stop offset="1" stop-color="#7EB8E8"/>
+    </radialGradient>
+    <path id="topArc" d="M 44 128 A 84 84 0 0 1 212 128" fill="none"/>
+    <path id="bottomArc" d="M 212 128 A 84 84 0 0 1 44 128" fill="none"/>
+  </defs>
+
+  <circle cx="128" cy="128" r="124" fill="url(#ringGrad)"/>
+  <circle cx="128" cy="128" r="104" fill="url(#skyGrad)"/>
+  <circle cx="128" cy="128" r="104" fill="none" stroke="#0B3D7A" stroke-width="1.5" opacity="0.35"/>
+
+  <g fill="#F5C518" opacity="0.95">
+    <path d="M128 34 L131 58 L128 52 L125 58 Z"/>
+    <path d="M158 42 L148 64 L145 58 L152 48 Z"/>
+    <path d="M186 58 L168 72 L166 66 L178 56 Z"/>
+    <path d="M204 84 L180 88 L182 82 L198 78 Z"/>
+    <path d="M98 42 L108 64 L111 58 L104 48 Z"/>
+    <path d="M70 58 L88 72 L90 66 L78 56 Z"/>
+    <path d="M52 84 L76 88 L74 82 L58 78 Z"/>
+  </g>
+
+  <circle cx="128" cy="88" r="26" fill="#FFC72C"/>
+  <circle cx="128" cy="88" r="26" fill="none" stroke="#E8A800" stroke-width="1"/>
+
+  <path fill="#fff" stroke="#0B3D7A" stroke-width="1.2" d="M128 108 L88 124 V168 C88 172 92 174 96 172 L128 160 L160 172 C164 174 168 172 168 168 V124 Z"/>
+  <path fill="#E8F4FC" d="M128 108 V160 L96 172 V124 Z"/>
+  <path fill="#F7FBFF" d="M128 108 V160 L160 172 V124 Z"/>
+  <path fill="none" stroke="#0B3D7A" stroke-width="1" d="M128 108 V160"/>
+  <path fill="#F5C518" d="M120 148 C124 152 132 152 136 148 C134 154 122 154 120 148Z"/>
+
+  <path fill="#E8B923" d="M72 178 C88 188 104 192 128 192 C152 192 168 188 184 178 C176 198 154 208 128 208 C102 208 80 198 72 178Z"/>
+  <path fill="none" stroke="#C99A12" stroke-width="1" opacity="0.5" d="M88 186 C104 194 152 194 168 186"/>
+
+  <text fill="#F5C518" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.04em">
+    <textPath href="#topArc" xlink:href="#topArc" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle">&#1041;&#1030;&#1051;&#1030;&#1052; &#1041;&#1040;&#1057;&#1178;&#1040;&#1056;&#1052;&#1040;&#1057;&#1067;</textPath>
+  </text>
+  <text fill="#F5C518" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.03em">
+    <textPath href="#bottomArc" xlink:href="#bottomArc" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle">&#1059;&#1055;&#1056;&#1040;&#1042;&#1051;&#1045;&#1053;&#1048;&#1045; &#1054;&#1041;&#1056;&#1040;&#1047;&#1054;&#1042;&#1040;&#1053;&#1048;&#1071;</textPath>
+  </text>
+</svg>
