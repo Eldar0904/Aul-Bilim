@@ -4,7 +4,7 @@ window.db = (function () {
   var LOCAL_CONTENT = 'aulbilim_content_draft';
   var LOCAL_ENQUIRIES = 'aulbilim_enquiries';
   var LOCAL_SCHOOLS = 'aulbilim_schools';
-  var LEGACY_R2_BASE = 'https://pub-fab6b6cfe128465294dac297e02ccd05.r2.dev';
+  var LEGACY_R2_BASE = 'https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abc.webp';
   var MEDIA_WORKER_BASE = 'https://aulbilim-media-api.aulbilim.workers.dev';
 
   function normalizeMediaUrl(url) {

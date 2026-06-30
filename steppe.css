@@ -1757,31 +1757,37 @@ body.map-schools-open .region-schools-block {
 .feat-list li .ck svg { width: 15px; height: 15px; }
 
 /* ---------- ABOUT page ---------- */
-.about-mission { padding-bottom: 20px; }
+.about-mission {
+  padding-top: 12px;
+  padding-bottom: 36px;
+}
 .about-mission-in {
-  max-width: min(920px, 100%);
+  max-width: min(960px, 100%);
   margin: 0 auto;
   text-align: center;
 }
 .about-mission-title {
-  font-size: clamp(28px, 4vw, 36px);
-  letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  font-size: clamp(32px, 4.8vw, 44px);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 22px;
 }
 .about-mission-title::after {
   content: "";
   display: block;
-  width: 48px;
-  height: 4px;
+  width: 64px;
+  height: 5px;
   border-radius: 999px;
-  background: var(--accent);
-  margin: 14px auto 0;
+  background: linear-gradient(90deg, var(--accent-deep), var(--accent-soft));
+  margin: 16px auto 0;
 }
 .about-mission-in p {
-  font-size: 17px;
-  line-height: 1.68;
-  color: var(--body);
-  margin: 0;
+  font-size: clamp(18px, 2.1vw, 21px);
+  line-height: 1.72;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 auto;
+  max-width: 52em;
 }
 
 .about-coop {
