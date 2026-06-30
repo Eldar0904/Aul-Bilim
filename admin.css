@@ -28,7 +28,8 @@ button { cursor: pointer; }
 }
 .gate-logo { font-family: var(--fh); font-weight: 900; font-size: 22px; color: var(--primary); margin-bottom: 6px; display: flex; align-items: center; justify-content: center; gap: 10px; }
 .gate-logo .sun { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--accent-soft), var(--accent) 70%); flex: none; }
-.gate-logo span { color: var(--accent-deep); }
+.gate-logo .logo-name { white-space: nowrap; letter-spacing: -0.03em; }
+.gate-logo .logo-mark { color: var(--accent-deep); }
 .gate-sub { font-size: 13px; color: var(--body); margin-bottom: 28px; }
 .gate-card input { width: 100%; padding: 12px 15px; border: 1.5px solid rgba(0,0,0,0.14); border-radius: 10px; font-family: var(--fb); font-size: 15px; margin-bottom: 14px; transition: border-color .18s; }
 .gate-card input:focus { outline: none; border-color: var(--accent); }
@@ -52,7 +53,8 @@ aside#sidebar {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .sb-logo .sun { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--accent-soft), var(--accent) 70%); flex: none; }
-.sb-logo span { color: var(--accent-soft); }
+.sb-logo .logo-name { white-space: nowrap; letter-spacing: -0.03em; }
+.sb-logo .logo-mark { color: var(--accent-soft); }
 .sb-logo small { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-top: 1px; text-transform: uppercase; }
 .sb-section { padding: 14px 12px 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
 .sb-page {

@@ -29,7 +29,7 @@ HEAD = """<!DOCTYPE html>
 GATE = """
 <div id="gate">
   <div class="gate-card">
-    <div class="gate-logo"><span class="sun"></span>Aul&nbsp;<span>Bilim</span></div>
+    <div class="gate-logo"><span class="sun" aria-hidden="true"></span><span class="logo-name">Aul<span class="logo-mark">Bilim</span></span></div>
     <p class="gate-sub">Мазмұнды басқару жүйесі</p>
     <input type="email" id="email-input" placeholder="Email" autocomplete="username" />
     <input type="password" id="pw-input" placeholder="Құпия сөз" autocomplete="current-password" />
