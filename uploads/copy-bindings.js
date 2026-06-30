@@ -60,8 +60,10 @@
       'story-6-en': storyCard(6, 'en')
     },
     'about.html': {
-      'mission-kk': '.about-mission-in p [lang=kk]',
-      'mission-en': '.about-mission-in p [lang=en]'
+      'mission-g1-kk': '.about-mission-goals li:nth-child(1) .about-mission-goal-text [lang=kk]',
+      'mission-g1-en': '.about-mission-goals li:nth-child(1) .about-mission-goal-text [lang=en]',
+      'mission-g2-kk': '.about-mission-goals li:nth-child(2) .about-mission-goal-text [lang=kk]',
+      'mission-g2-en': '.about-mission-goals li:nth-child(2) .about-mission-goal-text [lang=en]'
     }
   };
 })();

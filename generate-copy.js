@@ -184,10 +184,10 @@ function indexPage() {
 
     h2('Stat Strip'),
     biTable([
-      ['300+  жабдықталған сынып', '300+  classrooms equipped'],
-      ['450+  оқытылған ұстаз', '450+  teachers trained'],
-      ['9  Қазақстан өңірі', '9  regions of Kazakhstan'],
-      ['15 000+  оқушы мен ұстаз', '15 000+  students & teachers'],
+      ['7  өңір', '7  regions'],
+      ['418  мектеп', '418  schools'],
+      ['952  жабдықталған сынып', '952  classrooms equipped'],
+      ['13 971  оқытылған ұстаз', '13 971  teachers trained'],
     ]),
 
     h2('Programs Section'),

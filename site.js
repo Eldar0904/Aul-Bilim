@@ -193,8 +193,13 @@
     // about.html — cooperation model flip cards
     var coopRoot = document.getElementById('coop-interactive');
     if (coopRoot) {
+      coopRoot.classList.add('coop-show-hint');
       var coopZones = Array.prototype.slice.call(coopRoot.querySelectorAll('.coop-zone'));
       var activeZone = null;
+
+      function dismissCoopHint() {
+        coopRoot.classList.remove('coop-show-hint');
+      }
 
       function setCoopFlipped(zone, flipped) {
         if (!zone) return;
@@ -235,6 +240,7 @@
         if (!hit) return;
         hit.addEventListener('click', function (e) {
           e.stopPropagation();
+          dismissCoopHint();
           if (zone.classList.contains('is-flipped')) {
             closeCoopZone(zone);
             return;
