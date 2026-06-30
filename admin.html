@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=43" />
+<link rel="stylesheet" href="steppe.css?v=55" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js"></script>
 <script src="uploads/content-schema.js"></script>
@@ -359,9 +359,14 @@
               <p class="se-status" id="school-editor-status"></p>
 
               <!-- Hero image preview -->
-              <div style="margin:16px 16px 0;border-radius:16px;overflow:hidden;background:var(--ink);position:relative;">
-                <header class="school-hero" style="min-height:200px;">
-                  <img id="admin-school-hero-img" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.75;">
+              <div style="margin:16px 16px 0;border-radius:16px;overflow:hidden;background:#143a6e;position:relative;">
+                <header class="school-hero school-hero--placeholder" id="admin-school-hero" style="min-height:200px;">
+                  <div class="school-hero-media">
+                    <img id="admin-school-hero-img" class="school-hero-photo" alt="" hidden />
+                    <div class="school-hero-placeholder" id="admin-school-hero-placeholder" aria-hidden="true">
+                      <img src="assets/school-hero-placeholder.svg" alt="" />
+                    </div>
+                  </div>
                   <div class="school-hero-overlay"></div>
                   <div class="school-hero-content wrap">
                     <p class="school-hero-loc" id="admin-school-hero-loc"></p>

@@ -151,6 +151,8 @@ window.adminSchools = (function () {
     }, 2500);
   }
 
+  var CAROUSEL_PLACEHOLDER = 'assets/school-hero-placeholder.svg';
+
   function setupCarousel(images) {
     stopCarousel();
     var col = document.getElementById('admin-school-carousel-col');
@@ -163,8 +165,18 @@ window.adminSchools = (function () {
     if (!col || !track) return;
 
     if (!images.length) {
-      col.hidden = true;
-      track.innerHTML = '';
+      col.hidden = false;
+      carouselIndex = 0;
+      track.innerHTML =
+        '<div class="school-carousel-slide is-active school-carousel-slide--placeholder">' +
+          '<img src="' + CAROUSEL_PLACEHOLDER + '" alt="" />' +
+        '</div>';
+      if (prevBtn) prevBtn.hidden = true;
+      if (nextBtn) nextBtn.hidden = true;
+      if (carousel) {
+        carousel.onmouseenter = null;
+        carousel.onmouseleave = null;
+      }
       return;
     }
 
@@ -217,6 +229,8 @@ window.adminSchools = (function () {
     var lang = previewLang;
 
     var heroImg = document.getElementById('admin-school-hero-img');
+    var heroPh = document.getElementById('admin-school-hero-placeholder');
+    var heroWrap = document.getElementById('admin-school-hero');
     var heroLoc = document.getElementById('admin-school-hero-loc');
     var heroTitle = document.getElementById('admin-school-hero-title');
     var regionEl = document.getElementById('admin-school-region');
@@ -228,11 +242,22 @@ window.adminSchools = (function () {
     if (heroLoc && school.location) {
       heroLoc.textContent = lang === 'en' ? school.location.en : school.location.kk;
     }
-    if (heroImg) {
-      heroImg.src = hero || '';
-      heroImg.alt = entry.kk;
-      heroImg.hidden = !hero;
+    if (heroWrap) {
+      heroWrap.classList.toggle('school-hero--photo', !!hero);
+      heroWrap.classList.toggle('school-hero--placeholder', !hero);
     }
+    if (heroImg) {
+      if (hero) {
+        heroImg.src = hero;
+        heroImg.alt = entry.kk;
+        heroImg.hidden = false;
+      } else {
+        heroImg.removeAttribute('src');
+        heroImg.alt = '';
+        heroImg.hidden = true;
+      }
+    }
+    if (heroPh) heroPh.hidden = !!hero;
     if (regionEl && region) {
       regionEl.textContent = lang === 'en' ? region.en : region.kk;
     }

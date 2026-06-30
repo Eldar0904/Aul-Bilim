@@ -619,7 +619,14 @@ body.map-schools-open .region-schools-block {
   display: block;
 }
 .school-card-photo--empty {
-  background: linear-gradient(135deg, var(--cream-deep), rgba(27,79,138,0.08));
+  background: linear-gradient(160deg, #3d6fa8 0%, #1b4f8a 50%, #143a6e 100%);
+}
+.school-card-photo--empty::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('assets/school-hero-placeholder.svg') center / cover no-repeat;
+  opacity: 0.9;
 }
 .school-card.is-clickable:hover,
 .school-card.is-clickable:focus-visible {
@@ -719,35 +726,49 @@ body.map-schools-open .region-schools-block {
   position: relative;
   min-height: clamp(480px, 68vh, 780px);
   overflow: hidden;
-  background: var(--cream-deep);
+  background: #143a6e;
 }
-.school-hero img {
+.school-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.school-hero-photo {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
-.school-hero-map {
+.school-hero-placeholder {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  display: block;
-  background: #e8ecf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #3d6fa8 0%, #1b4f8a 45%, #143a6e 100%);
 }
-.school-hero-map img {
+.school-hero-placeholder img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .school-hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(180deg, rgba(12,22,36,0.08) 0%, rgba(12,22,36,0.55) 72%, rgba(12,22,36,0.78) 100%);
   pointer-events: none;
 }
+.school-hero--placeholder .school-hero-overlay {
+  background: linear-gradient(180deg, rgba(12,22,36,0.04) 0%, rgba(12,22,36,0.38) 68%, rgba(12,22,36,0.62) 100%);
+}
 .school-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   min-height: clamp(480px, 68vh, 780px);
   display: flex;
   flex-direction: column;
@@ -762,6 +783,7 @@ body.map-schools-open .region-schools-block {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 0 0 10px;
+  color: #fff;
   opacity: 0.92;
 }
 .school-hero-content h1 {
@@ -770,6 +792,7 @@ body.map-schools-open .region-schools-block {
   letter-spacing: -0.03em;
   max-width: 16ch;
   margin: 0;
+  color: #fff;
 }
 .school-page-body { padding: 28px 0 72px; }
 .school-page-nav { margin-bottom: 28px; }
@@ -846,6 +869,10 @@ body.map-schools-open .region-schools-block {
   object-position: center;
   display: block;
   background: var(--cream-deep);
+}
+.school-carousel-slide--placeholder img {
+  object-fit: cover;
+  background: linear-gradient(160deg, #3d6fa8 0%, #1b4f8a 45%, #143a6e 100%);
 }
 .school-carousel-controls {
   display: flex;

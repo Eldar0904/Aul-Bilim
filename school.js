@@ -13,7 +13,7 @@
     { id: 'almaty', global: 'ALMATY_SCHOOLS', kk: 'Алматы облысы', en: 'Almaty Region' }
   ];
 
-  var MAP_HERO_PLACEHOLDER = 'assets/map-hero-placeholder.svg';
+  var CAROUSEL_PLACEHOLDER = 'assets/school-hero-placeholder.svg';
   var CAROUSEL_MS = 2500;
   var carouselTimer = null;
   var carouselIndex = 0;
@@ -135,8 +135,18 @@
     if (!col || !track) return;
 
     if (!images.length) {
-      col.hidden = true;
-      track.innerHTML = '';
+      col.hidden = false;
+      carouselIndex = 0;
+      track.innerHTML =
+        '<div class="school-carousel-slide is-active school-carousel-slide--placeholder">' +
+          '<img src="' + CAROUSEL_PLACEHOLDER + '" alt="" />' +
+        '</div>';
+      if (prevBtn) prevBtn.hidden = true;
+      if (nextBtn) nextBtn.hidden = true;
+      if (carousel) {
+        carousel.onmouseenter = null;
+        carousel.onmouseleave = null;
+      }
       return;
     }
 
@@ -192,10 +202,27 @@
   }
 
   function renderHero(school, name) {
-    var mapImg = document.getElementById('school-hero-map-img');
-    if (!mapImg) return;
-    mapImg.src = school.mapImage || MAP_HERO_PLACEHOLDER;
-    mapImg.alt = bi('Ауыл картасы', 'Village map') + ' — ' + name;
+    var hero = heroImage(school);
+    var heroEl = document.getElementById('school-hero');
+    var imgEl = document.getElementById('school-hero-img');
+    var phEl = document.getElementById('school-hero-placeholder');
+
+    if (heroEl) {
+      heroEl.classList.toggle('school-hero--photo', !!hero);
+      heroEl.classList.toggle('school-hero--placeholder', !hero);
+    }
+    if (imgEl) {
+      if (hero) {
+        imgEl.src = hero;
+        imgEl.alt = name;
+        imgEl.hidden = false;
+      } else {
+        imgEl.removeAttribute('src');
+        imgEl.alt = '';
+        imgEl.hidden = true;
+      }
+    }
+    if (phEl) phEl.hidden = !!hero;
   }
 
   function renderPage(result) {
