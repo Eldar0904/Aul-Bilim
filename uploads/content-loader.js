@@ -8,7 +8,9 @@
     if (el.closest) {
       if (el.closest('nav') || el.closest('.lang-switch') || el.closest('.menu-btn') ||
           el.closest('.pill') || el.closest('.text-link') || el.closest('.more') ||
-          el.closest('.crumbs') || el.closest('.foot-bottom') || el.closest('footer')) return true;
+          el.closest('.crumbs') || el.closest('.foot-bottom') || el.closest('footer') ||
+          el.closest('.about-mission-in') || el.closest('.coop-interactive') ||
+          el.closest('.skip-link')) return true;
     }
     return false;
   }
