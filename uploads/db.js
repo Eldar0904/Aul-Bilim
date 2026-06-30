@@ -4,6 +4,29 @@ window.db = (function () {
   var LOCAL_CONTENT = 'aulbilim_content_draft';
   var LOCAL_ENQUIRIES = 'aulbilim_enquiries';
   var LOCAL_SCHOOLS = 'aulbilim_schools';
+  var LEGACY_R2_BASE = 'https://pub-fab6b6cfe128465294dac297e02ccd05.r2.dev';
+  var MEDIA_WORKER_BASE = 'https://aulbilim-media-api.aulbilim.workers.dev';
+
+  function normalizeMediaUrl(url) {
+    if (!url || typeof url !== 'string') return url;
+    if (url.indexOf(LEGACY_R2_BASE) === 0) {
+      return MEDIA_WORKER_BASE + url.slice(LEGACY_R2_BASE.length);
+    }
+    return url;
+  }
+
+  function rewriteMediaUrlsDeep(value) {
+    if (typeof value === 'string') return normalizeMediaUrl(value);
+    if (Array.isArray(value)) return value.map(rewriteMediaUrlsDeep);
+    if (value && typeof value === 'object') {
+      var out = {};
+      Object.keys(value).forEach(function (key) {
+        out[key] = rewriteMediaUrlsDeep(value[key]);
+      });
+      return out;
+    }
+    return value;
+  }
 
   function config() {
     return window.AUL_BILIM_FIREBASE_CONFIG || null;
@@ -101,11 +124,11 @@ window.db = (function () {
 
   async function getSiteContent() {
     if (!hasBackend()) {
-      try { return JSON.parse(localStorage.getItem(LOCAL_CONTENT) || 'null'); } catch (e) { return null; }
+      try { return rewriteMediaUrlsDeep(JSON.parse(localStorage.getItem(LOCAL_CONTENT) || 'null')); } catch (e) { return null; }
     }
     var res = await fetch(documentUrl('site/content'), { headers: authHeaders() });
     if (!res.ok) return null;
-    return fromDocument(await res.json());
+    return rewriteMediaUrlsDeep(fromDocument(await res.json()));
   }
 
   async function saveSiteContent(content) {
@@ -152,12 +175,12 @@ window.db = (function () {
     if (!schoolId) return null;
     if (!hasBackend()) {
       var local = localSchoolsMap();
-      return local[schoolId] || null;
+      return rewriteMediaUrlsDeep(local[schoolId] || null);
     }
     var res = await fetch(documentUrl('schools/items/' + encodeURIComponent(schoolId)), { headers: authHeaders() });
     if (res.status === 404) return null;
     if (!res.ok) return null;
-    return fromDocument(await res.json());
+    return rewriteMediaUrlsDeep(fromDocument(await res.json()));
   }
 
   async function saveSchoolContent(schoolId, data) {
@@ -198,7 +221,8 @@ window.db = (function () {
     getImpactData: getImpactData,
     getStories: getStories,
     getSchoolContent: getSchoolContent,
-    saveSchoolContent: saveSchoolContent
+    saveSchoolContent: saveSchoolContent,
+    normalizeMediaUrl: normalizeMediaUrl
   };
 
 })();

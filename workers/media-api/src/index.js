@@ -10,10 +10,10 @@ const JWKS_URL = 'https://www.googleapis.com/service_accounts/v1/jwk/securetoken
 let jwksCache = null;
 let jwksFetchedAt = 0;
 
-function corsHeaders(origin) {
+function corsHeaders(origin, methods) {
   return {
     'Access-Control-Allow-Origin': origin || '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Methods': methods || 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Authorization, Content-Type',
     'Access-Control-Max-Age': '86400',
   };
@@ -95,16 +95,47 @@ function extForType(type) {
   return 'webp';
 }
 
+async function serveObject(request, env, cors) {
+  const url = new URL(request.url);
+  const key = decodeURIComponent(url.pathname.replace(/^\//, ''));
+  if (!key.startsWith('uploads/')) {
+    return json({ error: 'Not found' }, 404, cors);
+  }
+
+  const object = await env.MEDIA_BUCKET.get(key);
+  if (!object) {
+    return new Response('Object not found', { status: 404, headers: cors.headers });
+  }
+
+  const headers = new Headers(cors.headers);
+  headers.set('Content-Type', object.httpMetadata?.contentType || 'application/octet-stream');
+  headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+  if (object.etag) headers.set('ETag', object.etag);
+
+  return new Response(object.body, { status: 200, headers });
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '*';
+    const url = new URL(request.url);
+
+    if (url.pathname.startsWith('/uploads/')) {
+      const readCors = { headers: corsHeaders(origin, 'GET, OPTIONS') };
+      if (request.method === 'OPTIONS') {
+        return new Response(null, { status: 204, headers: readCors.headers });
+      }
+      if (request.method === 'GET') {
+        return serveObject(request, env, readCors);
+      }
+    }
+
     const cors = { headers: corsHeaders(origin) };
 
     if (request.method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: cors.headers });
     }
 
-    const url = new URL(request.url);
     if (request.method !== 'POST' || url.pathname !== '/upload') {
       return json({ error: 'Not found' }, 404, cors);
     }

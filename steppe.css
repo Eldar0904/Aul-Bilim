@@ -1998,12 +1998,12 @@ body.map-schools-open .region-schools-block {
 }
 .coop-card-org {
   font-family: var(--fh);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  line-height: 1.4;
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
   color: var(--body);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .coop-card--jf .coop-card-role,
 .coop-card--jf .coop-card-points { color: #fff; }
@@ -2020,10 +2020,10 @@ body.map-schools-open .region-schools-block {
   padding-left: 14px;
   font-family: var(--fh);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.02em;
   line-height: 1.45;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .coop-card-points li:last-child { margin-bottom: 0; }
 .coop-card-points li::before {
@@ -2031,7 +2031,7 @@ body.map-schools-open .region-schools-block {
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.45;
 }
 .coop-card--kh .coop-card-points li { color: #e8487a; }

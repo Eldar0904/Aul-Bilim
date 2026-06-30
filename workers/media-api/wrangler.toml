@@ -8,4 +8,4 @@ bucket_name = "aulbilim-media"
 
 [vars]
 FIREBASE_PROJECT_ID = "admin-aul-bilim"
-PUBLIC_MEDIA_BASE_URL = "https://pub-fab6b6cfe128465294dac297e02ccd05.r2.dev"
+PUBLIC_MEDIA_BASE_URL = "https://aulbilim-media-api.aulbilim.workers.dev"

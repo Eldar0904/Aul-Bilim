@@ -193,7 +193,7 @@ function indexPage() {
     h2('Programs Section'),
     biTable([
       ['Білім беру бастамалары', 'Educational initiatives'],
-      ['Біздің бағыттар', 'What we do'],
+      ['Біздің қызметтер', 'Our services'],
       ['Біз Қазақстанның әр түкпіріндегі балалар мен мұғалімдер үшін заманауи білім ортасын құрамыз.', 'We create a modern educational environment for children and teachers in every corner of Kazakhstan.'],
     ]),
 

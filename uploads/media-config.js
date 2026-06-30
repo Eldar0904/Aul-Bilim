@@ -4,5 +4,5 @@
 */
 window.AUL_BILIM_MEDIA_CONFIG = {
   uploadUrl: 'https://aulbilim-media-api.aulbilim.workers.dev/upload',
-  publicBaseUrl: 'https://pub-fab6b6cfe128465294dac297e02ccd05.r2.dev'
+  publicBaseUrl: 'https://aulbilim-media-api.aulbilim.workers.dev'
 };
