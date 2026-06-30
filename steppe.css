@@ -1957,20 +1957,20 @@ body.map-schools-open .region-schools-block {
 .coop-card-role {
   font-family: var(--fh);
   font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  line-height: 1.2;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
   color: var(--ink);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .coop-card-org {
   font-family: var(--fh);
   font-weight: 700;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.02em;
-  line-height: 1.35;
+  line-height: 1.4;
   color: var(--body);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .coop-card--jf .coop-card-role,
 .coop-card--jf .coop-card-points { color: #fff; }
@@ -1987,10 +1987,10 @@ body.map-schools-open .region-schools-block {
   padding-left: 14px;
   font-family: var(--fh);
   font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.03em;
-  line-height: 1.5;
-  margin-bottom: 3px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  margin-bottom: 4px;
 }
 .coop-card-points li:last-child { margin-bottom: 0; }
 .coop-card-points li::before {
@@ -1998,8 +1998,8 @@ body.map-schools-open .region-schools-block {
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.45;
 }
 .coop-card--kh .coop-card-points li { color: #e8487a; }
 .coop-card--kh .coop-card-points li::before { color: #e8487a; }

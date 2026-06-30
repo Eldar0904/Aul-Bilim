@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none" aria-hidden="true">
+  <rect width="800" height="400" fill="#1B4F8A"/>
+  <rect width="800" height="400" fill="url(#schoolHeroGrad)" opacity="0.95"/>
+  <path fill="rgba(255,255,255,0.08)" d="M0 280c80-30 160-10 240 10s160 30 240 10 160-20 240-30 80-10 80-10v140H0V280z"/>
+  <g transform="translate(400 168)" opacity="0.22">
+    <path fill="#fff" d="M0-72 88 0v88H-88V0L0-72z"/>
+    <rect x="-52" y="8" width="104" height="80" rx="4" fill="#fff"/>
+    <rect x="-36" y="24" width="20" height="16" rx="2" fill="#1B4F8A"/>
+    <rect x="-8" y="24" width="20" height="16" rx="2" fill="#1B4F8A"/>
+    <rect x="20" y="24" width="20" height="16" rx="2" fill="#1B4F8A"/>
+    <rect x="-28" y="52" width="56" height="36" rx="2" fill="#1B4F8A"/>
+  </g>
+  <defs>
+    <linearGradient id="schoolHeroGrad" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D6AB4"/>
+      <stop offset="0.55" stop-color="#1B4F8A"/>
+      <stop offset="1" stop-color="#143A6E"/>
+    </linearGradient>
+  </defs>
+</svg>
