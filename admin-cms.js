@@ -61,6 +61,7 @@
     var content = await window.db.getSiteContent();
     if (content) savedContent = content;
     populateFields();
+    initImageUploads();
     switchPage('home');
   }
 
@@ -113,6 +114,101 @@
       slotEl.classList.remove('has-img');
       preview.src = '';
     }
+  }
+
+  function uploadConfigError() {
+    if (window.mediaUpload && window.mediaUpload.isConfigured && window.mediaUpload.isConfigured()) return null;
+    return 'Media upload not configured. Copy uploads/media-config.example.js to uploads/media-config.js and set uploadUrl.';
+  }
+
+  function setSlotUploading(slotEl, on) {
+    if (!slotEl) return;
+    slotEl.classList.toggle('is-uploading', !!on);
+    var btn = slotEl.querySelector('.img-slot-upload-btn');
+    if (btn) {
+      btn.disabled = !!on;
+      btn.textContent = on ? 'Жүктелуде…' : 'Жүктеу';
+    }
+  }
+
+  function applyUploadedUrl(input, url) {
+    if (!input || !url) return;
+    input.value = url;
+    input.classList.add('changed');
+    dirty = true;
+    updateSlotPreview(input);
+  }
+
+  function uploadFileForSlot(file, slotEl, input) {
+    var err = uploadConfigError();
+    if (err) {
+      toast(err, 'err');
+      return Promise.resolve();
+    }
+    var slotId = input.dataset.slotId || (slotEl && slotEl.dataset.slot) || 'general';
+    var maxDim = window.mediaUpload.maxDimForSlot(slotId);
+    var folder = 'pages/' + slotId.replace(/[^a-z0-9/_-]+/gi, '-').toLowerCase();
+    setSlotUploading(slotEl, true);
+    return window.mediaUpload.upload(file, { folder: folder, maxDim: maxDim })
+      .then(function (result) {
+        applyUploadedUrl(input, result.url);
+        toast('Сурет жүктелді', 'ok');
+      })
+      .catch(function (e) {
+        toast(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
+      })
+      .then(function () {
+        setSlotUploading(slotEl, false);
+      });
+  }
+
+  function initImageUploads() {
+    document.querySelectorAll('.img-slot').forEach(function (slotEl) {
+      if (slotEl.dataset.uploadReady) return;
+      slotEl.dataset.uploadReady = '1';
+
+      var bar = slotEl.querySelector('.img-slot-bar');
+      var input = slotEl.querySelector('input[data-slot-field="u"]');
+      if (!bar || !input) return;
+
+      if (!bar.querySelector('.img-slot-upload-btn')) {
+        var row = document.createElement('div');
+        row.className = 'img-slot-upload-row';
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'img-slot-upload-btn';
+        btn.textContent = 'Жүктеу';
+        var fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = 'image/png,image/jpeg,image/webp,image/avif';
+        fileInput.hidden = true;
+        fileInput.className = 'img-slot-upload-file';
+        row.appendChild(btn);
+        row.appendChild(fileInput);
+        bar.insertBefore(row, input);
+
+        btn.addEventListener('click', function () { fileInput.click(); });
+        fileInput.addEventListener('change', function () {
+          var file = fileInput.files && fileInput.files[0];
+          fileInput.value = '';
+          if (file) uploadFileForSlot(file, slotEl, input);
+        });
+      }
+
+      slotEl.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        slotEl.classList.add('drag-over');
+      });
+      slotEl.addEventListener('dragleave', function () {
+        slotEl.classList.remove('drag-over');
+      });
+      slotEl.addEventListener('drop', function (e) {
+        e.preventDefault();
+        slotEl.classList.remove('drag-over');
+        var file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (file) uploadFileForSlot(file, slotEl, input);
+      });
+    });
   }
 
   function switchPage(pageId) {

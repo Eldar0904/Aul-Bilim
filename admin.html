@@ -12,7 +12,9 @@
 <script src="uploads/auth.js"></script>
 <script src="uploads/content-schema.js"></script>
 <script src="uploads/db.js"></script>
-<link rel="stylesheet" href="admin.css?v=2" />
+<script src="uploads/media-config.js"></script>
+<script src="uploads/media-upload.js"></script>
+<link rel="stylesheet" href="admin.css?v=3" />
 </head>
 <body>
 
@@ -368,7 +370,11 @@
                 </header>
                 <div style="padding:12px 16px;background:rgba(27,79,138,0.06);border-top:1px solid var(--line);">
                   <label class="se-label" for="school-field-image">Hero сурет URL</label>
-                  <input class="se-input" type="text" id="school-field-image" placeholder="assets/optimized/… немесе https://…">
+                  <div class="se-upload-row">
+                    <input class="se-input" type="text" id="school-field-image" placeholder="assets/optimized/… немесе https://…">
+                    <button type="button" class="se-upload-btn" id="school-hero-upload-btn">Жүктеу</button>
+                    <input type="file" id="school-hero-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
+                  </div>
                 </div>
               </div>
 
@@ -412,6 +418,10 @@
                     <textarea class="se-textarea" id="school-field-gallery" rows="5" placeholder="assets/optimized/school-photo-1.jpg
 assets/optimized/school-photo-2.jpg
 https://…"></textarea>
+                    <div class="se-upload-row" style="margin-top:10px;">
+                      <button type="button" class="se-upload-btn" id="school-gallery-upload-btn">Галереяға қосу</button>
+                      <input type="file" id="school-gallery-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" multiple hidden>
+                    </div>
                     <p class="se-hint">Carousel суреттері — әр URL жаңа жолдан. Алғашқы сурет Hero ретінде де пайдаланылады.</p>
                   </div>
                 </div>
@@ -450,7 +460,7 @@ https://…"></textarea>
 </div><!-- #app -->
 
 <div id="toast"></div>
-<script src="admin-cms.js?v=3"></script>
+<script src="admin-cms.js?v=4"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>
 <script src="assets/akmola-schools.js?v=9"></script>
@@ -459,6 +469,6 @@ https://…"></textarea>
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=2"></script>
+<script src="admin-schools.js?v=3"></script>
 </body>
 </html>

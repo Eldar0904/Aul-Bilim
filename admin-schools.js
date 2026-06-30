@@ -307,6 +307,135 @@ window.adminSchools = (function () {
     dirty = false;
   }
 
+  function schoolUploadFolder() {
+    if (!selectedId || !selectedRegionId) return 'schools/general';
+    return 'schools/' + selectedRegionId + '/' + selectedId;
+  }
+
+  function uploadConfigError() {
+    if (window.mediaUpload && window.mediaUpload.isConfigured && window.mediaUpload.isConfigured()) return null;
+    return 'Media upload not configured. Copy uploads/media-config.example.js to uploads/media-config.js.';
+  }
+
+  function setSchoolUploadBusy(btn, on) {
+    if (!btn) return;
+    btn.disabled = !!on;
+    if (btn.id === 'school-hero-upload-btn') {
+      btn.textContent = on ? 'Жүктелуде…' : 'Жүктеу';
+    } else if (btn.id === 'school-gallery-upload-btn') {
+      btn.textContent = on ? 'Жүктелуде…' : 'Галереяға қосу';
+    }
+  }
+
+  function notifySchoolUploadError(msg) {
+    var status = document.getElementById('school-editor-status');
+    if (status) status.textContent = msg;
+  }
+
+  function uploadSchoolHero(file) {
+    var err = uploadConfigError();
+    if (err) {
+      notifySchoolUploadError(err);
+      return;
+    }
+    if (!selectedId) {
+      notifySchoolUploadError('Алдымен мектеп таңдаңыз');
+      return;
+    }
+    var btn = document.getElementById('school-hero-upload-btn');
+    var imageInput = document.getElementById('school-field-image');
+    setSchoolUploadBusy(btn, true);
+    window.mediaUpload.upload(file, {
+      folder: schoolUploadFolder(),
+      maxDim: 1600
+    }).then(function (result) {
+      imageInput.value = result.url;
+      dirty = true;
+      window.dirty = true;
+      imageInput.dispatchEvent(new Event('input', { bubbles: true }));
+      notifySchoolUploadError('Hero сурет жүктелді — сақтауды ұмытпаңыз');
+    }).catch(function (e) {
+      notifySchoolUploadError(e.message || 'Жүктеу сәтсіз аяқталды');
+    }).then(function () {
+      setSchoolUploadBusy(btn, false);
+    });
+  }
+
+  function uploadSchoolGalleryFiles(fileList) {
+    var err = uploadConfigError();
+    if (err) {
+      notifySchoolUploadError(err);
+      return;
+    }
+    if (!selectedId) {
+      notifySchoolUploadError('Алдымен мектеп таңдаңыз');
+      return;
+    }
+    var files = Array.prototype.slice.call(fileList || []);
+    if (!files.length) return;
+
+    var btn = document.getElementById('school-gallery-upload-btn');
+    var galleryInput = document.getElementById('school-field-gallery');
+    var folder = schoolUploadFolder();
+    var urls = [];
+    var index = 0;
+
+    setSchoolUploadBusy(btn, true);
+
+    function next() {
+      if (index >= files.length) {
+        var existing = galleryInput.value.trim();
+        var merged = existing ? existing.split('\n').concat(urls) : urls;
+        galleryInput.value = merged.join('\n');
+        dirty = true;
+        window.dirty = true;
+        galleryInput.dispatchEvent(new Event('input', { bubbles: true }));
+        notifySchoolUploadError(urls.length + ' сурет галереяға қосылды — сақтауды ұмытпаңыз');
+        setSchoolUploadBusy(btn, false);
+        return;
+      }
+      window.mediaUpload.upload(files[index], { folder: folder, maxDim: 1600 })
+        .then(function (result) {
+          urls.push(result.url);
+          index += 1;
+          next();
+        })
+        .catch(function (e) {
+          notifySchoolUploadError(e.message || 'Жүктеу сәтсіз аяқталды');
+          setSchoolUploadBusy(btn, false);
+        });
+    }
+
+    next();
+  }
+
+  function bindSchoolUploads() {
+    var heroBtn = document.getElementById('school-hero-upload-btn');
+    var heroFile = document.getElementById('school-hero-upload-file');
+    var galBtn = document.getElementById('school-gallery-upload-btn');
+    var galFile = document.getElementById('school-gallery-upload-file');
+
+    if (heroBtn && heroFile && !heroBtn.dataset.bound) {
+      heroBtn.dataset.bound = '1';
+      heroBtn.addEventListener('click', function () { heroFile.click(); });
+      heroFile.addEventListener('change', function () {
+        var file = heroFile.files && heroFile.files[0];
+        heroFile.value = '';
+        if (file) uploadSchoolHero(file);
+      });
+    }
+
+    if (galBtn && galFile && !galBtn.dataset.bound) {
+      galBtn.dataset.bound = '1';
+      galBtn.addEventListener('click', function () { galFile.click(); });
+      galFile.addEventListener('change', function () {
+        var files = galFile.files;
+        galFile.value = '';
+        if (files && files.length) uploadSchoolGalleryFiles(files);
+      });
+    }
+  }
+
   function renderList() {
     var list = document.getElementById('school-list');
     if (!list) return;
@@ -360,6 +489,8 @@ window.adminSchools = (function () {
         refreshPreview();
       });
     });
+
+    bindSchoolUploads();
 
     var langBar = document.getElementById('admin-preview-lang');
     if (langBar && !langBar.dataset.bound) {
