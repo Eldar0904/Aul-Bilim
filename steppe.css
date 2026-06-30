@@ -1758,8 +1758,8 @@ body.map-schools-open .region-schools-block {
 
 /* ---------- ABOUT page ---------- */
 .about-mission {
-  padding-top: 12px;
-  padding-bottom: 28px;
+  padding-top: 8px;
+  padding-bottom: 16px;
 }
 .about-mission-in {
   max-width: min(960px, 100%);
@@ -1767,52 +1767,58 @@ body.map-schools-open .region-schools-block {
   text-align: center;
   background: #fff;
   border: 1px solid rgba(27, 79, 138, 0.1);
-  border-radius: 24px;
-  padding: clamp(28px, 4vw, 40px) clamp(22px, 4vw, 36px);
-  box-shadow: 0 18px 48px -28px rgba(27, 79, 138, 0.22);
+  border-radius: 20px;
+  padding: clamp(18px, 2.5vw, 26px) clamp(18px, 3vw, 28px);
+  box-shadow: 0 14px 40px -28px rgba(27, 79, 138, 0.2);
 }
 .about-mission-title {
-  font-size: clamp(32px, 4.8vw, 44px);
+  font-size: clamp(26px, 3.5vw, 34px);
   letter-spacing: -0.03em;
   line-height: 1.1;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 .about-mission-title::after {
   content: "";
   display: block;
-  width: 64px;
-  height: 5px;
+  width: 52px;
+  height: 4px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent-deep), var(--accent-soft));
-  margin: 16px auto 0;
+  margin: 10px auto 0;
 }
 .about-mission-goals {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 18px;
+  gap: 12px 28px;
   text-align: left;
-  max-width: 42em;
+  max-width: 52em;
   margin-inline: auto;
+}
+@media (min-width: 720px) {
+  .about-mission-goals {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+  }
 }
 .about-mission-goal {
   position: relative;
-  padding-left: 18px;
+  padding-left: 14px;
   border-left: 3px solid var(--accent-soft);
 }
 .about-mission-goal-title {
   display: block;
   font-family: var(--fh);
-  font-size: clamp(17px, 2vw, 19px);
+  font-size: clamp(15px, 1.6vw, 16px);
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .about-mission-goal-text {
-  font-size: clamp(16px, 1.9vw, 18px);
-  line-height: 1.65;
+  font-size: clamp(14px, 1.5vw, 15px);
+  line-height: 1.55;
   font-weight: 500;
   color: var(--body);
   margin: 0;
@@ -1820,7 +1826,7 @@ body.map-schools-open .region-schools-block {
 
 .about-coop {
   padding-top: 0;
-  padding-bottom: 56px;
+  padding-bottom: 48px;
 }
 .coop-interactive {
   max-width: 1120px;
@@ -1838,25 +1844,18 @@ body.map-schools-open .region-schools-block {
 }
 .coop-diagram-head {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .coop-diagram-head-main {
   max-width: 36em;
   margin: 0 auto;
 }
-.coop-section-title {
-  font-size: clamp(1.5rem, 3.2vw, 2rem);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin: 10px 0 12px;
-  color: var(--ink);
-}
 .coop-section-lead {
-  font-size: clamp(15px, 1.8vw, 17px);
-  line-height: 1.6;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.55;
   color: var(--body);
-  margin: 0;
+  margin: 8px 0 0;
 }
 .coop-diagram-head .kicker { margin-bottom: 0; }
 
