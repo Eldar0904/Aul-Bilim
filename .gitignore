@@ -1,6 +1,5 @@
 node_modules/
 tmp_modules/
-uploads/media-config.js
 
 # Raw local media uploads stay out of Git. Commit only web-ready assets.
 assets/photos/
