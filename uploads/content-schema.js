@@ -15,7 +15,7 @@ window.AUL_BILIM_SCHEMA = {
     stories: "stories/items",
     programs: "programs/items",
     enquiries: "enquiries/items",
-    schools: "schools/items"
+    schools: "schools"
   },
   mediaAsset: {
     id: "string",

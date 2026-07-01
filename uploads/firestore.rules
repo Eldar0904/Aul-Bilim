@@ -32,7 +32,7 @@ service cloud.firestore {
       allow read, update, delete: if isSignedIn();
     }
 
-    match /schools/items/{schoolId} {
+    match /schools/{schoolId} {
       allow read: if true;
       allow write: if isSignedIn();
     }

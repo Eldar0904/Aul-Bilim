@@ -4,7 +4,7 @@ window.db = (function () {
   var LOCAL_CONTENT = 'aulbilim_content_draft';
   var LOCAL_ENQUIRIES = 'aulbilim_enquiries';
   var LOCAL_SCHOOLS = 'aulbilim_schools';
-  var LEGACY_R2_BASE = 'https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abc.webp';
+  var LEGACY_R2_BASE = 'https://pub-fab6b6cfe128465294dac297e02ccd05.r2.dev';
   var MEDIA_WORKER_BASE = 'https://aulbilim-media-api.aulbilim.workers.dev';
 
   function normalizeMediaUrl(url) {
@@ -45,9 +45,23 @@ window.db = (function () {
     return documentUrl(path);
   }
 
-  function authHeaders() {
+  function parseApiError(text) {
+    try {
+      var j = JSON.parse(text);
+      return (j.error && j.error.message) ? j.error.message : text;
+    } catch (e) {
+      return text;
+    }
+  }
+
+  async function authHeaders() {
     var headers = { 'Content-Type': 'application/json' };
-    var token = window.cmsAuth && window.cmsAuth.getIdToken && window.cmsAuth.getIdToken();
+    var token = null;
+    if (window.cmsAuth && window.cmsAuth.ensureIdToken) {
+      token = await window.cmsAuth.ensureIdToken();
+    } else if (window.cmsAuth && window.cmsAuth.getIdToken) {
+      token = window.cmsAuth.getIdToken();
+    }
     if (token) headers.Authorization = 'Bearer ' + token;
     return headers;
   }
@@ -115,10 +129,10 @@ window.db = (function () {
     }
     var res = await fetch(collectionUrl('enquiries/items'), {
       method: 'POST',
-      headers: authHeaders(),
+      headers: await authHeaders(),
       body: JSON.stringify(toDocument(payload))
     });
-    if (!res.ok) return { success: false, error: await res.text() };
+    if (!res.ok) return { success: false, error: parseApiError(await res.text()) };
     return { success: true };
   }
 
@@ -126,7 +140,7 @@ window.db = (function () {
     if (!hasBackend()) {
       try { return rewriteMediaUrlsDeep(JSON.parse(localStorage.getItem(LOCAL_CONTENT) || 'null')); } catch (e) { return null; }
     }
-    var res = await fetch(documentUrl('site/content'), { headers: authHeaders() });
+    var res = await fetch(documentUrl('site/content'), { headers: await authHeaders() });
     if (!res.ok) return null;
     return rewriteMediaUrlsDeep(fromDocument(await res.json()));
   }
@@ -139,10 +153,10 @@ window.db = (function () {
     }
     var res = await fetch(documentUrl('site/content'), {
       method: 'PATCH',
-      headers: authHeaders(),
+      headers: await authHeaders(),
       body: JSON.stringify(toDocument(payload))
     });
-    if (!res.ok) return { success: false, error: await res.text() };
+    if (!res.ok) return { success: false, error: parseApiError(await res.text()) };
     return { success: true };
   }
 
@@ -177,7 +191,7 @@ window.db = (function () {
       var local = localSchoolsMap();
       return rewriteMediaUrlsDeep(local[schoolId] || null);
     }
-    var res = await fetch(documentUrl('schools/items/' + encodeURIComponent(schoolId)), { headers: authHeaders() });
+    var res = await fetch(documentUrl('schools/' + encodeURIComponent(schoolId)), { headers: await authHeaders() });
     if (res.status === 404) return null;
     if (!res.ok) return null;
     return rewriteMediaUrlsDeep(fromDocument(await res.json()));
@@ -195,21 +209,25 @@ window.db = (function () {
       setLocalSchoolsMap(local);
       return { success: true, mode: 'local' };
     }
-    var path = 'schools/items/' + encodeURIComponent(schoolId);
+    var path = 'schools/' + encodeURIComponent(schoolId);
     var body = JSON.stringify(toDocument(payload));
+    var headers = await authHeaders();
+    if (!headers.Authorization) {
+      return { success: false, error: 'Admin login expired. Log out and sign in again.' };
+    }
     var res = await fetch(documentUrl(path), {
       method: 'PATCH',
-      headers: authHeaders(),
+      headers: headers,
       body: body
     });
     if (res.status === 404) {
-      res = await fetch(collectionUrl('schools/items') + '?documentId=' + encodeURIComponent(schoolId), {
+      res = await fetch(collectionUrl('schools') + '?documentId=' + encodeURIComponent(schoolId), {
         method: 'POST',
-        headers: authHeaders(),
+        headers: headers,
         body: body
       });
     }
-    if (!res.ok) return { success: false, error: await res.text() };
+    if (!res.ok) return { success: false, error: parseApiError(await res.text()) };
     return { success: true };
   }
 

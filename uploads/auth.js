@@ -53,16 +53,44 @@
     return Promise.resolve();
   }
 
+  async function refreshSession(session) {
+    var cfg = config();
+    if (!cfg || !cfg.apiKey || !session || !session.refreshToken) return null;
+    var res = await fetch('https://securetoken.googleapis.com/v1/token?key=' + encodeURIComponent(cfg.apiKey), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'grant_type=refresh_token&refresh_token=' + encodeURIComponent(session.refreshToken)
+    });
+    var data = await res.json();
+    if (!res.ok) return null;
+    var next = {
+      email: session.email,
+      idToken: data.id_token,
+      refreshToken: data.refresh_token || session.refreshToken,
+      expiresAt: Date.now() + (Number(data.expires_in || 3600) * 1000)
+    };
+    setSession(next);
+    return next;
+  }
+
+  async function ensureIdToken() {
+    var session = getSession();
+    if (!session || !session.idToken) return null;
+    if (session.expiresAt > Date.now() + 5 * 60 * 1000) return session.idToken;
+    session = await refreshSession(session);
+    return session ? session.idToken : null;
+  }
+
   function requireAuth() {
     var session = getSession();
-    if (!session || !session.idToken || session.expiresAt < Date.now()) return null;
+    if (!session || !session.idToken) return null;
     document.body.classList.add('logged-in');
     return session;
   }
 
   function getIdToken() {
-    var session = requireAuth();
-    return session ? session.idToken : null;
+    var session = getSession();
+    return session && session.idToken ? session.idToken : null;
   }
 
   function onAuthStateChanged(fn) {
@@ -70,5 +98,5 @@
     fn(requireAuth());
   }
 
-  window.cmsAuth = { login: login, logout: logout, requireAuth: requireAuth, getIdToken: getIdToken, onAuthStateChanged: onAuthStateChanged };
+  window.cmsAuth = { login: login, logout: logout, requireAuth: requireAuth, getIdToken: getIdToken, ensureIdToken: ensureIdToken, onAuthStateChanged: onAuthStateChanged };
 })();
