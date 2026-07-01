@@ -722,79 +722,9 @@ body.map-schools-open .region-schools-block {
 .school-card-link { color: var(--primary); font-size: 18px; line-height: 1; flex: none; }
 
 /* ============ School detail page ============ */
-.school-hero {
-  position: relative;
-  min-height: clamp(480px, 68vh, 780px);
-  overflow: hidden;
-  background: #143a6e;
+.school-hero-panel {
+  padding: 28px 0 72px;
 }
-.school-hero-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.school-hero-photo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.school-hero-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(160deg, #3d6fa8 0%, #1b4f8a 45%, #143a6e 100%);
-}
-.school-hero-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-.school-hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(12,22,36,0.08) 0%, rgba(12,22,36,0.55) 72%, rgba(12,22,36,0.78) 100%);
-  pointer-events: none;
-}
-.school-hero--placeholder .school-hero-overlay {
-  background: linear-gradient(180deg, rgba(12,22,36,0.04) 0%, rgba(12,22,36,0.38) 68%, rgba(12,22,36,0.62) 100%);
-}
-.school-hero-content {
-  position: relative;
-  z-index: 2;
-  min-height: clamp(480px, 68vh, 780px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 44px;
-  color: #fff;
-}
-.school-hero-loc {
-  font-family: var(--fh);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin: 0 0 10px;
-  color: #fff;
-  opacity: 0.92;
-}
-.school-hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  max-width: 16ch;
-  margin: 0;
-  color: #fff;
-}
-.school-page-body { padding: 28px 0 72px; }
 .school-page-nav { margin-bottom: 28px; }
 .school-page-back {
   display: inline-flex;
@@ -807,38 +737,21 @@ body.map-schools-open .region-schools-block {
   text-decoration: none;
 }
 .school-page-back:hover { text-decoration: underline; }
-.school-page-intro { max-width: 720px; margin-bottom: 36px; }
-.school-page-region {
-  font-family: var(--fh);
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--primary);
-  margin: 0 0 12px;
-}
-.school-page-desc {
-  font-size: 17px;
-  line-height: 1.65;
-  margin: 0;
-}
-.school-page-teachers {
-  margin: 16px 0 0;
-  font-family: var(--fh);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--primary);
-}
-.school-media-split {
+
+.school-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   align-items: start;
 }
-.school-carousel-col {
+.school-hero-left {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
+  min-width: 0;
 }
-.school-carousel {
+
+.school-map-card {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -847,6 +760,118 @@ body.map-schools-open .region-schools-block {
   background: var(--cream-deep);
   border: 1px solid var(--line);
 }
+.school-map-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.school-map-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #3d6fa8 0%, #1b4f8a 45%, #143a6e 100%);
+}
+.school-map-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.85;
+}
+
+.school-hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.school-page-region {
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--primary);
+  margin: 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.school-hero-meta h1 {
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--ink);
+}
+.school-hero-loc {
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  color: var(--body);
+}
+.school-page-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+  color: var(--body);
+}
+.school-page-teachers {
+  margin: 4px 0 0;
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.school-hero-media-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.school-media-card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.school-media-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+}
+.school-media-card .school-carousel-col {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.school-media-card .school-carousel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+.school-media-card .school-video-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border: none;
+  border-radius: 0;
+}
+
 .school-carousel-track {
   position: absolute;
   inset: 0;
@@ -865,7 +890,7 @@ body.map-schools-open .region-schools-block {
 .school-carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
   background: var(--cream-deep);
@@ -898,18 +923,7 @@ body.map-schools-open .region-schools-block {
   border-color: rgba(27,79,138,0.28);
 }
 .school-carousel-arrow:active { transform: scale(0.96); }
-.school-video-col {
-  min-width: 0;
-}
-.school-video-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #0f1724;
-  border: 1px solid var(--line);
-}
+
 .school-video-frame iframe {
   position: absolute;
   inset: 0;
@@ -941,6 +955,7 @@ body.map-schools-open .region-schools-block {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
 .school-page-empty {
   padding: 96px 0 120px;
   text-align: center;
@@ -949,17 +964,10 @@ body.map-schools-open .region-schools-block {
 .school-page-empty p { margin-bottom: 24px; color: var(--body); }
 
 @media (max-width: 900px) {
-  .school-media-split {
+  .school-hero-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-}
-@media (max-width: 560px) {
-  .school-hero,
-  .school-hero-content {
-    min-height: clamp(380px, 58vh, 560px);
-  }
-  .school-hero-content { padding-bottom: 28px; }
 }
 
 .schools-empty {

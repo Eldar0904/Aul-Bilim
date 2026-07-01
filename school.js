@@ -34,10 +34,9 @@
   function mergeSchoolOverride(base, override) {
     if (!override) return base;
     var merged = Object.assign({}, base);
-    if (typeof override.image === 'string') merged.image = override.image;
+    if (typeof override.mapImage === 'string') merged.mapImage = override.mapImage;
     if (Array.isArray(override.gallery)) merged.gallery = override.gallery.slice();
     if (override.youtube) merged.youtube = override.youtube;
-    if (override.mapImage) merged.mapImage = override.mapImage;
     if (override.desc) {
       merged.desc = Object.assign({}, base.desc || {});
       if (override.desc.kk) merged.desc.kk = override.desc.kk;
@@ -70,10 +69,6 @@
     if (!school) return null;
 
     return { region: region, school: school };
-  }
-
-  function heroImage(s) {
-    return s.image || '';
   }
 
   function carouselImages(s) {
@@ -177,6 +172,7 @@
   }
 
   function renderVideo(frame, school) {
+    if (!frame) return;
     var id = youtubeEmbedId(school.youtube);
     if (id) {
       frame.innerHTML =
@@ -194,19 +190,19 @@
     frame.classList.add('is-placeholder');
   }
 
-  function renderHero(school, name) {
-    var hero = heroImage(school);
-    var heroEl = document.getElementById('school-hero');
-    var imgEl = document.getElementById('school-hero-img');
-    var phEl = document.getElementById('school-hero-placeholder');
+  function renderMapCard(school, name) {
+    var mapUrl = school.mapImage || '';
+    var card = document.getElementById('school-map-card');
+    var imgEl = document.getElementById('school-map-img');
+    var phEl = document.getElementById('school-map-placeholder');
 
-    if (heroEl) {
-      heroEl.classList.toggle('school-hero--photo', !!hero);
-      heroEl.classList.toggle('school-hero--placeholder', !hero);
+    if (card) {
+      card.classList.toggle('school-map-card--photo', !!mapUrl);
+      card.classList.toggle('school-map-card--placeholder', !mapUrl);
     }
     if (imgEl) {
-      if (hero) {
-        imgEl.src = hero;
+      if (mapUrl) {
+        imgEl.src = mapUrl;
         imgEl.alt = name;
         imgEl.hidden = false;
       } else {
@@ -215,7 +211,7 @@
         imgEl.hidden = true;
       }
     }
-    if (phEl) phEl.hidden = !!hero;
+    if (phEl) phEl.hidden = !!mapUrl;
   }
 
   function renderPage(result) {
@@ -251,17 +247,19 @@
       pageTitle.setAttribute('data-en', (school.en || school.kk) + ' — Aul Bilim');
     }
 
-    if (titleEl) titleEl.textContent = name;
-    if (locEl) locEl.textContent = bi(school.location.kk, school.location.en);
-    renderHero(school, name);
+    renderMapCard(school, name);
 
+    if (titleEl) titleEl.textContent = name;
+    if (locEl && school.location) {
+      locEl.textContent = bi(school.location.kk, school.location.en);
+    }
     if (backLink) {
       backLink.href = 'index.html#region-' + region.id + '-schools';
     }
     if (regionEl) {
       regionEl.textContent = bi(region.kk, region.en);
     }
-    if (descEl) {
+    if (descEl && school.desc) {
       descEl.textContent = bi(school.desc.kk, school.desc.en);
     }
 

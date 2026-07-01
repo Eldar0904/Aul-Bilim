@@ -51,11 +51,7 @@ window.adminSchools = (function () {
   }
 
   function hasMedia(school) {
-    return !!(school.image || (school.gallery && school.gallery.length) || school.youtube);
-  }
-
-  function heroImage(s) {
-    return s.image || '';
+    return !!(school.mapImage || (school.gallery && school.gallery.length) || school.youtube);
   }
 
   function carouselImages(s) {
@@ -78,7 +74,7 @@ window.adminSchools = (function () {
     var teachers = teachersRaw.trim() === '' ? null : Number(teachersRaw);
     return {
       regionId: selectedRegionId,
-      image: (document.getElementById('school-field-image') || {}).value.trim(),
+      mapImage: (document.getElementById('school-field-map-image') || {}).value.trim(),
       gallery: gallery,
       youtube: (document.getElementById('school-field-youtube') || {}).value.trim(),
       desc: {
@@ -93,7 +89,7 @@ window.adminSchools = (function () {
     var base = entry.base;
     var o = override || {};
     var merged = Object.assign({}, base);
-    if (typeof o.image === 'string') merged.image = o.image;
+    if (typeof o.mapImage === 'string') merged.mapImage = o.mapImage;
     if (Array.isArray(o.gallery)) merged.gallery = o.gallery.slice();
     if (o.youtube) merged.youtube = o.youtube;
     if (o.desc) {
@@ -109,7 +105,7 @@ window.adminSchools = (function () {
     var base = entry.base;
     var f = formValues();
     return {
-      image: f.image,
+      mapImage: f.mapImage,
       gallery: f.gallery,
       youtube: f.youtube || base.youtube || '',
       desc: {
@@ -219,15 +215,35 @@ window.adminSchools = (function () {
     frame.classList.add('is-placeholder');
   }
 
+  function renderMapCard(school, entry) {
+    var mapUrl = school.mapImage || '';
+    var card = document.getElementById('admin-school-map-card');
+    var imgEl = document.getElementById('admin-school-map-img');
+    var phEl = document.getElementById('admin-school-map-placeholder');
+
+    if (card) {
+      card.classList.toggle('school-map-card--photo', !!mapUrl);
+      card.classList.toggle('school-map-card--placeholder', !mapUrl);
+    }
+    if (imgEl) {
+      if (mapUrl) {
+        imgEl.src = mapUrl;
+        imgEl.alt = entry.kk;
+        imgEl.hidden = false;
+      } else {
+        imgEl.removeAttribute('src');
+        imgEl.alt = '';
+        imgEl.hidden = true;
+      }
+    }
+    if (phEl) phEl.hidden = !!mapUrl;
+  }
+
   function renderLivePage(entry, school) {
     var region = REGIONS.find(function (r) { return r.id === entry.regionId; });
-    var hero = heroImage(school);
     var images = carouselImages(school);
     var lang = previewLang;
 
-    var heroImg = document.getElementById('admin-school-hero-img');
-    var heroPh = document.getElementById('admin-school-hero-placeholder');
-    var heroWrap = document.getElementById('admin-school-hero');
     var heroLoc = document.getElementById('admin-school-hero-loc');
     var heroTitle = document.getElementById('admin-school-hero-title');
     var regionEl = document.getElementById('admin-school-region');
@@ -235,26 +251,12 @@ window.adminSchools = (function () {
     var teachersEl = document.getElementById('admin-school-teachers');
     var videoFrame = document.getElementById('admin-school-video-frame');
 
+    renderMapCard(school, entry);
+
     if (heroTitle) heroTitle.textContent = lang === 'en' ? (entry.en || entry.kk) : entry.kk;
     if (heroLoc && school.location) {
       heroLoc.textContent = lang === 'en' ? school.location.en : school.location.kk;
     }
-    if (heroWrap) {
-      heroWrap.classList.toggle('school-hero--photo', !!hero);
-      heroWrap.classList.toggle('school-hero--placeholder', !hero);
-    }
-    if (heroImg) {
-      if (hero) {
-        heroImg.src = hero;
-        heroImg.alt = entry.kk;
-        heroImg.hidden = false;
-      } else {
-        heroImg.removeAttribute('src');
-        heroImg.alt = '';
-        heroImg.hidden = true;
-      }
-    }
-    if (heroPh) heroPh.hidden = !!hero;
     if (regionEl && region) {
       regionEl.textContent = lang === 'en' ? region.en : region.kk;
     }
@@ -311,7 +313,7 @@ window.adminSchools = (function () {
     }
 
     var merged = mergedSchool(entry, override);
-    document.getElementById('school-field-image').value = merged.image || '';
+    document.getElementById('school-field-map-image').value = merged.mapImage || '';
     document.getElementById('school-field-gallery').value = (merged.gallery || []).join('\n');
     document.getElementById('school-field-youtube').value = merged.youtube || '';
     document.getElementById('school-field-desc-kk').value = (merged.desc && merged.desc.kk) || '';
@@ -352,7 +354,7 @@ window.adminSchools = (function () {
   }
 
   function markSchoolSaveButtonsSaved() {
-    ['school-hero-save-btn', 'school-gallery-save-btn'].forEach(function (id) {
+    ['school-map-save-btn', 'school-gallery-save-btn'].forEach(function (id) {
       var btn = document.getElementById(id);
       if (!btn) return;
       btn.classList.add('is-saved');
@@ -385,8 +387,8 @@ window.adminSchools = (function () {
   function setSchoolUploadBusy(btn, on) {
     if (!btn) return;
     btn.disabled = !!on;
-    if (btn.id === 'school-hero-upload-btn') {
-      btn.textContent = on ? 'Жүктелуде…' : 'Суретті жүктеу';
+    if (btn.id === 'school-map-upload-btn') {
+      btn.textContent = on ? 'Жүктелуде…' : 'Карта жүктеу';
     } else if (btn.id === 'school-gallery-upload-btn') {
       btn.textContent = on ? 'Жүктелуде…' : 'Галереяға қосу';
     }
@@ -433,7 +435,7 @@ window.adminSchools = (function () {
     setEditorStatus('Галерея тазартылды — сақтауды ұмытпаңыз', 'ok');
   }
 
-  function uploadSchoolHero(file) {
+  function uploadSchoolMap(file) {
     var err = uploadConfigError();
     if (err) {
       setEditorStatus(err, 'err');
@@ -443,19 +445,19 @@ window.adminSchools = (function () {
       setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
       return;
     }
-    var btn = document.getElementById('school-hero-upload-btn');
-    var imageInput = document.getElementById('school-field-image');
+    var btn = document.getElementById('school-map-upload-btn');
+    var mapInput = document.getElementById('school-field-map-image');
     setSchoolUploadBusy(btn, true);
     window.mediaUpload.upload(file, {
-      folder: schoolUploadFolder(),
+      folder: schoolUploadFolder() + '/map',
       maxDim: 1600
     }).then(function (result) {
-      imageInput.value = result.url;
+      mapInput.value = result.url;
       dirty = true;
       window.dirty = true;
-      imageInput.dispatchEvent(new Event('input', { bubbles: true }));
-      setEditorStatus('Hero сурет жүктелді — «Сақтау» басыңыз', 'ok');
-      if (window.adminToast) window.adminToast('Hero сурет жүктелді', 'ok');
+      mapInput.dispatchEvent(new Event('input', { bubbles: true }));
+      setEditorStatus('Карта суреті жүктелді — «Сақтау» басыңыз', 'ok');
+      if (window.adminToast) window.adminToast('Карта суреті жүктелді', 'ok');
     }).catch(function (e) {
       setEditorStatus(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
       if (window.adminToast) window.adminToast(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
@@ -551,20 +553,20 @@ window.adminSchools = (function () {
   }
 
   function bindSchoolUploads() {
-    var heroBtn = document.getElementById('school-hero-upload-btn');
-    var heroFile = document.getElementById('school-hero-upload-file');
+    var mapBtn = document.getElementById('school-map-upload-btn');
+    var mapFile = document.getElementById('school-map-upload-file');
     var galBtn = document.getElementById('school-gallery-upload-btn');
     var galFile = document.getElementById('school-gallery-upload-file');
     var galRemove = document.getElementById('school-gallery-remove-btn');
     var galClear = document.getElementById('school-gallery-clear-btn');
 
-    if (heroBtn && heroFile && !heroBtn.dataset.bound) {
-      heroBtn.dataset.bound = '1';
-      heroBtn.addEventListener('click', function () { heroFile.click(); });
-      heroFile.addEventListener('change', function () {
-        var file = heroFile.files && heroFile.files[0];
-        heroFile.value = '';
-        if (file) uploadSchoolHero(file);
+    if (mapBtn && mapFile && !mapBtn.dataset.bound) {
+      mapBtn.dataset.bound = '1';
+      mapBtn.addEventListener('click', function () { mapFile.click(); });
+      mapFile.addEventListener('change', function () {
+        var file = mapFile.files && mapFile.files[0];
+        mapFile.value = '';
+        if (file) uploadSchoolMap(file);
       });
     }
 
@@ -588,14 +590,14 @@ window.adminSchools = (function () {
       galClear.addEventListener('click', clearGalleryImages);
     }
 
-    bindImageDropZone(document.getElementById('school-hero-drop-zone'), function (files) {
-      uploadSchoolHero(files[0]);
+    bindImageDropZone(document.getElementById('school-map-drop-zone'), function (files) {
+      uploadSchoolMap(files[0]);
     });
     bindImageDropZone(document.getElementById('school-gallery-drop-zone'), function (files) {
       uploadSchoolGalleryFiles(files);
     });
 
-    ['school-hero-save-btn', 'school-gallery-save-btn'].forEach(function (id) {
+    ['school-map-save-btn', 'school-gallery-save-btn'].forEach(function (id) {
       var saveBtn = document.getElementById(id);
       if (!saveBtn || saveBtn.dataset.bound) return;
       saveBtn.dataset.bound = '1';
@@ -647,7 +649,7 @@ window.adminSchools = (function () {
   }
 
   function bindEditorInputs() {
-    ['school-field-image', 'school-field-gallery', 'school-field-youtube',
+    ['school-field-map-image', 'school-field-gallery', 'school-field-youtube',
       'school-field-desc-kk', 'school-field-desc-en', 'school-field-teachers'].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el || el.dataset.bound) return;

@@ -366,14 +366,63 @@ aside#sidebar {
 }
 .se-status { font-size: 11.5px; color: var(--primary); font-family: var(--fh); font-weight: 700; padding: 12px 20px 0; min-height: 1.2em; }
 
-/* School hero preview wrapper */
-.se-hero-wrap {
-  position: relative; margin: 16px 16px 0; border-radius: 16px; overflow: hidden;
-  background: var(--ink);
+/* School editor — 2-column preview (mirrors public school.html) */
+#school-editor { padding: 0 20px 32px; }
+.admin-school-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
 }
-/* Reuse school-hero styles from steppe.css */
-.se-hero-wrap .school-hero { position: relative; min-height: 220px; }
-.se-hero-wrap .school-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+.admin-school-left,
+.admin-school-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.school-drop-zone--map {
+  margin: 0;
+  border-radius: 18px;
+  border: 2px dashed transparent;
+  background: transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.school-drop-zone--map .school-map-card {
+  border-radius: 16px;
+}
+.school-drop-zone--map.drag-over {
+  border-color: var(--accent);
+  background: rgba(242, 164, 19, 0.1);
+}
+.school-drop-zone--map.drag-over::after {
+  border-radius: 16px;
+}
+.admin-school-left .se-upload-row {
+  margin: 0;
+  padding: 0 2px;
+}
+.admin-school-meta-preview {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.admin-school-fields {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.admin-school-right .school-media-card-wrap {
+  margin: 0;
+}
+.admin-youtube-edit {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
 
 /* School editor fields */
 .se-block { background: #fff; border-radius: 14px; padding: 16px 18px; }
@@ -403,6 +452,11 @@ aside#sidebar {
 #toast.ok { background: #1a7a45; }
 
 .stat-cell input.sl-en { margin-top: 4px; font-size: 10.5px; opacity: 0.85; }
-@media (max-width:1100px){.prog-cards,.story-grid{grid-template-columns:1fr 1fr;}.car-grid{grid-template-columns:repeat(3,1fr);}.stat-editor{grid-template-columns:1fr 1fr;}}
+@media (max-width:1100px){
+  .prog-cards,.story-grid{grid-template-columns:1fr 1fr;}
+  .car-grid{grid-template-columns:repeat(3,1fr);}
+  .stat-editor{grid-template-columns:1fr 1fr;}
+  .admin-school-hero-grid{grid-template-columns:1fr;}
+}
 @media (max-width:700px){.tf-pair,.se-row2{grid-template-columns:1fr;}.prog-cards,.story-grid,.team-grid,.car-grid{grid-template-columns:1fr;}.stat-editor{grid-template-columns:1fr;}}
 

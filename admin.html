@@ -7,14 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=55" />
+<link rel="stylesheet" href="steppe.css?v=63" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js?v=3"></script>
 <script src="uploads/content-schema.js"></script>
 <script src="uploads/db.js?v=3"></script>
 <script src="uploads/media-config.js"></script>
 <script src="uploads/media-upload.js?v=3"></script>
-<link rel="stylesheet" href="admin.css?v=7" />
+<link rel="stylesheet" href="admin.css?v=9" />
 </head>
 <body>
 
@@ -356,78 +356,69 @@
           <div class="schools-editor">
             <div id="school-editor-empty">
               <p>Тізімнен мектепті таңдаңыз.</p>
-              <p>Hero сурет, галерея, YouTube бейне және сипаттаманы жүктеу/өңдеу арқылы толтырыңыз.</p>
+              <p>Карта суреті, галерея, YouTube бейне және сипаттаманы жүктеу/өңдеу арқылы толтырыңыз.</p>
             </div>
 
             <div id="school-editor">
               <p class="se-status" id="school-editor-status"></p>
+              <div class="admin-preview-lang" id="admin-preview-lang">
+                <button type="button" data-admin-lang="kk" class="is-on">ҚАЗ</button>
+                <button type="button" data-admin-lang="en">ENG</button>
+              </div>
 
-              <!-- Hero image preview -->
-              <div class="school-drop-zone" id="school-hero-drop-zone">
-                <header class="school-hero school-hero--placeholder" id="admin-school-hero" style="min-height:200px;">
-                  <div class="school-hero-media">
-                    <img id="admin-school-hero-img" class="school-hero-photo" alt="" hidden />
-                    <div class="school-hero-placeholder" id="admin-school-hero-placeholder" aria-hidden="true">
-                      <img src="assets/school-hero-placeholder.svg" alt="" />
-                      <p class="school-drop-hint">Суретті осы жерге тастаңыз<span>немесе «Суретті жүктеу» басыңыз</span></p>
+              <div class="admin-school-hero-grid">
+                <div class="admin-school-left">
+                  <div class="school-drop-zone school-drop-zone--map" id="school-map-drop-zone">
+                    <div class="school-map-card school-map-card--placeholder" id="admin-school-map-card">
+                      <img id="admin-school-map-img" class="school-map-photo" alt="" hidden />
+                      <div class="school-map-placeholder" id="admin-school-map-placeholder" aria-hidden="true">
+                        <img src="assets/school-hero-placeholder.svg" alt="" />
+                        <p class="school-drop-hint school-drop-hint--gallery">Суретті осы жерге тастаңыз<span>немесе «Карта жүктеу» басыңыз</span></p>
+                      </div>
                     </div>
                   </div>
-                  <div class="school-hero-overlay"></div>
-                  <div class="school-hero-content wrap">
-                    <p class="school-hero-loc" id="admin-school-hero-loc"></p>
-                    <h1 id="admin-school-hero-title" style="font-size:clamp(18px,2.5vw,28px);"></h1>
-                  </div>
-                </header>
-                <div style="padding:12px 16px;background:rgba(27,79,138,0.06);border-top:1px solid var(--line);">
-                  <p class="se-label">Hero сурет</p>
                   <div class="se-upload-row">
-                    <button type="button" class="se-upload-btn" id="school-hero-upload-btn">Суретті жүктеу</button>
-                    <button type="button" class="se-save-btn" id="school-hero-save-btn">Сақтау</button>
-                    <input type="file" id="school-hero-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
-                    <input type="text" id="school-field-image" class="admin-store-field" tabindex="-1" aria-hidden="true">
+                    <button type="button" class="se-upload-btn" id="school-map-upload-btn">Карта жүктеу</button>
+                    <button type="button" class="se-save-btn" id="school-map-save-btn">Сақтау</button>
+                    <input type="file" id="school-map-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
+                    <input type="text" id="school-field-map-image" class="admin-store-field" tabindex="-1" aria-hidden="true">
                   </div>
-                  <p class="se-hint">Жүктегеннен кейін «Сақтау» басыңыз — сайтта көрінуі үшін.</p>
-                </div>
-              </div>
 
-              <!-- Description -->
-              <div style="margin:14px 16px 0;background:#fff;border-radius:14px;padding:16px 18px;">
-                <div class="admin-preview-lang" id="admin-preview-lang">
-                  <button type="button" data-admin-lang="kk" class="is-on">ҚАЗ</button>
-                  <button type="button" data-admin-lang="en">ENG</button>
-                </div>
-                <p class="school-page-region" id="admin-school-region" style="font-family:var(--fh);font-size:12px;font-weight:700;color:var(--accent-deep);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;"></p>
-                <p class="school-page-desc" id="admin-school-desc" style="font-size:13.5px;color:var(--body);margin-bottom:10px;"></p>
-                <p class="school-page-teachers" id="admin-school-teachers" hidden="" style="font-size:13px;color:var(--primary);font-family:var(--fh);font-weight:700;"></p>
-                <div class="se-row2" style="margin-top:14px;">
-                  <div><label class="se-label" for="school-field-desc-kk">Сипаттама — Қазақша</label><textarea class="se-textarea" id="school-field-desc-kk" rows="4"></textarea></div>
-                  <div><label class="se-label" for="school-field-desc-en">Description — English</label><textarea class="se-textarea" id="school-field-desc-en" rows="4"></textarea></div>
-                </div>
-                <div style="margin-top:12px;">
-                  <label class="se-label" for="school-field-teachers">Мұғалімдер саны</label>
-                  <input class="se-input" type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" style="width:160px;">
-                </div>
-              </div>
+                  <div class="school-hero-meta admin-school-meta-preview">
+                    <p class="school-page-region" id="admin-school-region"></p>
+                    <h1 id="admin-school-hero-title"></h1>
+                    <p class="school-hero-loc" id="admin-school-hero-loc"></p>
+                    <p class="school-page-desc" id="admin-school-desc"></p>
+                    <p class="school-page-teachers" id="admin-school-teachers" hidden></p>
+                  </div>
 
-              <!-- Gallery carousel preview -->
-              <div style="margin:14px 16px 0;background:#fff;border-radius:14px;overflow:hidden;">
-                <div style="padding:12px 16px;border-bottom:1px solid var(--line);">
-                  <p class="se-label" style="margin:0;">Фото галерея</p>
+                  <div class="admin-school-fields">
+                    <div class="se-row2">
+                      <div><label class="se-label" for="school-field-desc-kk">Сипаттама — Қазақша</label><textarea class="se-textarea" id="school-field-desc-kk" rows="4"></textarea></div>
+                      <div><label class="se-label" for="school-field-desc-en">Description — English</label><textarea class="se-textarea" id="school-field-desc-en" rows="4"></textarea></div>
+                    </div>
+                    <div style="margin-top:12px;">
+                      <label class="se-label" for="school-field-teachers">Мұғалімдер саны</label>
+                      <input class="se-input" type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" style="width:160px;">
+                    </div>
+                  </div>
                 </div>
-                <div style="padding:16px;">
-                  <!-- Carousel rendered by admin-schools.js -->
-                  <div class="school-drop-zone school-drop-zone--gallery" id="school-gallery-drop-zone">
-                  <div class="school-carousel-col" id="admin-school-carousel-col">
-                    <div class="school-carousel" id="admin-school-carousel">
-                      <div class="school-carousel-track" id="admin-school-carousel-track"></div>
+
+                <div class="admin-school-right">
+                  <div class="school-media-card-wrap">
+                    <div class="school-drop-zone school-drop-zone--gallery" id="school-gallery-drop-zone">
+                      <div class="school-media-card">
+                        <div class="school-carousel-col" id="admin-school-carousel-col">
+                          <div class="school-carousel" id="admin-school-carousel">
+                            <div class="school-carousel-track" id="admin-school-carousel-track"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="school-carousel-controls">
                       <button type="button" class="school-carousel-arrow" id="admin-school-carousel-prev" aria-label="Previous">←</button>
                       <button type="button" class="school-carousel-arrow" id="admin-school-carousel-next" aria-label="Next">→</button>
                     </div>
-                  </div>
-                  </div>
-                  <div style="margin-top:14px;">
                     <div class="school-gallery-tools">
                       <button type="button" class="se-upload-btn" id="school-gallery-upload-btn">Галереяға қосу</button>
                       <button type="button" class="se-save-btn" id="school-gallery-save-btn">Сақтау</button>
@@ -436,30 +427,16 @@
                       <input type="file" id="school-gallery-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" multiple hidden>
                     </div>
                     <textarea id="school-field-gallery" class="admin-store-field" tabindex="-1" aria-hidden="true"></textarea>
-                    <p class="se-hint">Галерея Hero-дан бөлек. Жүктегеннен кейін «Сақтау» басыңыз.</p>
                   </div>
-                </div>
-              </div>
 
-              <!-- YouTube -->
-              <div style="margin:14px 16px 20px;background:#fff;border-radius:14px;overflow:hidden;">
-                <div style="padding:12px 16px;border-bottom:1px solid var(--line);">
-                  <p class="se-label" style="margin:0;">YouTube бейне</p>
-                </div>
-                <div style="padding:16px;">
-                  <div class="yt-slot">
-                    <div class="yt-slot-frame" id="admin-school-video-frame">
-                      <div class="yt-slot-empty">
-                        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" opacity=".6"></polygon></svg>
-                        <span>YouTube бейнесін қосыңыз</span>
-                      </div>
-                    </div>
-                    <div class="yt-slot-bar">
-                      <span class="yt-lbl">YouTube</span>
-                      <input type="text" id="school-field-youtube" placeholder="Видео ID немесе youtube.com сілтемесі (мыс. Kn1wxXwTf7I)">
-                    </div>
+                  <div class="school-media-card">
+                    <div class="school-video-frame" id="admin-school-video-frame"></div>
                   </div>
-                  <p class="se-hint" style="margin-top:8px;">Тек видео ID немесе YouTube сілтемесін қойыңыз.</p>
+                  <div class="admin-youtube-edit">
+                    <label class="se-label" for="school-field-youtube">YouTube бейне</label>
+                    <input class="se-input" type="text" id="school-field-youtube" placeholder="Видео ID немесе youtube.com сілтемесі (мыс. Kn1wxXwTf7I)">
+                    <p class="se-hint">Тек видео ID немесе YouTube сілтемесін қойыңыз.</p>
+                  </div>
                 </div>
               </div>
 
@@ -483,6 +460,6 @@
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=8"></script>
+<script src="admin-schools.js?v=10"></script>
 </body>
 </html>
