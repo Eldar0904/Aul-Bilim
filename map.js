@@ -207,6 +207,27 @@
   function bi(kk, en) {
     return '<span lang="kk">' + kk + '</span><span lang="en">' + en + '</span>';
   }
+  function pickLang(kk, en) {
+    return document.documentElement.getAttribute('data-lang') === 'en' ? en : kk;
+  }
+  function escAttr(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;');
+  }
+  function schoolSearchHaystack(s, district) {
+    return [
+      s.kk, s.en, s.id,
+      s.location && s.location.kk,
+      s.location && s.location.en,
+      s.districtKey,
+      district && district.kk,
+      district && district.en,
+      s.desc && s.desc.kk,
+      s.desc && s.desc.en
+    ].filter(Boolean).join(' ').toLowerCase();
+  }
   var MAP_LABELS = {
     KZ10: { kk: 'Абай', en: 'Abay' },
     KZ11: { kk: 'Ақмола', en: 'Akmola' },
@@ -446,16 +467,17 @@
       return s.image ? [s.image] : [];
     }
 
-    function renderSchoolCard(s, i, regionId) {
+    function renderSchoolCard(s, i, regionId, district) {
       var preview = schoolGalleryImages(s)[0] || s.image || '';
       var href = schoolPageUrl(regionId, s.id);
+      var search = schoolSearchHaystack(s, district);
       var teachersHtml = s.teachers != null
         ? '<span class="school-card-teachers">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
             s.teachers + ' ' + bi('мұғалім', 'teachers') +
           '</span>'
         : '';
-      return '<a class="school-card is-clickable" href="' + href + '" style="animation-delay:' + (0.05 * i) + 's">' +
+      return '<a class="school-card is-clickable" href="' + href + '" data-search="' + escAttr(search) + '" style="animation-delay:' + (0.05 * i) + 's">' +
         (preview
           ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
           : '<div class="school-card-photo school-card-photo--empty"></div>') +
@@ -503,14 +525,14 @@
       var html = '';
       groups.forEach(function (g, gi) {
         var sectionId = g.slug ? 'district-' + g.slug : 'district-' + gi;
-        html += '<section class="schools-district-group" id="' + sectionId + '">';
+        html += '<section class="schools-district-group" id="' + sectionId + '" data-total="' + g.schools.length + '">';
         if (g.kk) {
           html += '<h4 class="schools-district-head">' + bi(g.kk, g.en) +
-            ' <span class="schools-district-count">(' + g.schools.length + ' ' + bi('мектеп', 'schools') + ')</span></h4>';
+            ' <span class="schools-district-count" data-total="' + g.schools.length + '">(' + g.schools.length + ' ' + pickLang('мектеп', 'schools') + ')</span></h4>';
         }
         html += '<div class="schools-grid">';
         g.schools.forEach(function (s) {
-          html += renderSchoolCard(s, cardIdx++, regionId);
+          html += renderSchoolCard(s, cardIdx++, regionId, g);
         });
         html += '</div></section>';
       });
@@ -545,6 +567,70 @@
       '</div>';
     }
 
+    function bindRegionSchoolSearch(totalSchools) {
+      var input = document.getElementById('region-schools-search');
+      var empty = document.getElementById('region-schools-search-empty');
+      var countEl = document.getElementById('region-schools-search-count');
+      if (!input || !schoolsRoot) return;
+
+      function syncPlaceholder() {
+        input.placeholder = pickLang(
+          'Мектеп аты, аудан немесе орналасуы…',
+          'School name, district, or location…'
+        );
+        input.setAttribute('aria-label', pickLang('Мектеп іздеу', 'Search schools'));
+      }
+
+      function restoreDistrictCounts() {
+        schoolsRoot.querySelectorAll('.schools-district-count').forEach(function (span) {
+          var total = span.getAttribute('data-total');
+          if (!total) return;
+          span.textContent = '(' + total + ' ' + pickLang('мектеп', 'schools') + ')';
+        });
+      }
+
+      function applyFilter() {
+        var q = input.value.trim().toLowerCase();
+        var cards = schoolsRoot.querySelectorAll('.school-card');
+        var visible = 0;
+        cards.forEach(function (card) {
+          var hay = card.getAttribute('data-search') || '';
+          var match = !q || hay.indexOf(q) !== -1;
+          card.classList.toggle('is-filtered-out', !match);
+          if (match) visible += 1;
+        });
+
+        schoolsRoot.querySelectorAll('.schools-district-group').forEach(function (section) {
+          var sectionVisible = 0;
+          section.querySelectorAll('.school-card').forEach(function (card) {
+            if (!card.classList.contains('is-filtered-out')) sectionVisible += 1;
+          });
+          section.classList.toggle('is-filtered-out', q && sectionVisible === 0);
+          var countSpan = section.querySelector('.schools-district-count');
+          if (countSpan && q) {
+            countSpan.textContent = '(' + sectionVisible + ' ' + pickLang('мектеп', 'schools') + ')';
+          }
+        });
+
+        if (!q) restoreDistrictCounts();
+
+        if (empty) empty.hidden = !q || visible > 0;
+        if (countEl) {
+          countEl.textContent = q
+            ? pickLang(visible + ' / ' + totalSchools + ' мектеп', visible + ' / ' + totalSchools + ' schools')
+            : '';
+        }
+      }
+
+      input.addEventListener('input', applyFilter);
+      input.addEventListener('search', applyFilter);
+      syncPlaceholder();
+      new MutationObserver(syncPlaceholder).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-lang']
+      });
+    }
+
     function renderSchoolsSection(r) {
       if (!schoolsRoot || !schoolsBlock) return;
       var schools = r.schools || [];
@@ -565,6 +651,11 @@
           '<span lang="en"><span class="hl">Supported</span> schools</span>' +
           ' — ' + bi(r.kk, r.en) +
         '</h2>' +
+        '<div class="region-schools-search-wrap">' +
+          '<svg class="region-schools-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>' +
+          '<input type="search" id="region-schools-search" class="region-schools-search" autocomplete="off" enterkeyhint="search" />' +
+          '<span class="region-schools-search-count" id="region-schools-search-count" aria-live="polite"></span>' +
+        '</div>' +
         (districtChips
           ? '<div class="region-schools-hero region-schools-hero--chips">' +
               '<div class="region-chip-list" role="navigation" aria-label="Districts">' +
@@ -576,10 +667,14 @@
         '<h3 class="schools-grid-head">' +
           bi('Жаңғыртылған мектептер', 'Renovated schools') +
         '</h3>' +
+        '<div class="schools-search-empty" id="region-schools-search-empty" hidden>' +
+          '<p>' + bi('Ешқандай мектеп табылмады', 'No schools match your search') + '</p>' +
+        '</div>' +
         gridHtml;
 
       document.getElementById('region-schools-map').addEventListener('click', goToMap);
       document.getElementById('region-schools-back').addEventListener('click', goHome);
+      bindRegionSchoolSearch(schools.length);
       schoolsRoot.querySelectorAll('.district-chip').forEach(function (btn) {
         btn.addEventListener('click', function () {
           scrollToDistrict(btn.getAttribute('data-district-target'));
