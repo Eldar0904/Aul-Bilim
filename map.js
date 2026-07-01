@@ -216,17 +216,36 @@
       .replace(/"/g, '&quot;')
       .replace(/</g, '&lt;');
   }
+  function normalizeSearchText(s) {
+    return String(s || '')
+      .toLowerCase()
+      .replace(/[ьъ]/g, '')
+      .replace(/[.\-_,()]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  function searchHaystackMatches(haystackNorm, query) {
+    var q = normalizeSearchText(query);
+    if (!q) return true;
+    var words = q.split(' ').filter(Boolean);
+    for (var i = 0; i < words.length; i++) {
+      if (haystackNorm.indexOf(words[i]) === -1) return false;
+    }
+    return true;
+  }
   function schoolSearchHaystack(s, district) {
-    return [
+    var raw = [
       s.kk, s.en, s.id,
       s.location && s.location.kk,
       s.location && s.location.en,
       s.districtKey,
       district && district.kk,
       district && district.en,
+      district && district.key,
       s.desc && s.desc.kk,
       s.desc && s.desc.en
-    ].filter(Boolean).join(' ').toLowerCase();
+    ].filter(Boolean).join(' ');
+    return normalizeSearchText(raw);
   }
   var MAP_LABELS = {
     KZ10: { kk: 'Абай', en: 'Abay' },
@@ -590,12 +609,12 @@
       }
 
       function applyFilter() {
-        var q = input.value.trim().toLowerCase();
+        var q = input.value.trim();
         var cards = schoolsRoot.querySelectorAll('.school-card');
         var visible = 0;
         cards.forEach(function (card) {
           var hay = card.getAttribute('data-search') || '';
-          var match = !q || hay.indexOf(q) !== -1;
+          var match = searchHaystackMatches(hay, q);
           card.classList.toggle('is-filtered-out', !match);
           if (match) visible += 1;
         });
@@ -616,6 +635,7 @@
 
         if (empty) empty.hidden = !q || visible > 0;
         if (countEl) {
+          countEl.hidden = !q;
           countEl.textContent = q
             ? pickLang(visible + ' / ' + totalSchools + ' мектеп', visible + ' / ' + totalSchools + ' schools')
             : '';
@@ -651,10 +671,12 @@
           '<span lang="en"><span class="hl">Supported</span> schools</span>' +
           ' — ' + bi(r.kk, r.en) +
         '</h2>' +
-        '<div class="region-schools-search-wrap">' +
-          '<svg class="region-schools-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>' +
-          '<input type="search" id="region-schools-search" class="region-schools-search" autocomplete="off" enterkeyhint="search" />' +
-          '<span class="region-schools-search-count" id="region-schools-search-count" aria-live="polite"></span>' +
+        '<div class="region-schools-search-bar">' +
+          '<div class="region-schools-search-field">' +
+            '<svg class="region-schools-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>' +
+            '<input type="search" id="region-schools-search" class="region-schools-search" autocomplete="off" enterkeyhint="search" />' +
+          '</div>' +
+          '<span class="region-schools-search-count" id="region-schools-search-count" aria-live="polite" hidden></span>' +
         '</div>' +
         (districtChips
           ? '<div class="region-schools-hero region-schools-hero--chips">' +
