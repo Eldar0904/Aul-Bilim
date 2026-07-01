@@ -191,7 +191,7 @@
         row.appendChild(fileInput);
         var hint = document.createElement('p');
         hint.className = 'img-slot-drop-hint';
-        hint.textContent = 'немесе суретті осы жерге апарыңыз';
+        hint.textContent = 'немесе суретті осы жерге тастаңыз';
         bar.insertBefore(row, input);
         bar.appendChild(hint);
 
@@ -271,11 +271,14 @@
       var r = await window.adminSchools.save();
       btn.classList.remove('saving');
       if (r && r.success) {
-        btn.textContent = '✓ Сақталды';
-        btn.classList.add('saved');
         dirty = false;
+        if (window.adminMarkSaved) window.adminMarkSaved();
+        else {
+          btn.textContent = '✓ Сақталды';
+          btn.classList.add('saved');
+          setTimeout(resetSaveBtn, 3000);
+        }
         toast('Мектеп сақталды — school.html бетінде көрінеді.', 'ok');
-        setTimeout(resetSaveBtn, 3000);
       } else {
         resetSaveBtn();
         toast(r && r.error ? r.error : 'Сақтау сәтсіз аяқталды', 'err');
@@ -333,6 +336,16 @@
   }
 
   window.adminToast = toast;
+
+  window.adminMarkSaved = function () {
+    dirty = false;
+    var btn = document.getElementById('save-btn');
+    if (!btn) return;
+    btn.textContent = '✓ Сақталды';
+    btn.classList.add('saved');
+    btn.classList.remove('saving');
+    setTimeout(resetSaveBtn, 3000);
+  };
 
   window.addEventListener('beforeunload', function (e) {
     if (dirty || (window.adminSchools && window.adminSchools.isDirty())) {

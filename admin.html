@@ -13,8 +13,8 @@
 <script src="uploads/content-schema.js"></script>
 <script src="uploads/db.js?v=3"></script>
 <script src="uploads/media-config.js"></script>
-<script src="uploads/media-upload.js?v=2"></script>
-<link rel="stylesheet" href="admin.css?v=5" />
+<script src="uploads/media-upload.js?v=3"></script>
+<link rel="stylesheet" href="admin.css?v=7" />
 </head>
 <body>
 
@@ -369,6 +369,7 @@
                     <img id="admin-school-hero-img" class="school-hero-photo" alt="" hidden />
                     <div class="school-hero-placeholder" id="admin-school-hero-placeholder" aria-hidden="true">
                       <img src="assets/school-hero-placeholder.svg" alt="" />
+                      <p class="school-drop-hint">Суретті осы жерге тастаңыз<span>немесе «Суретті жүктеу» басыңыз</span></p>
                     </div>
                   </div>
                   <div class="school-hero-overlay"></div>
@@ -381,10 +382,11 @@
                   <p class="se-label">Hero сурет</p>
                   <div class="se-upload-row">
                     <button type="button" class="se-upload-btn" id="school-hero-upload-btn">Суретті жүктеу</button>
+                    <button type="button" class="se-save-btn" id="school-hero-save-btn">Сақтау</button>
                     <input type="file" id="school-hero-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
                     <input type="text" id="school-field-image" class="admin-store-field" tabindex="-1" aria-hidden="true">
                   </div>
-                  <p class="se-hint">Суретті таңдаңыз немесе Hero аймағына апарыңыз — содан кейін «Сақтау».</p>
+                  <p class="se-hint">Жүктегеннен кейін «Сақтау» басыңыз — сайтта көрінуі үшін.</p>
                 </div>
               </div>
 
@@ -428,12 +430,13 @@
                   <div style="margin-top:14px;">
                     <div class="school-gallery-tools">
                       <button type="button" class="se-upload-btn" id="school-gallery-upload-btn">Галереяға қосу</button>
+                      <button type="button" class="se-save-btn" id="school-gallery-save-btn">Сақтау</button>
                       <button type="button" class="se-btn-ghost" id="school-gallery-remove-btn">Ағымдағыны өшіру</button>
                       <button type="button" class="se-btn-ghost" id="school-gallery-clear-btn">Барлығын тазалау</button>
                       <input type="file" id="school-gallery-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" multiple hidden>
                     </div>
                     <textarea id="school-field-gallery" class="admin-store-field" tabindex="-1" aria-hidden="true"></textarea>
-                    <p class="se-hint">Суретті таңдаңыз, апарыңыз немесе галерея аймағына тастаңыз. Hero-дан бөлек.</p>
+                    <p class="se-hint">Галерея Hero-дан бөлек. Жүктегеннен кейін «Сақтау» басыңыз.</p>
                   </div>
                 </div>
               </div>
@@ -471,7 +474,7 @@
 </div><!-- #app -->
 
 <div id="toast"></div>
-<script src="admin-cms.js?v=6"></script>
+<script src="admin-cms.js?v=8"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>
 <script src="assets/akmola-schools.js?v=9"></script>
@@ -480,6 +483,6 @@
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=6"></script>
+<script src="admin-schools.js?v=8"></script>
 </body>
 </html>

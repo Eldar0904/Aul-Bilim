@@ -5,6 +5,7 @@
   'use strict';
 
   var ACCEPT = ['image/png', 'image/jpeg', 'image/webp', 'image/avif'];
+  var ACCEPT_EXT = /\.(jpe?g|png|webp|avif)$/i;
   var DEFAULT_MAX = 1200;
   var QUALITY = 0.85;
 
@@ -44,7 +45,7 @@
         });
       } finally {
         if (bitmap.close) bitmap.close();
-      }
+      }                                                                                  
     });
   }
 
@@ -88,9 +89,15 @@
     });
   }
 
+  function isImageFile(file) {
+    if (!file) return false;
+    if (file.type && ACCEPT.indexOf(file.type) >= 0) return true;
+    return ACCEPT_EXT.test(file.name || '');
+  }
+
   function upload(file, opts) {
     opts = opts || {};
-    if (!file || ACCEPT.indexOf(file.type) < 0) {
+    if (!isImageFile(file)) {
       return Promise.reject(new Error('PNG, JPEG, WebP немесе AVIF суретін таңдаңыз.'));
     }
     var maxDim = opts.maxDim || DEFAULT_MAX;
