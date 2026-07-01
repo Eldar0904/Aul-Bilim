@@ -823,26 +823,32 @@ body.map-schools-open .region-schools-block {
 .school-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
   column-gap: 28px;
-  row-gap: 20px;
-  align-items: stretch;
+  align-items: start;
+  container-type: inline-size;
+  container-name: school-hero;
 }
-.school-hero-left,
+.school-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
 .school-hero-media-stack {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: 1 / -1;
-  grid-template-columns: minmax(0, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   min-width: 0;
 }
 
 .school-map-card {
   position: relative;
   width: 100%;
+  --school-col-w: calc((100cqi - 28px) / 2);
+  --school-media-h: calc(var(--school-col-w) * 9 / 16);
   aspect-ratio: unset;
-  height: 100%;
-  min-height: 0;
+  height: calc(var(--school-media-h) * 1.5 + 64px);
+  min-height: 240px;
   border-radius: 18px;
   overflow: hidden;
   background: var(--cream-deep);
@@ -1056,38 +1062,13 @@ body.map-schools-open .region-schools-block {
 @media (max-width: 900px) {
   .school-hero-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     gap: 24px;
   }
-  .school-hero-left,
-  .school-hero-media-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    grid-row: auto;
-  }
   .school-map-card {
+    --school-col-w: 100cqi;
     aspect-ratio: 16 / 9;
     height: auto;
-  }
-}
-
-@supports not (grid-template-rows: subgrid) {
-  .school-hero-grid {
-    container-type: inline-size;
-    grid-template-rows: auto;
-  }
-  .school-hero-left,
-  .school-hero-media-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    grid-row: auto;
-  }
-  .school-map-card {
-    aspect-ratio: auto;
-    height: calc(((100cqi - 28px) / 2) * 9 / 16 + 44px);
-    min-height: 200px;
+    min-height: 0;
   }
 }
 
