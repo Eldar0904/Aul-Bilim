@@ -26,8 +26,10 @@ button { cursor: pointer; }
   background: #fff; border-radius: 24px; padding: 48px 44px; width: 360px;
   box-shadow: 0 32px 64px -24px rgba(0,0,0,0.5); text-align: center;
 }
-.gate-logo { margin-bottom: 6px; display: flex; align-items: center; justify-content: center; }
-.gate-logo .logo-img { height: 48px; }
+.gate-logo { font-family: var(--fh); font-weight: 900; font-size: 22px; color: var(--primary); margin-bottom: 6px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.gate-logo .sun { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--accent-soft), var(--accent) 70%); flex: none; }
+.gate-logo .logo-name { white-space: nowrap; letter-spacing: -0.03em; }
+.gate-logo .logo-mark { color: var(--accent-deep); }
 .gate-sub { font-size: 13px; color: var(--body); margin-bottom: 28px; }
 .gate-card input { width: 100%; padding: 12px 15px; border: 1.5px solid rgba(0,0,0,0.14); border-radius: 10px; font-family: var(--fb); font-size: 15px; margin-bottom: 14px; transition: border-color .18s; }
 .gate-card input:focus { outline: none; border-color: var(--accent); }
@@ -46,12 +48,14 @@ aside#sidebar {
   display: flex; flex-direction: column; height: 100vh; overflow-y: auto;
 }
 .sb-logo {
-  padding: 20px 20px 16px;
-  color: #fff; display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+  padding: 20px 20px 16px; font-family: var(--fh); font-weight: 900; font-size: 18px;
+  color: #fff; display: flex; align-items: center; gap: 10px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.sb-logo .logo-img--sb { height: 36px; width: auto; }
-.sb-logo small { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+.sb-logo .sun { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--accent-soft), var(--accent) 70%); flex: none; }
+.sb-logo .logo-name { white-space: nowrap; letter-spacing: -0.03em; }
+.sb-logo .logo-mark { color: var(--accent-soft); }
+.sb-logo small { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-top: 1px; text-transform: uppercase; }
 .sb-section { padding: 14px 12px 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
 .sb-page {
   display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 8px; margin: 2px 8px;
