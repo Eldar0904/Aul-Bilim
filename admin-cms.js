@@ -118,7 +118,7 @@
 
   function uploadConfigError() {
     if (window.mediaUpload && window.mediaUpload.isConfigured && window.mediaUpload.isConfigured()) return null;
-    return 'Media upload not configured. Copy uploads/media-config.example.js to uploads/media-config.js and set uploadUrl.';
+    return 'Сурет жүктеу бапталмаған. uploads/media-config.js файлын тексеріңіз.';
   }
 
   function setSlotUploading(slotEl, on) {
@@ -170,6 +170,10 @@
       var bar = slotEl.querySelector('.img-slot-bar');
       var input = slotEl.querySelector('input[data-slot-field="u"]');
       if (!bar || !input) return;
+
+      input.classList.add('admin-store-field');
+      input.setAttribute('aria-hidden', 'true');
+      input.tabIndex = -1;
 
       if (!bar.querySelector('.img-slot-upload-btn')) {
         var row = document.createElement('div');
@@ -306,7 +310,7 @@
       setTimeout(resetSaveBtn, 3000);
     } else {
       resetSaveBtn();
-      toast('Файлды жазу мүмкін болмады — Firebase конфигурациясын тексеріңіз.', 'err');
+      toast(result && result.error ? result.error : 'Сақтау сәтсіз аяқталды — Firebase конфигурациясын тексеріңіз.', 'err');
     }
   }
 
@@ -323,6 +327,8 @@
     clearTimeout(t._t);
     t._t = setTimeout(function () { t.className = ''; }, 3800);
   }
+
+  window.adminToast = toast;
 
   window.addEventListener('beforeunload', function (e) {
     if (dirty || (window.adminSchools && window.adminSchools.isDirty())) {

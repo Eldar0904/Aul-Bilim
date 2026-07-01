@@ -323,8 +323,9 @@ window.adminSchools = (function () {
 
     var status = document.getElementById('school-editor-status');
     if (status) {
+      status.classList.remove('is-ok', 'is-err');
       status.textContent = override
-        ? 'Firestore: сақталған өзгерістер'
+        ? 'Сақталған өзгерістер'
         : (hasMedia(entry.base) ? 'Әдепкі деректер' : 'Медиа әлі толтырылмаған');
     }
 
@@ -339,32 +340,68 @@ window.adminSchools = (function () {
 
   function uploadConfigError() {
     if (window.mediaUpload && window.mediaUpload.isConfigured && window.mediaUpload.isConfigured()) return null;
-    return 'Media upload not configured. Copy uploads/media-config.example.js to uploads/media-config.js.';
+    return 'Сурет жүктеу бапталмаған. uploads/media-config.js файлын тексеріңіз.';
   }
 
   function setSchoolUploadBusy(btn, on) {
     if (!btn) return;
     btn.disabled = !!on;
     if (btn.id === 'school-hero-upload-btn') {
-      btn.textContent = on ? 'Жүктелуде…' : 'Жүктеу';
+      btn.textContent = on ? 'Жүктелуде…' : 'Суретті жүктеу';
     } else if (btn.id === 'school-gallery-upload-btn') {
       btn.textContent = on ? 'Жүктелуде…' : 'Галереяға қосу';
     }
   }
 
-  function notifySchoolUploadError(msg) {
+  function setEditorStatus(msg, type) {
     var status = document.getElementById('school-editor-status');
-    if (status) status.textContent = msg;
+    if (!status) return;
+    status.textContent = msg || '';
+    status.classList.remove('is-ok', 'is-err');
+    if (type === 'ok') status.classList.add('is-ok');
+    if (type === 'err') status.classList.add('is-err');
+  }
+
+  function galleryLines() {
+    var galleryInput = document.getElementById('school-field-gallery');
+    if (!galleryInput) return [];
+    return galleryInput.value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+  }
+
+  function setGalleryLines(lines) {
+    var galleryInput = document.getElementById('school-field-gallery');
+    if (!galleryInput) return;
+    galleryInput.value = lines.join('\n');
+    dirty = true;
+    window.dirty = true;
+    galleryInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function removeCurrentGalleryImage() {
+    var lines = galleryLines();
+    if (!lines.length) {
+      setEditorStatus('Галерея бос', 'err');
+      return;
+    }
+    lines.splice(carouselIndex, 1);
+    setGalleryLines(lines);
+    setEditorStatus('Сурет өшірілді — сақтауды ұмытпаңыз', 'ok');
+  }
+
+  function clearGalleryImages() {
+    if (!galleryLines().length) return;
+    setGalleryLines([]);
+    setEditorStatus('Галерея тазартылды — сақтауды ұмытпаңыз', 'ok');
   }
 
   function uploadSchoolHero(file) {
     var err = uploadConfigError();
     if (err) {
-      notifySchoolUploadError(err);
+      setEditorStatus(err, 'err');
       return;
     }
     if (!selectedId) {
-      notifySchoolUploadError('Алдымен мектеп таңдаңыз');
+      setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
       return;
     }
     var btn = document.getElementById('school-hero-upload-btn');
@@ -378,9 +415,11 @@ window.adminSchools = (function () {
       dirty = true;
       window.dirty = true;
       imageInput.dispatchEvent(new Event('input', { bubbles: true }));
-      notifySchoolUploadError('Hero сурет жүктелді — сақтауды ұмытпаңыз');
+      setEditorStatus('Hero сурет жүктелді — сақтауды ұмытпаңыз', 'ok');
+      if (window.adminToast) window.adminToast('Hero сурет жүктелді', 'ok');
     }).catch(function (e) {
-      notifySchoolUploadError(e.message || 'Жүктеу сәтсіз аяқталды');
+      setEditorStatus(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
+      if (window.adminToast) window.adminToast(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
     }).then(function () {
       setSchoolUploadBusy(btn, false);
     });
@@ -389,11 +428,11 @@ window.adminSchools = (function () {
   function uploadSchoolGalleryFiles(fileList) {
     var err = uploadConfigError();
     if (err) {
-      notifySchoolUploadError(err);
+      setEditorStatus(err, 'err');
       return;
     }
     if (!selectedId) {
-      notifySchoolUploadError('Алдымен мектеп таңдаңыз');
+      setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
       return;
     }
     var files = Array.prototype.slice.call(fileList || []);
@@ -415,7 +454,8 @@ window.adminSchools = (function () {
         dirty = true;
         window.dirty = true;
         galleryInput.dispatchEvent(new Event('input', { bubbles: true }));
-        notifySchoolUploadError(urls.length + ' сурет галереяға қосылды — сақтауды ұмытпаңыз');
+        setEditorStatus(urls.length + ' сурет галереяға қосылды — сақтауды ұмытпаңыз', 'ok');
+        if (window.adminToast) window.adminToast(urls.length + ' сурет қосылды', 'ok');
         setSchoolUploadBusy(btn, false);
         return;
       }
@@ -426,7 +466,8 @@ window.adminSchools = (function () {
           next();
         })
         .catch(function (e) {
-          notifySchoolUploadError(e.message || 'Жүктеу сәтсіз аяқталды');
+          setEditorStatus(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
+          if (window.adminToast) window.adminToast(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
           setSchoolUploadBusy(btn, false);
         });
     }
@@ -439,6 +480,8 @@ window.adminSchools = (function () {
     var heroFile = document.getElementById('school-hero-upload-file');
     var galBtn = document.getElementById('school-gallery-upload-btn');
     var galFile = document.getElementById('school-gallery-upload-file');
+    var galRemove = document.getElementById('school-gallery-remove-btn');
+    var galClear = document.getElementById('school-gallery-clear-btn');
 
     if (heroBtn && heroFile && !heroBtn.dataset.bound) {
       heroBtn.dataset.bound = '1';
@@ -458,6 +501,16 @@ window.adminSchools = (function () {
         galFile.value = '';
         if (files && files.length) uploadSchoolGalleryFiles(files);
       });
+    }
+
+    if (galRemove && !galRemove.dataset.bound) {
+      galRemove.dataset.bound = '1';
+      galRemove.addEventListener('click', removeCurrentGalleryImage);
+    }
+
+    if (galClear && !galClear.dataset.bound) {
+      galClear.dataset.bound = '1';
+      galClear.addEventListener('click', clearGalleryImages);
     }
   }
 
@@ -560,8 +613,7 @@ window.adminSchools = (function () {
       overrideCache[selectedId] = Object.assign({ schoolId: selectedId }, data, { updatedAt: new Date().toISOString() });
       dirty = false;
       renderList();
-      var status = document.getElementById('school-editor-status');
-      if (status) status.textContent = 'Сақталды — school.html бетінде көрінеді';
+      setEditorStatus('Сақталды — school.html бетінде көрінеді', 'ok');
     }
     return result;
   }
