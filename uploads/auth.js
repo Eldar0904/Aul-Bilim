@@ -76,7 +76,7 @@
   async function ensureIdToken() {
     var session = getSession();
     if (!session || !session.idToken) return null;
-    if (session.expiresAt > Date.now() + 5 * 60 * 1000) return session.idToken;
+    if (session.expiresAt && session.expiresAt > Date.now() + 5 * 60 * 1000) return session.idToken;
     session = await refreshSession(session);
     return session ? session.idToken : null;
   }

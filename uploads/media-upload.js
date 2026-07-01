@@ -51,27 +51,39 @@
   function uploadBlob(blob, opts) {
     var cfg = config();
     if (!cfg || !cfg.uploadUrl) {
-      return Promise.reject(new Error('Media upload not configured. Copy uploads/media-config.example.js to uploads/media-config.js.'));
-    }
-    var token = window.cmsAuth && window.cmsAuth.getIdToken && window.cmsAuth.getIdToken();
-    if (!token) {
-      return Promise.reject(new Error('Admin login required'));
+      return Promise.reject(new Error('Сурет жүктеу бапталмаған. uploads/media-config.js файлын тексеріңіз.'));
     }
 
-    var form = new FormData();
-    form.append('file', blob, (opts && opts.filename) || 'upload.webp');
-    form.append('folder', (opts && opts.folder) || 'general');
+    function authTokenPromise() {
+      if (window.cmsAuth && window.cmsAuth.ensureIdToken) {
+        return window.cmsAuth.ensureIdToken();
+      }
+      if (window.cmsAuth && window.cmsAuth.getIdToken) {
+        return Promise.resolve(window.cmsAuth.getIdToken());
+      }
+      return Promise.resolve(null);
+    }
 
-    return fetch(cfg.uploadUrl, {
-      method: 'POST',
-      headers: { Authorization: 'Bearer ' + token },
-      body: form
-    }).then(function (res) {
-      return res.json().then(function (data) {
-        if (!res.ok) {
-          throw new Error((data && data.error) || 'Upload failed');
-        }
-        return data;
+    return authTokenPromise().then(function (token) {
+      if (!token) {
+        throw new Error('Әкімші кіруі қажет. Шығып, қайта кіріңіз.');
+      }
+
+      var form = new FormData();
+      form.append('file', blob, (opts && opts.filename) || 'upload.webp');
+      form.append('folder', (opts && opts.folder) || 'general');
+
+      return fetch(cfg.uploadUrl, {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + token },
+        body: form
+      }).then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok) {
+            throw new Error((data && data.error) || 'Жүктеу сәтсіз аяқталды');
+          }
+          return data;
+        });
       });
     });
   }
@@ -79,7 +91,7 @@
   function upload(file, opts) {
     opts = opts || {};
     if (!file || ACCEPT.indexOf(file.type) < 0) {
-      return Promise.reject(new Error('Drop a PNG, JPEG, WebP, or AVIF image.'));
+      return Promise.reject(new Error('PNG, JPEG, WebP немесе AVIF суретін таңдаңыз.'));
     }
     var maxDim = opts.maxDim || DEFAULT_MAX;
     return resizeToBlob(file, maxDim).then(function (blob) {

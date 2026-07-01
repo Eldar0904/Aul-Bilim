@@ -55,16 +55,12 @@ window.adminSchools = (function () {
   }
 
   function heroImage(s) {
-    return s.image || (s.gallery && s.gallery[0]) || '';
+    return s.image || '';
   }
 
   function carouselImages(s) {
-    var list = (s.gallery && s.gallery.length)
-      ? s.gallery.filter(function (src) { return !!src; })
-      : [];
-    if (list.length) return list;
-    var hero = heroImage(s);
-    return hero ? [hero] : [];
+    if (!s.gallery || !s.gallery.length) return [];
+    return s.gallery.filter(function (src) { return !!src; });
   }
 
   function youtubeEmbedId(value) {
@@ -97,8 +93,8 @@ window.adminSchools = (function () {
     var base = entry.base;
     var o = override || {};
     var merged = Object.assign({}, base);
-    if (o.image) merged.image = o.image;
-    if (o.gallery && o.gallery.length) merged.gallery = o.gallery.slice();
+    if (typeof o.image === 'string') merged.image = o.image;
+    if (Array.isArray(o.gallery)) merged.gallery = o.gallery.slice();
     if (o.youtube) merged.youtube = o.youtube;
     if (o.desc) {
       merged.desc = Object.assign({}, base.desc || {});
@@ -113,8 +109,8 @@ window.adminSchools = (function () {
     var base = entry.base;
     var f = formValues();
     return {
-      image: f.image || base.image || '',
-      gallery: f.gallery.length ? f.gallery : (base.gallery || []),
+      image: f.image,
+      gallery: f.gallery,
       youtube: f.youtube || base.youtube || '',
       desc: {
         kk: f.desc.kk || (base.desc && base.desc.kk) || '',
@@ -449,8 +445,10 @@ window.adminSchools = (function () {
     function next() {
       if (index >= files.length) {
         var existing = galleryInput.value.trim();
-        var merged = existing ? existing.split('\n').concat(urls) : urls;
-        galleryInput.value = merged.join('\n');
+        var prior = existing
+          ? existing.split('\n').map(function (s) { return s.trim(); }).filter(Boolean)
+          : [];
+        galleryInput.value = prior.concat(urls).join('\n');
         dirty = true;
         window.dirty = true;
         galleryInput.dispatchEvent(new Event('input', { bubbles: true }));

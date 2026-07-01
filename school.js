@@ -34,8 +34,8 @@
   function mergeSchoolOverride(base, override) {
     if (!override) return base;
     var merged = Object.assign({}, base);
-    if (override.image) merged.image = override.image;
-    if (override.gallery && override.gallery.length) merged.gallery = override.gallery.slice();
+    if (typeof override.image === 'string') merged.image = override.image;
+    if (Array.isArray(override.gallery)) merged.gallery = override.gallery.slice();
     if (override.youtube) merged.youtube = override.youtube;
     if (override.mapImage) merged.mapImage = override.mapImage;
     if (override.desc) {
@@ -73,19 +73,12 @@
   }
 
   function heroImage(s) {
-    return s.image || (s.gallery && s.gallery[0]) || '';
+    return s.image || '';
   }
 
   function carouselImages(s) {
-    var list = (s.gallery && s.gallery.length)
-      ? s.gallery.filter(function (src) { return !!src; })
-      : [];
-    var hero = heroImage(s);
-    if (hero && (!list.length || list.indexOf(hero) === -1)) {
-      list = [hero].concat(list);
-    }
-    if (list.length) return list;
-    return hero ? [hero] : [];
+    if (!s.gallery || !s.gallery.length) return [];
+    return s.gallery.filter(function (src) { return !!src; });
   }
 
   function youtubeEmbedId(value) {
