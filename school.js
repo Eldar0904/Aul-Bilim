@@ -241,9 +241,7 @@
     if (main) main.hidden = false;
 
     var titleEl = document.getElementById('school-hero-title');
-    var locEl = document.getElementById('school-hero-loc');
     var backLink = document.getElementById('school-back-link');
-    var regionEl = document.getElementById('school-region');
     var descEl = document.getElementById('school-desc');
     var teachersEl = document.getElementById('school-teachers');
     var videoFrame = document.getElementById('school-video-frame');
@@ -259,14 +257,8 @@
     renderMapCard(school, name);
 
     if (titleEl) titleEl.textContent = name;
-    if (locEl && school.location) {
-      locEl.textContent = bi(school.location.kk, school.location.en);
-    }
     if (backLink) {
       backLink.href = 'index.html#region-' + region.id + '-schools';
-    }
-    if (regionEl) {
-      regionEl.textContent = bi(region.kk, region.en);
     }
     if (descEl && school.desc) {
       descEl.textContent = bi(school.desc.kk, school.desc.en);

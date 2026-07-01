@@ -270,13 +270,10 @@ window.adminSchools = (function () {
   }
 
   function renderLivePage(entry, school) {
-    var region = REGIONS.find(function (r) { return r.id === entry.regionId; });
     var images = carouselImages(school);
     var lang = previewLang;
 
-    var heroLoc = document.getElementById('admin-school-hero-loc');
     var heroTitle = document.getElementById('admin-school-hero-title');
-    var regionEl = document.getElementById('admin-school-region');
     var descEl = document.getElementById('admin-school-desc');
     var teachersEl = document.getElementById('admin-school-teachers');
     var videoFrame = document.getElementById('admin-school-video-frame');
@@ -284,12 +281,6 @@ window.adminSchools = (function () {
     renderMapCard(school, entry);
 
     if (heroTitle) heroTitle.textContent = lang === 'en' ? (entry.en || entry.kk) : entry.kk;
-    if (heroLoc && school.location) {
-      heroLoc.textContent = lang === 'en' ? school.location.en : school.location.kk;
-    }
-    if (regionEl && region) {
-      regionEl.textContent = lang === 'en' ? region.en : region.kk;
-    }
     if (descEl && school.desc) {
       descEl.textContent = lang === 'en' ? school.desc.en : school.desc.kk;
     }
