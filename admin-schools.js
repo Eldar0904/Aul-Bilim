@@ -473,6 +473,39 @@ window.adminSchools = (function () {
     next();
   }
 
+  function imageFilesFromDataTransfer(dt) {
+    if (!dt || !dt.files || !dt.files.length) return [];
+    return Array.prototype.slice.call(dt.files).filter(function (f) {
+      return f.type && f.type.indexOf('image/') === 0;
+    });
+  }
+
+  function bindImageDropZone(el, onFiles) {
+    if (!el || el.dataset.dropBound) return;
+    el.dataset.dropBound = '1';
+
+    el.addEventListener('dragenter', function (e) {
+      e.preventDefault();
+    });
+    el.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      el.classList.add('drag-over');
+    });
+    el.addEventListener('dragleave', function (e) {
+      if (!el.contains(e.relatedTarget)) el.classList.remove('drag-over');
+    });
+    el.addEventListener('drop', function (e) {
+      e.preventDefault();
+      el.classList.remove('drag-over');
+      if (!selectedId) {
+        setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
+        return;
+      }
+      var files = imageFilesFromDataTransfer(e.dataTransfer);
+      if (files.length) onFiles(files);
+    });
+  }
+
   function bindSchoolUploads() {
     var heroBtn = document.getElementById('school-hero-upload-btn');
     var heroFile = document.getElementById('school-hero-upload-file');
@@ -510,6 +543,13 @@ window.adminSchools = (function () {
       galClear.dataset.bound = '1';
       galClear.addEventListener('click', clearGalleryImages);
     }
+
+    bindImageDropZone(document.getElementById('school-hero-drop-zone'), function (files) {
+      uploadSchoolHero(files[0]);
+    });
+    bindImageDropZone(document.getElementById('school-gallery-drop-zone'), function (files) {
+      uploadSchoolGalleryFiles(files);
+    });
   }
 
   function renderList() {

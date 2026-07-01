@@ -189,7 +189,11 @@
         fileInput.className = 'img-slot-upload-file';
         row.appendChild(btn);
         row.appendChild(fileInput);
+        var hint = document.createElement('p');
+        hint.className = 'img-slot-drop-hint';
+        hint.textContent = 'немесе суретті осы жерге апарыңыз';
         bar.insertBefore(row, input);
+        bar.appendChild(hint);
 
         btn.addEventListener('click', function () { fileInput.click(); });
         fileInput.addEventListener('change', function () {

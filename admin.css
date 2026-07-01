@@ -266,6 +266,57 @@ aside#sidebar {
 #school-editor-empty p + p { margin-top: 8px; font-size: 13px; }
 #school-editor { display: none; }
 #school-editor.is-open { display: block; }
+
+.school-drop-zone {
+  margin: 16px 16px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #143a6e;
+  position: relative;
+}
+.school-drop-zone--gallery {
+  margin: 0;
+  background: var(--cream-deep);
+  border-radius: 12px;
+  border: 2px dashed transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.school-drop-zone.drag-over {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+.school-drop-zone--gallery.drag-over {
+  border-color: var(--accent);
+  background: rgba(242, 164, 19, 0.1);
+}
+.school-drop-zone.drag-over::after {
+  content: 'Суретті осы жерге апарыңыз';
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 58, 110, 0.55);
+  color: #fff;
+  font-family: var(--fh);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+.school-drop-zone--gallery.drag-over::after {
+  background: rgba(242, 164, 19, 0.22);
+  color: var(--primary-dark);
+  border-radius: 10px;
+}
+.img-slot-drop-hint {
+  font-size: 10.5px;
+  color: var(--body);
+  opacity: 0.75;
+  margin: 0;
+  font-family: var(--fb);
+}
 .se-status { font-size: 11.5px; color: var(--primary); font-family: var(--fh); font-weight: 700; padding: 12px 20px 0; min-height: 1.2em; }
 
 /* School hero preview wrapper */

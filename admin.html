@@ -14,7 +14,7 @@
 <script src="uploads/db.js?v=3"></script>
 <script src="uploads/media-config.js"></script>
 <script src="uploads/media-upload.js?v=2"></script>
-<link rel="stylesheet" href="admin.css?v=4" />
+<link rel="stylesheet" href="admin.css?v=5" />
 </head>
 <body>
 
@@ -363,7 +363,7 @@
               <p class="se-status" id="school-editor-status"></p>
 
               <!-- Hero image preview -->
-              <div style="margin:16px 16px 0;border-radius:16px;overflow:hidden;background:#143a6e;position:relative;">
+              <div class="school-drop-zone" id="school-hero-drop-zone">
                 <header class="school-hero school-hero--placeholder" id="admin-school-hero" style="min-height:200px;">
                   <div class="school-hero-media">
                     <img id="admin-school-hero-img" class="school-hero-photo" alt="" hidden />
@@ -384,7 +384,7 @@
                     <input type="file" id="school-hero-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
                     <input type="text" id="school-field-image" class="admin-store-field" tabindex="-1" aria-hidden="true">
                   </div>
-                  <p class="se-hint">Суретті таңдаңыз — жүктелгеннен кейін «Өзгерістерді сақтау» басыңыз.</p>
+                  <p class="se-hint">Суретті таңдаңыз немесе Hero аймағына апарыңыз — содан кейін «Сақтау».</p>
                 </div>
               </div>
 
@@ -414,6 +414,7 @@
                 </div>
                 <div style="padding:16px;">
                   <!-- Carousel rendered by admin-schools.js -->
+                  <div class="school-drop-zone school-drop-zone--gallery" id="school-gallery-drop-zone">
                   <div class="school-carousel-col" id="admin-school-carousel-col">
                     <div class="school-carousel" id="admin-school-carousel">
                       <div class="school-carousel-track" id="admin-school-carousel-track"></div>
@@ -423,6 +424,7 @@
                       <button type="button" class="school-carousel-arrow" id="admin-school-carousel-next" aria-label="Next">→</button>
                     </div>
                   </div>
+                  </div>
                   <div style="margin-top:14px;">
                     <div class="school-gallery-tools">
                       <button type="button" class="se-upload-btn" id="school-gallery-upload-btn">Галереяға қосу</button>
@@ -431,7 +433,7 @@
                       <input type="file" id="school-gallery-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" multiple hidden>
                     </div>
                     <textarea id="school-field-gallery" class="admin-store-field" tabindex="-1" aria-hidden="true"></textarea>
-                    <p class="se-hint">Бірнеше суретті бір уақытта таңдауға болады. Галерея Hero суретінен бөлек.</p>
+                    <p class="se-hint">Суретті таңдаңыз, апарыңыз немесе галерея аймағына тастаңыз. Hero-дан бөлек.</p>
                   </div>
                 </div>
               </div>
@@ -469,7 +471,7 @@
 </div><!-- #app -->
 
 <div id="toast"></div>
-<script src="admin-cms.js?v=5"></script>
+<script src="admin-cms.js?v=6"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>
 <script src="assets/akmola-schools.js?v=9"></script>
@@ -478,6 +480,6 @@
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=5"></script>
+<script src="admin-schools.js?v=6"></script>
 </body>
 </html>
