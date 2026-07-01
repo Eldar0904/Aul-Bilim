@@ -767,7 +767,7 @@ body.map-schools-open .region-schools-block {
   display: flex; align-items: center; gap: 5px;
 }
 .school-card-body h4 { font-size: 16px; line-height: 1.25; margin-bottom: 10px; }
-.school-card-desc { font-size: 13.5px; line-height: 1.55; flex: 1; margin-bottom: 14px; }
+.school-card-desc { font-size: 13.5px; line-height: 1.55; flex: 1; margin-bottom: 14px; white-space: pre-line; }
 .school-card-video { margin-bottom: 14px; }
 .school-card-video-label {
   font-family: var(--fh);
@@ -921,6 +921,7 @@ body.map-schools-open .region-schools-block {
   line-height: 1.65;
   margin: 0;
   color: var(--body);
+  white-space: pre-line;
 }
 .school-page-teachers {
   margin: 4px 0 0;
