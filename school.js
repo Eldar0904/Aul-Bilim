@@ -210,14 +210,17 @@
       if (mapUrl) {
         imgEl.src = mapUrl;
         imgEl.alt = name;
-        imgEl.hidden = false;
+        imgEl.removeAttribute('hidden');
       } else {
         imgEl.removeAttribute('src');
         imgEl.alt = '';
-        imgEl.hidden = true;
+        imgEl.setAttribute('hidden', '');
       }
     }
-    if (phEl) phEl.hidden = !!mapUrl;
+    if (phEl) {
+      if (mapUrl) phEl.setAttribute('hidden', '');
+      else phEl.removeAttribute('hidden');
+    }
   }
 
   function renderPage(result) {

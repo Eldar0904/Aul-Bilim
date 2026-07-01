@@ -221,11 +221,24 @@ window.adminSchools = (function () {
     frame.classList.add('is-placeholder');
   }
 
+  function applyMapImageUrl(url) {
+    var mapInput = document.getElementById('school-field-map-image');
+    if (!mapInput) return;
+    mapInput.value = url || '';
+    dirty = true;
+    window.dirty = true;
+    if (selectedEntry) {
+      renderMapCard({ mapImage: url }, selectedEntry);
+    }
+    mapInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
   function renderMapCard(school, entry) {
     var mapUrl = schoolMapImage(school);
     var card = document.getElementById('admin-school-map-card');
     var imgEl = document.getElementById('admin-school-map-img');
     var phEl = document.getElementById('admin-school-map-placeholder');
+    var name = entry && (entry.kk || entry.en) ? entry.kk : '';
 
     if (card) {
       card.classList.toggle('school-map-card--photo', !!mapUrl);
@@ -233,16 +246,27 @@ window.adminSchools = (function () {
     }
     if (imgEl) {
       if (mapUrl) {
+        imgEl.onload = function () {
+          if (phEl) phEl.setAttribute('hidden', '');
+        };
+        imgEl.onerror = function () {
+          setEditorStatus('Сурет сілтемесі ашылмады — қайта жүктеңіз', 'err');
+        };
         imgEl.src = mapUrl;
-        imgEl.alt = entry.kk;
-        imgEl.hidden = false;
+        imgEl.alt = name;
+        imgEl.removeAttribute('hidden');
       } else {
+        imgEl.onload = null;
+        imgEl.onerror = null;
         imgEl.removeAttribute('src');
         imgEl.alt = '';
-        imgEl.hidden = true;
+        imgEl.setAttribute('hidden', '');
       }
     }
-    if (phEl) phEl.hidden = !!mapUrl;
+    if (phEl) {
+      if (mapUrl) phEl.setAttribute('hidden', '');
+      else phEl.removeAttribute('hidden');
+    }
   }
 
   function renderLivePage(entry, school) {
@@ -475,9 +499,7 @@ window.adminSchools = (function () {
       if (!result || !result.url) throw new Error('Жүктеу жауабында сілтеме жоқ');
       var url = result.url;
       if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
-      mapInput.value = url;
-      dirty = true;
-      window.dirty = true;
+      applyMapImageUrl(url);
       refreshPreview();
       setEditorStatus('Сурет жүктелді — «Сақтау» басыңыз', 'ok');
       if (window.adminToast) window.adminToast('Сурет жүктелді', 'ok');
@@ -528,7 +550,9 @@ window.adminSchools = (function () {
       }
       window.mediaUpload.upload(files[index], { folder: folder, maxDim: 1600 })
         .then(function (result) {
-          urls.push(result.url);
+          var url = result.url;
+          if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
+          urls.push(url);
           index += 1;
           next();
         })
@@ -590,6 +614,15 @@ window.adminSchools = (function () {
     var galRemove = document.getElementById('school-gallery-remove-btn');
     var galClear = document.getElementById('school-gallery-clear-btn');
 
+    if (mapFile && !mapFile.dataset.changeBound) {
+      mapFile.dataset.changeBound = '1';
+      mapFile.addEventListener('change', function () {
+        var file = mapFile.files && mapFile.files[0];
+        mapFile.value = '';
+        if (file) uploadSchoolMap(file);
+      });
+    }
+
     if (mapBtn && mapFile && !mapBtn.dataset.bound) {
       mapBtn.dataset.bound = '1';
       mapBtn.addEventListener('click', function () {
@@ -598,11 +631,6 @@ window.adminSchools = (function () {
           return;
         }
         mapFile.click();
-      });
-      mapFile.addEventListener('change', function () {
-        var file = mapFile.files && mapFile.files[0];
-        mapFile.value = '';
-        if (file) uploadSchoolMap(file);
       });
     }
 
@@ -630,17 +658,6 @@ window.adminSchools = (function () {
     bindImageDropZone(mapDrop, function (files) {
       uploadSchoolMap(files[0]);
     });
-    if (mapDrop && mapFile && !mapDrop.dataset.clickBound) {
-      mapDrop.dataset.clickBound = '1';
-      mapDrop.addEventListener('click', function (e) {
-        if (e.target.closest('button')) return;
-        if (!selectedId) {
-          setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
-          return;
-        }
-        mapFile.click();
-      });
-    }
     bindImageDropZone(document.getElementById('school-gallery-drop-zone'), function (files) {
       uploadSchoolGalleryFiles(files);
     });

@@ -767,6 +767,13 @@ body.map-schools-open .region-schools-block {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  z-index: 2;
+}
+.school-map-photo[hidden] {
+  display: none !important;
+}
+.school-map-card--photo .school-map-placeholder {
+  display: none !important;
 }
 .school-map-placeholder {
   position: absolute;

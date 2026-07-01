@@ -396,11 +396,34 @@ aside#sidebar {
   border-radius: 18px;
   border: 2px dashed transparent;
   background: transparent;
-  cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
 }
 .school-drop-zone--map .school-map-card {
   border-radius: 16px;
+}
+.school-map-file-input {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  border: 0;
+}
+.school-map-card--photo .school-map-file-input {
+  z-index: 4;
+}
+.admin-school-slot-label {
+  font-family: var(--fh);
+  font-weight: 800;
+  font-size: 10.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0;
 }
 .school-drop-zone--map.drag-over {
   border-color: var(--accent);
