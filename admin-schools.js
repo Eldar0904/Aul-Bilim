@@ -55,8 +55,13 @@ window.adminSchools = (function () {
     return String(school.mapImage || school.image || '').trim();
   }
 
+  function schoolCardImage(school) {
+    if (!school) return '';
+    return String(school.cardImage || '').trim();
+  }
+
   function hasMedia(school) {
-    return !!(schoolMapImage(school) || (school.gallery && school.gallery.length) || school.youtube);
+    return !!(schoolMapImage(school) || schoolCardImage(school) || (school.gallery && school.gallery.length) || school.youtube);
   }
 
   function carouselImages(s) {
@@ -80,6 +85,7 @@ window.adminSchools = (function () {
     return {
       regionId: selectedRegionId,
       mapImage: (document.getElementById('school-field-map-image') || {}).value.trim(),
+      cardImage: (document.getElementById('school-field-card-image') || {}).value.trim(),
       gallery: gallery,
       youtube: (document.getElementById('school-field-youtube') || {}).value.trim(),
       desc: {
@@ -96,6 +102,7 @@ window.adminSchools = (function () {
     var merged = Object.assign({}, base);
     if (typeof o.mapImage === 'string' && o.mapImage) merged.mapImage = o.mapImage;
     else if (typeof o.image === 'string' && o.image) merged.mapImage = o.image;
+    if (typeof o.cardImage === 'string' && o.cardImage) merged.cardImage = o.cardImage;
     if (Array.isArray(o.gallery)) merged.gallery = o.gallery.slice();
     if (o.youtube) merged.youtube = o.youtube;
     if (o.desc) {
@@ -112,6 +119,7 @@ window.adminSchools = (function () {
     var f = formValues();
     return {
       mapImage: f.mapImage,
+      cardImage: f.cardImage,
       gallery: f.gallery,
       youtube: f.youtube || base.youtube || '',
       desc: {
@@ -233,6 +241,37 @@ window.adminSchools = (function () {
     mapInput.dispatchEvent(new Event('input', { bubbles: true }));
   }
 
+  function applyCardImageUrl(url) {
+    var cardInput = document.getElementById('school-field-card-image');
+    if (!cardInput) return;
+    cardInput.value = url || '';
+    dirty = true;
+    window.dirty = true;
+    renderCardPreview({ cardImage: url });
+    cardInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function renderCardPreview(school) {
+    var url = schoolCardImage(school);
+    var wrap = document.getElementById('admin-school-card-preview');
+    var imgEl = document.getElementById('admin-school-card-img');
+    var emptyEl = document.getElementById('admin-school-card-empty');
+    if (wrap) wrap.classList.toggle('has-photo', !!url);
+    if (imgEl) {
+      if (url) {
+        imgEl.src = url;
+        imgEl.removeAttribute('hidden');
+      } else {
+        imgEl.removeAttribute('src');
+        imgEl.setAttribute('hidden', '');
+      }
+    }
+    if (emptyEl) {
+      if (url) emptyEl.setAttribute('hidden', '');
+      else emptyEl.removeAttribute('hidden');
+    }
+  }
+
   function renderMapCard(school, entry) {
     var mapUrl = schoolMapImage(school);
     var card = document.getElementById('admin-school-map-card');
@@ -279,6 +318,7 @@ window.adminSchools = (function () {
     var videoFrame = document.getElementById('admin-school-video-frame');
 
     renderMapCard(school, entry);
+    renderCardPreview(school);
 
     if (heroTitle) heroTitle.textContent = lang === 'en' ? (entry.en || entry.kk) : entry.kk;
     if (descEl && school.desc) {
@@ -335,6 +375,7 @@ window.adminSchools = (function () {
 
     var merged = mergedSchool(entry, override);
     document.getElementById('school-field-map-image').value = schoolMapImage(merged);
+    document.getElementById('school-field-card-image').value = schoolCardImage(merged);
     document.getElementById('school-field-gallery').value = (merged.gallery || []).join('\n');
     document.getElementById('school-field-youtube').value = merged.youtube || '';
     document.getElementById('school-field-desc-kk').value = (merged.desc && merged.desc.kk) || '';
@@ -376,7 +417,7 @@ window.adminSchools = (function () {
   }
 
   function markSchoolSaveButtonsSaved() {
-    ['school-map-save-btn', 'school-gallery-save-btn'].forEach(function (id) {
+    ['school-map-save-btn', 'school-gallery-save-btn', 'school-card-save-btn'].forEach(function (id) {
       var btn = document.getElementById(id);
       if (!btn) return;
       btn.classList.add('is-saved');
@@ -413,6 +454,8 @@ window.adminSchools = (function () {
       btn.textContent = on ? 'Жүктелуде…' : 'Сурет жүктеу';
     } else if (btn.id === 'school-gallery-upload-btn') {
       btn.textContent = on ? 'Жүктелуде…' : 'Галереяға қосу';
+    } else if (btn.id === 'school-card-upload-btn') {
+      btn.textContent = on ? 'Жүктелуде…' : 'Сурет жүктеу';
     }
   }
 
@@ -491,6 +534,52 @@ window.adminSchools = (function () {
       var url = result.url;
       if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
       applyMapImageUrl(url);
+      refreshPreview();
+      setEditorStatus('Сурет жүктелді — «Сақтау» басыңыз', 'ok');
+      if (window.adminToast) window.adminToast('Сурет жүктелді', 'ok');
+    }).catch(function (e) {
+      var msg = (e && e.message) ? e.message : 'Жүктеу сәтсіз аяқталды';
+      setEditorStatus(msg, 'err');
+      if (window.adminToast) window.adminToast(msg, 'err');
+    }).then(function () {
+      setSchoolUploadBusy(btn, false);
+    });
+  }
+
+  function uploadSchoolCard(file) {
+    var err = uploadConfigError();
+    if (err) {
+      setEditorStatus(err, 'err');
+      return;
+    }
+    if (!selectedId || !selectedEntry) {
+      setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
+      return;
+    }
+    if (!file) {
+      setEditorStatus('Файл таңдалмады', 'err');
+      return;
+    }
+    if (window.mediaUpload.isImageFile && !window.mediaUpload.isImageFile(file)) {
+      setEditorStatus('PNG, JPEG, WebP немесе AVIF суретін таңдаңыз', 'err');
+      return;
+    }
+    var btn = document.getElementById('school-card-upload-btn');
+    var cardInput = document.getElementById('school-field-card-image');
+    if (!cardInput) {
+      setEditorStatus('Сурет өрісі табылмады', 'err');
+      return;
+    }
+    setSchoolUploadBusy(btn, true);
+    setEditorStatus('Сурет жүктелуде…', 'ok');
+    window.mediaUpload.upload(file, {
+      folder: schoolUploadFolder(),
+      maxDim: 1200
+    }).then(function (result) {
+      if (!result || !result.url) throw new Error('Жүктеу жауабында сілтеме жоқ');
+      var url = result.url;
+      if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
+      applyCardImageUrl(url);
       refreshPreview();
       setEditorStatus('Сурет жүктелді — «Сақтау» басыңыз', 'ok');
       if (window.adminToast) window.adminToast('Сурет жүктелді', 'ok');
@@ -600,6 +689,8 @@ window.adminSchools = (function () {
   function bindSchoolUploads() {
     var mapBtn = document.getElementById('school-map-upload-btn');
     var mapFile = document.getElementById('school-map-upload-file');
+    var cardBtn = document.getElementById('school-card-upload-btn');
+    var cardFile = document.getElementById('school-card-upload-file');
     var galBtn = document.getElementById('school-gallery-upload-btn');
     var galFile = document.getElementById('school-gallery-upload-file');
     var galRemove = document.getElementById('school-gallery-remove-btn');
@@ -622,6 +713,26 @@ window.adminSchools = (function () {
           return;
         }
         mapFile.click();
+      });
+    }
+
+    if (cardFile && !cardFile.dataset.changeBound) {
+      cardFile.dataset.changeBound = '1';
+      cardFile.addEventListener('change', function () {
+        var file = cardFile.files && cardFile.files[0];
+        cardFile.value = '';
+        if (file) uploadSchoolCard(file);
+      });
+    }
+
+    if (cardBtn && cardFile && !cardBtn.dataset.bound) {
+      cardBtn.dataset.bound = '1';
+      cardBtn.addEventListener('click', function () {
+        if (!selectedId) {
+          setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
+          return;
+        }
+        cardFile.click();
       });
     }
 
@@ -649,11 +760,14 @@ window.adminSchools = (function () {
     bindImageDropZone(mapDrop, function (files) {
       uploadSchoolMap(files[0]);
     });
+    bindImageDropZone(document.getElementById('school-card-drop-zone'), function (files) {
+      uploadSchoolCard(files[0]);
+    });
     bindImageDropZone(document.getElementById('school-gallery-drop-zone'), function (files) {
       uploadSchoolGalleryFiles(files);
     });
 
-    ['school-map-save-btn', 'school-gallery-save-btn'].forEach(function (id) {
+    ['school-map-save-btn', 'school-gallery-save-btn', 'school-card-save-btn'].forEach(function (id) {
       var saveBtn = document.getElementById(id);
       if (!saveBtn || saveBtn.dataset.bound) return;
       saveBtn.dataset.bound = '1';
@@ -705,7 +819,7 @@ window.adminSchools = (function () {
   }
 
   function bindEditorInputs() {
-    ['school-field-map-image', 'school-field-gallery', 'school-field-youtube',
+    ['school-field-map-image', 'school-field-card-image', 'school-field-gallery', 'school-field-youtube',
       'school-field-desc-kk', 'school-field-desc-en', 'school-field-teachers'].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el || el.dataset.bound) return;

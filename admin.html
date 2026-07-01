@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="admin.css?v=12" />
-<link rel="stylesheet" href="steppe.css?v=70" />
+<link rel="stylesheet" href="admin.css?v=13" />
+<link rel="stylesheet" href="steppe.css?v=71" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js?v=3"></script>
 <script src="uploads/content-schema.js"></script>
@@ -20,7 +20,7 @@
 
 <div id="gate">
   <div class="gate-card">
-    <div class="gate-logo"><span class="sun" aria-hidden="true"></span><span class="logo-name">Aul<span class="logo-mark">Bilim</span></span></div>
+    <div class="gate-logo"><img class="logo-img" src="assets/aul-bilim-logo.png" alt="Aul Bilim" width="148" height="48" /></div>
     <p class="gate-sub">Мазмұнды басқару жүйесі</p>
     <input type="email" id="email-input" placeholder="Email" autocomplete="username" />
     <input type="password" id="pw-input" placeholder="Құпия сөз" autocomplete="current-password" />
@@ -35,8 +35,8 @@
   <!-- ─── Sidebar ─────────────────────────────── -->
   <aside id="sidebar">
     <div class="sb-logo">
-      <span class="sun" aria-hidden="true"></span>
-      <div><div><span class="logo-name">Aul<span class="logo-mark">Bilim</span></span></div><small>CMS Әкімші</small></div>
+      <img class="logo-img logo-img--sb" src="assets/aul-bilim-logo.png" alt="Aul Bilim" width="120" height="39" />
+      <div><small>CMS Әкімші</small></div>
     </div>
     <div class="sb-section">Беттер</div>
 
@@ -430,7 +430,23 @@
               </div>
 
               <div class="admin-school-fields">
-                <div class="se-row2">
+                <div class="admin-school-card-image-block">
+                  <p class="admin-school-slot-label">Мектеп карточкасы</p>
+                  <div class="school-drop-zone school-drop-zone--card" id="school-card-drop-zone">
+                    <div class="school-card-photo admin-school-card-preview" id="admin-school-card-preview">
+                      <img id="admin-school-card-img" alt="" hidden />
+                      <div class="school-card-photo school-card-photo--empty" id="admin-school-card-empty" aria-hidden="true"></div>
+                    </div>
+                  </div>
+                  <div class="se-upload-row">
+                    <button type="button" class="se-upload-btn" id="school-card-upload-btn">Сурет жүктеу</button>
+                    <button type="button" class="se-save-btn" id="school-card-save-btn">Сақтау</button>
+                    <input type="file" id="school-card-upload-file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
+                    <input type="text" id="school-field-card-image" class="admin-store-field" tabindex="-1" aria-hidden="true">
+                  </div>
+                  <p class="se-hint">Облыс мектептер тізіміндегі карточка суреті.</p>
+                </div>
+                <div class="se-row2" style="margin-top:16px;">
                   <div><label class="se-label" for="school-field-desc-kk">Сипаттама — Қазақша</label><textarea class="se-textarea" id="school-field-desc-kk" rows="4"></textarea></div>
                   <div><label class="se-label" for="school-field-desc-en">Description — English</label><textarea class="se-textarea" id="school-field-desc-en" rows="4"></textarea></div>
                 </div>
@@ -460,6 +476,6 @@
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=14"></script>
+<script src="admin-schools.js?v=15"></script>
 </body>
 </html>

@@ -169,7 +169,7 @@
         r.total = data.schools.length;
         r.districtGroups = data.districts;
         r.districts = data.districts.map(function (d) {
-          return { kk: d.kk, en: d.en, n: d.n };
+          return { kk: d.kk, en: d.en, n: d.n, slug: d.slug };
         });
         r.schools = data.schools;
         r.stats = {
@@ -479,6 +479,46 @@
       return 'school.html?region=' + encodeURIComponent(regionId) + '&id=' + encodeURIComponent(schoolId);
     }
 
+    function districtTargetId(d, i) {
+      return d.slug ? 'district-' + d.slug : 'district-' + i;
+    }
+
+    function mergeSchoolOverride(base, override) {
+      if (!override) return base;
+      var merged = Object.assign({}, base);
+      if (typeof override.cardImage === 'string' && override.cardImage) merged.cardImage = override.cardImage;
+      if (typeof override.mapImage === 'string' && override.mapImage) merged.mapImage = override.mapImage;
+      else if (typeof override.image === 'string' && override.image) merged.mapImage = override.image;
+      if (Array.isArray(override.gallery)) merged.gallery = override.gallery.slice();
+      if (override.youtube) merged.youtube = override.youtube;
+      if (override.desc) {
+        merged.desc = Object.assign({}, base.desc || {});
+        if (override.desc.kk) merged.desc.kk = override.desc.kk;
+        if (override.desc.en) merged.desc.en = override.desc.en;
+      }
+      if (override.teachers != null) merged.teachers = override.teachers;
+      return merged;
+    }
+
+    function regionWithOverrides(r) {
+      if (!window.db || !window.db.getSchoolContent || !r.schools || !r.schools.length) {
+        return Promise.resolve(r);
+      }
+      return Promise.all(r.schools.map(function (s) {
+        return window.db.getSchoolContent(s.id).then(function (o) {
+          return o ? mergeSchoolOverride(s, o) : s;
+        }).catch(function () { return s; });
+      })).then(function (schools) {
+        return Object.assign({}, r, { schools: schools });
+      });
+    }
+
+    function schoolCardPreview(s) {
+      if (s.cardImage) return s.cardImage;
+      var gallery = schoolGalleryImages(s);
+      if (gallery.length) return gallery[0];
+      return s.mapImage || s.image || '';
+    }
     function schoolGalleryImages(s) {
       if (s.gallery && s.gallery.length) {
         return s.gallery.filter(function (src) { return !!src; });
@@ -487,7 +527,7 @@
     }
 
     function renderSchoolCard(s, i, regionId, district) {
-      var preview = schoolGalleryImages(s)[0] || s.image || '';
+      var preview = schoolCardPreview(s);
       var href = schoolPageUrl(regionId, s.id);
       var search = schoolSearchHaystack(s, district);
       var teachersHtml = s.teachers != null
@@ -563,7 +603,7 @@
       if (!districts.length) return '';
 
       return districts.map(function (d, i) {
-        var target = d.slug ? 'district-' + d.slug : 'district-' + i;
+        var target = districtTargetId(d, i);
         return '<button type="button" class="region-chip district-chip" data-district-target="' + target + '" style="animation-delay:' + (0.04 * i) + 's">' +
           '<span class="region-chip-name">' + bi(d.kk, d.en) + '</span>' +
           '<span class="region-chip-count">' + d.n + ' ' + bi('мектеп', 'schools') + '</span>' +
@@ -717,10 +757,11 @@
       applyZoom(r);
 
       var chips = r.districts.map(function (d, i) {
-        return '<div class="district" style="animation-delay:' + (0.06 * i + 0.15) + 's">' +
+        var target = districtTargetId(d, i);
+        return '<button type="button" class="district district-chip" data-district-target="' + target + '" style="animation-delay:' + (0.06 * i + 0.15) + 's">' +
           '<span class="dn">' + bi(d.kk, d.en) + '</span>' +
           '<span class="dc">' + d.n + ' ' + bi('мектеп', 'schools') + '</span>' +
-        '</div>';
+        '</button>';
       }).join('');
 
       panel.innerHTML =
@@ -741,6 +782,11 @@
       document.getElementById('region-back').addEventListener('click', goToMap);
       document.getElementById('region-schools-cta').addEventListener('click', function () {
         openSchools(r.id);
+      });
+      panel.querySelectorAll('.district-chip').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          openSchoolsToDistrict(r.id, btn.getAttribute('data-district-target'));
+        });
       });
       return r;
     }
@@ -776,16 +822,31 @@
       if (!r) return;
       current = r;
       view = 'schools';
-      renderSchoolsSection(r);
       mapBlock.hidden = true;
       schoolsBlock.hidden = false;
       lockSchoolsScroll();
       schoolsBlock.scrollTop = 0;
-      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-' + id + '-schools', !!(opts && opts.replaceHash));
+      schoolsRoot.innerHTML = '<div class="schools-loading">' + bi('Жүктелуде…', 'Loading…') + '</div>';
+      regionWithOverrides(r).then(function (merged) {
+        current = merged;
+        renderSchoolsSection(merged);
+        if (opts && opts.districtTarget) {
+          requestAnimationFrame(function () {
+            scrollToDistrict(opts.districtTarget);
+          });
+        }
+        if (!syncingHash && !(opts && opts.skipHash)) {
+          setMapHash('region-' + id + '-schools', !!(opts && opts.replaceHash));
+        }
+      });
     }
 
     function openSchools(id) {
       showSchoolsView(id, { replaceHash: true });
+    }
+
+    function openSchoolsToDistrict(regionId, districtTarget) {
+      showSchoolsView(regionId, { replaceHash: true, districtTarget: districtTarget });
     }
 
     function openRegion(id) {
