@@ -31,10 +31,16 @@
     };
   }
 
+  function schoolMapImage(school) {
+    if (!school) return '';
+    return String(school.mapImage || school.image || '').trim();
+  }
+
   function mergeSchoolOverride(base, override) {
     if (!override) return base;
     var merged = Object.assign({}, base);
-    if (typeof override.mapImage === 'string') merged.mapImage = override.mapImage;
+    if (typeof override.mapImage === 'string' && override.mapImage) merged.mapImage = override.mapImage;
+    else if (typeof override.image === 'string' && override.image) merged.mapImage = override.image;
     if (Array.isArray(override.gallery)) merged.gallery = override.gallery.slice();
     if (override.youtube) merged.youtube = override.youtube;
     if (override.desc) {
@@ -191,7 +197,7 @@
   }
 
   function renderMapCard(school, name) {
-    var mapUrl = school.mapImage || '';
+    var mapUrl = schoolMapImage(school);
     var card = document.getElementById('school-map-card');
     var imgEl = document.getElementById('school-map-img');
     var phEl = document.getElementById('school-map-placeholder');

@@ -386,6 +386,7 @@ aside#sidebar {
   border-radius: 18px;
   border: 2px dashed transparent;
   background: transparent;
+  cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
 }
 .school-drop-zone--map .school-map-card {

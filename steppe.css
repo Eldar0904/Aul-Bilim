@@ -775,6 +775,7 @@ body.map-schools-open .region-schools-block {
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, #3d6fa8 0%, #1b4f8a 45%, #143a6e 100%);
+  pointer-events: none;
 }
 .school-map-placeholder img {
   width: 100%;
