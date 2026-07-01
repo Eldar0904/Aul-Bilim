@@ -336,6 +336,7 @@ window.adminSchools = (function () {
 
     renderLivePage(entry, merged);
     dirty = false;
+    bindSchoolUploads();
   }
 
   function schoolUploadFolder() {
@@ -447,8 +448,16 @@ window.adminSchools = (function () {
       setEditorStatus(err, 'err');
       return;
     }
-    if (!selectedId) {
+    if (!selectedId || !selectedEntry) {
       setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
+      return;
+    }
+    if (!file) {
+      setEditorStatus('Файл таңдалмады', 'err');
+      return;
+    }
+    if (window.mediaUpload.isImageFile && !window.mediaUpload.isImageFile(file)) {
+      setEditorStatus('PNG, JPEG, WebP немесе AVIF суретін таңдаңыз', 'err');
       return;
     }
     var btn = document.getElementById('school-map-upload-btn');
@@ -458,20 +467,24 @@ window.adminSchools = (function () {
       return;
     }
     setSchoolUploadBusy(btn, true);
+    setEditorStatus('Сурет жүктелуде…', 'ok');
     window.mediaUpload.upload(file, {
       folder: schoolUploadFolder(),
       maxDim: 1600
     }).then(function (result) {
       if (!result || !result.url) throw new Error('Жүктеу жауабында сілтеме жоқ');
-      mapInput.value = result.url;
+      var url = result.url;
+      if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
+      mapInput.value = url;
       dirty = true;
       window.dirty = true;
       refreshPreview();
       setEditorStatus('Сурет жүктелді — «Сақтау» басыңыз', 'ok');
       if (window.adminToast) window.adminToast('Сурет жүктелді', 'ok');
     }).catch(function (e) {
-      setEditorStatus(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
-      if (window.adminToast) window.adminToast(e.message || 'Жүктеу сәтсіз аяқталды', 'err');
+      var msg = (e && e.message) ? e.message : 'Жүктеу сәтсіз аяқталды';
+      setEditorStatus(msg, 'err');
+      if (window.adminToast) window.adminToast(msg, 'err');
     }).then(function () {
       setSchoolUploadBusy(btn, false);
     });
@@ -579,7 +592,13 @@ window.adminSchools = (function () {
 
     if (mapBtn && mapFile && !mapBtn.dataset.bound) {
       mapBtn.dataset.bound = '1';
-      mapBtn.addEventListener('click', function () { mapFile.click(); });
+      mapBtn.addEventListener('click', function () {
+        if (!selectedId) {
+          setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
+          return;
+        }
+        mapFile.click();
+      });
       mapFile.addEventListener('change', function () {
         var file = mapFile.files && mapFile.files[0];
         mapFile.value = '';
@@ -614,8 +633,11 @@ window.adminSchools = (function () {
     if (mapDrop && mapFile && !mapDrop.dataset.clickBound) {
       mapDrop.dataset.clickBound = '1';
       mapDrop.addEventListener('click', function (e) {
-        if (!selectedId) return;
         if (e.target.closest('button')) return;
+        if (!selectedId) {
+          setEditorStatus('Алдымен мектеп таңдаңыз', 'err');
+          return;
+        }
         mapFile.click();
       });
     }

@@ -13,8 +13,8 @@
 <script src="uploads/content-schema.js"></script>
 <script src="uploads/db.js?v=3"></script>
 <script src="uploads/media-config.js"></script>
-<script src="uploads/media-upload.js?v=3"></script>
-<link rel="stylesheet" href="admin.css?v=10" />
+<script src="uploads/media-upload.js?v=4"></script>
+<link rel="stylesheet" href="admin.css?v=11" />
 </head>
 <body>
 
@@ -366,8 +366,8 @@
                 <button type="button" data-admin-lang="en">ENG</button>
               </div>
 
-              <div class="admin-school-hero-grid">
-                <div class="admin-school-left">
+              <div class="school-hero-grid admin-school-hero-grid">
+                <div class="school-hero-left admin-school-left">
                   <div class="school-drop-zone school-drop-zone--map" id="school-map-drop-zone">
                     <div class="school-map-card school-map-card--placeholder" id="admin-school-map-card">
                       <img id="admin-school-map-img" class="school-map-photo" alt="" hidden />
@@ -391,20 +391,9 @@
                     <p class="school-page-desc" id="admin-school-desc"></p>
                     <p class="school-page-teachers" id="admin-school-teachers" hidden></p>
                   </div>
-
-                  <div class="admin-school-fields">
-                    <div class="se-row2">
-                      <div><label class="se-label" for="school-field-desc-kk">Сипаттама — Қазақша</label><textarea class="se-textarea" id="school-field-desc-kk" rows="4"></textarea></div>
-                      <div><label class="se-label" for="school-field-desc-en">Description — English</label><textarea class="se-textarea" id="school-field-desc-en" rows="4"></textarea></div>
-                    </div>
-                    <div style="margin-top:12px;">
-                      <label class="se-label" for="school-field-teachers">Мұғалімдер саны</label>
-                      <input class="se-input" type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" style="width:160px;">
-                    </div>
-                  </div>
                 </div>
 
-                <div class="admin-school-right">
+                <div class="school-hero-media-stack admin-school-right">
                   <div class="school-media-card-wrap">
                     <div class="school-drop-zone school-drop-zone--gallery" id="school-gallery-drop-zone">
                       <div class="school-media-card">
@@ -440,6 +429,17 @@
                 </div>
               </div>
 
+              <div class="admin-school-fields">
+                <div class="se-row2">
+                  <div><label class="se-label" for="school-field-desc-kk">Сипаттама — Қазақша</label><textarea class="se-textarea" id="school-field-desc-kk" rows="4"></textarea></div>
+                  <div><label class="se-label" for="school-field-desc-en">Description — English</label><textarea class="se-textarea" id="school-field-desc-en" rows="4"></textarea></div>
+                </div>
+                <div style="margin-top:12px;">
+                  <label class="se-label" for="school-field-teachers">Мұғалімдер саны</label>
+                  <input class="se-input" type="number" id="school-field-teachers" min="0" step="1" placeholder="мыс. 24" style="width:160px;">
+                </div>
+              </div>
+
             </div><!-- #school-editor -->
           </div><!-- .schools-editor -->
         </div><!-- .schools-layout -->
@@ -460,6 +460,6 @@
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=11"></script>
+<script src="admin-schools.js?v=12"></script>
 </body>
 </html>
