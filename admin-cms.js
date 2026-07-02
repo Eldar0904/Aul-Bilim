@@ -11,7 +11,8 @@
     home:     { label: 'Басты бет',     file: 'index.html',    preview: 'index.html' },
     programs: { label: 'Бағдарламалар', file: 'programs.html', preview: 'programs.html' },
     about:    { label: 'Біз туралы',    file: 'about.html',    preview: 'about.html' },
-    schools:  { label: 'Мектептер',     file: 'school.html',   preview: 'school.html' }
+    schools:  { label: 'Мектептер',     file: 'school.html',   preview: 'school.html' },
+    regions:  { label: 'Өңірлер',       file: 'index.html#regions', preview: 'index.html#regions' }
   };
 
   var currentPage = 'home';
@@ -235,11 +236,20 @@
     });
 
     var sp = document.getElementById('schools-panel');
+    var rp = document.getElementById('regions-panel');
     if (pageId === 'schools') {
       sp.classList.add('show');
       if (window.adminSchools) window.adminSchools.render();
     } else {
       sp.classList.remove('show');
+    }
+    if (pageId === 'regions') {
+      if (rp) rp.classList.add('show');
+      if (window.adminRegions) window.adminRegions.render();
+    } else if (rp) {
+      rp.classList.remove('show');
+    }
+    if (pageId !== 'schools' && pageId !== 'regions') {
       document.getElementById('content').scrollTop = 0;
     }
   }
@@ -282,6 +292,27 @@
       } else {
         resetSaveBtn();
         toast(r && r.error ? r.error : 'Сақтау сәтсіз аяқталды', 'err');
+      }
+      return;
+    }
+
+    if (currentPage === 'regions') {
+      btn.textContent = 'Сақталуда…';
+      btn.classList.add('saving');
+      var regionResult = await window.adminRegions.save();
+      btn.classList.remove('saving');
+      if (regionResult && regionResult.success) {
+        dirty = false;
+        if (window.adminMarkSaved) window.adminMarkSaved();
+        else {
+          btn.textContent = '✓ Сақталды';
+          btn.classList.add('saved');
+          setTimeout(resetSaveBtn, 3000);
+        }
+        toast('Өңір статистикасы сақталды — картада көрінеді.', 'ok');
+      } else {
+        resetSaveBtn();
+        toast(regionResult && regionResult.error ? regionResult.error : 'Сақтау сәтсіз аяқталды', 'err');
       }
       return;
     }
@@ -348,7 +379,9 @@
   };
 
   window.addEventListener('beforeunload', function (e) {
-    if (dirty || (window.adminSchools && window.adminSchools.isDirty())) {
+    if (dirty ||
+      (window.adminSchools && window.adminSchools.isDirty()) ||
+      (window.adminRegions && window.adminRegions.isDirty())) {
       e.preventDefault();
       e.returnValue = '';
     }

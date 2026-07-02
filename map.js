@@ -184,6 +184,34 @@
   }
   applyRegionSchoolsData();
 
+  var regionStatsOverridesReady = null;
+
+  function applyRegionStatsOverrides(map) {
+    if (!map) return;
+    REGIONS.forEach(function (r) {
+      var o = map[r.id];
+      if (!o) return;
+      if (!r.stats) r.stats = {};
+      if (o.schools != null && String(o.schools).trim() !== '') r.stats.schools = String(o.schools).trim();
+      if (o.cabinets != null && String(o.cabinets).trim() !== '') r.stats.cabinets = String(o.cabinets).trim();
+      if (o.teachers != null && String(o.teachers).trim() !== '') r.stats.teachers = String(o.teachers).trim();
+    });
+  }
+
+  function ensureRegionStatsOverrides() {
+    if (!regionStatsOverridesReady) {
+      regionStatsOverridesReady = (window.db && window.db.getRegionStatsMap)
+        ? window.db.getRegionStatsMap().then(function (map) {
+            applyRegionStatsOverrides(map || {});
+            return map || {};
+          })
+        : Promise.resolve({});
+    }
+    return regionStatsOverridesReady;
+  }
+
+  ensureRegionStatsOverrides();
+
   REGIONS.forEach(function (r) {
     if (r.schools && r.schools.length) return;
     r.stats = {
@@ -306,6 +334,10 @@
     var syncingHash = false;
     var mapReady = false;
     var zoomAnimTimer = null;
+
+    ensureRegionStatsOverrides().then(function () {
+      if (view === 'schools' && current) renderSchoolsSection(current);
+    });
 
     var regionByMapId = {};
     REGIONS.forEach(function (r) { regionByMapId[r.mapId] = r; });

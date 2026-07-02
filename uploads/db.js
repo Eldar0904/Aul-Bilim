@@ -231,6 +231,18 @@ window.db = (function () {
     return { success: true };
   }
 
+  async function getRegionStatsMap() {
+    var content = await getSiteContent();
+    return (content && content.regionStats) ? content.regionStats : {};
+  }
+
+  async function saveRegionStatsMap(statsMap) {
+    var content = await getSiteContent() || {};
+    content.regionStats = statsMap || {};
+    content.regionStatsUpdatedAt = new Date().toISOString();
+    return saveSiteContent(content);
+  }
+
   return {
     submitContactForm: submitContactForm,
     getSiteContent: getSiteContent,
@@ -240,6 +252,8 @@ window.db = (function () {
     getStories: getStories,
     getSchoolContent: getSchoolContent,
     saveSchoolContent: saveSchoolContent,
+    getRegionStatsMap: getRegionStatsMap,
+    saveRegionStatsMap: saveRegionStatsMap,
     normalizeMediaUrl: normalizeMediaUrl
   };
 

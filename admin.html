@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="admin.css?v=15" />
+<link rel="stylesheet" href="admin.css?v=16" />
 <link rel="stylesheet" href="steppe.css?v=74" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js?v=3"></script>
 <script src="uploads/content-schema.js"></script>
-<script src="uploads/db.js?v=3"></script>
+<script src="uploads/db.js?v=4"></script>
 <script src="uploads/media-config.js"></script>
 <script src="uploads/media-upload.js?v=4"></script>
 </head>
@@ -51,6 +51,10 @@
     <button class="sb-page" data-page="about">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
       Біз туралы
+    </button>
+    <button class="sb-page" data-page="regions">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polygon points="1 6 12 1 23 6 12 11 1 6"/><polyline points="1 12 12 17 23 12"/><polyline points="1 18 12 23 23 18"/></svg>
+      Өңірлер
     </button>
     <button class="sb-page" data-page="schools">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><path d="M9 22V12h6v10"></path></svg>
@@ -469,13 +473,29 @@
         </div><!-- .schools-layout -->
       </div><!-- #schools-panel -->
 
+      <div id="regions-panel" data-view="regions">
+        <div class="regions-layout">
+          <div class="as" style="margin-top:20px;">
+            <div class="as-head">
+              <h3>Облыс статистикасы</h3>
+              <span class="badge">index.html · карта</span>
+            </div>
+            <div class="as-body">
+              <p class="regions-lead">Әр облыс үшін мектеп, кабинет және оқытылған ұстаз сандарын өңдеңіз. Тізімдегі және тізімде жоқ облыстардың барлығына қолданылады.</p>
+              <div id="region-stats-list" class="region-stats-list"></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /regions-panel -->
+
     </div><!-- #content -->
   </div><!-- #main -->
 
 </div><!-- #app -->
 
 <div id="toast"></div>
-<script src="admin-cms.js?v=8"></script>
+<script src="admin-cms.js?v=9"></script>
+<script src="uploads/region-registry.js"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>
 <script src="assets/akmola-schools.js?v=9"></script>
@@ -485,5 +505,6 @@
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
 <script src="admin-schools.js?v=15"></script>
+<script src="admin-regions.js?v=1"></script>
 </body>
 </html>

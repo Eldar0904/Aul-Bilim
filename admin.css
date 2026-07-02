@@ -262,6 +262,81 @@ aside#sidebar {
   display: none; height: calc(100vh - var(--topbar)); overflow: hidden;
 }
 #schools-panel.show { display: block; }
+
+/* ── REGIONS PANEL ────────────────────────────── */
+#regions-panel {
+  display: none;
+  height: calc(100vh - var(--topbar));
+  overflow-y: auto;
+}
+#regions-panel.show { display: block; }
+.regions-layout { max-width: 980px; padding: 0 24px 40px; }
+.regions-lead {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--body);
+  margin: 0 0 20px;
+  max-width: 62ch;
+}
+.region-stats-list { display: grid; gap: 14px; }
+.region-stat-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.region-stat-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.region-stat-name {
+  font-family: var(--fh);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+.region-stat-name-en {
+  font-size: 12.5px;
+  color: var(--body);
+  margin: 4px 0 0;
+}
+.region-stat-badge {
+  flex: none;
+  font-family: var(--fh);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(27,79,138,0.08);
+  color: var(--primary);
+}
+.region-stat-badge.is-live {
+  background: rgba(242,164,19,0.16);
+  color: var(--accent-deep);
+}
+.region-stat-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.region-stat-field label {
+  display: block;
+  font-family: var(--fh);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--body);
+  margin-bottom: 6px;
+}
+.region-stat-field .se-input.changed { border-color: var(--accent); }
+
 .schools-layout { display: grid; grid-template-columns: 310px 1fr; height: 100%; }
 .schools-sb { background: #fff; border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
 .schools-sb-head { padding: 14px 16px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
