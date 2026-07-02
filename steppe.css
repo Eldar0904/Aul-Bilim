@@ -69,15 +69,16 @@ nav.bar {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(180,140,60,0.16);
   overflow: visible;
+  --nav-h: 96px;
 }
-.bar-in { display: flex; align-items: stretch; justify-content: space-between; height: 74px; gap: 20px; overflow: visible; }
+.bar-in { display: flex; align-items: stretch; justify-content: space-between; height: var(--nav-h); gap: 20px; overflow: visible; }
 .logo { font-family: var(--fh); font-weight: 900; font-size: 21px; color: var(--primary); letter-spacing: -0.02em; display: flex; align-items: center; gap: 11px; flex: none; align-self: center; text-decoration: none; }
-.logo--wordmark { gap: 0; }
+.logo--wordmark { gap: 0; min-width: 0; }
 .logo-wordmark {
   display: block;
-  height: 42px;
+  height: 72px;
   width: auto;
-  max-width: min(220px, 42vw);
+  max-width: min(360px, 58vw);
   object-fit: contain;
   object-position: left center;
 }
@@ -94,7 +95,7 @@ nav.bar {
   .nav-links { gap: 22px; }
   .nav-links a { font-size: 14px; }
   .logo { font-size: 22px; gap: 12px; }
-  .logo-wordmark { height: 44px; max-width: min(240px, 38vw); }
+  .logo-wordmark { height: 80px; max-width: min(400px, 52vw); }
   .logo .sun { width: 32px; height: 32px; }
 }
 @media (min-width: 1400px) {
@@ -151,7 +152,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 /* ---------- HERO full-bleed (home) ---------- */
 .hero-fb {
   position: relative;
-  min-height: calc(100vh - 74px);
+  min-height: calc(100vh - var(--nav-h, 96px));
   height: auto;
   overflow: hidden;
   display: flex;
@@ -458,7 +459,7 @@ button.district:focus-visible {
 body.map-schools-open { overflow: hidden; }
 body.map-schools-open .region-schools-block {
   position: fixed;
-  inset: 74px 0 0;
+  inset: var(--nav-h, 96px) 0 0;
   z-index: 4;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -2550,13 +2551,13 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .nav-links { display: none; }
   .nav-links.open {
     display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
-    position: absolute; top: 74px; left: 0; right: 0; background: var(--cream);
+    position: absolute; top: var(--nav-h, 96px); left: 0; right: 0; background: var(--cream);
     border-bottom: 1px solid var(--line); padding: 16px 28px 22px; box-shadow: 0 20px 40px -24px rgba(27,79,138,0.4);
   }
   .nav-links.open a { padding: 10px 0 14px; font-size: 17px; width: 100%; border-bottom-width: 3px; }
   .menu-btn { display: grid; place-items: center; }
   .logo { font-size: 18px; gap: 9px; }
-  .logo-wordmark { height: 36px; max-width: min(180px, 48vw); }
+  .logo-wordmark { height: 58px; max-width: min(300px, 62vw); }
   .logo .sun { width: 26px; height: 26px; }
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
