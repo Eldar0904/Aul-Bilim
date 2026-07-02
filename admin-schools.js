@@ -60,6 +60,12 @@ window.adminSchools = (function () {
     return String(school.cardImage || '').trim();
   }
 
+  function schoolCardDesc(school) {
+    if (!school) return { kk: '', en: '' };
+    if (school.cardDesc) return school.cardDesc;
+    return school.desc || { kk: '', en: '' };
+  }
+
   function hasMedia(school) {
     return !!(schoolMapImage(school) || schoolCardImage(school) || (school.gallery && school.gallery.length) || school.youtube);
   }
@@ -92,6 +98,10 @@ window.adminSchools = (function () {
         kk: (document.getElementById('school-field-desc-kk') || {}).value.trim(),
         en: (document.getElementById('school-field-desc-en') || {}).value.trim()
       },
+      cardDesc: {
+        kk: (document.getElementById('school-field-card-desc-kk') || {}).value.trim(),
+        en: (document.getElementById('school-field-card-desc-en') || {}).value.trim()
+      },
       teachers: Number.isFinite(teachers) ? teachers : null
     };
   }
@@ -110,6 +120,11 @@ window.adminSchools = (function () {
       if (o.desc.kk) merged.desc.kk = o.desc.kk;
       if (o.desc.en) merged.desc.en = o.desc.en;
     }
+    if (o.cardDesc) {
+      merged.cardDesc = Object.assign({}, base.cardDesc || {});
+      if (o.cardDesc.kk != null) merged.cardDesc.kk = o.cardDesc.kk;
+      if (o.cardDesc.en != null) merged.cardDesc.en = o.cardDesc.en;
+    }
     if (o.teachers != null) merged.teachers = o.teachers;
     return merged;
   }
@@ -117,7 +132,8 @@ window.adminSchools = (function () {
   function mergedFromForm(entry) {
     var base = entry.base;
     var f = formValues();
-    return {
+    var override = selectedId ? overrideCache[selectedId] : null;
+    var merged = {
       mapImage: f.mapImage,
       cardImage: f.cardImage,
       gallery: f.gallery,
@@ -131,6 +147,10 @@ window.adminSchools = (function () {
       kk: entry.kk,
       en: entry.en
     };
+    if (f.cardDesc.kk || f.cardDesc.en || (override && override.cardDesc != null)) {
+      merged.cardDesc = { kk: f.cardDesc.kk, en: f.cardDesc.en };
+    }
+    return merged;
   }
 
   function stopCarousel() {
@@ -247,15 +267,22 @@ window.adminSchools = (function () {
     cardInput.value = url || '';
     dirty = true;
     window.dirty = true;
-    renderCardPreview({ cardImage: url });
+    if (selectedEntry) {
+      refreshPreview();
+    }
     cardInput.dispatchEvent(new Event('input', { bubbles: true }));
   }
 
-  function renderCardPreview(school) {
+  function renderCardPreview(school, entry) {
     var url = schoolCardImage(school);
     var wrap = document.getElementById('admin-school-card-preview');
     var imgEl = document.getElementById('admin-school-card-img');
     var emptyEl = document.getElementById('admin-school-card-empty');
+    var titleEl = document.getElementById('admin-school-card-title');
+    var descEl = document.getElementById('admin-school-card-desc');
+    var lang = previewLang;
+    var cardDesc = schoolCardDesc(school);
+
     if (wrap) wrap.classList.toggle('has-photo', !!url);
     if (imgEl) {
       if (url) {
@@ -269,6 +296,12 @@ window.adminSchools = (function () {
     if (emptyEl) {
       if (url) emptyEl.setAttribute('hidden', '');
       else emptyEl.removeAttribute('hidden');
+    }
+    if (titleEl && entry) {
+      titleEl.textContent = lang === 'en' ? (entry.en || entry.kk) : entry.kk;
+    }
+    if (descEl) {
+      descEl.textContent = lang === 'en' ? (cardDesc.en || '') : (cardDesc.kk || '');
     }
   }
 
@@ -318,7 +351,7 @@ window.adminSchools = (function () {
     var videoFrame = document.getElementById('admin-school-video-frame');
 
     renderMapCard(school, entry);
-    renderCardPreview(school);
+    renderCardPreview(school, entry);
 
     if (heroTitle) heroTitle.textContent = lang === 'en' ? (entry.en || entry.kk) : entry.kk;
     if (descEl && school.desc) {
@@ -380,6 +413,14 @@ window.adminSchools = (function () {
     document.getElementById('school-field-youtube').value = merged.youtube || '';
     document.getElementById('school-field-desc-kk').value = (merged.desc && merged.desc.kk) || '';
     document.getElementById('school-field-desc-en').value = (merged.desc && merged.desc.en) || '';
+    var cardDescSource;
+    if (override && override.cardDesc != null) {
+      cardDescSource = override.cardDesc;
+    } else {
+      cardDescSource = merged.desc || { kk: '', en: '' };
+    }
+    document.getElementById('school-field-card-desc-kk').value = cardDescSource.kk || '';
+    document.getElementById('school-field-card-desc-en').value = cardDescSource.en || '';
     document.getElementById('school-field-teachers').value = merged.teachers != null ? String(merged.teachers) : '';
 
     var status = document.getElementById('school-editor-status');
@@ -820,7 +861,8 @@ window.adminSchools = (function () {
 
   function bindEditorInputs() {
     ['school-field-map-image', 'school-field-card-image', 'school-field-gallery', 'school-field-youtube',
-      'school-field-desc-kk', 'school-field-desc-en', 'school-field-teachers'].forEach(function (id) {
+      'school-field-desc-kk', 'school-field-desc-en', 'school-field-card-desc-kk', 'school-field-card-desc-en',
+      'school-field-teachers'].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el || el.dataset.bound) return;
       el.dataset.bound = '1';

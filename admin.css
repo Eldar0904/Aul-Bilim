@@ -433,6 +433,26 @@ aside#sidebar {
   border-radius: 16px;
 }
 .admin-school-card-image-block { margin-bottom: 4px; }
+.admin-school-page-desc-edit { margin-top: 16px; }
+.admin-school-card-text-preview {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.admin-school-card-text-preview h4 {
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.admin-school-card-text-preview .school-card-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+  white-space: pre-line;
+}
+.admin-school-card-desc-edit { margin-top: 14px; }
 .school-drop-zone--card {
   margin: 0 0 10px;
   border-radius: 14px;

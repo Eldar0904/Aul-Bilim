@@ -243,7 +243,9 @@
       district && district.en,
       district && district.key,
       s.desc && s.desc.kk,
-      s.desc && s.desc.en
+      s.desc && s.desc.en,
+      s.cardDesc && s.cardDesc.kk,
+      s.cardDesc && s.cardDesc.en
     ].filter(Boolean).join(' ');
     return normalizeSearchText(raw);
   }
@@ -483,6 +485,11 @@
       return d.slug ? 'district-' + d.slug : 'district-' + i;
     }
 
+    function schoolCardDesc(s) {
+      if (s.cardDesc) return s.cardDesc;
+      return s.desc || { kk: '', en: '' };
+    }
+
     function mergeSchoolOverride(base, override) {
       if (!override) return base;
       var merged = Object.assign({}, base);
@@ -495,6 +502,11 @@
         merged.desc = Object.assign({}, base.desc || {});
         if (override.desc.kk) merged.desc.kk = override.desc.kk;
         if (override.desc.en) merged.desc.en = override.desc.en;
+      }
+      if (override.cardDesc) {
+        merged.cardDesc = Object.assign({}, base.cardDesc || {});
+        if (override.cardDesc.kk != null) merged.cardDesc.kk = override.cardDesc.kk;
+        if (override.cardDesc.en != null) merged.cardDesc.en = override.cardDesc.en;
       }
       if (override.teachers != null) merged.teachers = override.teachers;
       return merged;
@@ -536,6 +548,7 @@
             s.teachers + ' ' + bi('мұғалім', 'teachers') +
           '</span>'
         : '';
+      var cardDesc = schoolCardDesc(s);
       return '<a class="school-card is-clickable" href="' + href + '" data-search="' + escAttr(search) + '" style="animation-delay:' + (0.05 * i) + 's">' +
         (preview
           ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
@@ -546,7 +559,7 @@
             bi(s.location.kk, s.location.en) +
           '</p>' +
           '<h4>' + bi(s.kk, s.en) + '</h4>' +
-          '<p class="school-card-desc">' + bi(s.desc.kk, s.desc.en) + '</p>' +
+          '<p class="school-card-desc">' + bi(cardDesc.kk, cardDesc.en) + '</p>' +
           '<div class="school-card-foot">' +
             teachersHtml +
             '<span class="school-card-link" aria-hidden="true">↗</span>' +
