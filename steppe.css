@@ -1717,17 +1717,25 @@ body.map-schools-open .region-schools-block {
 
 .prog-slab-body--carousel {
   padding: 0;
-  min-height: 320px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.prog-slab:has(.prog-slab-body--carousel) .prog-slab-side {
+  min-height: 0;
 }
 .prog-slab-body--carousel .feat-carousel {
-  height: 100%;
-  min-height: 320px;
+  width: 100%;
+  height: auto;
+  min-height: 0;
   background: #fff;
 }
 .prog-slab-body--carousel .feat-carousel-viewport {
-  aspect-ratio: unset;
-  height: 100%;
-  min-height: 320px;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  width: 100%;
 }
 
 /* Samruk — banner + numbered rows */
@@ -2742,11 +2750,6 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
   .dir-feats, .dir-results-stats { grid-template-columns: 1fr; }
-  .prog-slab-body--carousel,
-  .prog-slab-body--carousel .feat-carousel,
-  .prog-slab-body--carousel .feat-carousel-viewport {
-    min-height: 240px;
-  }
   .feat-carousel-arrow { opacity: 1; }
   .dir-panel-body { padding: 36px 24px; }
   .prog-page-hero { min-height: min(58vh, 520px); }
