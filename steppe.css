@@ -1874,54 +1874,64 @@ body.map-schools-open .region-schools-block {
 }
 .dir-feat--carousel .dir-feat-ic { margin-bottom: 14px; }
 
-/* Fit-out program: stacked rows, copy left / carousel right */
-.dir-feats--stack {
-  grid-template-columns: 1fr;
-  gap: 28px;
-}
-.dir-feat--split {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  align-items: stretch;
-  padding: 0;
-  overflow: hidden;
-}
-.dir-feat--split .dir-feat-body {
-  padding: 36px 40px;
+/* Fit-out program: copy left, carousel right — no cards */
+#prog-content-fitout .fitout-rows {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--surface) 0%, var(--cream) 100%);
-  border-right: 1px solid var(--line);
+  gap: 36px;
+  margin-bottom: 44px;
 }
-.dir-feat--split .dir-feat-ic {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 18px;
+#prog-content-fitout .fitout-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
 }
-.dir-feat--split h4 {
-  font-family: var(--fh);
-  font-size: clamp(22px, 2.2vw, 28px);
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--ink);
-  margin: 0 0 14px;
-  letter-spacing: -0.02em;
+#prog-content-fitout .fitout-copy {
+  min-width: 0;
+  padding-right: 8px;
 }
-.dir-feat--split p {
-  font-size: 15.5px;
-  line-height: 1.65;
+#prog-content-fitout .fitout-copy-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+#prog-content-fitout .fitout-copy-head .dir-feat-ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   margin: 0;
-  max-width: 42ch;
+  flex-shrink: 0;
 }
-.dir-feat--split .feat-carousel {
-  min-height: 100%;
-  background: var(--bg);
+#prog-content-fitout .fitout-copy-head .dir-feat-ic svg {
+  width: 20px;
+  height: 20px;
 }
-.dir-feat--split .feat-carousel-viewport {
-  aspect-ratio: auto;
-  height: 100%;
-  min-height: 300px;
+#prog-content-fitout .fitout-copy h4 {
+  font-family: var(--fh);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+#prog-content-fitout .fitout-copy p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--body);
+  margin: 0;
+  max-width: 46ch;
+}
+#prog-content-fitout .fitout-row .feat-carousel {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px -18px rgba(27, 79, 138, 0.35);
+}
+#prog-content-fitout .fitout-row .feat-carousel-viewport {
+  aspect-ratio: 16 / 10;
+  max-height: 260px;
 }
 
 .feat-carousel {
@@ -2774,16 +2784,18 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
   .dir-feats, .dir-results-stats { grid-template-columns: 1fr; }
-  .dir-feat--split {
+  #prog-content-fitout .fitout-rows {
+    gap: 28px;
+  }
+  #prog-content-fitout .fitout-row {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .dir-feat--split .dir-feat-body {
-    padding: 28px 24px;
-    border-right: none;
-    border-bottom: 1px solid var(--line);
+  #prog-content-fitout .fitout-copy {
+    padding-right: 0;
   }
-  .dir-feat--split .feat-carousel-viewport {
-    min-height: 240px;
+  #prog-content-fitout .fitout-row .feat-carousel-viewport {
+    max-height: none;
     aspect-ratio: 16 / 10;
   }
   .feat-carousel-arrow { opacity: 1; }
