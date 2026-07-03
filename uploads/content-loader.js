@@ -15,6 +15,14 @@
       var val = data[field.key];
       if (val == null || val === '') return;
       document.querySelectorAll(field.selector).forEach(function (el) {
+        if (field.highlightWord && typeof val === 'string') {
+          var word = field.highlightWord;
+          var idx = val.indexOf(word);
+          if (idx >= 0) {
+            el.innerHTML = val.slice(0, idx) + '<span class="hl">' + word + '</span>' + val.slice(idx + word.length);
+            return;
+          }
+        }
         if (field.type === 'html') {
           el.innerHTML = val;
         } else if (el.querySelector('svg') && el.classList.contains('mark')) {

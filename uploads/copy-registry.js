@@ -1502,19 +1502,21 @@
     "page": "programs.html",
     "key": "programs-027-kk",
     "selector": "[data-copy=\"programs-027-kk\"]",
-    "label": "Сабақ уақытында баланың қозғалысы еркін, отырысы ыңғайлы болуы керек. Біз ұсынатын заманау",
+    "label": "Сипаттама",
     "section": "Hero",
     "type": "textarea",
-    "heroGroup": "fitout"
+    "heroGroup": "fitout",
+    "default": "Сабақ уақытында баланың қозғалысы еркін, отырысы ыңғайлы болуы керек. Біз ұсынатын заманауи жиһаз эргономикалық стандарттарға сай жасалған. Ол оқушының денсаулығын сақтап, зейінін тек сабаққа аударуға көмектеседі."
   },
   {
     "page": "programs.html",
     "key": "programs-028-en",
     "selector": "[data-copy=\"programs-028-en\"]",
-    "label": "During lessons, children need freedom to move and comfortable seating. Our modern furnitur",
+    "label": "Description",
     "section": "Hero",
     "type": "textarea",
-    "heroGroup": "fitout"
+    "heroGroup": "fitout",
+    "default": "During lessons, children need freedom to move and comfortable seating. Our modern furniture meets ergonomic standards — protecting students' health and helping them focus entirely on learning."
   },
   {
     "page": "programs.html",
@@ -1962,19 +1964,21 @@
     "page": "programs.html",
     "key": "programs-091-kk",
     "selector": "[data-copy=\"programs-091-kk\"]",
-    "label": "Тәлімгерлік",
+    "label": "Тақырып",
     "section": "Hero",
-    "type": "html",
-    "heroGroup": "samruk"
+    "type": "text",
+    "heroGroup": "samruk",
+    "default": "Тәлімгерлік"
   },
   {
     "page": "programs.html",
     "key": "programs-092-en",
     "selector": "[data-copy=\"programs-092-en\"]",
-    "label": "Mentorship",
+    "label": "Title",
     "section": "Hero",
-    "type": "html",
-    "heroGroup": "samruk"
+    "type": "text",
+    "heroGroup": "samruk",
+    "default": "Mentorship"
   },
   {
     "page": "programs.html",
@@ -2304,8 +2308,10 @@
     "selector": "[data-copy=\"programs-025-kk\"]",
     "label": "Тақырып",
     "section": "Hero",
-    "type": "html",
-    "heroGroup": "fitout"
+    "type": "text",
+    "heroGroup": "fitout",
+    "default": "Инновациялық кабинеттер құру",
+    "highlightWord": "кабинеттер"
   },
   {
     "page": "programs.html",
@@ -2313,8 +2319,10 @@
     "selector": "[data-copy=\"programs-026-en\"]",
     "label": "Title",
     "section": "Hero",
-    "type": "html",
-    "heroGroup": "fitout"
+    "type": "text",
+    "heroGroup": "fitout",
+    "default": "Building innovative classrooms",
+    "highlightWord": "innovative"
   },
   {
     "page": "programs.html",
@@ -2322,8 +2330,10 @@
     "selector": "[data-copy=\"programs-047-kk\"]",
     "label": "Тақырып",
     "section": "Hero",
-    "type": "html",
-    "heroGroup": "ustaz"
+    "type": "text",
+    "heroGroup": "ustaz",
+    "default": "Оқыту курстары",
+    "highlightWord": "курстары"
   },
   {
     "page": "programs.html",
@@ -2331,8 +2341,10 @@
     "selector": "[data-copy=\"programs-048-en\"]",
     "label": "Title",
     "section": "Hero",
-    "type": "html",
-    "heroGroup": "ustaz"
+    "type": "text",
+    "heroGroup": "ustaz",
+    "default": "Teacher Training",
+    "highlightWord": "Training"
   }
 ];
 })();

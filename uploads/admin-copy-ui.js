@@ -113,14 +113,9 @@
     input.dataset.copyField = '1';
     input.placeholder = field.label;
     var stored = valueStore[field.page] && valueStore[field.page][field.key];
-    if (stored !== undefined && stored !== null) input.value = stored;
+    var initial = (stored !== undefined && stored !== null && stored !== '') ? stored : (field.default || '');
+    if (initial) input.value = initial;
     wrap.appendChild(label);
-    if (field.type === 'html') {
-      var hint = document.createElement('p');
-      hint.className = 'copy-field-hint';
-      hint.textContent = 'HTML рұқсат етіледі — мысалы <span class="hl">сөз</span>';
-      wrap.appendChild(hint);
-    }
     wrap.appendChild(input);
     return wrap;
   }
