@@ -11,8 +11,6 @@
     home:     { label: 'Басты бет',     file: 'index.html',    preview: 'index.html' },
     programs: { label: 'Бағдарламалар', file: 'programs.html', preview: 'programs.html' },
     about:    { label: 'Біз туралы',    file: 'about.html',    preview: 'about.html' },
-    stories:  { label: 'Оқиғалар',    file: 'stories.html',  preview: 'stories.html' },
-    partner:  { label: 'Серіктес болу', file: 'partner.html',  preview: 'partner.html' },
     global:   { label: 'Жалпы',         file: 'index.html',    preview: 'index.html' },
     schools:  { label: 'Мектептер',     file: 'school.html',   preview: 'school.html' },
     regions:  { label: 'Өңірлер',       file: 'index.html#regions', preview: 'index.html#regions' }

@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ["index.html", "about.html", "programs.html", "stories.html", "partner.html", "school.html"]
+PAGES = ["index.html", "about.html", "programs.html", "school.html"]
 
 NAV_KEYS = ["home", "fitout", "ustaz", "samruk", "about"]
 FOOT_LINK_KEYS = ["fitout", "ustaz", "samruk", "about"]

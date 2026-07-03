@@ -18,10 +18,12 @@
   --line: rgba(180,140,60,0.18);
   --fh: 'Raleway', sans-serif;
   --fb: 'Inter', sans-serif;
+  --nav-h: 96px;
+  --scroll-pad: calc(var(--nav-h) + 20px);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--scroll-pad); }
 body {
   font-family: var(--fb);
   color: var(--body);
@@ -69,7 +71,6 @@ nav.bar {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(180,140,60,0.16);
   overflow: visible;
-  --nav-h: 96px;
 }
 .bar-in { display: flex; align-items: stretch; justify-content: space-between; height: var(--nav-h); gap: 20px; overflow: visible; }
 .logo { font-family: var(--fh); font-weight: 900; font-size: 21px; color: var(--primary); letter-spacing: -0.02em; display: flex; align-items: center; gap: 11px; flex: none; align-self: center; text-decoration: none; }
@@ -485,7 +486,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 }
 
 /* ---------- REGIONS / MAP ---------- */
-.map-block { position: relative; z-index: 2; padding: 0 0 92px; }
+.map-block { position: relative; z-index: 2; padding: 20px 0 92px; scroll-margin-top: var(--scroll-pad); }
 .map-card { background: #fff; border-radius: 40px; padding: 0; overflow: hidden; box-shadow: 0 24px 60px -34px rgba(27,79,138,0.4); }
 .map-grid { display: grid; grid-template-columns: 1fr; position: relative; }
 .map-wrap { position: relative; order: 1; }

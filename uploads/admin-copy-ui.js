@@ -5,8 +5,6 @@
     home: 'index.html',
     programs: 'programs.html',
     about: 'about.html',
-    stories: 'stories.html',
-    partner: 'partner.html',
     global: '__global__',
     school: 'school.html'
   };
@@ -15,8 +13,6 @@
     home: 'Басты бет',
     programs: 'Бағдарламалар',
     about: 'Біз туралы',
-    stories: 'Оқиғалар',
-    partner: 'Серіктес болу',
     global: 'Жалпы (нав / footer)'
   };
 
