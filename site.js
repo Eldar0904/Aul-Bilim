@@ -48,20 +48,48 @@
       btn.addEventListener('click', function () {
         var open = links.classList.toggle('open');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (!open) closeAllDropdowns();
       });
       links.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () {
           links.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
+          closeAllDropdowns();
         });
       });
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
           links.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
+          closeAllDropdowns();
         }
       });
     }
+
+    function closeAllDropdowns() {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function (dd) {
+        dd.classList.remove('open');
+        var t = dd.querySelector('.nav-dropdown-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
+      var toggle = dd.querySelector('.nav-dropdown-toggle');
+      if (!toggle) return;
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var wasOpen = dd.classList.contains('open');
+        closeAllDropdowns();
+        if (!wasOpen) {
+          dd.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    document.addEventListener('click', closeAllDropdowns);
 
     // active nav link by page + program hash
     function navPageName() {
@@ -82,9 +110,13 @@
 
         var active = false;
         if (linkHash) {
-          active = here === linkPage && hash === linkHash;
+          if (linkPage === 'index.html' && linkHash === 'regions') {
+            active = here === 'index.html' && (hash === 'regions' || hash.indexOf('region-') === 0);
+          } else {
+            active = here === linkPage && hash === linkHash;
+          }
         } else if (linkPage === 'index.html') {
-          active = here === 'index.html';
+          active = here === 'index.html' && !hash;
         } else {
           active = here === linkPage && !hash;
         }
@@ -92,6 +124,11 @@
         a.classList.toggle('active', active);
         if (active) a.setAttribute('aria-current', 'page');
         else a.removeAttribute('aria-current');
+      });
+
+      document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
+        var childActive = !!dd.querySelector('.nav-dropdown-menu a.active');
+        dd.classList.toggle('active', childActive);
       });
     }
     setActiveNav();

@@ -641,3 +641,22 @@ aside#sidebar {
 }
 @media (max-width:700px){.tf-pair,.se-row2{grid-template-columns:1fr;}.prog-cards,.story-grid,.team-grid,.car-grid{grid-template-columns:1fr;}.stat-editor{grid-template-columns:1fr;}}
 
+/* ── COPY CMS FIELDS ───────────────────────────── */
+.copy-mount-wrap { padding-top: 4px; }
+.copy-search-wrap { margin-bottom: 16px; position: sticky; top: 0; z-index: 2; background: #fff; padding: 8px 0; }
+.copy-search {
+  width: 100%; max-width: 420px; padding: 10px 14px; border: 1.5px solid rgba(27,79,138,0.18);
+  border-radius: 10px; font-family: var(--fb); font-size: 14px;
+}
+.copy-section { margin-top: 18px; }
+.copy-section .as-body.copy-fields {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px;
+}
+.copy-section .tf-copy textarea,
+.copy-section .tf-copy input { width: 100%; }
+.copy-section .tf-copy label { font-size: 12px; line-height: 1.35; }
+.copy-empty { color: var(--body); font-size: 14px; }
+@media (max-width:900px) {
+  .copy-section .as-body.copy-fields { grid-template-columns: 1fr; }
+}
+

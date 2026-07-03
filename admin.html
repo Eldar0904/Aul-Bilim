@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="admin.css?v=16" />
+<link rel="stylesheet" href="admin.css?v=17" />
 <link rel="stylesheet" href="steppe.css?v=74" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js?v=3"></script>
@@ -51,6 +51,18 @@
     <button class="sb-page" data-page="about">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
       Біз туралы
+    </button>
+    <button class="sb-page" data-page="stories">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
+      Оқиғалар
+    </button>
+    <button class="sb-page" data-page="partner">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg>
+      Серіктес болу
+    </button>
+    <button class="sb-page" data-page="global">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
+      Жалпы (nav / footer)
     </button>
     <button class="sb-page" data-page="regions">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polygon points="1 6 12 1 23 6 12 11 1 6"/><polyline points="1 12 12 17 23 12"/><polyline points="1 18 12 23 23 18"/></svg>
@@ -105,46 +117,18 @@
               <input type="text" data-slot-id="home-hero" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true">
             </div>
           </div>
-          <div class="as-body" style="display:grid;gap:14px;padding-top:16px;">
-            <div class="tf-pair">
-              <div class="tf"><label>Тақырып — Қазақша</label><textarea rows="2" data-page="index.html" data-key="hero-h1-kk" placeholder="Ауыл — білім желкені"></textarea></div>
-              <div class="tf"><label>Heading — English</label><textarea rows="2" data-page="index.html" data-key="hero-h1-en" placeholder="The village sail of education"></textarea></div>
-            </div>
-            <div class="tf-pair">
-              <div class="tf"><label>Lead — Қазақша</label><textarea rows="3" data-page="index.html" data-key="hero-lead-kk"></textarea></div>
-              <div class="tf"><label>Lead — English</label><textarea rows="3" data-page="index.html" data-key="hero-lead-en"></textarea></div>
-            </div>
+        </div>
+
+        <div class="as">
+          <div class="as-head"><h3>Басты бет — барлық мәтін</h3><span class="badge">index.html · 48 өріс</span></div>
+          <div class="as-body copy-mount-wrap">
+            <div data-copy-mount="home"></div>
           </div>
         </div>
 
-        <!-- Stat strip -->
+        <!-- Program cards — images only -->
         <div class="as">
-          <div class="as-head"><h3>Статистика жолағы</h3><span class="badge">4 сан</span></div>
-          <div class="as-body">
-            <div class="stat-editor">
-              <div class="stat-cell">
-                <input class="sn" type="text" data-page="index.html" data-key="stat-1-n" placeholder="7">
-                <input class="sl" type="text" data-page="index.html" data-key="stat-1-l-kk" placeholder="өңір"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-1-l-en" placeholder="regions">
-              </div>
-              <div class="stat-cell">
-                <input class="sn" type="text" data-page="index.html" data-key="stat-2-n" placeholder="418">
-                <input class="sl" type="text" data-page="index.html" data-key="stat-2-l-kk" placeholder="мектеп"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-2-l-en" placeholder="schools">
-              </div>
-              <div class="stat-cell">
-                <input class="sn" type="text" data-page="index.html" data-key="stat-3-n" placeholder="952">
-                <input class="sl" type="text" data-page="index.html" data-key="stat-3-l-kk" placeholder="жабдықталған сынып"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-3-l-en" placeholder="classrooms equipped">
-              </div>
-              <div class="stat-cell">
-                <input class="sn" type="text" data-page="index.html" data-key="stat-4-n" placeholder="13 971">
-                <input class="sl" type="text" data-page="index.html" data-key="stat-4-l-kk" placeholder="оқытылған ұстаз"><input class="sl sl-en" type="text" data-page="index.html" data-key="stat-4-l-en" placeholder="teachers trained">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Program cards — matches index «Біздің қызметтер» -->
-        <div class="as">
-          <div class="as-head"><h3>Біздің қызметтер — бағдарлама карточкалары</h3><span class="badge">3 карточка</span></div>
+          <div class="as-head"><h3>Біздің қызметтер — суреттер</h3><span class="badge">3 карточка</span></div>
           <div class="as-body">
             <div class="prog-cards">
 
@@ -158,10 +142,6 @@
                   </div>
                   <div class="img-slot-bar"><input type="text" data-slot-id="home-prog-1" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div>
                 </div>
-                <div class="prog-card-body">
-                  <div class="tf"><label>Атау — ҚАЗ</label><input type="text" data-page="index.html" data-key="prog-1-kk" placeholder="Инновациялық кабинеттер құру"></div>
-                  <div class="tf"><label>Title — ENG</label><input type="text" data-page="index.html" data-key="prog-1-en" placeholder="Building innovative classrooms"></div>
-                </div>
               </div>
 
               <div class="prog-card">
@@ -174,10 +154,6 @@
                   </div>
                   <div class="img-slot-bar"><input type="text" data-slot-id="home-prog-2" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div>
                 </div>
-                <div class="prog-card-body">
-                  <div class="tf"><label>Атау — ҚАЗ</label><input type="text" data-page="index.html" data-key="prog-2-kk" placeholder="Оқыту курстары"></div>
-                  <div class="tf"><label>Title — ENG</label><input type="text" data-page="index.html" data-key="prog-2-en" placeholder="Teacher Training · USTAZ"></div>
-                </div>
               </div>
 
               <div class="prog-card">
@@ -189,10 +165,6 @@
                     <span class="img-slot-dim">720 × 480 px</span>
                   </div>
                   <div class="img-slot-bar"><input type="text" data-slot-id="home-prog-3" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div>
-                </div>
-                <div class="prog-card-body">
-                  <div class="tf"><label>Атау — ҚАЗ</label><input type="text" data-page="index.html" data-key="prog-3-kk" placeholder="Тәлімгерлік"></div>
-                  <div class="tf"><label>Title — ENG</label><input type="text" data-page="index.html" data-key="prog-3-en" placeholder="Child Mentorship · Samruk Umiti"></div>
                 </div>
               </div>
 
@@ -307,6 +279,13 @@
           <div style="height:24px;"></div>
         </div><!-- /samruk panel -->
 
+        <div class="as">
+          <div class="as-head"><h3>Бағдарламалар — барлық мәтін</h3><span class="badge">programs.html · 115 өріс</span></div>
+          <div class="as-body copy-mount-wrap">
+            <div data-copy-mount="programs"></div>
+          </div>
+        </div>
+
       </div><!-- /programs -->
 
 
@@ -316,28 +295,70 @@
       <div class="page-view" data-view="about">
 
         <div class="as" style="margin-top:20px;">
-          <div class="as-head"><h3>Біздің миссиямыз</h3><span class="badge">about.html</span></div>
-          <div class="as-body">
-            <div class="tf-pair">
-              <div class="tf"><label>Мақсат 1 — Қазақша</label><textarea rows="3" data-page="about.html" data-key="mission-g1-kk" placeholder="Ауыл мен қала мектептері арасындағы білім сапасының алшақтығын жою…"></textarea></div>
-              <div class="tf"><label>Goal 1 — English</label><textarea rows="3" data-page="about.html" data-key="mission-g1-en" placeholder="To close the quality gap between rural and urban schools…"></textarea></div>
-            </div>
-            <div class="tf-pair" style="margin-top:14px;">
-              <div class="tf"><label>Мақсат 2 — Қазақша</label><textarea rows="3" data-page="about.html" data-key="mission-g2-kk" placeholder="Мектеп инфрақұрылымын жаңартып, педагогтердің кәсібилігін арттыру…"></textarea></div>
-              <div class="tf"><label>Goal 2 — English</label><textarea rows="3" data-page="about.html" data-key="mission-g2-en" placeholder="We build a lasting education ecosystem…"></textarea></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="as">
-          <div class="as-head"><h3>Серіктестік моделі</h3><span class="badge">about.html · #about-coop</span></div>
-          <div class="as-body">
-            <p style="font-size:14px;color:var(--body);line-height:1.65;margin:0;">Серіктестік карталары (Қазақстан Халқына, Білім-Инновация, Jelken Foundation, жергілікті білім басқармалары) сайттағы <strong>about.html</strong> бетінде көрсетіледі. Карталардың мәтіні қазір HTML файлында өңделеді.</p>
+          <div class="as-head"><h3>Біз туралы — барлық мәтін</h3><span class="badge">about.html · 88 өріс</span></div>
+          <div class="as-body copy-mount-wrap">
+            <div data-copy-mount="about"></div>
           </div>
         </div>
 
         <div style="height:24px;"></div>
       </div><!-- /about -->
+
+
+      <!-- ════════════════════════════════════════
+           STORIES  stories.html
+      ════════════════════════════════════════════ -->
+      <div class="page-view" data-view="stories">
+        <div class="as" style="margin-top:20px;">
+          <div class="as-head"><h3>Оқиғалар — суреттер</h3><span class="badge">stories.html</span></div>
+          <div class="as-body">
+            <div class="car-grid" style="grid-template-columns:repeat(2,1fr);">
+              <div class="img-slot" style="aspect-ratio:5/4;" data-slot="story-feat"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Featured story</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-feat" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+              <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-1"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Story 1</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-1" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+              <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-2"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Story 2</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-2" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+              <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-3"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Story 3</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-3" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+              <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-4"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Story 4</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-4" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+              <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-5"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Story 5</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-5" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+              <div class="img-slot" style="aspect-ratio:4/3;" data-slot="story-6"><img class="img-slot-preview" alt=""><div class="img-slot-info"><span class="img-slot-lbl">Story 6</span></div><div class="img-slot-bar"><input type="text" data-slot-id="story-6" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="as">
+          <div class="as-head"><h3>Оқиғалар — барлық мәтін</h3><span class="badge">56 өріс</span></div>
+          <div class="as-body copy-mount-wrap">
+            <div data-copy-mount="stories"></div>
+          </div>
+        </div>
+        <div style="height:24px;"></div>
+      </div><!-- /stories -->
+
+
+      <!-- ════════════════════════════════════════
+           PARTNER  partner.html
+      ════════════════════════════════════════════ -->
+      <div class="page-view" data-view="partner">
+        <div class="as" style="margin-top:20px;">
+          <div class="as-head"><h3>Серіктес болу — барлық мәтін</h3><span class="badge">partner.html · 67 өріс</span></div>
+          <div class="as-body copy-mount-wrap">
+            <div data-copy-mount="partner"></div>
+          </div>
+        </div>
+        <div style="height:24px;"></div>
+      </div><!-- /partner -->
+
+
+      <!-- ════════════════════════════════════════
+           GLOBAL  nav + footer (all pages)
+      ════════════════════════════════════════════ -->
+      <div class="page-view" data-view="global">
+        <div class="as" style="margin-top:20px;">
+          <div class="as-head"><h3>Навигация және footer</h3><span class="badge">Барлық беттер · 27 өріс</span></div>
+          <div class="as-body copy-mount-wrap">
+            <div data-copy-mount="global"></div>
+          </div>
+        </div>
+        <div style="height:24px;"></div>
+      </div><!-- /global -->
 
 
       <!-- ════════════════════════════════════════
@@ -361,6 +382,13 @@
             <div id="school-editor-empty">
               <p>Тізімнен мектепті таңдаңыз.</p>
               <p>Орналасу суреті, галерея, YouTube бейне және сипаттаманы жүктеу/өңдеу арқылы толтырыңыз.</p>
+            </div>
+
+            <div class="as" style="margin-bottom:20px;">
+              <div class="as-head"><h3>Мектеп беті — қалып мәтіні</h3><span class="badge">school.html · 10 өріс</span></div>
+              <div class="as-body copy-mount-wrap">
+                <div data-copy-mount="school"></div>
+              </div>
             </div>
 
             <div id="school-editor">
@@ -494,7 +522,9 @@
 </div><!-- #app -->
 
 <div id="toast"></div>
-<script src="admin-cms.js?v=9"></script>
+<script src="uploads/copy-registry.js?v=1"></script>
+<script src="uploads/admin-copy-ui.js?v=1"></script>
+<script src="admin-cms.js?v=10"></script>
 <script src="uploads/region-registry.js"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>

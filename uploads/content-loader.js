@@ -1,24 +1,32 @@
 (function () {
   'use strict';
 
-  function shouldSkip(el) {
-    if (!el || !el.tagName) return true;
-    var tag = el.tagName.toUpperCase();
-    if (['HTML', 'HEAD', 'BODY', 'SCRIPT', 'STYLE', 'SVG', 'PATH', 'BUTTON', 'A'].includes(tag)) return true;
-    if (el.closest) {
-      if (el.closest('nav') || el.closest('.lang-switch') || el.closest('.menu-btn') ||
-          el.closest('.pill') || el.closest('.text-link') || el.closest('.more') ||
-          el.closest('.crumbs') || el.closest('.foot-bottom') || el.closest('footer') ||
-          el.closest('.about-mission-in') || el.closest('.coop-interactive') ||
-          el.closest('.skip-link')) return true;
-    }
-    return false;
-  }
+  function applyRegistryCopy(pageId, content) {
+    var registry = window.COPY_REGISTRY || [];
+    if (!content || !content.pages) return;
+    var globalData = content.pages['__global__'] || {};
+    var pageData = content.pages[pageId] || {};
+    var bindings = (window.COPY_BINDINGS || {})[pageId] || {};
 
-  function applySemanticCopy(pageId, pageData) {
-    var bindings = (window.COPY_BINDINGS || {})[pageId];
-    if (!bindings || !pageData) return new Set();
-    var touched = new Set();
+    registry.forEach(function (field) {
+      var data = field.page === '__global__' ? globalData : pageData;
+      if (field.page !== '__global__' && field.page !== pageId) return;
+      var val = data[field.key];
+      if (val == null || val === '') return;
+      document.querySelectorAll(field.selector).forEach(function (el) {
+        if (el.querySelector('svg') && el.classList.contains('mark')) {
+          var svg = el.querySelector('svg');
+          el.textContent = val;
+          if (svg) el.appendChild(svg);
+        } else if (el.children.length && !el.classList.contains('n') && !el.classList.contains('big')) {
+          return;
+        } else {
+          el.textContent = val;
+        }
+      });
+    });
+
+    // Legacy semantic bindings (hero line, etc.) override registry when set
     Object.keys(pageData).forEach(function (key) {
       if (/^cp\d+$/.test(key)) return;
       var selector = bindings[key];
@@ -26,25 +34,15 @@
       var el = document.querySelector(selector);
       if (el && pageData[key] != null && pageData[key] !== '') {
         el.textContent = pageData[key];
-        touched.add(el);
       }
     });
-    return touched;
   }
 
-  function applyLegacyCopy(pageData, skip) {
+  function applyLegacyCopy(pageData) {
     if (!pageData) return;
     var idx = 0;
     document.querySelectorAll('[lang],.n,.big').forEach(function (el) {
-      if (skip && skip.size) {
-        if (skip.has(el)) return;
-        var blocked = false;
-        skip.forEach(function (node) {
-          if (el.contains(node)) blocked = true;
-        });
-        if (blocked) return;
-      }
-      if (shouldSkip(el)) return;
+      if (el.hasAttribute('data-copy')) return;
       var langAttr = el.getAttribute('lang');
       var isLang = !!langAttr;
       var isStat = !isLang && (el.classList.contains('n') || el.classList.contains('big'));
@@ -62,9 +60,8 @@
     window.db.getSiteContent().then(function (content) {
       if (!content || !content.pages) return;
       var page = location.pathname.split('/').pop() || 'index.html';
-      var pageData = content.pages[page];
-      var touched = applySemanticCopy(page, pageData);
-      applyLegacyCopy(pageData, touched);
+      applyRegistryCopy(page, content);
+      applyLegacyCopy(content.pages[page]);
     }).catch(function () {});
   });
 })();
