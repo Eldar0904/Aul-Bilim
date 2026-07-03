@@ -16,10 +16,23 @@
     global: 'Жалпы (нав / footer)'
   };
 
-  function groupFields(registry, pageFile) {
+  var valueStore = {};
+  var onDirty = null;
+
+  function currentLang() {
+    return window.adminLang ? window.adminLang.getLang() : 'kk';
+  }
+
+  function fieldMatchesLang(field, lang) {
+    if (!window.adminLang) return true;
+    return window.adminLang.fieldLang(field.key) === lang;
+  }
+
+  function groupFields(registry, pageFile, lang) {
     var groups = {};
     (registry || []).forEach(function (field) {
       if (field.page !== pageFile) return;
+      if (!fieldMatchesLang(field, lang)) return;
       var sec = field.section || 'Content';
       if (!groups[sec]) groups[sec] = [];
       groups[sec].push(field);
@@ -27,16 +40,37 @@
     return groups;
   }
 
-  function isKk(key) {
-    return /-kk$/.test(key) || key.indexOf('-kk-') >= 0;
+  function storeKey(page, key) {
+    if (!valueStore[page]) valueStore[page] = {};
+    return valueStore[page];
+  }
+
+  function syncStoreFromDom() {
+    document.querySelectorAll('[data-copy-field]').forEach(function (el) {
+      storeKey(el.dataset.page, el.dataset.key)[el.dataset.key] = el.value;
+    });
+  }
+
+  function applyStoreToDom() {
+    document.querySelectorAll('[data-copy-field]').forEach(function (el) {
+      var pageData = valueStore[el.dataset.page];
+      var v = pageData && pageData[el.dataset.key];
+      if (v !== undefined && v !== null) el.value = v;
+    });
+  }
+
+  function mergePagesIntoStore(pages) {
+    Object.keys(pages || {}).forEach(function (page) {
+      var bucket = storeKey(page);
+      Object.assign(bucket, pages[page]);
+    });
   }
 
   function buildField(field) {
     var wrap = document.createElement('div');
     wrap.className = 'tf tf-copy';
     var label = document.createElement('label');
-    var langTag = isKk(field.key) ? 'ҚАЗ' : 'ENG';
-    label.textContent = field.label + ' (' + langTag + ')';
+    label.textContent = field.label;
     var input;
     if (field.type === 'textarea') {
       input = document.createElement('textarea');
@@ -49,6 +83,8 @@
     input.dataset.key = field.key;
     input.dataset.copyField = '1';
     input.placeholder = field.label;
+    var stored = valueStore[field.page] && valueStore[field.page][field.key];
+    if (stored !== undefined && stored !== null) input.value = stored;
     wrap.appendChild(label);
     wrap.appendChild(input);
     return wrap;
@@ -66,7 +102,7 @@
     search.placeholder = 'Мәтінді іздеу…';
     searchWrap.appendChild(search);
     mount.appendChild(searchWrap);
-    var groups = groupFields(window.COPY_REGISTRY, pageFile);
+    var groups = groupFields(window.COPY_REGISTRY, pageFile, currentLang());
     var sectionOrder = ['Navigation', 'Footer', 'Accessibility', 'Statistics', 'Hero', 'Content'];
     var keys = Object.keys(groups).sort(function (a, b) {
       var ai = sectionOrder.indexOf(a);
@@ -113,19 +149,21 @@
     Object.keys(ADMIN_PAGE_MAP).forEach(function (viewId) {
       renderPagePanel(viewId, ADMIN_PAGE_MAP[viewId]);
     });
+    wireInputListeners(onDirty);
   }
 
   function populateCopyFields(pages) {
-    document.querySelectorAll('[data-copy-field]').forEach(function (el) {
-      var pageData = pages[el.dataset.page];
-      var v = pageData && pageData[el.dataset.key];
-      if (v !== undefined && v !== null) el.value = v;
-    });
+    mergePagesIntoStore(pages);
+    applyStoreToDom();
   }
 
-  function wireInputListeners(onDirty) {
+  function wireInputListeners(dirtyCb) {
+    if (dirtyCb) onDirty = dirtyCb;
     document.querySelectorAll('[data-copy-field]').forEach(function (el) {
+      if (el.dataset.copyBound) return;
+      el.dataset.copyBound = '1';
       el.addEventListener('input', function () {
+        storeKey(el.dataset.page, el.dataset.key)[el.dataset.key] = el.value;
         el.classList.add('changed');
         if (onDirty) onDirty();
       });
@@ -133,11 +171,13 @@
   }
 
   function collectCopyFields(pages) {
-    document.querySelectorAll('[data-copy-field]').forEach(function (el) {
-      if (!pages[el.dataset.page]) pages[el.dataset.page] = {};
-      pages[el.dataset.page][el.dataset.key] = el.value;
+    syncStoreFromDom();
+    var out = Object.assign({}, pages || {});
+    Object.keys(valueStore).forEach(function (page) {
+      if (!out[page]) out[page] = {};
+      Object.assign(out[page], valueStore[page]);
     });
-    return pages;
+    return out;
   }
 
   window.adminCopyUi = {
@@ -145,6 +185,7 @@
     populateCopyFields: populateCopyFields,
     wireInputListeners: wireInputListeners,
     collectCopyFields: collectCopyFields,
+    syncStoreFromDom: syncStoreFromDom,
     PAGE_LABELS: PAGE_LABELS,
     ADMIN_PAGE_MAP: ADMIN_PAGE_MAP
   };

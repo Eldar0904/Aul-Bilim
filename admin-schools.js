@@ -11,7 +11,9 @@ window.adminSchools = (function () {
   var selectedEntry = null;
   var dirty = false;
   var overrideCache = {};
-  var previewLang = 'kk';
+  var previewLang = function () {
+    return window.adminLang ? window.adminLang.getLang() : 'kk';
+  };
   var carouselTimer = null;
   var carouselIndex = 0;
   var carouselImagesList = [];
@@ -280,7 +282,7 @@ window.adminSchools = (function () {
     var emptyEl = document.getElementById('admin-school-card-empty');
     var titleEl = document.getElementById('admin-school-card-title');
     var descEl = document.getElementById('admin-school-card-desc');
-    var lang = previewLang;
+    var lang = previewLang();
     var cardDesc = schoolCardDesc(school);
 
     if (wrap) wrap.classList.toggle('has-photo', !!url);
@@ -343,7 +345,7 @@ window.adminSchools = (function () {
 
   function renderLivePage(entry, school) {
     var images = carouselImages(school);
-    var lang = previewLang;
+    var lang = previewLang();
 
     var heroTitle = document.getElementById('admin-school-hero-title');
     var descEl = document.getElementById('admin-school-desc');
@@ -874,20 +876,6 @@ window.adminSchools = (function () {
     });
 
     bindSchoolUploads();
-
-    var langBar = document.getElementById('admin-preview-lang');
-    if (langBar && !langBar.dataset.bound) {
-      langBar.dataset.bound = '1';
-      langBar.querySelectorAll('[data-admin-lang]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          previewLang = btn.dataset.adminLang;
-          langBar.querySelectorAll('[data-admin-lang]').forEach(function (b) {
-            b.classList.toggle('is-on', b === btn);
-          });
-          refreshPreview();
-        });
-      });
-    }
   }
 
   function render() {
@@ -937,6 +925,7 @@ window.adminSchools = (function () {
     render: render,
     save: save,
     isActive: isActive,
-    isDirty: isDirty
+    isDirty: isDirty,
+    refreshPreview: refreshPreview
   };
 })();

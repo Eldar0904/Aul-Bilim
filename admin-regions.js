@@ -86,8 +86,8 @@ window.adminRegions = (function () {
       return '<article class="region-stat-card" data-region-id="' + esc(region.id) + '">' +
         '<div class="region-stat-card-head">' +
           '<div>' +
-            '<h3 class="region-stat-name">' + esc(region.kk) + '</h3>' +
-            '<p class="region-stat-name-en">' + esc(region.en) + '</p>' +
+            '<h3 class="region-stat-name admin-lang-kk">' + esc(region.kk) + '</h3>' +
+            '<p class="region-stat-name-en admin-lang-en">' + esc(region.en) + '</p>' +
           '</div>' +
           '<span class="region-stat-badge' + (isLive ? ' is-live' : '') + '">' +
             (isLive ? 'Мектептер тізімі бар' : 'Статистика ғана') +

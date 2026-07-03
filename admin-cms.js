@@ -19,6 +19,18 @@
   var currentPage = 'home';
   window.currentPage = 'home';
 
+  if (window.adminLang) window.adminLang.init();
+
+  window.adminLang && window.adminLang.onChange(function () {
+    if (window.adminCopyUi) {
+      window.adminCopyUi.syncStoreFromDom();
+      window.adminCopyUi.renderAll();
+    }
+    if (window.adminSchools && window.adminSchools.refreshPreview) {
+      window.adminSchools.refreshPreview();
+    }
+  });
+
   document.getElementById('pw-btn').addEventListener('click', tryLogin);
   document.getElementById('email-input').addEventListener('keydown', function (e) {
     if (e.key === 'Enter') tryLogin();
