@@ -1516,38 +1516,6 @@
   },
   {
     "page": "programs.html",
-    "key": "programs-029-kk",
-    "selector": "[data-copy=\"programs-029-kk\"]",
-    "label": "Серіктес мектеп",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-030-en",
-    "selector": "[data-copy=\"programs-030-en\"]",
-    "label": "Partner schools",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-031-kk",
-    "selector": "[data-copy=\"programs-031-kk\"]",
-    "label": "Жабдықталған сынып",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-032-en",
-    "selector": "[data-copy=\"programs-032-en\"]",
-    "label": "Classrooms equipped",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
     "key": "programs-033-kk",
     "selector": "[data-copy=\"programs-033-kk\"]",
     "label": "Жабдықтау үш бағыттан тұрады",
@@ -2241,22 +2209,6 @@
     "label": "Ongoing guidance for school leaders on planning upbringing work under the Honest Citizen p",
     "section": "Content",
     "type": "textarea"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-stat-01-n",
-    "selector": "[data-copy=\"programs-stat-01-n\"]",
-    "label": "Stat: 120",
-    "section": "Statistics",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-stat-02-n",
-    "selector": "[data-copy=\"programs-stat-02-n\"]",
-    "label": "Stat: 300+",
-    "section": "Statistics",
-    "type": "text"
   },
   {
     "page": "stories.html",
