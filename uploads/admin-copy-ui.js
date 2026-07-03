@@ -9,6 +9,14 @@
     school: 'school.html'
   };
 
+  var HERO_MOUNTS = {
+    'home-hero': { page: 'index.html', section: 'Hero' },
+    'about-hero': { page: 'about.html', section: 'Hero' },
+    'programs-fitout-hero': { page: 'programs.html', section: 'Hero', heroGroup: 'fitout' },
+    'programs-ustaz-hero': { page: 'programs.html', section: 'Hero', heroGroup: 'ustaz' },
+    'programs-samruk-hero': { page: 'programs.html', section: 'Hero', heroGroup: 'samruk' }
+  };
+
   var PAGE_LABELS = {
     home: 'Басты бет',
     programs: 'Бағдарламалар',
@@ -28,11 +36,22 @@
     return window.adminLang.fieldLang(field.key) === lang;
   }
 
-  function groupFields(registry, pageFile, lang) {
+  function fieldMatchesFilter(field, pageFile, opts) {
+    if (field.page !== pageFile) return false;
+    if (!fieldMatchesLang(field, currentLang())) return false;
+    opts = opts || {};
+    if (opts.section && (field.section || 'Content') !== opts.section) return false;
+    if (opts.heroGroup && field.heroGroup !== opts.heroGroup) return false;
+    if (opts.excludeSection && (field.section || 'Content') === opts.excludeSection) return false;
+    if (opts.section === 'Hero' && opts.heroGroup && field.heroGroup !== opts.heroGroup) return false;
+    if (opts.section === 'Hero' && !opts.heroGroup && field.heroGroup) return false;
+    return true;
+  }
+
+  function groupFields(registry, pageFile, opts) {
     var groups = {};
     (registry || []).forEach(function (field) {
-      if (field.page !== pageFile) return;
-      if (!fieldMatchesLang(field, lang)) return;
+      if (!fieldMatchesFilter(field, pageFile, opts)) return;
       var sec = field.section || 'Content';
       if (!groups[sec]) groups[sec] = [];
       groups[sec].push(field);
@@ -72,9 +91,9 @@
     var label = document.createElement('label');
     label.textContent = field.label;
     var input;
-    if (field.type === 'textarea') {
+    if (field.type === 'textarea' || field.type === 'html') {
       input = document.createElement('textarea');
-      input.rows = field.label.length > 100 ? 4 : 2;
+      input.rows = field.type === 'html' ? 3 : (field.label.length > 100 ? 4 : 2);
     } else {
       input = document.createElement('input');
       input.type = 'text';
@@ -86,23 +105,23 @@
     var stored = valueStore[field.page] && valueStore[field.page][field.key];
     if (stored !== undefined && stored !== null) input.value = stored;
     wrap.appendChild(label);
+    if (field.type === 'html') {
+      var hint = document.createElement('p');
+      hint.className = 'copy-field-hint';
+      hint.textContent = 'HTML рұқсат етіледі — мысалы <span class="hl">сөз</span>';
+      wrap.appendChild(hint);
+    }
     wrap.appendChild(input);
     return wrap;
   }
 
-  function renderPagePanel(viewId, pageFile) {
+  function renderPagePanel(viewId, pageFile, opts) {
     var mount = document.querySelector('[data-copy-mount="' + viewId + '"]');
     if (!mount || !window.COPY_REGISTRY) return;
     mount.innerHTML = '';
-    var searchWrap = document.createElement('div');
-    searchWrap.className = 'copy-search-wrap';
-    var search = document.createElement('input');
-    search.type = 'search';
-    search.className = 'copy-search';
-    search.placeholder = 'Мәтінді іздеу…';
-    searchWrap.appendChild(search);
-    mount.appendChild(searchWrap);
-    var groups = groupFields(window.COPY_REGISTRY, pageFile, currentLang());
+    opts = opts || {};
+    var isHeroMount = !!HERO_MOUNTS[viewId];
+    var groups = groupFields(window.COPY_REGISTRY, pageFile, opts);
     var sectionOrder = ['Navigation', 'Footer', 'Accessibility', 'Statistics', 'Hero', 'Content'];
     var keys = Object.keys(groups).sort(function (a, b) {
       var ai = sectionOrder.indexOf(a);
@@ -115,39 +134,66 @@
       mount.innerHTML = '<p class="copy-empty">Мәтін өрістері табылмады.</p>';
       return;
     }
+
+    if (!isHeroMount) {
+      var searchWrap = document.createElement('div');
+      searchWrap.className = 'copy-search-wrap';
+      var search = document.createElement('input');
+      search.type = 'search';
+      search.className = 'copy-search';
+      search.placeholder = 'Мәтінді іздеу…';
+      searchWrap.appendChild(search);
+      mount.appendChild(searchWrap);
+    }
+
     keys.forEach(function (section) {
       var block = document.createElement('div');
-      block.className = 'as copy-section';
-      var head = document.createElement('div');
-      head.className = 'as-head';
-      head.innerHTML = '<h3>' + section + '</h3>';
+      block.className = isHeroMount ? 'copy-fields copy-fields-hero' : 'as copy-section';
+      if (!isHeroMount) {
+        var head = document.createElement('div');
+        head.className = 'as-head';
+        head.innerHTML = '<h3>' + section + '</h3>';
+        block.appendChild(head);
+      }
       var body = document.createElement('div');
-      body.className = 'as-body copy-fields';
+      body.className = isHeroMount ? 'copy-fields-inner' : 'as-body copy-fields';
       groups[section].forEach(function (field) {
         body.appendChild(buildField(field));
       });
-      block.appendChild(head);
       block.appendChild(body);
       mount.appendChild(block);
     });
-    search.addEventListener('input', function () {
-      var q = search.value.trim().toLowerCase();
-      mount.querySelectorAll('.tf-copy').forEach(function (row) {
-        var label = (row.querySelector('label') || {}).textContent || '';
-        var val = (row.querySelector('input,textarea') || {}).value || '';
-        var hit = !q || label.toLowerCase().indexOf(q) >= 0 || val.toLowerCase().indexOf(q) >= 0;
-        row.style.display = hit ? '' : 'none';
-      });
-      mount.querySelectorAll('.copy-section').forEach(function (sec) {
-        var visible = sec.querySelector('.tf-copy:not([style*=\"display: none\"])');
-        sec.style.display = visible ? '' : 'none';
-      });
-    });
+
+    if (!isHeroMount) {
+      var searchInput = mount.querySelector('.copy-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', function () {
+          var q = searchInput.value.trim().toLowerCase();
+          mount.querySelectorAll('.tf-copy').forEach(function (row) {
+            var label = (row.querySelector('label') || {}).textContent || '';
+            var val = (row.querySelector('input,textarea') || {}).value || '';
+            var hit = !q || label.toLowerCase().indexOf(q) >= 0 || val.toLowerCase().indexOf(q) >= 0;
+            row.style.display = hit ? '' : 'none';
+          });
+          mount.querySelectorAll('.copy-section').forEach(function (sec) {
+            var visible = sec.querySelector('.tf-copy:not([style*=\"display: none\"])');
+            sec.style.display = visible ? '' : 'none';
+          });
+        });
+      }
+    }
   }
 
   function renderAll() {
     Object.keys(ADMIN_PAGE_MAP).forEach(function (viewId) {
-      renderPagePanel(viewId, ADMIN_PAGE_MAP[viewId]);
+      renderPagePanel(viewId, ADMIN_PAGE_MAP[viewId], { excludeSection: 'Hero' });
+    });
+    Object.keys(HERO_MOUNTS).forEach(function (mountId) {
+      var cfg = HERO_MOUNTS[mountId];
+      renderPagePanel(mountId, cfg.page, {
+        section: cfg.section,
+        heroGroup: cfg.heroGroup
+      });
     });
     wireInputListeners(onDirty);
   }
@@ -187,6 +233,7 @@
     collectCopyFields: collectCopyFields,
     syncStoreFromDom: syncStoreFromDom,
     PAGE_LABELS: PAGE_LABELS,
-    ADMIN_PAGE_MAP: ADMIN_PAGE_MAP
+    ADMIN_PAGE_MAP: ADMIN_PAGE_MAP,
+    HERO_MOUNTS: HERO_MOUNTS
   };
 })();

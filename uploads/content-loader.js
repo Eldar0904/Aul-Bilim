@@ -15,7 +15,9 @@
       var val = data[field.key];
       if (val == null || val === '') return;
       document.querySelectorAll(field.selector).forEach(function (el) {
-        if (el.querySelector('svg') && el.classList.contains('mark')) {
+        if (field.type === 'html') {
+          el.innerHTML = val;
+        } else if (el.querySelector('svg') && el.classList.contains('mark')) {
           var svg = el.querySelector('svg');
           el.textContent = val;
           if (svg) el.appendChild(svg);

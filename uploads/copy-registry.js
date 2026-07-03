@@ -135,7 +135,7 @@
     "key": "index-hero-sub-kk",
     "selector": "[data-copy=\"index-hero-sub-kk\"]",
     "label": "Әр балаға заманауи мектеп",
-    "section": "Content",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -143,39 +143,39 @@
     "key": "index-hero-sub-en",
     "selector": "[data-copy=\"index-hero-sub-en\"]",
     "label": "A modern school for every child",
-    "section": "Content",
+    "section": "Hero",
     "type": "text"
   },
   {
     "page": "index.html",
     "key": "index-009-kk",
     "selector": "[data-copy=\"index-009-kk\"]",
-    "label": "Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен,",
-    "section": "Content",
+    "label": "Hero — lead paragraph 1 (қазақша)",
+    "section": "Hero",
     "type": "textarea"
   },
   {
     "page": "index.html",
     "key": "index-010-en",
     "selector": "[data-copy=\"index-010-en\"]",
-    "label": "To deliver quality education across our country, we fully equip schools with modern furnit",
-    "section": "Content",
+    "label": "Hero — lead paragraph 1 (English)",
+    "section": "Hero",
     "type": "textarea"
   },
   {
     "page": "index.html",
     "key": "index-011-kk",
     "selector": "[data-copy=\"index-011-kk\"]",
-    "label": "Ұстаздардың біліктілігін жетілдіреміз әрі тұрақты тәлімгерлік қолдау көрсетеміз.",
-    "section": "Content",
+    "label": "Hero — lead paragraph 2 (қазақша)",
+    "section": "Hero",
     "type": "text"
   },
   {
     "page": "index.html",
     "key": "index-012-en",
     "selector": "[data-copy=\"index-012-en\"]",
-    "label": "We develop teachers' skills and provide ongoing mentorship support.",
-    "section": "Content",
+    "label": "Hero — lead paragraph 2 (English)",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -670,16 +670,16 @@
     "page": "about.html",
     "key": "about-007-kk",
     "selector": "[data-copy=\"about-007-kk\"]",
-    "label": "Біздің миссиямыз",
-    "section": "Content",
+    "label": "Mission title (қазақша)",
+    "section": "Hero",
     "type": "text"
   },
   {
     "page": "about.html",
     "key": "about-008-en",
     "selector": "[data-copy=\"about-008-en\"]",
-    "label": "Our mission",
-    "section": "Content",
+    "label": "Mission title (English)",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -687,7 +687,7 @@
     "key": "about-009-kk",
     "selector": "[data-copy=\"about-009-kk\"]",
     "label": "Тең мүмкіндік",
-    "section": "Content",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -695,7 +695,7 @@
     "key": "about-010-en",
     "selector": "[data-copy=\"about-010-en\"]",
     "label": "Equal opportunity",
-    "section": "Content",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -703,7 +703,7 @@
     "key": "about-011-kk",
     "selector": "[data-copy=\"about-011-kk\"]",
     "label": "Ауыл мен қала мектептері арасындағы білім сапасының алшақтығын жою және ауыл балаларының з",
-    "section": "Content",
+    "section": "Hero",
     "type": "textarea"
   },
   {
@@ -711,7 +711,7 @@
     "key": "about-012-en",
     "selector": "[data-copy=\"about-012-en\"]",
     "label": "To close the quality gap between rural and urban schools and give village children an equa",
-    "section": "Content",
+    "section": "Hero",
     "type": "textarea"
   },
   {
@@ -719,7 +719,7 @@
     "key": "about-013-kk",
     "selector": "[data-copy=\"about-013-kk\"]",
     "label": "Тұрақты экожүйе",
-    "section": "Content",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -727,7 +727,7 @@
     "key": "about-014-en",
     "selector": "[data-copy=\"about-014-en\"]",
     "label": "Sustainable ecosystem",
-    "section": "Content",
+    "section": "Hero",
     "type": "text"
   },
   {
@@ -735,7 +735,7 @@
     "key": "about-015-kk",
     "selector": "[data-copy=\"about-015-kk\"]",
     "label": "Мектеп инфрақұрылымын жаңартып, педагогтердің кәсібилігін арттыру арқылы тұрақты білім бер",
-    "section": "Content",
+    "section": "Hero",
     "type": "textarea"
   },
   {
@@ -743,7 +743,7 @@
     "key": "about-016-en",
     "selector": "[data-copy=\"about-016-en\"]",
     "label": "We build a lasting education ecosystem by upgrading school infrastructure and strengthenin",
-    "section": "Content",
+    "section": "Hero",
     "type": "textarea"
   },
   {
@@ -1503,16 +1503,18 @@
     "key": "programs-027-kk",
     "selector": "[data-copy=\"programs-027-kk\"]",
     "label": "Сабақ уақытында баланың қозғалысы еркін, отырысы ыңғайлы болуы керек. Біз ұсынатын заманау",
-    "section": "Content",
-    "type": "textarea"
+    "section": "Hero",
+    "type": "textarea",
+    "heroGroup": "fitout"
   },
   {
     "page": "programs.html",
     "key": "programs-028-en",
     "selector": "[data-copy=\"programs-028-en\"]",
     "label": "During lessons, children need freedom to move and comfortable seating. Our modern furnitur",
-    "section": "Content",
-    "type": "textarea"
+    "section": "Hero",
+    "type": "textarea",
+    "heroGroup": "fitout"
   },
   {
     "page": "programs.html",
@@ -1631,16 +1633,18 @@
     "key": "programs-049-kk",
     "selector": "[data-copy=\"programs-049-kk\"]",
     "label": "Мұғалімдердің әлеуетін арттыру арқылы білім сапасын жаңа деңгейге көтереміз.",
-    "section": "Content",
-    "type": "text"
+    "section": "Hero",
+    "type": "text",
+    "heroGroup": "ustaz"
   },
   {
     "page": "programs.html",
     "key": "programs-050-en",
     "selector": "[data-copy=\"programs-050-en\"]",
     "label": "By developing teachers' potential, we elevate the quality of education to a new level.",
-    "section": "Content",
-    "type": "textarea"
+    "section": "Hero",
+    "type": "textarea",
+    "heroGroup": "ustaz"
   },
   {
     "page": "programs.html",
@@ -1959,32 +1963,36 @@
     "key": "programs-091-kk",
     "selector": "[data-copy=\"programs-091-kk\"]",
     "label": "Тәлімгерлік",
-    "section": "Content",
-    "type": "text"
+    "section": "Hero",
+    "type": "html",
+    "heroGroup": "samruk"
   },
   {
     "page": "programs.html",
     "key": "programs-092-en",
     "selector": "[data-copy=\"programs-092-en\"]",
     "label": "Mentorship",
-    "section": "Content",
-    "type": "text"
+    "section": "Hero",
+    "type": "html",
+    "heroGroup": "samruk"
   },
   {
     "page": "programs.html",
     "key": "programs-093-kk",
     "selector": "[data-copy=\"programs-093-kk\"]",
     "label": "Тәжірибелі мамандармен тығыз байланыс орнатып, кәсіби өсу жолында бірге жүреміз.",
-    "section": "Content",
-    "type": "text"
+    "section": "Hero",
+    "type": "text",
+    "heroGroup": "samruk"
   },
   {
     "page": "programs.html",
     "key": "programs-094-en",
     "selector": "[data-copy=\"programs-094-en\"]",
     "label": "We build close connections with experienced professionals and walk together on the path of",
-    "section": "Content",
-    "type": "textarea"
+    "section": "Hero",
+    "type": "textarea",
+    "heroGroup": "samruk"
   },
   {
     "page": "programs.html",
@@ -2273,6 +2281,58 @@
     "label": "Back to map",
     "section": "Content",
     "type": "text"
+  },
+  {
+    "page": "index.html",
+    "key": "index-hero-mark-kk",
+    "selector": "[data-copy=\"index-hero-mark-kk\"]",
+    "label": "Hero — белгіленген сөз (қазақша)",
+    "section": "Hero",
+    "type": "text"
+  },
+  {
+    "page": "index.html",
+    "key": "index-hero-mark-en",
+    "selector": "[data-copy=\"index-hero-mark-en\"]",
+    "label": "Hero — highlighted phrase (English)",
+    "section": "Hero",
+    "type": "text"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-025-kk",
+    "selector": "[data-copy=\"programs-025-kk\"]",
+    "label": "Hero — title (қазақша)",
+    "section": "Hero",
+    "type": "html",
+    "heroGroup": "fitout"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-026-en",
+    "selector": "[data-copy=\"programs-026-en\"]",
+    "label": "Hero — title (English)",
+    "section": "Hero",
+    "type": "html",
+    "heroGroup": "fitout"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-047-kk",
+    "selector": "[data-copy=\"programs-047-kk\"]",
+    "label": "Hero — title (қазақша)",
+    "section": "Hero",
+    "type": "html",
+    "heroGroup": "ustaz"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-048-en",
+    "selector": "[data-copy=\"programs-048-en\"]",
+    "label": "Hero — title (English)",
+    "section": "Hero",
+    "type": "html",
+    "heroGroup": "ustaz"
   }
 ];
 })();
