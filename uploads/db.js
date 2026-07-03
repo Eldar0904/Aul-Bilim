@@ -15,6 +15,19 @@ window.db = (function () {
     return url;
   }
 
+  var LEGACY_SHARED_PAGE = '__global__';
+  var SHARED_COPY_PAGE = (window.AUL_BILIM_SCHEMA && window.AUL_BILIM_SCHEMA.sharedCopyPage) || 'site_shared';
+
+  function normalizeSiteContent(content) {
+    if (!content || !content.pages || typeof content.pages !== 'object') return content;
+    var legacy = content.pages[LEGACY_SHARED_PAGE];
+    if (!legacy) return content;
+    if (!content.pages[SHARED_COPY_PAGE]) content.pages[SHARED_COPY_PAGE] = {};
+    Object.assign(content.pages[SHARED_COPY_PAGE], legacy);
+    delete content.pages[LEGACY_SHARED_PAGE];
+    return content;
+  }
+
   function rewriteMediaUrlsDeep(value) {
     if (typeof value === 'string') return normalizeMediaUrl(value);
     if (Array.isArray(value)) return value.map(rewriteMediaUrlsDeep);
@@ -138,15 +151,17 @@ window.db = (function () {
 
   async function getSiteContent() {
     if (!hasBackend()) {
-      try { return rewriteMediaUrlsDeep(JSON.parse(localStorage.getItem(LOCAL_CONTENT) || 'null')); } catch (e) { return null; }
+      try {
+        return rewriteMediaUrlsDeep(normalizeSiteContent(JSON.parse(localStorage.getItem(LOCAL_CONTENT) || 'null')));
+      } catch (e) { return null; }
     }
     var res = await fetch(documentUrl('site/content'), { headers: await authHeaders() });
     if (!res.ok) return null;
-    return rewriteMediaUrlsDeep(fromDocument(await res.json()));
+    return rewriteMediaUrlsDeep(normalizeSiteContent(fromDocument(await res.json())));
   }
 
   async function saveSiteContent(content) {
-    var payload = Object.assign({}, content, { updatedAt: new Date().toISOString() });
+    var payload = Object.assign({}, normalizeSiteContent(content), { updatedAt: new Date().toISOString() });
     if (!hasBackend()) {
       localStorage.setItem(LOCAL_CONTENT, JSON.stringify(payload));
       return { success: true, mode: 'local' };

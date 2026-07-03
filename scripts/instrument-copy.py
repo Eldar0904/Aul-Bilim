@@ -110,7 +110,7 @@ def instrument_file(path: Path):
     seen_keys = set()
 
     def register(key, label, section, field_type="text"):
-        page_id = "__global__" if key.startswith("global-") else page
+        page_id = "site_shared" if key.startswith("global-") else page
         dedup = (page_id, key)
         if dedup in seen_keys:
             return key

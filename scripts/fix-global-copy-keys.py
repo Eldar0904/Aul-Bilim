@@ -77,7 +77,7 @@ def scan_registry():
         page = name
         for m in re.finditer(r'data-copy="([^"]+)"[^>]*>([^<]*)</span>', text):
             key, label = m.group(1), re.sub(r"\s+", " ", m.group(2)).strip()
-            page_id = "__global__" if key.startswith("global-") else page
+            page_id = "site_shared" if key.startswith("global-") else page
             section = "Content"
             if key.startswith("global-nav-"):
                 section = "Navigation"
@@ -91,10 +91,10 @@ def scan_registry():
             add(page_id, key, label or key, section, ftype)
         for m in re.finditer(r'<div class="n" data-copy="([^"]+)">([^<]+)</div>', text):
             key, val = m.group(1), m.group(2).strip()
-            page_id = "__global__" if key.startswith("global-") else page
+            page_id = "site_shared" if key.startswith("global-") else page
             add(page_id, key, f"Stat: {val}", "Statistics", "text")
         for m in re.finditer(r'<h3 class="foot-brand-title" data-copy="([^"]+)">([^<]*)</h3>', text):
-            add("__global__", m.group(1), m.group(2).strip(), "Footer", "text")
+            add("site_shared", m.group(1), m.group(2).strip(), "Footer", "text")
 
     return fields
 

@@ -5,7 +5,7 @@
     home: 'index.html',
     programs: 'programs.html',
     about: 'about.html',
-    global: '__global__',
+    global: 'site_shared',
     school: 'school.html'
   };
 

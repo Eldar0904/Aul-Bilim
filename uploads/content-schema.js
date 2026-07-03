@@ -9,6 +9,8 @@
   - enquiries/items/{enquiryId}: partner form submissions
 */
 window.AUL_BILIM_SCHEMA = {
+  /** Nav/footer copy bucket inside site/content.pages (not __global__ — Firestore reserved). */
+  sharedCopyPage: "site_shared",
   contentDocument: "site/content",
   collections: {
     mediaAssets: "media/assets/items",

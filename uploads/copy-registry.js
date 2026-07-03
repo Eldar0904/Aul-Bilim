@@ -3,7 +3,7 @@
   'use strict';
   window.COPY_REGISTRY = [
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-skip-kk",
     "selector": "[data-copy=\"global-skip-kk\"]",
     "label": "Негізгі мазмұнға өту",
@@ -11,7 +11,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-skip-en",
     "selector": "[data-copy=\"global-skip-en\"]",
     "label": "Skip to main content",
@@ -19,7 +19,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-home-kk",
     "selector": "[data-copy=\"global-nav-home-kk\"]",
     "label": "Басты бет",
@@ -27,7 +27,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-home-en",
     "selector": "[data-copy=\"global-nav-home-en\"]",
     "label": "Home",
@@ -35,7 +35,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-services-kk",
     "selector": "[data-copy=\"global-nav-services-kk\"]",
     "label": "Қызметтер",
@@ -43,7 +43,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-services-en",
     "selector": "[data-copy=\"global-nav-services-en\"]",
     "label": "Services",
@@ -51,7 +51,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-fitout-kk",
     "selector": "[data-copy=\"global-nav-fitout-kk\"]",
     "label": "Мектептерді жаңғырту",
@@ -59,7 +59,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-fitout-en",
     "selector": "[data-copy=\"global-nav-fitout-en\"]",
     "label": "School Fit-Out",
@@ -67,7 +67,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-ustaz-kk",
     "selector": "[data-copy=\"global-nav-ustaz-kk\"]",
     "label": "Оқыту курстары",
@@ -75,7 +75,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-ustaz-en",
     "selector": "[data-copy=\"global-nav-ustaz-en\"]",
     "label": "Teacher Training",
@@ -83,7 +83,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-samruk-kk",
     "selector": "[data-copy=\"global-nav-samruk-kk\"]",
     "label": "Тәлімгерлік",
@@ -91,7 +91,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-samruk-en",
     "selector": "[data-copy=\"global-nav-samruk-en\"]",
     "label": "Mentorship",
@@ -99,7 +99,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-regions-kk",
     "selector": "[data-copy=\"global-nav-regions-kk\"]",
     "label": "Жоба аймақтары",
@@ -107,7 +107,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-regions-en",
     "selector": "[data-copy=\"global-nav-regions-en\"]",
     "label": "Project regions",
@@ -115,7 +115,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-about-kk",
     "selector": "[data-copy=\"global-nav-about-kk\"]",
     "label": "Біз туралы",
@@ -123,7 +123,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-nav-about-en",
     "selector": "[data-copy=\"global-nav-about-en\"]",
     "label": "About",
@@ -483,7 +483,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-about-kk",
     "selector": "[data-copy=\"global-foot-about-kk\"]",
     "label": "Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken Foundation қорларының бірлеске",
@@ -491,7 +491,7 @@
     "type": "textarea"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-about-en",
     "selector": "[data-copy=\"global-foot-about-en\"]",
     "label": "Auyl Bilim — a joint charitable initiative of Qazaqstan Halqyina, Bilim Innovation, and th",
@@ -499,7 +499,7 @@
     "type": "textarea"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-explore-h-kk",
     "selector": "[data-copy=\"global-foot-explore-h-kk\"]",
     "label": "Зерттеу",
@@ -507,7 +507,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-explore-h-en",
     "selector": "[data-copy=\"global-foot-explore-h-en\"]",
     "label": "Explore",
@@ -515,7 +515,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-fitout-kk",
     "selector": "[data-copy=\"global-foot-link-fitout-kk\"]",
     "label": "Мектептерді жаңғырту",
@@ -523,7 +523,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-fitout-en",
     "selector": "[data-copy=\"global-foot-link-fitout-en\"]",
     "label": "School Fit-Out",
@@ -531,7 +531,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-ustaz-kk",
     "selector": "[data-copy=\"global-foot-link-ustaz-kk\"]",
     "label": "Оқыту курстары",
@@ -539,7 +539,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-ustaz-en",
     "selector": "[data-copy=\"global-foot-link-ustaz-en\"]",
     "label": "Teacher Training",
@@ -547,7 +547,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-samruk-kk",
     "selector": "[data-copy=\"global-foot-link-samruk-kk\"]",
     "label": "Тәлімгерлік",
@@ -555,7 +555,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-samruk-en",
     "selector": "[data-copy=\"global-foot-link-samruk-en\"]",
     "label": "Mentorship",
@@ -563,7 +563,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-about-kk",
     "selector": "[data-copy=\"global-foot-link-about-kk\"]",
     "label": "Біз туралы",
@@ -571,7 +571,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-link-about-en",
     "selector": "[data-copy=\"global-foot-link-about-en\"]",
     "label": "About",
@@ -579,7 +579,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-contact-h-kk",
     "selector": "[data-copy=\"global-foot-contact-h-kk\"]",
     "label": "Байланыс",
@@ -587,7 +587,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-contact-h-en",
     "selector": "[data-copy=\"global-foot-contact-h-en\"]",
     "label": "Contact",
@@ -595,7 +595,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-address-kk",
     "selector": "[data-copy=\"global-foot-address-kk\"]",
     "label": "Астана, Қазақстан",
@@ -603,7 +603,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-address-en",
     "selector": "[data-copy=\"global-foot-address-en\"]",
     "label": "Astana, Kazakhstan",
@@ -611,7 +611,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-tagline-kk",
     "selector": "[data-copy=\"global-foot-tagline-kk\"]",
     "label": "Auyl Bilim — қоғамдық жоба",
@@ -619,7 +619,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-tagline-en",
     "selector": "[data-copy=\"global-foot-tagline-en\"]",
     "label": "Auyl Bilim — community project",
@@ -659,7 +659,7 @@
     "type": "text"
   },
   {
-    "page": "__global__",
+    "page": "site_shared",
     "key": "global-foot-brand",
     "selector": "[data-copy=\"global-foot-brand\"]",
     "label": "Auyl Bilim",

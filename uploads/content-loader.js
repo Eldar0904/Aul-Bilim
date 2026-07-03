@@ -4,13 +4,14 @@
   function applyRegistryCopy(pageId, content) {
     var registry = window.COPY_REGISTRY || [];
     if (!content || !content.pages) return;
-    var globalData = content.pages['__global__'] || {};
+    var sharedData = content.pages.site_shared || content.pages['__global__'] || {};
     var pageData = content.pages[pageId] || {};
     var bindings = (window.COPY_BINDINGS || {})[pageId] || {};
 
     registry.forEach(function (field) {
-      var data = field.page === '__global__' ? globalData : pageData;
-      if (field.page !== '__global__' && field.page !== pageId) return;
+      var isShared = field.page === 'site_shared' || field.page === '__global__';
+      var data = isShared ? sharedData : pageData;
+      if (!isShared && field.page !== pageId) return;
       var val = data[field.key];
       if (val == null || val === '') return;
       document.querySelectorAll(field.selector).forEach(function (el) {
