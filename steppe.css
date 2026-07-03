@@ -1657,6 +1657,9 @@ body.map-schools-open .region-schools-block {
 .prog-slab-side--ink {
   background: linear-gradient(150deg, #22243A 0%, #2B2D4A 100%);
 }
+.prog-slab-side--purple {
+  background: linear-gradient(150deg, #2E2450 0%, #4A3570 100%);
+}
 .prog-slab-kicker {
   font-family: var(--fh);
   font-weight: 800;
@@ -1710,6 +1713,21 @@ body.map-schools-open .region-schools-block {
   line-height: 1.65;
   color: var(--body);
   margin: 0;
+}
+
+.prog-slab-body--carousel {
+  padding: 0;
+  min-height: 320px;
+}
+.prog-slab-body--carousel .feat-carousel {
+  height: 100%;
+  min-height: 320px;
+  background: #fff;
+}
+.prog-slab-body--carousel .feat-carousel-viewport {
+  aspect-ratio: unset;
+  height: 100%;
+  min-height: 320px;
 }
 
 /* Samruk — banner + numbered rows */
@@ -1873,66 +1891,6 @@ body.map-schools-open .region-schools-block {
   padding: 20px 24px 24px;
 }
 .dir-feat--carousel .dir-feat-ic { margin-bottom: 14px; }
-
-/* Fit-out program: copy left, carousel right — no cards */
-#prog-content-fitout .fitout-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  margin-bottom: 44px;
-}
-#prog-content-fitout .fitout-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: clamp(24px, 4vw, 48px);
-  align-items: center;
-}
-#prog-content-fitout .fitout-copy {
-  min-width: 0;
-  padding-right: 8px;
-}
-#prog-content-fitout .fitout-copy-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-#prog-content-fitout .fitout-copy-head .dir-feat-ic {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  margin: 0;
-  flex-shrink: 0;
-}
-#prog-content-fitout .fitout-copy-head .dir-feat-ic svg {
-  width: 20px;
-  height: 20px;
-}
-#prog-content-fitout .fitout-copy h4 {
-  font-family: var(--fh);
-  font-size: clamp(18px, 2vw, 22px);
-  font-weight: 800;
-  line-height: 1.25;
-  color: var(--ink);
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-#prog-content-fitout .fitout-copy p {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: var(--body);
-  margin: 0;
-  max-width: 46ch;
-}
-#prog-content-fitout .fitout-row .feat-carousel {
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 28px -18px rgba(27, 79, 138, 0.35);
-}
-#prog-content-fitout .fitout-row .feat-carousel-viewport {
-  aspect-ratio: 16 / 10;
-  max-height: 260px;
-}
 
 .feat-carousel {
   position: relative;
@@ -2784,19 +2742,10 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
   .dir-feats, .dir-results-stats { grid-template-columns: 1fr; }
-  #prog-content-fitout .fitout-rows {
-    gap: 28px;
-  }
-  #prog-content-fitout .fitout-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  #prog-content-fitout .fitout-copy {
-    padding-right: 0;
-  }
-  #prog-content-fitout .fitout-row .feat-carousel-viewport {
-    max-height: none;
-    aspect-ratio: 16 / 10;
+  .prog-slab-body--carousel,
+  .prog-slab-body--carousel .feat-carousel,
+  .prog-slab-body--carousel .feat-carousel-viewport {
+    min-height: 240px;
   }
   .feat-carousel-arrow { opacity: 1; }
   .dir-panel-body { padding: 36px 24px; }
