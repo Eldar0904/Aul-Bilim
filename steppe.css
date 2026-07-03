@@ -1874,6 +1874,56 @@ body.map-schools-open .region-schools-block {
 }
 .dir-feat--carousel .dir-feat-ic { margin-bottom: 14px; }
 
+/* Fit-out program: stacked rows, copy left / carousel right */
+.dir-feats--stack {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.dir-feat--split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+}
+.dir-feat--split .dir-feat-body {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--surface) 0%, var(--cream) 100%);
+  border-right: 1px solid var(--line);
+}
+.dir-feat--split .dir-feat-ic {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+}
+.dir-feat--split h4 {
+  font-family: var(--fh);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+.dir-feat--split p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 42ch;
+}
+.dir-feat--split .feat-carousel {
+  min-height: 100%;
+  background: var(--bg);
+}
+.dir-feat--split .feat-carousel-viewport {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 300px;
+}
+
 .feat-carousel {
   position: relative;
   background: var(--bg);
@@ -2724,6 +2774,18 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
   .dir-feats, .dir-results-stats { grid-template-columns: 1fr; }
+  .dir-feat--split {
+    grid-template-columns: 1fr;
+  }
+  .dir-feat--split .dir-feat-body {
+    padding: 28px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .dir-feat--split .feat-carousel-viewport {
+    min-height: 240px;
+    aspect-ratio: 16 / 10;
+  }
   .feat-carousel-arrow { opacity: 1; }
   .dir-panel-body { padding: 36px 24px; }
   .prog-page-hero { min-height: min(58vh, 520px); }
