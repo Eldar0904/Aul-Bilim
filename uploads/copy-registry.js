@@ -2310,8 +2310,7 @@
     "section": "Hero",
     "type": "text",
     "heroGroup": "fitout",
-    "default": "Инновациялық кабинеттер құру",
-    "highlightWord": "кабинеттер"
+    "default": "Инновациялық кабинеттер құру"
   },
   {
     "page": "programs.html",
@@ -2321,8 +2320,7 @@
     "section": "Hero",
     "type": "text",
     "heroGroup": "fitout",
-    "default": "Building innovative classrooms",
-    "highlightWord": "innovative"
+    "default": "Building innovative classrooms"
   },
   {
     "page": "programs.html",
@@ -2332,8 +2330,7 @@
     "section": "Hero",
     "type": "text",
     "heroGroup": "ustaz",
-    "default": "Оқыту курстары",
-    "highlightWord": "курстары"
+    "default": "Оқыту курстары"
   },
   {
     "page": "programs.html",
@@ -2343,8 +2340,7 @@
     "section": "Hero",
     "type": "text",
     "heroGroup": "ustaz",
-    "default": "Teacher Training",
-    "highlightWord": "Training"
+    "default": "Teacher Training"
   }
 ];
 })();
