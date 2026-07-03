@@ -85,6 +85,16 @@
     });
   }
 
+  function sortHeroFields(fields) {
+    var typeOrder = { html: 0, text: 1, textarea: 2 };
+    return fields.slice().sort(function (a, b) {
+      var ta = typeOrder[a.type] != null ? typeOrder[a.type] : 9;
+      var tb = typeOrder[b.type] != null ? typeOrder[b.type] : 9;
+      if (ta !== tb) return ta - tb;
+      return a.key.localeCompare(b.key);
+    });
+  }
+
   function buildField(field) {
     var wrap = document.createElement('div');
     wrap.className = 'tf tf-copy';
@@ -157,7 +167,8 @@
       }
       var body = document.createElement('div');
       body.className = isHeroMount ? 'copy-fields-inner' : 'as-body copy-fields';
-      groups[section].forEach(function (field) {
+      var fields = isHeroMount ? sortHeroFields(groups[section]) : groups[section];
+      fields.forEach(function (field) {
         body.appendChild(buildField(field));
       });
       block.appendChild(body);

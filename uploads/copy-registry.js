@@ -2302,7 +2302,7 @@
     "page": "programs.html",
     "key": "programs-025-kk",
     "selector": "[data-copy=\"programs-025-kk\"]",
-    "label": "Hero — title (қазақша)",
+    "label": "Тақырып",
     "section": "Hero",
     "type": "html",
     "heroGroup": "fitout"
@@ -2311,7 +2311,7 @@
     "page": "programs.html",
     "key": "programs-026-en",
     "selector": "[data-copy=\"programs-026-en\"]",
-    "label": "Hero — title (English)",
+    "label": "Title",
     "section": "Hero",
     "type": "html",
     "heroGroup": "fitout"
@@ -2320,7 +2320,7 @@
     "page": "programs.html",
     "key": "programs-047-kk",
     "selector": "[data-copy=\"programs-047-kk\"]",
-    "label": "Hero — title (қазақша)",
+    "label": "Тақырып",
     "section": "Hero",
     "type": "html",
     "heroGroup": "ustaz"
@@ -2329,7 +2329,7 @@
     "page": "programs.html",
     "key": "programs-048-en",
     "selector": "[data-copy=\"programs-048-en\"]",
-    "label": "Hero — title (English)",
+    "label": "Title",
     "section": "Hero",
     "type": "html",
     "heroGroup": "ustaz"
