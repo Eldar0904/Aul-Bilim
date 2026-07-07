@@ -561,7 +561,7 @@ aside#sidebar {
 .admin-school-card-preview {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -611,6 +611,39 @@ aside#sidebar {
   border-radius: 14px;
   padding: 14px 16px;
 }
+#school-field-youtube.is-valid {
+  border-color: #1a7a45;
+}
+#school-field-youtube.is-invalid {
+  border-color: #c0392b;
+}
+.admin-youtube-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.admin-youtube-preview[hidden] {
+  display: none !important;
+}
+#school-youtube-thumb {
+  width: 120px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  flex: none;
+}
+#school-youtube-status {
+  font-size: 12px;
+  color: var(--body);
+  font-family: var(--fb);
+}
+#school-field-youtube.is-invalid ~ .admin-youtube-preview #school-youtube-status {
+  color: #c0392b;
+}
 
 /* School editor fields */
 .se-block { background: #fff; border-radius: 14px; padding: 16px 18px; }
@@ -642,6 +675,8 @@ html[data-admin-lang="en"] .admin-lang-kk { display: none !important; }
 }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 #toast.ok { background: #1a7a45; }
+#toast.warn { background: #b86e00; }
+#toast.err { background: #c0392b; }
 
 .stat-cell input.sl-en { margin-top: 4px; font-size: 10.5px; opacity: 0.85; }
 @container school-editor (max-width: 720px) {

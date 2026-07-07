@@ -166,13 +166,24 @@
       return Promise.resolve();
     }
     var slotId = input.dataset.slotId || (slotEl && slotEl.dataset.slot) || 'general';
-    var maxDim = window.mediaUpload.maxDimForSlot(slotId);
-    var folder = 'pages/' + slotId.replace(/[^a-z0-9/_-]+/gi, '-').toLowerCase();
+    var uploadOpts = { folder: 'pages/' + slotId.replace(/[^a-z0-9/_-]+/gi, '-').toLowerCase() };
+    var presetId = window.mediaUpload.presetForSlot && window.mediaUpload.presetForSlot(slotId);
+    if (presetId) {
+      uploadOpts.preset = presetId;
+    } else if (window.mediaPresets && window.mediaPresets.resolveUploadOpts) {
+      var resolved = window.mediaPresets.resolveUploadOpts(slotId, slotEl);
+      if (resolved) Object.assign(uploadOpts, resolved);
+    } else {
+      uploadOpts.maxDim = window.mediaUpload.maxDimForSlot(slotId);
+    }
     setSlotUploading(slotEl, true);
-    return window.mediaUpload.upload(file, { folder: folder, maxDim: maxDim })
+    return window.mediaUpload.upload(file, uploadOpts)
       .then(function (result) {
         applyUploadedUrl(input, result.url);
-        toast('Сурет жүктелді', 'ok');
+        var msg = result.warning === 'lowResolution'
+          ? 'Сурет жүктелді — тым кіші, жоғары ажыратымдылықты қайта жүктеңіз'
+          : 'Сурет жүктелді';
+        toast(msg, result.warning ? 'warn' : 'ok');
       })
       .catch(function (e) {
         toast(e.message || 'Жүктеу сәтсіз аяқталды', 'err');

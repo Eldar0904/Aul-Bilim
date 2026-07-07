@@ -7,14 +7,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="admin.css?v=20" />
+<link rel="stylesheet" href="admin.css?v=21" />
 <link rel="stylesheet" href="steppe.css?v=74" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js?v=3"></script>
 <script src="uploads/content-schema.js"></script>
 <script src="uploads/db.js?v=5"></script>
 <script src="uploads/media-config.js"></script>
-<script src="uploads/media-upload.js?v=4"></script>
+<script src="uploads/media-presets.js"></script>
+<script src="uploads/media-upload.js?v=5"></script>
 </head>
 <body>
 
@@ -429,6 +430,10 @@
                     <label class="se-label" for="school-field-youtube">YouTube бейне</label>
                     <input class="se-input" type="text" id="school-field-youtube" placeholder="Видео ID немесе youtube.com сілтемесі (мыс. Kn1wxXwTf7I)">
                     <p class="se-hint">Тек видео ID немесе YouTube сілтемесін қойыңыз.</p>
+                    <div class="admin-youtube-preview" id="school-youtube-preview" hidden>
+                      <img id="school-youtube-thumb" alt="" />
+                      <span id="school-youtube-status"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -493,7 +498,7 @@
 <script src="uploads/copy-registry.js?v=1"></script>
 <script src="uploads/admin-lang.js?v=1"></script>
 <script src="uploads/admin-copy-ui.js?v=5"></script>
-<script src="admin-cms.js?v=11"></script>
+<script src="admin-cms.js?v=12"></script>
 <script src="uploads/region-registry.js"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>
@@ -503,7 +508,7 @@
 <script src="assets/abay-schools.js?v=4"></script>
 <script src="assets/kyzylorda-schools.js?v=4"></script>
 <script src="assets/almaty-schools.js?v=4"></script>
-<script src="admin-schools.js?v=16"></script>
+<script src="admin-schools.js?v=17"></script>
 <script src="admin-regions.js?v=2"></script>
 </body>
 </html>

@@ -85,6 +85,61 @@ window.adminSchools = (function () {
     return m ? m[1] : null;
   }
 
+  function uploadSuccessMessage(base, result) {
+    if (result && result.warning === 'lowResolution') {
+      return base + ' — сурет тым кіші, жоғары ажыратымдылықты қайта жүктеңіз';
+    }
+    return base;
+  }
+
+  function updateYoutubeFieldState() {
+    var input = document.getElementById('school-field-youtube');
+    var preview = document.getElementById('school-youtube-preview');
+    var thumb = document.getElementById('school-youtube-thumb');
+    var status = document.getElementById('school-youtube-status');
+    if (!input) return;
+
+    var raw = input.value.trim();
+    var id = youtubeEmbedId(raw);
+
+    input.classList.remove('is-valid', 'is-invalid');
+    if (!raw) {
+      if (preview) preview.hidden = true;
+      if (status) status.textContent = '';
+      return;
+    }
+
+    if (id) {
+      input.classList.add('is-valid');
+      if (preview) preview.hidden = false;
+      if (thumb) {
+        thumb.hidden = false;
+        thumb.src = 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg';
+        thumb.alt = 'YouTube preview';
+      }
+      if (status) status.textContent = 'Видео дұрыс — ' + id;
+      return;
+    }
+
+    input.classList.add('is-invalid');
+    if (preview) preview.hidden = false;
+    if (thumb) thumb.hidden = true;
+    if (status) status.textContent = 'YouTube ID немесе сілтеме дұрыс емес';
+  }
+
+  function normalizeYoutubeField() {
+    var input = document.getElementById('school-field-youtube');
+    if (!input) return;
+    var id = youtubeEmbedId(input.value);
+    if (id && input.value.trim() !== id) {
+      input.value = id;
+      dirty = true;
+      window.dirty = true;
+      refreshPreview();
+    }
+    updateYoutubeFieldState();
+  }
+
   function formValues() {
     var galleryRaw = (document.getElementById('school-field-gallery') || {}).value || '';
     var gallery = galleryRaw.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
@@ -413,6 +468,7 @@ window.adminSchools = (function () {
     document.getElementById('school-field-card-image').value = schoolCardImage(merged);
     document.getElementById('school-field-gallery').value = (merged.gallery || []).join('\n');
     document.getElementById('school-field-youtube').value = merged.youtube || '';
+    updateYoutubeFieldState();
     document.getElementById('school-field-desc-kk').value = (merged.desc && merged.desc.kk) || '';
     document.getElementById('school-field-desc-en').value = (merged.desc && merged.desc.en) || '';
     var cardDescSource;
@@ -571,15 +627,16 @@ window.adminSchools = (function () {
     setEditorStatus('Сурет жүктелуде…', 'ok');
     window.mediaUpload.upload(file, {
       folder: schoolUploadFolder(),
-      maxDim: 1600
+      preset: 'schoolMap'
     }).then(function (result) {
       if (!result || !result.url) throw new Error('Жүктеу жауабында сілтеме жоқ');
       var url = result.url;
       if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
       applyMapImageUrl(url);
       refreshPreview();
-      setEditorStatus('Сурет жүктелді — «Сақтау» басыңыз', 'ok');
-      if (window.adminToast) window.adminToast('Сурет жүктелді', 'ok');
+      var msg = uploadSuccessMessage('Сурет жүктелді — «Сақтау» басыңыз', result);
+      setEditorStatus(msg, 'ok');
+      if (window.adminToast) window.adminToast(msg, result.warning ? 'warn' : 'ok');
     }).catch(function (e) {
       var msg = (e && e.message) ? e.message : 'Жүктеу сәтсіз аяқталды';
       setEditorStatus(msg, 'err');
@@ -617,15 +674,16 @@ window.adminSchools = (function () {
     setEditorStatus('Сурет жүктелуде…', 'ok');
     window.mediaUpload.upload(file, {
       folder: schoolUploadFolder(),
-      maxDim: 1200
+      preset: 'schoolCard'
     }).then(function (result) {
       if (!result || !result.url) throw new Error('Жүктеу жауабында сілтеме жоқ');
       var url = result.url;
       if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
       applyCardImageUrl(url);
       refreshPreview();
-      setEditorStatus('Сурет жүктелді — «Сақтау» басыңыз', 'ok');
-      if (window.adminToast) window.adminToast('Сурет жүктелді', 'ok');
+      var msg = uploadSuccessMessage('Сурет жүктелді — «Сақтау» басыңыз', result);
+      setEditorStatus(msg, 'ok');
+      if (window.adminToast) window.adminToast(msg, result.warning ? 'warn' : 'ok');
     }).catch(function (e) {
       var msg = (e && e.message) ? e.message : 'Жүктеу сәтсіз аяқталды';
       setEditorStatus(msg, 'err');
@@ -653,6 +711,7 @@ window.adminSchools = (function () {
     var folder = schoolUploadFolder();
     var urls = [];
     var index = 0;
+    var hadLowRes = false;
 
     setSchoolUploadBusy(btn, true);
 
@@ -666,14 +725,19 @@ window.adminSchools = (function () {
         dirty = true;
         window.dirty = true;
         galleryInput.dispatchEvent(new Event('input', { bubbles: true }));
-        setEditorStatus(urls.length + ' сурет қосылды — «Сақтау» басыңыз', 'ok');
-        if (window.adminToast) window.adminToast(urls.length + ' сурет қосылды', 'ok');
+        var base = urls.length + ' сурет қосылды — «Сақтау» басыңыз';
+        var msg = hadLowRes
+          ? base + ' — кейбір суреттер тым кіші, жоғары ажыратымдылықты қайта жүктеңіз'
+          : base;
+        setEditorStatus(msg, 'ok');
+        if (window.adminToast) window.adminToast(msg, hadLowRes ? 'warn' : 'ok');
         setSchoolUploadBusy(btn, false);
         return;
       }
-      window.mediaUpload.upload(files[index], { folder: folder, maxDim: 1600 })
+      window.mediaUpload.upload(files[index], { folder: folder, preset: 'schoolGallery' })
         .then(function (result) {
           var url = result.url;
+          if (result.warning === 'lowResolution') hadLowRes = true;
           if (window.db && window.db.normalizeMediaUrl) url = window.db.normalizeMediaUrl(url);
           urls.push(url);
           index += 1;
@@ -862,7 +926,7 @@ window.adminSchools = (function () {
   }
 
   function bindEditorInputs() {
-    ['school-field-map-image', 'school-field-card-image', 'school-field-gallery', 'school-field-youtube',
+    ['school-field-map-image', 'school-field-card-image', 'school-field-gallery',
       'school-field-desc-kk', 'school-field-desc-en', 'school-field-card-desc-kk', 'school-field-card-desc-en',
       'school-field-teachers'].forEach(function (id) {
       var el = document.getElementById(id);
@@ -874,6 +938,18 @@ window.adminSchools = (function () {
         refreshPreview();
       });
     });
+
+    var youtubeInput = document.getElementById('school-field-youtube');
+    if (youtubeInput && !youtubeInput.dataset.bound) {
+      youtubeInput.dataset.bound = '1';
+      youtubeInput.addEventListener('input', function () {
+        dirty = true;
+        window.dirty = true;
+        updateYoutubeFieldState();
+        refreshPreview();
+      });
+      youtubeInput.addEventListener('blur', normalizeYoutubeField);
+    }
 
     bindSchoolUploads();
   }
