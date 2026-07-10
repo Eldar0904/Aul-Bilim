@@ -38,7 +38,7 @@
     "page": "site_shared",
     "key": "global-nav-services-kk",
     "selector": "[data-copy=\"global-nav-services-kk\"]",
-    "label": "Қызметтер",
+    "label": "Бағыттар",
     "section": "Navigation",
     "type": "text"
   },
@@ -46,7 +46,7 @@
     "page": "site_shared",
     "key": "global-nav-services-en",
     "selector": "[data-copy=\"global-nav-services-en\"]",
-    "label": "Services",
+    "label": "Directions",
     "section": "Navigation",
     "type": "text"
   },
