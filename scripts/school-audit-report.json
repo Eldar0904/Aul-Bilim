@@ -1,0 +1,4399 @@
+{
+  "totals": {
+    "schools": 418,
+    "files": 7
+  },
+  "region_stats": {
+    "abay-schools.js": {
+      "schools": 36,
+      "districts": 11,
+      "named_schools": 10,
+      "gymnasiums": 0
+    },
+    "akmola-schools.js": {
+      "schools": 54,
+      "districts": 18,
+      "named_schools": 3,
+      "gymnasiums": 0
+    },
+    "almaty-schools.js": {
+      "schools": 50,
+      "districts": 6,
+      "named_schools": 21,
+      "gymnasiums": 3
+    },
+    "karaganda-schools.js": {
+      "schools": 86,
+      "districts": 6,
+      "named_schools": 20,
+      "gymnasiums": 7
+    },
+    "kostanay-schools.js": {
+      "schools": 63,
+      "districts": 18,
+      "named_schools": 9,
+      "gymnasiums": 0
+    },
+    "kyzylorda-schools.js": {
+      "schools": 58,
+      "districts": 7,
+      "named_schools": 21,
+      "gymnasiums": 2
+    },
+    "west-kazakhstan-schools.js": {
+      "schools": 71,
+      "districts": 12,
+      "named_schools": 14,
+      "gymnasiums": 0
+    }
+  },
+  "issue_counts": {
+    "desc_no_director_en": 86,
+    "desc_no_director_kk": 86,
+    "en_mixed_script": 308,
+    "en_not_translated": 2
+  },
+  "duplicate_ids": [],
+  "errors": [],
+  "warnings": [],
+  "info": [
+    {
+      "file": "abay-schools.js",
+      "id": "abay-abai-district-1",
+      "kk": "С.Бекбосынова атындағы мектебі",
+      "en": "С.Бекбосынова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-abai-district-2",
+      "kk": "Ж.Молдагалиева мектебі",
+      "en": "Ж.Молдагалиева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-abai-district-3",
+      "kk": "Шакарима атындағы мектебі",
+      "en": "Шакарима Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-aqsuat-1",
+      "kk": "Сасан би атындағы мектебі",
+      "en": "Сасан би Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-aqsuat-2",
+      "kk": "СШ Тана Мырза мектебі",
+      "en": "СШ Тана Мырза Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-aqsuat-3",
+      "kk": "Коктубек мектебі",
+      "en": "School Коктубек Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-ayagoz-1",
+      "kk": "Ж.Жабаева атындағы мектебі",
+      "en": "Ж.Жабаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-ayagoz-2",
+      "kk": "Мынбулак мектебі",
+      "en": "Мынбулак Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-ayagoz-3",
+      "kk": "Б.Майлина атындағы мектебі",
+      "en": "Б.Майлина Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-beskaragai-1",
+      "kk": "Мало-Владимиров мектебі",
+      "en": "Мало-Владимиров Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-beskaragai-2",
+      "kk": "Нұрлыбек Баймұратов атындағы мектебі",
+      "en": "Нұрлыбек Баймұратов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-beskaragai-3",
+      "kk": "Семенов мектебі",
+      "en": "Семенов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-borodulikha-1",
+      "kk": "Камышен мектебі",
+      "en": "Камышен Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-borodulikha-2",
+      "kk": "М.Әуезов атындағы мектебі",
+      "en": "М.Әуезов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-borodulikha-3",
+      "kk": "Краснополь мектебі",
+      "en": "Краснополь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-zharma-1",
+      "kk": "Васильков мектебі",
+      "en": "Васильков School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-zharma-2",
+      "kk": "Д. Калматаева атындағы мектебі",
+      "en": "Д. Калматаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-zharma-3",
+      "kk": "Бирлик мектебі",
+      "en": "Бирлик Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-zhana-semey-1",
+      "kk": "Булак мектебі",
+      "en": "Булак Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-zhana-semey-2",
+      "kk": "Талицкая мектебі",
+      "en": "Талицкая Basic Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-zhana-semey-3",
+      "kk": "Турксиб мектебі",
+      "en": "Турксиб Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-kokpekti-1",
+      "kk": "Шариптогай мектебі",
+      "en": "Шариптогай School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-kokpekti-2",
+      "kk": "Романов мектебі",
+      "en": "Романов School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-kokpekti-3",
+      "kk": "Бигаш мектебі",
+      "en": "Бигаш School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-makanshy-1",
+      "kk": "Бугыбай мектебі",
+      "en": "Бугыбай School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-makanshy-2",
+      "kk": "Кайындин мектебі-сад",
+      "en": "Кайындин Secondary School-сад",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-makanshy-3",
+      "kk": "Карабутин мектебі",
+      "en": "Карабутин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-urzhar-1",
+      "kk": "К.Игенбайұлы атындағы мектебі",
+      "en": "К.Игенбайұлы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-urzhar-2",
+      "kk": "Әуезов атындағы мектебі",
+      "en": "Әуезов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-urzhar-3",
+      "kk": "Некрасов мектебі-сад",
+      "en": "Некрасов Secondary School-сад",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-kurchatov-1",
+      "kk": "Боденелин мектебі",
+      "en": "Боденелин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-kurchatov-2",
+      "kk": "Чаган №24 мектебі",
+      "en": "Basic Secondary School № 24 поселка Чаган",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-kurchatov-3",
+      "kk": "Букенчин мектебі",
+      "en": "Букенчин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-beskaragai-4",
+      "kk": "Ундрус мектебі",
+      "en": "Ундрус Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-beskaragai-5",
+      "kk": "Семияр мектебі",
+      "en": "Семияр Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "abay-schools.js",
+      "id": "abay-beskaragai-6",
+      "kk": "Башкуль мектебі",
+      "en": "Башкуль School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-astrakhan-2",
+      "kk": "Петровка мектебі",
+      "en": "Петровка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-astrakhan-3",
+      "kk": "Караколь мектебі",
+      "en": "Караколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-shortandy-1",
+      "kk": "Новоселовка мектебі",
+      "en": "Новоселовка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-shortandy-2",
+      "kk": "Ключи мектебі",
+      "en": "Ключи Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-shortandy-3",
+      "kk": "Мыктыколь мектебі",
+      "en": "Мыктыколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-arshaly-1",
+      "kk": "Бабатай мектебі",
+      "en": "Бабатай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-arshaly-2",
+      "kk": "Койгельды мектебі",
+      "en": "Койгельды Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-arshaly-3",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-burabay-1",
+      "kk": "Урумкай мектебі",
+      "en": "Урумкай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-burabay-2",
+      "kk": "Баянбай мектебі",
+      "en": "Баянбай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-burabay-3",
+      "kk": "Акылбай мектебі",
+      "en": "Акылбай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-akkol-1",
+      "kk": "Амангельды мектебі",
+      "en": "Амангельды Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-akkol-2",
+      "kk": "Кеңес мектебі",
+      "en": "Кеңес Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-akkol-3",
+      "kk": "Барап мектебі",
+      "en": "Барап Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-esil-1",
+      "kk": "Аксай мектебі",
+      "en": "Аксай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-esil-2",
+      "kk": "Бузулук мектебі",
+      "en": "Бузулук Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-esil-3",
+      "kk": "Сурган мектебі",
+      "en": "Сурган Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zhaksy-1",
+      "kk": "Перекатное мектебі",
+      "en": "Перекатное Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zhaksy-2",
+      "kk": "Тарасовка мектебі",
+      "en": "Тарасовка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zhaksy-3",
+      "kk": "Новокиенка мектебі",
+      "en": "Новокиенка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zharkain-1",
+      "kk": "Бирсуат мектебі",
+      "en": "Бирсуат Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zharkain-2",
+      "kk": "Шойындыколь мектебі",
+      "en": "Шойындыколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zharkain-3",
+      "kk": "Ушкарасу мектебі",
+      "en": "Ушкарасу Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-sandyktau-1",
+      "kk": "Новоромановка мектебі",
+      "en": "Новоромановка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-sandyktau-2",
+      "kk": "Петровка мектебі",
+      "en": "Петровка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-sandyktau-3",
+      "kk": "Владимировка мектебі",
+      "en": "Владимировка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-atbasar-1",
+      "kk": "Бастау №2 мектебі",
+      "en": "Бастау №2 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-atbasar-2",
+      "kk": "Сепе мектебі",
+      "en": "Сепе Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-atbasar-3",
+      "kk": "Сергеевка мектебі",
+      "en": "Сергеевка Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-stepnogorsk-1",
+      "kk": "Кырык кудык мектебі",
+      "en": "Кырык кудык Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-stepnogorsk-2",
+      "kk": "Байконыс мектебі",
+      "en": "Байконыс Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-stepnogorsk-3",
+      "kk": "Аксу мектебі",
+      "en": "Аксу Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-tselinograd-1",
+      "kk": "Жана Жайнак мектебі",
+      "en": "Жана Жайнак Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-tselinograd-2",
+      "kk": "Раздольное мектебі",
+      "en": "Раздольное Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-tselinograd-3",
+      "kk": "Мортык мектебі",
+      "en": "Мортык Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-egindykol-1",
+      "kk": "Узунколь мектебі",
+      "en": "Узунколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-egindykol-2",
+      "kk": "Тоганас мектебі",
+      "en": "Тоганас Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-egindykol-3",
+      "kk": "Коркем мектебі",
+      "en": "Коркем Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-korgalzhyn-1",
+      "kk": "Кенбидайык мектебі",
+      "en": "Кенбидайык Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-korgalzhyn-2",
+      "kk": "Жантеке мектебі",
+      "en": "Жантеке Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-korgalzhyn-3",
+      "kk": "Ш. Уәлиханов атындағы Караегин мектебі",
+      "en": "Ш. Уәлиханов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-ereymentau-1",
+      "kk": "Ажы мектебі",
+      "en": "Ажы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-ereymentau-2",
+      "kk": "Бестогай мектебі",
+      "en": "Бестогай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-ereymentau-3",
+      "kk": "Енбек мектебі",
+      "en": "Енбек Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-birjan-sal-1",
+      "kk": "Кенащи мектебі",
+      "en": "Кенащи Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-birjan-sal-2",
+      "kk": "Р.Елебаева атындағы мектебі",
+      "en": "Р.Елебаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-birjan-sal-3",
+      "kk": "Мамай мектебі",
+      "en": "Мамай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-bulandy-1",
+      "kk": "Алтынды мектебі",
+      "en": "Алтынды Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-bulandy-2",
+      "kk": "Караозек мектебі",
+      "en": "Караозек Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-bulandy-3",
+      "kk": "Николь №1 мектебі",
+      "en": "Николь №1 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zerendi-1",
+      "kk": "Акадыр мектебі",
+      "en": "Акадыр Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zerendi-2",
+      "kk": "Иглик мектебі",
+      "en": "Иглик Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "akmola-schools.js",
+      "id": "akmola-zerendi-3",
+      "kk": "Ортагаш мектебі",
+      "en": "Ортагаш Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-1",
+      "kk": "№4 Касым Кайсенов атындағы мектебі",
+      "en": "No. 4 Касым Кайсенов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-2",
+      "kk": "Арна №11 мектебі",
+      "en": "Арна №11 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-3",
+      "kk": "№1 Д.А. Конбаев атындағы мектебі",
+      "en": "No. 1 Д.А. Конбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-4",
+      "kk": "А.Жубанова атындағы мектебі",
+      "en": "А.Жубанова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-6",
+      "kk": "Сарыбулак №8 мектебі",
+      "en": "Сарыбулак №8 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-7",
+      "kk": "Шенгельды №6 мектебі",
+      "en": "Шенгельды №6 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-konaev-8",
+      "kk": "№1 Ы. Алтынсарин атындағы мектебі",
+      "en": "No. 1 Ы. Алтынсарин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-1",
+      "kk": "Хусайн Бижанов атындағы мектебі",
+      "en": "Хусайн Бижанов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-2",
+      "kk": "Корам мектебі",
+      "en": "Корам Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-3",
+      "kk": "М. Мақатаев атындағы мектебі",
+      "en": "М. Мақатаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-4",
+      "kk": "Аль-Фараби атындағы мектебі",
+      "en": "Аль-Фараби Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-5",
+      "kk": "Коктобе мектебі",
+      "en": "Коктобе Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-6",
+      "kk": "Райымбек батыра атындағы мектебі",
+      "en": "Райымбек батыра Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-7",
+      "kk": "В.Терешкова атындағы мектебі",
+      "en": "В.Терешкова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-8",
+      "kk": "Шелек гимназиясы",
+      "en": "Шелек гимназиясы",
+      "code": "en_not_translated",
+      "severity": "info",
+      "detail": "English title is still fully Cyrillic transliteration"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-9",
+      "kk": "Абылай хана атындағы №4 мектебі",
+      "en": "Абылай хана Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-enbekshikazakh-10",
+      "kk": "Мемлекеттік мектеп мектебі",
+      "en": "Мемлекеттік мектеп Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-zhambyl-3",
+      "kk": "Каргалин №4 мектебі",
+      "en": "Каргалин Secondary School №4",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-zhambyl-4",
+      "kk": "Аксенгир мектебі",
+      "en": "Аксенгир Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-zhambyl-5",
+      "kk": "Мынбаево мектебі",
+      "en": "Мынбаево Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-zhambyl-7",
+      "kk": "Жангелдин атындағы мектебі",
+      "en": "Жангелдин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-zhambyl-8",
+      "kk": "Абдолла Карсакбаев атындағы мектебі",
+      "en": "Абдолла Карсакбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-ile-2",
+      "kk": "ГУ мектебі",
+      "en": "ГУ Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-ile-4",
+      "kk": "К.Азербаева атындағы №15 мектебі",
+      "en": "К.Азербаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-1",
+      "kk": "М. Бейсебаев атындағы мектебі",
+      "en": "М. Бейсебаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-2",
+      "kk": "Капал батыра атындағы мектебі",
+      "en": "Капал батыра Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-3",
+      "kk": "Абай №2 мектебі",
+      "en": "Абай №2 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-4",
+      "kk": "Береке мектебі",
+      "en": "Береке Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-5",
+      "kk": "А.Байтурсунулы атындағы мектебі",
+      "en": "А.Байтурсунулы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-6",
+      "kk": "А.Байжанова атындағы мектебі",
+      "en": "А.Байжанова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-7",
+      "kk": "М. Әуезов атындағы мектебі",
+      "en": "М. Әуезов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-karasai-8",
+      "kk": "Б.Момышулы атындағы мектебі",
+      "en": "Б.Момышулы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-talgar-5",
+      "kk": "Б.Момышулы атындағы №35 мектебі",
+      "en": "Б.Момышулы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-talgar-7",
+      "kk": "№3 Абая атындағы мектебі",
+      "en": "No. 3 Абая Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "almaty-schools.js",
+      "id": "almaty-ile-8",
+      "kk": "№48 Т.Айбергенова мектебі",
+      "en": "№48 Т.Айбергенова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-1",
+      "kk": "№1 гимназиясы",
+      "en": "No. 1 Gymnasium",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-1",
+      "kk": "№1 гимназиясы",
+      "en": "No. 1 Gymnasium",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-2",
+      "kk": "№8 мектебі",
+      "en": "№8 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-2",
+      "kk": "№8 мектебі",
+      "en": "№8 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-3",
+      "kk": "№11 мектебі",
+      "en": "№11 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-3",
+      "kk": "№11 мектебі",
+      "en": "№11 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-4",
+      "kk": "№25 мектебі",
+      "en": "№25 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-4",
+      "kk": "№25 мектебі",
+      "en": "№25 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-5",
+      "kk": "№32 мектебі",
+      "en": "№32 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-5",
+      "kk": "№32 мектебі",
+      "en": "№32 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-6",
+      "kk": "Жакып Акбаев атындағы мектебі",
+      "en": "Жакып Акбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-6",
+      "kk": "Жакып Акбаев атындағы мектебі",
+      "en": "Жакып Акбаев Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-6",
+      "kk": "Жакып Акбаев атындағы мектебі",
+      "en": "Жакып Акбаев Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-7",
+      "kk": "Ю.Н.Павлова атындағы мектебі",
+      "en": "Ю.Н.Павлова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-7",
+      "kk": "Ю.Н.Павлова атындағы мектебі",
+      "en": "Ю.Н.Павлова Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-7",
+      "kk": "Ю.Н.Павлова атындағы мектебі",
+      "en": "Ю.Н.Павлова Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-8",
+      "kk": "№45 гимназиясы",
+      "en": "No. 45 Gymnasium",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-8",
+      "kk": "№45 гимназиясы",
+      "en": "No. 45 Gymnasium",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-9",
+      "kk": "№46 мектебі",
+      "en": "№46 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-9",
+      "kk": "№46 мектебі",
+      "en": "№46 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-10",
+      "kk": "№48 мектебі",
+      "en": "№48 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-10",
+      "kk": "№48 мектебі",
+      "en": "№48 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-11",
+      "kk": "Е.А. Букетов атындағы мектебі",
+      "en": "Е.А. Букетов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-11",
+      "kk": "Е.А. Букетов атындағы мектебі",
+      "en": "Е.А. Букетов Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-11",
+      "kk": "Е.А. Букетов атындағы мектебі",
+      "en": "Е.А. Букетов Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-12",
+      "kk": "мектебі-лицей №53",
+      "en": "School-лицей №53 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-12",
+      "kk": "мектебі-лицей №53",
+      "en": "School-лицей №53 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-12",
+      "kk": "мектебі-лицей №53",
+      "en": "School-лицей №53 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-13",
+      "kk": "мектебі-лицей №66",
+      "en": "School-лицей №66 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-13",
+      "kk": "мектебі-лицей №66",
+      "en": "School-лицей №66 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-13",
+      "kk": "мектебі-лицей №66",
+      "en": "School-лицей №66 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-14",
+      "kk": "№82 мектебі",
+      "en": "№82 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-14",
+      "kk": "№82 мектебі",
+      "en": "№82 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-15",
+      "kk": "Габиден Мустафин атындағы мектебі",
+      "en": "Габиден Мустафин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-15",
+      "kk": "Габиден Мустафин атындағы мектебі",
+      "en": "Габиден Мустафин Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-15",
+      "kk": "Габиден Мустафин атындағы мектебі",
+      "en": "Габиден Мустафин Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-16",
+      "kk": "№85 мектебі",
+      "en": "№85 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-16",
+      "kk": "№85 мектебі",
+      "en": "№85 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-17",
+      "kk": "№97 гимназиясы",
+      "en": "No. 97 Gymnasium",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karaganda-city-17",
+      "kk": "№97 гимназиясы",
+      "en": "No. 97 Gymnasium",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-1",
+      "kk": "Прокофий Корниенко атындағы мектебі",
+      "en": "Прокофий Корниенко Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-1",
+      "kk": "Прокофий Корниенко атындағы мектебі",
+      "en": "Прокофий Корниенко Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-1",
+      "kk": "Прокофий Корниенко атындағы мектебі",
+      "en": "Прокофий Корниенко Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-2",
+      "kk": "№ 4 мектебі",
+      "en": "№ 4 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-2",
+      "kk": "№ 4 мектебі",
+      "en": "№ 4 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-3",
+      "kk": "Касым Аманжолов атындағы мектебі",
+      "en": "Касым Аманжолов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-3",
+      "kk": "Касым Аманжолов атындағы мектебі",
+      "en": "Касым Аманжолов Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-3",
+      "kk": "Касым Аманжолов атындағы мектебі",
+      "en": "Касым Аманжолов Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-4",
+      "kk": "№ 15 мектебі",
+      "en": "№ 15 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-4",
+      "kk": "№ 15 мектебі",
+      "en": "№ 15 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-5",
+      "kk": "Есенгельдин мектебі",
+      "en": "Есенгельдин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-5",
+      "kk": "Есенгельдин мектебі",
+      "en": "Есенгельдин Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-5",
+      "kk": "Есенгельдин мектебі",
+      "en": "Есенгельдин Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-6",
+      "kk": "Ыбырай Алтынсарин атындағы мектебі",
+      "en": "Ыбырай Алтынсарин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-6",
+      "kk": "Ыбырай Алтынсарин атындағы мектебі",
+      "en": "Ыбырай Алтынсарин Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-6",
+      "kk": "Ыбырай Алтынсарин атындағы мектебі",
+      "en": "Ыбырай Алтынсарин Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-7",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-7",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-7",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-8",
+      "kk": "Топар мектебі",
+      "en": "Топар Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-8",
+      "kk": "Топар мектебі",
+      "en": "Топар Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-8",
+      "kk": "Топар мектебі",
+      "en": "Топар Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-9",
+      "kk": "№9 мектебі",
+      "en": "№9 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-9",
+      "kk": "№9 мектебі",
+      "en": "№9 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-10",
+      "kk": "Бауыржан Момышұлы атындағы мектебі",
+      "en": "Бауыржан Момышұлы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-10",
+      "kk": "Бауыржан Момышұлы атындағы мектебі",
+      "en": "Бауыржан Момышұлы Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-10",
+      "kk": "Бауыржан Момышұлы атындағы мектебі",
+      "en": "Бауыржан Момышұлы Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-11",
+      "kk": "Мұқағали Мақатаев атындағы мектебі",
+      "en": "Мұқағали Мақатаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-11",
+      "kk": "Мұқағали Мақатаев атындағы мектебі",
+      "en": "Мұқағали Мақатаев Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-11",
+      "kk": "Мұқағали Мақатаев атындағы мектебі",
+      "en": "Мұқағали Мақатаев Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-12",
+      "kk": "Самар мектебі",
+      "en": "Самар Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-12",
+      "kk": "Самар мектебі",
+      "en": "Самар Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-12",
+      "kk": "Самар мектебі",
+      "en": "Самар Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-13",
+      "kk": "Жартас мектебі",
+      "en": "Жартас Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-13",
+      "kk": "Жартас мектебі",
+      "en": "Жартас Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-abai-13",
+      "kk": "Жартас мектебі",
+      "en": "Жартас Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-1",
+      "kk": "мектебі-лицей №1",
+      "en": "School-лицей №1 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-1",
+      "kk": "мектебі-лицей №1",
+      "en": "School-лицей №1 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-1",
+      "kk": "мектебі-лицей №1",
+      "en": "School-лицей №1 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-2",
+      "kk": "№ 2 мектебі",
+      "en": "№ 2 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-2",
+      "kk": "№ 2 мектебі",
+      "en": "№ 2 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-3",
+      "kk": "№6 мектебі",
+      "en": "№6 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-3",
+      "kk": "№6 мектебі",
+      "en": "№6 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-4",
+      "kk": "мектебі-интернат №7",
+      "en": "School-интернат №7 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-4",
+      "kk": "мектебі-интернат №7",
+      "en": "School-интернат №7 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-4",
+      "kk": "мектебі-интернат №7",
+      "en": "School-интернат №7 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-5",
+      "kk": "№13 мектебі",
+      "en": "№13 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-5",
+      "kk": "№13 мектебі",
+      "en": "№13 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-6",
+      "kk": "№16 мектебі",
+      "en": "№16 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-6",
+      "kk": "№16 мектебі",
+      "en": "№16 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-7",
+      "kk": "№17 гимназиясы",
+      "en": "School-Gymnasium № 17",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-saran-7",
+      "kk": "№17 гимназиясы",
+      "en": "School-Gymnasium № 17",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-1",
+      "kk": "Алимхан Ермеков атындағы мектебі",
+      "en": "Алимхан Ермеков Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-1",
+      "kk": "Алимхан Ермеков атындағы мектебі",
+      "en": "Алимхан Ермеков Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-1",
+      "kk": "Алимхан Ермеков атындағы мектебі",
+      "en": "Алимхан Ермеков Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-2",
+      "kk": "№4 мектебі",
+      "en": "School Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-2",
+      "kk": "№4 мектебі",
+      "en": "School Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-3",
+      "kk": "№8 мектебі",
+      "en": "School Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-3",
+      "kk": "№8 мектебі",
+      "en": "School Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-4",
+      "kk": "№10 Нуркен Абдиров атындағы мектебі",
+      "en": "No. 10 Нуркен Абдиров Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-4",
+      "kk": "№10 Нуркен Абдиров атындағы мектебі",
+      "en": "No. 10 Нуркен Абдиров Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-4",
+      "kk": "№10 Нуркен Абдиров атындағы мектебі",
+      "en": "No. 10 Нуркен Абдиров Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-5",
+      "kk": "Алибек Буркитбаев атындағы мектебі",
+      "en": "Алибек Буркитбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-5",
+      "kk": "Алибек Буркитбаев атындағы мектебі",
+      "en": "Алибек Буркитбаев Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-5",
+      "kk": "Алибек Буркитбаев атындағы мектебі",
+      "en": "Алибек Буркитбаев Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-6",
+      "kk": "Карагайлы №16 мектебі",
+      "en": "Карагайлы №16 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-6",
+      "kk": "Карагайлы №16 мектебі",
+      "en": "Карагайлы №16 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-6",
+      "kk": "Карагайлы №16 мектебі",
+      "en": "Карагайлы №16 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-7",
+      "kk": "Карагайлы №17 мектебі",
+      "en": "Карагайлы №17 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-7",
+      "kk": "Карагайлы №17 мектебі",
+      "en": "Карагайлы №17 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-7",
+      "kk": "Карагайлы №17 мектебі",
+      "en": "Карагайлы №17 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-8",
+      "kk": "Буркутты №20 мектебі",
+      "en": "Буркутты №20 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-8",
+      "kk": "Буркутты №20 мектебі",
+      "en": "Буркутты №20 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-8",
+      "kk": "Буркутты №20 мектебі",
+      "en": "Буркутты №20 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-9",
+      "kk": "Бакты №21 мектебі",
+      "en": "Бакты №21 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-9",
+      "kk": "Бакты №21 мектебі",
+      "en": "Бакты №21 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-9",
+      "kk": "Бакты №21 мектебі",
+      "en": "Бакты №21 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-10",
+      "kk": "Кажыкен Смайылов атындағы мектебі",
+      "en": "Кажыкен Смайылов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-10",
+      "kk": "Кажыкен Смайылов атындағы мектебі",
+      "en": "Кажыкен Смайылов Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-karkaraly-10",
+      "kk": "Кажыкен Смайылов атындағы мектебі",
+      "en": "Кажыкен Смайылов Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-1",
+      "kk": "№1 мектебі",
+      "en": "№1 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-1",
+      "kk": "№1 мектебі",
+      "en": "№1 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-2",
+      "kk": "№2 мектебі",
+      "en": "№2 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-2",
+      "kk": "№2 мектебі",
+      "en": "№2 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-3",
+      "kk": "№3 мектебі",
+      "en": "№3 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-3",
+      "kk": "№3 мектебі",
+      "en": "№3 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-4",
+      "kk": "№4 мектебі",
+      "en": "№4 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-4",
+      "kk": "№4 мектебі",
+      "en": "№4 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-5",
+      "kk": "Габиден Мустафин атындағы мектебі",
+      "en": "Габиден Мустафин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-5",
+      "kk": "Габиден Мустафин атындағы мектебі",
+      "en": "Габиден Мустафин Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-5",
+      "kk": "Габиден Мустафин атындағы мектебі",
+      "en": "Габиден Мустафин Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-6",
+      "kk": "№6 мектебі",
+      "en": "№6 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-6",
+      "kk": "№6 мектебі",
+      "en": "№6 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-7",
+      "kk": "№7 мектебі",
+      "en": "№7 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-7",
+      "kk": "№7 мектебі",
+      "en": "№7 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-8",
+      "kk": "№8 мектебі",
+      "en": "№8 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-8",
+      "kk": "№8 мектебі",
+      "en": "№8 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-9",
+      "kk": "Лицей №9 мектебі",
+      "en": "Лицей №9 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-9",
+      "kk": "Лицей №9 мектебі",
+      "en": "Лицей №9 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-9",
+      "kk": "Лицей №9 мектебі",
+      "en": "Лицей №9 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-10",
+      "kk": "10 мектебі",
+      "en": "10 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-10",
+      "kk": "10 мектебі",
+      "en": "10 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-11",
+      "kk": "№11 мектебі",
+      "en": "№11 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-11",
+      "kk": "№11 мектебі",
+      "en": "№11 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-12",
+      "kk": "Первый Темиртау Классиче Лицей мектебі",
+      "en": "Первый Темиртау Классиче Лицей Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-12",
+      "kk": "Первый Темиртау Классиче Лицей мектебі",
+      "en": "Первый Темиртау Классиче Лицей Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-12",
+      "kk": "Первый Темиртау Классиче Лицей мектебі",
+      "en": "Первый Темиртау Классиче Лицей Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-13",
+      "kk": "Лицей №14 мектебі",
+      "en": "School - Лицей №14 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-13",
+      "kk": "Лицей №14 мектебі",
+      "en": "School - Лицей №14 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-13",
+      "kk": "Лицей №14 мектебі",
+      "en": "School - Лицей №14 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-14",
+      "kk": "№16 мектебі",
+      "en": "№16 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-14",
+      "kk": "№16 мектебі",
+      "en": "№16 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-15",
+      "kk": "№17 мектебі",
+      "en": "№17 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-15",
+      "kk": "№17 мектебі",
+      "en": "№17 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-16",
+      "kk": "№1 гимназиясы",
+      "en": "No. 1 Gymnasium",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-16",
+      "kk": "№1 гимназиясы",
+      "en": "No. 1 Gymnasium",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-17",
+      "kk": "№19 мектебі",
+      "en": "№19 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-17",
+      "kk": "№19 мектебі",
+      "en": "№19 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-18",
+      "kk": "мектебі-лицей №20",
+      "en": "School-лицей №20 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-18",
+      "kk": "мектебі-лицей №20",
+      "en": "School-лицей №20 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-18",
+      "kk": "мектебі-лицей №20",
+      "en": "School-лицей №20 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-19",
+      "kk": "№21 мектебі",
+      "en": "№21 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-19",
+      "kk": "№21 мектебі",
+      "en": "№21 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-20",
+      "kk": "№22 мектебі",
+      "en": "№22 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-20",
+      "kk": "№22 мектебі",
+      "en": "№22 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-21",
+      "kk": "Б.Момышулы атындағы мектебі",
+      "en": "Б.Момышулы Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-21",
+      "kk": "Б.Момышулы атындағы мектебі",
+      "en": "Б.Момышулы Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-21",
+      "kk": "Б.Момышулы атындағы мектебі",
+      "en": "Б.Момышулы Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-22",
+      "kk": "№24 мектебі",
+      "en": "№24 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-22",
+      "kk": "№24 мектебі",
+      "en": "№24 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-23",
+      "kk": "Жен гимназия",
+      "en": "Жен гимназия",
+      "code": "en_not_translated",
+      "severity": "info",
+      "detail": "English title is still fully Cyrillic transliteration"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-23",
+      "kk": "Жен гимназия",
+      "en": "Жен гимназия",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-23",
+      "kk": "Жен гимназия",
+      "en": "Жен гимназия",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-24",
+      "kk": "№27 мектебі",
+      "en": "№27 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-24",
+      "kk": "№27 мектебі",
+      "en": "№27 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-25",
+      "kk": "№28 мектебі",
+      "en": "№28 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-25",
+      "kk": "№28 мектебі",
+      "en": "№28 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-26",
+      "kk": "№29 мектебі",
+      "en": "№29 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-26",
+      "kk": "№29 мектебі",
+      "en": "№29 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-27",
+      "kk": "№31 мектебі",
+      "en": "№31 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-27",
+      "kk": "№31 мектебі",
+      "en": "№31 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-28",
+      "kk": "№32 мектебі",
+      "en": "№32 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-temirtau-28",
+      "kk": "№32 мектебі",
+      "en": "№32 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-1",
+      "kk": "Шоқан Уәлиханов атындағы гимназия",
+      "en": "Шоқан Уәлиханов Gymnasium",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-1",
+      "kk": "Шоқан Уәлиханов атындағы гимназия",
+      "en": "Шоқан Уәлиханов Gymnasium",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-1",
+      "kk": "Шоқан Уәлиханов атындағы гимназия",
+      "en": "Шоқан Уәлиханов Gymnasium",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-2",
+      "kk": "№2 мектебі",
+      "en": "№2 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-2",
+      "kk": "№2 мектебі",
+      "en": "№2 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-3",
+      "kk": "Евней Букетов атындағы мектебі",
+      "en": "Евней Букетов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-3",
+      "kk": "Евней Букетов атындағы мектебі",
+      "en": "Евней Букетов Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-3",
+      "kk": "Евней Букетов атындағы мектебі",
+      "en": "Евней Букетов Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-4",
+      "kk": "№ 4 мектебі",
+      "en": "№ 4 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-4",
+      "kk": "№ 4 мектебі",
+      "en": "№ 4 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-5",
+      "kk": "№6 мектебі",
+      "en": "№6 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-5",
+      "kk": "№6 мектебі",
+      "en": "№6 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-6",
+      "kk": "№7 мектебі",
+      "en": "№7 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-6",
+      "kk": "№7 мектебі",
+      "en": "№7 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-7",
+      "kk": "№8 мектебі",
+      "en": "№8 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-7",
+      "kk": "№8 мектебі",
+      "en": "№8 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-8",
+      "kk": "Санжар Асфендияров атындағы мектебі",
+      "en": "Санжар Асфендияров Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-8",
+      "kk": "Санжар Асфендияров атындағы мектебі",
+      "en": "Санжар Асфендияров Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-8",
+      "kk": "Санжар Асфендияров атындағы мектебі",
+      "en": "Санжар Асфендияров Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-9",
+      "kk": "№11 мектебі",
+      "en": "№11 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-9",
+      "kk": "№11 мектебі",
+      "en": "№11 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-10",
+      "kk": "№ 12 мектебі",
+      "en": "№ 12 Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-10",
+      "kk": "№ 12 мектебі",
+      "en": "№ 12 Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-11",
+      "kk": "А.Букейханова атындағы мектебі",
+      "en": "А.Букейханова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-11",
+      "kk": "А.Букейханова атындағы мектебі",
+      "en": "А.Букейханова Secondary School",
+      "code": "desc_no_director_kk",
+      "severity": "info",
+      "detail": "kk description may not start with director line"
+    },
+    {
+      "file": "karaganda-schools.js",
+      "id": "karaganda-shakhtinsk-11",
+      "kk": "А.Букейханова атындағы мектебі",
+      "en": "А.Букейханова Secondary School",
+      "code": "desc_no_director_en",
+      "severity": "info",
+      "detail": "en description may not start with director line"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-altynsarin-1",
+      "kk": "Больше-Чураков мектебі",
+      "en": "Больше-Чураков Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-altynsarin-2",
+      "kk": "Омар Шипин атындағы мектебі",
+      "en": "Омар Шипин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-altynsarin-3",
+      "kk": "Жанасу мектебі",
+      "en": "Жанасу Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-amangeldy-1",
+      "kk": "Жасбуын мектебі",
+      "en": "Жасбуын Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-amangeldy-2",
+      "kk": "Амантогай мектебі",
+      "en": "Амантогай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-amangeldy-3",
+      "kk": "Кумкешу мектебі",
+      "en": "Кумкешу Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-auliekol-1",
+      "kk": "Сулуколь мектебі Ш. Шаяхметова",
+      "en": "Сулуколь Secondary School Ш. Шаяхметова",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-auliekol-2",
+      "kk": "Кокталь мектебі",
+      "en": "Кокталь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-auliekol-3",
+      "kk": "Тимофеев мектебі",
+      "en": "Тимофеев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-denisov-1",
+      "kk": "Т.Б. Даркамбаев атындағы мектебі",
+      "en": "Т.Б. Даркамбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-denisov-2",
+      "kk": "Свердлов мектебі",
+      "en": "Свердлов School Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-denisov-3",
+      "kk": "Приречен мектебі",
+      "en": "Приречен Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-zhangeldy-1",
+      "kk": "Каратубек мектебі",
+      "en": "Каратубек Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-zhangeldy-2",
+      "kk": "М. Дулатова атындағы мектебі",
+      "en": "М. Дулатова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-zhangeldy-3",
+      "kk": "К. Топаева атындағы мектебі",
+      "en": "К. Топаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-zhitikara-1",
+      "kk": "Степная мектебі",
+      "en": "Степная Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-zhitikara-2",
+      "kk": "Пригородная мектебі",
+      "en": "Пригородная Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-zhitikara-3",
+      "kk": "Забелов мектебі",
+      "en": "Забелов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kamysty-1",
+      "kk": "Бестюбин мектебі",
+      "en": "Бестюбин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kamysty-2",
+      "kk": "Камыстин мектебі№2",
+      "en": "Камыстин Secondary School№2",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kamysty-3",
+      "kk": "Адаев мектебі",
+      "en": "Адаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kamysty-4",
+      "kk": "Карабатыр мектебі",
+      "en": "Карабатыр Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kamysty-5",
+      "kk": "Клочков мектебі",
+      "en": "Клочков Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-qarabalyq-1",
+      "kk": "Босколь мектебі",
+      "en": "Босколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-qarabalyq-2",
+      "kk": "Михайлов мектебі",
+      "en": "Михайлов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-qarabalyq-3",
+      "kk": "Станционная мектебі",
+      "en": "Станционная Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-qarasu-1",
+      "kk": "Ыбырай Алтынсарин атындағы мектебі",
+      "en": "Ыбырай Алтынсарин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-qarasu-2",
+      "kk": "Карамырзин мектебі",
+      "en": "Карамырзин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-qarasu-3",
+      "kk": "Ключевая мектебі",
+      "en": "Ключевая Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kostanay-district-1",
+      "kk": "Москов мектебі",
+      "en": "Москов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kostanay-district-2",
+      "kk": "К. Каримова атындағы мектебі",
+      "en": "К. Каримова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kostanay-district-3",
+      "kk": "Қостомар мектебі",
+      "en": "Қостомар Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kostanay-district-4",
+      "kk": "Абай мектебі",
+      "en": "Абай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kostanay-district-5",
+      "kk": "Половников мектебі",
+      "en": "Половников Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-kostanay-district-6",
+      "kk": "Надеждин мектебі",
+      "en": "Надеждин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mendykara-1",
+      "kk": "Соснов мектебі",
+      "en": "Соснов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mendykara-2",
+      "kk": "Джангильдин мектебі",
+      "en": "Джангильдин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mendykara-3",
+      "kk": "Буденнов мектебі",
+      "en": "Буденнов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-nauryzym-1",
+      "kk": "Дамдин мектебі",
+      "en": "Дамдин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-nauryzym-2",
+      "kk": "Улендин мектебі",
+      "en": "Улендин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-nauryzym-3",
+      "kk": "Мерекен мектебі",
+      "en": "Мерекен Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mailin-1",
+      "kk": "Юбилейная мектебі",
+      "en": "Юбилейная Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mailin-2",
+      "kk": "Красносель мектебі",
+      "en": "Красносель Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mailin-3",
+      "kk": "Асенкритов мектебі",
+      "en": "Асенкритов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mailin-4",
+      "kk": "Тоболь мектебі",
+      "en": "Тоболь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-mailin-5",
+      "kk": "Сапар Ерғалиев атындағы мектебі",
+      "en": "Сапар Ерғалиев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-sarykol-1",
+      "kk": "Краснодон мектебі",
+      "en": "Краснодон Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-sarykol-2",
+      "kk": "Барвинов мектебі",
+      "en": "Барвинов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-sarykol-3",
+      "kk": "Крылов мектебі",
+      "en": "Крылов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-uzunkol-1",
+      "kk": "Ершов мектебі",
+      "en": "Ершов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-uzunkol-2",
+      "kk": "Пресногорьков мектебі",
+      "en": "Пресногорьков Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-uzunkol-3",
+      "kk": "Суворов мектебі",
+      "en": "Суворов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-fedorov-1",
+      "kk": "Успенов мектебі",
+      "en": "Успенов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-fedorov-2",
+      "kk": "Кенараль мектебі",
+      "en": "Кенараль Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-fedorov-3",
+      "kk": "Ленин мектебі",
+      "en": "Ленин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-fedorov-4",
+      "kk": "Новошумная мектебі",
+      "en": "Новошумная Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-rudny-1",
+      "kk": "Перцев мектебі",
+      "en": "Перцев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-arkalyk-1",
+      "kk": "А.Макаренко атындағы мектебі",
+      "en": "А.Макаренко Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-arkalyk-2",
+      "kk": "Ангар мектебі",
+      "en": "Ангар Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-arkalyk-3",
+      "kk": "Т. Аубакирова атындағы мектебі",
+      "en": "Т. Аубакирова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-arkalyk-4",
+      "kk": "№3 Б.Майлина мектебі",
+      "en": "№3 Б.Майлина Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-arkalyk-5",
+      "kk": "Караторгай мектебі",
+      "en": "Караторгай Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kostanay-schools.js",
+      "id": "kostanay-arkalyk-6",
+      "kk": "Каиндин мектебі",
+      "en": "Каиндин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-aral-3",
+      "kk": "№57 Е.Көшербаев атындағы мектебі",
+      "en": "No. 57 Е.Көшербаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-1",
+      "kk": "№ 165 орта мектебі",
+      "en": "№ 165 орта Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-2",
+      "kk": "№170 орта мектебі",
+      "en": "№170 орта Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-3",
+      "kk": "№ 234 орта мектебі",
+      "en": "№ 234 орта Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-4",
+      "kk": "№ 276 орта мектебі",
+      "en": "№ 276 орта Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-5",
+      "kk": "№ 249 мектеп мектебі",
+      "en": "№ 249 мектеп Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-6",
+      "kk": "№24 орта мектебі",
+      "en": "№24 орта Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-kazaly-7",
+      "kk": "№88 орта мектебі",
+      "en": "№88 орта Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-karmakshy-1",
+      "kk": "Шоқан Уәлиханов атындағы №26 мектебі",
+      "en": "Шоқан Уәлиханов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-karmakshy-5",
+      "kk": "Ү.К.Томанов атындағы №183 мектебі",
+      "en": "Ү.К.Томанов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-karmakshy-6",
+      "kk": "Жанқожа батыр атындағы №269 мектебі",
+      "en": "Жанқожа батыр Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhalagash-1",
+      "kk": "№202 Зейнолла Жарқынбаев атындағы мектебі",
+      "en": "No. 202 Зейнолла Жарқынбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhalagash-2",
+      "kk": "Ілияс Қабылов атындағы №32 мектеп-лицей мектебі",
+      "en": "Ілияс Қабылов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhalagash-3",
+      "kk": "Шекер Ермағанбетова атындағы №246 мектебі",
+      "en": "Шекер Ермағанбетова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhalagash-5",
+      "kk": "Алдаберген Бисенов атындағы №38 мектебі",
+      "en": "Алдаберген Бисенов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhalagash-7",
+      "kk": "Әбдікәрім Оңалбаев атындағы №117мектебі",
+      "en": "Әбдікәрім Оңалбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-syrdarya-5",
+      "kk": "№129 Ә.Жәмішев атындағы мектеп- лицейі мектебі",
+      "en": "No. 129 Ә.Жәмішев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-syrdarya-7",
+      "kk": "№132 Т.Айтбаев атындағы мектебі",
+      "en": "No. 132 Т.Айтбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-shieli-3",
+      "kk": "№251 М.Әуезов атындағы мектебі",
+      "en": "No. 251 М.Әуезов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhanakorgan-4",
+      "kk": "Төлепберген Әбдірашев атындағы №239 мектебі",
+      "en": "Төлепберген Әбдірашев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhanakorgan-5",
+      "kk": "Б.Аралбаев атындағы №52 мектебі",
+      "en": "Б.Аралбаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhanakorgan-6",
+      "kk": "С.Қожанов атындағы №55 мектебі",
+      "en": "С.Қожанов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-zhanakorgan-8",
+      "kk": "Ж.Қыдыров атындағы №54 мектебі",
+      "en": "Ж.Қыдыров Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-aral-11",
+      "kk": "А.Мустафаева атындағы №227 мектебі",
+      "en": "А.Мустафаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "kyzylorda-schools.js",
+      "id": "kzo-shieli-9",
+      "kk": "Осносная №84 мектебі",
+      "en": "Осносная School №84 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-akzhaik-1",
+      "kk": "Жаңабұлақ мектебі",
+      "en": "Жаңабұлақ Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-akzhaik-2",
+      "kk": "Мерген мектебі",
+      "en": "Мерген Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-akzhaik-3",
+      "kk": "Мойылды мектебі",
+      "en": "Мойылды Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-1",
+      "kk": "Ш. Уәлиханов мектебі",
+      "en": "Ш. Уәлиханов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-2",
+      "kk": "И.Есенберлина мектебі",
+      "en": "И.Есенберлина Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-bokeyordy-1",
+      "kk": "К.Сагырбаева атындағы мектебі",
+      "en": "К.Сагырбаева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-bokeyordy-2",
+      "kk": "Т.Масина мектебі",
+      "en": "Т.Масина Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-bokeyordy-3",
+      "kk": "А.Кусаинова мектебі",
+      "en": "А.Кусаинова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-burlin-1",
+      "kk": "Облав мектебі",
+      "en": "Облав Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-burlin-2",
+      "kk": "Успенов мектебі",
+      "en": "Успенов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhangala-1",
+      "kk": "А.Жангелдина мектебі",
+      "en": "А.Жангелдина Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhangala-2",
+      "kk": "Абая мектебі",
+      "en": "Абая Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhangala-3",
+      "kk": "Айдархан мектебі",
+      "en": "Айдархан Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhanibek-1",
+      "kk": "О.Сахипова мектебі",
+      "en": "О.Сахипова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhanibek-2",
+      "kk": "Х.Халиуллина мектебі",
+      "en": "Х.Халиуллина Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhanibek-3",
+      "kk": "Узынколь мектебі",
+      "en": "Узынколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-kaztalov-1",
+      "kk": "Теренколь мектебі",
+      "en": "Теренколь Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-kaztalov-2",
+      "kk": "Жанажол мектебі",
+      "en": "Жанажол Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-kaztalov-3",
+      "kk": "ООШ М.Жунисова мектебі",
+      "en": "ООШ М.Жунисова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-karatobe-2",
+      "kk": "Үшағаш мектебі",
+      "en": "Үшағаш Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-karatobe-3",
+      "kk": "Алакөл мектебі",
+      "en": "Алакөл Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-syrym-2",
+      "kk": "Абдолла Жумагалиев атындағы мектебі",
+      "en": "Абдолла Жумагалиев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-syrym-3",
+      "kk": "Жырақұдық мектебі",
+      "en": "Жырақұдық Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-taskala-1",
+      "kk": "мектебі-ясли-сад",
+      "en": "School-ясли-сад Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-taskala-3",
+      "kk": "Мерей мектебі",
+      "en": "Мерей Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-chingirlay-1",
+      "kk": "Ақтау мектебі",
+      "en": "Ақтау Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-chingirlay-2",
+      "kk": "Амангелдин мектебі",
+      "en": "Амангелдин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-chingirlay-3",
+      "kk": "Ардақ мектебі",
+      "en": "Ардақ Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-4",
+      "kk": "Киров мектебі",
+      "en": "Киров Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-5",
+      "kk": "Володар мектебі",
+      "en": "Володар Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-6",
+      "kk": "Чиров мектебі",
+      "en": "Чиров Basic Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-7",
+      "kk": "К.Кайсенова атындағы мектебі",
+      "en": "К.Кайсенова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-8",
+      "kk": "Чувашин мектебі",
+      "en": "Чувашин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-9",
+      "kk": "Макаров мектебі",
+      "en": "Макаров Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-burlin-6",
+      "kk": "Кеңтүбек» мектебі",
+      "en": "Кеңтүбек» Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-burlin-7",
+      "kk": "Жарсуат мектебі",
+      "en": "Жарсуат Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-1",
+      "kk": "И. Алтынсарин атындағы мектебі",
+      "en": "И. Алтынсарин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-2",
+      "kk": "Қоғалытүбек мектебі",
+      "en": "Қоғалытүбек Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-3",
+      "kk": "Восход мектебі",
+      "en": "Восход Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-4",
+      "kk": "Покатилов мектебі",
+      "en": "Покатилов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-5",
+      "kk": "Чапаев мектебі",
+      "en": "Чапаев Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-6",
+      "kk": "Приречен мектебі",
+      "en": "Приречен Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-akzhaik-4",
+      "kk": "Бударин мектебі-ясли-сад",
+      "en": "Бударин School-ясли-сад Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-akzhaik-5",
+      "kk": "М. Әуезов атындағы мектебі",
+      "en": "М. Әуезов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-akzhaik-6",
+      "kk": "К.Байсыкова атындағы мектебі",
+      "en": "К.Байсыкова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-10",
+      "kk": "Мичурин мектебі",
+      "en": "Мичурин Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-baiterek-11",
+      "kk": "Трекин №1 мектебі",
+      "en": "Трекин Secondary School №1",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-burlin-10",
+      "kk": "№1 Бөрлі мектебі",
+      "en": "№1 Бөрлі Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-bokeyordy-4",
+      "kk": "Б.Жаникешева атындағы мектебі",
+      "en": "Б.Жаникешева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhangala-4",
+      "kk": "Жаңақала мектебі",
+      "en": "Жаңақала Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhangala-5",
+      "kk": "М.Мирманова атындағы мектебі",
+      "en": "М.Мирманова Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-zhanibek-4",
+      "kk": "мектебі-лицей №1",
+      "en": "School-лицей №1 Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-kaztalov-4",
+      "kk": "Г.Молдашева атындағы мектебі",
+      "en": "Г.Молдашева Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-kaztalov-5",
+      "kk": "Бостандык мектебі",
+      "en": "Бостандык Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-karatobe-4",
+      "kk": "Мұхит атындағы мектебі",
+      "en": "Мұхит Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-karatobe-5",
+      "kk": "Қалдығайты мектебі",
+      "en": "Қалдығайты Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-syrym-4",
+      "kk": "Жанша Досмухамедов атындағы мектебі",
+      "en": "Жанша Досмухамедов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-7",
+      "kk": "Акжайык мектебі",
+      "en": "Акжайык Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-8",
+      "kk": "Хамзы Есенжанов атындағы мектебі",
+      "en": "Хамзы Есенжанов Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-terekty-9",
+      "kk": "Абая атындағы мектебі",
+      "en": "Абая Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    },
+    {
+      "file": "west-kazakhstan-schools.js",
+      "id": "bko-chingirlay-4",
+      "kk": "А.Тихоненко атындағы мектебі",
+      "en": "А.Тихоненко Secondary School",
+      "code": "en_mixed_script",
+      "severity": "info",
+      "detail": "English title mixes Latin and Cyrillic"
+    }
+  ]
+}

@@ -186,7 +186,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-baiterek-3",
       "districtKey": "Район Байтерек",
       "kk": "Егіндібұлақ мектебі",
-      "en": "Secondary School",
+      "en": "Egindibulak Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -300,7 +300,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-3",
       "districtKey": "Бурлинский район",
       "kk": "Қарақұдық мектебі",
-      "en": "Secondary School",
+      "en": "Karakudyk Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -547,7 +547,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-syrym-1",
       "districtKey": "Сырымский район",
       "kk": "Талдыбұлақ мектебі",
-      "en": "Secondary School",
+      "en": "Taldybulak Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -623,7 +623,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-taskala-2",
       "districtKey": "Таскалинский район",
       "kk": "Мереке мектебі",
-      "en": "Secondary School",
+      "en": "Mereke Secondary School",
       "location": {
         "kk": "Тасқала ауданы",
         "en": "Taskala District"
@@ -832,7 +832,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-4",
       "districtKey": "Бурлинский район",
       "kk": "Қанай мектебі",
-      "en": "Secondary School",
+      "en": "Kanay Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -851,7 +851,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-5",
       "districtKey": "Бурлинский район",
       "kk": "Бумакөл мектебі",
-      "en": "Secondary School",
+      "en": "Bumakol Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -908,7 +908,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-8",
       "districtKey": "Бурлинский район",
       "kk": "Ақбұлақ мектебі",
-      "en": "Secondary School",
+      "en": "Akbulak Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -927,7 +927,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-9",
       "districtKey": "Бурлинский район",
       "kk": "Қарағанды мектебі",
-      "en": "Secondary School",
+      "en": "Karagandy Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"

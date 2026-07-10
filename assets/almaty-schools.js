@@ -391,7 +391,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-zhambyl-1",
       "districtKey": "Жамбылский",
       "kk": "Шиен мектебі",
-      "en": "Secondary School",
+      "en": "Shien Secondary School",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"
@@ -486,7 +486,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-zhambyl-6",
       "districtKey": "Жамбылский",
       "kk": "Танбалытас мектебі",
-      "en": "Secondary School",
+      "en": "Tanbalytas Secondary School",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"

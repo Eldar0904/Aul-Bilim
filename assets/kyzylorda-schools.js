@@ -435,8 +435,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-karmakshy-7",
       "districtKey": "Кармакшинский район",
-      "kk": "Елеу Көшербаев атындағы №279 мектеп-лицейі мектебі",
-      "en": "Елеу Көшербаев Secondary School",
+      "kk": "№279 Елеу Көшербаев атындағы мектеп-лицейі",
+      "en": "No. 279 Yeleu Kosherbayev Lyceum",
       "location": {
         "kk": "Қармақшы ауданы",
         "en": "Karmakshy District"
@@ -587,8 +587,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-syrdarya-1",
       "districtKey": "Сырдарьинский район",
-      "kk": "№35 Иса Тоқтыбаев атындағы мектеп-лицейі мектебі",
-      "en": "No. 35 Иса Тоқтыбаев Secondary School",
+      "kk": "№35 Иса Тоқтыбаев атындағы мектеп-лицейі",
+      "en": "No. 35 Isa Toqtybayev Lyceum",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -606,8 +606,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-syrdarya-2",
       "districtKey": "Сырдарьинский район",
-      "kk": "№37 мектеп-лицейі мектебі",
-      "en": "№37 мектеп-лицейі Secondary School",
+      "kk": "№37 мектеп-лицейі",
+      "en": "No. 37 Lyceum",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -625,8 +625,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-syrdarya-3",
       "districtKey": "Сырдарьинский район",
-      "kk": "№42 Қ.Баймағанбетов атындағы мектеп-лицейі мектебі",
-      "en": "No. 42 Қ.Баймағанбетов Secondary School",
+      "kk": "№42 Қ.Баймағанбетов атындағы мектеп-лицейі",
+      "en": "No. 42 K. Baimaganbetov Lyceum",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -739,8 +739,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-shieli-2",
       "districtKey": "Шиелийский район",
-      "kk": "№153 Ш.Есенов атындағы мектеп-лицейі мектебі",
-      "en": "No. 153 Ш.Есенов Secondary School",
+      "kk": "№153 Ш.Есенов атындағы мектеп-лицейі",
+      "en": "No. 153 Sh. Esenov Lyceum",
       "location": {
         "kk": "Шиелі ауданы",
         "en": "Shieli District"
