@@ -364,6 +364,8 @@ window.adminSchools = (function () {
 
   function renderMapCard(school, entry) {
     var mapUrl = schoolMapImage(school);
+    var isDistrictMap = !!(school.mapImage && String(school.mapImage).trim());
+    var isFallbackPhoto = !!mapUrl && !isDistrictMap;
     var card = document.getElementById('admin-school-map-card');
     var imgEl = document.getElementById('admin-school-map-img');
     var phEl = document.getElementById('admin-school-map-placeholder');
@@ -372,6 +374,8 @@ window.adminSchools = (function () {
     if (card) {
       card.classList.toggle('school-map-card--photo', !!mapUrl);
       card.classList.toggle('school-map-card--placeholder', !mapUrl);
+      card.classList.toggle('school-map-card--district-map', isDistrictMap);
+      card.classList.toggle('school-map-card--fallback-photo', isFallbackPhoto);
     }
     if (imgEl) {
       if (mapUrl) {

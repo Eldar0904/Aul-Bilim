@@ -198,6 +198,8 @@
 
   function renderMapCard(school, name) {
     var mapUrl = schoolMapImage(school);
+    var isDistrictMap = !!(school.mapImage && String(school.mapImage).trim());
+    var isFallbackPhoto = !!mapUrl && !isDistrictMap;
     var card = document.getElementById('school-map-card');
     var imgEl = document.getElementById('school-map-img');
     var phEl = document.getElementById('school-map-placeholder');
@@ -205,6 +207,8 @@
     if (card) {
       card.classList.toggle('school-map-card--photo', !!mapUrl);
       card.classList.toggle('school-map-card--placeholder', !mapUrl);
+      card.classList.toggle('school-map-card--district-map', isDistrictMap);
+      card.classList.toggle('school-map-card--fallback-photo', isFallbackPhoto);
     }
     if (imgEl) {
       if (mapUrl) {
