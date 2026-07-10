@@ -151,8 +151,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-altynsarin-2",
       "districtKey": "Алтынсаринский",
-      "kk": "Омара Шипина атындағы мектебі",
-      "en": "Омара Шипина Secondary School",
+      "kk": "Омар Шипин атындағы мектебі",
+      "en": "Омар Шипин Secondary School",
       "location": {
         "kk": "Алтынсарин ауданы",
         "en": "Altynsarin District"
@@ -246,8 +246,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-auliekol-1",
       "districtKey": "Аулиекольксий",
-      "kk": "Сулуколь мектебі Ш. Шаяхметова мектебі",
-      "en": "Сулуколь Secondary School Ш. Шаяхметова Secondary School",
+      "kk": "Сулуколь мектебі Ш. Шаяхметова",
+      "en": "Сулуколь Secondary School Ш. Шаяхметова",
       "location": {
         "kk": "Әулиекөл ауданы",
         "en": "Auliekol District"
@@ -303,8 +303,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-denisov-1",
       "districtKey": "Денисовский",
-      "kk": "академика Т.Б. Даркамбаева атындағы мектебі",
-      "en": "Аят Secondary School академика Т.Б. Даркамбаева Secondary School",
+      "kk": "Т.Б. Даркамбаев атындағы мектебі",
+      "en": "Т.Б. Даркамбаев Secondary School",
       "location": {
         "kk": "Денисов ауданы",
         "en": "Denisov District"
@@ -399,7 +399,7 @@ window.KOSTANAY_SCHOOLS = {
       "id": "kostanay-zhangeldy-3",
       "districtKey": "Жангелдинский",
       "kk": "К. Топаева атындағы мектебі",
-      "en": "К, Топаева Secondary School",
+      "en": "К. Топаева Secondary School",
       "location": {
         "kk": "Жангелдин ауданы",
         "en": "Zhangeldy District"
@@ -493,8 +493,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-kamysty-2",
       "districtKey": "Камыстинский",
-      "kk": "Камыстин мектебі№2 мектебі",
-      "en": "Камыстин Secondary School№2 Secondary School",
+      "kk": "Камыстин мектебі№2",
+      "en": "Камыстин Secondary School№2",
       "location": {
         "kk": "Камысты ауданы",
         "en": "Kamysty District"
@@ -626,8 +626,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-qarasu-1",
       "districtKey": "Карасуский",
-      "kk": "Ыбырая Алтынсарина атындағы мектебі",
-      "en": "Ыбырая Алтынсарина Secondary School",
+      "kk": "Ыбырай Алтынсарин атындағы мектебі",
+      "en": "Ыбырай Алтынсарин Secondary School",
       "location": {
         "kk": "Қарасу ауданы",
         "en": "Qarasu District"
@@ -987,8 +987,8 @@ window.KOSTANAY_SCHOOLS = {
     {
       "id": "kostanay-mailin-5",
       "districtKey": "Б. Майлина",
-      "kk": "Сапара Ергалиева атындағы мектебі",
-      "en": "Сапара Ергалиева Secondary School",
+      "kk": "Сапар Ерғалиев атындағы мектебі",
+      "en": "Сапар Ерғалиев Secondary School",
       "location": {
         "kk": "Б. Майлин ауданы",
         "en": "B. Mailin District"
@@ -1254,7 +1254,7 @@ window.KOSTANAY_SCHOOLS = {
       "id": "kostanay-arkalyk-3",
       "districtKey": "г. Аркалык",
       "kk": "Т. Аубакирова атындағы мектебі",
-      "en": "Secondary School Т. Аубакирова Basic Secondary School",
+      "en": "Т. Аубакирова Secondary School",
       "location": {
         "kk": "Арқалық қ.",
         "en": "Arkalyk city"

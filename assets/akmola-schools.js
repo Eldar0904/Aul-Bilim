@@ -388,7 +388,7 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-akkol-2",
       "districtKey": "Аккольский",
-      "kk": "мектебі атындағы Кеңес мектебі",
+      "kk": "Кеңес мектебі",
       "en": "Кеңес Secondary School",
       "location": {
         "kk": "Ақкөл ауданы",
@@ -920,8 +920,8 @@ window.AKMOLA_SCHOOLS = {
     {
       "id": "akmola-korgalzhyn-3",
       "districtKey": "Коргалжынский",
-      "kk": "Ш.Уалиханова атындағы Караегин мектебі",
-      "en": "Ш.Уалиханова села Караегин Secondary School",
+      "kk": "Ш. Уәлиханов атындағы Караегин мектебі",
+      "en": "Ш. Уәлиханов Secondary School",
       "location": {
         "kk": "Коргалжын ауданы",
         "en": "Korgalzhyn District"
@@ -1016,7 +1016,7 @@ window.AKMOLA_SCHOOLS = {
       "id": "akmola-birjan-sal-2",
       "districtKey": "Биржан Сал",
       "kk": "Р.Елебаева атындағы мектебі",
-      "en": "Кудукагаш Р.Елебаева Secondary School",
+      "en": "Р.Елебаева Secondary School",
       "location": {
         "kk": "Біржан Сал ауданы",
         "en": "Birjan Sal District"

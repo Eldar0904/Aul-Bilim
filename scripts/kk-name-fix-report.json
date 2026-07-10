@@ -1,0 +1,381 @@
+{
+  "abay-schools.js": [
+    {
+      "field": "en",
+      "old": "Нурлыбека Баймуратова Secondary School",
+      "new": "Нұрлыбек Баймұратов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "М.Ауэзова Secondary School",
+      "new": "М.Әуезов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Secondary School-сад К.Игенбайұлы",
+      "new": "К.Игенбайұлы Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Ауэзова Secondary School",
+      "new": "Әуезов Secondary School"
+    }
+  ],
+  "akmola-schools.js": [
+    {
+      "field": "en",
+      "old": "Ш.Уалиханова села Караегин Secondary School",
+      "new": "Ш. Уәлиханов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Кудукагаш Р.Елебаева Secondary School",
+      "new": "Р.Елебаева Secondary School"
+    }
+  ],
+  "almaty-schools.js": [
+    {
+      "field": "en",
+      "old": "№4 Касыма Кайсенова Secondary School",
+      "new": "No. 4 Касым Кайсенов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Казах Secondary School №1 Д.А.Конаева",
+      "new": "No. 1 Д.А. Конбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№5 А.Жубанова Secondary School",
+      "new": "А.Жубанова Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "1 Ы. Алтынсарина Secondary School",
+      "new": "No. 1 Ы. Алтынсарин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Хусаина Бижанова Secondary School",
+      "new": "Хусайн Бижанов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "М.Макатаева Secondary School",
+      "new": "М. Мақатаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№4 Абылай хана Secondary School",
+      "new": "Абылай хана Secondary School"
+    },
+    {
+      "field": "kk",
+      "old": "Мемлекеттік мектеп",
+      "new": "Мемлекеттік мектеп мектебі"
+    },
+    {
+      "field": "en",
+      "old": "Secondary School",
+      "new": "Жангелдин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "АБДОЛЛЫ КАРСАКБАЕВА Secondary School",
+      "new": "Абдолла Карсакбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№15 К.Азербаева Secondary School",
+      "new": "К.Азербаева Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "М.Бейсебаева Secondary School",
+      "new": "М. Бейсебаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "М.Ауезова Secondary School",
+      "new": "М. Әуезов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Secondary School-гимназия №35 Б.Момышулы",
+      "new": "Б.Момышулы Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School № 3 Аая Secondary School",
+      "new": "No. 3 Абая Secondary School"
+    }
+  ],
+  "karaganda-schools.js": [
+    {
+      "field": "en",
+      "old": "Жакыпа Акбаева Secondary School",
+      "new": "Жакып Акбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "E.A. Buketov Secondary School",
+      "new": "Е.А. Букетов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Габидена Мустафина Secondary School",
+      "new": "Габиден Мустафин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Прокофия Корниенко Secondary School",
+      "new": "Прокофий Корниенко Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "ОШ Касыма Аманжолова Secondary School",
+      "new": "Касым Аманжолов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "I. Altynsarin Secondary School",
+      "new": "Ыбырай Алтынсарин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School Secondary School",
+      "new": "Абая Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School Secondary School",
+      "new": "Бауыржан Момышұлы Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "M. Makatayev Secondary School",
+      "new": "Мұқағали Мақатаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№2 Алимхана Ермекова Secondary School",
+      "new": "Алимхан Ермеков Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Нуркена Абдирова №10 Secondary School",
+      "new": "No. 10 Нуркен Абдиров Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№12 Алибека Буркитбаева Secondary School",
+      "new": "Алибек Буркитбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School Secondary School",
+      "new": "Кажыкен Смайылов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School-лицей Б.Момышулы Secondary School",
+      "new": "Б.Момышулы Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Евнея Букетова Secondary School",
+      "new": "Евней Букетов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Санжара Асфендиярова Secondary School",
+      "new": "Санжар Асфендияров Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School-лицей А.Букейханова Secondary School",
+      "new": "А.Букейханова Secondary School"
+    }
+  ],
+  "kostanay-schools.js": [
+    {
+      "field": "en",
+      "old": "Омара Шипина Secondary School",
+      "new": "Омар Шипин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "T.B. Darkambayev Secondary School",
+      "new": "Т.Б. Даркамбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "К, Топаева Secondary School",
+      "new": "К. Топаева Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Ыбырая Алтынсарина Secondary School",
+      "new": "Ыбырай Алтынсарин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Сапара Ергалиева Secondary School",
+      "new": "Сапар Ерғалиев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Т. Аубакирова Basic Secondary School",
+      "new": "Т. Аубакирова Secondary School"
+    }
+  ],
+  "kyzylorda-schools.js": [
+    {
+      "field": "en",
+      "old": "№57 Е.Көшербаев атындағы Secondary School",
+      "new": "No. 57 Е.Көшербаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Шоқан Уәлиханов атындағы №26 Secondary School",
+      "new": "Шоқан Уәлиханов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Ү.К.Томанов атындағы №183 Secondary School",
+      "new": "Ү.К.Томанов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Жанқожа батыр атындағы №269 Secondary School",
+      "new": "Жанқожа батыр Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Елеу Көшербаев атындағы №279 мектеп-лицейі Secondary School",
+      "new": "Елеу Көшербаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№202 Зейнолла Жарқынбаев атындағы Secondary School",
+      "new": "No. 202 Зейнолла Жарқынбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Ілияс Қабылов атындағы №32 мектеп-лицей Secondary School",
+      "new": "Ілияс Қабылов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Шекер Ермағанбетова атындағы №246 Secondary School",
+      "new": "Шекер Ермағанбетова Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Алдаберген Бисенов атындағы №38 Secondary School",
+      "new": "Алдаберген Бисенов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Әбдікәрім Оңалбаев атындағы №117Secondary School",
+      "new": "Әбдікәрім Оңалбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№35 Иса Тоқтыбаев атындағы мектеп-лицейі Secondary School",
+      "new": "No. 35 Иса Тоқтыбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№42 Қ.Баймағанбетов атындағы мектеп-лицейі Secondary School",
+      "new": "No. 42 Қ.Баймағанбетов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№129 Ә.Жәмішев атындағы мектеп- лицейі Secondary School",
+      "new": "No. 129 Ә.Жәмішев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№132 Т.Айтбаев атындағы Secondary School",
+      "new": "No. 132 Т.Айтбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№153 Ш.Есенов атындағы мектеп-лицейі Secondary School",
+      "new": "No. 153 Ш.Есенов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№251 М.Әуезов атындағы Secondary School",
+      "new": "No. 251 М.Әуезов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Төлепберген Әбдірашев атындағы №239 Secondary School",
+      "new": "Төлепберген Әбдірашев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Б.Аралбаев атындағы №52 Secondary School",
+      "new": "Б.Аралбаев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "С.Қожанов атындағы №55 Secondary School",
+      "new": "С.Қожанов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Ж.Қыдыров атындағы №54 Secondary School",
+      "new": "Ж.Қыдыров Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№227 А.Мустафаева Basic Secondary School",
+      "new": "А.Мустафаева Secondary School"
+    }
+  ],
+  "west-kazakhstan-schools.js": [
+    {
+      "field": "en",
+      "old": "Ш.Уалиханова Secondary School",
+      "new": "Ш. Уәлиханов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "School Secondary School",
+      "new": "Абдолла Жумагалиев Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "И.Алтынсарина Secondary School",
+      "new": "И. Алтынсарин Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "№2 М. Ауезова Secondary School",
+      "new": "М. Әуезов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Мухита Secondary School",
+      "new": "Мұхит Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Zhanzha Dosmukhammedov Secondary School",
+      "new": "Жанша Досмухамедов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Хамзы Есенжанова Secondary School",
+      "new": "Хамзы Есенжанов Secondary School"
+    },
+    {
+      "field": "en",
+      "old": "Областная специализированная School-Gymnasium-интернат для одаренных детей Абая",
+      "new": "Абая Secondary School"
+    }
+  ]
+}

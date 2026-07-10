@@ -94,7 +94,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-aral-3",
       "districtKey": "Аральский район",
       "kk": "№57 Е.Көшербаев атындағы мектебі",
-      "en": "№57 Е.Көшербаев атындағы Secondary School",
+      "en": "No. 57 Е.Көшербаев Secondary School",
       "location": {
         "kk": "Арал ауданы",
         "en": "Aral District"
@@ -322,7 +322,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-karmakshy-1",
       "districtKey": "Кармакшинский район",
       "kk": "Шоқан Уәлиханов атындағы №26 мектебі",
-      "en": "Шоқан Уәлиханов атындағы №26 Secondary School",
+      "en": "Шоқан Уәлиханов Secondary School",
       "location": {
         "kk": "Қармақшы ауданы",
         "en": "Karmakshy District"
@@ -398,7 +398,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-karmakshy-5",
       "districtKey": "Кармакшинский район",
       "kk": "Ү.К.Томанов атындағы №183 мектебі",
-      "en": "Ү.К.Томанов атындағы №183 Secondary School",
+      "en": "Ү.К.Томанов Secondary School",
       "location": {
         "kk": "Қармақшы ауданы",
         "en": "Karmakshy District"
@@ -417,7 +417,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-karmakshy-6",
       "districtKey": "Кармакшинский район",
       "kk": "Жанқожа батыр атындағы №269 мектебі",
-      "en": "Жанқожа батыр атындағы №269 Secondary School",
+      "en": "Жанқожа батыр Secondary School",
       "location": {
         "kk": "Қармақшы ауданы",
         "en": "Karmakshy District"
@@ -436,7 +436,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-karmakshy-7",
       "districtKey": "Кармакшинский район",
       "kk": "Елеу Көшербаев атындағы №279 мектеп-лицейі мектебі",
-      "en": "Елеу Көшербаев атындағы №279 мектеп-лицейі Secondary School",
+      "en": "Елеу Көшербаев Secondary School",
       "location": {
         "kk": "Қармақшы ауданы",
         "en": "Karmakshy District"
@@ -455,7 +455,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhalagash-1",
       "districtKey": "Жалагашский район",
       "kk": "№202 Зейнолла Жарқынбаев атындағы мектебі",
-      "en": "№202 Зейнолла Жарқынбаев атындағы Secondary School",
+      "en": "No. 202 Зейнолла Жарқынбаев Secondary School",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -474,7 +474,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhalagash-2",
       "districtKey": "Жалагашский район",
       "kk": "Ілияс Қабылов атындағы №32 мектеп-лицей мектебі",
-      "en": "Ілияс Қабылов атындағы №32 мектеп-лицей Secondary School",
+      "en": "Ілияс Қабылов Secondary School",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -493,7 +493,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhalagash-3",
       "districtKey": "Жалагашский район",
       "kk": "Шекер Ермағанбетова атындағы №246 мектебі",
-      "en": "Шекер Ермағанбетова атындағы №246 Secondary School",
+      "en": "Шекер Ермағанбетова Secondary School",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -511,8 +511,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-zhalagash-4",
       "districtKey": "Жалагашский район",
-      "kk": "№31 мектеп-гимназиясы мектебі",
-      "en": "№31 мектеп-гимназиясы Secondary School",
+      "kk": "№31 мектеп-гимназиясы",
+      "en": "No. 31 Gymnasium",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -531,7 +531,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhalagash-5",
       "districtKey": "Жалагашский район",
       "kk": "Алдаберген Бисенов атындағы №38 мектебі",
-      "en": "Алдаберген Бисенов атындағы №38 Secondary School",
+      "en": "Алдаберген Бисенов Secondary School",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -569,7 +569,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhalagash-7",
       "districtKey": "Жалагашский район",
       "kk": "Әбдікәрім Оңалбаев атындағы №117мектебі",
-      "en": "Әбдікәрім Оңалбаев атындағы №117Secondary School",
+      "en": "Әбдікәрім Оңалбаев Secondary School",
       "location": {
         "kk": "Жалағас ауданы",
         "en": "Zhalagash District"
@@ -588,7 +588,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-syrdarya-1",
       "districtKey": "Сырдарьинский район",
       "kk": "№35 Иса Тоқтыбаев атындағы мектеп-лицейі мектебі",
-      "en": "№35 Иса Тоқтыбаев атындағы мектеп-лицейі Secondary School",
+      "en": "No. 35 Иса Тоқтыбаев Secondary School",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -626,7 +626,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-syrdarya-3",
       "districtKey": "Сырдарьинский район",
       "kk": "№42 Қ.Баймағанбетов атындағы мектеп-лицейі мектебі",
-      "en": "№42 Қ.Баймағанбетов атындағы мектеп-лицейі Secondary School",
+      "en": "No. 42 Қ.Баймағанбетов Secondary School",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -664,7 +664,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-syrdarya-5",
       "districtKey": "Сырдарьинский район",
       "kk": "№129 Ә.Жәмішев атындағы мектеп- лицейі мектебі",
-      "en": "№129 Ә.Жәмішев атындағы мектеп- лицейі Secondary School",
+      "en": "No. 129 Ә.Жәмішев Secondary School",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -702,7 +702,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-syrdarya-7",
       "districtKey": "Сырдарьинский район",
       "kk": "№132 Т.Айтбаев атындағы мектебі",
-      "en": "№132 Т.Айтбаев атындағы Secondary School",
+      "en": "No. 132 Т.Айтбаев Secondary School",
       "location": {
         "kk": "Сырдария ауданы",
         "en": "Syrdarya District"
@@ -740,7 +740,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-shieli-2",
       "districtKey": "Шиелийский район",
       "kk": "№153 Ш.Есенов атындағы мектеп-лицейі мектебі",
-      "en": "№153 Ш.Есенов атындағы мектеп-лицейі Secondary School",
+      "en": "No. 153 Ш.Есенов Secondary School",
       "location": {
         "kk": "Шиелі ауданы",
         "en": "Shieli District"
@@ -759,7 +759,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-shieli-3",
       "districtKey": "Шиелийский район",
       "kk": "№251 М.Әуезов атындағы мектебі",
-      "en": "№251 М.Әуезов атындағы Secondary School",
+      "en": "No. 251 М.Әуезов Secondary School",
       "location": {
         "kk": "Шиелі ауданы",
         "en": "Shieli District"
@@ -911,7 +911,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhanakorgan-4",
       "districtKey": "Жанакорганский район",
       "kk": "Төлепберген Әбдірашев атындағы №239 мектебі",
-      "en": "Төлепберген Әбдірашев атындағы №239 Secondary School",
+      "en": "Төлепберген Әбдірашев Secondary School",
       "location": {
         "kk": "Жаңақорған ауданы",
         "en": "Zhanakorgan District"
@@ -930,7 +930,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhanakorgan-5",
       "districtKey": "Жанакорганский район",
       "kk": "Б.Аралбаев атындағы №52 мектебі",
-      "en": "Б.Аралбаев атындағы №52 Secondary School",
+      "en": "Б.Аралбаев Secondary School",
       "location": {
         "kk": "Жаңақорған ауданы",
         "en": "Zhanakorgan District"
@@ -949,7 +949,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhanakorgan-6",
       "districtKey": "Жанакорганский район",
       "kk": "С.Қожанов атындағы №55 мектебі",
-      "en": "С.Қожанов атындағы №55 Secondary School",
+      "en": "С.Қожанов Secondary School",
       "location": {
         "kk": "Жаңақорған ауданы",
         "en": "Zhanakorgan District"
@@ -967,8 +967,8 @@ window.KYZYLORDA_SCHOOLS = {
     {
       "id": "kzo-zhanakorgan-7",
       "districtKey": "Жанакорганский район",
-      "kk": "№195 мектеп-гимназиясы мектебі",
-      "en": "№195 мектеп-гимназиясы Secondary School",
+      "kk": "№195 мектеп-гимназиясы",
+      "en": "No. 195 Gymnasium",
       "location": {
         "kk": "Жаңақорған ауданы",
         "en": "Zhanakorgan District"
@@ -987,7 +987,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-zhanakorgan-8",
       "districtKey": "Жанакорганский район",
       "kk": "Ж.Қыдыров атындағы №54 мектебі",
-      "en": "Ж.Қыдыров атындағы №54 Secondary School",
+      "en": "Ж.Қыдыров Secondary School",
       "location": {
         "kk": "Жаңақорған ауданы",
         "en": "Zhanakorgan District"
@@ -1063,7 +1063,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-aral-11",
       "districtKey": "Аральский район",
       "kk": "А.Мустафаева атындағы №227 мектебі",
-      "en": "Secondary School №227 А.Мустафаева Basic Secondary School",
+      "en": "А.Мустафаева Secondary School",
       "location": {
         "kk": "Арал ауданы",
         "en": "Aral District"
@@ -1082,7 +1082,7 @@ window.KYZYLORDA_SCHOOLS = {
       "id": "kzo-aral-12",
       "districtKey": "Аральский район",
       "kk": "№291 мектебі",
-      "en": "Secondary School №291 Secondary School",
+      "en": "№291 Secondary School",
       "location": {
         "kk": "Арал ауданы",
         "en": "Aral District"

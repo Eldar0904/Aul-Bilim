@@ -147,8 +147,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-baiterek-1",
       "districtKey": "Район Байтерек",
-      "kk": "Ш.Уалиханова мектебі",
-      "en": "Ш.Уалиханова Secondary School",
+      "kk": "Ш. Уәлиханов мектебі",
+      "en": "Ш. Уәлиханов Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -186,7 +186,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-baiterek-3",
       "districtKey": "Район Байтерек",
       "kk": "Егіндібұлақ мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -300,7 +300,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-3",
       "districtKey": "Бурлинский район",
       "kk": "Қарақұдық мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -508,8 +508,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-2",
       "districtKey": "Каратобинский район",
-      "kk": "мектебі Үшағаш мектебі",
-      "en": "Secondary School Үшағаш Secondary School",
+      "kk": "Үшағаш мектебі",
+      "en": "Үшағаш Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
         "en": "Karatobe District"
@@ -527,8 +527,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-3",
       "districtKey": "Каратобинский район",
-      "kk": "мектебі Алакөл мектебі",
-      "en": "Secondary School Алакөл Secondary School",
+      "kk": "Алакөл мектебі",
+      "en": "Алакөл Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
         "en": "Karatobe District"
@@ -547,7 +547,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-syrym-1",
       "districtKey": "Сырымский район",
       "kk": "Талдыбұлақ мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -565,8 +565,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-syrym-2",
       "districtKey": "Сырымский район",
-      "kk": "Абдоллы Жумагалиева атындағы мектебі",
-      "en": "School Secondary School",
+      "kk": "Абдолла Жумагалиев атындағы мектебі",
+      "en": "Абдолла Жумагалиев Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -603,7 +603,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-taskala-1",
       "districtKey": "Таскалинский район",
-      "kk": "мектебі-ясли-сад мектебі",
+      "kk": "мектебі-ясли-сад",
       "en": "School-ясли-сад Secondary School",
       "location": {
         "kk": "Тасқала ауданы",
@@ -623,7 +623,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-taskala-2",
       "districtKey": "Таскалинский район",
       "kk": "Мереке мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Тасқала ауданы",
         "en": "Taskala District"
@@ -660,7 +660,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-chingirlay-1",
       "districtKey": "Чингирлауский район",
-      "kk": "мектебі атындағы Ақтау мектебі",
+      "kk": "Ақтау мектебі",
       "en": "Ақтау Secondary School",
       "location": {
         "kk": "Шыңғірлау ауданы",
@@ -698,7 +698,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-chingirlay-3",
       "districtKey": "Чингирлауский район",
-      "kk": "мектебі атындағы Ардақ мектебі",
+      "kk": "Ардақ мектебі",
       "en": "Ардақ Secondary School",
       "location": {
         "kk": "Шыңғірлау ауданы",
@@ -832,7 +832,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-4",
       "districtKey": "Бурлинский район",
       "kk": "Қанай мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -851,7 +851,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-5",
       "districtKey": "Бурлинский район",
       "kk": "Бумакөл мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -908,7 +908,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-8",
       "districtKey": "Бурлинский район",
       "kk": "Ақбұлақ мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -927,7 +927,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-burlin-9",
       "districtKey": "Бурлинский район",
       "kk": "Қарағанды мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Бөрлі ауданы",
         "en": "Burlin District"
@@ -945,8 +945,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-1",
       "districtKey": "Теректинский район",
-      "kk": "И.Алтынсарина атындағы мектебі",
-      "en": "И.Алтынсарина Secondary School",
+      "kk": "И. Алтынсарин атындағы мектебі",
+      "en": "И. Алтынсарин Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -964,8 +964,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-2",
       "districtKey": "Теректинский район",
-      "kk": "мектебі Қоғалытүбек мектебі",
-      "en": "Secondary School Қоғалытүбек Secondary School",
+      "kk": "Қоғалытүбек мектебі",
+      "en": "Қоғалытүбек Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -983,8 +983,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-3",
       "districtKey": "Теректинский район",
-      "kk": "мектебі Восход мектебі",
-      "en": "Secondary School Восход Secondary School",
+      "kk": "Восход мектебі",
+      "en": "Восход Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1059,7 +1059,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-akzhaik-4",
       "districtKey": "Акжаикский район",
-      "kk": "Бударин мектебі-ясли-сад мектебі",
+      "kk": "Бударин мектебі-ясли-сад",
       "en": "Бударин School-ясли-сад Secondary School",
       "location": {
         "kk": "Ақжайық ауданы",
@@ -1078,8 +1078,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-akzhaik-5",
       "districtKey": "Акжаикский район",
-      "kk": "М. Ауезова атындағы мектебі",
-      "en": "№2 М. Ауезова Secondary School",
+      "kk": "М. Әуезов атындағы мектебі",
+      "en": "М. Әуезов Secondary School",
       "location": {
         "kk": "Ақжайық ауданы",
         "en": "Akzhaik District"
@@ -1136,7 +1136,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-baiterek-11",
       "districtKey": "Район Байтерек",
       "kk": "Трекин №1 мектебі",
-      "en": "Трекин Secondary School №1 Secondary School",
+      "en": "Трекин Secondary School №1",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -1155,7 +1155,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-baiterek-12",
       "districtKey": "Район Байтерек",
       "kk": "Рубежин мектебі",
-      "en": "Рубежин \"School Secondary School",
+      "en": "Rubezhin Secondary School",
       "location": {
         "kk": "Бәйтерек ауданы",
         "en": "Baiterek District"
@@ -1249,7 +1249,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-zhanibek-4",
       "districtKey": "Жанибекский район",
-      "kk": "мектебі-лицей №1 мектебі",
+      "kk": "мектебі-лицей №1",
       "en": "School-лицей №1 Secondary School",
       "location": {
         "kk": "Жаныбек ауданы",
@@ -1306,8 +1306,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-karatobe-4",
       "districtKey": "Каратобинский район",
-      "kk": "Мухита атындағы мектебі",
-      "en": "Мухита Secondary School",
+      "kk": "Мұхит атындағы мектебі",
+      "en": "Мұхит Secondary School",
       "location": {
         "kk": "Қаратөбе ауданы",
         "en": "Karatobe District"
@@ -1344,8 +1344,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-syrym-4",
       "districtKey": "Сырымский район",
-      "kk": "Жанша Досмухамедова атындағы мектебі",
-      "en": "School \" Жанша Досмухамедова Secondary School",
+      "kk": "Жанша Досмухамедов атындағы мектебі",
+      "en": "Жанша Досмухамедов Secondary School",
       "location": {
         "kk": "Сырым ауданы",
         "en": "Syrym District"
@@ -1382,8 +1382,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
     {
       "id": "bko-terekty-8",
       "districtKey": "Теректинский район",
-      "kk": "Хамзы Есенжанова атындағы мектебі",
-      "en": "Хамзы Есенжанова Secondary School",
+      "kk": "Хамзы Есенжанов атындағы мектебі",
+      "en": "Хамзы Есенжанов Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"
@@ -1402,7 +1402,7 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "id": "bko-terekty-9",
       "districtKey": "Теректинский район",
       "kk": "Абая атындағы мектебі",
-      "en": "Областная специализированная School-Gymnasium-интернат для одаренных детей Абая Secondary School",
+      "en": "Абая Secondary School",
       "location": {
         "kk": "Теректі ауданы",
         "en": "Terekty District"

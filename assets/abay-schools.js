@@ -273,8 +273,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-beskaragai-2",
       "districtKey": "Бескарагайский",
-      "kk": "Нурлыбека Баймуратова атындағы мектебі",
-      "en": "Нурлыбека Баймуратова Secondary School",
+      "kk": "Нұрлыбек Баймұратов атындағы мектебі",
+      "en": "Нұрлыбек Баймұратов Secondary School",
       "location": {
         "kk": "Бесқарағай ауданы",
         "en": "Beskaragai District"
@@ -330,8 +330,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-borodulikha-2",
       "districtKey": "Бородулихинский",
-      "kk": "М.Ауэзова атындағы мектебі",
-      "en": "М.Ауэзова Secondary School",
+      "kk": "М.Әуезов атындағы мектебі",
+      "en": "М.Әуезов Secondary School",
       "location": {
         "kk": "Бородулих ауданы",
         "en": "Borodulikha District"
@@ -558,8 +558,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-makanshy-2",
       "districtKey": "Мақаншы",
-      "kk": "Кайындин мектебі-сад мектебі",
-      "en": "Кайындин Secondary School-сад Secondary School",
+      "kk": "Кайындин мектебі-сад",
+      "en": "Кайындин Secondary School-сад",
       "location": {
         "kk": "Мақаншы ауданы",
         "en": "Makanshy District"
@@ -597,7 +597,7 @@ window.ABAY_SCHOOLS = {
       "id": "abay-urzhar-1",
       "districtKey": "Урджарский",
       "kk": "К.Игенбайұлы атындағы мектебі",
-      "en": "Secondary School-сад К.Игенбайұлы Secondary School",
+      "en": "К.Игенбайұлы Secondary School",
       "location": {
         "kk": "Өржар ауданы",
         "en": "Urzhar District"
@@ -615,8 +615,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-urzhar-2",
       "districtKey": "Урджарский",
-      "kk": "Ауэзова атындағы мектебі",
-      "en": "Ауэзова Secondary School",
+      "kk": "Әуезов атындағы мектебі",
+      "en": "Әуезов Secondary School",
       "location": {
         "kk": "Өржар ауданы",
         "en": "Urzhar District"
@@ -634,8 +634,8 @@ window.ABAY_SCHOOLS = {
     {
       "id": "abay-urzhar-3",
       "districtKey": "Урджарский",
-      "kk": "Некрасов мектебі-сад мектебі",
-      "en": "Некрасов Secondary School-сад Secondary School",
+      "kk": "Некрасов мектебі-сад",
+      "en": "Некрасов Secondary School-сад",
       "location": {
         "kk": "Өржар ауданы",
         "en": "Urzhar District"
@@ -673,7 +673,7 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kurchatov-2",
       "districtKey": "г. Курчатов",
       "kk": "Чаган №24 мектебі",
-      "en": "Basic Secondary School № 24 поселка Чаган Secondary School",
+      "en": "Basic Secondary School № 24 поселка Чаган",
       "location": {
         "kk": "Көршатов қ.",
         "en": "Kurchatov city"

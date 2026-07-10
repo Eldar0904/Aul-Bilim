@@ -48,8 +48,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-konaev-1",
       "districtKey": "г. Конаев",
-      "kk": "Касыма Кайсенова атындағы №4 мектебі",
-      "en": "№4 Касыма Кайсенова Secondary School",
+      "kk": "№4 Касым Кайсенов атындағы мектебі",
+      "en": "No. 4 Касым Кайсенов Secondary School",
       "location": {
         "kk": "Қонаев қ.",
         "en": "Konaev city"
@@ -86,8 +86,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-konaev-3",
       "districtKey": "г. Конаев",
-      "kk": "Д.А.Конаева атындағы №1 мектебі",
-      "en": "Казах Secondary School №1 Д.А.Конаева Secondary School",
+      "kk": "№1 Д.А. Конбаев атындағы мектебі",
+      "en": "No. 1 Д.А. Конбаев Secondary School",
       "location": {
         "kk": "Қонаев қ.",
         "en": "Konaev city"
@@ -106,7 +106,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-konaev-4",
       "districtKey": "г. Конаев",
       "kk": "А.Жубанова атындағы мектебі",
-      "en": "№5 А.Жубанова Secondary School",
+      "en": "А.Жубанова Secondary School",
       "location": {
         "kk": "Қонаев қ.",
         "en": "Konaev city"
@@ -181,8 +181,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-konaev-8",
       "districtKey": "г. Конаев",
-      "kk": "1 Ы. Алтынсарина атындағы мектебі",
-      "en": "1 Ы. Алтынсарина Secondary School",
+      "kk": "№1 Ы. Алтынсарин атындағы мектебі",
+      "en": "No. 1 Ы. Алтынсарин Secondary School",
       "location": {
         "kk": "Қонаев қ.",
         "en": "Konaev city"
@@ -200,8 +200,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-enbekshikazakh-1",
       "districtKey": "Енбекшиказахский",
-      "kk": "Хусаина Бижанова атындағы мектебі",
-      "en": "Хусаина Бижанова Secondary School",
+      "kk": "Хусайн Бижанов атындағы мектебі",
+      "en": "Хусайн Бижанов Secondary School",
       "location": {
         "kk": "Еңбекшіқазақ ауданы",
         "en": "Enbekshikazakh District"
@@ -238,8 +238,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-enbekshikazakh-3",
       "districtKey": "Енбекшиказахский",
-      "kk": "М.Макатаева атындағы мектебі",
-      "en": "М.Макатаева Secondary School",
+      "kk": "М. Мақатаев атындағы мектебі",
+      "en": "М. Мақатаев Secondary School",
       "location": {
         "kk": "Еңбекшіқазақ ауданы",
         "en": "Enbekshikazakh District"
@@ -333,7 +333,7 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-enbekshikazakh-8",
       "districtKey": "Енбекшиказахский",
-      "kk": "Гимназия атындағы Шелек мектебі",
+      "kk": "Шелек гимназиясы",
       "en": "Шелек гимназиясы",
       "location": {
         "kk": "Еңбекшіқазақ ауданы",
@@ -353,7 +353,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-enbekshikazakh-9",
       "districtKey": "Енбекшиказахский",
       "kk": "Абылай хана атындағы №4 мектебі",
-      "en": "№4 Абылай хана Secondary School",
+      "en": "Абылай хана Secondary School",
       "location": {
         "kk": "Еңбекшіқазақ ауданы",
         "en": "Enbekshikazakh District"
@@ -371,8 +371,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-enbekshikazakh-10",
       "districtKey": "Енбекшиказахский",
-      "kk": "государственного учреждения мектебі",
-      "en": "государственного учреждения Secondary School",
+      "kk": "Мемлекеттік мектеп мектебі",
+      "en": "Мемлекеттік мектеп Secondary School",
       "location": {
         "kk": "Еңбекшіқазақ ауданы",
         "en": "Enbekshikazakh District"
@@ -391,7 +391,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-zhambyl-1",
       "districtKey": "Жамбылский",
       "kk": "Шиен мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"
@@ -429,7 +429,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-zhambyl-3",
       "districtKey": "Жамбылский",
       "kk": "Каргалин №4 мектебі",
-      "en": "Каргалин Secondary School №4 Secondary School",
+      "en": "Каргалин Secondary School №4",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"
@@ -486,7 +486,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-zhambyl-6",
       "districtKey": "Жамбылский",
       "kk": "Танбалытас мектебі",
-      "en": " Secondary School",
+      "en": "Secondary School",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"
@@ -504,8 +504,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-zhambyl-7",
       "districtKey": "Жамбылский",
-      "kk": "Жангельдина атындағы мектебі",
-      "en": " Secondary School",
+      "kk": "Жангелдин атындағы мектебі",
+      "en": "Жангелдин Secondary School",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"
@@ -523,8 +523,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-zhambyl-8",
       "districtKey": "Жамбылский",
-      "kk": "АБДОЛЛЫ КАРСАКБАЕВА атындағы мектебі",
-      "en": "АБДОЛЛЫ КАРСАКБАЕВА Secondary School",
+      "kk": "Абдолла Карсакбаев атындағы мектебі",
+      "en": "Абдолла Карсакбаев Secondary School",
       "location": {
         "kk": "Жамбыл ауданы",
         "en": "Zhambyl District"
@@ -600,7 +600,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-ile-4",
       "districtKey": "Илийский",
       "kk": "К.Азербаева атындағы №15 мектебі",
-      "en": "№15 К.Азербаева Secondary School",
+      "en": "К.Азербаева Secondary School",
       "location": {
         "kk": "Іле ауданы",
         "en": "Ile District"
@@ -656,8 +656,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-ile-7",
       "districtKey": "Илийский",
-      "kk": "гимназия №38 мектебі",
-      "en": "School-Gymnasium №38 Secondary School",
+      "kk": "№38 гимназиясы",
+      "en": "School-Gymnasium №38",
       "location": {
         "kk": "Іле ауданы",
         "en": "Ile District"
@@ -675,8 +675,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-karasai-1",
       "districtKey": "Карасайский",
-      "kk": "М.Бейсебаева атындағы мектебі",
-      "en": "М.Бейсебаева Secondary School",
+      "kk": "М. Бейсебаев атындағы мектебі",
+      "en": "М. Бейсебаев Secondary School",
       "location": {
         "kk": "Қарасай ауданы",
         "en": "Karasai District"
@@ -789,8 +789,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-karasai-7",
       "districtKey": "Карасайский",
-      "kk": "М.Ауезова атындағы мектебі",
-      "en": "М.Ауезова Secondary School",
+      "kk": "М. Әуезов атындағы мектебі",
+      "en": "М. Әуезов Secondary School",
       "location": {
         "kk": "Қарасай ауданы",
         "en": "Karasai District"
@@ -884,8 +884,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-talgar-4",
       "districtKey": "Талгарский",
-      "kk": "мектебі-гимназия №45 государственного учреждения мектебі",
-      "en": "Secondary School-гимназия №45 государственного учреждения Secondary School",
+      "kk": "№45 мектеп-гимназиясы",
+      "en": "No. 45 Gymnasium",
       "location": {
         "kk": "Талғар ауданы",
         "en": "Talgar District"
@@ -904,7 +904,7 @@ window.ALMATY_SCHOOLS = {
       "id": "almaty-talgar-5",
       "districtKey": "Талгарский",
       "kk": "Б.Момышулы атындағы №35 мектебі",
-      "en": "Secondary School-гимназия №35 Б.Момышулы Secondary School",
+      "en": "Б.Момышулы Secondary School",
       "location": {
         "kk": "Талғар ауданы",
         "en": "Talgar District"
@@ -941,8 +941,8 @@ window.ALMATY_SCHOOLS = {
     {
       "id": "almaty-talgar-7",
       "districtKey": "Талгарский",
-      "kk": "Аая атындағы №3 мектебі",
-      "en": "School № 3 Аая Secondary School",
+      "kk": "№3 Абая атындағы мектебі",
+      "en": "No. 3 Абая Secondary School",
       "location": {
         "kk": "Талғар ауданы",
         "en": "Talgar District"
