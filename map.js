@@ -517,11 +517,6 @@
       return d.slug ? 'district-' + d.slug : 'district-' + i;
     }
 
-    function schoolCardDesc(s) {
-      if (s.cardDesc) return s.cardDesc;
-      return s.desc || { kk: '', en: '' };
-    }
-
     function mergeSchoolOverride(base, override) {
       if (!override) return base;
       var merged = Object.assign({}, base);
@@ -580,18 +575,12 @@
             s.teachers + ' ' + bi('мұғалім', 'teachers') +
           '</span>'
         : '';
-      var cardDesc = schoolCardDesc(s);
       return '<a class="school-card is-clickable" href="' + href + '" data-search="' + escAttr(search) + '" style="animation-delay:' + (0.05 * i) + 's">' +
         (preview
           ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
           : '<div class="school-card-photo school-card-photo--empty"></div>') +
         '<div class="school-card-body">' +
-          '<p class="school-card-loc">' +
-            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>' +
-            bi(s.location.kk, s.location.en) +
-          '</p>' +
           '<h4>' + bi(s.kk, s.en) + '</h4>' +
-          '<p class="school-card-desc">' + bi(cardDesc.kk, cardDesc.en) + '</p>' +
           '<div class="school-card-foot">' +
             teachersHtml +
             '<span class="school-card-link" aria-hidden="true">↗</span>' +

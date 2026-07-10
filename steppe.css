@@ -953,7 +953,7 @@ body.map-schools-open .region-schools-block {
   color: var(--primary); margin-bottom: 8px;
   display: flex; align-items: center; gap: 5px;
 }
-.school-card-body h4 { font-size: 16px; line-height: 1.25; margin-bottom: 10px; }
+.school-card-body h4 { font-size: 16px; line-height: 1.25; margin-bottom: 10px; flex: 1; }
 .school-card-desc { font-size: 13.5px; line-height: 1.55; flex: 1; margin-bottom: 14px; white-space: pre-line; }
 .school-card-video { margin-bottom: 14px; }
 .school-card-video-label {
