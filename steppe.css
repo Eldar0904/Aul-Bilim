@@ -2719,7 +2719,7 @@ image-slot { display: block; }
 
 /* ---------- FOOTER ---------- */
 footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60px 0 34px; position: relative; z-index: 2; }
-.foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .foot-grid .logo { color: #fff; margin-bottom: 14px; }
 .foot-grid .logo .logo-mark { color: var(--accent-soft); }
 .foot-brand-title {
@@ -2736,7 +2736,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 .foot-grid a { display: block; font-size: 14.5px; margin-bottom: 11px; transition: color .2s; }
 .foot-grid a:hover { color: var(--accent-soft); }
 .footer-address { display: block; font-size: 14.5px; margin-bottom: 11px; }
-.footer-socials { display: flex; gap: 12px; margin-top: 6px; }
+.footer-socials { display: flex; flex-wrap: wrap; gap: 12px; }
 .foot-grid .footer-socials a {
   display: inline-flex;
   align-items: center;

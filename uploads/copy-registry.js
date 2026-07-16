@@ -580,6 +580,22 @@
   },
   {
     "page": "site_shared",
+    "key": "global-foot-social-h-kk",
+    "selector": "[data-copy=\"global-foot-social-h-kk\"]",
+    "label": "Әлеуметтік желілер",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-social-h-ru",
+    "selector": "[data-copy=\"global-foot-social-h-ru\"]",
+    "label": "Социальные сети",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
     "key": "global-foot-address-kk",
     "selector": "[data-copy=\"global-foot-address-kk\"]",
     "label": "Астана, Қазақстан",
