@@ -55,28 +55,75 @@ def fix_footer(text: str) -> str:
     return text
 
 
+STALE_KEYS = {
+    "global-nav-fitout-kk",
+    "global-nav-fitout-ru",
+    "global-nav-ustaz-kk",
+    "global-nav-ustaz-ru",
+    "global-nav-samruk-kk",
+    "global-nav-samruk-ru",
+}
+
+EXTRA_FIELDS = {
+    "index-001-kk": {"label": "Hero — H1 wrapper (қазақша)", "type": "html"},
+    "index-002-ru": {"label": "Hero — H1 wrapper (русский)", "type": "html"},
+    "index-hero-mark-kk": {"label": "Hero — белгіленген сөз (қазақша)", "type": "text"},
+    "index-hero-mark-ru": {"label": "Hero — выделенная фраза (русский)", "type": "text"},
+    "index-map-kicker-kk": {"label": "Қамтылған өңірлер", "type": "text"},
+    "index-map-kicker-ru": {"label": "Охваченные регионы", "type": "text"},
+    "programs-053-kk": {
+        "label": "Мұғалімдер мен мектеп басшыларының кәсіби әлеуетін көтеру…",
+        "type": "html",
+    },
+}
+
+
+def label_for_key(text: str, key: str) -> str:
+    simple = re.search(
+        rf'data-copy="{re.escape(key)}"[^>]*>([^<]+)</span>',
+        text,
+    )
+    if simple:
+        return re.sub(r"\s+", " ", simple.group(1)).strip()
+    nested = re.search(
+        rf'data-copy="{re.escape(key)}"[^>]*>(.*?)</span>',
+        text,
+        re.S,
+    )
+    if nested:
+        inner = re.sub(r"<[^>]+>", " ", nested.group(1))
+        return re.sub(r"\s+", " ", inner).strip()
+    return key
+
+
 def scan_registry():
     fields = []
     seen = set()
 
     def add(page, key, label, section, ftype):
+        if key in STALE_KEYS:
+            return
         if (page, key) in seen:
             return
         seen.add((page, key))
+        extra = EXTRA_FIELDS.get(key, {})
         fields.append({
             "page": page,
             "key": key,
             "selector": f'[data-copy="{key}"]',
-            "label": label[:90],
+            "label": extra.get("label", label)[:90],
             "section": section,
-            "type": ftype,
+            "type": extra.get("type", ftype),
         })
 
     for name in PAGES:
         text = (ROOT / name).read_text(encoding="utf-8")
         page = name
-        for m in re.finditer(r'data-copy="([^"]+)"[^>]*>([^<]*)</span>', text):
-            key, label = m.group(1), re.sub(r"\s+", " ", m.group(2)).strip()
+        keys = []
+        for m in re.finditer(r'data-copy="([^"]+)"', text):
+            keys.append(m.group(1))
+        for key in dict.fromkeys(keys):
+            label = label_for_key(text, key)
             page_id = "site_shared" if key.startswith("global-") else page
             section = "Content"
             if key.startswith("global-nav-"):

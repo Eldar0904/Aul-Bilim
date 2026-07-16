@@ -31,13 +31,10 @@
       'stat-3-l-kk': stat(3, 'l', 'kk'),
       'stat-3-l-ru': stat(3, 'l', 'ru'),
       'stat-4-l-kk': stat(4, 'l', 'kk'),
-      'stat-4-l-ru': stat(4, 'l', 'ru'),
-      'prog-1-kk': dirCard(1, 'h3', 'kk'),
-      'prog-1-ru': dirCard(1, 'h3', 'ru'),
-      'prog-2-kk': dirCard(2, 'h3', 'kk'),
-      'prog-2-ru': dirCard(2, 'h3', 'ru'),
-      'prog-3-kk': dirCard(3, 'h3', 'kk'),
-      'prog-3-ru': dirCard(3, 'h3', 'ru')
+      'stat-4-l-ru': stat(4, 'l', 'ru')
+      /* Stage card titles use copy-registry keys (index-027-kk … index-036-ru).
+         Legacy prog-1/2/3-kk bindings removed — they targeted old card order
+         and overwrote correct stage titles from Firestore. */
     },
     'about.html': {
       'mission-g1-kk': '.about-mission-goals li:nth-child(1) .about-mission-goal-text [lang=kk]',

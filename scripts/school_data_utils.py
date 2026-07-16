@@ -43,6 +43,21 @@ RU_LEXICON = {
     "ондирис": "Производство",
 }
 
+# Excel district keys with garbled Russian adjective endings
+_DISTRICT_KEY_CORRECTIONS: dict[str, str] = {
+    "Аулиекольксий": "Аулиекольский",
+}
+
+
+def fix_district_key(key: str) -> str:
+    text = str(key).strip()
+    if not text:
+        return text
+    text = _DISTRICT_KEY_CORRECTIONS.get(text, text)
+    text = re.sub(r"ольксий$", "ольский", text, flags=re.I)
+    text = re.sub(r"узсий$", "узский", text, flags=re.I)
+    return text
+
 
 def _strip_russian_admin_tail(name: str) -> str:
     name = re.sub(r"\s*отдел[а]?\s+(?:#\d+\s*)?образования.*$", "", name, flags=re.I)
@@ -219,9 +234,12 @@ def _polish_kk_title(name: str) -> str:
     name = _strip_russian_school_types(name)
     name = _fix_russian_place_adjective(name)
     name = _fix_kk_lexicon(name)
+    name = re.sub(r"(?i)мектебі(?=№)", " ", name)
     name = re.sub(r"\s+", " ", name).strip(" ,-")
     name = _fix_numbered_school_title(name)
     name = _fix_named_village_school(name)
+    name = re.sub(r"(?i)(мектеп-(?:лицейі|гимназиясы))\s+мектебі$", r"\1", name)
+    name = re.sub(r"(?i)^мектебі-лицей\s+(№\s*[\d\s]+)\s+мектебі$", r"\1 мектеп-лицейі", name)
     return name
 
 
@@ -383,6 +401,8 @@ _ADDRESS_KK_RULES: tuple[tuple[str, str], ...] = (
     (r"Урджарский", "Өржар"),
     (r"Аягузский", "Аягөз"),
     (r"Аягузсий", "Аягөз"),
+    (r"Аулиекольский", "Әулиекөл"),
+    (r"Аулиекольксий", "Әулиекөл"),
     (r"Аксуатский", "Ақсуат"),
     (r"Ақсуатский", "Ақсуат"),
     (r"Школьная", "Мектеп"),
@@ -428,6 +448,8 @@ _ADDRESS_EN_RULES: tuple[tuple[str, str], ...] = (
     (r"микрорайон", "microdistrict"),
     (r"\bмкр\.?\s*", "microdist. "),
     (r"квартал", "block"),
+    (r"Аягузсий", "Ayagoz"),
+    (r"Аягузский", "Ayagoz"),
 )
 
 
@@ -760,6 +782,8 @@ def _finalize_imeni_kk(name: str) -> str:
     if m:
         person = _strip_trailing_school_noise(m.group(1))
         return f"{person} атындағы мектебі"
+    name = re.sub(r"(?i)^мектебі-лицей\s+(№\s*[\d\s]+)\s+мектебі$", r"\1 мектеп-лицейі", name)
+    name = re.sub(r"(?i)(мектеп-(?:лицейі|гимназиясы))\s+мектебі$", r"\1", name)
     return name
 
 
@@ -924,6 +948,13 @@ def _ru_from_kk_title(kk: str, full: str) -> str | None:
     m = re.match(r"(?i)^(.+?)\s+гимназиясы$", kk)
     if m:
         return f"гимназия {m.group(1).strip()}"[:120]
+    m = re.match(r"(?i)^№\s*([\d\s]+)\s+мектеп-лицейі$", kk)
+    if m:
+        num = re.sub(r"\s+", "", m.group(1).strip())
+        return f"{typ}-лицей №{num}"[:120]
+    m = re.match(r"(?i)^(.+?)\s+мектеп-лицейі$", kk)
+    if m:
+        return f"{typ}-лицей {m.group(1).strip()}"[:120]
     m = re.match(r"(?i)^(.+?)\s+мектебі$", kk)
     if m:
         core = m.group(1).strip()
@@ -935,6 +966,7 @@ def _ru_from_kk_title(kk: str, full: str) -> str | None:
 
 
 def _title_case_ru_school(name: str) -> str:
+    name = _polish_ru_title(name)
     for src, dst in (
         ("основная средняя школа", "Основная средняя школа"),
         ("средняя школа", "Средняя школа"),
@@ -946,7 +978,7 @@ def _title_case_ru_school(name: str) -> str:
 
 
 def normalize_district_ru(name: str) -> str:
-    text = str(name).strip()
+    text = fix_district_key(str(name).strip())
     if not text:
         return text
     if re.match(r"(?i)^г\.\s*", text):
@@ -1032,6 +1064,22 @@ def short_name_ru(full: str) -> str:
     return _title_case_ru_school(typ)
 
 
+def _polish_ru_title(name: str) -> str:
+    name = re.sub(r'\\+"$', "", name.strip())
+    name = re.sub(r'(?i)\s+мектебі(?:-(?:лицей|ясли-сад|интернат|гимназия|лицейі|сад))?', "", name)
+    name = re.sub(r"(?i)мектебі(?=№)", " ", name)
+    name = re.sub(r"(?i)\s+мектеп-лицейі", "-лицей", name)
+    name = re.sub(r"(?i)\s+мектеп-гимназиясы", "-гимназия", name)
+    name = re.sub(r"(?i)\s+мектеп(?:-(?:лицей(?:і)?|гимназия(?:сы)?))?", "", name)
+    name = re.sub(r"(?i)\s+мектеп-\s*лицейі", "", name)
+    name = re.sub(r"(?i)\s+мектеп$", "", name)
+    name = re.sub(r"(?i)^КГУ\s*\"?", "", name).strip()
+    name = re.sub(r'(?i)"\s*$', "", name).strip()
+    name = re.sub(r"\s+", " ", name).strip(" ,-")
+    name = re.sub(r"(?i)(№)\s+(\d)", r"\1\2", name)
+    return name
+
+
 def district_label_ru(label: str) -> str:
     return normalize_district_ru(label)
 
@@ -1043,7 +1091,7 @@ def build_region_payload(
 ) -> dict:
     df = pd.read_excel(EXCEL, sheet_name=sheet_index)
     df.columns = ["num", "district", "school", "director", "contact"]
-    df["district"] = df["district"].ffill().str.strip()
+    df["district"] = df["district"].ffill().str.strip().map(fix_district_key)
     df = df.dropna(subset=["school"])
 
     excel_districts = list(df["district"].unique())

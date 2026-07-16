@@ -99,13 +99,6 @@
       });
     });
 
-    document.querySelectorAll('.sn, .sl').forEach(function (el) {
-      el.addEventListener('input', function () {
-        el.classList.add('changed');
-        dirty = true;
-      });
-    });
-
     document.querySelectorAll('[data-slot-id][data-slot-field]').forEach(function (el) {
       var slot = media[el.dataset.slotId];
       if (slot && slot[el.dataset.slotField]) {

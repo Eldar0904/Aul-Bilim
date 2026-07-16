@@ -937,9 +937,11 @@ window.adminSchools = (function () {
 
     list.innerHTML = filtered.map(function (s) {
       var has = hasMedia(s.base) || overrideCache[s.id];
+      var lang = previewLang();
+      var regionName = lang === 'ru' ? (s.regionRu || s.regionKk) : s.regionKk;
       return '<button type="button" class="school-list-item' + (s.id === selectedId ? ' active' : '') + '" data-id="' + esc(s.id) + '">' +
         '<span class="school-list-name">' + esc(s.kk) + '</span>' +
-        '<span class="school-list-meta">' + esc(s.regionKk) + (has ? ' · ●' : '') + '</span>' +
+        '<span class="school-list-meta">' + esc(regionName) + (has ? ' · ●' : '') + '</span>' +
       '</button>';
     }).join('');
 
@@ -953,9 +955,11 @@ window.adminSchools = (function () {
   function renderRegionFilter() {
     var sel = document.getElementById('school-filter-region');
     if (!sel || sel.options.length > 1) return;
+    var lang = previewLang();
     sel.innerHTML = '<option value="">Барлық облыстар</option>' +
       REGIONS.map(function (r) {
-        return '<option value="' + esc(r.id) + '">' + esc(r.kk) + '</option>';
+        var name = lang === 'ru' ? (r.ru || r.kk) : r.kk;
+        return '<option value="' + esc(r.id) + '">' + esc(name) + '</option>';
       }).join('');
   }
 

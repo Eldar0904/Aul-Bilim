@@ -58,6 +58,18 @@
     });
   }
 
+  function applyMediaSlots(media) {
+    if (!media) return;
+    document.querySelectorAll('[data-media-slot]').forEach(function (el) {
+      var slotId = el.getAttribute('data-media-slot');
+      var slot = media[slotId];
+      if (!slot || !slot.u) return;
+      if (el.tagName === 'IMG') {
+        el.src = slot.u;
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     if (!window.db || !window.db.getSiteContent) return;
     window.db.getSiteContent().then(function (content) {
@@ -65,6 +77,7 @@
       var page = location.pathname.split('/').pop() || 'index.html';
       applyRegistryCopy(page, content);
       applyLegacyCopy(content.pages[page]);
+      applyMediaSlots(content.media);
     }).catch(function () {});
   });
 })();

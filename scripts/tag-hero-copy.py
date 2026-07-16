@@ -9,25 +9,27 @@ REGISTRY = ROOT / "uploads" / "copy-registry.js"
 
 HERO_META = {
     # index.html — home hero
-    "index-hero-sub-kk": {"section": "Hero"},
-    "index-hero-sub-en": {"section": "Hero"},
+    "index-001-kk": {"section": "Hero", "type": "html", "label": "Hero — H1 wrapper (қазақша)"},
+    "index-002-ru": {"section": "Hero", "type": "html", "label": "Hero — H1 wrapper (русский)"},
     "index-hero-mark-kk": {"section": "Hero", "label": "Hero — белгіленген сөз (қазақша)"},
-    "index-hero-mark-en": {"section": "Hero", "label": "Hero — highlighted phrase (English)"},
+    "index-hero-mark-ru": {"section": "Hero", "label": "Hero — выделенная фраза (русский)"},
+    "index-hero-sub-kk": {"section": "Hero"},
+    "index-hero-sub-ru": {"section": "Hero"},
     "index-009-kk": {"section": "Hero", "label": "Hero — lead paragraph 1 (қазақша)"},
-    "index-010-en": {"section": "Hero", "label": "Hero — lead paragraph 1 (English)"},
+    "index-010-ru": {"section": "Hero", "label": "Hero — lead paragraph 1 (русский)"},
     "index-011-kk": {"section": "Hero", "label": "Hero — lead paragraph 2 (қазақша)"},
-    "index-012-en": {"section": "Hero", "label": "Hero — lead paragraph 2 (English)"},
+    "index-012-ru": {"section": "Hero", "label": "Hero — lead paragraph 2 (русский)"},
     # about.html — mission header
     "about-007-kk": {"section": "Hero", "label": "Mission title (қазақша)"},
-    "about-008-en": {"section": "Hero", "label": "Mission title (English)"},
+    "about-008-ru": {"section": "Hero", "label": "Mission title (русский)"},
     "about-009-kk": {"section": "Hero"},
-    "about-010-en": {"section": "Hero"},
+    "about-010-ru": {"section": "Hero"},
     "about-011-kk": {"section": "Hero"},
-    "about-012-en": {"section": "Hero"},
+    "about-012-ru": {"section": "Hero"},
     "about-013-kk": {"section": "Hero"},
-    "about-014-en": {"section": "Hero"},
+    "about-014-ru": {"section": "Hero"},
     "about-015-kk": {"section": "Hero"},
-    "about-016-en": {"section": "Hero"},
+    "about-016-ru": {"section": "Hero"},
     # programs.html — program heroes
     "programs-025-kk": {
         "section": "Hero",
@@ -37,16 +39,16 @@ HERO_META = {
         "page": "programs.html",
         "selector": '[data-copy="programs-025-kk"]',
     },
-    "programs-026-en": {
+    "programs-026-ru": {
         "section": "Hero",
         "heroGroup": "fitout",
         "type": "html",
-        "label": "Hero — title (English)",
+        "label": "Hero — title (русский)",
         "page": "programs.html",
-        "selector": '[data-copy="programs-026-en"]',
+        "selector": '[data-copy="programs-026-ru"]',
     },
     "programs-027-kk": {"section": "Hero", "heroGroup": "fitout"},
-    "programs-028-en": {"section": "Hero", "heroGroup": "fitout"},
+    "programs-028-ru": {"section": "Hero", "heroGroup": "fitout"},
     "programs-047-kk": {
         "section": "Hero",
         "heroGroup": "ustaz",
@@ -55,29 +57,38 @@ HERO_META = {
         "page": "programs.html",
         "selector": '[data-copy="programs-047-kk"]',
     },
-    "programs-048-en": {
+    "programs-048-ru": {
         "section": "Hero",
         "heroGroup": "ustaz",
         "type": "html",
-        "label": "Hero — title (English)",
+        "label": "Hero — title (русский)",
         "page": "programs.html",
-        "selector": '[data-copy="programs-048-en"]',
+        "selector": '[data-copy="programs-048-ru"]',
     },
     "programs-049-kk": {"section": "Hero", "heroGroup": "ustaz"},
-    "programs-050-en": {"section": "Hero", "heroGroup": "ustaz"},
+    "programs-050-ru": {"section": "Hero", "heroGroup": "ustaz"},
     "programs-091-kk": {"section": "Hero", "heroGroup": "samruk", "type": "html"},
-    "programs-092-en": {"section": "Hero", "heroGroup": "samruk", "type": "html"},
+    "programs-092-ru": {"section": "Hero", "heroGroup": "samruk", "type": "html"},
     "programs-093-kk": {"section": "Hero", "heroGroup": "samruk"},
-    "programs-094-en": {"section": "Hero", "heroGroup": "samruk"},
+    "programs-094-ru": {"section": "Hero", "heroGroup": "samruk"},
 }
 
 HTML_DEFAULTS = {
-    "programs-025-kk": 'Инновациялық <span class="hl">кабинеттер</span> құру',
-    "programs-026-en": 'Building <span class="hl">innovative</span> classrooms',
-    "programs-047-kk": 'Оқыту <span class="hl">курстары</span>',
-    "programs-048-en": 'Teacher <span class="hl">Training</span>',
+    "programs-025-kk": "Инновациялық кабинеттер құру",
+    "programs-026-ru": "Создание инновационных кабинетов",
+    "programs-047-kk": "Оқыту курстары",
+    "programs-048-ru": "Курсы обучения",
     "programs-091-kk": "Тәлімгерлік",
-    "programs-092-en": "Mentorship",
+    "programs-092-ru": "Наставничество",
+}
+
+STALE_KEYS = {
+    "global-nav-fitout-kk",
+    "global-nav-fitout-ru",
+    "global-nav-ustaz-kk",
+    "global-nav-ustaz-ru",
+    "global-nav-samruk-kk",
+    "global-nav-samruk-ru",
 }
 
 
@@ -91,6 +102,7 @@ def load_registry():
 
 def main():
     fields, _ = load_registry()
+    fields = [f for f in fields if f["key"] not in STALE_KEYS]
     by_key = {f["key"]: f for f in fields}
 
     for key, meta in HERO_META.items():

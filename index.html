@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=92" />
+<link rel="stylesheet" href="steppe.css?v=94" />
 </head>
 <body>
 <div class="grain"></div>
@@ -68,33 +68,36 @@
       </div>
     </div>
 
-    <div class="dir-cards">
-      <a class="dir-card" href="programs.html#ustaz">
+    <div class="dir-cards dir-cards--stages">
+      <a class="dir-card dir-card--stage" href="programs.html#ustaz" data-stage="1">
         <div class="dir-card-photo">
+          <span class="dir-card-stage-badge" aria-hidden="true"><span lang="kk">1-кезең</span><span lang="ru">1-й этап</span></span>
           <image-slot id="home-prog-2" src="assets/optimized/home-ustaz-session.jpg" shape="rect" placeholder="Drop a USTAZ photo"></image-slot>
         </div>
         <div class="dir-card-body">
-          <h3><span lang="kk" data-copy="index-031-kk">1-кезең Оқыту курстары</span><span lang="ru" data-copy="index-032-ru">1-й этап Курсы обучения</span></h3>
+          <h3><span lang="kk" data-copy="index-031-kk">Оқыту курстары</span><span lang="ru" data-copy="index-032-ru">Курсы обучения</span></h3>
           <p><span lang="kk" data-copy="index-033-kk">Мұғалімдердің әлеуетін арттыру арқылы білім сапасын жаңа деңгейге көтереміз.</span><span lang="ru" data-copy="index-034-ru">Развивая потенциал педагогов, мы выводим качество образования на новый уровень.</span></p>
         </div>
       </a>
 
-      <a class="dir-card" href="programs.html#fitout">
+      <a class="dir-card dir-card--stage" href="programs.html#fitout" data-stage="2">
         <div class="dir-card-photo">
+          <span class="dir-card-stage-badge" aria-hidden="true"><span lang="kk">2-кезең</span><span lang="ru">2-й этап</span></span>
           <image-slot id="home-prog-1" src="assets/optimized/home-fitout-classroom.jpg" shape="rect" placeholder="Drop a fit-out photo"></image-slot>
         </div>
         <div class="dir-card-body">
-          <h3><span lang="kk" data-copy="index-027-kk">2-кезең Кабинеттер</span><span lang="ru" data-copy="index-028-ru">2-й этап Кабинеты</span></h3>
-          <p><span lang="kk" data-copy="index-029-kk">Сабақ уақытында баланың қозғалысы еркін, отырысы ыңғайлы болуы керек. Біз ұсынатын заманауи жиһаз эргономикалық стандарттарға сай жасалған. Ол оқушының денсаулығын сақтап, зейінін тек сабаққа аударуға көмектеседі.</span><span lang="ru" data-copy="index-030-ru">Во время урока ребёнку нужна свобода движения и удобная посадка. Наша современная мебель соответствует эргономическим стандартам — защищает здоровье учеников и помогает полностью сосредоточиться на занятии.</span></p>
+          <h3><span lang="kk" data-copy="index-027-kk">Инновациялық кабинеттер</span><span lang="ru" data-copy="index-028-ru">Инновационные кабинеты</span></h3>
+          <p><span lang="kk" data-copy="index-029-kk">Оқушылардың жайлылығы мен зейінін арттыруға бағытталған заманауи эргономикалық жиһаздармен жабдықтаймыз.</span><span lang="ru" data-copy="index-030-ru">Оснащаем кабинеты современной эргономичной мебелью для комфорта учеников и лучшей концентрации на занятиях.</span></p>
         </div>
       </a>
 
-      <a class="dir-card" href="programs.html#samruk">
+      <a class="dir-card dir-card--stage" href="programs.html#samruk" data-stage="3">
         <div class="dir-card-photo">
+          <span class="dir-card-stage-badge" aria-hidden="true"><span lang="kk">3-кезең</span><span lang="ru">3-й этап</span></span>
           <image-slot id="home-prog-3" src="assets/optimized/home-mentorship-circle.jpg" shape="rect" placeholder="Drop a mentorship photo"></image-slot>
         </div>
         <div class="dir-card-body">
-          <h3><span lang="kk" data-copy="index-035-kk">3-кезең Тәлімгерлік</span><span lang="ru" data-copy="index-036-ru">3-й этап Наставничество</span></h3>
+          <h3><span lang="kk" data-copy="index-035-kk">Тәлімгерлік</span><span lang="ru" data-copy="index-036-ru">Наставничество</span></h3>
           <p><span lang="kk" data-copy="index-037-kk">Тәжірибелі мамандармен тығыз байланыс орнатып, кәсіби өсу жолында бірге жүреміз.</span><span lang="ru" data-copy="index-038-ru">Мы устанавливаем тесную связь с опытными специалистами и вместе идём по пути профессионального роста.</span></p>
         </div>
       </a>
@@ -183,7 +186,6 @@
           </div>
           <div class="footer-social-row">
             <div class="footer-socials">
-              <a href="https://www.facebook.com/QazaqstanHalqyna" target="_blank" rel="noopener noreferrer" aria-label="Қазақстан Халқына — Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
               <a href="https://www.instagram.com/qazaqstanhalqyna.kz/" target="_blank" rel="noopener noreferrer" aria-label="Қазақстан Халқына — Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
               <a href="https://www.youtube.com/channel/UCJKgoHRYAVuclihac3hZVVw" target="_blank" rel="noopener noreferrer" aria-label="Қазақстан Халқына — YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
             </div>
