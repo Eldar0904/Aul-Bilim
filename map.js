@@ -525,6 +525,12 @@
       else if (typeof override.image === 'string' && override.image) merged.mapImage = override.image;
       if (Array.isArray(override.gallery)) merged.gallery = override.gallery.slice();
       if (override.youtube) merged.youtube = override.youtube;
+      if (override.youtubeDesc) {
+        merged.youtubeDesc = Object.assign({}, base.youtubeDesc || {});
+        if (override.youtubeDesc.kk != null) merged.youtubeDesc.kk = override.youtubeDesc.kk;
+        if (override.youtubeDesc.ru != null) merged.youtubeDesc.ru = override.youtubeDesc.ru;
+        else if (override.youtubeDesc.en != null) merged.youtubeDesc.ru = override.youtubeDesc.en;
+      }
       if (override.desc) {
         merged.desc = Object.assign({}, base.desc || {});
         if (override.desc.kk) merged.desc.kk = override.desc.kk;

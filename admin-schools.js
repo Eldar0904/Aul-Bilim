@@ -152,6 +152,10 @@ window.adminSchools = (function () {
       cardImage: (document.getElementById('school-field-card-image') || {}).value.trim(),
       gallery: gallery,
       youtube: (document.getElementById('school-field-youtube') || {}).value.trim(),
+      youtubeDesc: {
+        kk: (document.getElementById('school-field-youtube-desc-kk') || {}).value.trim(),
+        ru: (document.getElementById('school-field-youtube-desc-ru') || {}).value.trim()
+      },
       desc: {
         kk: (document.getElementById('school-field-desc-kk') || {}).value.trim(),
         ru: (document.getElementById('school-field-desc-ru') || {}).value.trim()
@@ -173,6 +177,12 @@ window.adminSchools = (function () {
     if (typeof o.cardImage === 'string' && o.cardImage) merged.cardImage = o.cardImage;
     if (Array.isArray(o.gallery)) merged.gallery = o.gallery.slice();
     if (o.youtube) merged.youtube = o.youtube;
+    if (o.youtubeDesc) {
+      merged.youtubeDesc = Object.assign({}, base.youtubeDesc || {});
+      if (o.youtubeDesc.kk != null) merged.youtubeDesc.kk = o.youtubeDesc.kk;
+      if (o.youtubeDesc.ru != null) merged.youtubeDesc.ru = o.youtubeDesc.ru;
+      else if (o.youtubeDesc.en != null) merged.youtubeDesc.ru = o.youtubeDesc.en;
+    }
     if (o.desc) {
       merged.desc = Object.assign({}, base.desc || {});
       if (o.desc.kk) merged.desc.kk = o.desc.kk;
@@ -198,6 +208,10 @@ window.adminSchools = (function () {
       cardImage: f.cardImage,
       gallery: f.gallery,
       youtube: f.youtube || base.youtube || '',
+      youtubeDesc: {
+        kk: f.youtubeDesc.kk,
+        ru: f.youtubeDesc.ru
+      },
       desc: {
         kk: f.desc.kk || (base.desc && base.desc.kk) || '',
         ru: f.desc.ru || (base.desc && base.desc.ru) || ''
@@ -294,11 +308,19 @@ window.adminSchools = (function () {
   function renderVideo(frame, school) {
     if (!frame) return;
     var id = youtubeEmbedId(school.youtube);
+    var captionBar = document.getElementById('admin-school-video-caption');
+    var descEl = document.getElementById('admin-school-yt-desc-preview');
+    var lang = previewLang();
+    var desc = school.youtubeDesc
+      ? (lang === 'ru' ? (school.youtubeDesc.ru || '') : (school.youtubeDesc.kk || ''))
+      : '';
     if (id) {
       frame.innerHTML =
         '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="YouTube video" loading="lazy" ' +
           'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
       frame.classList.remove('is-placeholder');
+      if (captionBar) captionBar.hidden = false;
+      if (descEl) descEl.textContent = desc;
       return;
     }
     frame.innerHTML =
@@ -307,6 +329,8 @@ window.adminSchools = (function () {
         '<p>Бейне жақында қосылады</p>' +
       '</div>';
     frame.classList.add('is-placeholder');
+    if (captionBar) captionBar.hidden = true;
+    if (descEl) descEl.textContent = '';
   }
 
   function applyMapImageUrl(url) {
@@ -476,6 +500,9 @@ window.adminSchools = (function () {
     document.getElementById('school-field-gallery').value = (merged.gallery || []).join('\n');
     document.getElementById('school-field-youtube').value = merged.youtube || '';
     updateYoutubeFieldState();
+    var ytDesc = merged.youtubeDesc || {};
+    document.getElementById('school-field-youtube-desc-kk').value = ytDesc.kk || '';
+    document.getElementById('school-field-youtube-desc-ru').value = ytDesc.ru || ytDesc.en || '';
     document.getElementById('school-field-desc-kk').value = (merged.desc && merged.desc.kk) || '';
     document.getElementById('school-field-desc-ru').value = (merged.desc && (merged.desc.ru || merged.desc.en)) || '';
     var cardDescSource;
@@ -935,7 +962,7 @@ window.adminSchools = (function () {
   function bindEditorInputs() {
     ['school-field-map-image', 'school-field-card-image', 'school-field-gallery',
       'school-field-desc-kk', 'school-field-desc-ru', 'school-field-card-desc-kk', 'school-field-card-desc-ru',
-      'school-field-teachers'].forEach(function (id) {
+      'school-field-teachers', 'school-field-youtube-desc-kk', 'school-field-youtube-desc-ru'].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el || el.dataset.bound) return;
       el.dataset.bound = '1';

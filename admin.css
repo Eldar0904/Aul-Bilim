@@ -210,6 +210,13 @@ aside#sidebar {
 .yt-slot-bar input::placeholder { color: rgba(255,255,255,0.3); }
 .yt-slot-bar input:focus { outline: none; border-color: var(--accent-soft); }
 .yt-slot-bar input.changed { border-color: var(--accent-soft); }
+.admin-yt-caption-preview { margin-top: 8px; border-radius: 14px; }
+.admin-yt-desc-edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
 
 /* ── TEXT FIELDS ──────────────────────────────── */
 .tf-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }

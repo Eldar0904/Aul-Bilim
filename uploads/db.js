@@ -39,6 +39,9 @@ window.db = (function () {
     if (data.cardDesc && data.cardDesc.en != null && data.cardDesc.ru == null) {
       data.cardDesc.ru = data.cardDesc.en;
     }
+    if (data.youtubeDesc && data.youtubeDesc.en != null && data.youtubeDesc.ru == null) {
+      data.youtubeDesc.ru = data.youtubeDesc.en;
+    }
     return data;
   }
 
