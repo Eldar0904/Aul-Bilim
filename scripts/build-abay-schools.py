@@ -10,6 +10,7 @@ from school_data_utils import (
     build_school_desc,
     clean_director,
     short_name,
+    normalize_district_ru,
     short_name_ru,
     write_region_js,
 )
@@ -140,7 +141,7 @@ def main() -> None:
                 "districtKey": dist_key,
                 "kk": short_name(full),
                 "ru": short_name_ru(full),
-                "location": {"kk": meta["kk"], "ru": meta["ru"]},
+                "location": {"kk": meta["kk"], "ru": normalize_district_ru(dist_key)},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(director=director, address=address),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -151,7 +152,7 @@ def main() -> None:
         {
             "key": key,
             "kk": DISTRICT_META[key]["kk"],
-            "ru": DISTRICT_META[key]["ru"],
+            "ru": normalize_district_ru(key),
             "slug": DISTRICT_META[key]["slug"],
             "n": district_counts[key],
         }

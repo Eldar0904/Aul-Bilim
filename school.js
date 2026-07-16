@@ -43,6 +43,7 @@
     else if (typeof override.image === 'string' && override.image) merged.mapImage = override.image;
     if (Array.isArray(override.gallery)) merged.gallery = override.gallery.slice();
     if (override.youtube) merged.youtube = override.youtube;
+    if (override.youtubeDesc) merged.youtubeDesc = override.youtubeDesc;
     if (override.desc) {
       merged.desc = Object.assign({}, base.desc || {});
       if (override.desc.kk) merged.desc.kk = override.desc.kk;
@@ -181,18 +182,18 @@
   function renderVideo(frame, school) {
     if (!frame) return;
     var id = youtubeEmbedId(school.youtube);
-    var linkBar = document.getElementById('school-video-link');
-    var linkEl = document.getElementById('school-yt-link');
+    var captionBar = document.getElementById('school-video-caption');
+    var descEl = document.getElementById('school-yt-desc');
+    var desc = school.youtubeDesc
+      ? bi(school.youtubeDesc.kk || '', school.youtubeDesc.ru || school.youtubeDesc.en || '')
+      : '';
     if (id) {
       frame.innerHTML =
         '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="YouTube video" loading="lazy" ' +
           'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
       frame.classList.remove('is-placeholder');
-      if (linkBar) linkBar.hidden = false;
-      if (linkEl) {
-        linkEl.href = 'https://www.youtube.com/watch?v=' + id;
-        linkEl.textContent = 'youtube.com/watch?v=' + id;
-      }
+      if (captionBar) captionBar.hidden = !desc;
+      if (descEl) descEl.textContent = desc;
       return;
     }
 
@@ -202,11 +203,8 @@
         '<p><span lang="kk">Бейне жақында қосылады</span><span lang="ru">Видео скоро появится</span></p>' +
       '</div>';
     frame.classList.add('is-placeholder');
-    if (linkBar) linkBar.hidden = true;
-    if (linkEl) {
-      linkEl.removeAttribute('href');
-      linkEl.textContent = '';
-    }
+    if (captionBar) captionBar.hidden = true;
+    if (descEl) descEl.textContent = '';
   }
 
   function renderMapCard(school, name) {

@@ -262,7 +262,7 @@
     "page": "index.html",
     "key": "index-023-kk",
     "selector": "[data-copy=\"index-023-kk\"]",
-    "label": "Біздің қызметтер",
+    "label": "Жоба кезеңдері",
     "section": "Content",
     "type": "text"
   },
@@ -270,7 +270,7 @@
     "page": "index.html",
     "key": "index-024-ru",
     "selector": "[data-copy=\"index-024-ru\"]",
-    "label": "Наши услуги",
+    "label": "Этапы проекта",
     "section": "Content",
     "type": "text"
   },
@@ -1358,7 +1358,7 @@
     "page": "programs.html",
     "key": "programs-009-kk",
     "selector": "[data-copy=\"programs-009-kk\"]",
-    "label": "Біздің қызметтер",
+    "label": "Жоба кезеңдері",
     "section": "Content",
     "type": "text"
   },
@@ -1366,7 +1366,7 @@
     "page": "programs.html",
     "key": "programs-010-ru",
     "selector": "[data-copy=\"programs-010-ru\"]",
-    "label": "Наши услуги",
+    "label": "Этапы проекта",
     "section": "Content",
     "type": "text"
   },

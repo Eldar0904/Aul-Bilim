@@ -478,8 +478,21 @@ def localize_address_en(address: str) -> str:
     return re.sub(r"\s+", " ", text).strip(" ,")
 
 
+def _localize_acting_prefix_ru(name: str) -> str:
+    name = re.sub(r"(?i)^(?:и\.\s*o\.|и/o|и\\o\\.)\s*", "и.о. ", name)
+    name = re.sub(r"(?i)^и\.о\.(?=\S)", "и.о. ", name)
+    name = re.sub(r"(?i)^и\.o\.(?=\S)", "и.о. ", name)
+    name = re.sub(r"(?i)^и\.?\s*о\.?\s*", "и.о. ", name)
+    name = re.sub(r"(?i)^и\.?\s*o\.?\s*", "и.о. ", name)
+    name = re.sub(r"(?i)^Acting\s+", "и.о. ", name)
+    name = re.sub(r"(?i)\bИ\.?\s*O\.?\s+директора\b", "и.о. директора", name)
+    name = re.sub(r"(?i)\bИО директора\b", "и.о. директора", name)
+    name = re.sub(r"(?i)\bActing director\b", "и.о. директора", name)
+    return re.sub(r"\s+", " ", name).strip()
+
+
 def localize_director_ru(name: str) -> str:
-    return _localize_acting_prefix_en(name)
+    return _localize_acting_prefix_ru(name)
 
 
 def localize_address_ru(address: str) -> str:
@@ -866,6 +879,89 @@ _CYRILLIC_MAP = {
 }
 
 
+def _school_type_ru(full: str) -> str:
+    if re.search(r"(?i)основная\s+средняя|\bОСШ\b", full):
+        return "основная средняя школа"
+    if re.search(r"(?i)гимназ", full):
+        return "гимназия"
+    return "средняя школа"
+
+
+def _extract_imeni_person_ru(text: str) -> str | None:
+    for pat in (
+        r"(?i)имени\s+([^\"«»]+?)(?:\s+отдела|\s+управления|\s+район|$)",
+        r"(?i)им\.\s*([^\"«»]+?)(?:\s+отдела|\s+управления|$)",
+        r"(?i)им\.\s*([A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ\.\s]+)",
+    ):
+        m = re.search(pat, text)
+        if m:
+            person = _strip_trailing_school_noise(m.group(1).strip())
+            if person:
+                return person
+    return None
+
+
+def _extract_adjective_school_ru(quoted: str) -> str | None:
+    m = re.match(
+        r"(?i)^(.+?(?:ская|ский|ское))\s+"
+        r"(?:общеобразовательная\s+)?(?:основная\s+средняя\s+школа|основная\s+школа|средняя\s+школа|школа)$",
+        quoted.strip(),
+    )
+    if m:
+        return f"{m.group(1).strip()} {_school_type_ru(quoted)}"[:120]
+    return None
+
+
+def _ru_from_kk_title(kk: str, full: str) -> str | None:
+    typ = _school_type_ru(full)
+    m = re.match(r"(?i)^(.+?)\s+атындағы\s+(?:№\s*[\d\s]+\s+)?мектебі$", kk)
+    if m:
+        return f"{typ} имени {m.group(1).strip()}"[:120]
+    m = re.match(r"(?i)^(.+?)\s+№\s*([\d\s]+)\s+мектебі$", kk)
+    if m:
+        num = re.sub(r"\s+", "", m.group(2).strip())
+        return f"{typ} №{num} {m.group(1).strip()}"[:120]
+    m = re.match(r"(?i)^(.+?)\s+гимназиясы$", kk)
+    if m:
+        return f"гимназия {m.group(1).strip()}"[:120]
+    m = re.match(r"(?i)^(.+?)\s+мектебі$", kk)
+    if m:
+        core = m.group(1).strip()
+        if core and re.search(rf"(?i)села\s+{re.escape(core)}", full):
+            return f"{typ} с. {core}"[:120]
+        if core:
+            return f"{typ} {core}"[:120]
+    return None
+
+
+def _title_case_ru_school(name: str) -> str:
+    for src, dst in (
+        ("основная средняя школа", "Основная средняя школа"),
+        ("средняя школа", "Средняя школа"),
+        ("гимназия", "Гимназия"),
+    ):
+        if name.lower().startswith(src):
+            return dst + name[len(src) :]
+    return name
+
+
+def normalize_district_ru(name: str) -> str:
+    text = str(name).strip()
+    if not text:
+        return text
+    if re.match(r"(?i)^г\.\s*", text):
+        return text
+    m = re.match(r"(?i)^район\s+(.+)$", text)
+    if m:
+        base = m.group(1).strip()
+        if re.search(r"(ский|ская|ское)$", base, re.I):
+            return f"{base} район"
+        return f"{base}ский район"
+    if re.search(r"(?i)(ский|ская|ское|ий)$", text) and not re.search(r"(?i)район$", text):
+        return f"{text} район"
+    return text
+
+
 def en_to_ru_label(s: str) -> str:
     if not s:
         return s
@@ -890,11 +986,54 @@ def en_to_ru_label(s: str) -> str:
 
 
 def short_name_ru(full: str) -> str:
-    return en_to_ru_label(short_name_en(full))
+    full = str(full).strip()
+    quoted = _strip_russian_admin_tail(_normalize_extracted_name(_extract_quoted_name(full)))
+
+    adjective = _extract_adjective_school_ru(quoted)
+    if adjective:
+        return _title_case_ru_school(adjective)
+
+    typ = _school_type_ru(full)
+    person = _extract_imeni_person_ru(full) or _extract_imeni_person_ru(quoted)
+    if person:
+        connector = "им." if re.search(r"(?i)\bим\.", full) and not re.search(r"(?i)имени", full) else "имени"
+        return _title_case_ru_school(f"{typ} {connector} {person}"[:120])
+
+    for pat in (
+        r"(?i)(?:общеобразовательная\s+школа|основная\s+средняя\s+школа|средняя\s+школа|школа)\s+села\s+([A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ\-]+)",
+        r"(?i)(?:общеобразовательная\s+школа|основная\s+средняя\s+школа|средняя\s+школа|школа)\s+село\s+([A-Za-zА-Яа-яЁёҚқӘәІіҢңҒғҮүҰұӨөҺһ\-]+)",
+    ):
+        m = re.search(pat, full)
+        if m:
+            return _title_case_ru_school(f"{typ} с. {m.group(1).strip()}"[:120])
+
+    m = re.match(r"(?i)^ОСШ\s+(.+)$", quoted)
+    if m:
+        return _title_case_ru_school(f"основная средняя школа {m.group(1).strip()}"[:120])
+
+    m = re.match(r"(?i)^общеобразовательная\s+школа\s+(.+)$", quoted)
+    if m:
+        name = m.group(1).strip()
+        if name.lower() not in {"комплекс", ""}:
+            return _title_case_ru_school(f"{typ} {name}"[:120])
+
+    m = re.match(r"(?i)^Сош\s+им\.?\s*(.+)$", full.strip())
+    if m:
+        return _title_case_ru_school(f"средняя школа им. {m.group(1).strip()}"[:120])
+
+    kk_title = _ru_from_kk_title(short_name(full), full)
+    if kk_title:
+        return _title_case_ru_school(kk_title)
+
+    core = _polish_en_title(quoted)
+    core = re.sub(r"(?i)\s*(?:Secondary School|Basic Secondary School|School)$", "", core).strip()
+    if core and core.lower() not in {"комплекс", "школа"}:
+        return _title_case_ru_school(f"{typ} {core}"[:120])
+    return _title_case_ru_school(typ)
 
 
 def district_label_ru(label: str) -> str:
-    return en_to_ru_label(label)
+    return normalize_district_ru(label)
 
 
 def build_region_payload(
@@ -916,8 +1055,7 @@ def build_region_payload(
     district_meta = {}
     for key, label in zip(excel_districts, district_labels):
         meta = {**label, "key": key}
-        if "ru" not in meta:
-            meta["ru"] = district_label_ru(meta.get("en", meta.get("kk", "")))
+        meta["ru"] = normalize_district_ru(key)
         district_meta[key] = meta
 
     schools = []
