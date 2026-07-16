@@ -294,7 +294,7 @@
     "page": "index.html",
     "key": "index-027-kk",
     "selector": "[data-copy=\"index-027-kk\"]",
-    "label": "Инновациялық кабинеттер құру",
+    "label": "2-кезең Кабинеттер",
     "section": "Content",
     "type": "text"
   },
@@ -302,7 +302,7 @@
     "page": "index.html",
     "key": "index-028-ru",
     "selector": "[data-copy=\"index-028-ru\"]",
-    "label": "Создание инновационных кабинетов",
+    "label": "2-й этап Кабинеты",
     "section": "Content",
     "type": "text"
   },
@@ -326,7 +326,7 @@
     "page": "index.html",
     "key": "index-031-kk",
     "selector": "[data-copy=\"index-031-kk\"]",
-    "label": "Оқыту курстары",
+    "label": "1-кезең Оқыту курстары",
     "section": "Content",
     "type": "text"
   },
@@ -334,7 +334,7 @@
     "page": "index.html",
     "key": "index-032-ru",
     "selector": "[data-copy=\"index-032-ru\"]",
-    "label": "Курсы обучения",
+    "label": "1-й этап Курсы обучения",
     "section": "Content",
     "type": "text"
   },
@@ -358,7 +358,7 @@
     "page": "index.html",
     "key": "index-035-kk",
     "selector": "[data-copy=\"index-035-kk\"]",
-    "label": "Тәлімгерлік",
+    "label": "3-кезең Тәлімгерлік",
     "section": "Content",
     "type": "text"
   },
@@ -366,7 +366,7 @@
     "page": "index.html",
     "key": "index-036-ru",
     "selector": "[data-copy=\"index-036-ru\"]",
-    "label": "Наставничество",
+    "label": "3-й этап Наставничество",
     "section": "Content",
     "type": "text"
   },
