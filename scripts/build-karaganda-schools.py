@@ -10,7 +10,7 @@ from school_data_utils import (
     build_school_desc,
     clean_director,
     short_name,
-    short_name_en,
+    short_name_ru,
     write_region_js,
 )
 
@@ -20,32 +20,32 @@ SHEET_INDEX = 0
 DISTRICT_META = {
     "Караганда": {
         "kk": "\u049a\u0430\u0440\u0430\u0433\u0430\u043d\u0434\u044b \u049b.",
-        "en": "Karaganda city",
+        "ru": 'г. Караганда',
         "slug": "karaganda-city",
     },
     "Абай": {
         "kk": "\u0410\u0431\u0430\u0439 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Abai District",
+        "ru": 'Абайский район',
         "slug": "abai",
     },
     "Сарань": {
         "kk": "Саран қ.",
-        "en": "Saran city",
+        "ru": 'г. Сарань',
         "slug": "saran",
     },
     "Каркаралинск": {
         "kk": "\u049a\u0430\u0440\u043a\u0430\u0440\u0430\u043b\u044b \u049b.",
-        "en": "Karkaraly city",
+        "ru": 'г. Каркаралы',
         "slug": "karkaraly",
     },
     "Темиртау": {
         "kk": "\u0422\u0435\u043c\u0456\u0440\u0442\u0430\u0443 \u049b.",
-        "en": "Temirtau city",
+        "ru": 'г. Темиртау',
         "slug": "temirtau",
     },
     "Шахтинск": {
         "kk": "Шахтин қ.",
-        "en": "Shakhtinsk city",
+        "ru": 'г. Шахтинск',
         "slug": "shakhtinsk",
     },
 }
@@ -95,8 +95,8 @@ def main() -> None:
                 "id": f"karaganda-{meta['slug']}-{idx}",
                 "districtKey": dist_key,
                 "kk": short_name(full),
-                "en": short_name_en(full),
-                "location": {"kk": meta["kk"], "en": meta["en"]},
+                "ru": short_name_ru(full),
+                "location": {"kk": meta["kk"], "ru": meta["ru"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(address=address),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -107,7 +107,7 @@ def main() -> None:
         {
             "key": key,
             "kk": DISTRICT_META[key]["kk"],
-            "en": DISTRICT_META[key]["en"],
+            "ru": DISTRICT_META[key]["ru"],
             "slug": DISTRICT_META[key]["slug"],
             "n": district_counts[key],
         }

@@ -13,7 +13,7 @@ def fix_footer(text: str) -> str:
     # unify school footer about blurb with global
     text = re.sub(
         r'<p class="foot-tag">.*?</p>',
-        '<p class="about"><span lang="kk" data-copy="global-foot-about-kk">Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken Foundation қорларының бірлескен қайырымдылық жобасы.</span><span lang="en" data-copy="global-foot-about-en">Auyl Bilim — a joint charitable initiative of Qazaqstan Halqyina, Bilim Innovation, and the Jelken Foundation.</span></p>',
+        '<p class="about"><span lang="kk" data-copy="global-foot-about-kk">Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken Foundation қорларының бірлескен қайырымдылық жобасы.</span><span lang="ru" data-copy="global-foot-about-ru">Auyl Bilim — совместный благотворительный проект фондов «Қазақстан Халқына», «Білім Инновация» и Jelken Foundation.</span></p>',
         text,
         count=1,
         flags=re.S,
@@ -32,7 +32,7 @@ def fix_footer(text: str) -> str:
     for i, link in enumerate(links):
         slug = FOOT_LINK_KEYS[i] if i < len(FOOT_LINK_KEYS) else f"link{i+1}"
         link = re.sub(
-            r'<span lang="(kk|en)"[^>]*>',
+            r'<span lang="(kk|ru)"[^>]*>',
             lambda s, slug=slug: f'<span lang="{s.group(1)}" data-copy="global-foot-link-{slug}-{s.group(1)}">',
             link,
         )
@@ -43,13 +43,13 @@ def fix_footer(text: str) -> str:
     text = text.replace(m.group(0), m.group(1) + new_block + m.group(3), 1)
 
     text = re.sub(
-        r'(<h4>\s*<span lang="kk" data-copy="global-foot-explore-h-kk">Зерттеу</span>\s*)<span lang="en"[^>]*>',
-        r'\1<span lang="en" data-copy="global-foot-explore-h-en">',
+        r'(<h4>\s*<span lang="kk" data-copy="global-foot-explore-h-kk">Зерттеу</span>\s*)<span lang="ru"[^>]*>',
+        r'\1<span lang="ru" data-copy="global-foot-explore-h-ru">',
         text,
     )
     text = re.sub(
-        r'(<h4>\s*<span lang="kk" data-copy="global-foot-contact-h-kk">Байланыс</span>\s*)<span lang="en"[^>]*>',
-        r'\1<span lang="en" data-copy="global-foot-contact-h-en">',
+        r'(<h4>\s*<span lang="kk" data-copy="global-foot-contact-h-kk">Байланыс</span>\s*)<span lang="ru"[^>]*>',
+        r'\1<span lang="ru" data-copy="global-foot-contact-h-ru">',
         text,
     )
     return text

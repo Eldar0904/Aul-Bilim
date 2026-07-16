@@ -4,13 +4,13 @@
    ============================================================ */
 (function () {
   var REGIONS = window.AUL_BILIM_SCHOOL_REGIONS || [
-    { id: 'west-kazakhstan', global: 'WEST_KAZAKHSTAN_SCHOOLS', kk: 'Батыс Қазақстан облысы', en: 'West Kazakhstan Region' },
-    { id: 'kostanay', global: 'KOSTANAY_SCHOOLS', kk: 'Қостанай облысы', en: 'Kostanay Region' },
-    { id: 'akmola', global: 'AKMOLA_SCHOOLS', kk: 'Ақмола облысы', en: 'Akmola Region' },
-    { id: 'karaganda', global: 'KARAGANDA_SCHOOLS', kk: 'Қарағанды облысы', en: 'Karaganda Region' },
-    { id: 'abay', global: 'ABAY_SCHOOLS', kk: 'Абай облысы', en: 'Abay Region' },
-    { id: 'kyzylorda', global: 'KYZYLORDA_SCHOOLS', kk: 'Қызылорда облысы', en: 'Kyzylorda Region' },
-    { id: 'almaty', global: 'ALMATY_SCHOOLS', kk: 'Алматы облысы', en: 'Almaty Region' }
+    { id: 'west-kazakhstan', global: 'WEST_KAZAKHSTAN_SCHOOLS', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область' },
+    { id: 'kostanay', global: 'KOSTANAY_SCHOOLS', kk: 'Қостанай облысы', ru: 'Костанайская область' },
+    { id: 'akmola', global: 'AKMOLA_SCHOOLS', kk: 'Ақмола облысы', ru: 'Акмолинская область' },
+    { id: 'karaganda', global: 'KARAGANDA_SCHOOLS', kk: 'Қарағанды облысы', ru: 'Карагандинская область' },
+    { id: 'abay', global: 'ABAY_SCHOOLS', kk: 'Абай облысы', ru: 'Абайская область' },
+    { id: 'kyzylorda', global: 'KYZYLORDA_SCHOOLS', kk: 'Қызылорда облысы', ru: 'Кызылординская область' },
+    { id: 'almaty', global: 'ALMATY_SCHOOLS', kk: 'Алматы облысы', ru: 'Алматинская область' }
   ];
 
   var CAROUSEL_PLACEHOLDER = 'assets/school-hero-placeholder.svg';
@@ -19,8 +19,8 @@
   var carouselIndex = 0;
   var carouselImagesList = [];
 
-  function bi(kk, en) {
-    return document.documentElement.getAttribute('data-lang') === 'en' ? en : kk;
+  function bi(kk, ru) {
+    return document.documentElement.getAttribute('data-lang') === 'ru' ? ru : kk;
   }
 
   function parseParams() {
@@ -46,7 +46,8 @@
     if (override.desc) {
       merged.desc = Object.assign({}, base.desc || {});
       if (override.desc.kk) merged.desc.kk = override.desc.kk;
-      if (override.desc.en) merged.desc.en = override.desc.en;
+      if (override.desc.ru) merged.desc.ru = override.desc.ru;
+      else if (override.desc.en) merged.desc.ru = override.desc.en;
     }
     if (override.teachers != null) merged.teachers = override.teachers;
     return merged;
@@ -180,20 +181,32 @@
   function renderVideo(frame, school) {
     if (!frame) return;
     var id = youtubeEmbedId(school.youtube);
+    var linkBar = document.getElementById('school-video-link');
+    var linkEl = document.getElementById('school-yt-link');
     if (id) {
       frame.innerHTML =
         '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="YouTube video" loading="lazy" ' +
           'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
       frame.classList.remove('is-placeholder');
+      if (linkBar) linkBar.hidden = false;
+      if (linkEl) {
+        linkEl.href = 'https://www.youtube.com/watch?v=' + id;
+        linkEl.textContent = 'youtube.com/watch?v=' + id;
+      }
       return;
     }
 
     frame.innerHTML =
       '<div class="school-video-placeholder" aria-hidden="true">' +
         '<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>' +
-        '<p><span lang="kk">Бейне жақында қосылады</span><span lang="en">Video coming soon</span></p>' +
+        '<p><span lang="kk">Бейне жақында қосылады</span><span lang="ru">Видео скоро появится</span></p>' +
       '</div>';
     frame.classList.add('is-placeholder');
+    if (linkBar) linkBar.hidden = true;
+    if (linkEl) {
+      linkEl.removeAttribute('href');
+      linkEl.textContent = '';
+    }
   }
 
   function renderMapCard(school, name) {
@@ -250,12 +263,12 @@
     var teachersEl = document.getElementById('school-teachers');
     var videoFrame = document.getElementById('school-video-frame');
 
-    var name = bi(school.kk, school.en);
+    var name = bi(school.kk, school.ru);
     document.title = name + ' — Aul Bilim';
     var pageTitle = document.querySelector('title');
     if (pageTitle) {
       pageTitle.setAttribute('data-kk', name + ' — Aul Bilim');
-      pageTitle.setAttribute('data-en', (school.en || school.kk) + ' — Aul Bilim');
+      pageTitle.setAttribute('data-ru', (school.ru || school.kk) + ' — Aul Bilim');
     }
 
     renderMapCard(school, name);
@@ -265,13 +278,13 @@
       backLink.href = 'index.html#region-' + region.id + '-schools';
     }
     if (descEl && school.desc) {
-      descEl.textContent = bi(school.desc.kk, school.desc.en);
+      descEl.textContent = bi(school.desc.kk, school.desc.ru);
     }
 
     if (teachersEl) {
       if (school.teachers != null) {
         teachersEl.hidden = false;
-        teachersEl.textContent = school.teachers + ' ' + bi('мұғалім', 'teachers');
+        teachersEl.textContent = school.teachers + ' ' + bi('мұғалім', 'педагогов');
       } else {
         teachersEl.hidden = true;
         teachersEl.textContent = '';

@@ -10,7 +10,7 @@ from school_data_utils import (
     build_school_desc,
     clean_director,
     short_name,
-    short_name_en,
+    short_name_ru,
     write_region_js,
 )
 
@@ -19,62 +19,62 @@ OUT = Path(__file__).resolve().parents[1] / "assets" / "west-kazakhstan-schools.
 DISTRICT_META = {
     "Акжаикский район": {
         "kk": "\u0410\u049b\u0436\u0430\u0439\u044b\u049b \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Akzhaik District",
+        "ru": 'Akzhaikский район',
         "slug": "akzhaik",
     },
     "Район Байтерек": {
         "kk": "\u0411\u04d9\u0439\u0442\u0435\u0440\u0435\u043a \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Baiterek District",
+        "ru": 'Baiterekский район',
         "slug": "baiterek",
     },
     "Бокейординский район": {
         "kk": "\u0411\u043e\u043a\u0435\u0439\u043e\u0440\u0434\u044b \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Bokeyordy District",
+        "ru": 'Bokeyordyский район',
         "slug": "bokeyordy",
     },
     "Бурлинский район": {
         "kk": "\u0411\u04e9\u0440\u043b\u0456 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Burlin District",
+        "ru": 'Burlinский район',
         "slug": "burlin",
     },
     "Жангалинский район": {
         "kk": "\u0416\u0430\u04a3\u0493\u0430\u043b\u0430 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Zhangala District",
+        "ru": 'Zhangalaский район',
         "slug": "zhangala",
     },
     "Жанибекский район": {
         "kk": "\u0416\u0430\u043d\u044b\u0431\u0435\u043a \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Zhanibek District",
+        "ru": 'Zhanibekский район',
         "slug": "zhanibek",
     },
     "Казталовский район": {
         "kk": "\u049a\u0430\u0437\u0442\u0430\u043b\u043e\u0432 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Kaztalov District",
+        "ru": 'Kaztalovский район',
         "slug": "kaztalov",
     },
     "Каратобинский район": {
         "kk": "\u049a\u0430\u0440\u0430\u0442\u04e9\u0431\u0435 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Karatobe District",
+        "ru": 'Karatobeский район',
         "slug": "karatobe",
     },
     "Сырымский район": {
         "kk": "\u0421\u044b\u0440\u044b\u043c \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Syrym District",
+        "ru": 'Syrymский район',
         "slug": "syrym",
     },
     "Таскалинский район": {
         "kk": "\u0422\u0430\u0441\u049b\u0430\u043b\u0430 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Taskala District",
+        "ru": 'Taskalaский район',
         "slug": "taskala",
     },
     "Чингирлауский район": {
         "kk": "\u0428\u044b\u04a3\u0493\u0456\u0440\u043b\u0430\u0443 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Chingirlay District",
+        "ru": 'Chingirlayский район',
         "slug": "chingirlay",
     },
     "Теректинский район": {
         "kk": "\u0422\u0435\u0440\u0435\u043a\u0442\u0456 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Terekty District",
+        "ru": 'Terektyский район',
         "slug": "terekty",
     },
 }
@@ -130,8 +130,8 @@ def main() -> None:
                 "id": f"bko-{meta['slug']}-{idx}",
                 "districtKey": dist_key,
                 "kk": short_name(full),
-                "en": short_name_en(full),
-                "location": {"kk": meta["kk"], "en": meta["en"]},
+                "ru": short_name_ru(full),
+                "location": {"kk": meta["kk"], "ru": meta["ru"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(director=director),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -142,7 +142,7 @@ def main() -> None:
         {
             "key": key,
             "kk": DISTRICT_META[key]["kk"],
-            "en": DISTRICT_META[key]["en"],
+            "ru": DISTRICT_META[key]["ru"],
             "slug": DISTRICT_META[key]["slug"],
             "n": district_counts[key],
         }

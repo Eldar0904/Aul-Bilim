@@ -10,7 +10,7 @@ from school_data_utils import (
     build_school_desc,
     clean_director,
     short_name,
-    short_name_en,
+    short_name_ru,
     write_region_js,
 )
 
@@ -20,57 +20,57 @@ SHEET_INDEX = 3
 DISTRICT_META = {
     "Абайский": {
         "kk": "\u0410\u0431\u0430\u0439 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Abai District",
+        "ru": 'Абайский район',
         "slug": "abai-district",
     },
     "Ақсуат": {
         "kk": "\u0410\u049b\u0441\u0443\u0430\u0442 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Aqsuat District",
+        "ru": 'Aqsuatский район',
         "slug": "aqsuat",
     },
     "Аягозский": {
         "kk": "\u0410\u044f\u0433\u04e9\u0437 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Ayagoz District",
+        "ru": 'Ayagozский район',
         "slug": "ayagoz",
     },
     "Бескарагайский": {
         "kk": "\u0411\u0435\u0441\u049b\u0430\u0440\u0430\u0493\u0430\u0439 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Beskaragai District",
+        "ru": 'Beskaragaiский район',
         "slug": "beskaragai",
     },
     "Бородулихинский": {
         "kk": "\u0411\u043e\u0440\u043e\u0434\u0443\u043b\u0438\u0445 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Borodulikha District",
+        "ru": 'Borodulikhaский район',
         "slug": "borodulikha",
     },
     "Жарминский": {
         "kk": "\u0416\u0430\u0440\u043c\u0430 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Zharma District",
+        "ru": 'Zharmaский район',
         "slug": "zharma",
     },
     "Жаңасемей": {
         "kk": "\u0416\u0430\u04a3\u0430\u0441\u0435\u043c\u0435\u0439 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Zhanasemey District",
+        "ru": 'Zhanasemeyский район',
         "slug": "zhana-semey",
     },
     "Кокпектинский": {
         "kk": "\u041a\u04e9\u043a\u043f\u0435\u043a\u0442\u0456 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Kokpekti District",
+        "ru": 'Kokpektiский район',
         "slug": "kokpekti",
     },
     "Мақаншы": {
         "kk": "\u041c\u0430\u049b\u0430\u043d\u0448\u044b \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Makanshy District",
+        "ru": 'Makanshyский район',
         "slug": "makanshy",
     },
     "Урджарский": {
         "kk": "\u04e8\u0440\u0436\u0430\u0440 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Urzhar District",
+        "ru": 'Urzharский район',
         "slug": "urzhar",
     },
     "г. Курчатов": {
         "kk": "\u041a\u04e9\u0440\u0448\u0430\u0442\u043e\u0432 \u049b.",
-        "en": "Kurchatov city",
+        "ru": 'г. Курчатов',
         "slug": "kurchatov",
     },
 }
@@ -139,8 +139,8 @@ def main() -> None:
                 "id": f"abay-{meta['slug']}-{idx}",
                 "districtKey": dist_key,
                 "kk": short_name(full),
-                "en": short_name_en(full),
-                "location": {"kk": meta["kk"], "en": meta["en"]},
+                "ru": short_name_ru(full),
+                "location": {"kk": meta["kk"], "ru": meta["ru"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(director=director, address=address),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -151,7 +151,7 @@ def main() -> None:
         {
             "key": key,
             "kk": DISTRICT_META[key]["kk"],
-            "en": DISTRICT_META[key]["en"],
+            "ru": DISTRICT_META[key]["ru"],
             "slug": DISTRICT_META[key]["slug"],
             "n": district_counts[key],
         }

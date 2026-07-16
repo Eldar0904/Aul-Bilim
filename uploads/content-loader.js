@@ -50,7 +50,7 @@
       var isLang = !!langAttr;
       var isStat = !isLang && (el.classList.contains('n') || el.classList.contains('big'));
       if (!isLang && !isStat) return;
-      if (isLang && langAttr !== 'kk' && langAttr !== 'en') { idx++; return; }
+      if (isLang && langAttr !== 'kk' && langAttr !== 'ru') { idx++; return; }
       var key = 'cp' + (idx++);
       if (Object.prototype.hasOwnProperty.call(pageData, key)) {
         el.textContent = pageData[key];

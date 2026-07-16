@@ -18,13 +18,39 @@ window.db = (function () {
   var LEGACY_SHARED_PAGE = '__global__';
   var SHARED_COPY_PAGE = (window.AUL_BILIM_SCHEMA && window.AUL_BILIM_SCHEMA.sharedCopyPage) || 'site_shared';
 
+  function migrateCopyKeysEnToRu(pages) {
+    if (!pages || typeof pages !== 'object') return;
+    Object.keys(pages).forEach(function (pageId) {
+      var page = pages[pageId];
+      if (!page || typeof page !== 'object') return;
+      Object.keys(page).forEach(function (key) {
+        if (!/-en$/.test(key) && key.indexOf('-en-') < 0) return;
+        var ruKey = key.replace(/-en(?=-|$)/g, '-ru');
+        if (page[ruKey] == null || page[ruKey] === '') page[ruKey] = page[key];
+      });
+    });
+  }
+
+  function migrateSchoolFieldsEnToRu(data) {
+    if (!data || typeof data !== 'object') return data;
+    if (data.desc && data.desc.en != null && data.desc.ru == null) {
+      data.desc.ru = data.desc.en;
+    }
+    if (data.cardDesc && data.cardDesc.en != null && data.cardDesc.ru == null) {
+      data.cardDesc.ru = data.cardDesc.en;
+    }
+    return data;
+  }
+
   function normalizeSiteContent(content) {
     if (!content || !content.pages || typeof content.pages !== 'object') return content;
     var legacy = content.pages[LEGACY_SHARED_PAGE];
-    if (!legacy) return content;
-    if (!content.pages[SHARED_COPY_PAGE]) content.pages[SHARED_COPY_PAGE] = {};
-    Object.assign(content.pages[SHARED_COPY_PAGE], legacy);
-    delete content.pages[LEGACY_SHARED_PAGE];
+    if (legacy) {
+      if (!content.pages[SHARED_COPY_PAGE]) content.pages[SHARED_COPY_PAGE] = {};
+      Object.assign(content.pages[SHARED_COPY_PAGE], legacy);
+      delete content.pages[LEGACY_SHARED_PAGE];
+    }
+    migrateCopyKeysEnToRu(content.pages);
     return content;
   }
 
@@ -204,12 +230,12 @@ window.db = (function () {
     if (!schoolId) return null;
     if (!hasBackend()) {
       var local = localSchoolsMap();
-      return rewriteMediaUrlsDeep(local[schoolId] || null);
+      return rewriteMediaUrlsDeep(migrateSchoolFieldsEnToRu(local[schoolId] || null));
     }
     var res = await fetch(documentUrl('schools/' + encodeURIComponent(schoolId)), { headers: await authHeaders() });
     if (res.status === 404) return null;
     if (!res.ok) return null;
-    return rewriteMediaUrlsDeep(fromDocument(await res.json()));
+    return rewriteMediaUrlsDeep(migrateSchoolFieldsEnToRu(fromDocument(await res.json())));
   }
 
   async function saveSchoolContent(schoolId, data) {

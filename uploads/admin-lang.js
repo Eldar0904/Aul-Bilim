@@ -7,7 +7,8 @@
 
   function fieldLang(key) {
     if (/-kk$/.test(key) || key.indexOf('-kk-') >= 0) return 'kk';
-    if (/-en$/.test(key) || key.indexOf('-en-') >= 0) return 'en';
+    if (/-ru$/.test(key) || key.indexOf('-ru-') >= 0) return 'ru';
+    if (/-en$/.test(key) || key.indexOf('-en-') >= 0) return 'ru';
     return 'kk';
   }
 
@@ -16,7 +17,8 @@
   }
 
   function setLang(next) {
-    if (next !== 'kk' && next !== 'en') return;
+    if (next === 'en') next = 'ru';
+    if (next !== 'kk' && next !== 'ru') return;
     if (next === lang) return;
     lang = next;
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
@@ -49,7 +51,8 @@
   function init() {
     try {
       var stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === 'en' || stored === 'kk') lang = stored;
+      if (stored === 'en') stored = 'ru';
+      if (stored === 'ru' || stored === 'kk') lang = stored;
     } catch (e) {}
     document.documentElement.setAttribute('data-admin-lang', lang);
     bindToggle();

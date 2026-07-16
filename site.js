@@ -1,6 +1,6 @@
 /* ============================================================
    AUL BILIM — shared site behaviour
-   - KK/EN language toggle (persisted)
+   - KK/RU language toggle (persisted)
    - mobile nav
    - active nav link
    ============================================================ */
@@ -9,7 +9,11 @@
   var root = document.documentElement;
 
   function getLang() {
-    try { return localStorage.getItem(STORE) || 'kk'; } catch (e) { return 'kk'; }
+    try {
+      var stored = localStorage.getItem(STORE) || 'kk';
+      if (stored === 'en') stored = 'ru';
+      return stored;
+    } catch (e) { return 'kk'; }
   }
   function setLang(lang) {
     root.setAttribute('data-lang', lang);
@@ -20,7 +24,7 @@
       b.setAttribute('aria-pressed', isCurrent ? 'true' : 'false');
     });
     // swap <html lang> + per-page <title>
-    root.setAttribute('lang', lang === 'kk' ? 'kk' : 'en');
+    root.setAttribute('lang', lang === 'kk' ? 'kk' : 'ru');
     var t = document.querySelector('title');
     if (t) {
       var alt = t.getAttribute('data-' + lang);
@@ -139,11 +143,11 @@
     var hubIntro = document.getElementById('programs-hub-intro');
     if (hubIntro) {
       var slugs = ['fitout', 'ustaz', 'samruk'];
-      var defaultTitle = { kk: null, en: null };
+      var defaultTitle = { kk: null, ru: null };
       var titleEl = document.querySelector('title');
       if (titleEl) {
         defaultTitle.kk = titleEl.getAttribute('data-kk');
-        defaultTitle.en = titleEl.getAttribute('data-en');
+        defaultTitle.ru = titleEl.getAttribute('data-ru');
       }
 
       function applyProgramsView() {

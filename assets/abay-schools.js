@@ -4,77 +4,77 @@ window.ABAY_SCHOOLS = {
     {
       "key": "Абайский",
       "kk": "Абай ауданы",
-      "en": "Abai District",
+      "ru": "Абайский район",
       "slug": "abai-district",
       "n": 3
     },
     {
       "key": "Ақсуат",
       "kk": "Ақсуат ауданы",
-      "en": "Aqsuat District",
+      "ru": "Aqsuatский район",
       "slug": "aqsuat",
       "n": 3
     },
     {
       "key": "Аягозский",
       "kk": "Аягөз ауданы",
-      "en": "Ayagoz District",
+      "ru": "Ayagozский район",
       "slug": "ayagoz",
       "n": 3
     },
     {
       "key": "Бескарагайский",
       "kk": "Бесқарағай ауданы",
-      "en": "Beskaragai District",
+      "ru": "Beskaragaiский район",
       "slug": "beskaragai",
       "n": 6
     },
     {
       "key": "Бородулихинский",
       "kk": "Бородулих ауданы",
-      "en": "Borodulikha District",
+      "ru": "Borodulikhaский район",
       "slug": "borodulikha",
       "n": 3
     },
     {
       "key": "Жарминский",
       "kk": "Жарма ауданы",
-      "en": "Zharma District",
+      "ru": "Zharmaский район",
       "slug": "zharma",
       "n": 3
     },
     {
       "key": "Жаңасемей",
       "kk": "Жаңасемей ауданы",
-      "en": "Zhanasemey District",
+      "ru": "Zhanasemeyский район",
       "slug": "zhana-semey",
       "n": 3
     },
     {
       "key": "Кокпектинский",
       "kk": "Көкпекті ауданы",
-      "en": "Kokpekti District",
+      "ru": "Kokpektiский район",
       "slug": "kokpekti",
       "n": 3
     },
     {
       "key": "Мақаншы",
       "kk": "Мақаншы ауданы",
-      "en": "Makanshy District",
+      "ru": "Makanshyский район",
       "slug": "makanshy",
       "n": 3
     },
     {
       "key": "Урджарский",
       "kk": "Өржар ауданы",
-      "en": "Urzhar District",
+      "ru": "Urzharский район",
       "slug": "urzhar",
       "n": 3
     },
     {
       "key": "г. Курчатов",
       "kk": "Көршатов қ.",
-      "en": "Kurchatov city",
+      "ru": "г. Kurchatov",
       "slug": "kurchatov",
       "n": 3
     }
@@ -84,18 +84,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-abai-district-1",
       "districtKey": "Абайский",
       "kk": "С.Бекбосынова атындағы мектебі",
-      "en": "С.Бекбосынова Secondary School",
+      "ru": "С.Бекбосынова средняя школа",
       "location": {
         "kk": "Абай ауданы",
-        "en": "Abai District"
+        "ru": "Абайский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Жунусова Айман Ибрагимкызы Мекенжай: Абай облысы, Абай ауданы, ауылы Архат, көш. Мамай 30",
-        "en": "Director: Жунусова Айман Ибрагимкызы Address: Abai Region, Абайский district, village Архат, St. Мамай 30"
+        "ru": "Director: Жунусова Айман Ибрагимкызы Address: Абай Region, Абайский district, village Архат, St. Мамай 30"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -103,18 +103,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-abai-district-2",
       "districtKey": "Абайский",
       "kk": "Ж.Молдагалиева мектебі",
-      "en": "Ж.Молдагалиева Secondary School",
+      "ru": "Ж.Молдагалиева средняя школа",
       "location": {
         "kk": "Абай ауданы",
-        "en": "Abai District"
+        "ru": "Абайский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Тұрысбеков Талғат Аниярұлы Мекенжай: Абай облысы Абаи ауданы ау. Токтамыс көш. Ш.Азимбай №30",
-        "en": "Director: Тұрысбеков Талғат Аниярұлы Address: Abai Region Абаиский district v. Токтамыс St. Ш.Азимбай №30"
+        "ru": "Director: Тұрысбеков Талғат Аниярұлы Address: Абай Region Абаиский district v. Токтамыс St. Ш.Азимбай №30"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -122,18 +122,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-abai-district-3",
       "districtKey": "Абайский",
       "kk": "Шакарима атындағы мектебі",
-      "en": "Шакарима Secondary School",
+      "ru": "Шакарима средняя школа",
       "location": {
         "kk": "Абай ауданы",
-        "en": "Abai District"
+        "ru": "Абайский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Балтиева Ләзат Құдайбергенқызы Мекенжай: Абай облысы, Абай ауданы, ауылы Кенгирбай би, көш. Сундетбай 13",
-        "en": "Director: Балтиева Ләзат Құдайбергенқызы Address: Abai Region, Абайский district, village Кенгирбай би, St. Сундетбай 13"
+        "ru": "Director: Балтиева Ләзат Құдайбергенқызы Address: Абай Region, Абайский district, village Кенгирбай би, St. Сундетбай 13"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -141,18 +141,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-aqsuat-1",
       "districtKey": "Ақсуат",
       "kk": "Сасан би атындағы мектебі",
-      "en": "Сасан би Secondary School",
+      "ru": "Сасан би средняя школа",
       "location": {
         "kk": "Ақсуат ауданы",
-        "en": "Aqsuat District"
+        "ru": "Aqsuatский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: и\\о Г.Кенжебаева Мекенжай: ласть Абай,ауданы Аксуат, ау. Кумголь,көш. Абая 14\\1",
-        "en": "Director: и\\о Г.Кенжебаева Address: ласть Абай,district Аксуат, v. Кумголь,St. Абая 14\\1"
+        "ru": "Director: и\\\\о Г.Кенжебаева Address: ласть Абай,district Аксуат, v. Кумголь,St. Абая 14\\\\1"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -160,18 +160,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-aqsuat-2",
       "districtKey": "Ақсуат",
       "kk": "СШ Тана Мырза мектебі",
-      "en": "СШ Тана Мырза Secondary School",
+      "ru": "СШ Тана Мырза средняя школа",
       "location": {
         "kk": "Ақсуат ауданы",
-        "en": "Aqsuat District"
+        "ru": "Aqsuatский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Касенов Муратбек Капасовұлы Мекенжай: Абай облысы, Ақсуат ауданы, ауылы Тана мырза көш. А.Жубанова 34",
-        "en": "Director: Касенов Муратбек Капасович Address: Abai Region, Ақсуатский district, village Тана мырза St. А.Жубанова 34"
+        "ru": "Director: Касенов Муратбек Капасович Address: Абай Region, Ақсуатский district, village Тана мырза St. А.Жубанова 34"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -179,18 +179,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-aqsuat-3",
       "districtKey": "Ақсуат",
       "kk": "Коктубек мектебі",
-      "en": "School Коктубек Secondary School",
+      "ru": "школа Коктубек средняя школа",
       "location": {
         "kk": "Ақсуат ауданы",
-        "en": "Aqsuat District"
+        "ru": "Aqsuatский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Набиев Канат Бодеевұлы Мекенжай: Абай облысы, Ақсуат ауданы ауылы Коктубек көш. Ж.Аймауытова 2/1",
-        "en": "Director: Набиев Канат Бодеевич Address: Abai Region, Ақсуатский district village Коктубек St. Ж.Аймауытова 2/1"
+        "ru": "Director: Набиев Канат Бодеевич Address: Абай Region, Ақсуатский district village Коктубек St. Ж.Аймауытова 2/1"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -198,18 +198,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-ayagoz-1",
       "districtKey": "Аягозский",
       "kk": "Ж.Жабаева атындағы мектебі",
-      "en": "Ж.Жабаева Secondary School",
+      "ru": "Ж.Жабаева средняя школа",
       "location": {
         "kk": "Аягөз ауданы",
-        "en": "Ayagoz District"
+        "ru": "Ayagozский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Балтабеков Адил Алибековұлы Мекенжай: Абай облысы, Аягөз ауданы ауылы Карагаш көш. Т.Сармаева 60",
-        "en": "Director: Балтабеков Адил Алибекович Address: Abai Region, Аягузсий district village Карагаш St. Т.Сармаева 60"
+        "ru": "Director: Балтабеков Адил Алибекович Address: Абай Region, Аягузсий district village Карагаш St. Т.Сармаева 60"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -217,18 +217,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-ayagoz-2",
       "districtKey": "Аягозский",
       "kk": "Мынбулак мектебі",
-      "en": "Мынбулак Secondary School",
+      "ru": "Мынбулак средняя школа",
       "location": {
         "kk": "Аягөз ауданы",
-        "en": "Ayagoz District"
+        "ru": "Ayagozский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: а.о. Комекова Арай Толегенкызы Мекенжай: Абай облысы Аягоз ауданы, ауылы Мынбулак көш. Булак 38",
-        "en": "Director: Acting Комекова Арай Толегенкызы Address: Abai Region Аягозский district, village Мынбулак Street Булак 38"
+        "ru": "Director: Acting Комекова Арай Толегенкызы Address: Абай Region Аягозский district, village Мынбулак Street Булак 38"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -236,18 +236,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-ayagoz-3",
       "districtKey": "Аягозский",
       "kk": "Б.Майлина атындағы мектебі",
-      "en": "Б.Майлина Secondary School",
+      "ru": "Б.Майлина средняя школа",
       "location": {
         "kk": "Аягөз ауданы",
-        "en": "Ayagoz District"
+        "ru": "Ayagozский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Есентемиров Даулет Акановұлы Мекенжай: Абай облысы Аягоз ауданы, ауылы Майлин көш. Актамберды 8/1",
-        "en": "Director: Есентемиров Даулет Аканович Address: Abai Region Аягозский district, village Майлин Street Актамберды 8/1"
+        "ru": "Director: Есентемиров Даулет Аканович Address: Абай Region Аягозский district, village Майлин Street Актамберды 8/1"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -255,18 +255,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-beskaragai-1",
       "districtKey": "Бескарагайский",
       "kk": "Мало-Владимиров мектебі",
-      "en": "Мало-Владимиров Secondary School",
+      "ru": "Мало-Владимиров средняя школа",
       "location": {
         "kk": "Бесқарағай ауданы",
-        "en": "Beskaragai District"
+        "ru": "Beskaragaiский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Токаманова Жазия Рамазанқызы Мекенжай: Абай облысы, Бесқарағай ауданы, ауылы Малая Владимировка, көш. Ленина 18 А",
-        "en": "Director: Токаманова Жазия Рамазановна Address: Abai Region, Бескарагайский district, village Малая Владимировка, Street Ленина 18 А"
+        "ru": "Director: Токаманова Жазия Рамазановна Address: Абай Region, Бескарагайский district, village Малая Владимировка, Street Ленина 18 А"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -274,18 +274,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-beskaragai-2",
       "districtKey": "Бескарагайский",
       "kk": "Нұрлыбек Баймұратов атындағы мектебі",
-      "en": "Нұрлыбек Баймұратов Secondary School",
+      "ru": "Нұрлыбек Баймұратов средняя школа",
       "location": {
         "kk": "Бесқарағай ауданы",
-        "en": "Beskaragai District"
+        "ru": "Beskaragaiский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Жексенаев Мейрамгали Кенеспековұлы Мекенжай: Абай облысы,Бесқарағай ауданы,ауылы Карагайлы,көш. Алаш 32",
-        "en": "Director: Жексенаев Мейрамгали Кенеспекович Address: Abai Region,Бескарагайский district,village Карагайлы,St. Алаш 32"
+        "ru": "Director: Жексенаев Мейрамгали Кенеспекович Address: Абай Region,Бескарагайский district,village Карагайлы,St. Алаш 32"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -293,18 +293,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-beskaragai-3",
       "districtKey": "Бескарагайский",
       "kk": "Семенов мектебі",
-      "en": "Семенов Secondary School",
+      "ru": "Семенов средняя школа",
       "location": {
         "kk": "Бесқарағай ауданы",
-        "en": "Beskaragai District"
+        "ru": "Beskaragaiский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Бауедимов Серикказы Аитказиновұлы Мекенжай: Абай облысы,Бесқарағай ауданы,ауылы Карабас,көш. А. Баймухамбетова 11",
-        "en": "Director: Бауедимов Серикказы Аитказинович Address: Abai Region,Бескарагайский district,village Карабас,St. А. Баймухамбетова 11"
+        "ru": "Director: Бауедимов Серикказы Аитказинович Address: Абай Region,Бескарагайский district,village Карабас,St. А. Баймухамбетова 11"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -312,18 +312,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-borodulikha-1",
       "districtKey": "Бородулихинский",
       "kk": "Камышен мектебі",
-      "en": "Камышен Secondary School",
+      "ru": "Камышен средняя школа",
       "location": {
         "kk": "Бородулих ауданы",
-        "en": "Borodulikha District"
+        "ru": "Borodulikhaский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Болатханов Еркебұлан Мекенжай: Абай облысы, Бородулих ауданы ауылы Камышенка көш. Мектеп 58",
-        "en": "Director: Болатханов Еркебұлан Address: Abai Region, Бородулихинский district village Камышенка St. Школьная 58"
+        "ru": "Director: Болатханов Еркебұлан Address: Абай Region, Бородулихинский district village Камышенка St. Школьная 58"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -331,18 +331,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-borodulikha-2",
       "districtKey": "Бородулихинский",
       "kk": "М.Әуезов атындағы мектебі",
-      "en": "М.Әуезов Secondary School",
+      "ru": "М.Әуезов средняя школа",
       "location": {
         "kk": "Бородулих ауданы",
-        "en": "Borodulikha District"
+        "ru": "Borodulikhaский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Абдикаримов Ермек Маулитовұлы Мекенжай: Бородулих ауданы ауылы Новопокровка ул Гагарина 101",
-        "en": "Director: Абдикаримов Ермек Маулитович Address: Бородулихинский district village Новопокровка ул Гагарина 101"
+        "ru": "Director: Абдикаримов Ермек Маулитович Address: Бородулихинский district village Новопокровка ул Гагарина 101"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -350,18 +350,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-borodulikha-3",
       "districtKey": "Бородулихинский",
       "kk": "Краснополь мектебі",
-      "en": "Краснополь Secondary School",
+      "ru": "Краснополь средняя школа",
       "location": {
         "kk": "Бородулих ауданы",
-        "en": "Borodulikha District"
+        "ru": "Borodulikhaский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Кайтпасова Айгуль Урзаканқызы Мекенжай: ауылы Зенковка , көш. Мектеп 3",
-        "en": "Director: Кайтпасова Айгуль Урзакановна Address: village Зенковка , Street Школьная 3"
+        "ru": "Director: Кайтпасова Айгуль Урзакановна Address: village Зенковка , Street Школьная 3"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -369,18 +369,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-zharma-1",
       "districtKey": "Жарминский",
       "kk": "Васильков мектебі",
-      "en": "Васильков School Secondary School",
+      "ru": "Васильков школа средняя школа",
       "location": {
         "kk": "Жарма ауданы",
-        "en": "Zharma District"
+        "ru": "Zharmaский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Абильмажинов Нариман Талгатовұлы Мекенжай: ауылы Батыр Капай",
-        "en": "Director: Абильмажинов Нариман Талгатович Address: village Батыр Капай"
+        "ru": "Director: Абильмажинов Нариман Талгатович Address: village Батыр Капай"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -388,18 +388,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-zharma-2",
       "districtKey": "Жарминский",
       "kk": "Д. Калматаева атындағы мектебі",
-      "en": "Д. Калматаева Secondary School",
+      "ru": "Д. Калматаева средняя школа",
       "location": {
         "kk": "Жарма ауданы",
-        "en": "Zharma District"
+        "ru": "Zharmaский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Мустафин Ернат Амангелдыевұлы Мекенжай: Абай облысы, Жарма ауданы, ауылы Каратобе, кв. 2, ғим.2",
-        "en": "Director: Мустафин Ернат Амангелдыевич Address: Abai Region, Жарминский district, village Каратобе, block 2, Bldg.2"
+        "ru": "Director: Мустафин Ернат Амангелдыевич Address: Абай Region, Жарминский district, village Каратобе, block 2, Bldg.2"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -407,18 +407,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-zharma-3",
       "districtKey": "Жарминский",
       "kk": "Бирлик мектебі",
-      "en": "Бирлик Secondary School",
+      "ru": "Бирлик средняя школа",
       "location": {
         "kk": "Жарма ауданы",
-        "en": "Zharma District"
+        "ru": "Zharmaский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Отарбаев Кайрат Жунусхановұлы Мекенжай: ауылы Бирлик",
-        "en": "Director: Отарбаев Кайрат Жунусханович Address: village Бирлик"
+        "ru": "Director: Отарбаев Кайрат Жунусханович Address: village Бирлик"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -426,18 +426,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-zhana-semey-1",
       "districtKey": "Жаңасемей",
       "kk": "Булак мектебі",
-      "en": "Булак Secondary School",
+      "ru": "Булак средняя школа",
       "location": {
         "kk": "Жаңасемей ауданы",
-        "en": "Zhanasemey District"
+        "ru": "Zhanasemeyский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Заманбекова Айтолкын Асенқызы Мекенжай: Абай облысы ауданы Жаңасемей көш. Комсомоль 26А",
-        "en": "Director: Заманбекова Айтолкын Асеновна Address: Abai Region district Жаңасемей St. Комсомольская 26А"
+        "ru": "Director: Заманбекова Айтолкын Асеновна Address: Абай Region district Жаңасемей St. Комсомольская 26А"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -445,18 +445,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-zhana-semey-2",
       "districtKey": "Жаңасемей",
       "kk": "Талицкая мектебі",
-      "en": "Талицкая Basic Secondary School",
+      "ru": "Талицкая Basic средняя школа",
       "location": {
         "kk": "Жаңасемей ауданы",
-        "en": "Zhanasemey District"
+        "ru": "Zhanasemeyский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Козыбаева Айгерим Ермекқызы Мекенжай: Абай облысы, ауданы Жаңасемей, ауылы Талица, көш. Талица, үй 126",
-        "en": "Director: Козыбаева Айгерим Ермековна Address: Abai Region, district Жаңасемей, village Талица, Street Талица, No. 126"
+        "ru": "Director: Козыбаева Айгерим Ермековна Address: Абай Region, district Жаңасемей, village Талица, Street Талица, No. 126"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -464,18 +464,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-zhana-semey-3",
       "districtKey": "Жаңасемей",
       "kk": "Турксиб мектебі",
-      "en": "Турксиб Secondary School",
+      "ru": "Турксиб средняя школа",
       "location": {
         "kk": "Жаңасемей ауданы",
-        "en": "Zhanasemey District"
+        "ru": "Zhanasemeyский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Омаров Даулен Айтмухамбетовұлы Мекенжай: Абай облысы, ауданы Жаңасемей, Иртыш ауылдық округ, ауылы Мукур, көш. Мектеп үй 1",
-        "en": "Director: Омаров Даулен Айтмухамбетович Address: Abai Region, district Жаңасемей, Иртышский rural district, village Мукур, Street Школьная No. 1"
+        "ru": "Director: Омаров Даулен Айтмухамбетович Address: Абай Region, district Жаңасемей, Иртышский rural district, village Мукур, Street Школьная No. 1"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -483,18 +483,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kokpekti-1",
       "districtKey": "Кокпектинский",
       "kk": "Шариптогай мектебі",
-      "en": "Шариптогай School Secondary School",
+      "ru": "Шариптогай школа средняя школа",
       "location": {
         "kk": "Көкпекті ауданы",
-        "en": "Kokpekti District"
+        "ru": "Kokpektiский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Халиульдина Алмаш Каирханқызы Мекенжай: Абай облысы , Көкпекті ауданы, ауылы Шариптогай, көш. 1, ғим. 9",
-        "en": "Director: Халиульдина Алмаш Каирхановна Address: Abai Region , Кокпектинский district, village Шариптогай, Street 1, Bldg. 9"
+        "ru": "Director: Халиульдина Алмаш Каирхановна Address: Абай Region , Кокпектинский district, village Шариптогай, Street 1, Bldg. 9"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -502,18 +502,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kokpekti-2",
       "districtKey": "Кокпектинский",
       "kk": "Романов мектебі",
-      "en": "Романов School Secondary School",
+      "ru": "Романов школа средняя школа",
       "location": {
         "kk": "Көкпекті ауданы",
-        "en": "Kokpekti District"
+        "ru": "Kokpektiский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Каусов Адилбек Оразгалиевұлы Мекенжай: Абай облысы, ауданы Көкпекті, ауылы Ажа, көш. 1, үй 8",
-        "en": "Director: Каусов Адилбек Оразгалиевич Address: Abai Region, district Кокпектинский, village Ажа, Street 1, No. 8"
+        "ru": "Director: Каусов Адилбек Оразгалиевич Address: Абай Region, district Кокпектинский, village Ажа, Street 1, No. 8"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -521,18 +521,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kokpekti-3",
       "districtKey": "Кокпектинский",
       "kk": "Бигаш мектебі",
-      "en": "Бигаш School Secondary School",
+      "ru": "Бигаш школа средняя школа",
       "location": {
         "kk": "Көкпекті ауданы",
-        "en": "Kokpekti District"
+        "ru": "Kokpektiский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Каусова Айсулу Адилбекқызы Мекенжай: Абай облысы, ауданы Көкпекті, ауылы Бигаш, көш. Достық 10",
-        "en": "Director: Каусова Айсулу Адилбековна Address: Abai Region, district Кокпектинский, village Бигаш, Street Достық 10"
+        "ru": "Director: Каусова Айсулу Адилбековна Address: Абай Region, district Кокпектинский, village Бигаш, Street Достық 10"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -540,18 +540,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-makanshy-1",
       "districtKey": "Мақаншы",
       "kk": "Бугыбай мектебі",
-      "en": "Бугыбай School Secondary School",
+      "ru": "Бугыбай школа средняя школа",
       "location": {
         "kk": "Мақаншы ауданы",
-        "en": "Makanshy District"
+        "ru": "Makanshyский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Джуратбаева Назигуль Турсунқызы Мекенжай: Абай облысы, ауданы Мақаншы, ау. Бугыбай, ул Кабанбая, ғим. 1",
-        "en": "Director: Джуратбаева Назигуль Турсуновна Address: Abai Region, district Мақаншы, v. Бугыбай, ул Кабанбая, Bldg. 1"
+        "ru": "Director: Джуратбаева Назигуль Турсуновна Address: Абай Region, district Мақаншы, v. Бугыбай, ул Кабанбая, Bldg. 1"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -559,18 +559,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-makanshy-2",
       "districtKey": "Мақаншы",
       "kk": "Кайындин мектебі-сад",
-      "en": "Кайындин Secondary School-сад",
+      "ru": "Кайындин средняя школа-сад",
       "location": {
         "kk": "Мақаншы ауданы",
-        "en": "Makanshy District"
+        "ru": "Makanshyский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Оленбаева Алмагуль Исақызы Мекенжай: Абай облысы, ауданы Мақаншы, ау. Кайынды, көш. Бейбитшилик, ғим. 46",
-        "en": "Director: Оленбаева Алмагуль Исаевна Address: Abai Region, district Мақаншы, v. Кайынды, St. Бейбитшилик, Bldg. 46"
+        "ru": "Director: Оленбаева Алмагуль Исаевна Address: Абай Region, district Мақаншы, v. Кайынды, St. Бейбитшилик, Bldg. 46"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -578,18 +578,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-makanshy-3",
       "districtKey": "Мақаншы",
       "kk": "Карабутин мектебі",
-      "en": "Карабутин Secondary School",
+      "ru": "Карабутин средняя школа",
       "location": {
         "kk": "Мақаншы ауданы",
-        "en": "Makanshy District"
+        "ru": "Makanshyский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Базылханова Арай Мукашқызы Мекенжай: Абай облысы, ауданы Мақаншы, ау. Карабута, көш. М.Ауезов, ғим. 14",
-        "en": "Director: Базылханова Арай Мукашевна Address: Abai Region, district Мақаншы, v. Карабута, St. М.Ауезов, Bldg. 14"
+        "ru": "Director: Базылханова Арай Мукашевна Address: Абай Region, district Мақаншы, v. Карабута, St. М.Ауезов, Bldg. 14"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -597,18 +597,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-urzhar-1",
       "districtKey": "Урджарский",
       "kk": "К.Игенбайұлы атындағы мектебі",
-      "en": "К.Игенбайұлы Secondary School",
+      "ru": "К.Игенбайұлы средняя школа",
       "location": {
         "kk": "Өржар ауданы",
-        "en": "Urzhar District"
+        "ru": "Urzharский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Нупбаева Таукар Умарқызы Мекенжай: Абай облысы, ауданы Урджар, Ельтай ауылдық округ, ауылы Ельтай, көш. Бухар 74",
-        "en": "Director: Нупбаева Таукар Умаровна Address: Abai Region, district Урджар, Ельтайский rural district, village Ельтай, Street Бухар 74"
+        "ru": "Director: Нупбаева Таукар Умаровна Address: Абай Region, district Урджар, Ельтайский rural district, village Ельтай, Street Бухар 74"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -616,18 +616,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-urzhar-2",
       "districtKey": "Урджарский",
       "kk": "Әуезов атындағы мектебі",
-      "en": "Әуезов Secondary School",
+      "ru": "Әуезов средняя школа",
       "location": {
         "kk": "Өржар ауданы",
-        "en": "Urzhar District"
+        "ru": "Urzharский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Елеусизов Ермек Оразгалиевұлы Мекенжай: Абай облысы, ауданы Урджар, Жана Тилек ауылдық округ, ауылы Жана Тилек, көш. Султан Бейбарыс 16А",
-        "en": "Director: Елеусизов Ермек Оразгалиевич Address: Abai Region, district Урджар, Жана Тилек rural district, village Жана Тилек, Street Султан Бейбарыс 16А"
+        "ru": "Director: Елеусизов Ермек Оразгалиевич Address: Абай Region, district Урджар, Жана Тилек rural district, village Жана Тилек, Street Султан Бейбарыс 16А"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -635,18 +635,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-urzhar-3",
       "districtKey": "Урджарский",
       "kk": "Некрасов мектебі-сад",
-      "en": "Некрасов Secondary School-сад",
+      "ru": "Некрасов средняя школа-сад",
       "location": {
         "kk": "Өржар ауданы",
-        "en": "Urzhar District"
+        "ru": "Urzharский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Наурозбаева Мейрамгуль Жумалеқызы Мекенжай: Абай облысы, ауданы Урджар, Баркытбель ауылдық округ, ауылы Некрасовка, көш. Садовая 2А",
-        "en": "Director: Наурозбаева Мейрамгуль Жумалеевна Address: Abai Region, district Урджар, Баркытбельский rural district, village Некрасовка, Street Садовая 2А"
+        "ru": "Director: Наурозбаева Мейрамгуль Жумалеевна Address: Абай Region, district Урджар, Баркытбельский rural district, village Некрасовка, Street Садовая 2А"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -654,18 +654,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kurchatov-1",
       "districtKey": "г. Курчатов",
       "kk": "Боденелин мектебі",
-      "en": "Боденелин Secondary School",
+      "ru": "Боденелин средняя школа",
       "location": {
         "kk": "Көршатов қ.",
-        "en": "Kurchatov city"
+        "ru": "г. Kurchatov"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: Кулжапарова МЕруерт Тулегенқызы Мекенжай: Бесқарағай ауданы, ауылы Бодене, көш. Молдажанова 4",
-        "en": "Director: Кулжапарова МЕруерт Тулегеновна Address: Бескарагайский district, village Бодене, St. Молдажанова 4"
+        "ru": "Director: Кулжапарова МЕруерт Тулегеновна Address: Бескарагайский district, village Бодене, St. Молдажанова 4"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -673,18 +673,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kurchatov-2",
       "districtKey": "г. Курчатов",
       "kk": "Чаган №24 мектебі",
-      "en": "Basic Secondary School № 24 поселка Чаган",
+      "ru": "Basic средняя школа № 24 поселка Чаган",
       "location": {
         "kk": "Көршатов қ.",
-        "en": "Kurchatov city"
+        "ru": "г. Kurchatov"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Толеуконыр Жадыра Кунанбаева Мекенжай: ҚР, Абай облысы , ауданы Жаңасемей, п Чаган Железнодорожная1",
-        "en": "Director: Толеуконыр Жадыра Кунанбаева Address: KZ, Abai Region , district Жаңасемей, п Чаган Железнодорожная1"
+        "ru": "Director: Толеуконыр Жадыра Кунанбаева Address: KZ, Абай Region , district Жаңасемей, п Чаган Железнодорожная1"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -692,18 +692,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-kurchatov-3",
       "districtKey": "г. Курчатов",
       "kk": "Букенчин мектебі",
-      "en": "Букенчин Secondary School",
+      "ru": "Букенчин средняя школа",
       "location": {
         "kk": "Көршатов қ.",
-        "en": "Kurchatov city"
+        "ru": "г. Kurchatov"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Карамурзин Серикжан Секеновұлы Мекенжай: ҚР, Абай облысы , ауданы Жаңасемей, ауылы Букенчи, Мектеп 2",
-        "en": "Director: Карамурзин Серикжан Секенович Address: KZ, Abai Region , district Жаңасемей, village Букенчи, Школьная 2"
+        "ru": "Director: Карамурзин Серикжан Секенович Address: KZ, Абай Region , district Жаңасемей, village Букенчи, Школьная 2"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -711,18 +711,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-beskaragai-4",
       "districtKey": "Бескарагайский",
       "kk": "Ундрус мектебі",
-      "en": "Ундрус Secondary School",
+      "ru": "Ундрус средняя школа",
       "location": {
         "kk": "Бесқарағай ауданы",
-        "en": "Beskaragai District"
+        "ru": "Beskaragaiский район"
       },
       "badge": {
         "kk": "Жоба аясында",
-        "en": "Programme school"
+        "ru": "Программная школа"
       },
       "desc": {
         "kk": "Директоры: а.о. директора Алдешева Айдана Кенжебекқызы Мекенжай: Абай обл. Бесқарағай ауданы с Ундрус ул Маметова 5",
-        "en": "Director: Acting директора Алдешева Айдана Кенжебековна Address: обл Абай Бескарагайский district с Ундрус ул Маметова 5"
+        "ru": "Director: Acting директора Алдешева Айдана Кенжебековна Address: обл Абай Бескарагайский district с Ундрус ул Маметова 5"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -730,18 +730,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-beskaragai-5",
       "districtKey": "Бескарагайский",
       "kk": "Семияр мектебі",
-      "en": "Семияр Secondary School",
+      "ru": "Семияр средняя школа",
       "location": {
         "kk": "Бесқарағай ауданы",
-        "en": "Beskaragai District"
+        "ru": "Beskaragaiский район"
       },
       "badge": {
         "kk": "Зертхана",
-        "en": "Laboratory"
+        "ru": "Лаборатория"
       },
       "desc": {
         "kk": "Директоры: Зияданов Тимур Кенесбековұлы Мекенжай: Абай обл. Бесқарағай ауданы с Жетижар ул Горького 22 А",
-        "en": "Director: Зияданов Тимур Кенесбекович Address: обл Абай Бескарагайский district с Жетижар ул Горького 22 А"
+        "ru": "Director: Зияданов Тимур Кенесбекович Address: обл Абай Бескарагайский district с Жетижар ул Горького 22 А"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -749,18 +749,18 @@ window.ABAY_SCHOOLS = {
       "id": "abay-beskaragai-6",
       "districtKey": "Бескарагайский",
       "kk": "Башкуль мектебі",
-      "en": "Башкуль School Secondary School",
+      "ru": "Башкуль школа средняя школа",
       "location": {
         "kk": "Бесқарағай ауданы",
-        "en": "Beskaragai District"
+        "ru": "Beskaragaiский район"
       },
       "badge": {
         "kk": "Толық жабдықталған",
-        "en": "Fully equipped"
+        "ru": "Fully equipped"
       },
       "desc": {
         "kk": "Директоры: Насыров Руслан Раисовұлы Мекенжай: Бесқарағай ауданы, ауылы Башкуль, ул Абая №40",
-        "en": "Director: Насыров Руслан Раисович Address: Бескарагайский district, village Башкуль, ул Абая №40"
+        "ru": "Director: Насыров Руслан Раисович Address: Бескарагайский district, village Башкуль, ул Абая №40"
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     }

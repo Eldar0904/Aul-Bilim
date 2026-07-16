@@ -605,44 +605,25 @@ aside#sidebar {
 .admin-school-right .school-media-card-wrap {
   margin: 0;
 }
-.admin-youtube-edit {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 14px 16px;
+.admin-school-right .yt-slot {
+  margin-top: 0;
 }
-#school-field-youtube.is-valid {
-  border-color: #1a7a45;
+.yt-slot-hint {
+  margin: 8px 0 0;
 }
-#school-field-youtube.is-invalid {
-  border-color: #c0392b;
-}
-.admin-youtube-preview {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-}
-.admin-youtube-preview[hidden] {
-  display: none !important;
-}
-#school-youtube-thumb {
-  width: 120px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  flex: none;
-}
-#school-youtube-status {
+.yt-slot-status {
+  margin: 6px 0 0;
   font-size: 12px;
   color: var(--body);
   font-family: var(--fb);
 }
-#school-field-youtube.is-invalid ~ .admin-youtube-preview #school-youtube-status {
-  color: #c0392b;
+.yt-slot-status[hidden] { display: none !important; }
+.yt-slot-status.is-error { color: #c0392b; }
+.yt-slot-bar input.is-valid {
+  border-color: #3ecf7a;
+}
+.yt-slot-bar input.is-invalid {
+  border-color: #e07070;
 }
 
 /* School editor fields */
@@ -663,8 +644,8 @@ aside#sidebar {
 .copy-field-hint .hl { color: var(--accent-deep); font-weight: 700; }
 
 /* Admin copy language visibility */
-html[data-admin-lang="kk"] .admin-lang-en { display: none !important; }
-html[data-admin-lang="en"] .admin-lang-kk { display: none !important; }
+html[data-admin-lang="kk"] .admin-lang-ru { display: none !important; }
+html[data-admin-lang="ru"] .admin-lang-kk { display: none !important; }
 
 /* ── TOAST ────────────────────────────────────── */
 #toast {

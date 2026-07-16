@@ -9,7 +9,7 @@ from school_data_utils import (
     build_school_desc,
     clean_director,
     short_name,
-    short_name_en,
+    short_name_ru,
     write_region_js,
 )
 
@@ -19,32 +19,32 @@ OUT = Path(__file__).resolve().parents[1] / "assets" / "almaty-schools.js"
 DISTRICT_META = {
     "г. Конаев": {
         "kk": "Қонаев қ.",
-        "en": "Konaev city",
+        "ru": 'г. Конаев',
         "slug": "konaev",
     },
     "Енбекшиказахский": {
         "kk": "Еңбекшіқазақ ауданы",
-        "en": "Enbekshikazakh District",
+        "ru": 'Enbekshikazakhский район',
         "slug": "enbekshikazakh",
     },
     "Жамбылский": {
         "kk": "Жамбыл ауданы",
-        "en": "Zhambyl District",
+        "ru": 'Жамбылский район',
         "slug": "zhambyl",
     },
     "Илийский": {
         "kk": "Іле ауданы",
-        "en": "Ile District",
+        "ru": 'Ileский район',
         "slug": "ile",
     },
     "Карасайский": {
         "kk": "Қарасай ауданы",
-        "en": "Karasai District",
+        "ru": 'Karasaiский район',
         "slug": "karasai",
     },
     "Талгарский": {
         "kk": "Талғар ауданы",
-        "en": "Talgar District",
+        "ru": 'Talgarский район',
         "slug": "talgar",
     },
 }
@@ -87,8 +87,8 @@ def main() -> None:
                 "id": f"almaty-{meta['slug']}-{idx}",
                 "districtKey": dist_key,
                 "kk": short_name(full),
-                "en": short_name_en(full),
-                "location": {"kk": meta["kk"], "en": meta["en"]},
+                "ru": short_name_ru(full),
+                "location": {"kk": meta["kk"], "ru": meta["ru"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(director=director),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -99,7 +99,7 @@ def main() -> None:
         {
             "key": key,
             "kk": DISTRICT_META[key]["kk"],
-            "en": DISTRICT_META[key]["en"],
+            "ru": DISTRICT_META[key]["ru"],
             "slug": DISTRICT_META[key]["slug"],
             "n": district_counts[key],
         }

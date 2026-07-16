@@ -10,7 +10,7 @@ from school_data_utils import (
     build_school_desc,
     clean_director,
     short_name,
-    short_name_en,
+    short_name_ru,
     write_region_js,
 )
 
@@ -21,37 +21,37 @@ SHEET_MKSH = 5
 DISTRICT_META = {
     "Аральский район": {
         "kk": "\u0410\u0440\u0430\u043b \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Aral District",
+        "ru": 'Aralский район',
         "slug": "aral",
     },
     "Казалинский район": {
         "kk": "\u049a\u0430\u0437\u0430\u043b\u044b \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Kazaly District",
+        "ru": 'Kazalyский район',
         "slug": "kazaly",
     },
     "Кармакшинский район": {
         "kk": "\u049a\u0430\u0440\u043c\u0430\u049b\u0448\u044b \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Karmakshy District",
+        "ru": 'Karmakshyский район',
         "slug": "karmakshy",
     },
     "Жалагашский район": {
         "kk": "\u0416\u0430\u043b\u0430\u0493\u0430\u0441 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Zhalagash District",
+        "ru": 'Zhalagashский район',
         "slug": "zhalagash",
     },
     "Сырдарьинский район": {
         "kk": "\u0421\u044b\u0440\u0434\u0430\u0440\u0438\u044f \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Syrdarya District",
+        "ru": 'Syrdaryaский район',
         "slug": "syrdarya",
     },
     "Шиелийский район": {
         "kk": "\u0428\u0438\u0435\u043b\u0456 \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Shieli District",
+        "ru": 'Shieliский район',
         "slug": "shieli",
     },
     "Жанакорганский район": {
         "kk": "\u0416\u0430\u04a3\u0430\u049b\u043e\u0440\u0493\u0430\u043d \u0430\u0443\u0434\u0430\u043d\u044b",
-        "en": "Zhanakorgan District",
+        "ru": 'Zhanakorganский район',
         "slug": "zhanakorgan",
     },
 }
@@ -121,8 +121,8 @@ def main() -> None:
                 "id": f"kzo-{meta['slug']}-{idx}",
                 "districtKey": dist_key,
                 "kk": short_name(full),
-                "en": short_name_en(full),
-                "location": {"kk": meta["kk"], "en": meta["en"]},
+                "ru": short_name_ru(full),
+                "location": {"kk": meta["kk"], "ru": meta["ru"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(director=director, address=address),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -133,7 +133,7 @@ def main() -> None:
         {
             "key": key,
             "kk": DISTRICT_META[key]["kk"],
-            "en": DISTRICT_META[key]["en"],
+            "ru": DISTRICT_META[key]["ru"],
             "slug": DISTRICT_META[key]["slug"],
             "n": district_counts[key],
         }

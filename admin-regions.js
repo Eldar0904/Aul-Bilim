@@ -87,7 +87,7 @@ window.adminRegions = (function () {
         '<div class="region-stat-card-head">' +
           '<div>' +
             '<h3 class="region-stat-name admin-lang-kk">' + esc(region.kk) + '</h3>' +
-            '<p class="region-stat-name-en admin-lang-en">' + esc(region.en) + '</p>' +
+            '<p class="region-stat-name-ru admin-lang-ru">' + esc(region.ru) + '</p>' +
           '</div>' +
           '<span class="region-stat-badge' + (isLive ? ' is-live' : '') + '">' +
             (isLive ? 'Мектептер тізімі бар' : 'Статистика ғана') +

@@ -13,9 +13,9 @@ IMAGES = [
 ]
 
 BADGES = [
-    {"kk": "Жоба аясында", "en": "Programme school"},
-    {"kk": "Зертхана", "en": "Laboratory"},
-    {"kk": "Толық жабдықталған", "en": "Fully equipped"},
+    {"kk": "Жоба аясында", "ru": "Программная школа"},
+    {"kk": "Зертхана", "ru": "Лаборатория"},
+    {"kk": "Толық жабдықталған", "ru": "Полностью оснащена"},
 ]
 
 
@@ -37,10 +37,10 @@ KK_LEXICON = {
     "ондирис": "Өндіріс",
 }
 
-EN_LEXICON = {
-    "ondiris": "Production",
-    "öndiris": "Production",
-    "ондирис": "Production",
+RU_LEXICON = {
+    "ondiris": "Производство",
+    "öndiris": "Производство",
+    "ондирис": "Производство",
 }
 
 
@@ -90,8 +90,8 @@ def _fix_kk_lexicon(name: str) -> str:
     return name
 
 
-def _fix_en_lexicon(name: str) -> str:
-    for src, dst in EN_LEXICON.items():
+def _fix_ru_lexicon(name: str) -> str:
+    for src, dst in RU_LEXICON.items():
         name = re.sub(src, dst, name, flags=re.I)
     return name
 
@@ -234,7 +234,7 @@ def _polish_en_title(name: str) -> str:
     name = _strip_russian_settlement_prefix(name)
     name = _strip_russian_school_types(name)
     name = _fix_russian_place_adjective(name)
-    name = _fix_en_lexicon(name)
+    name = _fix_ru_lexicon(name)
     name = re.sub(r"\s+", " ", name).strip(" ,-")
     name = _fix_numbered_school_title(name)
     return name
@@ -478,6 +478,14 @@ def localize_address_en(address: str) -> str:
     return re.sub(r"\s+", " ", text).strip(" ,")
 
 
+def localize_director_ru(name: str) -> str:
+    return _localize_acting_prefix_en(name)
+
+
+def localize_address_ru(address: str) -> str:
+    return localize_address_en(address)
+
+
 def build_school_desc(director: str = "", address: str = "") -> dict[str, str]:
     director_text = "" if director is None else str(director).strip()
     address_text = "" if address is None else str(address).strip()
@@ -495,28 +503,28 @@ def build_school_desc(director: str = "", address: str = "") -> dict[str, str]:
     address_text = _clean_address_text(address_text)
 
     parts_kk: list[str] = []
-    parts_en: list[str] = []
+    parts_ru: list[str] = []
     if director_text:
         parts_kk.append(f"Директоры: {localize_director_kk(director_text)}")
-        parts_en.append(f"Director: {localize_director_en(director_text)}")
+        parts_ru.append(f"Директор: {localize_director_ru(director_text)}")
     if address_text:
         parts_kk.append(f"Мекенжай: {localize_address_kk(address_text)}")
-        parts_en.append(f"Address: {localize_address_en(address_text)}")
+        parts_ru.append(f"Адрес: {localize_address_ru(address_text)}")
 
     if not parts_kk:
         return {
             "kk": "Aul Bilim жобасы аясындағы мектеп.",
-            "en": "School supported under the Aul Bilim programme.",
+            "ru": "Школа, поддерживаемая в рамках программы Aul Bilim.",
         }
-    return {"kk": " ".join(parts_kk), "en": " ".join(parts_en)}
+    return {"kk": " ".join(parts_kk), "ru": " ".join(parts_ru)}
 
 
 def extract_address_from_desc(desc: dict | None) -> str:
     if not desc:
         return ""
-    for key in ("kk", "en"):
+    for key in ("kk", "ru", "en"):
         text = str(desc.get(key, "")).strip()
-        match = re.search(r"(?:Мекенжай|Address)\s*:\s*(.+)$", text, flags=re.I)
+        match = re.search(r"(?:Мекенжай|Address|Адрес)\s*:\s*(.+)$", text, flags=re.I)
         if match:
             return _clean_address_text(match.group(1))
     return ""
@@ -841,6 +849,54 @@ def short_name_en(full: str) -> str:
     return _title_case_en(_clean_school_title(name.strip(), "Secondary School"))
 
 
+_DISTRICT_EN_RU = (
+    (re.compile(r"^(.+) city$", re.I), r"г. \1"),
+    (re.compile(r"^(.+) District$", re.I), r"\1ский район"),
+)
+
+_CYRILLIC_MAP = {
+    "Karaganda": "Караганда", "Abai": "Абай", "Saran": "Сарань", "Karkaraly": "Каркаралы",
+    "Temirtau": "Темиртау", "Shakhtinsk": "Шахтинск", "Kostanay": "Костанай",
+    "Akmola": "Акмола", "Aktobe": "Актобе", "Almaty": "Алматы", "Atyrau": "Атырау",
+    "Konaev": "Конаев", "Rudny": "Рудный", "Arkalyk": "Аркалык", "Kurchatov": "Курчатов",
+    "Stepnogorsk": "Степногорск", "Sairam": "Сайрам", "Saryagash": "Сарыағаш",
+    "Maktaaral": "Мактаарал", "Ordabasy": "Ордабасы", "Tulkibas": "Түлкібас",
+    "Kazygurt": "Казыгурт", "Baizak": "Байзак", "Zhambyl": "Жамбыл", "Zhualy": "Жуалы",
+    "Korday": "Кордай", "Merki": "Мерке", "Shu": "Шу",
+}
+
+
+def en_to_ru_label(s: str) -> str:
+    if not s:
+        return s
+    text = s.strip()
+    for pattern, repl in _DISTRICT_EN_RU:
+        m = pattern.match(text)
+        if m:
+            text = pattern.sub(repl, text)
+            break
+    for lat, cyr in _CYRILLIC_MAP.items():
+        text = text.replace(lat, cyr)
+    text = text.replace("Secondary School", "средняя школа")
+    text = text.replace("Basic Secondary School", "основная средняя школа")
+    text = text.replace("Gymnasium", "гимназия")
+    text = text.replace("School", "школа")
+    text = text.replace("District", "район")
+    text = text.replace("city", "г.")
+    text = text.replace("Programme school", "Программная школа")
+    text = text.replace("Laboratory", "Лаборатория")
+    text = text.replace("Fully equipped", "Полностью оснащена")
+    return text
+
+
+def short_name_ru(full: str) -> str:
+    return en_to_ru_label(short_name_en(full))
+
+
+def district_label_ru(label: str) -> str:
+    return en_to_ru_label(label)
+
+
 def build_region_payload(
     sheet_index: int,
     district_labels: list[dict],
@@ -857,10 +913,12 @@ def build_region_payload(
             f"Expected {len(district_labels)} districts, got {len(excel_districts)}: {excel_districts}"
         )
 
-    district_meta = {
-        key: {**label, "key": key}
-        for key, label in zip(excel_districts, district_labels)
-    }
+    district_meta = {}
+    for key, label in zip(excel_districts, district_labels):
+        meta = {**label, "key": key}
+        if "ru" not in meta:
+            meta["ru"] = district_label_ru(meta.get("en", meta.get("kk", "")))
+        district_meta[key] = meta
 
     schools = []
     district_order: list[str] = []
@@ -883,8 +941,8 @@ def build_region_payload(
                 "id": f"{id_prefix}-{meta['slug']}-{idx}",
                 "districtKey": dist_key,
                 "kk": short_name(full),
-                "en": short_name_en(full),
-                "location": {"kk": meta["kk"], "en": meta["en"]},
+                "ru": short_name_ru(full),
+                "location": {"kk": meta["kk"], "ru": meta["ru"]},
                 "badge": BADGES[len(schools) % len(BADGES)],
                 "desc": build_school_desc(director=director),
                 "image": IMAGES[len(schools) % len(IMAGES)],
@@ -895,7 +953,7 @@ def build_region_payload(
         {
             "key": key,
             "kk": district_meta[key]["kk"],
-            "en": district_meta[key]["en"],
+            "ru": district_meta[key]["ru"],
             "slug": district_meta[key]["slug"],
             "n": district_counts[key],
         }

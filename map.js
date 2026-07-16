@@ -11,14 +11,14 @@
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
   var REGIONS = [
     {
-      id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', en: 'West Kazakhstan Region', total: 71,
+      id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область', total: 71,
       mapId: 'KZ27',
       cx: 0.11, cy: 0.41,
       zoomScale: 3.1,
       districts: []
     },
     {
-      id: 'kostanay', kk: 'Қостанай облысы', en: 'Kostanay Region', total: 63,
+      id: 'kostanay', kk: 'Қостанай облысы', ru: 'Костанайская область', total: 63,
       mapId: 'KZ39',
       cx: 0.426, cy: 0.28,
       zoomScale: 3.05,
@@ -26,14 +26,14 @@
       districts: []
     },
     {
-      id: 'akmola', kk: 'Ақмола облысы', en: 'Akmola Region', total: 54,
+      id: 'akmola', kk: 'Ақмола облысы', ru: 'Акмолинская область', total: 54,
       mapId: 'KZ11',
       cx: 0.604, cy: 0.288,
       poly: '657,113 663,113 665,120 671,121 669,126 675,127 681,133 688,125 695,125 702,131 710,127 715,133 713,143 716,147 728,148 733,144 744,143 748,155 775,164 776,191 771,196 770,204 781,208 774,210 765,220 776,224 774,246 778,250 792,249 794,255 801,256 805,263 799,269 802,274 812,268 835,265 825,288 689,266 685,263 683,265 623,255 619,254 615,247 613,253 588,249 593,178 599,176 599,171 611,176 618,172 618,165 625,163 636,152 639,138 630,125 638,115 647,114 653,121 653,116',
       districts: []
     },
     {
-      id: 'karaganda', kk: 'Қарағанды облысы', en: 'Karaganda Region', total: 86,
+      id: 'karaganda', kk: 'Қарағанды облысы', ru: 'Карагандинская область', total: 86,
       mapId: 'KZ35',
       cx: 0.583, cy: 0.515,
       zoomScale: 2.95,
@@ -41,51 +41,51 @@
       districts: []
     },
     {
-      id: 'abay', kk: 'Абай облысы', en: 'Abay Region', total: 36,
+      id: 'abay', kk: 'Абай облысы', ru: 'Абайская область', total: 36,
       mapId: 'KZ10',
       cx: 0.78, cy: 0.52,
       zoomScale: 2.9,
       districts: []
     },
     {
-      id: 'kyzylorda', kk: 'Қызылорда облысы', en: 'Kyzylorda Region', total: 58,
+      id: 'kyzylorda', kk: 'Қызылорда облысы', ru: 'Кызылординская область', total: 58,
       mapId: 'KZ43',
       cx: 0.443, cy: 0.719,
       poly: '516,324 521,326 614,436 593,437 597,445 593,464 601,471 602,500 618,513 614,516 614,523 611,523 606,535 611,542 580,562 573,563 564,572 561,572 562,550 553,552 547,538 531,522 517,528 480,525 451,530 430,507 423,495 374,463 371,457 371,440 375,430 396,405 408,400 411,393 419,391 432,368 447,366 463,387 473,390 511,361 498,338 480,327',
       districts: []
     },
     {
-      id: 'turkistan', kk: 'Түркістан облысы', en: 'Turkistan Region', total: 43,
+      id: 'turkistan', kk: 'Түркістан облысы', ru: 'Туркестанская область', total: 43,
       mapId: 'KZ61',
       noPin: true,
       cx: 0.548, cy: 0.815,
       poly: '594,437 690,437 690,560 685,581 660,598 640,614 620,632 615,629 578,613 575,597 560,581 560,573 573,565 587,557 599,549 612,533 615,517 614,509 604,501 603,477 595,461',
       districts: [
-        { kk: 'Сайрам', en: 'Sairam', n: 8 },
-        { kk: 'Сарыағаш', en: 'Saryagash', n: 8 },
-        { kk: 'Мақтаарал', en: 'Maktaaral', n: 7 },
-        { kk: 'Ордабасы', en: 'Ordabasy', n: 6 },
-        { kk: 'Түлкібас', en: 'Tulkibas', n: 7 },
-        { kk: 'Қазығұрт', en: 'Kazygurt', n: 7 }
+        { kk: 'Сайрам', ru: 'Сайрам', n: 8 },
+        { kk: 'Сарыағаш', ru: 'Сарыағаш', n: 8 },
+        { kk: 'Мақтаарал', ru: 'Мактаарал', n: 7 },
+        { kk: 'Ордабасы', ru: 'Ордабасы', n: 6 },
+        { kk: 'Түлкібас', ru: 'Түлкібас', n: 7 },
+        { kk: 'Қазығұрт', ru: 'Казыгурт', n: 7 }
       ]
     },
     {
-      id: 'jambyl', kk: 'Жамбыл облысы', en: 'Jambyl Region', total: 32,
+      id: 'jambyl', kk: 'Жамбыл облысы', ru: 'Жамбылская область', total: 32,
       mapId: 'KZ31',
       noPin: true,
       cx: 0.643, cy: 0.758,
       poly: '690,437 780,437 776,453 771,469 779,477 787,485 790,493 801,501 811,509 809,517 804,525 813,533 811,541 819,549 761,557 759,565 691,573 690,560',
       districts: [
-        { kk: 'Байзақ', en: 'Baizak', n: 6 },
-        { kk: 'Жамбыл', en: 'Zhambyl', n: 5 },
-        { kk: 'Жуалы', en: 'Zhualy', n: 5 },
-        { kk: 'Қордай', en: 'Korday', n: 6 },
-        { kk: 'Меркі', en: 'Merki', n: 5 },
-        { kk: 'Шу', en: 'Shu', n: 5 }
+        { kk: 'Байзақ', ru: 'Байзак', n: 6 },
+        { kk: 'Жамбыл', ru: 'Жамбыл', n: 5 },
+        { kk: 'Жуалы', ru: 'Жуалы', n: 5 },
+        { kk: 'Қордай', ru: 'Кордай', n: 6 },
+        { kk: 'Меркі', ru: 'Мерке', n: 5 },
+        { kk: 'Шу', ru: 'Шу', n: 5 }
       ]
     },
     {
-      id: 'almaty', kk: 'Алматы облысы', en: 'Almaty Region', total: 50,
+      id: 'almaty', kk: 'Алматы облысы', ru: 'Алматинская область', total: 50,
       mapId: 'KZ19',
       cx: 0.761, cy: 0.742,
       poly: '828,340 999,450 996,452 1001,456 1008,458 1006,468 1000,464 989,467 986,461 982,460 966,467 940,472 933,478 939,483 950,484 946,492 946,507 959,544 949,546 947,550 952,553 942,559 944,578 935,569 923,568 915,556 863,552 859,549 848,552 820,549 812,542 815,532 804,528 812,514 812,508 806,502 796,499 792,495 791,487 780,477 779,472 771,467 779,463 777,449 781,437 758,435',
@@ -100,7 +100,7 @@
       stats: { cabinets: '118', teachers: '1050+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Батыс Қазақстан облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across West Kazakhstan Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Западно-Казахстанской области получили современное оборудование и полностью оснащённые лаборатории, а также проходят обучение педагоги.'
       }
     },
     {
@@ -109,7 +109,7 @@
       stats: { cabinets: '107', teachers: '1200+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Қостанай облысының мектептерінде заманауи жабдықтар орнатылып, физика, химия және биология зертханалары жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across Kostanay Region have received modern equipment; physics, chemistry and biology laboratories have been fully fitted out, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Костанайской области получили современное оборудование; физические, химические и биологические лаборатории полностью оснащены, а педагоги проходят обучение.'
       }
     },
     {
@@ -118,7 +118,7 @@
       stats: { cabinets: '92', teachers: '950+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Ақмола облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across Akmola Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Акмолинской области получили современное оборудование и полностью оснащённые лаборатории, а педагоги проходят обучение.'
       }
     },
     {
@@ -127,7 +127,7 @@
       stats: { cabinets: '145', teachers: '1300+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Қарағанды облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across Karaganda Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Карагандинской области получили современное оборудование и полностью оснащённые лаборатории, а педагоги проходят обучение.'
       }
     },
     {
@@ -136,7 +136,7 @@
       stats: { cabinets: '72', teachers: '680+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Абай облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across Abay Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Абайской области получили современное оборудование и полностью оснащённые лаборатории, а педагоги проходят обучение.'
       }
     },
     {
@@ -145,7 +145,7 @@
       stats: { cabinets: '116', teachers: '1100+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Қызылорда облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across Kyzylorda Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Кызылординской области получили современное оборудование и полностью оснащённые лаборатории, а педагоги проходят обучение.'
       }
     },
     {
@@ -154,7 +154,7 @@
       stats: { cabinets: '125', teachers: '900+' },
       desc: {
         kk: 'Біздің бағдарлама аясында Алматы облысының мектептерінде заманауи жабдықтар орнатылып, зертханалар жабдықталды, сондай-ақ мұғалімдердің біліктілігін арттыруға арналған оқыту жүргізілуде.',
-        en: 'Under our programme, schools across Almaty Region have received modern equipment and fully fitted laboratories, and teacher training is underway to raise professional skills.'
+        ru: 'В рамках нашей программы школы Алматинской области получили современное оборудование и полностью оснащённые лаборатории, а педагоги проходят обучение.'
       }
     }
   ];
@@ -169,7 +169,7 @@
         r.total = data.schools.length;
         r.districtGroups = data.districts;
         r.districts = data.districts.map(function (d) {
-          return { kk: d.kk, en: d.en, n: d.n, slug: d.slug };
+          return { kk: d.kk, ru: d.ru, n: d.n, slug: d.slug };
         });
         r.schools = data.schools;
         r.stats = {
@@ -221,7 +221,7 @@
     };
     r.desc = {
       kk: 'Біз осы өңірдегі аудандық мектептермен жұмыс істейміз — заманауи жабдықтар, зертханалар және ұстаздарды оқыту.',
-      en: 'We work with district schools across this region — modern equipment, laboratories, and teacher training.'
+      ru: 'Мы работаем со школами районов в этом регионе — современное оборудование, лаборатории и обучение педагогов.'
     };
     r.schools = [];
   });
@@ -232,11 +232,11 @@
     if (attrs) for (var k in attrs) n.setAttribute(k, attrs[k]);
     return n;
   }
-  function bi(kk, en) {
-    return '<span lang="kk">' + kk + '</span><span lang="en">' + en + '</span>';
+  function bi(kk, ru) {
+    return '<span lang="kk">' + kk + '</span><span lang="ru">' + ru + '</span>';
   }
-  function pickLang(kk, en) {
-    return document.documentElement.getAttribute('data-lang') === 'en' ? en : kk;
+  function pickLang(kk, ru) {
+    return document.documentElement.getAttribute('data-lang') === 'ru' ? ru : kk;
   }
   function escAttr(s) {
     return String(s || '')
@@ -263,38 +263,38 @@
   }
   function schoolSearchHaystack(s, district) {
     var raw = [
-      s.kk, s.en, s.id,
+      s.kk, s.ru, s.id,
       s.location && s.location.kk,
-      s.location && s.location.en,
+      s.location && s.location.ru,
       s.districtKey,
       district && district.kk,
-      district && district.en,
+      district && district.ru,
       district && district.key,
       s.desc && s.desc.kk,
-      s.desc && s.desc.en,
+      s.desc && s.desc.ru,
       s.cardDesc && s.cardDesc.kk,
-      s.cardDesc && s.cardDesc.en
+      s.cardDesc && s.cardDesc.ru
     ].filter(Boolean).join(' ');
     return normalizeSearchText(raw);
   }
   var MAP_LABELS = {
-    KZ10: { kk: 'Абай', en: 'Abay' },
-    KZ11: { kk: 'Ақмола', en: 'Akmola' },
-    KZ15: { kk: 'Ақтөбе', en: 'Aktobe' },
-    KZ19: { kk: 'Алматы', en: 'Almaty' },
-    KZ23: { kk: 'Атырау', en: 'Atyrau' },
-    KZ27: { kk: 'БҚО', en: 'West KZ' },
-    KZ31: { kk: 'Жамбыл', en: 'Jambyl' },
-    KZ33: { kk: 'Жетісу', en: 'Jetisu' },
-    KZ35: { kk: 'Қарағанды', en: 'Karaganda' },
-    KZ39: { kk: 'Қостанай', en: 'Kostanay' },
-    KZ43: { kk: 'Қызылорда', en: 'Kyzylorda' },
-    KZ47: { kk: 'Маңғыстау', en: 'Mangystau' },
-    KZ55: { kk: 'Павлодар', en: 'Pavlodar' },
-    KZ59: { kk: 'СҚО', en: 'North KZ' },
-    KZ61: { kk: 'Түркістан', en: 'Turkestan' },
-    KZ62: { kk: 'Ұлытау', en: 'Ulytau' },
-    KZ63: { kk: 'ШҚО', en: 'East KZ' }
+    KZ10: { kk: 'Абай', ru: 'Абай' },
+    KZ11: { kk: 'Ақмола', ru: 'Акмолинская' },
+    KZ15: { kk: 'Ақтөбе', ru: 'Актюбинская' },
+    KZ19: { kk: 'Алматы', ru: 'Алматинская' },
+    KZ23: { kk: 'Атырау', ru: 'Атырауская' },
+    KZ27: { kk: 'БҚО', ru: 'ЗКО' },
+    KZ31: { kk: 'Жамбыл', ru: 'Жамбылская' },
+    KZ33: { kk: 'Жетісу', ru: 'Жетісу' },
+    KZ35: { kk: 'Қарағанды', ru: 'Карагандинская' },
+    KZ39: { kk: 'Қостанай', ru: 'Костанайская' },
+    KZ43: { kk: 'Қызылорда', ru: 'Кызылординская' },
+    KZ47: { kk: 'Маңғыстау', ru: 'Мангистауская' },
+    KZ55: { kk: 'Павлодар', ru: 'Павлодарская' },
+    KZ59: { kk: 'СҚО', ru: 'СКО' },
+    KZ61: { kk: 'Түркістан', ru: 'Туркестанская' },
+    KZ62: { kk: 'Ұлытау', ru: 'Ұлытау' },
+    KZ63: { kk: 'ШҚО', ru: 'ВКО' }
   };
 
   function readSvgLabelPositions(doc) {
@@ -385,7 +385,7 @@
           text.setAttribute('data-region', region.id);
           text.setAttribute('tabindex', '0');
           text.setAttribute('role', 'button');
-          text.setAttribute('aria-label', (label.kk || label.en) + ' облысы');
+          text.setAttribute('aria-label', (label.kk || label.ru) + ' облысы');
         }
         svg.appendChild(text);
         labels.push({ node: text, label: label });
@@ -528,12 +528,14 @@
       if (override.desc) {
         merged.desc = Object.assign({}, base.desc || {});
         if (override.desc.kk) merged.desc.kk = override.desc.kk;
-        if (override.desc.en) merged.desc.en = override.desc.en;
+        if (override.desc.ru) merged.desc.ru = override.desc.ru;
+        else if (override.desc.en) merged.desc.ru = override.desc.en;
       }
       if (override.cardDesc) {
         merged.cardDesc = Object.assign({}, base.cardDesc || {});
         if (override.cardDesc.kk != null) merged.cardDesc.kk = override.cardDesc.kk;
-        if (override.cardDesc.en != null) merged.cardDesc.en = override.cardDesc.en;
+        if (override.cardDesc.ru != null) merged.cardDesc.ru = override.cardDesc.ru;
+        else if (override.cardDesc.en != null) merged.cardDesc.ru = override.cardDesc.en;
       }
       if (override.teachers != null) merged.teachers = override.teachers;
       return merged;
@@ -572,7 +574,7 @@
       var teachersHtml = s.teachers != null
         ? '<span class="school-card-teachers">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
-            s.teachers + ' ' + bi('мұғалім', 'teachers') +
+            s.teachers + ' ' + bi('мұғалім', 'педагогов') +
           '</span>'
         : '';
       return '<a class="school-card is-clickable" href="' + href + '" data-search="' + escAttr(search) + '" style="animation-delay:' + (0.05 * i) + 's">' +
@@ -580,7 +582,7 @@
           ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
           : '<div class="school-card-photo school-card-photo--empty"></div>') +
         '<div class="school-card-body">' +
-          '<h4>' + bi(s.kk, s.en) + '</h4>' +
+          '<h4>' + bi(s.kk, s.ru) + '</h4>' +
           '<div class="school-card-foot">' +
             teachersHtml +
             '<span class="school-card-link" aria-hidden="true">↗</span>' +
@@ -592,7 +594,7 @@
     function renderSchoolsGrid(r) {
       var schools = r.schools || [];
       if (!schools.length) {
-        return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'School list coming soon') + '</div>';
+        return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'Список школ скоро будет добавлен') + '</div>';
       }
 
       var groups = [];
@@ -606,11 +608,11 @@
         r.districtGroups.forEach(function (d) {
           var list = byKey[d.key];
           if (list && list.length) {
-            groups.push({ key: d.key, slug: d.slug, kk: d.kk, en: d.en, schools: list });
+            groups.push({ key: d.key, slug: d.slug, kk: d.kk, ru: d.ru, schools: list });
           }
         });
       } else {
-        groups.push({ kk: '', en: '', schools: schools });
+        groups.push({ kk: '', ru: '', schools: schools });
       }
 
       var cardIdx = 0;
@@ -620,8 +622,8 @@
         var sectionId = g.slug ? 'district-' + g.slug : 'district-' + gi;
         html += '<section class="schools-district-group" id="' + sectionId + '" data-total="' + g.schools.length + '">';
         if (g.kk) {
-          html += '<h4 class="schools-district-head">' + bi(g.kk, g.en) +
-            ' <span class="schools-district-count" data-total="' + g.schools.length + '">(' + g.schools.length + ' ' + pickLang('мектеп', 'schools') + ')</span></h4>';
+          html += '<h4 class="schools-district-head">' + bi(g.kk, g.ru) +
+            ' <span class="schools-district-count" data-total="' + g.schools.length + '">(' + g.schools.length + ' ' + pickLang('мектеп', 'школ') + ')</span></h4>';
         }
         html += '<div class="schools-grid">';
         g.schools.forEach(function (s) {
@@ -639,8 +641,8 @@
       return districts.map(function (d, i) {
         var target = districtTargetId(d, i);
         return '<button type="button" class="region-chip district-chip" data-district-target="' + target + '" style="animation-delay:' + (0.04 * i) + 's">' +
-          '<span class="region-chip-name">' + bi(d.kk, d.en) + '</span>' +
-          '<span class="region-chip-count">' + d.n + ' ' + bi('мектеп', 'schools') + '</span>' +
+          '<span class="region-chip-name">' + bi(d.kk, d.ru) + '</span>' +
+          '<span class="region-chip-count">' + d.n + ' ' + bi('мектеп', 'школ') + '</span>' +
         '</button>';
       }).join('');
     }
@@ -654,9 +656,9 @@
     function renderRegionStats(r) {
       if (!r.stats) return '';
       return '<div class="region-schools-stats-bar">' +
-        '<div class="rss-cell"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'schools') + '</div></div>' +
-        '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + bi('кабинет', 'classrooms') + '</div></div>' +
-        '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + bi('оқытылған ұстаз', 'teachers trained') + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'школ') + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + bi('кабинет', 'кабинетов') + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + bi('оқытылған ұстаз', 'обученных педагогов') + '</div></div>' +
       '</div>';
     }
 
@@ -678,7 +680,7 @@
         schoolsRoot.querySelectorAll('.schools-district-count').forEach(function (span) {
           var total = span.getAttribute('data-total');
           if (!total) return;
-          span.textContent = '(' + total + ' ' + pickLang('мектеп', 'schools') + ')';
+          span.textContent = '(' + total + ' ' + pickLang('мектеп', 'школ') + ')';
         });
       }
 
@@ -701,7 +703,7 @@
           section.classList.toggle('is-filtered-out', q && sectionVisible === 0);
           var countSpan = section.querySelector('.schools-district-count');
           if (countSpan && q) {
-            countSpan.textContent = '(' + sectionVisible + ' ' + pickLang('мектеп', 'schools') + ')';
+            countSpan.textContent = '(' + sectionVisible + ' ' + pickLang('мектеп', 'школ') + ')';
           }
         });
 
@@ -711,7 +713,7 @@
         if (countEl) {
           countEl.hidden = !q;
           countEl.textContent = q
-            ? pickLang(visible + ' / ' + totalSchools + ' мектеп', visible + ' / ' + totalSchools + ' schools')
+            ? pickLang(visible + ' / ' + totalSchools + ' мектеп', visible + ' / ' + totalSchools + ' школ')
             : '';
         }
       }
@@ -734,16 +736,16 @@
       schoolsRoot.innerHTML =
         '<div class="region-schools-nav">' +
           '<button type="button" class="region-schools-back" id="region-schools-map">' +
-            '← ' + bi('Картаны көру', 'Go to map') +
+            '← ' + bi('Картаны көру', 'К карте') +
           '</button>' +
           '<button type="button" class="region-schools-back" id="region-schools-back">' +
-            '← ' + bi('Басты бетке', 'Go to home page') +
+            '← ' + bi('Басты бетке', 'На главную') +
           '</button>' +
         '</div>' +
         '<h2 class="region-schools-title">' +
           '<span lang="kk"><span class="hl">Қолдау көрсетілген</span> мектептер</span>' +
-          '<span lang="en"><span class="hl">Supported</span> schools</span>' +
-          ' — ' + bi(r.kk, r.en) +
+          '<span lang="ru"><span class="hl">Поддерживаемые</span> школы</span>' +
+          ' — ' + bi(r.kk, r.ru) +
         '</h2>' +
         '<div class="region-schools-search-bar">' +
           '<div class="region-schools-search-field">' +
@@ -761,10 +763,10 @@
           : '') +
         renderRegionStats(r) +
         '<h3 class="schools-grid-head">' +
-          bi('Жаңғыртылған мектептер', 'Renovated schools') +
+          bi('Жаңғыртылған мектептер', 'Модернизированные школы') +
         '</h3>' +
         '<div class="schools-search-empty" id="region-schools-search-empty" hidden>' +
-          '<p>' + bi('Ешқандай мектеп табылмады', 'No schools match your search') + '</p>' +
+          '<p>' + bi('Ешқандай мектеп табылмады', 'По вашему запросу школы не найдены') + '</p>' +
         '</div>' +
         gridHtml;
 
@@ -793,19 +795,19 @@
       var chips = r.districts.map(function (d, i) {
         var target = districtTargetId(d, i);
         return '<button type="button" class="district district-chip" data-district-target="' + target + '" style="animation-delay:' + (0.06 * i + 0.15) + 's">' +
-          '<span class="dn">' + bi(d.kk, d.en) + '</span>' +
-          '<span class="dc">' + d.n + ' ' + bi('мектеп', 'schools') + '</span>' +
+          '<span class="dn">' + bi(d.kk, d.ru) + '</span>' +
+          '<span class="dc">' + d.n + ' ' + bi('мектеп', 'школ') + '</span>' +
         '</button>';
       }).join('');
 
       panel.innerHTML =
         '<button type="button" class="region-back" id="region-back">' +
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>' +
-          bi('Картаны көру', 'Go to map') +
+          bi('Картаны көру', 'К карте') +
         '</button>' +
-        '<div class="region-head"><h3>' + bi(r.kk, r.en) + '</h3></div>' +
+        '<div class="region-head"><h3>' + bi(r.kk, r.ru) + '</h3></div>' +
         '<button type="button" class="region-schools-cta-card" id="region-schools-cta">' +
-          '<span class="cta-text">' + bi('Мектептерді көру', 'View schools') + '</span>' +
+          '<span class="cta-text">' + bi('Мектептерді көру', 'Смотреть школы') + '</span>' +
           '<span class="cta-arrow" aria-hidden="true">→</span>' +
         '</button>' +
         '<div class="district-list">' + chips + '</div>';
@@ -860,7 +862,7 @@
       schoolsBlock.hidden = false;
       lockSchoolsScroll();
       schoolsBlock.scrollTop = 0;
-      schoolsRoot.innerHTML = '<div class="schools-loading">' + bi('Жүктелуде…', 'Loading…') + '</div>';
+      schoolsRoot.innerHTML = '<div class="schools-loading">' + bi('Жүктелуде…', 'Загрузка…') + '</div>';
       regionWithOverrides(r).then(function (merged) {
         current = merged;
         renderSchoolsSection(merged);
