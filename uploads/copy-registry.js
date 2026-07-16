@@ -334,7 +334,7 @@
     "page": "index.html",
     "key": "index-032-ru",
     "selector": "[data-copy=\"index-032-ru\"]",
-    "label": "Курсы обучения · USTAZ",
+    "label": "Курсы обучения",
     "section": "Content",
     "type": "text"
   },
@@ -366,7 +366,7 @@
     "page": "index.html",
     "key": "index-036-ru",
     "selector": "[data-copy=\"index-036-ru\"]",
-    "label": "Наставничество · Samruk Umiti",
+    "label": "Наставничество",
     "section": "Content",
     "type": "text"
   },
@@ -1430,7 +1430,7 @@
     "page": "programs.html",
     "key": "programs-018-ru",
     "selector": "[data-copy=\"programs-018-ru\"]",
-    "label": "Курсы обучения · USTAZ",
+    "label": "Курсы обучения",
     "section": "Content",
     "type": "text"
   },
@@ -1462,7 +1462,7 @@
     "page": "programs.html",
     "key": "programs-022-ru",
     "selector": "[data-copy=\"programs-022-ru\"]",
-    "label": "Наставничество · Samruk Umiti",
+    "label": "Наставничество",
     "section": "Content",
     "type": "text"
   },
