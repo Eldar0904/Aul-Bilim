@@ -102,7 +102,7 @@
     "page": "site_shared",
     "key": "global-nav-regions-kk",
     "selector": "[data-copy=\"global-nav-regions-kk\"]",
-    "label": "Жоба аймақтары",
+    "label": "Қамтылған өңірлер",
     "section": "Navigation",
     "type": "text"
   },
@@ -110,7 +110,7 @@
     "page": "site_shared",
     "key": "global-nav-regions-ru",
     "selector": "[data-copy=\"global-nav-regions-ru\"]",
-    "label": "Регионы проекта",
+    "label": "Охваченные регионы",
     "section": "Navigation",
     "type": "text"
   },
@@ -150,7 +150,7 @@
     "page": "index.html",
     "key": "index-009-kk",
     "selector": "[data-copy=\"index-009-kk\"]",
-    "label": "Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен,",
+    "label": "Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен, жаратылыстану зертханаларымен және цифрлық технологиямен толық жабдықтау.",
     "section": "Content",
     "type": "textarea"
   },
@@ -166,7 +166,7 @@
     "page": "index.html",
     "key": "index-011-kk",
     "selector": "[data-copy=\"index-011-kk\"]",
-    "label": "Ұстаздардың біліктілігін жетілдіреміз әрі тұрақты тәлімгерлік қолдау көрсетеміз.",
+    "label": "Ұстаздардың біліктілігін жетілдіру әрі тұрақты тәлімгерлік қолдау көрсету.",
     "section": "Content",
     "type": "text"
   },

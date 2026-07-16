@@ -17,7 +17,7 @@ RU_COPY: dict[str, str] = {
     "global-nav-fitout-ru": "Модернизация школ",
     "global-nav-ustaz-ru": "Курсы обучения",
     "global-nav-samruk-ru": "Наставничество",
-    "global-nav-regions-ru": "Регионы проекта",
+    "global-nav-regions-ru": "Охваченные регионы",
     "global-nav-about-ru": "О нас",
     "global-foot-about-ru": "Auyl Bilim — совместный благотворительный проект фондов «Қазақстан Халқына», «Білім Инновация» и Jelken Foundation.",
     "global-foot-explore-h-ru": "Разделы",

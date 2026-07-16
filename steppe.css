@@ -402,12 +402,14 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 }
 .stat-strip--head {
   flex: 1;
+  width: 100%;
   min-width: 0;
   background: transparent;
   border-bottom: none;
 }
 .stat-strip--head .stat-strip-in {
   height: 100%;
+  width: 100%;
 }
 .stat-strip--head .stat-strip-in .ss {
   padding: 20px 18px;
@@ -532,7 +534,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
 
 /* ---------- REGIONS / MAP ---------- */
 .map-block { position: relative; z-index: 2; padding: 56px 0 92px; scroll-margin-top: var(--scroll-pad); }
-.map-section-head { margin-bottom: 48px; }
+.map-section-head { margin-bottom: 32px; }
 .map-card { position: relative; background: #fff; border-radius: 40px; padding: 0; overflow: hidden; box-shadow: 0 24px 60px -34px rgba(27,79,138,0.4); }
 .map-grid { display: grid; grid-template-columns: 1fr; position: relative; }
 .map-wrap { position: relative; order: 1; }
@@ -1409,9 +1411,13 @@ body.map-schools-open .region-schools-block {
   grid-template-columns: 1fr auto;
   align-items: end;
   gap: 40px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
-.dir-head h2 { font-size: 44px; letter-spacing: -0.02em; }
+.dir-head h2 {
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
 .dir-head-aside {
   max-width: 380px;
   text-align: right;
@@ -2746,7 +2752,21 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 .foot-grid a { display: block; font-size: 14.5px; margin-bottom: 11px; transition: color .2s; }
 .foot-grid a:hover { color: var(--accent-soft); }
 .footer-address { display: block; font-size: 14.5px; margin-bottom: 11px; }
-.footer-socials { display: flex; flex-wrap: wrap; gap: 12px; }
+.footer-socials { display: flex; flex-wrap: wrap; gap: 8px; }
+.footer-social-rows { display: flex; flex-direction: column; gap: 14px; }
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.footer-social-org {
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.72);
+  flex: 1;
+  min-width: 0;
+}
 .foot-grid .footer-socials a {
   display: inline-flex;
   align-items: center;
