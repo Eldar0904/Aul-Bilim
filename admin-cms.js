@@ -298,7 +298,7 @@
       editor.classList.toggle('is-empty', !current.length);
     }
 
-    function uploadFiles(files) {
+    async function uploadFiles(files) {
       var queue = Array.prototype.filter.call(files || [], function (file) {
         return window.mediaUpload && window.mediaUpload.isImageFile(file);
       });
@@ -309,21 +309,36 @@
       }
       editor.classList.add('is-uploading');
       add.disabled = true;
-      Promise.all(queue.map(function (file, index) {
-        return window.mediaUpload.upload(file, {
-          folder: 'pages/' + folder,
-          preset: 'heroGallery16x9',
-          filename: prefix + '-' + Date.now() + '-' + index + '.webp'
-        }).then(function (result) { return result.url; });
-      })).then(function (newUrls) {
-        setUrls(urls().concat(newUrls));
-        toast(newUrls.length + ' image(s) added', 'ok');
-      }).catch(function (e) {
-        toast(e.message || 'Image upload failed', 'err');
-      }).then(function () {
-        editor.classList.remove('is-uploading');
-        add.disabled = false;
-      });
+      var added = 0;
+      var failed = 0;
+      var lastError = null;
+
+      // Upload sequentially so each completed image is appended immediately.
+      // This avoids one failed request discarding the rest of a multi-file batch.
+      for (var index = 0; index < queue.length; index += 1) {
+        try {
+          var result = await window.mediaUpload.upload(queue[index], {
+            folder: 'pages/' + folder,
+            preset: 'heroGallery16x9',
+            filename: prefix + '-' + Date.now() + '-' + index + '-' + Math.random().toString(36).slice(2, 8) + '.webp'
+          });
+          var current = urls();
+          current.push(result.url);
+          setUrls(current);
+          added += 1;
+        } catch (e) {
+          failed += 1;
+          lastError = e;
+        }
+      }
+
+      editor.classList.remove('is-uploading');
+      add.disabled = false;
+      if (added) {
+        toast(added + ' image(s) added' + (failed ? '; ' + failed + ' failed' : ''), failed ? 'warn' : 'ok');
+      } else {
+        toast((lastError && lastError.message) || 'Image upload failed', 'err');
+      }
     }
 
     add.addEventListener('click', function () { picker.click(); });
