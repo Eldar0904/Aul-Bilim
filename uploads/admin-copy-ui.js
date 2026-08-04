@@ -26,6 +26,8 @@
 
   var valueStore = {};
   var onDirty = null;
+  var REMOVED_USTAZ_HERO_KEYS = ['programs-047-kk', 'programs-048-ru', 'programs-049-kk', 'programs-050-ru'];
+  var MOVED_USTAZ_HERO_KEYS = ['programs-051-kk', 'programs-052-ru', 'programs-053-kk', 'programs-054-ru'];
 
   function currentLang() {
     return window.adminLang ? window.adminLang.getLang() : 'kk';
@@ -40,6 +42,10 @@
     if (field.page !== pageFile) return false;
     if (!fieldMatchesLang(field, currentLang())) return false;
     opts = opts || {};
+    if (REMOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) return false;
+    if (MOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) {
+      return opts.heroGroup === 'ustaz';
+    }
     if (opts.section && (field.section || 'Content') !== opts.section) return false;
     if (opts.heroGroup && field.heroGroup !== opts.heroGroup) return false;
     if (opts.excludeSection && (field.section || 'Content') === opts.excludeSection) return false;

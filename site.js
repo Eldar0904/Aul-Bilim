@@ -188,7 +188,7 @@
     }
 
     // feature card image carousels
-    document.querySelectorAll('[data-carousel]').forEach(function (root) {
+    document.querySelectorAll('[data-carousel]:not([data-dynamic-gallery])').forEach(function (root) {
       var track = root.querySelector('.feat-carousel-track');
       var slides = track ? Array.prototype.slice.call(track.children) : [];
       var dotsWrap = root.querySelector('.feat-carousel-dots');

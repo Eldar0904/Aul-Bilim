@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="admin.css?v=21" />
-<link rel="stylesheet" href="steppe.css?v=93" />
+<link rel="stylesheet" href="admin.css?v=22" />
+<link rel="stylesheet" href="steppe.css?v=96" />
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/auth.js?v=3"></script>
 <script src="uploads/content-schema.js"></script>
@@ -251,18 +251,20 @@
         <!-- USTAZ panel -->
         <div class="prog-panel" data-prog-panel="ustaz">
           <div class="as" style="margin-top:0;border-radius:0 0 18px 18px;">
-            <div class="as-head"><h3>Hero</h3><span class="badge">programs.html · #ustaz</span></div>
+            <div class="as-head"><h3>Program intro</h3><span class="badge">programs.html · #ustaz</span></div>
             <div class="as-body copy-mount-wrap copy-mount-hero">
               <div data-copy-mount="programs-ustaz-hero"></div>
             </div>
-            <div class="img-slot" style="aspect-ratio:21/7;" data-slot="prog-2">
-              <img class="img-slot-preview" alt="">
-              <div class="img-slot-info">
-                <svg class="img-slot-ic" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                <span class="img-slot-lbl">USTAZ Program Hero</span>
-                <span class="img-slot-dim">1920 × 640 px · JPG жоғары сапа</span>
+            <div class="program-gallery-editor" id="ustaz-hero-gallery-editor">
+              <div class="program-gallery-head">
+                <div><strong>Hero image carousel</strong><span>Add as many images as needed. Dragging multiple files is supported.</span></div>
+                <button type="button" class="se-upload-btn" id="ustaz-gallery-add">Add images</button>
               </div>
-              <div class="img-slot-bar"><input type="text" data-slot-id="prog-2" data-slot-field="u" class="admin-store-field" tabindex="-1" aria-hidden="true"></div>
+              <div class="program-gallery-list" id="ustaz-gallery-list"></div>
+              <div class="program-gallery-drop" id="ustaz-gallery-drop">Drop images here</div>
+              <button type="button" class="se-btn-ghost" id="ustaz-gallery-clear">Remove all</button>
+              <input type="file" id="ustaz-gallery-files" accept="image/png,image/jpeg,image/webp,image/avif" multiple hidden>
+              <textarea data-slot-id="ustaz-hero-gallery" data-slot-field="u" id="ustaz-gallery-value" class="admin-store-field" tabindex="-1" aria-hidden="true"></textarea>
             </div>
           </div>
           <div style="height:24px;"></div>
@@ -508,8 +510,8 @@
 <div id="toast"></div>
 <script src="uploads/copy-registry.js?v=1"></script>
 <script src="uploads/admin-lang.js?v=1"></script>
-<script src="uploads/admin-copy-ui.js?v=5"></script>
-<script src="admin-cms.js?v=12"></script>
+<script src="uploads/admin-copy-ui.js?v=6"></script>
+<script src="admin-cms.js?v=13"></script>
 <script src="uploads/region-registry.js"></script>
 <script src="uploads/school-registry.js"></script>
 <script src="assets/kostanay-schools.js?v=4"></script>
