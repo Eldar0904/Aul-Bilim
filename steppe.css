@@ -909,8 +909,8 @@ body.map-schools-open .region-schools-block {
 }
 .schools-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
 }
 .school-card {
   background: #fff;
@@ -1818,6 +1818,7 @@ body.map-schools-open .region-schools-block {
 }
 #program-ustaz .prog-page-content .dir-panel-body { padding-top: 0; }
 #program-ustaz .prog-slabs { gap: clamp(28px, 4vw, 44px); }
+#program-fitout .prog-page-content .dir-panel-body { padding-top: 28px; }
 #program-samruk .prog-page-content {
   padding-top: clamp(56px, 7vw, 88px);
   background: var(--bg);
@@ -1998,7 +1999,7 @@ body.map-schools-open .region-schools-block {
 .prog-samruk-banner {
   background: linear-gradient(135deg, #0E2747 0%, #1B4F8A 60%, #143A6E 100%);
   border-radius: 16px 16px 0 0;
-  padding: 48px 56px;
+  padding: 34px 56px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
@@ -2019,7 +2020,7 @@ body.map-schools-open .region-schools-block {
   font-size: 28px;
   line-height: 1.12;
   color: #fff;
-  margin: 0 0 14px;
+  margin: 0;
 }
 .prog-samruk-banner-lead {
   font-size: 15.5px;
@@ -3059,7 +3060,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .prog-slab { grid-template-columns: 1fr; }
   .prog-slab-side { min-height: 0; padding: 36px 28px; }
   .prog-slab-body { padding: 32px 28px; }
-  .prog-samruk-banner { grid-template-columns: 1fr; padding: 36px 28px; }
+  .prog-samruk-banner { grid-template-columns: 1fr; padding: 28px; }
   .prog-samruk-banner-stat { flex-direction: row; gap: 12px; justify-content: flex-start; }
   .prog-samruk-banner-stat-n { font-size: 48px; }
   .prog-samruk-row { grid-template-columns: 64px 1fr; }

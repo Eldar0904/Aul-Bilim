@@ -28,7 +28,8 @@
   var onDirty = null;
   var REMOVED_USTAZ_HERO_KEYS = ['programs-047-kk', 'programs-048-ru', 'programs-049-kk', 'programs-050-ru'];
   var MOVED_USTAZ_HERO_KEYS = ['programs-051-kk', 'programs-052-ru', 'programs-053-kk', 'programs-054-ru'];
-  var REMOVED_SAMRUK_KEYS = ['programs-091-kk', 'programs-092-ru', 'programs-093-kk', 'programs-094-ru', 'programs-099-kk', 'programs-100-ru', 'programs-105-kk', 'programs-106-ru'];
+  var REMOVED_FITOUT_KEYS = ['programs-033-kk', 'programs-034-ru'];
+  var REMOVED_SAMRUK_KEYS = ['programs-091-kk', 'programs-092-ru', 'programs-093-kk', 'programs-094-ru', 'programs-099-kk', 'programs-100-ru', 'programs-103-kk', 'programs-104-ru', 'programs-105-kk', 'programs-106-ru'];
   var MOVED_SAMRUK_HERO_KEYS = ['programs-095-kk', 'programs-096-ru', 'programs-097-kk', 'programs-098-ru'];
 
   function currentLang() {
@@ -45,6 +46,7 @@
     if (!fieldMatchesLang(field, currentLang())) return false;
     opts = opts || {};
     if (REMOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) return false;
+    if (REMOVED_FITOUT_KEYS.indexOf(field.key) >= 0) return false;
     if (REMOVED_SAMRUK_KEYS.indexOf(field.key) >= 0) return false;
     if (MOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) {
       return opts.heroGroup === 'ustaz';
