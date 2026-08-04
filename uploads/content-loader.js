@@ -145,7 +145,7 @@
     function startAutoplay() {
       stopAutoplay();
       if (count < 2 || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
-      autoplay = window.setInterval(function () { go(index + 1); }, 5000);
+      autoplay = window.setInterval(function () { go(index + 1); }, 4000);
     }
 
     root.addEventListener('mouseenter', stopAutoplay);

@@ -198,6 +198,7 @@
 
       var index = 0;
       var count = slides.length;
+      var autoplay = null;
 
       slides.forEach(function (_, i) {
         var dot = document.createElement('button');
@@ -229,6 +230,29 @@
         if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1); }
         if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1); }
       });
+
+      function stopAutoplay() {
+        if (autoplay) window.clearInterval(autoplay);
+        autoplay = null;
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+        if (count < 2 || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+        autoplay = window.setInterval(function () { go(index + 1); }, 4000);
+      }
+
+      root.addEventListener('mouseenter', stopAutoplay);
+      root.addEventListener('mouseleave', startAutoplay);
+      root.addEventListener('focusin', stopAutoplay);
+      root.addEventListener('focusout', function (e) {
+        if (!root.contains(e.relatedTarget)) startAutoplay();
+      });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stopAutoplay();
+        else startAutoplay();
+      });
+      startAutoplay();
     });
 
     // about.html — cooperation model flip cards
