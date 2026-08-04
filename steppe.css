@@ -1794,17 +1794,17 @@ body.map-schools-open .region-schools-block {
 .ustaz-hero-carousel.is-single-slide .feat-carousel-dots { display: none; }
 .ustaz-hero-copy {
   position: static;
-  width: min(820px, 100%);
+  width: 100%;
   padding: 0;
   text-align: center;
 }
-.ustaz-hero-copy .kicker { margin-bottom: 18px; }
 .ustaz-hero-copy h2 {
   color: var(--primary);
-  font-size: clamp(30px, 3.4vw, 48px);
+  font-size: clamp(30px, 2.8vw, 42px);
   line-height: 1.08;
   letter-spacing: -.025em;
   margin-bottom: 22px;
+  white-space: nowrap;
 }
 .ustaz-hero-copy p {
   color: var(--body);
@@ -3049,7 +3049,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .prog-page-hero .prog-hero-grid .dir-panel-hero-in { padding: 0; }
   .ustaz-hero-carousel { aspect-ratio: 4 / 3; border-radius: 26px; }
   .ustaz-hero-copy { width: 100%; }
-  .ustaz-hero-copy h2 { font-size: clamp(27px, 7vw, 38px); margin-bottom: 14px; }
+  .ustaz-hero-copy h2 { font-size: clamp(27px, 7vw, 38px); margin-bottom: 14px; white-space: normal; }
   .ustaz-hero-copy p { font-size: 15px; line-height: 1.55; }
   .prog-slab { grid-template-columns: 1fr; }
   .prog-slab-side { min-height: 0; padding: 36px 28px; }
