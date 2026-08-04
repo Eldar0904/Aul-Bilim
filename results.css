@@ -19,7 +19,7 @@
 .compare-side { position: relative; aspect-ratio: 4/3; overflow: hidden; }
 .compare-slide { position:absolute; inset:0; opacity:0; transition:opacity .55s ease; }
 .compare-slide.is-active { opacity:1; }
-.compare-slide image-slot { width:100%; height:100%; }
+.compare-slide image-slot, .compare-slide img { width:100%; height:100%; object-fit:cover; display:block; }
 .compare-tag { position:absolute; z-index:6; top:18px; padding:8px 17px; border-radius:999px; font-family:var(--fh); font-size:12px; font-weight:850; letter-spacing:.08em; }
 .compare-side:first-child .compare-tag { left:18px; color:#fff; background:rgba(33,35,46,.76); }
 .compare-side:last-child .compare-tag { right:18px; color:var(--ink); background:rgba(242,164,19,.94); }
