@@ -1770,7 +1770,8 @@ body.map-schools-open .region-schools-block {
 }
 .ustaz-program-intro .wrap { position: relative; z-index: 1; }
 .fitout-program-intro {
-  padding-bottom: clamp(36px, 4vw, 56px);
+  padding-top: clamp(52px, 6vw, 76px);
+  padding-bottom: clamp(32px, 4vw, 48px);
 }
 .ustaz-hero-carousel {
   position: relative;
