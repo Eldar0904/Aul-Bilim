@@ -1769,6 +1769,9 @@ body.map-schools-open .region-schools-block {
   pointer-events: none;
 }
 .ustaz-program-intro .wrap { position: relative; z-index: 1; }
+.fitout-program-intro {
+  padding-bottom: clamp(36px, 4vw, 56px);
+}
 .ustaz-hero-carousel {
   position: relative;
   min-width: 0;
@@ -1820,7 +1823,7 @@ body.map-schools-open .region-schools-block {
 }
 #program-ustaz .prog-page-content .dir-panel-body { padding-top: 0; }
 #program-ustaz .prog-slabs { gap: clamp(28px, 4vw, 44px); }
-#program-fitout .prog-page-content .dir-panel-body { padding-top: 28px; }
+#program-fitout .prog-page-content .dir-panel-body { padding-top: 0; }
 #program-samruk .prog-page-content {
   padding-top: clamp(56px, 7vw, 88px);
   background: var(--bg);
