@@ -1552,6 +1552,9 @@ body.map-schools-open .region-schools-block {
   padding: 26px 28px 30px;
   border-top: 3px solid rgba(27, 79, 138, 0.06);
   transition: border-color 0.22s ease;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #stages .dir-card--stage:hover .dir-card-body {
