@@ -1818,6 +1818,11 @@ body.map-schools-open .region-schools-block {
 }
 #program-ustaz .prog-page-content .dir-panel-body { padding-top: 0; }
 #program-ustaz .prog-slabs { gap: clamp(28px, 4vw, 44px); }
+#program-samruk .prog-page-content {
+  padding-top: clamp(56px, 7vw, 88px);
+  background: var(--bg);
+}
+#program-samruk .prog-page-content .dir-panel-body { padding-top: 0; }
 #program-ustaz .prog-slab {
   border-radius: 26px;
   overflow: hidden;
@@ -1995,7 +2000,7 @@ body.map-schools-open .region-schools-block {
   border-radius: 16px 16px 0 0;
   padding: 48px 56px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   gap: 32px;
   align-items: center;
 }
