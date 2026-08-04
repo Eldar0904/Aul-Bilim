@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=94" />
+<link rel="stylesheet" href="steppe.css?v=95" />
 </head>
 <body>
 <div class="grain"></div>
@@ -179,9 +179,21 @@
 <header class="prog-page-hero" style="background-image:url('assets/optimized/home-ustaz-session.jpg')">
   <image-slot id="prog-2" class="prog-page-hero-slot" src="assets/optimized/home-ustaz-session.jpg" shape="rect" placeholder="Drop a program hero photo"></image-slot>
   <div class="wrap">
-    <div class="dir-panel-hero-in">
-      <h2><span lang="kk" data-copy="programs-047-kk">Оқыту курстары</span><span lang="ru" data-copy="programs-048-ru">Курсы обучения</span></h2>
-      <p><span lang="kk" data-copy="programs-049-kk">Мұғалімдердің әлеуетін арттыру арқылы білім сапасын жаңа деңгейге көтереміз.</span><span lang="ru" data-copy="programs-050-ru">Развивая потенциал педагогов, мы выводим качество образования на новый уровень.</span></p>
+    <div class="ustaz-hero-layout">
+      <div class="feat-carousel ustaz-hero-carousel" data-carousel data-dynamic-gallery="ustaz-hero-gallery" aria-roledescription="carousel" tabindex="0">
+        <div class="feat-carousel-viewport">
+          <div class="feat-carousel-track">
+            <figure class="feat-carousel-slide"><img src="assets/optimized/home-ustaz-session.jpg" alt="" /></figure>
+          </div>
+        </div>
+        <button type="button" class="feat-carousel-arrow feat-carousel-prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button type="button" class="feat-carousel-arrow feat-carousel-next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <div class="feat-carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+      </div>
+      <div class="ustaz-hero-copy">
+        <h2><span lang="kk" data-copy="programs-051-kk">Педагогтердің біліктілігін арттыру курстары</span><span lang="ru" data-copy="programs-052-ru">Курсы повышения квалификации педагогов</span></h2>
+        <p><span lang="kk" data-copy="programs-053-kk">Мұғалімдер мен мектеп басшыларының кәсіби әлеуетін көтеру, сондай-ақ заманауи білім беру технологияларын енгізу мақсатында кешенді оқыту бағдарламалары жүзеге асырылады.</span><span lang="ru" data-copy="programs-054-ru">Комплексные программы обучения направлены на развитие профессионального потенциала педагогов и руководителей школ, а также на внедрение современных образовательных технологий.</span></p>
+      </div>
     </div>
   </div>
 </header>
@@ -189,10 +201,6 @@
 <section class="block prog-page-content" id="prog-content-ustaz">
   <div class="wrap">
     <div class="dir-panel-body">
-      <div class="dir-sec-head">
-        <h3 class="dir-sec-title"><span lang="kk" data-copy="programs-051-kk">Педагогтердің біліктілігін арттыру курстары</span><span lang="ru" data-copy="programs-052-ru">Курсы повышения квалификации педагогов</span></h3>
-        <p class="dir-sec-lead"><span lang="kk" data-copy="programs-053-kk"><span class="dir-sec-line">Мұғалімдер мен мектеп басшыларының кәсіби әлеуетін көтеру, сондай-ақ заманауи білім беру</span><span class="dir-sec-line">технологияларын енгізу мақсатында кешенді оқыту бағдарламалары жүзеге асырылады.</span></span><span lang="ru" data-copy="programs-054-ru">Комплексные программы обучения направлены на развитие профессионального потенциала педагогов и руководителей школ, а также на внедрение современных образовательных технологий.</span></p>
-      </div>
       <div class="prog-slabs">
         <article class="prog-slab">
           <div class="prog-slab-side prog-slab-side--blue">
@@ -357,12 +365,12 @@
   </div>
 </footer>
 
-<script src="site.js?v=4"></script>
+<script src="site.js?v=5"></script>
 <script src="uploads/firebase-config.js"></script>
 <script src="uploads/db.js"></script>
 <script src="uploads/copy-bindings.js"></script>
 <script src="uploads/copy-registry.js?v=1"></script>
-<script src="uploads/content-loader.js?v=4"></script>
+<script src="uploads/content-loader.js?v=6"></script>
 <script src="image-slot.js"></script>
 </body>
 </html>
