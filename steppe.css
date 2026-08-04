@@ -1561,7 +1561,7 @@ body.map-schools-open .region-schools-block {
 #stages .dir-card--stage .dir-card-body h3 {
   font-size: 22px;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   color: var(--primary);
   letter-spacing: -0.025em;
 }
