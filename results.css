@@ -1,8 +1,8 @@
 .results-page { background: var(--cream); }
-.results-intro { padding: clamp(72px, 9vw, 120px) 0 48px; text-align: center; }
-.results-intro h1 { max-width: 980px; margin: 0 auto 22px; font-size: clamp(32px, 4.4vw, 56px); color: var(--primary); }
-.results-intro p { max-width: 850px; margin: 0 auto; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.65; color: var(--body); }
 .results-stats { padding-top: clamp(64px, 7vw, 92px); }
+.results-stats-copy { margin: 0 auto 44px; text-align: center; }
+.results-stats-copy .results-section-title { margin-bottom: 18px; color: var(--primary); }
+.results-stats-copy p { max-width: 850px; margin: 0 auto; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.65; color: var(--body); }
 .results-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; padding: 0 0 clamp(72px, 8vw, 108px); }
 .result-card { position: relative; overflow: hidden; min-height: 224px; padding: 34px 26px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 14px 34px rgba(27,79,138,.08); }
 .result-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg,var(--accent),var(--accent-soft)); }
