@@ -1742,10 +1742,10 @@ body.map-schools-open .region-schools-block {
   padding: 0;
 }
 .ustaz-hero-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 .ustaz-program-intro {
   position: relative;
@@ -1767,13 +1767,24 @@ body.map-schools-open .region-schools-block {
 }
 .ustaz-program-intro .wrap { position: relative; z-index: 1; }
 .ustaz-hero-carousel {
+  position: relative;
   min-width: 0;
-  aspect-ratio: 4 / 3;
-  border-radius: 30px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 34px;
   overflow: hidden;
   background: var(--cream-deep);
   border: 1px solid rgba(27,79,138,.1);
   box-shadow: 0 24px 64px -32px rgba(27,79,138,.48);
+}
+.ustaz-hero-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(10,35,70,.84) 0%, rgba(10,35,70,.58) 43%, rgba(10,35,70,.08) 76%);
+  pointer-events: none;
 }
 .ustaz-hero-carousel .feat-carousel-viewport,
 .ustaz-hero-carousel .feat-carousel-track,
@@ -1785,22 +1796,23 @@ body.map-schools-open .region-schools-block {
 .ustaz-hero-carousel.is-single-slide .feat-carousel-arrow,
 .ustaz-hero-carousel.is-single-slide .feat-carousel-dots { display: none; }
 .ustaz-hero-copy {
-  padding: clamp(28px, 4vw, 48px);
-  border-radius: 28px;
-  background: rgba(255,255,255,.86);
-  border: 1px solid rgba(27,79,138,.1);
-  box-shadow: 0 18px 48px -34px rgba(27,79,138,.42);
+  position: absolute;
+  left: clamp(28px, 5vw, 72px);
+  bottom: clamp(34px, 6vw, 82px);
+  z-index: 3;
+  width: min(650px, 62%);
+  padding: 0;
 }
 .ustaz-hero-copy .kicker { margin-bottom: 18px; }
 .ustaz-hero-copy h2 {
-  color: var(--primary);
+  color: #fff;
   font-size: clamp(30px, 3.4vw, 48px);
   line-height: 1.08;
   letter-spacing: -.025em;
   margin-bottom: 22px;
 }
 .ustaz-hero-copy p {
-  color: var(--body);
+  color: rgba(255,255,255,.92);
   font-size: clamp(16px, 1.35vw, 19px);
   line-height: 1.7;
   margin: 0;
@@ -3040,9 +3052,11 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .prog-hero-grid { max-width: none; }
   .prog-hero-stats { grid-template-columns: 1fr 1fr; }
   .prog-page-hero .prog-hero-grid .dir-panel-hero-in { padding: 0; }
-  .ustaz-hero-layout { grid-template-columns: 1fr; gap: 28px; }
-  .ustaz-hero-carousel { aspect-ratio: 16 / 10; }
-  .ustaz-hero-copy { padding: 28px 24px; }
+  .ustaz-hero-carousel { aspect-ratio: 4 / 3; border-radius: 26px; }
+  .ustaz-hero-carousel::after { background: linear-gradient(0deg, rgba(10,35,70,.9) 0%, rgba(10,35,70,.48) 62%, rgba(10,35,70,.08) 100%); }
+  .ustaz-hero-copy { left: 24px; right: 24px; bottom: 34px; width: auto; }
+  .ustaz-hero-copy h2 { font-size: clamp(27px, 7vw, 38px); margin-bottom: 14px; }
+  .ustaz-hero-copy p { font-size: 15px; line-height: 1.55; }
   .prog-slab { grid-template-columns: 1fr; }
   .prog-slab-side { min-height: 0; padding: 36px 28px; }
   .prog-slab-body { padding: 32px 28px; }
