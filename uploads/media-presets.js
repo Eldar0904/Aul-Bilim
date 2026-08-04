@@ -11,6 +11,7 @@
     heroWide: { aspect: 21 / 8, maxWidth: 1920, quality: 0.88 },
     card3x2: { aspect: 3 / 2, maxWidth: 1200, quality: 0.85 },
     heroProg: { aspect: 21 / 7, maxWidth: 1920, quality: 0.88 },
+    heroGallery16x9: { aspect: 16 / 9, maxWidth: 1920, quality: 0.88 },
     carousel4x3: { aspect: 4 / 3, maxWidth: 1200, quality: 0.85 }
   };
 

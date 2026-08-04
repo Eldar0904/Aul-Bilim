@@ -245,14 +245,16 @@
   }
 
   function initProgramGallery() {
-    var editor = document.getElementById('ustaz-hero-gallery-editor');
-    var list = document.getElementById('ustaz-gallery-list');
-    var value = document.getElementById('ustaz-gallery-value');
-    var picker = document.getElementById('ustaz-gallery-files');
-    var add = document.getElementById('ustaz-gallery-add');
-    var clear = document.getElementById('ustaz-gallery-clear');
-    var drop = document.getElementById('ustaz-gallery-drop');
-    if (!editor || !list || !value || !picker) return;
+    document.querySelectorAll('[data-program-gallery]').forEach(function (editor) {
+    var list = editor.querySelector('[data-gallery-list]');
+    var value = editor.querySelector('[data-gallery-value]');
+    var picker = editor.querySelector('[data-gallery-files]');
+    var add = editor.querySelector('[data-gallery-add]');
+    var clear = editor.querySelector('[data-gallery-clear]');
+    var drop = editor.querySelector('[data-gallery-drop]');
+    var folder = editor.dataset.galleryFolder || editor.dataset.gallerySlot || 'program-gallery';
+    var prefix = editor.dataset.galleryPrefix || 'program-image';
+    if (!list || !value || !picker || !add || !clear || !drop) return;
 
     function urls() {
       if (!value.value.trim()) return [];
@@ -309,9 +311,9 @@
       add.disabled = true;
       Promise.all(queue.map(function (file, index) {
         return window.mediaUpload.upload(file, {
-          folder: 'pages/ustaz-hero-gallery',
-          preset: 'carousel4x3',
-          filename: 'ustaz-hero-' + Date.now() + '-' + index + '.webp'
+          folder: 'pages/' + folder,
+          preset: 'heroGallery16x9',
+          filename: prefix + '-' + Date.now() + '-' + index + '.webp'
         }).then(function (result) { return result.url; });
       })).then(function (newUrls) {
         setUrls(urls().concat(newUrls));
@@ -338,6 +340,7 @@
       uploadFiles(e.dataTransfer && e.dataTransfer.files);
     });
     render();
+    });
   }
 
   function switchPage(pageId) {
