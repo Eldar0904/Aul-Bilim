@@ -1810,7 +1810,9 @@ body.map-schools-open .region-schools-block {
   color: var(--body);
   font-size: clamp(16px, 1.35vw, 19px);
   line-height: 1.7;
-  margin: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  text-wrap: pretty;
 }
 #program-ustaz .prog-page-content {
   padding-top: clamp(56px, 7vw, 88px);
