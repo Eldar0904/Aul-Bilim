@@ -749,9 +749,7 @@
           '</button>' +
         '</div>' +
         '<h2 class="region-schools-title">' +
-          '<span lang="kk"><span class="hl">Қолдау көрсетілген</span> мектептер</span>' +
-          '<span lang="ru"><span class="hl">Поддерживаемые</span> школы</span>' +
-          ' — ' + bi(r.kk, r.ru) +
+          bi(r.kk, r.ru) +
         '</h2>' +
         '<div class="region-schools-search-bar">' +
           '<div class="region-schools-search-field">' +
@@ -768,9 +766,6 @@
             '</div>'
           : '') +
         renderRegionStats(r) +
-        '<h3 class="schools-grid-head">' +
-          bi('Жаңғыртылған мектептер', 'Модернизированные школы') +
-        '</h3>' +
         '<div class="schools-search-empty" id="region-schools-search-empty" hidden>' +
           '<p>' + bi('Ешқандай мектеп табылмады', 'По вашему запросу школы не найдены') + '</p>' +
         '</div>' +
