@@ -427,6 +427,10 @@
       this.addEventListener('dragleave', this);
       this.addEventListener('drop', this);
       subs.add(this._subFn);
+      // Keep author fallback images hidden until the shared media state has
+      // hydrated. This prevents a stale fallback from flashing before the
+      // current CMS image is applied.
+      this.setAttribute('data-hydrating', '');
       // width%/height% in _applyView encode the frame aspect at call time —
       // a host resize (responsive grid, pane divider) would stretch the
       // image until the next _render. Re-render on size change: _render()
@@ -435,7 +439,12 @@
       // frame's clamp range.
       this._ro = new ResizeObserver(() => this._render());
       this._ro.observe(this);
-      load();
+      load().then(() => {
+        if (this.isConnected) {
+          this.removeAttribute('data-hydrating');
+          this._render();
+        }
+      });
       this._render();
     }
 

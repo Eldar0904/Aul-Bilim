@@ -5,8 +5,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ["index.html", "about.html", "programs.html", "school.html"]
-FOOT_LINK_KEYS = ["fitout", "ustaz", "samruk", "about"]
+PAGES = ["index.html", "about.html", "programs.html", "school.html", "results.html"]
+FOOT_LINK_KEYS = ["fitout", "ustaz", "samruk", "results", "about"]
 
 
 def fix_footer(text: str) -> str:

@@ -4,6 +4,7 @@
   var ADMIN_PAGE_MAP = {
     home: 'index.html',
     programs: 'programs.html',
+    results: 'results.html',
     about: 'about.html',
     global: 'site_shared',
     school: 'school.html'

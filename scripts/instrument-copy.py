@@ -5,14 +5,14 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ["index.html", "about.html", "programs.html", "school.html"]
+PAGES = ["index.html", "about.html", "programs.html", "school.html", "results.html"]
 
-NAV_KEYS = ["home", "fitout", "ustaz", "samruk", "about"]
-FOOT_LINK_KEYS = ["fitout", "ustaz", "samruk", "about"]
+NAV_KEYS = ["home", "services", "regions", "results", "about"]
+FOOT_LINK_KEYS = ["fitout", "ustaz", "samruk", "results", "about"]
 
 SKIP_TAGS = re.compile(r"<(script|style|svg|noscript)\b", re.I)
 SPAN_LANG = re.compile(
-    r'<span\s+lang="(kk|en)"([^>]*)>(.*?)</span>',
+    r'<span\s+lang="(kk|ru)"([^>]*)>(.*?)</span>',
     re.S | re.I,
 )
 
@@ -22,7 +22,7 @@ def strip_tags(s: str) -> str:
 
 
 def has_nested_lang(inner: str) -> bool:
-    return bool(re.search(r'<span\s+lang="(kk|en)"', inner, re.I))
+    return bool(re.search(r'<span\s+lang="(kk|ru)"', inner, re.I))
 
 
 def in_region(text: str, pos: int, start_pat: str, end_pat: str) -> bool:

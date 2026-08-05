@@ -68,6 +68,22 @@
   },
   {
     "page": "site_shared",
+    "key": "global-nav-results-kk",
+    "selector": "[data-copy=\"global-nav-results-kk\"]",
+    "label": "Нәтижелер",
+    "section": "Navigation",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-nav-results-ru",
+    "selector": "[data-copy=\"global-nav-results-ru\"]",
+    "label": "Результаты",
+    "section": "Navigation",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
     "key": "global-nav-about-kk",
     "selector": "[data-copy=\"global-nav-about-kk\"]",
     "label": "Біз туралы",
@@ -87,7 +103,7 @@
     "key": "index-001-kk",
     "selector": "[data-copy=\"index-001-kk\"]",
     "label": "Hero — H1 wrapper (қазақша)",
-    "section": "Hero",
+    "section": "Content",
     "type": "html"
   },
   {
@@ -95,7 +111,7 @@
     "key": "index-hero-mark-kk",
     "selector": "[data-copy=\"index-hero-mark-kk\"]",
     "label": "Hero — белгіленген сөз (қазақша)",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -103,7 +119,7 @@
     "key": "index-hero-sub-kk",
     "selector": "[data-copy=\"index-hero-sub-kk\"]",
     "label": "Әр балаға заманауи мектеп",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -111,7 +127,7 @@
     "key": "index-002-ru",
     "selector": "[data-copy=\"index-002-ru\"]",
     "label": "Hero — H1 wrapper (русский)",
-    "section": "Hero",
+    "section": "Content",
     "type": "html"
   },
   {
@@ -119,7 +135,7 @@
     "key": "index-hero-mark-ru",
     "selector": "[data-copy=\"index-hero-mark-ru\"]",
     "label": "Hero — выделенная фраза (русский)",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -127,39 +143,39 @@
     "key": "index-hero-sub-ru",
     "selector": "[data-copy=\"index-hero-sub-ru\"]",
     "label": "Современная школа для каждого ребёнка",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
     "page": "index.html",
     "key": "index-009-kk",
     "selector": "[data-copy=\"index-009-kk\"]",
-    "label": "Hero — lead paragraph 1 (қазақша)",
-    "section": "Hero",
+    "label": "Еліміздің әр түкпіріндегі оқушыларға сапалы білім беру үшін мектептерді заманауи жиһазбен,",
+    "section": "Content",
     "type": "textarea"
   },
   {
     "page": "index.html",
     "key": "index-010-ru",
     "selector": "[data-copy=\"index-010-ru\"]",
-    "label": "Hero — lead paragraph 1 (русский)",
-    "section": "Hero",
+    "label": "Чтобы обеспечить качественное образование в каждом уголке страны, мы полностью оснащаем шк",
+    "section": "Content",
     "type": "textarea"
   },
   {
     "page": "index.html",
     "key": "index-011-kk",
     "selector": "[data-copy=\"index-011-kk\"]",
-    "label": "Hero — lead paragraph 2 (қазақша)",
-    "section": "Hero",
+    "label": "Ұстаздардың біліктілігін жетілдіру әрі тұрақты тәлімгерлік қолдау көрсету.",
+    "section": "Content",
     "type": "text"
   },
   {
     "page": "index.html",
     "key": "index-012-ru",
     "selector": "[data-copy=\"index-012-ru\"]",
-    "label": "Hero — lead paragraph 2 (русский)",
-    "section": "Hero",
+    "label": "Повышаем квалификацию педагогов и оказываем постоянную наставническую поддержку.",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -175,6 +191,22 @@
     "key": "index-024-ru",
     "selector": "[data-copy=\"index-024-ru\"]",
     "label": "Этапы проекта",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "index.html",
+    "key": "index-003-kk",
+    "selector": "[data-copy=\"index-003-kk\"]",
+    "label": "1-кезең",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "index.html",
+    "key": "index-004-ru",
+    "selector": "[data-copy=\"index-004-ru\"]",
+    "label": "1-й этап",
     "section": "Content",
     "type": "text"
   },
@@ -196,17 +228,17 @@
   },
   {
     "page": "index.html",
-    "key": "index-033-kk",
-    "selector": "[data-copy=\"index-033-kk\"]",
-    "label": "Мұғалімдердің әлеуетін арттыру арқылы білім сапасын жаңа деңгейге көтереміз.",
+    "key": "index-005-kk",
+    "selector": "[data-copy=\"index-005-kk\"]",
+    "label": "2-кезең",
     "section": "Content",
     "type": "text"
   },
   {
     "page": "index.html",
-    "key": "index-034-ru",
-    "selector": "[data-copy=\"index-034-ru\"]",
-    "label": "Развивая потенциал педагогов, мы выводим качество образования на новый уровень.",
+    "key": "index-006-ru",
+    "selector": "[data-copy=\"index-006-ru\"]",
+    "label": "2-й этап",
     "section": "Content",
     "type": "text"
   },
@@ -228,19 +260,19 @@
   },
   {
     "page": "index.html",
-    "key": "index-029-kk",
-    "selector": "[data-copy=\"index-029-kk\"]",
-    "label": "Оқушылардың жайлылығы мен зейінін арттыруға бағытталған заманауи эргономикалық жиһаздармен",
+    "key": "index-007-kk",
+    "selector": "[data-copy=\"index-007-kk\"]",
+    "label": "3-кезең",
     "section": "Content",
-    "type": "textarea"
+    "type": "text"
   },
   {
     "page": "index.html",
-    "key": "index-030-ru",
-    "selector": "[data-copy=\"index-030-ru\"]",
-    "label": "Оснащаем кабинеты современной эргономичной мебелью для комфорта учеников и лучшей концентр",
+    "key": "index-008-ru",
+    "selector": "[data-copy=\"index-008-ru\"]",
+    "label": "3-й этап",
     "section": "Content",
-    "type": "textarea"
+    "type": "text"
   },
   {
     "page": "index.html",
@@ -257,22 +289,6 @@
     "label": "Наставничество",
     "section": "Content",
     "type": "text"
-  },
-  {
-    "page": "index.html",
-    "key": "index-037-kk",
-    "selector": "[data-copy=\"index-037-kk\"]",
-    "label": "Тәжірибелі мамандармен тығыз байланыс орнатып, кәсіби өсу жолында бірге жүреміз.",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "index.html",
-    "key": "index-038-ru",
-    "selector": "[data-copy=\"index-038-ru\"]",
-    "label": "Мы устанавливаем тесную связь с опытными специалистами и вместе идём по пути профессиональ",
-    "section": "Content",
-    "type": "textarea"
   },
   {
     "page": "index.html",
@@ -406,7 +422,7 @@
     "page": "site_shared",
     "key": "global-foot-brand",
     "selector": "[data-copy=\"global-foot-brand\"]",
-    "label": "Auyl Bilim Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken Foundation қорларын",
+    "label": "Auyl Bilim Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken foundation қорларын",
     "section": "Footer",
     "type": "textarea"
   },
@@ -414,7 +430,7 @@
     "page": "site_shared",
     "key": "global-foot-about-kk",
     "selector": "[data-copy=\"global-foot-about-kk\"]",
-    "label": "Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken Foundation қорларының бірлеске",
+    "label": "Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken foundation қорларының бірлеске",
     "section": "Footer",
     "type": "textarea"
   },
@@ -492,16 +508,16 @@
   },
   {
     "page": "site_shared",
-    "key": "global-foot-link-about-kk",
-    "selector": "[data-copy=\"global-foot-link-about-kk\"]",
+    "key": "global-foot-link-results-kk",
+    "selector": "[data-copy=\"global-foot-link-results-kk\"]",
     "label": "Біз туралы",
     "section": "Footer",
     "type": "text"
   },
   {
     "page": "site_shared",
-    "key": "global-foot-link-about-ru",
-    "selector": "[data-copy=\"global-foot-link-about-ru\"]",
+    "key": "global-foot-link-results-ru",
+    "selector": "[data-copy=\"global-foot-link-results-ru\"]",
     "label": "О нас",
     "section": "Footer",
     "type": "text"
@@ -574,16 +590,16 @@
     "page": "about.html",
     "key": "about-007-kk",
     "selector": "[data-copy=\"about-007-kk\"]",
-    "label": "Mission title (қазақша)",
-    "section": "Hero",
+    "label": "Біздің миссиямыз",
+    "section": "Content",
     "type": "text"
   },
   {
     "page": "about.html",
     "key": "about-008-ru",
     "selector": "[data-copy=\"about-008-ru\"]",
-    "label": "Mission title (русский)",
-    "section": "Hero",
+    "label": "Наша миссия",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -591,7 +607,7 @@
     "key": "about-009-kk",
     "selector": "[data-copy=\"about-009-kk\"]",
     "label": "Тең мүмкіндік",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -599,7 +615,7 @@
     "key": "about-010-ru",
     "selector": "[data-copy=\"about-010-ru\"]",
     "label": "Равные возможности",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -607,7 +623,7 @@
     "key": "about-011-kk",
     "selector": "[data-copy=\"about-011-kk\"]",
     "label": "Ауыл мен қала мектептері арасындағы білім сапасының алшақтығын жою және ауыл балаларының з",
-    "section": "Hero",
+    "section": "Content",
     "type": "textarea"
   },
   {
@@ -615,7 +631,7 @@
     "key": "about-012-ru",
     "selector": "[data-copy=\"about-012-ru\"]",
     "label": "Сократить разрыв в качестве образования между сельскими и городскими школами и дать детям ",
-    "section": "Hero",
+    "section": "Content",
     "type": "textarea"
   },
   {
@@ -623,7 +639,7 @@
     "key": "about-013-kk",
     "selector": "[data-copy=\"about-013-kk\"]",
     "label": "Тұрақты экожүйе",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -631,7 +647,7 @@
     "key": "about-014-ru",
     "selector": "[data-copy=\"about-014-ru\"]",
     "label": "Устойчивая экосистема",
-    "section": "Hero",
+    "section": "Content",
     "type": "text"
   },
   {
@@ -639,7 +655,7 @@
     "key": "about-015-kk",
     "selector": "[data-copy=\"about-015-kk\"]",
     "label": "Мектеп инфрақұрылымын жаңартып, педагогтердің кәсібилігін арттыру арқылы тұрақты білім бер",
-    "section": "Hero",
+    "section": "Content",
     "type": "textarea"
   },
   {
@@ -647,7 +663,7 @@
     "key": "about-016-ru",
     "selector": "[data-copy=\"about-016-ru\"]",
     "label": "Формируем устойчивую образовательную экосистему, обновляя школьную инфраструктуру и повыша",
-    "section": "Hero",
+    "section": "Content",
     "type": "textarea"
   },
   {
@@ -1259,6 +1275,38 @@
     "type": "textarea"
   },
   {
+    "page": "about.html",
+    "key": "about-003-kk",
+    "selector": "[data-copy=\"about-003-kk\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "about.html",
+    "key": "about-004-ru",
+    "selector": "[data-copy=\"about-004-ru\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "about.html",
+    "key": "about-005-kk",
+    "selector": "[data-copy=\"about-005-kk\"]",
+    "label": "«Қазақстан Халқына» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "about.html",
+    "key": "about-006-ru",
+    "selector": "[data-copy=\"about-006-ru\"]",
+    "label": "Общественный фонд «Для народа Казахстана»",
+    "section": "Content",
+    "type": "text"
+  },
+  {
     "page": "programs.html",
     "key": "programs-007-kk",
     "selector": "[data-copy=\"programs-007-kk\"]",
@@ -1294,7 +1342,7 @@
     "page": "programs.html",
     "key": "programs-013-kk",
     "selector": "[data-copy=\"programs-013-kk\"]",
-    "label": "Инновациялық кабинеттер құру",
+    "label": "Инновациялық кабинеттер",
     "section": "Content",
     "type": "text"
   },
@@ -1302,7 +1350,7 @@
     "page": "programs.html",
     "key": "programs-014-ru",
     "selector": "[data-copy=\"programs-014-ru\"]",
-    "label": "Создание инновационных кабинетов",
+    "label": "Инновационные кабинеты",
     "section": "Content",
     "type": "text"
   },
@@ -1390,51 +1438,15 @@
     "page": "programs.html",
     "key": "programs-025-kk",
     "selector": "[data-copy=\"programs-025-kk\"]",
-    "label": "Hero — title (қазақша)",
-    "section": "Hero",
-    "type": "html",
-    "heroGroup": "fitout"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-026-ru",
-    "selector": "[data-copy=\"programs-026-ru\"]",
-    "label": "Hero — title (русский)",
-    "section": "Hero",
-    "type": "html",
-    "heroGroup": "fitout"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-027-kk",
-    "selector": "[data-copy=\"programs-027-kk\"]",
-    "label": "Сабақ уақытында баланың қозғалысы еркін, отырысы ыңғайлы болуы керек. Біз ұсынатын заманау",
-    "section": "Hero",
-    "type": "textarea",
-    "heroGroup": "fitout"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-028-ru",
-    "selector": "[data-copy=\"programs-028-ru\"]",
-    "label": "Во время урока ребёнку нужна свобода движения и удобная посадка. Наша современная мебель с",
-    "section": "Hero",
-    "type": "textarea",
-    "heroGroup": "fitout"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-033-kk",
-    "selector": "[data-copy=\"programs-033-kk\"]",
-    "label": "Жабдықтау үш бағыттан тұрады",
+    "label": "Инновациялық кабинеттер",
     "section": "Content",
     "type": "text"
   },
   {
     "page": "programs.html",
-    "key": "programs-034-ru",
-    "selector": "[data-copy=\"programs-034-ru\"]",
-    "label": "Оснащение охватывает три направления",
+    "key": "programs-026-ru",
+    "selector": "[data-copy=\"programs-026-ru\"]",
+    "label": "Инновационные кабинеты",
     "section": "Content",
     "type": "text"
   },
@@ -1533,42 +1545,6 @@
     "label": "Эпоха классных досок прошла. С помощью интерактивных панелей, ноутбуков и STEM-наборов мы ",
     "section": "Content",
     "type": "textarea"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-047-kk",
-    "selector": "[data-copy=\"programs-047-kk\"]",
-    "label": "Hero — title (қазақша)",
-    "section": "Hero",
-    "type": "html",
-    "heroGroup": "ustaz"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-048-ru",
-    "selector": "[data-copy=\"programs-048-ru\"]",
-    "label": "Hero — title (русский)",
-    "section": "Hero",
-    "type": "html",
-    "heroGroup": "ustaz"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-049-kk",
-    "selector": "[data-copy=\"programs-049-kk\"]",
-    "label": "Мұғалімдердің әлеуетін арттыру арқылы білім сапасын жаңа деңгейге көтереміз.",
-    "section": "Hero",
-    "type": "text",
-    "heroGroup": "ustaz"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-050-ru",
-    "selector": "[data-copy=\"programs-050-ru\"]",
-    "label": "Развивая потенциал педагогов, мы выводим качество образования на новый уровень.",
-    "section": "Hero",
-    "type": "text",
-    "heroGroup": "ustaz"
   },
   {
     "page": "programs.html",
@@ -1860,42 +1836,6 @@
   },
   {
     "page": "programs.html",
-    "key": "programs-091-kk",
-    "selector": "[data-copy=\"programs-091-kk\"]",
-    "label": "Тәлімгерлік",
-    "section": "Hero",
-    "type": "html",
-    "heroGroup": "samruk"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-092-ru",
-    "selector": "[data-copy=\"programs-092-ru\"]",
-    "label": "Наставничество",
-    "section": "Hero",
-    "type": "html",
-    "heroGroup": "samruk"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-093-kk",
-    "selector": "[data-copy=\"programs-093-kk\"]",
-    "label": "Тәжірибелі мамандармен тығыз байланыс орнатып, кәсіби өсу жолында бірге жүреміз.",
-    "section": "Hero",
-    "type": "text",
-    "heroGroup": "samruk"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-094-ru",
-    "selector": "[data-copy=\"programs-094-ru\"]",
-    "label": "Мы устанавливаем тесную связь с опытными специалистами и вместе идём по пути профессиональ",
-    "section": "Hero",
-    "type": "textarea",
-    "heroGroup": "samruk"
-  },
-  {
-    "page": "programs.html",
     "key": "programs-095-kk",
     "selector": "[data-copy=\"programs-095-kk\"]",
     "label": "Тәлімгерлік",
@@ -1928,25 +1868,9 @@
   },
   {
     "page": "programs.html",
-    "key": "programs-099-kk",
-    "selector": "[data-copy=\"programs-099-kk\"]",
-    "label": "Тәлімгерлік бағдарламасы",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-100-ru",
-    "selector": "[data-copy=\"programs-100-ru\"]",
-    "label": "Программа наставничества",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
     "key": "programs-101-kk",
     "selector": "[data-copy=\"programs-101-kk\"]",
-    "label": "Оқу жылы бойы — үздіксіз қолдау",
+    "label": "Оқу жылы бойы үздіксіз қолдау",
     "section": "Content",
     "type": "text"
   },
@@ -1955,38 +1879,6 @@
     "key": "programs-102-ru",
     "selector": "[data-copy=\"programs-102-ru\"]",
     "label": "Круглогодичная непрерывная поддержка",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-103-kk",
-    "selector": "[data-copy=\"programs-103-kk\"]",
-    "label": "Курстан кейін «Білім-Инновация» сарапшылары мектептерге тікелей барып, мұғалімдерге тұрақт",
-    "section": "Content",
-    "type": "textarea"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-104-ru",
-    "selector": "[data-copy=\"programs-104-ru\"]",
-    "label": "После курсов эксперты «Білім-Инновация» посещают школы напрямую и оказывают педагогам пост",
-    "section": "Content",
-    "type": "textarea"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-105-kk",
-    "selector": "[data-copy=\"programs-105-kk\"]",
-    "label": "қолдау бағыты",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-106-ru",
-    "selector": "[data-copy=\"programs-106-ru\"]",
-    "label": "направления поддержки",
     "section": "Content",
     "type": "text"
   },
@@ -2119,6 +2011,38 @@
     "type": "textarea"
   },
   {
+    "page": "programs.html",
+    "key": "programs-003-kk",
+    "selector": "[data-copy=\"programs-003-kk\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-004-ru",
+    "selector": "[data-copy=\"programs-004-ru\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-005-kk",
+    "selector": "[data-copy=\"programs-005-kk\"]",
+    "label": "«Қазақстан Халқына» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-006-ru",
+    "selector": "[data-copy=\"programs-006-ru\"]",
+    "label": "Общественный фонд «Для народа Казахстана»",
+    "section": "Content",
+    "type": "text"
+  },
+  {
     "page": "school.html",
     "key": "school-007-kk",
     "selector": "[data-copy=\"school-007-kk\"]",
@@ -2179,6 +2103,286 @@
     "key": "school-014-ru",
     "selector": "[data-copy=\"school-014-ru\"]",
     "label": "Вернуться к карте",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "school.html",
+    "key": "school-003-kk",
+    "selector": "[data-copy=\"school-003-kk\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "school.html",
+    "key": "school-004-ru",
+    "selector": "[data-copy=\"school-004-ru\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "school.html",
+    "key": "school-005-kk",
+    "selector": "[data-copy=\"school-005-kk\"]",
+    "label": "«Қазақстан Халқына» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "school.html",
+    "key": "school-006-ru",
+    "selector": "[data-copy=\"school-006-ru\"]",
+    "label": "Общественный фонд «Для народа Казахстана»",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-005-kk",
+    "selector": "[data-copy=\"results-005-kk\"]",
+    "label": "ОҚУ КАБИНЕТТЕРІН ЖАҢҒЫРТУ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-006-ru",
+    "selector": "[data-copy=\"results-006-ru\"]",
+    "label": "МОДЕРНИЗАЦИЯ УЧЕБНЫХ КАБИНЕТОВ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-007-kk",
+    "selector": "[data-copy=\"results-007-kk\"]",
+    "label": "ДЕЙІН",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-008-ru",
+    "selector": "[data-copy=\"results-008-ru\"]",
+    "label": "ДО",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-009-kk",
+    "selector": "[data-copy=\"results-009-kk\"]",
+    "label": "КЕЙІН",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-010-ru",
+    "selector": "[data-copy=\"results-010-ru\"]",
+    "label": "ПОСЛЕ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-001-kk",
+    "selector": "[data-copy=\"results-001-kk\"]",
+    "label": "ОҚУШЫЛАРДЫҢ АКАДЕМИЯЛЫҚ ЖЕТІСТІКТЕРІ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-002-ru",
+    "selector": "[data-copy=\"results-002-ru\"]",
+    "label": "АКАДЕМИЧЕСКИЕ ДОСТИЖЕНИЯ УЧАЩИХСЯ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-003-kk",
+    "selector": "[data-copy=\"results-003-kk\"]",
+    "label": "Жоба іске асырылғаннан кейін жаратылыстану-математикалық бағыттағы пәндер бойынша оқушылар",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "results.html",
+    "key": "results-004-ru",
+    "selector": "[data-copy=\"results-004-ru\"]",
+    "label": "Общий средний прирост качества знаний учащихся по предметам естественно-математического на",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "results.html",
+    "key": "results-011-kk",
+    "selector": "[data-copy=\"results-011-kk\"]",
+    "label": "Алматы облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-012-ru",
+    "selector": "[data-copy=\"results-012-ru\"]",
+    "label": "Алматинская область",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-013-value",
+    "selector": "[data-copy=\"results-013-value\"]",
+    "label": "+14% Қарағанды облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-014-kk",
+    "selector": "[data-copy=\"results-014-kk\"]",
+    "label": "Қарағанды облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-015-ru",
+    "selector": "[data-copy=\"results-015-ru\"]",
+    "label": "Карагандинская область",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-016-value",
+    "selector": "[data-copy=\"results-016-value\"]",
+    "label": "+11% Қостанай облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-017-kk",
+    "selector": "[data-copy=\"results-017-kk\"]",
+    "label": "Қостанай облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-018-ru",
+    "selector": "[data-copy=\"results-018-ru\"]",
+    "label": "Костанайская область",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-019-value",
+    "selector": "[data-copy=\"results-019-value\"]",
+    "label": "+12,5% Ақмола облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-020-kk",
+    "selector": "[data-copy=\"results-020-kk\"]",
+    "label": "Ақмола облысы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-021-ru",
+    "selector": "[data-copy=\"results-021-ru\"]",
+    "label": "Акмолинская область",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-022-value",
+    "selector": "[data-copy=\"results-022-value\"]",
+    "label": "+12,7% Auyl Bilim Auyl Bilim — Қазақстан Халқына, Білім Инновация және Jelken foundation қ",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-link-about-kk",
+    "selector": "[data-copy=\"global-foot-link-about-kk\"]",
+    "label": "Біз туралы",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-link-about-ru",
+    "selector": "[data-copy=\"global-foot-link-about-ru\"]",
+    "label": "О нас",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-023-kk",
+    "selector": "[data-copy=\"results-023-kk\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-024-ru",
+    "selector": "[data-copy=\"results-024-ru\"]",
+    "label": "«Jelken foundation» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-025-kk",
+    "selector": "[data-copy=\"results-025-kk\"]",
+    "label": "«Қазақстан Халқына» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-026-ru",
+    "selector": "[data-copy=\"results-026-ru\"]",
+    "label": "«Қазақстан Халқына» ҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-027-kk",
+    "selector": "[data-copy=\"results-027-kk\"]",
+    "label": "«БІЛІМ-ИННОВАЦИЯ» ХҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-028-ru",
+    "selector": "[data-copy=\"results-028-ru\"]",
+    "label": "«БІЛІМ-ИННОВАЦИЯ» ХҚҚ",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "results.html",
+    "key": "results-013-ru",
+    "selector": "[data-copy=\"results-013-ru\"]",
+    "label": "Auyl Bilim — общественный проект",
     "section": "Content",
     "type": "text"
   }

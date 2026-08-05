@@ -293,6 +293,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
   display: block;
   z-index: 0;
 }
+.hero-fb image-slot[data-hydrating] { visibility: hidden; }
 
 /* gradient overlay — photo visible top half, deep navy bottom */
 .hero-fb::after {
