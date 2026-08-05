@@ -478,7 +478,14 @@
       updatedAt: new Date().toISOString()
     });
 
-    var result = await window.db.saveSiteContent(savedContent);
+    var result;
+    try {
+      result = await window.db.saveSiteContent(savedContent);
+    } catch (error) {
+      resetSaveBtn();
+      toast(error && error.message ? error.message : 'Сақтау кезінде қате пайда болды.', 'err');
+      return;
+    }
     btn.classList.remove('saving');
     if (result && result.success) {
       btn.textContent = '✓ Сақталды';
