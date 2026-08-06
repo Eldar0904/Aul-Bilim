@@ -195,12 +195,16 @@ window.db = (function () {
       localStorage.setItem(LOCAL_CONTENT, JSON.stringify(payload));
       return { success: true, mode: 'local' };
     }
+    var headers = await authHeaders();
+    if (!headers.Authorization) {
+      return { success: false, error: 'Admin session expired. Sign in again before saving.' };
+    }
     var res = await fetch(documentUrl('site/content'), {
       method: 'PATCH',
-      headers: await authHeaders(),
+      headers: headers,
       body: JSON.stringify(toDocument(payload))
     });
-    if (!res.ok) return { success: false, error: parseApiError(await res.text()) };
+    if (!res.ok) return { success: false, error: 'Firestore ' + res.status + ': ' + parseApiError(await res.text()) };
     return { success: true };
   }
 
