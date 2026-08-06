@@ -338,6 +338,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.94);
 }
+.hero-fb h1 .hero-h1-sub { display: none; }
 .hero-fb h1 .mark {
   color: var(--accent);
   white-space: nowrap;
