@@ -114,6 +114,34 @@
     });
   }
 
+  function splitProgramsContent(groups) {
+    if (!groups || !groups.Content) return groups;
+    var buckets = {
+      'Programs overview': [],
+      'Innovation cabinets': [],
+      'Teaching courses': [],
+      'Mentorship': []
+    };
+    groups.Content.forEach(function (field) {
+      var match = field.key.match(/^programs-(\d+)-/);
+      var n = match ? Number(match[1]) : 0;
+      var bucket = n >= 7 && n <= 24 ? 'Programs overview'
+        : n >= 25 && n <= 46 ? 'Innovation cabinets'
+        : n >= 51 && n <= 90 ? 'Teaching courses'
+        : n >= 95 && n <= 122 ? 'Mentorship'
+        : 'Programs overview';
+      buckets[bucket].push(field);
+    });
+    var out = {};
+    Object.keys(buckets).forEach(function (name) {
+      if (buckets[name].length) out[name] = buckets[name];
+    });
+    Object.keys(groups).forEach(function (name) {
+      if (name !== 'Content') out[name] = groups[name];
+    });
+    return out;
+  }
+
   function buildField(field) {
     var wrap = document.createElement('div');
     wrap.className = 'tf tf-copy';
@@ -146,7 +174,8 @@
     opts = opts || {};
     var isHeroMount = !!HERO_MOUNTS[viewId];
     var groups = groupFields(window.COPY_REGISTRY, pageFile, opts);
-    var sectionOrder = ['Navigation', 'Footer', 'Accessibility', 'Statistics', 'Hero', 'Content'];
+    if (pageFile === 'programs.html' && !isHeroMount) groups = splitProgramsContent(groups);
+    var sectionOrder = ['Navigation', 'Footer', 'Accessibility', 'Statistics', 'Hero', 'Programs overview', 'Innovation cabinets', 'Teaching courses', 'Mentorship', 'Content'];
     var keys = Object.keys(groups).sort(function (a, b) {
       var ai = sectionOrder.indexOf(a);
       var bi = sectionOrder.indexOf(b);

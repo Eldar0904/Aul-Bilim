@@ -700,6 +700,22 @@ html[data-admin-lang="ru"] .admin-lang-kk { display: none !important; }
   border-radius: 10px; font-family: var(--fb); font-size: 14px;
 }
 .copy-section { margin-top: 18px; }
+.prog-panel [data-copy-mount="programs"] .copy-section {
+  overflow: hidden;
+  border: 1px solid #e8dfd0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(29, 59, 101, .07);
+}
+.prog-panel [data-copy-mount="programs"] .copy-section .as-head {
+  margin: 0;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #163d70, #245991);
+  color: #fff;
+  border: 0;
+}
+.prog-panel [data-copy-mount="programs"] .copy-section .as-head h3 { color: #fff; }
+.prog-panel [data-copy-mount="programs"] .copy-section .as-body { padding: 18px 20px; }
 .copy-section .as-body.copy-fields {
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px;
 }
