@@ -27,6 +27,7 @@
 
   var valueStore = {};
   var onDirty = null;
+  var activeProgramGroup = 'fitout';
   var REMOVED_USTAZ_HERO_KEYS = ['programs-047-kk', 'programs-048-ru', 'programs-049-kk', 'programs-050-ru'];
   var MOVED_USTAZ_HERO_KEYS = ['programs-051-kk', 'programs-052-ru', 'programs-053-kk', 'programs-054-ru'];
   var REMOVED_FITOUT_KEYS = ['programs-027-kk', 'programs-028-ru', 'programs-033-kk', 'programs-034-ru'];
@@ -228,6 +229,9 @@
     keys.forEach(function (section) {
       var block = document.createElement('div');
       block.className = isHeroMount ? 'copy-fields copy-fields-hero' : 'as copy-section';
+      if (pageFile === 'programs.html' && !isHeroMount && ['Programs overview', 'Innovation cabinets', 'Teaching courses', 'Mentorship'].indexOf(section) >= 0) {
+        block.dataset.programGroup = section;
+      }
       if (!isHeroMount) {
         var head = document.createElement('div');
         head.className = 'as-head';
@@ -276,6 +280,25 @@
       });
     });
     wireInputListeners(onDirty);
+    setProgramGroup(activeProgramGroup);
+    document.querySelectorAll('.prog-tab').forEach(function (tab) {
+      if (tab.dataset.programBound) return;
+      tab.dataset.programBound = '1';
+      tab.addEventListener('click', function () { setProgramGroup(tab.dataset.prog); });
+    });
+  }
+
+  function setProgramGroup(group) {
+    activeProgramGroup = group || 'fitout';
+    var names = {
+      fitout: 'Innovation cabinets',
+      ustaz: 'Teaching courses',
+      samruk: 'Mentorship'
+    };
+    var active = names[activeProgramGroup] || names.fitout;
+    document.querySelectorAll('[data-copy-mount="programs"] [data-program-group]').forEach(function (section) {
+      section.style.display = section.dataset.programGroup === 'Programs overview' || section.dataset.programGroup === active ? '' : 'none';
+    });
   }
 
   function populateCopyFields(pages) {
@@ -311,6 +334,7 @@
     populateCopyFields: populateCopyFields,
     wireInputListeners: wireInputListeners,
     collectCopyFields: collectCopyFields,
+    setProgramGroup: setProgramGroup,
     syncStoreFromDom: syncStoreFromDom,
     PAGE_LABELS: PAGE_LABELS,
     ADMIN_PAGE_MAP: ADMIN_PAGE_MAP,
