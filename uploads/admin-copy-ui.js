@@ -142,6 +142,31 @@
     return out;
   }
 
+  function splitHomeContent(groups) {
+    if (!groups || !groups.Content) return groups;
+    var buckets = {
+      'Mission and impact': [],
+      'Project stages': [],
+      'Regions and statistics': []
+    };
+    groups.Content.forEach(function (field) {
+      var match = field.key.match(/^index-(\d+)/);
+      var n = match ? Number(match[1]) : 0;
+      var bucket = (n >= 3 && n <= 8) || (n >= 23 && n <= 36) ? 'Project stages'
+        : (n >= 13 && n <= 20) || n >= 40 ? 'Regions and statistics'
+        : 'Mission and impact';
+      buckets[bucket].push(field);
+    });
+    var out = {};
+    Object.keys(buckets).forEach(function (name) {
+      if (buckets[name].length) out[name] = buckets[name];
+    });
+    Object.keys(groups).forEach(function (name) {
+      if (name !== 'Content') out[name] = groups[name];
+    });
+    return out;
+  }
+
   function buildField(field) {
     var wrap = document.createElement('div');
     wrap.className = 'tf tf-copy';
@@ -175,6 +200,7 @@
     var isHeroMount = !!HERO_MOUNTS[viewId];
     var groups = groupFields(window.COPY_REGISTRY, pageFile, opts);
     if (pageFile === 'programs.html' && !isHeroMount) groups = splitProgramsContent(groups);
+    if (pageFile === 'index.html' && !isHeroMount) groups = splitHomeContent(groups);
     var sectionOrder = ['Navigation', 'Footer', 'Accessibility', 'Statistics', 'Hero', 'Programs overview', 'Innovation cabinets', 'Teaching courses', 'Mentorship', 'Content'];
     var keys = Object.keys(groups).sort(function (a, b) {
       var ai = sectionOrder.indexOf(a);
