@@ -1515,6 +1515,9 @@ body.map-schools-open .region-schools-block {
   margin-bottom: 0;
 }
 
+/* Program cards are title-only; supporting copy belongs on each detail page. */
+#programs-hub + #programs-cards .dir-card-body p { display: none; }
+
 /* Homepage project stages — numbered cards */
 #stages .dir-cards--stages {
   gap: 32px;

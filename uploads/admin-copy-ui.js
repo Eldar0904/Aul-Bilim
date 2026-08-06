@@ -32,6 +32,12 @@
   var REMOVED_FITOUT_KEYS = ['programs-027-kk', 'programs-028-ru', 'programs-033-kk', 'programs-034-ru'];
   var REMOVED_SAMRUK_KEYS = ['programs-091-kk', 'programs-092-ru', 'programs-093-kk', 'programs-094-ru', 'programs-099-kk', 'programs-100-ru', 'programs-103-kk', 'programs-104-ru', 'programs-105-kk', 'programs-106-ru'];
   var MOVED_SAMRUK_HERO_KEYS = ['programs-095-kk', 'programs-096-ru', 'programs-097-kk', 'programs-098-ru'];
+  // Card descriptions were removed from the public Programs hub; keep legacy values out of Admin.
+  var REMOVED_PROGRAM_CARD_COPY_KEYS = [
+    'programs-015-kk', 'programs-016-ru', 'programs-019-kk', 'programs-020-ru',
+    'programs-023-kk', 'programs-024-ru'
+  ];
+  var REMOVED_PROGRAM_HUB_KEYS = ['programs-007-kk', 'programs-008-ru', 'programs-009-kk', 'programs-010-ru'];
 
   function currentLang() {
     return window.adminLang ? window.adminLang.getLang() : 'kk';
@@ -49,6 +55,8 @@
     if (REMOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) return false;
     if (REMOVED_FITOUT_KEYS.indexOf(field.key) >= 0) return false;
     if (REMOVED_SAMRUK_KEYS.indexOf(field.key) >= 0) return false;
+    if (REMOVED_PROGRAM_CARD_COPY_KEYS.indexOf(field.key) >= 0) return false;
+    if (REMOVED_PROGRAM_HUB_KEYS.indexOf(field.key) >= 0) return false;
     if (MOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) {
       return opts.heroGroup === 'ustaz';
     }

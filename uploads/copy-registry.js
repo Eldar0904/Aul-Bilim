@@ -1308,38 +1308,6 @@
   },
   {
     "page": "programs.html",
-    "key": "programs-007-kk",
-    "selector": "[data-copy=\"programs-007-kk\"]",
-    "label": "Білім беру бастамалары",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-008-ru",
-    "selector": "[data-copy=\"programs-008-ru\"]",
-    "label": "Образовательные инициативы",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-009-kk",
-    "selector": "[data-copy=\"programs-009-kk\"]",
-    "label": "Жоба кезеңдері",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-010-ru",
-    "selector": "[data-copy=\"programs-010-ru\"]",
-    "label": "Этапы проекта",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
     "key": "programs-013-kk",
     "selector": "[data-copy=\"programs-013-kk\"]",
     "label": "Инновациялық кабинеттер",
@@ -1436,22 +1404,6 @@
   },
   {
     "page": "programs.html",
-    "key": "programs-025-kk",
-    "selector": "[data-copy=\"programs-025-kk\"]",
-    "label": "Инновациялық кабинеттер",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-026-ru",
-    "selector": "[data-copy=\"programs-026-ru\"]",
-    "label": "Инновационные кабинеты",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
     "key": "programs-035-kk",
     "selector": "[data-copy=\"programs-035-kk\"]",
     "label": "Сынып жиһазы",
@@ -1545,22 +1497,6 @@
     "label": "Эпоха классных досок прошла. С помощью интерактивных панелей, ноутбуков и STEM-наборов мы ",
     "section": "Content",
     "type": "textarea"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-051-kk",
-    "selector": "[data-copy=\"programs-051-kk\"]",
-    "label": "Педагогтердің біліктілігін арттыру курстары",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-052-ru",
-    "selector": "[data-copy=\"programs-052-ru\"]",
-    "label": "Курсы повышения квалификации педагогов",
-    "section": "Content",
-    "type": "text"
   },
   {
     "page": "programs.html",
@@ -1836,22 +1772,6 @@
   },
   {
     "page": "programs.html",
-    "key": "programs-095-kk",
-    "selector": "[data-copy=\"programs-095-kk\"]",
-    "label": "Тәлімгерлік",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
-    "key": "programs-096-ru",
-    "selector": "[data-copy=\"programs-096-ru\"]",
-    "label": "Наставничество",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "programs.html",
     "key": "programs-097-kk",
     "selector": "[data-copy=\"programs-097-kk\"]",
     "label": "Курстан кейін педагогтер алған білімдерін тәжірибеде тиімді қолдануы үшін оқу жылы бойы «Б",
@@ -2011,34 +1931,50 @@
     "type": "textarea"
   },
   {
-    "page": "programs.html",
-    "key": "programs-003-kk",
-    "selector": "[data-copy=\"programs-003-kk\"]",
+    "page": "site_shared",
+    "key": "global-foot-org-jelken-kk",
+    "selector": "[data-copy=\"global-foot-org-jelken-kk\"]",
     "label": "«Jelken foundation» ҚҚ",
-    "section": "Content",
+    "section": "Footer",
     "type": "text"
   },
   {
-    "page": "programs.html",
-    "key": "programs-004-ru",
-    "selector": "[data-copy=\"programs-004-ru\"]",
+    "page": "site_shared",
+    "key": "global-foot-org-jelken-ru",
+    "selector": "[data-copy=\"global-foot-org-jelken-ru\"]",
     "label": "«Jelken foundation» ҚҚ",
-    "section": "Content",
+    "section": "Footer",
     "type": "text"
   },
   {
-    "page": "programs.html",
-    "key": "programs-005-kk",
-    "selector": "[data-copy=\"programs-005-kk\"]",
+    "page": "site_shared",
+    "key": "global-foot-org-samruk-kk",
+    "selector": "[data-copy=\"global-foot-org-samruk-kk\"]",
     "label": "«Қазақстан Халқына» ҚҚ",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-org-samruk-ru",
+    "selector": "[data-copy=\"global-foot-org-samruk-ru\"]",
+    "label": "Общественный фонд «Для народа Казахстана»",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "programs.html",
+    "key": "programs-007-kk",
+    "selector": "[data-copy=\"programs-007-kk\"]",
+    "label": "«БІЛІМ-ИННОВАЦИЯ» ХҚҚ",
     "section": "Content",
     "type": "text"
   },
   {
     "page": "programs.html",
-    "key": "programs-006-ru",
-    "selector": "[data-copy=\"programs-006-ru\"]",
-    "label": "Общественный фонд «Для народа Казахстана»",
+    "key": "programs-008-ru",
+    "selector": "[data-copy=\"programs-008-ru\"]",
+    "label": "МОФ «Білім-Инновация»",
     "section": "Content",
     "type": "text"
   },
