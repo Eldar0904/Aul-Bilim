@@ -133,6 +133,18 @@ def instrument_file(path: Path):
         pos = m.start()
 
         if "data-copy=" in attrs:
+            existing = re.search(r'data-copy="([^"]+)"', attrs)
+            if existing:
+                existing_key = existing.group(1)
+                existing_plain = re.sub(r"\s+", " ", strip_tags(inner)).strip()
+                if existing_plain:
+                    if existing_key.startswith("global-nav-"):
+                        existing_section = "Navigation"
+                    elif existing_key.startswith("global-"):
+                        existing_section = "Footer"
+                    else:
+                        existing_section = "Content"
+                    register(existing_key, existing_plain, existing_section, "textarea" if len(existing_plain) > 80 else "text")
             return m.group(0)
         if has_nested_lang(inner):
             return m.group(0)
