@@ -34,6 +34,7 @@
   var MOVED_FITOUT_HERO_KEYS = ['programs-025-kk', 'programs-026-ru'];
   var REMOVED_SAMRUK_KEYS = ['programs-091-kk', 'programs-092-ru', 'programs-093-kk', 'programs-094-ru', 'programs-099-kk', 'programs-100-ru', 'programs-103-kk', 'programs-104-ru', 'programs-105-kk', 'programs-106-ru'];
   var MOVED_SAMRUK_HERO_KEYS = ['programs-095-kk', 'programs-096-ru', 'programs-097-kk', 'programs-098-ru'];
+  var REMOVED_HOME_HERO_COPY_KEYS = ['index-hero-sub-kk', 'index-hero-sub-ru'];
 
   function currentLang() {
     return window.adminLang ? window.adminLang.getLang() : 'kk';
@@ -54,6 +55,7 @@
       return opts.heroGroup === 'fitout';
     }
     if (REMOVED_SAMRUK_KEYS.indexOf(field.key) >= 0) return false;
+    if (REMOVED_HOME_HERO_COPY_KEYS.indexOf(field.key) >= 0) return false;
     if (MOVED_USTAZ_HERO_KEYS.indexOf(field.key) >= 0) {
       return opts.heroGroup === 'ustaz';
     }
