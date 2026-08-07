@@ -1710,7 +1710,7 @@
     "page": "programs.html",
     "key": "programs-083-kk",
     "selector": "[data-copy=\"programs-083-kk\"]",
-    "label": "Сынып жетекшілеріне бағдарлама",
+    "label": "Сынып жетекшілеріне арналған бағдарлама",
     "section": "Content",
     "type": "text"
   },
@@ -1726,7 +1726,7 @@
     "page": "programs.html",
     "key": "programs-085-kk",
     "selector": "[data-copy=\"programs-085-kk\"]",
-    "label": "Оқушылармен және ата-аналармен тиімді қарым-қатынас орнату, тәрбие сағаттарының сапасын ар",
+    "label": "Оқушылармен әрі ата-аналармен тиімді қарым-қатынас орнату және тәрбие сағаттарының сапасын",
     "section": "Content",
     "type": "textarea"
   },
