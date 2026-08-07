@@ -1,6 +1,24 @@
 (function () {
   'use strict';
 
+  var COPY_REPAIRS = {
+    'programs-054-ru': 'Для раскрытия профессионального потенциала учителей и руководителей школ, а также для внедрения современных образовательных технологий реализуются комплексные программы обучения.',
+    'programs-060-ru': 'Углубление предметных знаний учителей и развитие навыков использования современных инструментов обучения.',
+    'programs-078-ru': 'Совершенствование профессионального мастерства специалистов, отвечающих за систематизацию воспитательного процесса в школе и формирование человеческих ценностей.',
+    'programs-082-ru': 'В рамках программы «Адал азамат» администрации школ предоставляются регулярные консультации по планированию воспитательной работы.',
+    'programs-086-ru': 'Выстраивание эффективного взаимодействия с учениками и родителями, а также повышение качества проведения классных часов.',
+    'programs-110-ru': 'Благодаря выездам менторов непосредственно в школы отслеживается ход проведения лабораторных работ и предоставляется персональная обратная связь учителям.',
+    'programs-114-ru': 'Оказывается прямая помощь по интеграции цифровых датчиков, специализированного программного обеспечения и интерактивных платформ в учебный процесс.',
+    'programs-118-ru': 'Для углубления практических навыков учителей организуются мастер-классы (в офлайн- и онлайн-форматах).',
+    'programs-122-ru': 'В рамках программы «Адал азамат» администрации школ предоставляются регулярные консультации по планированию воспитательной работы.'
+  };
+
+  function isCorruptCopy(value) {
+    if (typeof value !== 'string') return false;
+    var compact = value.replace(/\s/g, '');
+    return compact.length > 3 && (compact.match(/\?/g) || []).length / compact.length > 0.35;
+  }
+
   function applyRegistryCopy(pageId, content) {
     var registry = window.COPY_REGISTRY || [];
     if (!content || !content.pages) return;
@@ -13,6 +31,12 @@
       var data = isShared ? sharedData : pageData;
       if (!isShared && field.page !== pageId) return;
       var val = data[field.key];
+      if (COPY_REPAIRS[field.key]) {
+        document.querySelectorAll(field.selector).forEach(function (el) {
+          el.textContent = COPY_REPAIRS[field.key];
+        });
+      }
+      if (isCorruptCopy(val)) return;
       if (val == null || val === '') return;
       document.querySelectorAll(field.selector).forEach(function (el) {
         if (field.type === 'html') {
@@ -35,7 +59,7 @@
       var selector = bindings[key];
       if (!selector) return;
       var el = document.querySelector(selector);
-      if (el && pageData[key] != null && pageData[key] !== '') {
+      if (el && pageData[key] != null && pageData[key] !== '' && !isCorruptCopy(pageData[key])) {
         el.textContent = pageData[key];
       }
     });
