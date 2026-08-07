@@ -19,6 +19,14 @@
     return compact.length > 3 && (compact.match(/\?/g) || []).length / compact.length > 0.35;
   }
 
+  function applyStaticRepairs() {
+    Object.keys(COPY_REPAIRS).forEach(function (key) {
+      document.querySelectorAll('[data-copy="' + key + '"]').forEach(function (el) {
+        el.textContent = COPY_REPAIRS[key];
+      });
+    });
+  }
+
   function applyRegistryCopy(pageId, content) {
     var registry = window.COPY_REGISTRY || [];
     if (!content || !content.pages) return;
@@ -194,6 +202,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    applyStaticRepairs();
     if (!window.db || !window.db.getSiteContent) return;
     window.db.getSiteContent().then(function (content) {
       if (!content) {
