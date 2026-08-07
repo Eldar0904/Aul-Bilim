@@ -1870,7 +1870,7 @@
     "page": "programs.html",
     "key": "programs-113-kk",
     "selector": "[data-copy=\"programs-113-kk\"]",
-    "label": "PASCO датчиктерін, SPARKvue, Capstone бағдарламаларын және интерактивті платформаларды саб",
+    "label": "Сандық датчиктерді, арнайы бағдарламалық жасақтамалар мен интерактивті платформаларды саба",
     "section": "Content",
     "type": "textarea"
   },
@@ -1902,7 +1902,7 @@
     "page": "programs.html",
     "key": "programs-117-kk",
     "selector": "[data-copy=\"programs-117-kk\"]",
-    "label": "Каникул уақытында мұғалімдердің практикалық дағдыларын тереңдету үшін шеберлік сыныптары (",
+    "label": "Мұғалімдердің практикалық дағдыларын тереңдету үшін шеберлік сыныптары (офлайн және онлайн",
     "section": "Content",
     "type": "textarea"
   },
