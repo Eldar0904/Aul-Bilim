@@ -1979,6 +1979,22 @@
     "type": "text"
   },
   {
+    "page": "site_shared",
+    "key": "global-foot-org-bilim-kk",
+    "selector": "[data-copy=\"global-foot-org-bilim-kk\"]",
+    "label": "БІЛІМ-ИННОВАЦИЯ ХҚҚ",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-org-bilim-ru",
+    "selector": "[data-copy=\"global-foot-org-bilim-ru\"]",
+    "label": "МОФ Білім-Инновация",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
     "page": "school.html",
     "key": "school-007-kk",
     "selector": "[data-copy=\"school-007-kk\"]",
