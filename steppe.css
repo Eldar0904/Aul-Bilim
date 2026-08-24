@@ -77,7 +77,7 @@ nav.bar {
 .logo--wordmark { gap: 0; min-width: 0; }
 .logo-wordmark {
   display: block;
-  height: 72px;
+  height: 54px;
   width: auto;
   max-width: min(360px, 58vw);
   object-fit: contain;
@@ -111,7 +111,7 @@ nav.bar {
   .nav-links a,
   .nav-dropdown-toggle { font-size: 14px; }
   .logo { font-size: 22px; gap: 12px; }
-  .logo-wordmark { height: 80px; max-width: min(400px, 52vw); }
+  .logo-wordmark { height: 60px; max-width: min(320px, 46vw); }
   .logo .sun { width: 32px; height: 32px; }
 }
 @media (min-width: 1400px) {
@@ -3048,7 +3048,7 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .nav-links.open .nav-dropdown-toggle { padding: 10px 0 14px; font-size: 17px; width: 100%; border-bottom-width: 3px; }
   .menu-btn { display: grid; place-items: center; }
   .logo { font-size: 18px; gap: 9px; }
-  .logo-wordmark { height: 58px; max-width: min(300px, 62vw); }
+  .logo-wordmark { height: 46px; max-width: min(240px, 56vw); }
   .logo .sun { width: 26px; height: 26px; }
   nav.bar { position: sticky; }
   .progs, .stories, .values, .ways, .dir-cards, .steps, .team { grid-template-columns: 1fr; }
