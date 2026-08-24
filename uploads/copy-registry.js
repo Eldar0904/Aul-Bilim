@@ -132,54 +132,6 @@
   },
   {
     "page": "events.html",
-    "key": "events-001-kk",
-    "selector": "[data-copy=\"events-001-kk\"]",
-    "label": "Кездесулер · тәжірибе · қауымдастық",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "events.html",
-    "key": "events-002-ru",
-    "selector": "[data-copy=\"events-002-ru\"]",
-    "label": "Встречи · опыт · сообщество",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "events.html",
-    "key": "events-003-kk",
-    "selector": "[data-copy=\"events-003-kk\"]",
-    "label": "Іс-шаралар",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "events.html",
-    "key": "events-004-ru",
-    "selector": "[data-copy=\"events-004-ru\"]",
-    "label": "Мероприятия",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "events.html",
-    "key": "events-005-kk",
-    "selector": "[data-copy=\"events-005-kk\"]",
-    "label": "Aul Bilim ауыл педагогтерін, білім сарапшыларын және серіктестерді тәжірибе алмасу мен жаңа бастамалар үшін біріктіреді.",
-    "section": "Content",
-    "type": "textarea"
-  },
-  {
-    "page": "events.html",
-    "key": "events-006-ru",
-    "selector": "[data-copy=\"events-006-ru\"]",
-    "label": "Aul Bilim объединяет сельских педагогов, экспертов и партнёров для обмена опытом и запуска новых образовательных инициатив.",
-    "section": "Content",
-    "type": "textarea"
-  },
-  {
-    "page": "events.html",
     "key": "events-007-kk",
     "selector": "[data-copy=\"events-007-kk\"]",
     "label": "Таңдаулы іс-шара",
