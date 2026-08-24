@@ -100,6 +100,198 @@
   },
   {
     "page": "site_shared",
+    "key": "global-nav-events-kk",
+    "selector": "[data-copy=\"global-nav-events-kk\"]",
+    "label": "Іс-шаралар",
+    "section": "Navigation",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-nav-events-ru",
+    "selector": "[data-copy=\"global-nav-events-ru\"]",
+    "label": "Мероприятия",
+    "section": "Navigation",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-link-events-kk",
+    "selector": "[data-copy=\"global-foot-link-events-kk\"]",
+    "label": "Іс-шаралар",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
+    "key": "global-foot-link-events-ru",
+    "selector": "[data-copy=\"global-foot-link-events-ru\"]",
+    "label": "Мероприятия",
+    "section": "Footer",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-001-kk",
+    "selector": "[data-copy=\"events-001-kk\"]",
+    "label": "Кездесулер · тәжірибе · қауымдастық",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-002-ru",
+    "selector": "[data-copy=\"events-002-ru\"]",
+    "label": "Встречи · опыт · сообщество",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-003-kk",
+    "selector": "[data-copy=\"events-003-kk\"]",
+    "label": "Іс-шаралар",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-004-ru",
+    "selector": "[data-copy=\"events-004-ru\"]",
+    "label": "Мероприятия",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-005-kk",
+    "selector": "[data-copy=\"events-005-kk\"]",
+    "label": "Aul Bilim ауыл педагогтерін, білім сарапшыларын және серіктестерді тәжірибе алмасу мен жаңа бастамалар үшін біріктіреді.",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "events.html",
+    "key": "events-006-ru",
+    "selector": "[data-copy=\"events-006-ru\"]",
+    "label": "Aul Bilim объединяет сельских педагогов, экспертов и партнёров для обмена опытом и запуска новых образовательных инициатив.",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "events.html",
+    "key": "events-007-kk",
+    "selector": "[data-copy=\"events-007-kk\"]",
+    "label": "Таңдаулы іс-шара",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-008-ru",
+    "selector": "[data-copy=\"events-008-ru\"]",
+    "label": "Главное мероприятие",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-009-kk",
+    "selector": "[data-copy=\"events-009-kk\"]",
+    "label": "Жақын арада",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-010-ru",
+    "selector": "[data-copy=\"events-010-ru\"]",
+    "label": "Ближайшее событие",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-011-kk",
+    "selector": "[data-copy=\"events-011-kk\"]",
+    "label": "Тәжірибе алмасу алаңы",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-012-ru",
+    "selector": "[data-copy=\"events-012-ru\"]",
+    "label": "Площадка обмена опытом",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-013-kk",
+    "selector": "[data-copy=\"events-013-kk\"]",
+    "label": "Ауыл мұғалімдерінің нақты тәжірибесі, сегіз мектептің кейсі, білім беру көрмесі және кәсіби қауымдастықпен кездесу.",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "events.html",
+    "key": "events-014-ru",
+    "selector": "[data-copy=\"events-014-ru\"]",
+    "label": "Практический опыт сельских учителей, кейсы восьми школ, образовательная выставка и встреча профессионального сообщества.",
+    "section": "Content",
+    "type": "textarea"
+  },
+  {
+    "page": "events.html",
+    "key": "events-015-kk",
+    "selector": "[data-copy=\"events-015-kk\"]",
+    "label": "25 тамыз 2026 жыл",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-016-ru",
+    "selector": "[data-copy=\"events-016-ru\"]",
+    "label": "25 августа 2026 года",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-017-kk",
+    "selector": "[data-copy=\"events-017-kk\"]",
+    "label": "Maqsut Narikbayev University, Астана",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-018-ru",
+    "selector": "[data-copy=\"events-018-ru\"]",
+    "label": "Maqsut Narikbayev University, Астана",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-019-kk",
+    "selector": "[data-copy=\"events-019-kk\"]",
+    "label": "Іс-шараны көру",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "events.html",
+    "key": "events-020-ru",
+    "selector": "[data-copy=\"events-020-ru\"]",
+    "label": "Открыть страницу события",
+    "section": "Content",
+    "type": "text"
+  },
+  {
+    "page": "site_shared",
     "key": "global-nav-about-ru",
     "selector": "[data-copy=\"global-nav-about-ru\"]",
     "label": "О нас",

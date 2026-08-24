@@ -11,6 +11,7 @@
     home:     { label: 'Басты бет',     file: 'index.html',    preview: 'index.html' },
     programs: { label: 'Бағдарламалар', file: 'programs.html', preview: 'programs.html' },
     results:  { label: 'Нәтижелер',     file: 'results.html',  preview: 'results.html' },
+    events:   { label: 'Іс-шаралар',    file: 'events.html',   preview: 'events.html' },
     about:    { label: 'Біз туралы',    file: 'about.html',    preview: 'about.html' },
     global:   { label: 'Жалпы',         file: 'index.html',    preview: 'index.html' },
     schools:  { label: 'Мектептер',     file: 'school.html',   preview: 'school.html' },

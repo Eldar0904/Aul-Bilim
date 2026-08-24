@@ -5,6 +5,7 @@
     home: 'index.html',
     programs: 'programs.html',
     results: 'results.html',
+    events: 'events.html',
     about: 'about.html',
     global: 'site_shared',
     school: 'school.html'
@@ -21,6 +22,7 @@
   var PAGE_LABELS = {
     home: 'Басты бет',
     programs: 'Бағдарламалар',
+    events: 'Іс-шаралар',
     about: 'Біз туралы',
     global: 'Жалпы (нав / footer)'
   };
