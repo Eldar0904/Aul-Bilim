@@ -71,5 +71,13 @@ window.AUL_BILIM_MAP_REGIONS = [
     en: 'Jambyl Region',
     total: 32,
     packStats: { cabinets: '80', teachers: '500+' }
+  },
+  {
+    id: 'vko',
+    kk: 'Шығыс Қазақстан облысы',
+    ru: 'Восточно-Казахстанская область',
+    en: 'East Kazakhstan Region',
+    schoolGlobal: 'VKO_SCHOOLS',
+    packStats: { cabinets: '—', teachers: '—' }
   }
 ];
