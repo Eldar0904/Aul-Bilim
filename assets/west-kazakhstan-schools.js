@@ -1,4 +1,4 @@
-/* Auto-generated — West Kazakhstan schools from Жоба мектер тізімі.xlsx (ЗКО МКШ + ЗКО ФХБ) */
+/* Director details removed from public school descriptions. */
 window.WEST_KAZAKHSTAN_SCHOOLS = {
   "districts": [
     {
@@ -101,8 +101,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Турсыналиева Айнур Галимқызы",
-        "ru": "Директор: Турсыналиева Айнур Галимовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -120,8 +120,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Куанышева Фазиля Куанышкызы",
-        "ru": "Директор: Куанышева Фазиля Куанышкызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -139,8 +139,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Кенжегалиева Агила Ижанқызы",
-        "ru": "Директор: Кенжегалиева Агила Ижановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -158,8 +158,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Кабанкина Вера Петрқызы",
-        "ru": "Директор: Кабанкина Вера Петровна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -177,8 +177,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Нурмухамбетова Жанаргуль Шамратқызы",
-        "ru": "Директор: Нурмухамбетова Жанаргуль Шамратовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -196,8 +196,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Сайбалиева Айзада Саламатқызы",
-        "ru": "Директор: Сайбалиева Айзада Саламатовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -215,8 +215,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Султаниярова Зинаида Самиголлақызы",
-        "ru": "Директор: Султаниярова Зинаида Самиголлаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -234,8 +234,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: ЕСЕНБАЕВА ЗИЯДА ТОЛЕМИСқызы",
-        "ru": "Директор: ЕСЕНБАЕВА ЗИЯДА ТОЛЕМИСОВНА"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -253,8 +253,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: АМИРГАЛИЕВА НУРСУЛУ САБИТқызы",
-        "ru": "Директор: АМИРГАЛИЕВА НУРСУЛУ САБИТОВНА"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -272,8 +272,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: а.о. Мангеева Магрипа Кайргалиқызы",
-        "ru": "Директор: и.о. Мангеева Магрипа Кайргалиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -291,8 +291,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Зайнуллин Ғарифолла Сидешовұлы",
-        "ru": "Директор: Зайнуллин Ғарифолла Сидешович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -310,8 +310,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Таменова Гулбакыт Маратқызы",
-        "ru": "Директор: Таменова Гулбакыт Маратовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -329,8 +329,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Әбіл Арайлым Әдиетқызы",
-        "ru": "Директор: Әбіл Арайлым Әдиетқызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -348,8 +348,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Жумагулова Жазира Молдагалиқызы",
-        "ru": "Директор: Жумагулова Жазира Молдагалиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -367,8 +367,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Қабиева Сымбат Мұратқызы",
-        "ru": "Директор: Қабиева Сымбат Мұратқызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -386,8 +386,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Мендигалиев Жандос Жуматаевич сот",
-        "ru": "Директор: Мендигалиев Жандос Жуматаевич сот"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -405,8 +405,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Алипкалиев Елдос Саматовұлы",
-        "ru": "Директор: Алипкалиев Елдос Саматович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -424,8 +424,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Дишенова Лунаргуль Наурзбайқызы",
-        "ru": "Директор: Дишенова Лунаргуль Наурзбайовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -443,8 +443,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Бектенова Лаззат Базарбаевна мектеп директоры",
-        "ru": "Директор: Бектенова Лаззат Базарбаевна мектеп директоры"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -462,8 +462,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Койшина Адеми Манарбекқызы",
-        "ru": "Директор: Койшина Адеми Манарбековна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -481,8 +481,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Муштанов Кайырлы Ержановұлы",
-        "ru": "Директор: Муштанов Кайырлы Ержанович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -500,8 +500,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Бисекенова Светлана Сагидоллиқызы",
-        "ru": "Директор: Бисекенова Светлана Сагидоллиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -519,8 +519,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Зейнуллин Канат Сериковұлы",
-        "ru": "Директор: Зейнуллин Канат Серикович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -538,8 +538,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Тулегенова Тансулу Калиқызы",
-        "ru": "Директор: Тулегенова Тансулу Калиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -557,8 +557,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Балмаганбетов Гиният Тельмановұлы",
-        "ru": "Директор: Балмаганбетов Гиният Тельманович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -576,8 +576,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Тажгалиев Аскербек Сериккалиевұлы",
-        "ru": "Директор: Тажгалиев Аскербек Сериккалиевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -595,8 +595,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Аткаев Расул Бауыржановұлы",
-        "ru": "Директор: Аткаев Расул Бауыржанович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -614,8 +614,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Батыргалиев Мейрим Абугалиевұлы",
-        "ru": "Директор: Батыргалиев Мейрим Абугалиевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -633,8 +633,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Мергенева Самал Жуламанқызы",
-        "ru": "Директор: Мергенева Самал Жуламановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -652,8 +652,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Директор Жангирова Улбике Изтелоувна",
-        "ru": "Директор: Директор Жангирова Улбике Изтелоувна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -671,8 +671,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Буранбаев Азамат Адилбековұлы",
-        "ru": "Директор: Буранбаев Азамат Адилбекович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -690,8 +690,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Саркулов Есен Максотовұлы",
-        "ru": "Директор: Саркулов Есен Максотович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -709,8 +709,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Кабдыгалиева Лаззат Бауржанқызы",
-        "ru": "Директор: Кабдыгалиева Лаззат Бауржановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -728,8 +728,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Сырымов Аманжол Азаматулы",
-        "ru": "Директор: Сырымов Аманжол Азаматулы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -747,8 +747,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Муханбетжанова Нуржамал Николақызы",
-        "ru": "Директор: Муханбетжанова Нуржамал Николаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -766,8 +766,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Усманова Лунара Утегенқызы",
-        "ru": "Директор: Усманова Лунара Утегеновна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -785,8 +785,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Жиналиева Гульмира Мендыбақызы",
-        "ru": "Директор: Жиналиева Гульмира Мендыбаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -804,8 +804,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Губашев Алиби Салыковұлы",
-        "ru": "Директор: Губашев Алиби Салыкович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -823,8 +823,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Сарсенгалиева Татьяна Нурмангалиқызы",
-        "ru": "Директор: Сарсенгалиева Татьяна Нурмангалиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -842,8 +842,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Шундыбаева Оксана Калапқызы",
-        "ru": "Директор: Шундыбаева Оксана Калаповна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -861,8 +861,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Исмурзиева Асия Кабдулмажитқызы",
-        "ru": "Директор: Исмурзиева Асия Кабдулмажитқызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -880,8 +880,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Тастайбекова Гульжиян Лескалиқызы",
-        "ru": "Директор: Тастайбекова Гульжиян Лескалиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -899,8 +899,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Садыков Марат Тулегеновұлы",
-        "ru": "Директор: Садыков Марат Тулегенович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -918,8 +918,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Курмангалиева Акмарал Канесқызы",
-        "ru": "Директор: Курмангалиева Акмарал Канесовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -937,8 +937,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Кажиекова Жадыра Кобландиқызы",
-        "ru": "Директор: Кажиекова Жадыра Кобландиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -956,8 +956,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Ахметкалиева Айгул Уразақызы",
-        "ru": "Директор: Ахметкалиева Айгул Уразаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -975,8 +975,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Искаков Берик Кадыровұлы",
-        "ru": "Директор: Искаков Берик Кадырович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -994,8 +994,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Бегилова Гулден Махамбетқызы",
-        "ru": "Директор: Бегилова Гулден Махамбетовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1013,8 +1013,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Габдрахимов Медет Бауыржановұлы",
-        "ru": "Директор: Габдрахимов Медет Бауыржанович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1032,8 +1032,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Абугалиев Мирас Галиаскаровұлы",
-        "ru": "Директор: Абугалиев Мирас Галиаскарович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1051,8 +1051,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Бекмуханов Тулеген Сагидоллиновұлы",
-        "ru": "Директор: Бекмуханов Тулеген Сагидоллинович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1070,8 +1070,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Тлегенова Гульжанат Амангельдиқызы",
-        "ru": "Директор: Тлегенова Гульжанат Амангельдиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1089,8 +1089,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Сабырова С.К",
-        "ru": "Директор: Сабырова С.К"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1108,8 +1108,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Утепбергенова Нуржамал Утепбергенқызы",
-        "ru": "Директор: Утепбергенова Нуржамал Утепбергеновна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1127,8 +1127,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Кенжебаева Алмагуль Алгалиқызы",
-        "ru": "Директор: Кенжебаева Алмагуль Алгалиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1146,8 +1146,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Мамешева Райса Исанжанқызы",
-        "ru": "Директор: Мамешева Райса Исанжановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1165,8 +1165,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Утегенова Айымгул Абзалқызы",
-        "ru": "Директор: Утегенова Айымгул Абзаловна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1184,8 +1184,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Бергалиева Шнар Маратқызы",
-        "ru": "Директор: Бергалиева Шнар Маратовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1203,8 +1203,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Құбайтов Ерхан Болатұлы",
-        "ru": "Директор: Құбайтов Ерхан Болатұлы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1222,8 +1222,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Есенгалиева Бегайым Тулеугалиқызы",
-        "ru": "Директор: Есенгалиева Бегайым Тулеугалиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1241,8 +1241,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Кубашова Шынар Конарбақызы",
-        "ru": "Директор: Кубашова Шынар Конарбаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1260,8 +1260,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Кубаева Гульнар Кабдрешқызы",
-        "ru": "Директор: Кубаева Гульнар Кабдрешевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1279,8 +1279,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Жексенова Маншук Избасарқызы",
-        "ru": "Директор: Жексенова Маншук Избасаровна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1298,8 +1298,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Даулетияров Дархан Каримуллиновұлы",
-        "ru": "Директор: Даулетияров Дархан Каримуллинович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1317,8 +1317,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Қайырғалиев Мәди Аманжолұлы",
-        "ru": "Директор: Қайырғалиев Мәди Аманжолұлы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1336,8 +1336,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Нұрымова Ақмарал Ерсайынқызы",
-        "ru": "Директор: Нұрымова Ақмарал Ерсайынқызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1355,8 +1355,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Кулмуханова Нуржауган Жанатауқызы",
-        "ru": "Директор: Кулмуханова Нуржауган Жанатауовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1374,8 +1374,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Какижанова Шолпан Бижанқызы",
-        "ru": "Директор: Какижанова Шолпан Бижановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1393,8 +1393,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Қайырқұл Шынар Самиғоллоқызы",
-        "ru": "Директор: Қайырқұл Шынар Самиғоллоқызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1412,8 +1412,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Султанов Данияр Амангельдиевич директор",
-        "ru": "Директор: Султанов Данияр Амангельдиевич директор"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1431,8 +1431,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Китарова Лайла Толыбаевна моб",
-        "ru": "Директор: Китарова Лайла Толыбаевна моб"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     }

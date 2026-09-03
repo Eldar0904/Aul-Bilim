@@ -1,4 +1,4 @@
-/* Auto-generated — Kostanay schools from Жоба мектер тізімі (1).xlsx */
+/* Director details removed from public school descriptions. */
 window.KOSTANAY_SCHOOLS = {
   "districts": [
     {
@@ -143,8 +143,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Лингер Алена Викторқызы",
-        "ru": "Директор: Лингер Алена Викторовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -162,8 +162,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Кішібай Сағира Қабажайқызы",
-        "ru": "Директор: Кішібай Сағира Қабажайқызы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -181,8 +181,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Агибаев Туремрат Каиржановұлы",
-        "ru": "Директор: Агибаев Туремрат Каиржанович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -200,8 +200,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Әбдуахит Әділхан Әбдіғалымұлы",
-        "ru": "Директор: Әбдуахит Әділхан Әбдіғалымұлы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -219,8 +219,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Аубакиров Бакытжан Габдылуахитовұлы",
-        "ru": "Директор: Аубакиров Бакытжан Габдылуахитович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -238,8 +238,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Клышбаева Арайлым Кумисбақызы",
-        "ru": "Директор: Клышбаева Арайлым Кумисбаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -257,8 +257,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Абденова Гульжан Жуманқызы",
-        "ru": "Директор: Абденова Гульжан Жумановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -276,8 +276,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Ислямова Нургуль Мешитбақызы",
-        "ru": "Директор: Ислямова Нургуль Мешитбаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -295,8 +295,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Капишева Сауле Айтбақызы",
-        "ru": "Директор: Капишева Сауле Айтбаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -314,8 +314,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Утарбаева Сауле Закарияқызы",
-        "ru": "Директор: Утарбаева Сауле Закарияевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -333,8 +333,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Аденова Анара Сагидокасқызы",
-        "ru": "Директор: Аденова Анара Сагидокасовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -352,8 +352,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Дворянчиков Дмитрий Олеговұлы",
-        "ru": "Директор: Дворянчиков Дмитрий Олегович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -371,8 +371,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Кенжегалиев Данияр Орынбасаровұлы",
-        "ru": "Директор: Кенжегалиев Данияр Орынбасарович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -390,8 +390,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Фазылова Динара Сабитқызы",
-        "ru": "Директор: Фазылова Динара Сабитовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -409,8 +409,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Жадаев Нуржан Елгоновұлы",
-        "ru": "Директор: Жадаев Нуржан Елгонович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -428,8 +428,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Валеева Мадина Болатқызы",
-        "ru": "Директор: Валеева Мадина Болатовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -447,8 +447,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Танжарикова Гульнар Тулегенқызы",
-        "ru": "Директор: Танжарикова Гульнар Тулегеновна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -466,8 +466,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Бисикеев Рамир Жумагуловұлы",
-        "ru": "Директор: Бисикеев Рамир Жумагулович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -485,8 +485,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Кунтуаров Саги Утешевұлы",
-        "ru": "Директор: Кунтуаров Саги Утешевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -504,8 +504,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Абеуов Жанабай Казымбековұлы",
-        "ru": "Директор: Абеуов Жанабай Казымбекович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -523,8 +523,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Степанова Наталья Николақызы",
-        "ru": "Директор: Степанова Наталья Николаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -542,8 +542,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Амангелді Аскар Абатұлы",
-        "ru": "Директор: Амангелді Аскар Абатұлы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -561,8 +561,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Арстамбаев Азамат Бахитовұлы",
-        "ru": "Директор: Арстамбаев Азамат Бахитович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -580,8 +580,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Алфутов Юрий Васильевұлы",
-        "ru": "Директор: Алфутов Юрий Васильевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -599,8 +599,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Тасанова Гульфия Боранбақызы",
-        "ru": "Директор: Тасанова Гульфия Боранбаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -618,8 +618,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Раева Гаухар Адылканқызы",
-        "ru": "Директор: Раева Гаухар Адылкановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -637,8 +637,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Аргингазина Айгуль Танатқызы",
-        "ru": "Директор: Аргингазина Айгуль Танатовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -656,8 +656,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Тюлегенова Гульшат Тулегенқызы",
-        "ru": "Директор: Тюлегенова Гульшат Тулегеновна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -675,8 +675,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Габдулин Хамит Валеевұлы",
-        "ru": "Директор: Габдулин Хамит Валеевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -694,8 +694,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Сагнаев Амангельды Набиевұлы",
-        "ru": "Директор: Сагнаев Амангельды Набиевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -713,8 +713,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Ибраева Салтанат Кенжеханқызы",
-        "ru": "Директор: Ибраева Салтанат Кенжехановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -732,8 +732,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Садакбаев Руслан Жусипбековұлы",
-        "ru": "Директор: Садакбаев Руслан Жусипбекович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -751,8 +751,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Нугыманов Канат Умирзаковұлы",
-        "ru": "Директор: Нугыманов Канат Умирзакович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -770,8 +770,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Абдыгалиева Айгуль Сайранқызы",
-        "ru": "Директор: Абдыгалиева Айгуль Сайрановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -789,8 +789,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Ермагамбетов Амангельды Мырзакановұлы",
-        "ru": "Директор: Ермагамбетов Амангельды Мырзаканович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -808,8 +808,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: а.о. директора Федорова Ольга Александрқызы",
-        "ru": "Директор: и.о. директора Федорова Ольга Александровна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -827,8 +827,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Крупко Валентина Николақызы",
-        "ru": "Директор: Крупко Валентина Николаевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -846,8 +846,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Тобылбаев Дархан Мажитовұлы",
-        "ru": "Директор: Тобылбаев Дархан Мажитович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -865,8 +865,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Кузембаев Муратбек Баяхановұлы",
-        "ru": "Директор: Кузембаев Муратбек Баяханович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -884,8 +884,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Исмагулов Ерболат Кереевұлы",
-        "ru": "Директор: Исмагулов Ерболат Кереевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -903,8 +903,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Сағымбай Нұрлан Еркешұлы",
-        "ru": "Директор: Сағымбай Нұрлан Еркешұлы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -922,8 +922,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Юнусова Анастасия Владиславқызы",
-        "ru": "Директор: Юнусова Анастасия Владиславовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -941,8 +941,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Аксененко Вадим Юрьевұлы",
-        "ru": "Директор: Аксененко Вадим Юрьевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -960,8 +960,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Баяков Марат Алтынбековұлы",
-        "ru": "Директор: Баяков Марат Алтынбекович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -979,8 +979,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Алиева Гульнар Расулқызы",
-        "ru": "Директор: Алиева Гульнар Расуловна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -998,8 +998,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Коскадамова Тамаша Шамелқызы",
-        "ru": "Директор: Коскадамова Тамаша Шамелевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1017,8 +1017,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Ларёва Лида Георгиқызы",
-        "ru": "Директор: Ларёва Лида Георгиевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1036,8 +1036,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Кусаинов Толебай Жуматовұлы",
-        "ru": "Директор: Кусаинов Толебай Жуматович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1055,8 +1055,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Позднякова Нина Алексеқызы",
-        "ru": "Директор: Позднякова Нина Алексеевна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1074,8 +1074,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Есимбекова Назгуль Каирбекқызы",
-        "ru": "Директор: Есимбекова Назгуль Каирбековна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1093,8 +1093,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Байтемирова Клара Низамуттенқызы",
-        "ru": "Директор: Байтемирова Клара Низамуттеновна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1112,8 +1112,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Шайкин Тулеген Оразаевұлы",
-        "ru": "Директор: Шайкин Тулеген Оразаевич"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1131,8 +1131,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Жарыс Майрагуль",
-        "ru": "Директор: Жарыс Майрагуль"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1150,8 +1150,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Олейник Светлана Михайлқызы",
-        "ru": "Директор: Олейник Светлана Михайловна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1169,8 +1169,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Айжан Сейдахметова",
-        "ru": "Директор: Айжан Сейдахметова"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1188,8 +1188,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Куанышкалиев Дидар Галиаскаровұлы",
-        "ru": "Директор: Куанышкалиев Дидар Галиаскарович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1207,8 +1207,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Шмидт Ирина Викорқызы",
-        "ru": "Директор: Шмидт Ирина Викоровна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1226,8 +1226,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Муханбетжанова Гульбара Рамазанқызы",
-        "ru": "Директор: Муханбетжанова Гульбара Рамазановна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1245,8 +1245,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Досмағанбетов Гайдар Кайсаровұлы",
-        "ru": "Директор: Досмағанбетов Гайдар Кайсарович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1264,8 +1264,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Курмашева Аякоз Абилкасимқызы",
-        "ru": "Директор: Курмашева Аякоз Абилкасимовна"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1283,8 +1283,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Программная школа"
       },
       "desc": {
-        "kk": "Директоры: Ахатов Нурдаулет Ахатулы",
-        "ru": "Директор: Ахатов Нурдаулет Ахатулы"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     },
@@ -1302,8 +1302,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Лаборатория"
       },
       "desc": {
-        "kk": "Директоры: Кокабаев Канат Басжановұлы",
-        "ru": "Директор: Кокабаев Канат Басжанович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/program-fitout-detail.jpg"
     },
@@ -1321,8 +1321,8 @@ window.KOSTANAY_SCHOOLS = {
         "ru": "Полностью оснащена"
       },
       "desc": {
-        "kk": "Директоры: Айтбаев Талгат Абатовұлы",
-        "ru": "Директор: Айтбаев Талгат Абатович"
+        "kk": "",
+        "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg"
     }
