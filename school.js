@@ -23,6 +23,16 @@
     return document.documentElement.getAttribute('data-lang') === 'ru' ? ru : kk;
   }
 
+  function publicSchoolDescription(value) {
+    return String(value || '')
+      .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '')
+      .replace(/(?:e-?mail|эл\.?\s*почта|электрон(?:ный|дық)\s*(?:адрес|пошта)?|телефон|тел\.?|phone)\s*[:：-]?\s*(?:\+?\d[\d\s()\-]{5,}\d?)/gi, '')
+      .replace(/\s{2,}/g, ' ')
+      .replace(/\s*[,;|]\s*[,;|]+/g, ', ')
+      .replace(/[,;|]\s*$/g, '')
+      .trim();
+  }
+
   function parseParams() {
     var params = new URLSearchParams(location.search);
     return {
@@ -49,7 +59,7 @@
       if (override.youtubeDesc.ru != null) merged.youtubeDesc.ru = override.youtubeDesc.ru;
       else if (override.youtubeDesc.en != null) merged.youtubeDesc.ru = override.youtubeDesc.en;
     }
-    if (override.desc) {
+    if (override.desc && base.id.indexOf('almaty-') !== 0) {
       merged.desc = Object.assign({}, base.desc || {});
       if (override.desc.kk) merged.desc.kk = override.desc.kk;
       if (override.desc.ru) merged.desc.ru = override.desc.ru;
@@ -281,7 +291,7 @@
       backLink.href = 'index.html#region-' + region.id + '-schools';
     }
     if (descEl && school.desc) {
-      descEl.textContent = bi(school.desc.kk, school.desc.ru);
+      descEl.textContent = publicSchoolDescription(bi(school.desc.kk, school.desc.ru));
     }
 
     if (teachersEl) {
