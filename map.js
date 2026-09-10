@@ -5,7 +5,7 @@
    Coordinate space for hotspots/pins is the current SVG: 1000 x 549
    ============================================================ */
 (function () {
-  var VB_W = 1000, VB_H = 549, SCALE = 2.35;
+  var VB_W = 1000, VB_H = 549, SCALE = 2.35, ZOOM_MS = 1720;
 
   /* Each region: id, names, total schools, pin centre (fraction of map),
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
@@ -483,7 +483,7 @@
       clearTimeout(zoomAnimTimer);
       zoomAnimTimer = setTimeout(function () {
         stage.classList.remove('is-animating');
-      }, 760);
+      }, ZOOM_MS);
     }
 
     function applyZoom(r) {
@@ -920,7 +920,7 @@
         if (view === 'region' && current && current.id === id) {
           showSchoolsView(id, { replaceHash: true });
         }
-      }, 760);
+      }, ZOOM_MS);
     }
 
     function goToMap() {
