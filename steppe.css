@@ -577,7 +577,7 @@ section.block { position: relative; z-index: 2; padding: 72px 0; }
   transition: opacity .3s;
 }
 .map-stage { position: relative; overflow: hidden; border-radius: 0; contain: layout paint; isolation: isolate; }
-.map-pan { position: relative; transform-origin: 0 0; transition: transform 1.72s cubic-bezier(.16,.84,.34,1); backface-visibility: hidden; width: 100%; aspect-ratio: 1000 / 549; }
+.map-pan { position: relative; transform-origin: 0 0; transition: none; backface-visibility: hidden; width: 100%; aspect-ratio: 1000 / 549; }
 .map-stage.is-animating .map-pan { will-change: transform; }
 .map-pan img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; pointer-events: none; }
 .map-hot { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; touch-action: manipulation; }

@@ -859,7 +859,6 @@
       current = null;
       view = 'map';
       stage.classList.remove('zoomed');
-      beginMapAnim();
       pan.style.transform = 'none';
       svg.querySelectorAll('.hot').forEach(function (p) { p.classList.remove('sel'); });
       panel.classList.remove('show');
@@ -872,19 +871,22 @@
     }
 
     function showRegionView(id, opts) {
-      if (!mapReady) return;
-      hideSchoolsSection();
-      var r = activateRegion(id);
-      if (!r) return;
-      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-' + id, !!(opts && opts.replaceHash));
+      showSchoolsView(id, opts);
     }
 
     function showSchoolsView(id, opts) {
       if (!mapReady || !schoolsBlock || !mapBlock) return;
-      var r = current && current.id === id ? current : activateRegion(id);
+      var r = regionById(id);
       if (!r) return;
       current = r;
       view = 'schools';
+      hideTip();
+      stage.classList.remove('zoomed');
+      pan.style.transform = 'none';
+      svg.querySelectorAll('.hot').forEach(function (p) { p.classList.remove('sel'); });
+      panel.classList.remove('show');
+      intro.classList.remove('hide');
+      if (mapCol) mapCol.classList.remove('region-open');
       mapBlock.hidden = true;
       schoolsBlock.hidden = false;
       lockSchoolsScroll();
@@ -905,7 +907,6 @@
     }
 
     function openSchools(id) {
-      clearTimeout(regionOpenTimer);
       showSchoolsView(id, { replaceHash: true });
     }
 
@@ -914,17 +915,10 @@
     }
 
     function openRegion(id) {
-      showRegionView(id);
-      clearTimeout(regionOpenTimer);
-      regionOpenTimer = setTimeout(function () {
-        if (view === 'region' && current && current.id === id) {
-          showSchoolsView(id, { replaceHash: true });
-        }
-      }, ZOOM_MS);
+      showSchoolsView(id, { replaceHash: true });
     }
 
     function goToMap() {
-      clearTimeout(regionOpenTimer);
       showMapView({ replaceHash: true });
     }
 
@@ -940,10 +934,8 @@
       if (!mapReady) return;
       var parsed = parseMapHash();
       syncingHash = true;
-      if (parsed.view === 'schools' && parsed.id && regionById(parsed.id)) {
+      if ((parsed.view === 'schools' || parsed.view === 'region') && parsed.id && regionById(parsed.id)) {
         showSchoolsView(parsed.id, { skipHash: true });
-      } else if (parsed.view === 'region' && parsed.id && regionById(parsed.id)) {
-        showRegionView(parsed.id, { skipHash: true });
       } else if (view !== 'map') {
         showMapView({ skipHash: true, noScroll: true });
       }
@@ -965,8 +957,5 @@
     window.addEventListener('hashchange', applyMapViewFromHash);
     window.addEventListener('popstate', applyMapViewFromHash);
 
-    window.addEventListener('resize', function () {
-      if (current) applyZoom(current);
-    });
   });
 })();
