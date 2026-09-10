@@ -287,7 +287,7 @@
 
     renderMapCard(school, name);
 
-    if (titleEl) titleEl.textContent = name;
+    if (titleEl) titleEl.textContent = bi('Мекеме:', 'Учреждение:') + ' ' + name;
     if (backLink) {
       backLink.href = 'index.html#region-' + region.id + '-schools';
     }

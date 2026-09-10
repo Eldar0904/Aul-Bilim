@@ -1165,11 +1165,13 @@ body.map-schools-open .region-schools-block {
   text-transform: uppercase;
 }
 .school-hero-meta h1 {
-  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: normal;
   margin: 0;
-  color: var(--ink);
+  color: var(--body);
 }
 .school-hero-loc {
   font-family: var(--fh);
