@@ -359,6 +359,7 @@
     var syncingHash = false;
     var mapReady = false;
     var zoomAnimTimer = null;
+    var regionOpenTimer = null;
 
     ensureRegionStatsOverrides().then(function () {
       if (view === 'schools' && current) renderSchoolsSection(current);
@@ -880,7 +881,7 @@
 
     function showSchoolsView(id, opts) {
       if (!mapReady || !schoolsBlock || !mapBlock) return;
-      var r = activateRegion(id);
+      var r = current && current.id === id ? current : activateRegion(id);
       if (!r) return;
       current = r;
       view = 'schools';
@@ -904,6 +905,7 @@
     }
 
     function openSchools(id) {
+      clearTimeout(regionOpenTimer);
       showSchoolsView(id, { replaceHash: true });
     }
 
@@ -913,9 +915,16 @@
 
     function openRegion(id) {
       showRegionView(id);
+      clearTimeout(regionOpenTimer);
+      regionOpenTimer = setTimeout(function () {
+        if (view === 'region' && current && current.id === id) {
+          showSchoolsView(id, { replaceHash: true });
+        }
+      }, 760);
     }
 
     function goToMap() {
+      clearTimeout(regionOpenTimer);
       showMapView({ replaceHash: true });
     }
 
