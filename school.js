@@ -34,6 +34,15 @@
       .trim();
   }
 
+  function setLabeledText(element, label, value) {
+    element.replaceChildren();
+    var prefix = label + ':';
+    var labelEl = document.createElement('strong');
+    labelEl.textContent = prefix;
+    element.appendChild(labelEl);
+    element.appendChild(document.createTextNode(' ' + value.slice(prefix.length).trimStart()));
+  }
+
   function parseParams() {
     var params = new URLSearchParams(location.search);
     return {
@@ -287,12 +296,17 @@
 
     renderMapCard(school, name);
 
-    if (titleEl) titleEl.textContent = bi('Мекеме:', 'Учреждение:') + ' ' + name;
+    if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + name);
     if (backLink) {
       backLink.href = 'index.html#region-' + region.id + '-schools';
     }
     if (descEl && school.desc) {
-      descEl.textContent = publicSchoolDescription(bi(school.desc.kk, school.desc.ru));
+      var description = publicSchoolDescription(bi(school.desc.kk, school.desc.ru));
+      var addressLabel = description.indexOf('Мекенжайы:') === 0 ? 'Мекенжайы' :
+        (description.indexOf('Мекенжай:') === 0 ? 'Мекенжай' :
+          (description.indexOf('Адрес:') === 0 ? 'Адрес' : null));
+      if (addressLabel) setLabeledText(descEl, addressLabel, description);
+      else descEl.textContent = description;
     }
 
     if (teachersEl) {
