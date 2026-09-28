@@ -201,8 +201,26 @@
     });
   }
 
+
+  function applyFooterFixes() {
+    document.querySelectorAll('[data-copy="global-foot-explore-h-kk"], [data-copy="global-foot-explore-h-ru"]').forEach(function (el) {
+      var heading = el.closest('h4');
+      if (heading) heading.remove();
+    });
+
+    if (location.pathname.split('/').pop() !== 'events.html') return;
+    document.querySelectorAll('[data-copy="events-009-kk"], [data-copy="events-010-ru"]').forEach(function (el) {
+      var heading = el.closest('h2');
+      if (heading) heading.remove();
+    });
+
+    var social = document.querySelector('.foot-social');
+    if (!social || social.querySelector('.footer-social-rows')) return;
+    social.insertAdjacentHTML('beforeend', '<div class="footer-social-rows"><div class="footer-social-row"><div class="footer-socials"><a href="https://www.instagram.com/jelkenfoundationkz/" target="_blank" rel="noopener noreferrer" aria-label="Jelken Foundation — Instagram">Instagram</a><a href="https://www.youtube.com/@jelkenfoundationkz" target="_blank" rel="noopener noreferrer" aria-label="Jelken Foundation — YouTube">YouTube</a></div><span class="footer-social-org">«Jelken foundation» ҚҚ</span></div><div class="footer-social-row"><div class="footer-socials"><a href="https://www.instagram.com/qazaqstanhalqyna.kz/" target="_blank" rel="noopener noreferrer" aria-label="Қазақстан Халқына — Instagram">Instagram</a><a href="https://www.youtube.com/channel/UCJKgoHRYAVuclihac3hZVVw" target="_blank" rel="noopener noreferrer" aria-label="Қазақстан Халқына — YouTube">YouTube</a></div><span class="footer-social-org"><span lang="kk">«Қазақстан Халқына» ҚҚ</span><span lang="ru">Общественный фонд «Для народа Казахстана»</span></span></div><div class="footer-social-row"><div class="footer-socials"><a href="https://www.instagram.com/bil.edu.kz/" target="_blank" rel="noopener noreferrer" aria-label="Білім-Инновация — Instagram">Instagram</a><a href="https://www.youtube.com/@BILIMINNOVATIONICF" target="_blank" rel="noopener noreferrer" aria-label="Білім-Инновация — YouTube">YouTube</a></div><span class="footer-social-org"><span lang="kk">«БІЛІМ-ИННОВАЦИЯ» ХҚҚ</span><span lang="ru">МОФ «Білім-Инновация»</span></span></div></div>');
+  }
   document.addEventListener('DOMContentLoaded', function () {
     applyStaticRepairs();
+    applyFooterFixes();
     if (!window.db || !window.db.getSiteContent) return;
     window.db.getSiteContent().then(function (content) {
       if (!content) {
