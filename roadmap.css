@@ -471,3 +471,20 @@
 
 .road-swipe { display:none; }
 @media(max-width:1040px){.road-panel{display:none}.road-list{display:flex}.road-swipe{display:flex}}
+
+/* Place the selected step beside the desktop route. */
+@media (min-width:1041px) {
+  #stages > .wrap { max-width:1440px; }
+  .road-layout { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:24px; align-items:center; }
+  .road-layout > .road-map { width:100%; min-width:0; margin:0; }
+  .road-layout > .road-panel { margin:0; width:100%; min-width:0; padding-bottom:20px; }
+  .road-layout .road-stop-label { font-size:18px; }
+  .road-layout .road-panel-head { grid-template-columns:40px minmax(0,1fr); gap:12px; padding:20px 20px 0; margin-bottom:16px; }
+  .road-layout .road-panel-head .road-owner { grid-column:1 / -1; justify-self:start; white-space:normal; }
+  .road-layout .road-panel-head h4 { font-size:18px; }
+  .road-layout .road-panel-text { padding:0 20px; font-size:14px; line-height:1.65; margin-bottom:16px; }
+  .road-layout .road-panel-out { margin:0 20px; display:block; padding:12px; }
+  .road-layout .road-panel-out b { display:block; margin-bottom:6px; }
+  .road-layout .road-panel-out span { font-size:13px; line-height:1.5; }
+  .road-layout .road-panel-nav { padding:16px 20px 0; }
+}
