@@ -26,5 +26,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/film",
+      "destination": "/media#films",
+      "permanent": true
+    },
+    {
+      "source": "/film.html",
+      "destination": "/media#films",
+      "permanent": true
+    }
   ]
 }
+

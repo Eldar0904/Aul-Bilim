@@ -122,7 +122,7 @@
         } else if (linkPage === 'index.html') {
           active = here === 'index.html' && !hash;
         } else {
-          active = here === linkPage && !hash;
+          active = here === linkPage && (!hash || linkPage === 'media.html');
         }
 
         a.classList.toggle('active', active);
@@ -351,3 +351,4 @@
     }
   });
 })();
+

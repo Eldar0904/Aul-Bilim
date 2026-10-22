@@ -15,7 +15,7 @@
     });
     var iframe = document.createElement('iframe');
     iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
-    var title = frame.closest('article').querySelector('h2 [lang="' + document.documentElement.lang + '"]');
+    var title = frame.closest('article').querySelector('h2 [lang="' + document.documentElement.lang + '"], h3 [lang="' + document.documentElement.lang + '"]');
     iframe.title = title ? title.textContent : 'Auyl Bilim';
     iframe.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
     iframe.allowFullscreen = true;
@@ -44,3 +44,4 @@
     });
   });
 })();
+
