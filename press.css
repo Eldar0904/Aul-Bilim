@@ -1,5 +1,5 @@
 .pr-block { background: var(--cream); }
-.pr-head { margin-bottom: 30px; max-width: 800px; }
+.pr-head { margin-bottom: 30px; max-width: none; }
 .pr-tag { display: block; color: var(--accent-deep); font: 800 11px var(--fh); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
 
 .pr-lead { font-family: var(--fb); font-size: 16px; font-weight: 400; line-height: 1.6; letter-spacing: normal; margin: 0; color: var(--body); }
