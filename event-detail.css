@@ -492,3 +492,6 @@
 
 
 .event-detail-page #main-content{padding-top:0}
+
+.ev-meta .ev-meta-stat b{color:var(--accent-soft,#ffd27a)}
+@media(min-width:901px){.ev-meta{flex-wrap:nowrap;gap:12px}.ev-meta li{min-width:0;flex:0 1 auto}.ev-meta .ev-meta-stat{flex:1}.ev-meta .ev-meta-stat span{white-space:normal}}
