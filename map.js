@@ -936,6 +936,7 @@
     }
 
     function goHome() {
+      if (/\/regions(?:\.html)?$/.test(location.pathname)) { location.href = 'index.html'; return; }
       showMapView({ skipHash: true, noScroll: true });
       syncingHash = true;
       history.replaceState({}, '', location.pathname + location.search);
