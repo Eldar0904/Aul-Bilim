@@ -10,6 +10,8 @@
   /* Each region: id, names, total schools, pin centre (fraction of map),
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
   var REGIONS = [
+    { id:'ulytau', kk:'Ұлытау облысы', ru:'Улытауская область', mapId:'KZ62', total:0, districts:[], schools:[], placeholder:true },
+    { id:'jetisu', kk:'Жетісу облысы', ru:'Область Жетісу', mapId:'KZ33', total:0, districts:[], schools:[], placeholder:true },
     {
       id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область', total: 71,
       mapId: 'KZ27',
@@ -238,7 +240,7 @@
   ensureRegionStatsOverrides();
 
   REGIONS.forEach(function (r) {
-    if (r.schools && r.schools.length) return;
+    if (r.placeholder || (r.schools && r.schools.length)) return;
     r.stats = {
       schools: String(r.total),
       cabinets: String(Math.round(r.total * 2.5)),
@@ -624,6 +626,16 @@
     }
 
     function renderSchoolsGrid(r) {
+      if (r.placeholder) {
+        schoolsRoot.innerHTML =
+          '<div class="region-schools-nav">' +
+          '<button type="button" class="region-schools-back" id="region-schools-map">← ' + bi('Картаны көру','К карте') + '</button>' +
+          '<button type="button" class="region-schools-back" id="region-schools-back">← ' + bi('Басты бетке','На главную') + '</button></div>' +
+          '<h2 class="region-schools-title">' + bi(r.kk,r.ru) + '</h2>';
+        document.getElementById('region-schools-map').addEventListener('click', goToMap);
+        document.getElementById('region-schools-back').addEventListener('click', goHome);
+        return;
+      }
       var schools = r.schools || [];
       if (!schools.length) {
         return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'Список школ скоро будет добавлен') + '</div>';
