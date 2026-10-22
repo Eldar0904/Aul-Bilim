@@ -1,0 +1,286 @@
+/* ============================================================
+   Страница фильма «Ментор». Та же палитра и пластика, что у
+   страницы мероприятия.
+   ============================================================ */
+
+.fl-hero {
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #08182f;
+}
+/* на постере уже есть крупный титр — в шапке он лишний, поэтому кадр
+   уходит в фон: мягкое размытие и приглушение */
+.fl-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  opacity: .62;
+  filter: saturate(1.02);
+  transform: scale(1.02);
+}
+.fl-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 24, 47, .6) 0%, rgba(8, 24, 47, .45) 34%, rgba(8, 24, 47, .88) 76%, rgba(8, 24, 47, .97) 100%);
+}
+.fl-hero-in { position: relative; z-index: 2; width: 100%; padding: 104px 28px 46px; color: #fff; }
+
+.fl-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .26);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 18px 9px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  transition: background .2s ease, transform .2s ease;
+}
+.fl-back:hover { background: rgba(255, 255, 255, .24); transform: translateX(-3px); }
+
+.fl-tag {
+  display: block;
+  width: fit-content;
+  background: var(--accent);
+  color: #16305A;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 6px 15px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.fl-hero h1 {
+  color: #fff;
+  font-size: clamp(38px, 7vw, 76px);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: .98;
+  margin: 0 0 12px;
+  text-shadow: 0 6px 30px rgba(4, 14, 30, .7);
+}
+.fl-sub {
+  font-size: clamp(15px, 1.7vw, 19px);
+  color: rgba(255, 255, 255, .84);
+  max-width: 640px;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+.fl-meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 26px; padding: 0; list-style: none; }
+.fl-meta li {
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, .88);
+  backdrop-filter: blur(6px);
+}
+.fl-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.fl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-family: var(--fh);
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 13px 24px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+.fl-btn:hover { background: rgba(255, 255, 255, .14); transform: translateY(-2px); }
+.fl-btn svg { width: 17px; height: 17px; }
+.fl-btn--primary { background: var(--accent); color: #16305A; border-color: transparent; }
+.fl-btn--primary:hover { background: var(--accent-soft); }
+
+/* ---------- плеер ---------- */
+.fl-player { background: var(--cream); padding: 54px 0 10px; }
+.fl-frame {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #08182f;
+  box-shadow: 0 30px 64px -40px rgba(20, 58, 110, .9);
+  cursor: pointer;
+}
+.fl-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.fl-frame:hover img { transform: scale(1.03); }
+.fl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.fl-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 30, 60, .1) 45%, rgba(9, 30, 60, .55) 100%);
+  transition: opacity .25s ease;
+}
+.fl-frame.is-live::after, .fl-frame.is-live .fl-play { display: none; }
+.fl-play {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .93);
+  box-shadow: 0 16px 40px -14px rgba(4, 14, 30, .85);
+  transition: transform .22s ease;
+}
+.fl-frame:hover .fl-play { transform: translate(-50%, -50%) scale(1.07); }
+.fl-play svg { width: 26px; height: 26px; margin-left: 4px; fill: var(--primary); }
+
+/* ---------- о фильме ---------- */
+.fl-about { background: var(--cream); padding: 40px 0 56px; }
+.fl-lead {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.7;
+  color: var(--body);
+  text-align: center;
+}
+.fl-lead b { color: var(--primary-dark); font-weight: 700; }
+
+.fl-idea { background: #fff; padding: 58px 0 62px; border-top: 1px solid var(--line); }
+.fl-h2 {
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  color: var(--primary-dark);
+  text-align: center;
+  margin: 0 0 10px;
+}
+.fl-h2-sub { text-align: center; font-size: 15px; color: var(--body); margin: 0 auto 30px; max-width: 640px; line-height: 1.65; }
+
+.fl-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; }
+.fl-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px 26px 22px;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.fl-card:hover { transform: translateY(-3px); box-shadow: 0 22px 46px -32px rgba(20, 58, 110, .7); }
+.fl-card-n {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--accent-deep);
+  font-family: var(--fh);
+  font-size: 12.5px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums lining-nums;
+  margin-bottom: 12px;
+}
+.fl-card h3 { font-family: var(--fh); font-size: 17px; font-weight: 800; color: var(--primary-dark); margin: 0 0 8px; line-height: 1.25; }
+.fl-card p { font-size: 14.2px; line-height: 1.62; color: var(--body); margin: 0; }
+
+/* ---------- связь с проектом ---------- */
+.fl-link { background: var(--cream); padding: 52px 0 66px; }
+.fl-link-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(150deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  padding: 34px 38px;
+  color: #fff;
+  box-shadow: 0 30px 60px -40px rgba(20, 58, 110, .8);
+}
+.fl-link-card h3 { font-size: 23px; font-weight: 800; margin: 0 0 10px; color: #fff; }
+.fl-link-card p { font-size: 15px; line-height: 1.65; color: rgba(255, 255, 255, .82); margin: 0; max-width: 620px; }
+
+@media (max-width: 900px) {
+  .fl-hero { min-height: 56vh; }
+  .fl-hero-in { padding: 88px 18px 34px; }
+  .fl-cards { grid-template-columns: 1fr; }
+  .fl-link-card { grid-template-columns: 1fr; padding: 26px 22px; }
+  .fl-player { padding: 38px 0 6px; }
+  .fl-frame { border-radius: 16px; }
+  .fl-play { width: 60px; height: 60px; }
+  .fl-idea { padding: 44px 0 46px; }
+}
+
+/* ============================================================
+   Список фильмов: три ленты, у каждой постер и описание рядом.
+   ============================================================ */
+.fl-list { background: var(--cream); padding: 52px 0 46px; }
+.fl-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 26px 0;
+}
+.fl-item + .fl-item { border-top: 1px solid var(--line); }
+.fl-item--rev .fl-frame { order: 2; }
+.fl-item--rev .fl-item-body { order: 1; }
+
+.fl-item .fl-frame { margin: 0; max-width: none; border-radius: 18px; }
+.fl-meta-line {
+  display: block;
+  font-family: var(--fh);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 9px;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.fl-item-body h2 {
+  font-size: clamp(21px, 2.1vw, 29px);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  color: var(--primary-dark);
+  line-height: 1.18;
+  margin: 0 0 11px;
+}
+.fl-item-body p { font-size: 14.6px; line-height: 1.65; color: var(--body); margin: 0 0 18px; }
+.fl-item-body .fl-btn { color: var(--primary-dark); border-color: var(--line); background: #fff; }
+.fl-item-body .fl-btn:hover { background: var(--cream-deep); }
+.fl-item-body .fl-btn--primary { background: var(--accent); color: #16305A; border-color: transparent; }
+.fl-item-body .fl-btn--primary:hover { background: var(--accent-soft); }
+
+@media (max-width: 900px) {
+  .fl-list { padding: 34px 0 30px; }
+  .fl-item { grid-template-columns: 1fr; gap: 16px; padding: 20px 0; }
+  .fl-item--rev .fl-frame { order: 0; }
+  .fl-item--rev .fl-item-body { order: 0; }
+  .fl-item-body p { font-size: 13.8px; margin-bottom: 14px; }
+}
+
+/* Keep playback controls readable within the existing site palette. */
+.fl-frame:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.fl-watch { background: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  .fl-back, .fl-btn, .fl-frame img, .fl-play, .fl-card { transition: none; }
+}
