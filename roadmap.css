@@ -488,3 +488,7 @@
   .road-layout .road-panel-out span { font-size:13px; line-height:1.5; }
   .road-layout .road-panel-nav { padding:16px 20px 0; }
 }
+
+.stages-page #main-content {padding-top:var(--nav-h,96px);min-height:calc(100vh - 96px)}
+.stages-page #stages h1 {font-size:28px;line-height:1.2;margin:0}
+@media(max-width:640px){.stages-page #stages h1{font-size:24px}}
