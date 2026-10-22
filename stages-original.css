@@ -1,0 +1,3 @@
+.stages-original-page #main-content{padding-top:var(--nav-h,96px);min-height:calc(100vh - 96px)}
+.stages-original-page #stages h1{font-size:28px;line-height:1.2;margin:0}
+@media(max-width:640px){.stages-original-page #stages h1{font-size:24px}}
