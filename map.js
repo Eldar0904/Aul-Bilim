@@ -626,16 +626,6 @@
     }
 
     function renderSchoolsGrid(r) {
-      if (r.placeholder) {
-        schoolsRoot.innerHTML =
-          '<div class="region-schools-nav">' +
-          '<button type="button" class="region-schools-back" id="region-schools-map">← ' + bi('Картаны көру','К карте') + '</button>' +
-          '<button type="button" class="region-schools-back" id="region-schools-back">← ' + bi('Басты бетке','На главную') + '</button></div>' +
-          '<h2 class="region-schools-title">' + bi(r.kk,r.ru) + '</h2>';
-        document.getElementById('region-schools-map').addEventListener('click', goToMap);
-        document.getElementById('region-schools-back').addEventListener('click', goHome);
-        return;
-      }
       var schools = r.schools || [];
       if (!schools.length) {
         return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'Список школ скоро будет добавлен') + '</div>';
@@ -773,6 +763,17 @@
 
     function renderSchoolsSection(r) {
       if (!schoolsRoot || !schoolsBlock) return;
+      if (r.placeholder) {
+        schoolsRoot.innerHTML =
+          '<div class="region-schools-nav">' +
+          '<button type="button" class="region-schools-back" id="region-schools-map">← ' + bi('Картаны көру','К карте') + '</button>' +
+          '<button type="button" class="region-schools-back" id="region-schools-back">← ' + bi('Басты бетке','На главную') + '</button></div>' +
+          '<h2 class="region-schools-title">' + bi(r.kk,r.ru) + '</h2>';
+        document.getElementById('region-schools-map').addEventListener('click', goToMap);
+        document.getElementById('region-schools-back').addEventListener('click', goHome);
+        return;
+      }
+
       var schools = r.schools || [];
       var gridHtml = renderSchoolsGrid(r);
       var districtChips = renderDistrictChips(r);
