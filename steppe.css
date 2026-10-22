@@ -3172,3 +3172,13 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
  .media-dropdown:not(.open):hover .nav-dropdown-menu { opacity: 0; visibility: hidden; pointer-events: none; }
  .media-dropdown:not(.open):hover .nav-dropdown-toggle svg { transform: none; }
 }
+
+/* Highlight Ulytau and Jetisu on the coverage map. */
+.map-hot .map-region[data-map-id="KZ62"],
+.map-hot .map-region[data-map-id="KZ33"] { fill:#d99034; }
+.map-hot .map-label[data-map-label="KZ62"],
+.map-hot .map-label[data-map-label="KZ33"] { fill:#fff; stroke:rgba(124,76,20,.72); stroke-width:4; }
+@media(max-width:640px) {
+  .map-hot .map-label[data-map-label="KZ62"],
+  .map-hot .map-label[data-map-label="KZ33"] { stroke-width:3; }
+}
