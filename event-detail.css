@@ -1,0 +1,266 @@
+/* ============================================================
+   Auyl Bilim — страница мероприятия (events.html).
+   Стили в тех же токенах, что и весь сайт.
+   ============================================================ */
+
+/* ---------- шапка события ---------- */
+.ev-hero {
+  position: relative;
+  min-height: 64vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--primary-deep, #0E2A52);
+}
+.ev-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+.ev-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9,30,60,.62) 0%, rgba(9,30,60,.38) 30%, rgba(9,30,60,.82) 70%, rgba(9,30,60,.96) 100%);
+}
+.ev-hero-in { position: relative; z-index: 2; width: 100%; padding: 110px 28px 52px; color: #fff; }
+
+.ev-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.26);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 18px 9px 14px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+  transition: background .2s ease, transform .2s ease;
+  backdrop-filter: blur(6px);
+}
+.ev-back:hover { background: rgba(255,255,255,.24); transform: translateX(-3px); }
+
+.ev-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #16305A;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 6px 15px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.ev-hero h1 {
+  font-size: clamp(34px, 6vw, 66px);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  line-height: 1;
+  margin: 0 0 12px;
+  text-shadow: 0 4px 26px rgba(6,22,46,.5);
+}
+.ev-sub {
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 500;
+  color: var(--accent-soft);
+  margin: 0 0 26px;
+  max-width: 620px;
+}
+.ev-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ev-meta li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 16px;
+  padding: 13px 20px;
+  min-width: 132px;
+  backdrop-filter: blur(6px);
+}
+.ev-meta b {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.ev-meta span { font-size: 13px; color: rgba(255,255,255,.76); }
+
+/* ---------- о событии ---------- */
+.ev-about { background: var(--cream); }
+.ev-lead { max-width: 780px; margin-top: 14px; font-size: 16px; line-height: 1.7; color: var(--body); }
+.ev-stats { margin-top: 30px; }
+.ev-stats .stat-strip {
+  background: linear-gradient(150deg, var(--primary), var(--primary-dark));
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 24px 54px -34px rgba(20,58,110,.6);
+}
+.ev-stats .stat-strip-in { display: grid; grid-template-columns: repeat(4, 1fr); }
+.ev-stats .ss { padding: 26px 22px; border-right: 1px solid rgba(255,255,255,.14); text-align: center; }
+.ev-stats .ss:last-child { border-right: 0; }
+.ev-stats .ss .n {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent-soft);
+  letter-spacing: -.03em;
+  margin-bottom: 8px;
+}
+.ev-stats .ss .l { font-size: 13.5px; color: rgba(255,255,255,.8); }
+
+/* ---------- программа ---------- */
+.ev-prog { background: #fff; }
+.ev-timeline { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 14px; }
+.ev-timeline li {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 22px;
+  align-items: start;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px 26px;
+}
+.ev-time {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent-deep);
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.ev-timeline h3 { font-size: 19px; font-weight: 800; color: var(--primary-dark); margin: 0 0 8px; }
+.ev-timeline p { font-size: 14.5px; line-height: 1.62; color: var(--body); margin: 0; }
+
+/* ---------- выставка ---------- */
+.ev-expo { background: var(--cream); }
+.ev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; }
+.ev-grid figure {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform .24s ease, box-shadow .24s ease;
+}
+.ev-grid figure:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -34px rgba(20,58,110,.55); }
+.ev-grid img { width: 100%; aspect-ratio: 16/11; object-fit: cover; display: block; }
+.ev-grid figcaption { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 5px; }
+.ev-grid figcaption b { font-size: 16.5px; font-weight: 800; color: var(--primary-dark); }
+.ev-grid figcaption span { font-size: 14px; color: var(--body); }
+
+/* ---------- фотолента ---------- */
+.ev-shots { background: #fff; }
+.ev-shots-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+.ev-shots-row img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+/* ---------- ссылка на сайт события ---------- */
+.ev-cta { background: var(--cream); padding-bottom: 96px; }
+.ev-cta-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  background: linear-gradient(150deg, var(--primary), var(--primary-deep, #0E2A52));
+  border-radius: 26px;
+  padding: 38px 42px;
+  color: #fff;
+  box-shadow: 0 30px 60px -40px rgba(20,58,110,.7);
+}
+.ev-cta-card h3 { font-size: 25px; font-weight: 800; margin: 0 0 10px; color: #fff; }
+.ev-cta-card p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.8); margin: 0; max-width: 620px; }
+.ev-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.ev-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 14px 24px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  transition: .2s;
+  white-space: nowrap;
+}
+.ev-btn:hover { background: rgba(255,255,255,.14); }
+.ev-btn--primary { background: var(--accent); color: #16305A; border-color: transparent; }
+.ev-btn--primary:hover { background: var(--accent-soft); }
+
+/* текущий пункт меню */
+.nav-links a.is-current { color: var(--primary); font-weight: 700; }
+
+@media (max-width: 1000px) {
+  .ev-grid { grid-template-columns: repeat(2, 1fr); }
+  .ev-shots-row { grid-template-columns: 1fr; }
+  .ev-stats .stat-strip-in { grid-template-columns: repeat(2, 1fr); }
+  .ev-stats .ss { border-bottom: 1px solid rgba(255,255,255,.14); }
+  .ev-stats .ss:nth-child(2n) { border-right: 0; }
+  .ev-stats .ss:nth-last-child(-n+2) { border-bottom: 0; }
+  .ev-cta-card { grid-template-columns: 1fr; padding: 30px 26px; }
+}
+@media (max-width: 640px) {
+  .ev-hero { min-height: 74vh; }
+  .ev-hero-in { padding: 90px 18px 40px; }
+  .ev-grid { grid-template-columns: 1fr; }
+  .ev-timeline li { grid-template-columns: 1fr; gap: 10px; padding: 18px 20px; }
+  .ev-stats .stat-strip-in { grid-template-columns: 1fr; }
+  .ev-stats .ss { border-right: 0; }
+  .ev-meta li { min-width: 0; flex: 1 1 auto; padding: 11px 16px; }
+  .ev-meta b { font-size: 20px; }
+}
+
+/* ---------- кнопка перехода на сайт мероприятия ---------- */
+.ev-hero-in .ev-back + .ev-back { margin-left: 10px; }
+.ev-back--site {
+  background: var(--accent);
+  border-color: transparent;
+  color: #16305A;
+  font-weight: 700;
+}
+.ev-back--site:hover { background: var(--accent-soft); transform: translateX(0) translateY(-2px); }
+@media (max-width: 640px) {
+  .ev-hero-in .ev-back { margin-bottom: 10px; }
+  .ev-hero-in .ev-back + .ev-back { margin-left: 0; }
+  .ev-hero-in .ev-back:last-of-type { margin-bottom: 22px; }
+}
+.ev-hero-in .ev-tag { display: block; width: fit-content; }
+
+/* читаемость заголовка поверх фотографии */
+.ev-hero::after {
+  background:
+    radial-gradient(120% 78% at 20% 76%, rgba(9,30,60,.80) 0%, rgba(9,30,60,0) 62%),
+    linear-gradient(180deg, rgba(9,30,60,.58) 0%, rgba(9,30,60,.46) 26%, rgba(9,30,60,.86) 62%, rgba(9,30,60,.97) 100%);
+}
+.ev-hero h1 { text-shadow: 0 6px 30px rgba(6,22,46,.75), 0 2px 8px rgba(6,22,46,.5); }
+.ev-sub { text-shadow: 0 2px 12px rgba(6,22,46,.6); }
+.ev-hero h1 { color: #fff; }
+
+/* кадр зала: экран со сценой держим в верхней части, текст ложится на ряды кресел */
+.ev-hero-photo { object-position: center 55%; }
+
+
+.event-detail-page #main-content{padding-top:0}

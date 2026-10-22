@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="steppe.css?v=113" />
-<link rel="stylesheet" href="events.css?v=5" />
+<link rel="stylesheet" href="event-detail.css?v=1" />
 </head>
-<body class="events-page">
+<body class="event-detail-page">
 <div class="grain"></div>
 <a class="skip-link" href="#main-content"><span lang="kk" data-copy="global-skip-kk">Негізгі мазмұнға өту</span><span lang="ru" data-copy="global-skip-ru">Перейти к основному содержанию</span></a>
 
@@ -35,23 +35,157 @@
 </nav>
 
 <main id="main-content">
-  <section class="events-showcase">
-    <div class="events-featured wrap" aria-labelledby="featured-title">
-      <div class="events-section-head">
-        <p><span lang="kk" data-copy="events-007-kk">Таңдаулы іс-шара</span><span lang="ru" data-copy="events-008-ru">Главное мероприятие</span></p>
-        <h2 id="featured-title"><span lang="kk" data-copy="events-009-kk">Жақын арада</span><span lang="ru" data-copy="events-010-ru">Ближайшее событие</span></h2>
-      </div>
 
-      <article class="event-card" data-event-date="2026-08-25T15:30:00+05:00" data-event-end="2026-08-25T17:50:00+05:00">
-      <div class="event-card__media">
-        <img data-media-slot="events-featured" src="https://abtalks.kz/assets/og-cover.jpg" alt="Auyl Bilim Talks" width="1200" height="675" />
-        <a class="event-card__media-cta" href="https://abtalks.kz/">
-          <span lang="kk" data-copy="events-019-kk">Іс-шараны көру</span><span lang="ru" data-copy="events-020-ru">Открыть страницу события</span><span class="event-card__media-arrow" aria-hidden="true">↗</span>
+<!-- ============ ШАПКА СОБЫТИЯ ============ -->
+<header class="ev-hero">
+  <img class="ev-hero-photo" src="https://mainpage.abtalks.kz/assets/event/hero-hall.webp" alt="Зал форума Auyl Bilim Talks перед началом" width="1600" height="900" />
+  <div class="wrap ev-hero-in">
+    <a class="ev-back" href="index.html">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>
+      <span lang="kk">Басты бетке оралу</span><span lang="ru">Вернуться на главную</span>
+    </a>
+    <a class="ev-back ev-back--site" href="https://abtalks.kz" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>
+      <span lang="kk">Іс-шара сайты · abtalks.kz</span><span lang="ru">Сайт мероприятия · abtalks.kz</span>
+    </a>
+    <span class="ev-tag"><span lang="kk">Өткен іс-шара</span><span lang="ru">Прошедшее мероприятие</span></span>
+    <h1>Auyl Bilim Talks</h1>
+    <p class="ev-sub">
+      <span lang="kk">Ауыл педагогтерінің республикалық тәжірибе алмасу форумы</span>
+      <span lang="ru">Республиканский форум обмена опытом сельских педагогов</span>
+    </p>
+    <ul class="ev-meta">
+      <li><b>25</b><span lang="kk">тамыз 2026</span><span lang="ru">августа 2026</span></li>
+      <li><b>15:00</b><span lang="kk">– 17:27</span><span lang="ru">– 17:27</span></li>
+      <li><b>Астана</b><span lang="kk">Maqsut Narikbayev University</span><span lang="ru">Maqsut Narikbayev University</span></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ О СОБЫТИИ ============ -->
+<section class="block ev-about">
+  <div class="wrap">
+    <div class="dir-head">
+      <div class="dir-head-main">
+        <span class="kicker"><span lang="kk">Іс-шара туралы</span><span lang="ru">О мероприятии</span></span>
+        <h2><span lang="kk">Ауыл мұғалімдері бір алаңда</span><span lang="ru">Сельские педагоги на одной площадке</span></h2>
+        <p class="ev-lead">
+          <span lang="kk">Auyl Bilim Talks — «Ауыл — білім желкені» жобасының алаңы. Мұнда ауыл мектептерінің директорлары мен мұғалімдері бір жылдық нақты нәтижелерімен бөлісті: не өзгергенін, оған қалай қол жеткізгенін және бұл тәжірибені басқа мектептердің қалай қолдана алатынын түсіндірді.</span>
+          <span lang="ru">Auyl Bilim Talks — площадка проекта «Ауыл — білім желкені». Директора и учителя сельских школ представили конкретные результаты года: что изменилось, как этого удалось достичь и как другие школы могут применить этот опыт.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="ev-stats">
+      <div class="stat-strip">
+        <div class="stat-strip-in">
+          <div class="ss"><div class="n">150</div><div class="l"><span lang="kk">қатысушы</span><span lang="ru">участников</span></div></div>
+          <div class="ss"><div class="n">8</div><div class="l"><span lang="kk">баяндама</span><span lang="ru">докладов</span></div></div>
+          <div class="ss"><div class="n">5</div><div class="l"><span lang="kk">көрме бағыты</span><span lang="ru">направлений выставки</span></div></div>
+          <div class="ss"><div class="n">2:27</div><div class="l"><span lang="kk">сағат бағдарлама</span><span lang="ru">часа программы</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПРОГРАММА ДНЯ ============ -->
+<section class="block ev-prog">
+  <div class="wrap">
+    <div class="dir-head">
+      <div class="dir-head-main">
+        <h2><span lang="kk">Күн бағдарламасы</span><span lang="ru">Программа дня</span></h2>
+      </div>
+    </div>
+    <ol class="ev-timeline">
+      <li>
+        <span class="ev-time">15:00</span>
+        <div>
+          <h3><span lang="kk">Көрме және кофе-брейк</span><span lang="ru">Выставка и кофе-брейк</span></h3>
+          <p><span lang="kk">Конгресс-холл фойесінде бес бағыт бойынша білім беру көрмесі ашылды: жабдықты қолмен ұстап көруге және мамандармен сөйлесуге болды.</span><span lang="ru">В фойе конгресс-холла открылась образовательная выставка по пяти направлениям: оборудование можно было потрогать и обсудить со специалистами.</span></p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-time">16:00</span>
+        <div>
+          <h3><span lang="kk">Ресми ашылу</span><span lang="ru">Официальное открытие</span></h3>
+          <p><span lang="kk">Оқу-ағарту министрлігі, «Қазақстан халқына» және «БІЛІМ-ИННОВАЦИЯ» қорлары өкілдерінің сөзі.</span><span lang="ru">Выступления представителей Министерства просвещения, фондов «Қазақстан халқына» и «БІЛІМ-ИННОВАЦИЯ».</span></p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-time">16:21</span>
+        <div>
+          <h3><span lang="kk">Сегіз баяндама</span><span lang="ru">Восемь докладов</span></h3>
+          <p><span lang="kk">Ауыл мектептерінің педагогтері жеке тәжірибесімен бөлісті: бір кабинеттен басталған өзгеріс, EcoSTEAM моделі, оқушы мен ұстаз серіктестігі. Әр спикерге 7 минут.</span><span lang="ru">Педагоги сельских школ поделились личным опытом: перемены, начавшиеся с одного кабинета, модель EcoSTEAM, партнёрство ученика и учителя. Каждому спикеру — 7 минут.</span></p>
+        </div>
+      </li>
+      <li>
+        <span class="ev-time">17:17</span>
+        <div>
+          <h3><span lang="kk">Марапаттау және ұтыс ойыны</span><span lang="ru">Награждение и розыгрыш</span></h3>
+          <p><span lang="kk">Спикерлерді марапаттау, көрме купондары бойынша жүлделерді ойнату және бейресми әңгіме.</span><span lang="ru">Награждение спикеров, розыгрыш призов по купонам выставки и неформальное общение.</span></p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ВЫСТАВКА ============ -->
+<section class="block ev-expo">
+  <div class="wrap">
+    <div class="dir-head">
+      <div class="dir-head-main">
+        <h2><span lang="kk">Көрменің бес бағыты</span><span lang="ru">Пять направлений выставки</span></h2>
+        <p class="ev-lead"><span lang="kk">Көрмеде жоба мектептерге беретін жабдықтың бәрі қойылды. Қонақ бес аймақты аралап, купонына бес мөр жинады.</span><span lang="ru">На выставке было представлено всё оборудование, которое проект передаёт школам. Гость обходил пять зон и собирал пять печатей в свой купон.</span></p>
+      </div>
+    </div>
+    <div class="ev-grid">
+      <figure><img src="https://mainpage.abtalks.kz/assets/event/science.jpg" alt="" loading="lazy" /><figcaption><b>Science Lab</b><span lang="kk">11 зертханалық модуль</span><span lang="ru">11 лабораторных модулей</span></figcaption></figure>
+      <figure><img src="https://mainpage.abtalks.kz/assets/event/pasco.jpg" alt="" loading="lazy" /><figcaption><b>PASCO</b><span lang="kk">25 сымсыз цифрлық датчик</span><span lang="ru">25 беспроводных датчиков</span></figcaption></figure>
+      <figure><img src="https://mainpage.abtalks.kz/assets/event/robotics.jpg" alt="" loading="lazy" /><figcaption><b>Robotics</b><span lang="kk">9 робототехника жинағы</span><span lang="ru">9 наборов по робототехнике</span></figcaption></figure>
+      <figure><img src="https://mainpage.abtalks.kz/assets/event/ustaz.jpg" alt="" loading="lazy" /><figcaption><b>Ustaz PRO</b><span lang="kk">ұстаздарға арналған платформа</span><span lang="ru">платформа для педагогов</span></figcaption></figure>
+      <figure><img src="https://mainpage.abtalks.kz/assets/event/qundylyq.jpg" alt="" loading="lazy" /><figcaption><b>Qundylyq.kz</b><span lang="kk">тәрбие бағдарламасы</span><span lang="ru">воспитательная программа</span></figcaption></figure>
+      <figure><img src="https://mainpage.abtalks.kz/assets/event/draw.jpg" alt="" loading="lazy" /><figcaption><b><span lang="kk">Жүлде ойыны</span><span lang="ru">Розыгрыш призов</span></b><span lang="kk">бес мөр жинаған қонақтар арасында</span><span lang="ru">среди собравших пять печатей</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФОТОЛЕНТА ============ -->
+<section class="block ev-shots">
+  <div class="wrap">
+    <div class="dir-head">
+      <div class="dir-head-main">
+        <h2><span lang="kk">Іс-шара сәттері</span><span lang="ru">Как это было</span></h2>
+      </div>
+    </div>
+    <div class="ev-shots-row">
+      <img src="https://mainpage.abtalks.kz/assets/event/reg.jpg" alt="" loading="lazy" />
+      <img src="https://mainpage.abtalks.kz/assets/event/guests.jpg" alt="" loading="lazy" />
+      <img src="https://mainpage.abtalks.kz/assets/event/violin.jpg" alt="" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ ССЫЛКА НА САЙТ СОБЫТИЯ ============ -->
+<section class="block ev-cta">
+  <div class="wrap">
+    <div class="ev-cta-card">
+      <div>
+        <h3><span lang="kk">Іс-шараның толық сайты</span><span lang="ru">Полный сайт мероприятия</span></h3>
+        <p><span lang="kk">Бағдарлама, спикерлер, зал схемасы, серіктестер және көрменің толық құрамы — abtalks.kz сайтында.</span><span lang="ru">Программа, спикеры, схема зала, партнёры и полный состав выставки — на сайте abtalks.kz.</span></p>
+      </div>
+      <div class="ev-cta-btns">
+        <a class="ev-btn ev-btn--primary" href="https://abtalks.kz" target="_blank" rel="noopener">
+          <span lang="kk">Сайтты ашу</span><span lang="ru">Открыть сайт</span> ↗
+        </a>
+        <a class="ev-btn" href="index.html">
+          <span lang="kk">Басты бетке</span><span lang="ru">На главную</span>
         </a>
       </div>
-      </article>
     </div>
-  </section>
+  </div>
+</section>
+
 </main>
 
 <footer class="site">
