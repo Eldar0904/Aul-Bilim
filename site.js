@@ -99,7 +99,7 @@
     function navPageName() {
       var part = location.pathname.split('/').pop() || '';
       if (!part || part === 'index.html') return 'index.html';
-      return part;
+      return part.indexOf('.') < 0 ? part + '.html' : part;
     }
 
     function setActiveNav() {
