@@ -82,6 +82,12 @@
       var toggle = dd.querySelector('.nav-dropdown-toggle');
       if (!toggle) return;
 
+      dd.addEventListener('focusout', function (e) {
+        if (!dd.contains(e.relatedTarget)) {
+          dd.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
       toggle.addEventListener('click', function (e) {
         e.stopPropagation();
         var wasOpen = dd.classList.contains('open');
@@ -94,6 +100,15 @@
     });
 
     document.addEventListener('click', closeAllDropdowns);
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var open = document.querySelector('.nav-dropdown.open');
+      if (open) {
+        var toggle = open.querySelector('.nav-dropdown-toggle');
+        closeAllDropdowns();
+        if (toggle) toggle.focus();
+      }
+    });
 
     // active nav link by page + program hash
     function navPageName() {

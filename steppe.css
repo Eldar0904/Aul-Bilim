@@ -3163,3 +3163,12 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 @media (max-width: 480px) {
   .footer-social-row { flex-wrap: wrap; }
 }
+
+
+/* Media uses a click/keyboard disclosure on every screen size. */
+.media-dropdown > button { background: none; border: 0; border-bottom: 3px solid transparent; cursor: pointer; }
+.media-dropdown.active > button { color: var(--primary); border-bottom-color: var(--accent); }
+@media(min-width:1101px) {
+ .media-dropdown:not(.open):hover .nav-dropdown-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+ .media-dropdown:not(.open):hover .nav-dropdown-toggle svg { transform: none; }
+}
