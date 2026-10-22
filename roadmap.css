@@ -1,0 +1,473 @@
+/* ============================================================
+   Auyl Bilim — «Дорожная карта проекта».
+   Единственный новый компонент главной. Переменные и приёмы —
+   из steppe.css действующего сайта, шрифт — из theme.css.
+   ============================================================ */
+
+.road-block {
+  position: relative;
+  background:
+    radial-gradient(900px 420px at 88% -10%, rgba(242, 164, 19, .10), transparent 62%),
+    radial-gradient(720px 380px at 4% 106%, rgba(27, 79, 138, .10), transparent 64%),
+    var(--cream);
+  overflow: hidden;
+}
+
+.road-lead {
+  max-width: 740px;
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--body);
+}
+
+/* ---------- легенда фаз ---------- */
+.road-legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 6px; }
+.road-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 9px 8px 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 5px 16px -12px rgba(20, 58, 110, .4);
+}
+.road-lg i {
+  width: 11px; height: 11px; border-radius: 50%; flex: none;
+  background: var(--lg);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--lg) 18%, transparent);
+}
+.road-lg b {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #fff;
+  background: var(--lg);
+  border-radius: 100px;
+  padding: 4px 10px;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.road-lg:hover { transform: translateY(-2px); box-shadow: 0 12px 26px -16px rgba(20, 58, 110, .5); }
+.road-lg.is-on { border-color: var(--lg); background: color-mix(in srgb, var(--lg) 7%, #fff); }
+
+/* ---------- карта ---------- */
+.road-map { position: relative; margin-top: 12px; padding: 6px 0 2px; }
+.road-svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.road-track {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 26;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 10px 20px rgba(20, 58, 110, .13));
+}
+.road-track-line {
+  fill: none;
+  stroke: rgba(27, 79, 138, .16);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 2 12;
+}
+.road-track-flow {
+  fill: none;
+  stroke: url(#rgFlow);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 260 3000;
+  stroke-dashoffset: 3260;
+  opacity: 0;
+}
+.road-map.is-drawn .road-track-flow {
+  opacity: .9;
+  animation: roadFlow 7s linear infinite;
+}
+@keyframes roadFlow {
+  from { stroke-dashoffset: 3260; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* ---------- станции ---------- */
+.road-stop {
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+  transform-box: fill-box;
+}
+.road-map.is-drawn .road-stop {
+  animation: roadPop .5s cubic-bezier(.2, .8, .3, 1) forwards;
+}
+@keyframes roadPop { from { opacity: 0; } to { opacity: 1; } }
+
+.road-halo {
+  fill: #fff;
+  stroke: rgba(27, 79, 138, .14);
+  stroke-width: 2;
+  transition: r .24s cubic-bezier(.2, .8, .3, 1), stroke .24s ease;
+}
+.road-dot { transition: r .24s cubic-bezier(.2, .8, .3, 1); }
+.road-ico {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.road-badge circle { fill: #fff; stroke: var(--c); stroke-width: 2; }
+.road-badge-n {
+  text-anchor: middle;
+  font-size: 12px;
+  font-weight: 800;
+  fill: var(--c);
+  font-variant-numeric: tabular-nums lining-nums;
+  pointer-events: none;
+}
+.road-pulse {
+  fill: none;
+  stroke: var(--c);
+  stroke-width: 2;
+  opacity: 0;
+}
+.road-stop.is-active .road-pulse { animation: roadPulse 2.1s ease-out infinite; }
+@keyframes roadPulse {
+  0%   { r: 28; opacity: .5; stroke-width: 2.4; }
+  100% { r: 52; opacity: 0;  stroke-width: .4; }
+}
+
+.road-stop:hover .road-halo,
+.road-stop:focus-visible .road-halo { r: 37; stroke: color-mix(in srgb, var(--c) 42%, transparent); }
+.road-stop:hover .road-dot { r: 29; }
+.road-stop.is-active .road-halo { r: 40; stroke: var(--c); }
+.road-stop.is-active .road-dot { r: 31; }
+
+.road-stop-label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.28;
+  color: var(--primary-dark);
+  text-align: center;
+  letter-spacing: -.01em;
+  transition: color .2s ease;
+}
+.road-stop.is-active .road-stop-label { color: var(--c); }
+
+/* ---------- панель шага ---------- */
+.road-panel {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 0 0 26px;
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 26px 60px -40px rgba(20, 58, 110, .55);
+  opacity: 0;
+  transform: translateY(10px);
+}
+.road-panel.is-in { opacity: 1; transform: none; transition: opacity .34s ease, transform .34s cubic-bezier(.2, .8, .3, 1); }
+.road-panel-bar { height: 5px; background: linear-gradient(90deg, var(--c2), var(--c)); }
+
+.road-panel-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 30px 0;
+  margin-bottom: 16px;
+}
+.road-panel-n {
+  width: 58px; height: 58px;
+  border-radius: 18px;
+  display: grid; place-items: center;
+  font-size: 21px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(150deg, var(--c2), var(--c));
+  font-variant-numeric: tabular-nums lining-nums;
+  box-shadow: 0 12px 22px -14px var(--c);
+}
+.road-panel-phase {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 6px;
+}
+.road-panel-head h4 {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin: 0;
+  line-height: 1.22;
+}
+.road-panel-text {
+  padding: 0 30px;
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: var(--body);
+  margin: 0 0 18px;
+  max-width: 900px;
+}
+.road-panel-out {
+  margin: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  background: color-mix(in srgb, var(--c) 6%, var(--cream));
+  border: 1px solid color-mix(in srgb, var(--c) 18%, transparent);
+  border-radius: 16px;
+  padding: 15px 20px;
+}
+.road-panel-out b {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c);
+}
+.road-panel-out span { font-size: 15px; font-weight: 600; color: var(--primary-dark); }
+
+.road-panel-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 30px 0;
+}
+.road-nav-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--primary);
+  font-size: 17px;
+  line-height: 1;
+  transition: .18s;
+}
+.road-nav-btn:hover { background: var(--c); color: #fff; border-color: var(--c); }
+.road-nav-count { font-size: 13.5px; color: var(--body); font-variant-numeric: tabular-nums lining-nums; }
+.road-nav-count b { color: var(--primary-dark); font-weight: 800; }
+
+/* ---------- ярлык ответственного ---------- */
+.road-owner {
+  white-space: nowrap;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  border-radius: 100px;
+}
+.road-owner--jf    { background: rgba(27, 79, 138, .10);  color: var(--primary); }
+.road-owner--bi    { background: rgba(28, 122, 92, .12);  color: #146B4C; }
+.road-owner--local { background: rgba(232, 130, 10, .14); color: #A66607; }
+.road-owner--edu   { background: rgba(108, 62, 146, .12); color: #6C3E92; }
+.road-owner--all    { background: rgba(20, 58, 110, .12);  color: #143A6E; }
+.road-owner--vendor { background: rgba(176, 88, 24, .13);  color: #97500F; }
+
+/* ---------- список для узких экранов ---------- */
+.road-list { display: none; }
+.road-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--c);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+.road-item-n {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  display: grid; place-items: center;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(150deg, var(--c2), var(--c));
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.road-item-phase {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 5px;
+}
+.road-item-body h4 { font-size: 18px; font-weight: 800; color: var(--primary-dark); margin: 0 0 7px; }
+.road-item-body p { font-size: 14.5px; line-height: 1.6; color: var(--body); margin: 0 0 10px; }
+.road-item-out {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--primary-dark);
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+.road-item-out b {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 3px;
+}
+.road-item .road-owner { grid-column: 1 / -1; justify-self: start; margin-top: 10px; }
+
+@media (max-width: 1040px) {
+  .road-map, .road-panel { display: none; }
+  .road-list { display: block; margin-top: 22px; }
+}
+@media (max-width: 640px) {
+  .road-item { grid-template-columns: 42px 1fr; gap: 12px; padding: 16px; }
+  .road-item-n { width: 42px; height: 42px; font-size: 15px; }
+  .road-item-body h4 { font-size: 16.5px; }
+  .road-lg { font-size: 12px; padding: 8px 7px 8px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .road-track-flow { animation: none !important; opacity: .8 !important; stroke-dashoffset: 0 !important; }
+  .road-stop { opacity: 1 !important; animation: none !important; }
+  .road-pulse { animation: none !important; }
+  .road-panel { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------- узкие экраны: карточки шагов — слайдер ---------- */
+@media (max-width: 1040px) {
+  .road-panel { display: none; }
+  .road-list {
+    display: flex;
+    gap: 14px;
+    margin: 18px -18px 0;
+    padding: 4px 18px 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .road-list::-webkit-scrollbar { display: none; }
+  .road-item {
+    flex: 0 0 86%;
+    max-width: 420px;
+    scroll-snap-align: center;
+    margin-bottom: 0;
+    align-content: start;
+    transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+  }
+  .road-item.is-active {
+    border-color: var(--c);
+    box-shadow: 0 22px 46px -30px rgba(20, 58, 110, .6);
+  }
+  .road-swipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4px;
+    font-size: 12.5px;
+    color: var(--body);
+  }
+  .road-swipe-dots { display: flex; gap: 6px; }
+  .road-swipe-dots i {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(27, 79, 138, .22);
+    transition: background .2s ease, transform .2s ease;
+  }
+  .road-swipe-dots i.on { background: var(--accent); transform: scale(1.35); }
+}
+
+/* ============================================================
+   «Этапы проекта» на десктопе: карта и карточка шага занимали
+   больше экрана, чем помещается за раз. Ужимаем обе части.
+   ============================================================ */
+@media (min-width: 1041px) {
+  #stages.block { padding: 40px 0 44px; }
+  .road-map { max-width: none; margin: 2px auto 0; padding: 0; }
+  .road-legend { margin-bottom: 4px; }
+
+  .road-panel { border-radius: 18px; padding-bottom: 14px; margin-top: 2px; }
+  .road-panel-head { gap: 12px; padding: 13px 22px 0; margin-bottom: 8px; }
+  .road-panel-n { width: 40px; height: 40px; border-radius: 12px; font-size: 15px; }
+  .road-panel-head h4 { font-size: 17px; }
+  .road-panel-phase { font-size: 10px; margin-bottom: 4px; }
+  .road-panel-text { padding: 0 22px; font-size: 13.2px; line-height: 1.5; margin-bottom: 9px; }
+  .road-panel-out { margin: 0 22px; padding: 9px 14px; border-radius: 11px; }
+  .road-panel-out span { font-size: 12.8px; }
+  .road-panel-nav { padding: 9px 22px 0; gap: 9px; }
+  .road-nav-btn { width: 31px; height: 31px; }
+  .road-nav-count { font-size: 12.5px; }
+}
+
+
+.road-map-v { display: none; }
+.road-svg-v { display: block; width: 100%; height: auto; overflow: visible; }
+
+@media (max-width: 1040px) {
+  .road-map { display: none; }
+  .road-map-v { display: block; margin: 20px 0 6px; }
+  .road-panel { display: block; }
+  .road-list { display: none; }
+}
+
+.road-stop-label-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 68px;
+  padding: 0 4px;
+}
+.road-stop-label-v.is-left { text-align: right; align-items: flex-end; }
+.rsl-phase {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 3px;
+}
+.rsl-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.24;
+  color: var(--primary-dark);
+  letter-spacing: -.01em;
+}
+.road-stop-v.is-active .rsl-name { color: var(--c); }
+.road-svg-v .road-track { stroke-width: 20; }
+.road-svg-v .road-track-flow { stroke-width: 5; stroke-dasharray: 200 2600; stroke-dashoffset: 2800; }
+.road-map-v.is-drawn .road-track-flow { opacity: .9; animation: roadFlowV 8s linear infinite; }
+@keyframes roadFlowV { from { stroke-dashoffset: 2800; } to { stroke-dashoffset: 0; } }
+.road-map-v .road-stop { opacity: 1; }
+.road-map-v.is-drawn .road-stop { animation: none; }
+
+@media (max-width: 1040px) {
+  .road-panel { margin-top: 16px; }
+  .road-panel-head { grid-template-columns: auto 1fr; gap: 14px; padding: 20px 20px 0; }
+  .road-panel-head .road-owner { grid-column: 1 / -1; justify-self: start; margin-top: 4px; }
+  .road-panel-n { width: 48px; height: 48px; font-size: 18px; border-radius: 14px; }
+  .road-panel-head h4 { font-size: 19px; }
+  .road-panel-text { padding: 0 20px; font-size: 14.5px; }
+  .road-panel-out { margin: 0 20px; padding: 13px 16px; }
+  .road-panel-nav { padding: 16px 20px 0; }
+  .road-legend { gap: 8px; }
+  .road-lg { font-size: 12px; padding: 7px 6px 7px 11px; }
+  .road-lg b { font-size: 10.5px; padding: 3px 8px; }
+}
+
+
+.road-swipe { display:none; }
+@media(max-width:1040px){.road-panel{display:none}.road-list{display:flex}.road-swipe{display:flex}}
