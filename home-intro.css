@@ -33,3 +33,5 @@
  #home-results .compare-side{aspect-ratio:auto;height:100%}
  #home-results .compare-controls{flex:none;padding:16px}
 }
+
+#home-results>.results-shared-caption{grid-column:1 / -1;width:100%;max-width:1100px;margin:0 auto;text-align:center;font-size:16px;line-height:1.75;color:var(--body)}@media(min-width:901px){#home-results .results-stats{grid-template-rows:76px 380px}}
