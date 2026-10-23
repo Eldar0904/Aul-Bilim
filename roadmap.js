@@ -373,10 +373,6 @@
         (s.sections ? '<div class="road-panel-sections">' + s.sections.map(function (item) {
           return '<section class="road-panel-section"><h5>' + bi(item.kk, item.ru) + '</h5><p>' + bi(item.dkk, item.dru) + '</p></section>';
         }).join('') + '</div>' : '') +
-        '<div class="road-panel-out">' +
-          '<b>' + bi('Нәтижесі', 'Результат') + '</b>' +
-          '<span>' + bi(s.okk, s.oru) + '</span>' +
-        '</div>' +
         '<div class="road-panel-nav">' +
           '<button type="button" class="road-nav-btn" data-go="' + (n > 1 ? n - 1 : STEPS.length) + '" aria-label="Предыдущий шаг">←</button>' +
           '<span class="road-nav-count"><b>' + two(n) + '</b> / ' + STEPS.length + '</span>' +
@@ -435,7 +431,6 @@
             '<span class="road-item-phase">' + bi(ph.kk, ph.ru) + '</span>' +
             '<h4>' + bi(s.kk, s.ru) + '</h4>' +
             '<p>' + bi(s.dkk, s.dru) + '</p>' +
-            '<div class="road-item-out"><b>' + bi('Нәтижесі', 'Результат') + '</b> ' + bi(s.okk, s.oru) + '</div>' +
           '</div>' +
           '<span class="road-owner road-owner--' + ow.cls + '">' + bi(ow.kk, ow.ru) + '</span>' +
         '</article>';
