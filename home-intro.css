@@ -1,1 +1,17 @@
 .home-quote-hero{min-height:680px;background:#172b49}.home-quote-hero::after{background:linear-gradient(90deg,rgba(10,26,49,.88),rgba(10,26,49,.48))}.home-quote-hero .hero-fb-content{padding-top:80px;padding-bottom:72px}.home-quote-hero h1.home-project-name{font-size:18px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 28px;color:#f2c76b}.home-president-quote{margin:0;max-width:1000px}.home-president-quote>p{font-family:var(--fh);font-weight:700;font-size:clamp(27px,3.2vw,48px);line-height:1.4;color:#fff;margin:0;text-wrap:pretty}.home-president-quote footer{display:flex;flex-direction:column;gap:8px;margin-top:32px;color:white;font-size:17px}.home-president-role{font-size:14px;color:#d0d7e2}.home-about{background:#faf7ee}.home-kicker{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9a702a;margin-bottom:14px}.home-about h2{font-size:clamp(28px,3vw,42px);color:#293f6d}.home-about-copy{max-width:930px;margin:24px 0 20px;font-size:clamp(18px,1.7vw,23px);line-height:1.8;color:#4d5669}.home-about-link{color:#2e477c;font-weight:800}.home-destinations{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}.home-destination{display:block;padding:36px;border-radius:24px;border:1px solid #e0dfd7;background:white;text-decoration:none;color:#293f6d;transition:transform .2s,box-shadow .2s}.home-destination:hover{transform:translateY(-3px);box-shadow:0 16px 34px #20365712}.home-destination-number{display:block;color:#a78035;font-size:13px;font-weight:800;margin-bottom:24px}.home-destination h3{font-size:clamp(23px,2.4vw,30px);line-height:1.2;color:#293f6d;margin-bottom:16px}.home-destination p{line-height:1.7;color:#667083;max-width:440px}.home-destination-cta{display:block;margin-top:28px;font-weight:800;font-size:14px}.home-destination:focus-visible,.home-about-link:focus-visible{outline:3px solid #e3af45;outline-offset:5px}@media(max-width:640px){.home-quote-hero{min-height:620px}.home-quote-hero .hero-fb-content{padding-top:60px;padding-bottom:48px}.home-president-quote>p{font-size:27px}.home-president-quote footer{font-size:15px}.home-destinations{grid-template-columns:1fr;gap:16px;margin-top:32px}.home-destination{padding:26px}}
+
+/* Homepage results: comparison and academic growth share one row. */
+#home-results{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;max-width:1320px;width:calc(100% - 48px);margin:0 auto;padding-bottom:64px;align-items:start}
+#home-results>.wrap{grid-column:1 / -1;width:100%;padding-left:0;padding-right:0}
+#home-results .results-compare{padding:24px 0 0;border:0;background:transparent;min-width:0}
+#home-results .results-compare>.wrap{width:100%;padding:0}
+#home-results .results-stats{width:100%;padding:24px 0 0;min-width:0;margin:0}
+#home-results .results-section-title{white-space:normal;font-size:clamp(21px,1.8vw,27px);line-height:1.3;margin-bottom:24px}
+#home-results .results-stats-copy{margin-bottom:24px}
+#home-results .results-stats-copy p{font-size:16px;line-height:1.65}
+#home-results .results-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-bottom:0}
+#home-results .result-card{min-height:165px;padding:20px 14px}
+#home-results .result-region{font-size:14px;min-height:36px}
+#home-results .result-value{font-size:36px;margin-top:10px}
+#home-results .result-rise{height:24px;margin-top:14px}
+@media(max-width:900px){#home-results{grid-template-columns:1fr;gap:30px;width:calc(100% - 36px)}#home-results .results-compare,#home-results .results-stats{padding-top:0}}
