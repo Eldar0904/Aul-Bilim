@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="steppe.css?v=114" />
 <link rel="stylesheet" href="home-intro.css?v=1" />
+<link rel="stylesheet" href="results.css?v=1" />
 </head>
 <body>
 <div class="grain"></div>
@@ -54,10 +55,7 @@
   <h2 id="home-about-title"><span lang="kk">Жоба туралы</span><span lang="ru">О проекте</span></h2>
   <p class="home-about-copy"><span lang="kk">Auyl Bilim — «Қазақстан халқына», «Білім-Инновация» және «Jelken foundation» қорларының ауыл мектептерін қолдауға және дамытуға бағытталған бірлескен қайырымдылық жобасы.</span><span lang="ru">Auyl Bilim — совместный благотворительный проект фондов «Қазақстан халқына», «Білім-Инновация» и «Jelken foundation», направленный на поддержку и развитие сельских школ.</span></p>
   <a class="home-about-link" href="about.html"><span lang="kk">Жобамен танысу</span><span lang="ru">Подробнее о проекте</span> <span aria-hidden="true">↗</span></a>
-  <div class="home-destinations">
-    <a class="home-destination" href="regions.html"><span class="home-destination-number" aria-hidden="true">01</span><h3><span lang="kk">Қамтылған өңірлер</span><span lang="ru">Охваченные регионы</span></h3><p><span lang="kk">Жоба жүзеге асырылып жатқан өңірлер мен ауыл мектептерімен танысыңыз.</span><span lang="ru">Познакомьтесь с регионами и сельскими школами, в которых реализуется проект.</span></p><span class="home-destination-cta"><span lang="kk">Өңірлерді көру</span><span lang="ru">Посмотреть регионы</span> ↗</span></a>
-    <a class="home-destination" href="results.html"><span class="home-destination-number" aria-hidden="true">02</span><h3><span lang="kk">Нәтижелер</span><span lang="ru">Результаты</span></h3><p><span lang="kk">Мектептердегі өзгерістер мен жобаның білім сапасына әсерін көріңіз.</span><span lang="ru">Узнайте об изменениях в школах и влиянии проекта на качество образования.</span></p><span class="home-destination-cta"><span lang="kk">Нәтижелерді көру</span><span lang="ru">Посмотреть результаты</span> ↗</span></a>
-  </div>
+  
 </div></section>
 
 <!-- ============ PROGRAMS ============ -->
@@ -72,6 +70,93 @@
 
 
 <!-- ============ FOOTER ============ -->
+<section class="map-block" id="regions">
+  <div class="wrap">
+    <div class="dir-head map-section-head">
+      <div class="dir-head-main">
+        <h2><span lang="kk" data-copy="index-map-kicker-kk">Қамтылған өңірлер</span><span lang="ru" data-copy="index-map-kicker-ru">Охваченные регионы</span></h2>
+      </div>
+    </div>
+    <div class="map-card">
+      <div class="map-head-bar">
+        <div class="stat-strip stat-strip--head">
+          <div class="stat-strip-in">
+            <div class="ss"><div class="n" data-copy="index-stat-01-n">7</div><div class="l"><span lang="kk" data-copy="index-013-kk">өңір</span><span lang="ru" data-copy="index-014-ru">регионов</span></div></div>
+            <div class="ss"><div class="n" data-copy="index-stat-02-n">418</div><div class="l"><span lang="kk" data-copy="index-015-kk">мектеп</span><span lang="ru" data-copy="index-016-ru">школ</span></div></div>
+            <div class="ss"><div class="n" data-copy="index-stat-03-n">952</div><div class="l"><span lang="kk" data-copy="index-017-kk">жабдықталған сынып</span><span lang="ru" data-copy="index-018-ru">оснащённых классов</span></div></div>
+            <div class="ss"><div class="n" data-copy="index-stat-04-n">13&nbsp;971</div><div class="l"><span lang="kk" data-copy="index-019-kk">оқытылған ұстаз</span><span lang="ru" data-copy="index-020-ru">обученных педагогов</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-grid">
+        <div class="map-col">
+          <div class="map-intro map-hint" id="map-intro">
+            <span class="dotpulse"></span>
+            <span lang="kk" data-copy="index-043-kk">Бөлектелген аймақты басыңыз</span>
+            <span lang="ru" data-copy="index-044-ru">Нажмите на выделенный регион</span>
+          </div>
+          <div class="region-panel" id="region-panel"></div>
+        </div>
+        <div class="map-wrap">
+          <div class="map-stage" id="map-stage">
+            <div class="map-pan" id="map-pan">
+              <img src="assets/kazakhstan-admin1-current.svg" alt="Current administrative map of Kazakhstan" />
+              <svg class="map-hot" id="map-hot" viewBox="0 0 1000 549" preserveAspectRatio="xMidYMid meet" aria-label="Map of Kazakhstan regions where Aul Bilim works"></svg>
+            </div>
+            <div class="map-tip" id="map-tip"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGION SCHOOLS (View C — filled by map.js) ============ -->
+<section class="region-schools-block" id="region-schools" hidden>
+  <div class="wrap" id="region-schools-root"></div>
+</section>
+
+
+<section id="home-results" aria-labelledby="home-results-title"><div class="wrap" style="padding-top:56px"><h2 id="home-results-title"><span lang="kk">Нәтижелер</span><span lang="ru">Результаты</span></h2></div>
+
+  <section class="results-compare">
+    <div class="wrap">
+      <h2 class="results-section-title"><span lang="kk" data-copy="results-005-kk">ОҚУ КАБИНЕТТЕРІН ЖАҢҒЫРТУ</span><span lang="ru" data-copy="results-006-ru">МОДЕРНИЗАЦИЯ УЧЕБНЫХ КАБИНЕТОВ</span></h2>
+      <div class="compare-shell" data-results-gallery>
+        <div class="compare-window">
+          <div class="compare-side">
+            <span class="compare-tag"><span lang="kk" data-copy="results-007-kk">ДЕЙІН</span><span lang="ru" data-copy="results-008-ru">ДО</span></span>
+            <div class="compare-slide is-active" data-index="0"><image-slot id="results-physics-before" src="assets/results/kostanay-before.jpg" shape="rect" placeholder="ФОТО: Физика кабинеті ДЕЙІН" data-placeholder-kk="ФОТО: Физика кабинеті ДЕЙІН" data-placeholder-ru="ФОТО: Кабинет физики ДО"></image-slot></div>
+            <div class="compare-slide" data-index="1"><image-slot id="results-chemistry-before" src="assets/results/akmola-before.jpg" shape="rect" placeholder="ФОТО: Химия кабинеті ДЕЙІН" data-placeholder-kk="ФОТО: Химия кабинеті ДЕЙІН" data-placeholder-ru="ФОТО: Кабинет химии ДО"></image-slot></div>
+          </div>
+          <div class="compare-side">
+            <span class="compare-tag"><span lang="kk" data-copy="results-009-kk">КЕЙІН</span><span lang="ru" data-copy="results-010-ru">ПОСЛЕ</span></span>
+            <div class="compare-slide is-active" data-index="0"><image-slot id="results-physics-after" src="assets/results/kostanay-after.png" shape="rect" placeholder="ФОТО: Физика кабинеті КЕЙІН" data-placeholder-kk="ФОТО: Физика кабинеті КЕЙІН" data-placeholder-ru="ФОТО: Кабинет физики ПОСЛЕ"></image-slot></div>
+            <div class="compare-slide" data-index="1"><image-slot id="results-chemistry-after" src="assets/results/akmola-after.jpg" shape="rect" placeholder="ФОТО: Химия кабинеті КЕЙІН" data-placeholder-kk="ФОТО: Химия кабинеті КЕЙІН" data-placeholder-ru="ФОТО: Кабинет химии ПОСЛЕ"></image-slot></div>
+          </div>
+        </div>
+        <div class="compare-controls" aria-label="Выбор кабинета">
+          <button class="compare-dot is-active" data-index="0" aria-label="Кабинет физики"></button>
+          <button class="compare-dot" data-index="1" aria-label="Кабинет химии"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap results-stats" aria-label="Прирост по регионам">
+    <div class="results-stats-copy">
+      <h3 class="results-section-title"><span lang="kk" data-copy="results-001-kk">ОҚУШЫЛАРДЫҢ АКАДЕМИЯЛЫҚ ЖЕТІСТІКТЕРІ</span><span lang="ru" data-copy="results-002-ru">АКАДЕМИЧЕСКИЕ ДОСТИЖЕНИЯ УЧАЩИХСЯ</span></h3>
+      <p><span lang="kk" data-copy="results-003-kk">Жоба іске асырылғаннан кейін жаратылыстану-математикалық бағыттағы пәндер бойынша оқушылардың білім сапасының жалпы орташа өсімі</span><span lang="ru" data-copy="results-004-ru">Общий средний прирост качества знаний учащихся по предметам естественно-математического направления после реализации проекта</span></p>
+    </div>
+    <div class="results-grid">
+      <article class="result-card"><h2 class="result-region"><span lang="kk" data-copy="results-011-kk">Алматы облысы</span><span lang="ru" data-copy="results-012-ru">Алматинская область</span></h2><div class="result-value" data-copy="results-013-value">+14%</div><div class="result-rise" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+      <article class="result-card"><h2 class="result-region"><span lang="kk" data-copy="results-014-kk">Қарағанды облысы</span><span lang="ru" data-copy="results-015-ru">Карагандинская область</span></h2><div class="result-value" data-copy="results-016-value">+11%</div><div class="result-rise" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+      <article class="result-card"><h2 class="result-region"><span lang="kk" data-copy="results-017-kk">Қостанай облысы</span><span lang="ru" data-copy="results-018-ru">Костанайская область</span></h2><div class="result-value" data-copy="results-019-value">+12,5%</div><div class="result-rise" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+      <article class="result-card"><h2 class="result-region"><span lang="kk" data-copy="results-020-kk">Ақмола облысы</span><span lang="ru" data-copy="results-021-ru">Акмолинская область</span></h2><div class="result-value" data-copy="results-022-value">+12,7%</div><div class="result-rise" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+    </div>
+  </section>
+
+</section>
 </main>
 <footer class="site">
   <div class="wrap">
@@ -136,6 +221,17 @@
 <script src="uploads/copy-registry.js?v=5"></script>
 <script src="uploads/content-loader.js?v=5"></script>
 <script src="image-slot.js"></script>
+<script src="assets/kostanay-schools.js?v=5"></script>
+<script src="assets/akmola-schools.js?v=10"></script>
+<script src="assets/west-kazakhstan-schools.js?v=5"></script>
+<script src="assets/karaganda-schools.js?v=4"></script>
+<script src="assets/abay-schools.js?v=5"></script>
+<script src="assets/kyzylorda-schools.js?v=5"></script>
+<script src="assets/almaty-schools.js?v=5"></script>
+<script src="assets/zhambyl-schools.js?v=2"></script>
+<script src="assets/vko-schools.js?v=1"></script>
+<script src="map.js?v=40"></script>
+<script src="results.js?v=2"></script>
 </body>
 </html>
 
