@@ -2,7 +2,7 @@
 
 /* Homepage results: comparison and academic growth share one row. */
 #home-results{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;max-width:1320px;width:calc(100% - 48px);margin:0 auto;padding-bottom:64px;align-items:start}
-#home-results>.wrap{grid-column:1 / -1;width:100%;padding-left:0;padding-right:0}
+#home-results>div.wrap{grid-column:1 / -1;width:100%;padding-left:0;padding-right:0}
 #home-results .results-compare{padding:24px 0 0;border:0;background:transparent;min-width:0}
 #home-results .results-compare>.wrap{width:100%;padding:0}
 #home-results .results-stats{width:100%;padding:24px 0 0;min-width:0;margin:0}
