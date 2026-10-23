@@ -10,6 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="steppe.css?v=113" />
 <link rel="stylesheet" href="event-detail.css?v=2" />
+<style>
+.conference-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:24px; }
+.conference-video-slot { position:relative; aspect-ratio:16/9; min-width:0; overflow:hidden; border-radius:16px; background:#101e34; }
+.conference-video-slot iframe { display:block; width:100%; height:100%; border:0; }
+/* Crop Instagram's profile header and caption, retaining the landscape player. */
+.conference-video-slot--instagram iframe { position:absolute; top:-80px; left:-1px; width:calc(100% + 2px); height:calc(100% + 400px); }
+@media(max-width:640px) { .conference-video-grid { grid-template-columns:1fr; gap:18px; } }
+</style>
 </head>
 <body class="event-detail-page">
 <div class="grain"></div>
@@ -61,12 +69,13 @@
 <section class="block cf-block cf-block--alt">
   <div class="wrap">
     <h2 class="cf-h2"><span lang="kk">Бейне</span><span lang="ru">Видео</span></h2>
-    <div class="conference-video-slot" style="aspect-ratio:16/9;min-width:0;overflow:hidden;border-radius:16px;background:#101e34">
-      <iframe src="https://www.youtube-nocookie.com/embed/LyUHLuB_c1s?rel=0" title="Қайырымдылық конференциясы 2024" loading="lazy" style="display:block;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div style="max-width:540px;margin:32px auto 0">
-      <iframe src="https://www.instagram.com/reel/DAn3iKQsYBG/embed/" title="Конференция 2024 — Instagram Reel" loading="lazy" width="540" height="760" style="display:block;width:100%;max-width:100%;border:0;border-radius:16px;background:#fff" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
-      <p style="text-align:center;margin-top:12px"><a href="https://www.instagram.com/reel/DAn3iKQsYBG/" target="_blank" rel="noopener noreferrer"><span lang="kk">Instagram-да көру</span><span lang="ru">Смотреть в Instagram</span></a></p>
+    <div class="conference-video-grid">
+      <div class="conference-video-slot conference-video-slot--instagram">
+        <iframe src="https://www.instagram.com/reel/DAn3iKQsYBG/embed/" title="Конференция 2024 — Instagram Reel" loading="lazy" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="conference-video-slot">
+        <iframe src="https://www.youtube-nocookie.com/embed/LyUHLuB_c1s?rel=0" title="Қайырымдылық конференциясы 2024" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>
