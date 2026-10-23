@@ -507,3 +507,5 @@
 .road-dialog-open { overflow:hidden; }
 .stages-page .road-list,.stages-page .road-swipe { display:none; }
 @media(max-width:640px) { .road-dialog .road-panel-head { padding-right:52px; } }
+
+.road-panel-sections{padding:0 30px;margin:0 0 24px}.road-panel-section{border-top:1px solid var(--line);padding-top:18px;margin-top:18px}.road-panel-section h5{font-size:16px;line-height:1.4;color:var(--c);margin:0 0 8px;font-weight:800}.road-panel-section p{font-size:15px;line-height:1.75;color:var(--body);margin:0}@media(max-width:640px){.road-panel-sections{padding:0 20px}}
