@@ -237,6 +237,22 @@
 
     /* ---------- панель ---------- */
     var currentN = 0;
+    var dialog = document.getElementById('road-dialog');
+    function openStep(n) {
+      show(n);
+      if (dialog && !dialog.open) {
+        dialog.showModal();
+        document.documentElement.classList.add('road-dialog-open');
+      }
+    }
+    if (dialog) {
+      dialog.querySelector('.road-dialog-close').addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (e) {
+        var box = dialog.getBoundingClientRect();
+        if (e.target === dialog && (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom)) dialog.close();
+      });
+      dialog.addEventListener('close', function () { document.documentElement.classList.remove('road-dialog-open'); });
+    }
     function show(n) {
       if (n === currentN) return;
       var s = null;
@@ -253,7 +269,7 @@
           '<span class="road-panel-n">' + two(s.n) + '</span>' +
           '<div class="road-panel-title">' +
             '<span class="road-panel-phase">' + bi(ph.kk, ph.ru) + '</span>' +
-            '<h4>' + bi(s.kk, s.ru) + '</h4>' +
+            '<h4 id="road-dialog-title">' + bi(s.kk, s.ru) + '</h4>' +
           '</div>' +
           '<span class="road-owner road-owner--' + ow.cls + '">' + bi(ow.kk, ow.ru) + '</span>' +
         '</div>' +
@@ -290,15 +306,13 @@
 
     Array.prototype.forEach.call(document.querySelectorAll('.road-stop'), function (g) {
       var n = +g.getAttribute('data-n');
+      g.setAttribute('aria-haspopup', 'dialog');
+      g.setAttribute('aria-controls', 'road-dialog');
       g.addEventListener('click', function () {
-        show(n);
-        if (window.matchMedia('(max-width: 1040px)').matches) scrollSliderTo(n);
-      });
-      g.addEventListener('mouseenter', function () {
-        if (!window.matchMedia('(hover: none)').matches) show(n);
+        openStep(n);
       });
       g.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStep(n); }
       });
     });
 
@@ -307,8 +321,7 @@
         var ph = b.getAttribute('data-phase');
         var first = STEPS.filter(function (s) { return s.phase === ph; })[0];
         if (first) {
-          show(first.n);
-          if (window.matchMedia('(max-width: 1040px)').matches) scrollSliderTo(first.n);
+          openStep(first.n);
         }
       });
     });

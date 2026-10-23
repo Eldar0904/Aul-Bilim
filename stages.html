@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="steppe.css?v=113" />
 
-<link rel="stylesheet" href="roadmap.css?v=4">
+<link rel="stylesheet" href="roadmap.css?v=5">
 </head>
 <body class="stages-page">
 <div class="grain"></div>
@@ -44,7 +44,10 @@
     <div class="road-layout">
     <div class="road-map" id="road-map"></div>
     <div class="road-map-v" id="road-map-v"></div>
-    <div class="road-panel" id="road-panel" aria-live="polite"></div>
+    <dialog class="road-dialog" id="road-dialog" aria-labelledby="road-dialog-title">
+      <button class="road-dialog-close" type="button" aria-label="Жабу / Закрыть">×</button>
+      <div class="road-panel" id="road-panel" aria-live="polite"></div>
+    </dialog>
     </div>
     <div class="road-list" id="road-list"></div>
   </div>
@@ -111,7 +114,7 @@
 <script src="uploads/db.js"></script>
 <script src="uploads/copy-registry.js?v=5"></script>
 <script src="uploads/content-loader.js?v=5"></script>
-<script src="roadmap.js?v=1"></script>
+<script src="roadmap.js?v=2"></script>
 </body>
 </html>
 

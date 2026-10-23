@@ -495,3 +495,15 @@
 
 /* Keep the route static, without the travelling highlight. */
 .road-track-flow { display:none; animation:none!important; }
+
+/* Open a step description only after activating its route icon. */
+.road-layout { display:block; }
+.road-dialog { padding:0; border:0; border-radius:24px; width:min(680px,calc(100vw - 32px)); max-height:calc(100dvh - 48px); margin:auto; overflow:auto; color:var(--primary-dark); background:#fff; box-shadow:0 24px 90px #10244140; }
+.road-dialog::backdrop { background:rgba(12,25,47,.65); }
+.road-dialog .road-panel { display:block; margin:0; width:100%; border:0; padding:0 0 24px; box-shadow:none; }
+.road-dialog .road-panel-head { padding-right:54px; }
+.road-dialog-close { position:absolute; z-index:2; top:12px; right:12px; width:36px; height:36px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; background:#fff; color:var(--primary-dark); font-size:26px; cursor:pointer; }
+.road-dialog-close:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+.road-dialog-open { overflow:hidden; }
+.stages-page .road-list,.stages-page .road-swipe { display:none; }
+@media(max-width:640px) { .road-dialog .road-panel-head { padding-right:52px; } }
