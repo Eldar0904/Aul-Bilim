@@ -98,3 +98,4 @@
 @media(max-width:640px){
  .home-mission>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{padding-left:18px;padding-right:18px}
 }
+@media(min-width:901px){.home-footer .foot-grid{grid-template-columns:2fr 1fr minmax(300px,1.6fr)}}
