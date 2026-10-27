@@ -73,6 +73,7 @@ nav.bar {
   overflow: visible;
 }
 .bar-in { display: flex; align-items: stretch; justify-content: space-between; height: var(--nav-h); gap: 20px; overflow: visible; }
+.bar-in.wrap { max-width: 1360px; }
 .logo { font-family: var(--fh); font-weight: 900; font-size: 21px; color: var(--primary); letter-spacing: -0.02em; display: flex; align-items: center; gap: 11px; flex: none; align-self: center; text-decoration: none; }
 .logo--wordmark { gap: 0; min-width: 0; }
 .logo-wordmark {
@@ -107,7 +108,7 @@ nav.bar {
   appearance: none;
 }
 @media (min-width: 1200px) {
-  .nav-links { gap: 22px; }
+  .nav-links { gap: 14px; }
   .nav-links a,
   .nav-dropdown-toggle { font-size: 14px; }
   .logo { font-size: 22px; gap: 12px; }
@@ -2356,6 +2357,14 @@ body.map-schools-open .region-schools-block {
   padding-top: 8px;
   padding-bottom: 16px;
 }
+.project-overview { padding-top: 56px; }
+.project-overview h1 { font-size: clamp(28px, 3vw, 40px); }
+.project-overview-intro { max-width: 940px; margin: 0 auto 36px; color: var(--primary-dark); font-size: clamp(18px, 1.7vw, 22px); line-height: 1.7; }
+.project-overview-copy, .project-overview-list { max-width: 940px; margin: 0 auto 32px; font-size: 17px; line-height: 1.7; }
+.project-overview-list { padding-left: 22px; }
+.project-overview-list li + li { margin-top: 10px; }
+.project-overview-link { display: inline-block; color: var(--primary); font-weight: 700; }
+.project-overview-link:hover { text-decoration: underline; }
 .about-mission-in {
   max-width: min(960px, 100%);
   margin: 0 auto;
