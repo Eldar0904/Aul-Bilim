@@ -87,7 +87,13 @@
 @media(min-width:1000px){.home-quote-hero .home-president-quote>p{text-wrap:initial}}
 
 /* One shared content edge for the homepage sections. */
-@media(min-width:901px){#home-results .results-stats .results-section-title{white-space:nowrap;font-size:clamp(13px,1.5vw,18px)}}
+@media(min-width:901px){
+ #home-results{grid-template-columns:minmax(0,1fr)}
+ #home-results .results-stats .results-section-title{white-space:nowrap;font-size:24px}
+ #home-results .results-stats{grid-template-rows:76px auto}
+ #home-results .results-stats .results-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto;height:auto}
+ #home-results .results-stats .result-card{min-height:165px}
+}
 .home-mission>.wrap,#stages>.wrap,#regions>.wrap,#home-results{width:100%;max-width:1160px;padding-left:28px;padding-right:28px}
 @media(max-width:640px){
  .home-mission>.wrap,#stages>.wrap,#regions>.wrap,#home-results{padding-left:18px;padding-right:18px}
