@@ -50,6 +50,10 @@
 .home-mission .wrap{text-align:center}
 .home-mission p{max-width:1100px;margin-left:auto!important;margin-right:auto!important}
 .home-mission .dir-head{text-align:left}
+.home-film{padding:56px 0 72px;background:#faf7ee}
+.home-film-player{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:18px;background:#172b49}
+.home-film-player iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:640px){.home-film{padding:40px 0 48px}.home-film-player{border-radius:12px}}
 #stages .road-list,#stages .road-swipe{display:none}
 .home-mission p{color:#293f6d;font-family:var(--fh);font-weight:600;font-size:clamp(21px,1.8vw,27px);line-height:1.5;margin:0;text-wrap:pretty}
 @media(min-width:901px){.home-mission p{font-size:24px}}
@@ -94,8 +98,8 @@
  #home-results .results-stats .results-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto;height:auto}
  #home-results .results-stats .result-card{min-height:165px}
 }
-.home-mission>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{width:100%;max-width:1160px;padding-left:28px;padding-right:28px}
+.home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{width:100%;max-width:1160px;padding-left:28px;padding-right:28px}
 @media(max-width:640px){
- .home-mission>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{padding-left:18px;padding-right:18px}
+ .home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{padding-left:18px;padding-right:18px}
 }
 @media(min-width:901px){.home-footer .foot-grid{grid-template-columns:2fr 1fr minmax(300px,1.6fr)}}
