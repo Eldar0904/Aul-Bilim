@@ -100,6 +100,7 @@
 }
 .home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results,.home-footer>.wrap{width:100%;max-width:1360px;padding-left:28px;padding-right:28px}
 #home-results .results-compare>.wrap,#home-results .results-stats{max-width:none}
+#home-results .compare-shell{max-width:none}
 #about-coop .coop-interactive{max-width:none}
 @media(max-width:640px){
  .home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results,.home-footer>.wrap{padding-left:18px;padding-right:18px}
