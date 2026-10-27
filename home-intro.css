@@ -46,6 +46,12 @@
 
 .home-quote-hero>.home-hero-students{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;z-index:0}
 
+.home-mission{background:#faf7ee;padding:72px 0}
+.home-mission .wrap{max-width:1100px;text-align:center}
+.home-mission h2{color:#9a702a;font-size:16px;line-height:1.5;margin:0 0 24px;font-weight:800}
+.home-mission p{color:#293f6d;font-family:var(--fh);font-weight:600;font-size:clamp(24px,3vw,38px);line-height:1.5;margin:0;text-wrap:pretty}
+@media(max-width:640px){.home-mission{padding:44px 0}.home-mission h2{margin-bottom:18px}.home-mission p{font-size:24px}}
+
 /* Project introduction and presidential quote share the hero. */
 .home-quote-hero{align-items:center;min-height:680px}
 .home-quote-hero::after{background:linear-gradient(90deg,rgba(10,26,49,.9),rgba(10,26,49,.72))}
