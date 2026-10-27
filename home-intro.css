@@ -85,3 +85,9 @@
 }
 .home-quote-hero .home-president-quote>p{font-family:'Caveat',cursive;font-weight:400;font-size:clamp(36px,4.2vw,58px);line-height:1.25;letter-spacing:normal}
 @media(min-width:1000px){.home-quote-hero .home-president-quote>p{text-wrap:initial}}
+
+/* One shared content edge for the homepage sections. */
+.home-mission>.wrap,#stages>.wrap,#regions>.wrap,#home-results{width:100%;max-width:1160px;padding-left:28px;padding-right:28px}
+@media(max-width:640px){
+ .home-mission>.wrap,#stages>.wrap,#regions>.wrap,#home-results{padding-left:18px;padding-right:18px}
+}
