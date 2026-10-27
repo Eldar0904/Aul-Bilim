@@ -8,7 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="steppe.css?v=114" />
-<link rel="stylesheet" href="home-intro.css?v=20" />
+<link rel="stylesheet" href="roadmap.css?v=6" />
+<link rel="stylesheet" href="home-intro.css?v=21" />
 <link rel="stylesheet" href="results.css?v=1" />
 </head>
 <body>
@@ -65,7 +66,23 @@
 </section>
 
 <!-- ============ PROGRAMS ============ -->
-
+<section class="block road-block" id="stages" aria-labelledby="home-stages-title">
+  <div class="wrap">
+    <div class="dir-head"><div class="dir-head-main">
+      <h2 id="home-stages-title">Жоба кезеңдері</h2>
+    </div></div>
+    <div class="road-legend" id="road-legend"></div>
+    <div class="road-layout">
+      <div class="road-map" id="road-map"></div>
+      <div class="road-map-v" id="road-map-v"></div>
+      <dialog class="road-dialog" id="road-dialog" aria-labelledby="road-dialog-title">
+        <button class="road-dialog-close" type="button" aria-label="Жабу / Закрыть">×</button>
+        <div class="road-panel" id="road-panel" aria-live="polite"></div>
+      </dialog>
+    </div>
+    <div class="road-list" id="road-list"></div>
+  </div>
+</section>
 
 <!-- ============ REGIONS / MAP ============ -->
 
@@ -239,6 +256,7 @@
 <script src="assets/vko-schools.js?v=1"></script>
 <script src="map.js?v=40"></script>
 <script src="results.js?v=2"></script>
+<script src="roadmap.js?v=5"></script>
 </body>
 </html>
 

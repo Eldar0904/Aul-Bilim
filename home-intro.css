@@ -50,6 +50,7 @@
 .home-mission .wrap{text-align:center}
 .home-mission p{max-width:1100px;margin-left:auto!important;margin-right:auto!important}
 .home-mission .dir-head{text-align:left}
+#stages .road-list,#stages .road-swipe{display:none}
 .home-mission p{color:#293f6d;font-family:var(--fh);font-weight:600;font-size:clamp(21px,1.8vw,27px);line-height:1.5;margin:0;text-wrap:pretty}
 @media(min-width:901px){.home-mission p{font-size:24px}}
 @media(max-width:640px){.home-mission{padding:44px 0}}
