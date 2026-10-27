@@ -2900,7 +2900,7 @@ image-slot { display: block; }
 
 /* ---------- FOOTER ---------- */
 footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60px 0 34px; position: relative; z-index: 2; }
-.foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr minmax(300px, 1.6fr); gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.foot-grid { display: grid; grid-template-columns: 2fr 1fr minmax(300px, 1.6fr); gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .foot-grid .logo { color: #fff; margin-bottom: 14px; }
 .foot-grid .logo .logo-mark { color: var(--accent-soft); }
 .foot-brand-title {
