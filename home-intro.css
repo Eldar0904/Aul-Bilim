@@ -48,6 +48,7 @@
 
 .home-mission{background:#faf7ee;padding:72px 0}
 .home-mission .wrap{max-width:1100px;text-align:center}
+.home-mission .dir-head{text-align:left}
 .home-mission p{color:#293f6d;font-family:var(--fh);font-weight:600;font-size:clamp(24px,3vw,38px);line-height:1.5;margin:0;text-wrap:pretty}
 @media(max-width:640px){.home-mission{padding:44px 0}.home-mission p{font-size:24px}}
 
