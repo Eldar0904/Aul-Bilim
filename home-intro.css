@@ -66,7 +66,7 @@
 .home-hero-about .home-about-link:hover{color:#fff}
 .home-quote-hero .home-president-quote{min-width:0;max-width:1280px;margin:0 auto;padding:0;border:0;text-align:center}
 .home-quote-hero .home-president-quote>p{font-size:clamp(30px,3.5vw,48px);line-height:1.45}
-.home-quote-hero .home-president-quote footer{font-size:15px;line-height:1.6;margin-top:24px}
+.home-quote-hero .home-president-quote footer{font-size:15px;line-height:1.6;margin-top:24px;align-items:flex-end;text-align:right}
 @media(max-width:900px){
  .home-quote-hero .hero-fb-content{padding-top:56px;padding-bottom:48px;width:calc(100% - 48px)}
  .home-hero-about .home-about-copy{max-width:680px}
