@@ -34,8 +34,6 @@
   font-size: 13px;
   font-weight: 600;
   color: var(--ink);
-  cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   box-shadow: 0 5px 16px -12px rgba(20, 58, 110, .4);
 }
 .road-lg i {
@@ -53,7 +51,6 @@
   padding: 4px 10px;
   font-variant-numeric: tabular-nums lining-nums;
 }
-.road-lg:hover { transform: translateY(-2px); box-shadow: 0 12px 26px -16px rgba(20, 58, 110, .5); }
 .road-lg.is-on { border-color: var(--lg); background: color-mix(in srgb, var(--lg) 7%, #fff); }
 
 /* ---------- карта ---------- */

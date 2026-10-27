@@ -223,10 +223,10 @@
       legend.innerHTML = PHASES.map(function (p, i) {
         var of = STEPS.filter(function (s) { return s.phase === p.id; });
         var range = two(of[0].n) + '–' + two(of[of.length - 1].n);
-        return '<button type="button" class="road-lg" data-phase="' + p.id + '" ' +
+        return '<span class="road-lg" data-phase="' + p.id + '" ' +
                  'style="--lg:' + p.c + '">' +
                  '<i></i><span class="road-lg-name">' + bi(p.kk, p.ru) + '</span>' +
-                 '<b>' + range + '</b></button>';
+                 '<b>' + range + '</b></span>';
       }).join('');
     }
 
@@ -379,7 +379,6 @@
       });
       if (legend) Array.prototype.forEach.call(legend.querySelectorAll('.road-lg'), function (b) {
         b.classList.toggle('is-on', b.getAttribute('data-phase') === s.phase);
-        b.setAttribute('aria-pressed', String(b.getAttribute('data-phase') === s.phase));
       });
     }
 
@@ -392,16 +391,6 @@
       });
       g.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStep(n); }
-      });
-    });
-
-    if (legend) Array.prototype.forEach.call(legend.querySelectorAll('.road-lg'), function (b) {
-      b.addEventListener('click', function () {
-        var ph = b.getAttribute('data-phase');
-        var first = STEPS.filter(function (s) { return s.phase === ph; })[0];
-        if (first) {
-          openStep(first.n);
-        }
       });
     });
 
