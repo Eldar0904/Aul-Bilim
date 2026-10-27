@@ -98,8 +98,10 @@
  #home-results .results-stats .results-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto;height:auto}
  #home-results .results-stats .result-card{min-height:165px}
 }
-.home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{width:100%;max-width:1160px;padding-left:28px;padding-right:28px}
+.home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results,.home-footer>.wrap{width:100%;max-width:1360px;padding-left:28px;padding-right:28px}
+#home-results .results-compare>.wrap,#home-results .results-stats{max-width:none}
+#about-coop .coop-interactive{max-width:none}
 @media(max-width:640px){
- .home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results{padding-left:18px;padding-right:18px}
+ .home-mission>.wrap,.home-film>.wrap,#stages>.wrap,#regions>.wrap,#about-coop>.wrap,#home-results,.home-footer>.wrap{padding-left:18px;padding-right:18px}
 }
 @media(min-width:901px){.home-footer .foot-grid{grid-template-columns:2fr 1fr minmax(300px,1.6fr)}}
