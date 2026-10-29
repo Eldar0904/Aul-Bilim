@@ -3243,6 +3243,3 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 @media(max-width:700px){.about-mission-in{padding:28px 22px}.about-mission-title{margin-bottom:22px}}
 .about-mission-title::after{display:none}
 .about-mission-goal{padding-left:0;border-left:0}
-.project-story-section.project-coop{margin-bottom:0}
-.project-story-section.project-coop .project-coop-title{margin:0}
-.project-story-section.project-coop .coop-interactive{min-width:0}
