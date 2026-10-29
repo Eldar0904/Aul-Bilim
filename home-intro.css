@@ -182,3 +182,13 @@
 :is(#home-results,.home-results-standalone).home-results-standalone .result-region{order:2;margin-top:12px;color:#536579;font-size:16px}
 @media(max-width:900px){:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(3){border-left:0}:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(n+3){border-top:1px solid #d8e1e7}}
 @media(max-width:640px){:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card,:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(even){padding:24px 14px 22px}.home-results-standalone .result-icon{width:58px;height:58px;margin-bottom:18px}.home-results-standalone .result-icon svg{width:30px;height:30px}:is(#home-results,.home-results-standalone).home-results-standalone .result-value{font-size:clamp(29px,8vw,42px)}}
+.home-scale{padding:40px 0 24px}
+.home-scale-grid .home-stat,.home-scale-grid .home-stat:first-child{padding:24px 24px 12px}
+.home-scale-grid .home-stat-icon,.home-scale-grid .home-stat:first-child .home-stat-icon,.home-results-standalone .result-icon{width:52px;height:52px;margin-bottom:16px}
+.home-scale-grid .home-stat-icon svg,.home-results-standalone .result-icon svg{width:27px;height:27px}
+.home-scale-grid .home-stat .n,.home-scale-grid .home-stat:first-child .n,:is(#home-results,.home-results-standalone).home-results-standalone .result-value{font-size:clamp(32px,3.2vw,44px)}
+.home-scale-grid .home-stat .l,:is(#home-results,.home-results-standalone).home-results-standalone .result-region{margin-top:8px;font-size:14px}
+:is(#home-results,.home-results-standalone).home-results-standalone{padding-bottom:28px}
+:is(#home-results,.home-results-standalone).home-results-standalone .results-stats{padding:20px 0 0}
+:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card,:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(even){padding:24px 24px 12px}
+@media(max-width:640px){.home-scale{padding:28px 0 12px}.home-scale-grid .home-stat,.home-scale-grid .home-stat:first-child,:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card,:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(even){padding:18px 14px}.home-scale-grid .home-stat .n,.home-scale-grid .home-stat:first-child .n,:is(#home-results,.home-results-standalone).home-results-standalone .result-value{font-size:clamp(28px,7vw,36px)}}
