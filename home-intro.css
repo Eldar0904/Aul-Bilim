@@ -120,3 +120,16 @@
 .home-stat .l{font-size:16px;line-height:1.4;font-weight:600}
 @media(max-width:900px){.home-scale-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-scale-heading{align-items:start;flex-direction:column}}
 @media(max-width:640px){.home-scale>.wrap{padding:0 18px}.home-scale-grid{gap:10px}.home-stat{min-height:145px;padding:20px 16px}.home-stat .n{font-size:34px}.home-stat .l{font-size:14px}}
+
+/* Regional results: a single editorial panel, with no decorative data chart. */
+#home-results .results-stats{display:block; padding:clamp(40px,5vw,68px); background:#233f69; border-radius:28px; color:#fff}
+#home-results .results-stats-copy{display:block; margin:0 0 32px}
+#home-results .results-stats .results-section-title{display:block; min-height:0; margin:0; color:#fff; text-align:left; white-space:normal; font-size:clamp(24px,2.8vw,36px); max-width:700px}
+#home-results .results-stats .results-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:auto; height:auto; gap:0; padding:0; border-top:1px solid rgba(255,255,255,.28)}
+#home-results .results-stats .result-card{min-height:0; padding:26px 24px 26px 0; display:flex; flex-direction:row; justify-content:space-between; align-items:center; gap:16px; text-align:left; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,.28); border-radius:0; box-shadow:none}
+#home-results .result-card:nth-child(even){padding-left:24px; border-left:1px solid rgba(255,255,255,.28)}
+#home-results .result-card::before{display:none}
+#home-results .result-region{min-height:0; font-family:inherit; font-size:15px; font-weight:600; color:#e5edf6}
+#home-results .result-value{margin:0; font-size:clamp(32px,3.6vw,48px); font-weight:800; color:#f3c66c; white-space:nowrap}
+#home-results .result-rise{display:none}
+@media(max-width:640px){#home-results .results-stats{padding:28px 22px; border-radius:20px} #home-results .results-stats .results-grid{grid-template-columns:1fr} #home-results .results-stats .result-card,#home-results .result-card:nth-child(even){padding:20px 0; border-left:0} #home-results .result-value{font-size:34px}}
