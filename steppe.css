@@ -2394,6 +2394,7 @@ body.map-schools-open .region-schools-block {
 .project-story-text section[aria-labelledby="project-equipment"] { margin-bottom: 18px; }
 .project-story-text .equipment-card > summary + p { margin-top: 18px; }
 .project-story-text .equipment-card p strong { color: var(--primary); }
+.project-story-text .equipment-card[open] { margin-bottom: 18px; }
 .project-story-actions { display: flex; flex-wrap: wrap; gap: 20px 32px; margin-top: 40px; }
 .project-story-actions a { color: var(--primary); font-weight: 700; }
 .project-story-actions a:hover { text-decoration: underline; }
