@@ -206,3 +206,4 @@ body:not(.regions-page) #regions .map-intro.map-hint{background:transparent;box-
 @media(max-width:640px){body:not(.regions-page) #regions .map-col{left:14px;top:14px}}
 body:not(.regions-page) #regions .map-intro.map-hint{font-size:18px}
 body:not(.regions-page) #regions .home-map-instruction{font-size:15px}
+body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
