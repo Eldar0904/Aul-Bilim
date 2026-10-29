@@ -153,3 +153,16 @@
 .home-stat-icon svg{width:25px;height:25px}
 .home-stat:first-child .home-stat-icon{background:rgba(255,255,255,.14);color:#fff}
 @media(max-width:640px){.home-stat-icon{top:16px;right:16px;width:36px;height:36px;border-radius:11px}.home-stat-icon svg{width:20px;height:20px}.home-stat .n{padding-right:34px;font-size:clamp(23px,7vw,34px)}}
+/* Open statistics layout */
+.home-scale-grid{gap:0;border-top:1px solid #d8e1e7}
+.home-scale-grid .home-stat,.home-scale-grid .home-stat:first-child{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:0;padding:34px 28px 12px;background:transparent;border:0;border-radius:0;color:#294e7c}
+.home-scale-grid .home-stat+ .home-stat{border-left:1px solid #d8e1e7}
+.home-scale-grid .home-stat-icon,.home-scale-grid .home-stat:first-child .home-stat-icon{position:static;width:72px;height:72px;margin-bottom:24px;border-radius:50%;background:#e1ebf2;color:#3b6895}
+.home-scale-grid .home-stat:nth-child(2) .home-stat-icon{background:#f7e9c7;color:#a77820}
+.home-scale-grid .home-stat:nth-child(3) .home-stat-icon{background:#dceee4;color:#52846b}
+.home-scale-grid .home-stat:nth-child(4) .home-stat-icon{background:#eee3ef;color:#87658f}
+.home-scale-grid .home-stat-icon svg{width:36px;height:36px;stroke-width:1.5}
+.home-scale-grid .home-stat .n,.home-scale-grid .home-stat:first-child .n{padding:0;color:#294e7c;font-size:clamp(38px,4vw,58px)}
+.home-scale-grid .home-stat .l{margin-top:12px;color:#536579}
+@media(max-width:900px){.home-scale-grid .home-stat:nth-child(3){border-left:0}.home-scale-grid .home-stat:nth-child(n+3){border-top:1px solid #d8e1e7}}
+@media(max-width:640px){.home-scale-grid .home-stat,.home-scale-grid .home-stat:first-child{padding:24px 14px 22px}.home-scale-grid .home-stat-icon,.home-scale-grid .home-stat:first-child .home-stat-icon{width:58px;height:58px;margin-bottom:18px}.home-scale-grid .home-stat-icon svg{width:30px;height:30px}.home-scale-grid .home-stat .n,.home-scale-grid .home-stat:first-child .n{font-size:clamp(29px,8vw,42px)}}
