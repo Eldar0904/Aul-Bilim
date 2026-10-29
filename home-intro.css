@@ -200,3 +200,5 @@
 #regions .home-map-instruction{flex-basis:100%;padding-left:16px;font-family:inherit;font-size:12px;line-height:1.5;font-weight:400;color:var(--body)}
 .home-compare-standalone{padding-bottom:32px}
 @media(max-width:640px){.home-compare-standalone{padding-bottom:20px}.home-results-standalone .results-shared-caption{font-size:14px;margin-top:20px}}
+.home-compare-standalone .results-shared-caption{max-width:1100px;margin:0 0 20px;font-size:16px;line-height:1.7;color:var(--body)}
+@media(max-width:640px){.home-compare-standalone .results-shared-caption{font-size:14px}}
