@@ -169,3 +169,16 @@
 .home-results-standalone .results-stats{display:block}
 :is(#home-results,.home-results-standalone) .results-stats-copy{display:block;margin:16px 0 0}
 :is(#home-results,.home-results-standalone) .results-stats .results-section-title{display:block;min-height:0;max-width:1100px;margin:0 auto;color:var(--body);font-family:inherit;font-size:16px;font-weight:400;line-height:1.75;text-align:center;white-space:normal}
+:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .results-grid{gap:0;border-top:1px solid #d8e1e7}
+:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card,:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(even){min-height:0;padding:34px 28px 12px;gap:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card+.result-card{border-left:1px solid #d8e1e7}
+:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card::before{display:none}
+.home-results-standalone .result-icon{order:0;display:grid;place-items:center;width:72px;height:72px;margin-bottom:24px;border-radius:50%;background:#e1ebf2;color:#3b6895}
+.home-results-standalone .result-icon svg{width:36px;height:36px}
+.home-results-standalone .result-card:nth-child(2) .result-icon{background:#f7e9c7;color:#a77820}
+.home-results-standalone .result-card:nth-child(3) .result-icon{background:#dceee4;color:#52846b}
+.home-results-standalone .result-card:nth-child(4) .result-icon{background:#eee3ef;color:#87658f}
+:is(#home-results,.home-results-standalone).home-results-standalone .result-value{order:1;margin:0;color:#294e7c;font-size:clamp(38px,4vw,58px)}
+:is(#home-results,.home-results-standalone).home-results-standalone .result-region{order:2;margin-top:12px;color:#536579;font-size:16px}
+@media(max-width:900px){:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(3){border-left:0}:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(n+3){border-top:1px solid #d8e1e7}}
+@media(max-width:640px){:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card,:is(#home-results,.home-results-standalone).home-results-standalone .results-stats .result-card:nth-child(even){padding:24px 14px 22px}.home-results-standalone .result-icon{width:58px;height:58px;margin-bottom:18px}.home-results-standalone .result-icon svg{width:30px;height:30px}:is(#home-results,.home-results-standalone).home-results-standalone .result-value{font-size:clamp(29px,8vw,42px)}}
