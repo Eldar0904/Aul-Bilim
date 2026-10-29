@@ -4,3 +4,12 @@
 @media(max-width:640px){.regions-page #regions{padding-top:28px}.regions-page .map-section-head h1{font-size:24px}}
 #regions .map-intro.map-hint{display:flex;flex-wrap:wrap;width:max-content;max-width:100%;border-radius:18px}
 #regions .home-map-instruction{flex-basis:100%;padding-left:16px;font-family:inherit;font-size:12px;line-height:1.5;font-weight:400;color:var(--body)}
+.regions-page #regions .map-card{background:transparent;border-radius:0;box-shadow:none;overflow:visible}
+.regions-page #regions .map-head-bar{background:transparent;border:0;border-top:1px solid #d8e1e7}
+.regions-page #regions .stat-strip-in .ss{align-items:flex-start;text-align:left;padding:24px 28px;border-right:1px solid #d8e1e7}
+.regions-page #regions .stat-strip-in .ss:last-child{border-right:0}
+.regions-page #regions .stat-strip-in .ss .n{font-size:clamp(32px,3.2vw,44px);color:#294e7c}
+.regions-page #regions .stat-strip-in .ss .l{margin-top:8px;font-size:14px;color:#536579}
+.regions-page #regions .map-grid{margin-top:24px}
+.regions-page #regions .map-intro.map-hint{background:transparent;box-shadow:none;backdrop-filter:none;padding:8px 0}
+@media(max-width:640px){.regions-page #regions .stat-strip-in .ss{flex:1 1 50%;padding:18px 14px;border-bottom:1px solid #d8e1e7}.regions-page #regions .stat-strip-in .ss:nth-child(even){border-right:0}.regions-page #regions .stat-strip-in .ss .n{font-size:32px}.regions-page #regions .map-col{left:14px;top:14px}}
