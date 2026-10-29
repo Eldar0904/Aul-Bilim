@@ -195,3 +195,8 @@
 .home-results-tail .results-shared-caption{width:calc(100% - 48px);max-width:1100px;margin:0 auto 56px;text-align:center;font-size:16px;line-height:1.75;color:var(--body)}
 :is(#home-results,.home-results-standalone) .results-stats-copy{margin:0 0 16px}
 :is(#home-results,.home-results-standalone) .results-stats .results-section-title{text-align:left;margin:0}
+.home-results-standalone .results-shared-caption{max-width:900px;margin:24px 0 0;font-size:15px;line-height:1.7;color:var(--body)}
+#regions .map-intro.map-hint{display:flex;flex-wrap:wrap;width:max-content;max-width:100%;border-radius:18px}
+#regions .home-map-instruction{flex-basis:100%;padding-left:16px;font-family:inherit;font-size:12px;line-height:1.5;font-weight:400;color:var(--body)}
+.home-compare-standalone{padding-bottom:32px}
+@media(max-width:640px){.home-compare-standalone{padding-bottom:20px}.home-results-standalone .results-shared-caption{font-size:14px;margin-top:20px}}
