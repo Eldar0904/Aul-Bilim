@@ -2,3 +2,5 @@
 .regions-page #regions{padding-top:40px}
 .regions-page .map-section-head h1{font-size:28px;line-height:1.2;margin:0}
 @media(max-width:640px){.regions-page #regions{padding-top:28px}.regions-page .map-section-head h1{font-size:24px}}
+#regions .map-intro.map-hint{display:flex;flex-wrap:wrap;width:max-content;max-width:100%;border-radius:18px}
+#regions .home-map-instruction{flex-basis:100%;padding-left:16px;font-family:inherit;font-size:12px;line-height:1.5;font-weight:400;color:var(--body)}
