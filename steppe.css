@@ -2389,6 +2389,9 @@ body.map-schools-open .region-schools-block {
 .project-story-section h2 { font-size: clamp(21px, 2vw, 26px); line-height: 1.25; color: var(--primary-dark); }
 .project-story-text { max-width: 850px; font-size: 17px; line-height: 1.8; }
 .project-story-text p + p { margin-top: 18px; }
+.project-story-text #project-equipment, .project-story-text #project-equipment ~ div h4 { font: inherit; font-weight: 700; color: inherit; }
+.project-story-text #project-equipment ~ div h4 { margin-top: 18px; }
+.project-story-text section[aria-labelledby="project-equipment"] { margin-bottom: 36px; }
 .project-story-actions { display: flex; flex-wrap: wrap; gap: 20px 32px; margin-top: 40px; }
 .project-story-actions a { color: var(--primary); font-weight: 700; }
 .project-story-actions a:hover { text-decoration: underline; }
