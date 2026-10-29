@@ -148,3 +148,8 @@
 #home-results .result-value{font-size:clamp(36px,3.6vw,48px);color:#294e7c}
 @media(max-width:900px){#home-results .results-stats .results-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){#home-results .results-stats{padding:32px 0} #home-results .results-stats .results-grid{gap:10px} #home-results .results-stats .result-card,#home-results .result-card:nth-child(even){min-height:160px;padding:20px 16px} #home-results .result-region{font-size:14px} #home-results .result-value{font-size:32px}}
+.home-stat{position:relative;padding-top:32px}
+.home-stat-icon{position:absolute;top:24px;right:24px;display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#eef3f7;color:#416a92}
+.home-stat-icon svg{width:25px;height:25px}
+.home-stat:first-child .home-stat-icon{background:rgba(255,255,255,.14);color:#fff}
+@media(max-width:640px){.home-stat-icon{top:16px;right:16px;width:36px;height:36px;border-radius:11px}.home-stat-icon svg{width:20px;height:20px}.home-stat .n{padding-right:34px;font-size:clamp(23px,7vw,34px)}}
