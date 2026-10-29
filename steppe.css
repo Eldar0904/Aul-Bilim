@@ -3228,3 +3228,13 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
   .map-hot .map-label[data-map-label="KZ62"],
   .map-hot .map-label[data-map-label="KZ33"] { stroke-width:3; }
 }
+
+/* A single mission statement */
+.about-mission-in{max-width:960px;padding:clamp(32px,5vw,64px);text-align:left;border-radius:24px}
+.about-mission-title{font-size:clamp(25px,3vw,34px);color:var(--primary-dark);margin:0 0 28px}
+.about-mission-title::after{margin:14px 0 0}
+.about-mission-goals{display:block;max-width:720px;margin:0}
+.about-mission-goal{padding-left:22px;border-left:3px solid var(--accent-soft)}
+.about-mission-goal-title{font-size:clamp(18px,2vw,22px);color:var(--primary-dark);margin-bottom:10px}
+.about-mission-goal-text{font-size:clamp(16px,1.6vw,19px);line-height:1.7;font-weight:400}
+@media(max-width:700px){.about-mission-in{padding:28px 22px}.about-mission-title{margin-bottom:22px}}
