@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="steppe.css?v=116" />
 <link rel="stylesheet" href="roadmap.css?v=7" />
-<link rel="stylesheet" href="home-intro.css?v=44" />
+<link rel="stylesheet" href="home-intro.css?v=45" />
 <link rel="stylesheet" href="results.css?v=1" />
 </head>
 <body>
@@ -66,6 +66,32 @@
   </div>
 </section>
 
+<div id="home-results" class="home-compare-standalone">
+  <section class="results-compare">
+    <div class="wrap">
+      <h2 class="results-section-title"><span lang="kk" data-copy="results-005-kk">Жаңарған оқу кабинеттері</span><span lang="ru" data-copy="results-006-ru">Обновлённые учебные кабинеты</span></h2>
+      <div class="compare-shell" data-results-gallery>
+        <div class="compare-window">
+          <div class="compare-side">
+            <span class="compare-tag"><span lang="kk" data-copy="results-007-kk">ДЕЙІН</span><span lang="ru" data-copy="results-008-ru">ДО</span></span>
+            <div class="compare-slide is-active" data-index="0"><image-slot id="results-physics-before" src="assets/results/kostanay-before.jpg" shape="rect" placeholder="ФОТО: Физика кабинеті ДЕЙІН" data-placeholder-kk="ФОТО: Физика кабинеті ДЕЙІН" data-placeholder-ru="ФОТО: Кабинет физики ДО"></image-slot></div>
+            <div class="compare-slide" data-index="1"><image-slot id="results-chemistry-before" src="assets/results/akmola-before.jpg" shape="rect" placeholder="ФОТО: Химия кабинеті ДЕЙІН" data-placeholder-kk="ФОТО: Химия кабинеті ДЕЙІН" data-placeholder-ru="ФОТО: Кабинет химии ДО"></image-slot></div>
+          </div>
+          <div class="compare-side">
+            <span class="compare-tag"><span lang="kk" data-copy="results-009-kk">КЕЙІН</span><span lang="ru" data-copy="results-010-ru">ПОСЛЕ</span></span>
+            <div class="compare-slide is-active" data-index="0"><image-slot id="results-physics-after" src="assets/results/kostanay-after.png" shape="rect" placeholder="ФОТО: Физика кабинеті КЕЙІН" data-placeholder-kk="ФОТО: Физика кабинеті КЕЙІН" data-placeholder-ru="ФОТО: Кабинет физики ПОСЛЕ"></image-slot></div>
+            <div class="compare-slide" data-index="1"><image-slot id="results-chemistry-after" src="assets/results/akmola-after.jpg" shape="rect" placeholder="ФОТО: Химия кабинеті КЕЙІН" data-placeholder-kk="ФОТО: Химия кабинеті КЕЙІН" data-placeholder-ru="ФОТО: Кабинет химии ПОСЛЕ"></image-slot></div>
+          </div>
+        </div>
+        <div class="compare-controls" aria-label="Выбор кабинета">
+          <button class="compare-dot is-active" data-index="0" aria-label="Кабинет физики"></button>
+          <button class="compare-dot" data-index="1" aria-label="Кабинет химии"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <div class="home-results-standalone">
   <section class="wrap results-stats" aria-label="Прирост по регионам">
     <div class="results-grid">
@@ -113,31 +139,9 @@
 </section>
 
 
-<section id="home-results" aria-label="Нәтижелер / Результаты">
+<section class="home-results-tail" aria-label="Нәтижелер / Результаты">
 
-  <section class="results-compare">
-    <div class="wrap">
-      <h2 class="results-section-title"><span lang="kk" data-copy="results-005-kk">Жаңарған оқу кабинеттері</span><span lang="ru" data-copy="results-006-ru">Обновлённые учебные кабинеты</span></h2>
-      <div class="compare-shell" data-results-gallery>
-        <div class="compare-window">
-          <div class="compare-side">
-            <span class="compare-tag"><span lang="kk" data-copy="results-007-kk">ДЕЙІН</span><span lang="ru" data-copy="results-008-ru">ДО</span></span>
-            <div class="compare-slide is-active" data-index="0"><image-slot id="results-physics-before" src="assets/results/kostanay-before.jpg" shape="rect" placeholder="ФОТО: Физика кабинеті ДЕЙІН" data-placeholder-kk="ФОТО: Физика кабинеті ДЕЙІН" data-placeholder-ru="ФОТО: Кабинет физики ДО"></image-slot></div>
-            <div class="compare-slide" data-index="1"><image-slot id="results-chemistry-before" src="assets/results/akmola-before.jpg" shape="rect" placeholder="ФОТО: Химия кабинеті ДЕЙІН" data-placeholder-kk="ФОТО: Химия кабинеті ДЕЙІН" data-placeholder-ru="ФОТО: Кабинет химии ДО"></image-slot></div>
-          </div>
-          <div class="compare-side">
-            <span class="compare-tag"><span lang="kk" data-copy="results-009-kk">КЕЙІН</span><span lang="ru" data-copy="results-010-ru">ПОСЛЕ</span></span>
-            <div class="compare-slide is-active" data-index="0"><image-slot id="results-physics-after" src="assets/results/kostanay-after.png" shape="rect" placeholder="ФОТО: Физика кабинеті КЕЙІН" data-placeholder-kk="ФОТО: Физика кабинеті КЕЙІН" data-placeholder-ru="ФОТО: Кабинет физики ПОСЛЕ"></image-slot></div>
-            <div class="compare-slide" data-index="1"><image-slot id="results-chemistry-after" src="assets/results/akmola-after.jpg" shape="rect" placeholder="ФОТО: Химия кабинеті КЕЙІН" data-placeholder-kk="ФОТО: Химия кабинеті КЕЙІН" data-placeholder-ru="ФОТО: Кабинет химии ПОСЛЕ"></image-slot></div>
-          </div>
-        </div>
-        <div class="compare-controls" aria-label="Выбор кабинета">
-          <button class="compare-dot is-active" data-index="0" aria-label="Кабинет физики"></button>
-          <button class="compare-dot" data-index="1" aria-label="Кабинет химии"></button>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
 <p class="results-shared-caption"><span lang="kk">Жоба аясында оқу кабинеттері жаңартылып, жаратылыстану-математикалық бағыттағы пәндер бойынша оқушылардың білім сапасының жалпы орташа өсімі тіркелді.</span><span lang="ru">В рамках проекта обновлены учебные кабинеты и зафиксирован общий средний прирост качества знаний учащихся по предметам естественно-математического направления.</span></p>
 
