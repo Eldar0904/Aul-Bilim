@@ -204,3 +204,5 @@
 body:not(.regions-page) #regions .map-card{background:transparent;border-radius:0;box-shadow:none;overflow:visible}
 body:not(.regions-page) #regions .map-intro.map-hint{background:transparent;box-shadow:none;backdrop-filter:none;padding:8px 0}
 @media(max-width:640px){body:not(.regions-page) #regions .map-col{left:14px;top:14px}}
+body:not(.regions-page) #regions .map-intro.map-hint{font-size:18px}
+body:not(.regions-page) #regions .home-map-instruction{font-size:15px}
