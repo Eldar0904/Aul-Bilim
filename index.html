@@ -55,60 +55,11 @@
   </div>
 </header>
 
-<section class="home-mission" aria-labelledby="home-mission-title">
-  <div class="wrap">
-    <div class="dir-head map-section-head">
-      <div class="dir-head-main">
-        <h2 id="home-mission-title">Біздің миссиямыз</h2>
-      </div>
-    </div>
-    <p>Мектеп инфрақұрылымын жаңартып, педагогтердің кәсіби әлеуетін арттыру арқылы тұрақты білім беру экожүйесін қалыптастыру.</p>
-  </div>
-</section>
-
-<template id="home-film-temporarily-hidden">
-<section class="home-film" aria-label="Видео">
-  <div class="wrap">
-    <div class="home-film-player">
-      <iframe src="https://drive.google.com/file/d/1zNrpj9uml1fH01JPAOAFJjIxwnJiwk6Z/preview" title="Білімнің жарығы — видео" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-</template>
-
-<!-- ============ PROGRAMS ============ -->
-<section class="block road-block" id="stages" aria-labelledby="home-stages-title">
-  <div class="wrap">
-    <div class="dir-head"><div class="dir-head-main">
-      <h2 id="home-stages-title">Жоба кезеңдері</h2>
-    </div></div>
-    <div class="road-legend" id="road-legend"></div>
-    <div class="road-layout">
-      <div class="road-map" id="road-map"></div>
-      <div class="road-map-v" id="road-map-v"></div>
-      <dialog class="road-dialog" id="road-dialog" aria-labelledby="road-dialog-title">
-        <button class="road-dialog-close" type="button" aria-label="Жабу / Закрыть">×</button>
-        <div class="road-panel" id="road-panel" aria-live="polite"></div>
-      </dialog>
-    </div>
-    <div class="road-list" id="road-list"></div>
-  </div>
-</section>
-
-<!-- ============ REGIONS / MAP ============ -->
-
-
-
-
-<!-- ============ REGION SCHOOLS (View C — filled by map.js) ============ -->
-
-
-<!-- ============ FOOTER ============ -->
 <section class="map-block" id="regions">
   <div class="wrap">
     <div class="dir-head map-section-head">
       <div class="dir-head-main">
-        <h2><span lang="kk" data-copy="index-map-kicker-kk">Қамтылған өңірлер</span><span lang="ru" data-copy="index-map-kicker-ru">Охваченные регионы</span></h2>
+        <h2><span lang="kk">Жоба ауқымы</span><span lang="ru">Масштаб проекта</span></h2>
       </div>
     </div>
     <div class="map-card">
@@ -192,140 +143,6 @@
 <p class="results-shared-caption"><span lang="kk">Жоба аясында оқу кабинеттері жаңартылып, жаратылыстану-математикалық бағыттағы пәндер бойынша оқушылардың білім сапасының жалпы орташа өсімі тіркелді.</span><span lang="ru">В рамках проекта обновлены учебные кабинеты и зафиксирован общий средний прирост качества знаний учащихся по предметам естественно-математического направления.</span></p>
 
 </section>
-<section class="block about-coop" id="about-coop" aria-labelledby="home-coop-title">
-  <div class="wrap">
-    <div class="dir-head"><div class="dir-head-main"><h2 id="home-coop-title">Серіктестік моделі</h2></div></div>
-    <div class="coop-interactive" id="coop-interactive">
-      <div class="coop-diagram">
-        <div class="coop-diagram-stage">
-          <svg class="coop-connectors" viewBox="0 0 1000 420" preserveAspectRatio="none" aria-hidden="true">
-            <!-- Each partner links only to Jelken — no cross-links between outer partners -->
-            <path d="M500 118 L500 248" stroke="rgba(27,79,138,0.22)" stroke-width="2" stroke-dasharray="6 5" fill="none"/>
-            <path d="M210 290 L470 290" stroke="rgba(27,79,138,0.18)" stroke-width="2" stroke-dasharray="6 5" fill="none"/>
-            <path d="M530 290 L790 290" stroke="rgba(27,79,138,0.18)" stroke-width="2" stroke-dasharray="6 5" fill="none"/>
-          </svg>
-          <div class="coop-diagram-grid" role="tablist" aria-label="Partners">
-            <div class="coop-zone coop-zone--kh">
-              <div class="coop-card-flip">
-                <button type="button" class="coop-zone-hit" data-partner="kh" role="tab" aria-selected="false" aria-expanded="false">
-                  <span class="coop-zone-hit-label" lang="kk">Қазақстан халқына</span>
-                  <span class="coop-zone-hit-label" lang="ru">Qazaqstan Halqyina</span>
-                  <span class="coop-flip-inner">
-                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--kh">
-                      <span class="coop-card-logo coop-card-logo--kh"><img src="img/coop/logo-kh.png?v=3" alt="" width="80" height="44" /></span>
-                      <span class="coop-card-main">
-                        <span class="coop-card-role"><span lang="kk" data-copy="about-021-kk">Бас серіктес</span><span lang="ru" data-copy="about-022-ru">Главный партнёр</span></span>
-                        <span class="coop-card-org"><span lang="kk" data-copy="about-023-kk">(ҚҚ «ҚАЗАҚСТАН ХАЛҚЫНА»)</span><span lang="ru" data-copy="about-024-ru">(НФ «ҚАЗАҚСТАН ХАЛҚЫНА»)</span></span>
-                        <ul class="coop-card-points">
-                          <li><span lang="kk" data-copy="about-025-kk">Қаржыландыру</span><span lang="ru" data-copy="about-026-ru">Финансирование</span></li>
-                          <li><span lang="kk" data-copy="about-027-kk">Бағыт-бағдар</span><span lang="ru" data-copy="about-028-ru">Направление</span></li>
-                        </ul>
-                      </span>
-                      <span class="coop-card-more" aria-hidden="true"><span lang="kk" data-copy="about-029-kk">Толығырақ</span><span lang="ru" data-copy="about-030-ru">Подробнее</span> →</span>
-                    </span>
-                    <span class="coop-card coop-card--back coop-card--kh" aria-hidden="true">
-                      <span class="coop-card-back-body">
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-031-kk">Рөлі:</span><span lang="ru" data-copy="about-032-ru">Роль:</span></strong> <span lang="kk" data-copy="about-033-kk">Жобаның бас демеушісі.</span><span lang="ru" data-copy="about-034-ru">Главный спонсор проекта.</span></p>
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-035-kk">Үлесі:</span><span lang="ru" data-copy="about-036-ru">Вклад:</span></strong> <span lang="kk" data-copy="about-037-kk">Ауыл мектептерін заманауи жаратылыстану-математика, цифрлық және әмбебап кабинеттермен жабдықтауға қайырымдылық қаражат бөледі.</span><span lang="ru" data-copy="about-038-ru">Выделяет благотворительные средства на оснащение сельских школ современными кабинетами естественно-математических, цифровых и универсальных направлений.</span></p>
-                      </span>
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div class="coop-zone coop-zone--bi">
-              <div class="coop-card-flip">
-                <button type="button" class="coop-zone-hit" data-partner="bi" role="tab" aria-selected="false" aria-expanded="false">
-                  <span class="coop-zone-hit-label" lang="kk">Білім-Инновация</span>
-                  <span class="coop-zone-hit-label" lang="ru">Bilim-Innovation</span>
-                  <span class="coop-flip-inner">
-                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--bi">
-                      <span class="coop-card-logo coop-card-logo--bi"><img src="img/coop/logo-bi.png?v=3" alt="" width="72" height="72" /></span>
-                      <span class="coop-card-main">
-                        <span class="coop-card-role"><span lang="kk" data-copy="about-039-kk">Академиялық серіктес</span><span lang="ru" data-copy="about-040-ru">Академический партнёр</span></span>
-                        <span class="coop-card-org"><span lang="kk" data-copy="about-041-kk">(БҚ «БІЛІМ-ИННОВАЦИЯ»)</span><span lang="ru" data-copy="about-042-ru">(НИФ «БІЛІМ-ИННОВАЦИЯ»)</span></span>
-                        <ul class="coop-card-points">
-                          <li><span lang="kk" data-copy="about-043-kk">Әдістеме</span><span lang="ru" data-copy="about-044-ru">Методология</span></li>
-                          <li><span lang="kk" data-copy="about-045-kk">Кадр даярлау</span><span lang="ru" data-copy="about-046-ru">Подготовка кадров</span></li>
-                        </ul>
-                      </span>
-                      <span class="coop-card-more" aria-hidden="true"><span lang="kk" data-copy="about-047-kk">Толығырақ</span><span lang="ru" data-copy="about-048-ru">Подробнее</span> →</span>
-                    </span>
-                    <span class="coop-card coop-card--back coop-card--bi" aria-hidden="true">
-                      <span class="coop-card-back-body">
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-049-kk">Рөлі:</span><span lang="ru" data-copy="about-050-ru">Роль:</span></strong> <span lang="kk" data-copy="about-051-kk">Академиялық серіктес.</span><span lang="ru" data-copy="about-052-ru">Академический партнёр.</span></p>
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-053-kk">Үлесі:</span><span lang="ru" data-copy="about-054-ru">Вклад:</span></strong> <span lang="kk" data-copy="about-055-kk">Педагогтердің біліктілігін арттыру курстарын ұйымдастырады, білімін диагностикалайды және оқу жылы бойы тұрақты тәлімгерлік (менторлық) қолдау көрсетеді.</span><span lang="ru" data-copy="about-056-ru">Организует курсы повышения квалификации педагогов, проводит диагностику знаний и оказывает постоянную наставническую поддержку в течение учебного года.</span></p>
-                      </span>
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div class="coop-zone coop-zone--jf">
-              <div class="coop-card-flip">
-                <button type="button" class="coop-zone-hit" data-partner="jf" role="tab" aria-selected="false" aria-expanded="false">
-                  <span class="coop-zone-hit-label" lang="kk">Jelken foundation</span>
-                  <span class="coop-zone-hit-label" lang="ru">Jelken foundation</span>
-                  <span class="coop-flip-inner">
-                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--jf">
-                      <span class="coop-card-logo coop-card-logo--jf"><img src="img/coop/jelken-logo.svg?v=2" alt="" width="64" height="64" /></span>
-                      <span class="coop-card-main">
-                        <span class="coop-card-role"><span lang="kk" data-copy="about-057-kk">Жоба операторы</span><span lang="ru" data-copy="about-058-ru">Оператор проекта</span></span>
-                        <span class="coop-card-org"><span lang="kk" data-copy="about-059-kk">(ҚҚ «JELKEN FOUNDATION»)</span><span lang="ru" data-copy="about-060-ru">(НФ «JELKEN FOUNDATION»)</span></span>
-                        <ul class="coop-card-points">
-                          <li><span lang="kk" data-copy="about-061-kk">Үйлестіру</span><span lang="ru" data-copy="about-062-ru">Координация</span></li>
-                          <li><span lang="kk" data-copy="about-063-kk">Мониторинг</span><span lang="ru" data-copy="about-064-ru">Мониторинг</span></li>
-                          <li><span lang="kk" data-copy="about-065-kk">Есеп беру</span><span lang="ru" data-copy="about-066-ru">Отчётность</span></li>
-                        </ul>
-                      </span>
-                      <span class="coop-card-more" aria-hidden="true"><span lang="kk" data-copy="about-067-kk">Толығырақ</span><span lang="ru" data-copy="about-068-ru">Подробнее</span> →</span>
-                    </span>
-                    <span class="coop-card coop-card--back coop-card--jf" aria-hidden="true">
-                      <span class="coop-card-back-body">
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-069-kk">Рөлі:</span><span lang="ru" data-copy="about-070-ru">Роль:</span></strong> <span lang="kk" data-copy="about-071-kk">Жобаның бас операторы.</span><span lang="ru" data-copy="about-072-ru">Главный оператор проекта.</span></p>
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-073-kk">Үлесі:</span><span lang="ru" data-copy="about-074-ru">Вклад:</span></strong> <span lang="kk" data-copy="about-075-kk">Жобаның барлық кезеңдерін үйлестіреді, мектептерге инвентаризация жүргізіп, жабдықтардың сатып алынуы мен сапалы жеткізілуін қадағалайды.</span><span lang="ru" data-copy="about-076-ru">Координирует все этапы проекта, проводит инвентаризацию в школах и контролирует закупку и качественную поставку оборудования.</span></p>
-                      </span>
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div class="coop-zone coop-zone--local">
-              <div class="coop-card-flip">
-                <button type="button" class="coop-zone-hit" data-partner="local" role="tab" aria-selected="false" aria-expanded="false">
-                  <span class="coop-zone-hit-label" lang="kk">Жергілікті білім басқармалары</span>
-                  <span class="coop-zone-hit-label" lang="ru">Local education departments</span>
-                  <span class="coop-flip-inner">
-                    <span class="coop-card coop-card--front coop-card--horizontal coop-card--local">
-                      <span class="coop-card-logo coop-card-logo--local"><img src="img/coop/logo-local.svg?v=2" alt="" width="72" height="72" /></span>
-                      <span class="coop-card-main">
-                        <span class="coop-card-role"><span lang="kk" data-copy="about-077-kk">Жергілікті органдар</span><span lang="ru" data-copy="about-078-ru">Местные органы</span></span>
-                        <ul class="coop-card-points">
-                          <li><span lang="kk" data-copy="about-079-kk">Әкімшілік қолдау</span><span lang="ru" data-copy="about-080-ru">Административная поддержка</span></li>
-                          <li><span lang="kk" data-copy="about-081-kk">Үй-жай дайындау</span><span lang="ru" data-copy="about-082-ru">Подготовка помещений</span></li>
-                        </ul>
-                      </span>
-                      <span class="coop-card-more" aria-hidden="true"><span lang="kk" data-copy="about-083-kk">Толығырақ</span><span lang="ru" data-copy="about-084-ru">Подробнее</span> →</span>
-                    </span>
-                    <span class="coop-card coop-card--back coop-card--local" aria-hidden="true">
-                      <span class="coop-card-back-body">
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-085-kk">Рөлі:</span><span lang="ru" data-copy="about-086-ru">Роль:</span></strong> <span lang="kk" data-copy="about-087-kk">Инфрақұрылымдық серіктес.</span><span lang="ru" data-copy="about-088-ru">Инфраструктурный партнёр.</span></p>
-                        <p class="coop-detail-line"><strong><span lang="kk" data-copy="about-089-kk">Үлесі:</span><span lang="ru" data-copy="about-090-ru">Вклад:</span></strong> <span lang="kk" data-copy="about-091-kk">Оқу кабинеттерін жөндеуден өткізеді, интернет жылдамдығын қамтамасыз етеді және онлайн-сабақтардың, біліктілік курстарының жүзеге асуын қаржыландырып, ұйымдастырады.</span><span lang="ru" data-copy="about-092-ru">Проводит ремонт учебных кабинетов, обеспечивает скорость интернета, финансирует и организует онлайн-занятия и курсы повышения квалификации.</span></p>
-                      </span>
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 </main>
 <footer class="site home-footer">
   <div class="wrap">
@@ -392,7 +209,7 @@
 <script src="assets/vko-schools.js?v=1"></script>
 <script src="map.js?v=40"></script>
 <script src="results.js?v=2"></script>
-<script src="roadmap.js?v=15"></script>
+
 </body>
 </html>
 
