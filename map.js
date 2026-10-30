@@ -262,6 +262,12 @@
   function bi(kk, ru) {
     return '<span lang="kk">' + kk + '</span><span lang="ru">' + ru + '</span>';
   }
+  function shortSchoolName(value) {
+    var name = String(value || '');
+    if (!/білім басқармасының|білім бөлімінің|управления образования|отдела образования/i.test(name)) return name;
+    var matches = name.match(/«[^«»]+»/g);
+    return matches ? matches[matches.length - 1] : name;
+  }
   function pickLang(kk, ru) {
     return document.documentElement.getAttribute('data-lang') === 'ru' ? ru : kk;
   }
@@ -621,7 +627,7 @@
           ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
           : '<div class="school-card-photo school-card-photo--empty"></div>') +
         '<div class="school-card-body">' +
-          '<h4>' + bi(s.kk, s.ru) + '</h4>' +
+          '<h4>' + bi(shortSchoolName(s.kk), shortSchoolName(s.ru)) + '</h4>' +
           '<div class="school-card-foot">' +
             teachersHtml +
             '<span class="school-card-link" aria-hidden="true">↗</span>' +

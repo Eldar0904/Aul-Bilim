@@ -22,6 +22,12 @@
   function bi(kk, ru) {
     return document.documentElement.getAttribute('data-lang') === 'ru' ? ru : kk;
   }
+  function shortSchoolName(value) {
+    var name = String(value || '');
+    if (!/білім басқармасының|білім бөлімінің|управления образования|отдела образования/i.test(name)) return name;
+    var matches = name.match(/«[^«»]+»/g);
+    return matches ? matches[matches.length - 1] : name;
+  }
 
   function publicSchoolDescription(value) {
     return String(value || '')
@@ -286,12 +292,12 @@
     var teachersEl = document.getElementById('school-teachers');
     var videoFrame = document.getElementById('school-video-frame');
 
-    var name = bi(school.kk, school.ru);
+    var name = bi(shortSchoolName(school.kk), shortSchoolName(school.ru));
     document.title = name + ' — Aul Bilim';
     var pageTitle = document.querySelector('title');
     if (pageTitle) {
-      pageTitle.setAttribute('data-kk', name + ' — Aul Bilim');
-      pageTitle.setAttribute('data-ru', (school.ru || school.kk) + ' — Aul Bilim');
+      pageTitle.setAttribute('data-kk', shortSchoolName(school.kk) + ' — Aul Bilim');
+      pageTitle.setAttribute('data-ru', shortSchoolName(school.ru || school.kk) + ' — Aul Bilim');
     }
 
     renderMapCard(school, name);
