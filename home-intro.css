@@ -215,6 +215,9 @@ body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
 .home-results-row #home-results > .results-shared-caption { margin: 8px 0 0; max-width: none; font-size: 18px; font-weight: 600; line-height: 1.6; color: var(--primary-dark); text-align: center; }
 body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-caption { display: none; }
 .home-map-title { padding: 40px 28px 0; color: var(--primary-dark); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.25; }
+.home-map-layout .home-scale { background: transparent; }
+.home-map-layout .home-scale-grid { border: 0; }
+.home-map-layout .home-scale-grid .home-stat + .home-stat { border: 0; }
 
 @media (min-width: 901px) {
   .home-map-layout { max-width: 1440px; display: grid; grid-template-columns: minmax(210px, 260px) minmax(0, 1fr); gap: 36px; align-items: center; }
@@ -223,7 +226,7 @@ body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-capt
   .home-map-layout .home-scale > .wrap, .home-map-layout .map-block > .wrap { width: 100%; padding: 0; }
   .home-map-layout .home-scale-grid { grid-template-columns: 1fr; }
   .home-map-layout .home-scale-grid .home-stat, .home-map-layout .home-scale-grid .home-stat:first-child { display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 14px 0; }
-  .home-map-layout .home-scale-grid .home-stat + .home-stat { border-left: 0; border-top: 1px solid #d8e1e7; }
+  .home-map-layout .home-scale-grid .home-stat + .home-stat { border: 0; }
   .home-map-layout .home-scale-grid .home-stat-icon, .home-map-layout .home-scale-grid .home-stat:first-child .home-stat-icon { grid-row: 1 / 3; margin: 0; }
   .home-map-layout .home-scale-grid .home-stat .n { font-size: 32px; line-height: 1.1; }
   .home-map-layout .home-scale-grid .home-stat .l { margin-top: 4px; }
