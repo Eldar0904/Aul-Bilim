@@ -209,7 +209,8 @@ body:not(.regions-page) #regions .home-map-instruction{font-size:15px}
 body:not(.regions-page) #regions .map-intro.map-hint { flex-wrap: nowrap; }
 body:not(.regions-page) #regions .home-map-instruction { flex-basis: auto; padding-left: 0; }
 body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
-.home-results-row > .results-shared-caption { margin: 0 0 20px; font-size: 14px; line-height: 1.6; color: var(--body); }
+.home-results-row > .results-shared-caption { margin: 4px 0 20px; font-size: 16px; line-height: 1.6; color: var(--body); }
+.home-results-row .home-compare-standalone, .home-results-row .home-results-standalone { padding-bottom: 0; }
 body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-caption { display: none; }
 .home-map-title { padding: 40px 28px 0; color: var(--primary-dark); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.25; }
 
@@ -229,7 +230,7 @@ body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-capt
 
 @media (min-width: 1100px) {
   .home-results-row { max-width: 1440px; display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(340px, 1fr); gap: 32px; align-items: start; }
-  .home-results-row > .results-shared-caption { grid-column: 1 / -1; margin-bottom: 0; }
+  .home-results-row > .results-shared-caption { grid-column: 1 / -1; margin: -24px 0 0; }
   .home-results-row .results-compare > .wrap, .home-results-row .results-stats { width: 100%; padding-left: 0; padding-right: 0; }
   .home-results-row .home-compare-standalone .results-compare, .home-results-row .home-results-standalone .results-stats { padding-top: 0; }
   .home-results-row :is(#home-results,.home-results-standalone).home-results-standalone .results-stats .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
