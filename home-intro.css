@@ -209,7 +209,7 @@ body:not(.regions-page) #regions .home-map-instruction{font-size:15px}
 body:not(.regions-page) #regions .map-intro.map-hint { flex-wrap: nowrap; }
 body:not(.regions-page) #regions .home-map-instruction { flex-basis: auto; padding-left: 0; }
 body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
-.home-results-row > .results-shared-caption { margin: 0 0 20px; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.6; color: var(--primary); }
+.home-results-row > .results-shared-caption { margin: 0 0 20px; font-size: 14px; line-height: 1.6; color: var(--body); }
 body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-caption { display: none; }
 .home-map-title { padding: 40px 28px 0; color: var(--primary-dark); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.25; }
 
