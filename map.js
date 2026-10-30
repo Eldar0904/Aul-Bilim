@@ -403,6 +403,7 @@
         var region = regionByMapId[mapId];
         var box = path.getBBox();
         var pos = regionLabelPos(svgLabelPositions, region, mapId, box);
+        if (mapId === 'KZ23') pos = { x: pos.x - 15, y: pos.y };
         var text = el('text', {
           x: pos.x,
           y: pos.y,
