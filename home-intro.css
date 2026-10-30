@@ -206,6 +206,8 @@ body:not(.regions-page) #regions .map-intro.map-hint{background:transparent;box-
 @media(max-width:640px){body:not(.regions-page) #regions .map-col{left:14px;top:14px}}
 body:not(.regions-page) #regions .map-intro.map-hint{font-size:18px}
 body:not(.regions-page) #regions .home-map-instruction{font-size:15px}
+body:not(.regions-page) #regions .map-intro.map-hint { flex-wrap: nowrap; }
+body:not(.regions-page) #regions .home-map-instruction { flex-basis: auto; padding-left: 0; }
 body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
 .home-results-row > .results-shared-caption { margin: 0 0 20px; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.6; color: var(--primary); }
 body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-caption { display: none; }
