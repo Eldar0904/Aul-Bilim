@@ -403,7 +403,11 @@
         var region = regionByMapId[mapId];
         var box = path.getBBox();
         var pos = regionLabelPos(svgLabelPositions, region, mapId, box);
-        if (mapId === 'KZ23') pos = { x: pos.x - 15, y: pos.y };
+        var labelOffsets = {
+          KZ23: [-15, 0], KZ39: [-10, 0], KZ55: [18, 0],
+          KZ35: [22, 0], KZ47: [-12, 0], KZ19: [30, 12], KZ61: [15, 0]
+        };
+        if (labelOffsets[mapId]) pos = { x: pos.x + labelOffsets[mapId][0], y: pos.y + labelOffsets[mapId][1] };
         var text = el('text', {
           x: pos.x,
           y: pos.y,
