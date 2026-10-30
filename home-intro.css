@@ -211,6 +211,8 @@ body:not(.regions-page) #regions .home-map-instruction { flex-basis: auto; paddi
 body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
 .home-results-row > .results-shared-caption { margin: 4px 0 20px; font-size: 16px; line-height: 1.6; color: var(--body); }
 .home-results-row .home-compare-standalone, .home-results-row .home-results-standalone { padding-bottom: 0; }
+.home-results-row #home-results { display: block; }
+.home-results-row #home-results > .results-shared-caption { margin: 8px 0 0; max-width: none; font-size: 16px; line-height: 1.6; color: var(--body); text-align: left; }
 body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-caption { display: none; }
 .home-map-title { padding: 40px 28px 0; color: var(--primary-dark); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.25; }
 
