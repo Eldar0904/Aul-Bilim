@@ -209,9 +209,11 @@ body:not(.regions-page) #regions .home-map-instruction{font-size:15px}
 body:has(#region-schools:not([hidden])) .home-compare-standalone{display:none}
 .home-results-row > .results-shared-caption { margin: 0 0 20px; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.6; color: var(--primary); }
 body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-caption { display: none; }
+.home-map-title { padding: 40px 28px 0; color: var(--primary-dark); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.25; }
 
 @media (min-width: 901px) {
   .home-map-layout { max-width: 1440px; display: grid; grid-template-columns: minmax(210px, 260px) minmax(0, 1fr); gap: 36px; align-items: center; }
+  .home-map-title { grid-column: 1 / -1; padding: 40px 0 0; }
   .home-map-layout .home-scale, .home-map-layout .map-block { padding: 40px 0; }
   .home-map-layout .home-scale > .wrap, .home-map-layout .map-block > .wrap { width: 100%; padding: 0; }
   .home-map-layout .home-scale-grid { grid-template-columns: 1fr; }
