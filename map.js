@@ -404,8 +404,8 @@
         var box = path.getBBox();
         var pos = regionLabelPos(svgLabelPositions, region, mapId, box);
         var labelOffsets = {
-          KZ23: [-15, 0], KZ39: [-10, 0], KZ55: [18, 0],
-          KZ35: [22, 0], KZ47: [-12, 0], KZ19: [30, 12], KZ61: [15, 0]
+          KZ23: [-15, 0], KZ39: [-10, 0], KZ55: [8, 0],
+          KZ35: [22, 0], KZ47: [-12, 0], KZ19: [30, 12], KZ61: [5, 0]
         };
         if (labelOffsets[mapId]) pos = { x: pos.x + labelOffsets[mapId][0], y: pos.y + labelOffsets[mapId][1] };
         var text = el('text', {
