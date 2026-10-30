@@ -3244,3 +3244,11 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 @media(max-width:700px){.about-mission-in{padding:28px 22px}.about-mission-title{margin-bottom:22px}}
 .about-mission-title::after{display:none}
 .about-mission-goal{padding-left:0;border-left:0}
+.about-foundations { max-width: 1016px; padding-top: 48px; padding-bottom: 88px; }
+.about-foundations > h1 { color: var(--primary-dark); font-size: clamp(28px, 3vw, 38px); margin-bottom: 32px; }
+.foundation-profile { padding: 32px 0; border-top: 1px solid var(--line); }
+.foundation-profile h2 { color: var(--primary-dark); font-size: clamp(23px, 2.5vw, 30px); line-height: 1.25; margin-bottom: 20px; }
+.foundation-profile h3 { color: var(--primary-dark); font-size: 19px; margin: 28px 0 10px; }
+.foundation-profile p { font-size: 16px; line-height: 1.8; }
+.foundation-profile p + p { margin-top: 16px; }
+@media (max-width: 700px) { .about-foundations { padding-top: 32px; padding-bottom: 56px; } .foundation-profile { padding: 26px 0; } }
