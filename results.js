@@ -23,6 +23,20 @@
     }
   }
 
+  function isLegacyHomeGallery(before, after) {
+    if (!root.closest('#home-results')) return false;
+    var legacyBefore = ['assets/results/kostanay-before.jpg', 'assets/results/akmola-before.jpg'];
+    var legacyAfter = ['assets/results/kostanay-after.png', 'assets/results/akmola-after.jpg'];
+    function matches(urls, defaults) {
+      return urls.length === defaults.length && urls.every(function (url, index) {
+        try {
+          return new URL(url, document.baseURI).href === new URL(defaults[index], document.baseURI).href;
+        } catch (e) { return false; }
+      });
+    }
+    return matches(before, legacyBefore) && matches(after, legacyAfter);
+  }
+
   function refreshElements() {
     slides = Array.prototype.slice.call(root.querySelectorAll('.compare-slide'));
     dots = Array.prototype.slice.call(root.querySelectorAll('.compare-dot'));
@@ -108,7 +122,7 @@
       var media = content && content.media;
       var before = parseGallery(media && media['results-before-gallery'] && media['results-before-gallery'].u);
       var after = parseGallery(media && media['results-after-gallery'] && media['results-after-gallery'].u);
-      if (before.length && after.length) renderPairs(before, after);
+      if (before.length && after.length && !isLegacyHomeGallery(before, after)) renderPairs(before, after);
     }).catch(function () {});
   }
 }());
