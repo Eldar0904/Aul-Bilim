@@ -428,30 +428,6 @@
   },
   {
     "page": "index.html",
-    "key": "index-stat-05-n",
-    "selector": "[data-copy=\"index-stat-05-n\"]",
-    "label": "8.8%",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "index.html",
-    "key": "index-021-kk",
-    "selector": "[data-copy=\"index-021-kk\"]",
-    "label": "оқушылардың білім сапасының орташа өсімі",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "index.html",
-    "key": "index-022-ru",
-    "selector": "[data-copy=\"index-022-ru\"]",
-    "label": "средний рост качества знаний учащихся",
-    "section": "Content",
-    "type": "text"
-  },
-  {
-    "page": "index.html",
     "key": "index-043-kk",
     "selector": "[data-copy=\"index-043-kk\"]",
     "label": "Бөлектелген аймақты басыңыз",
