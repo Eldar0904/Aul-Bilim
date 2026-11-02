@@ -245,3 +245,8 @@ body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-capt
   .home-results-row .home-results-standalone .results-stats .result-card:nth-child(n+3) { border-top: 1px solid #d8e1e7; }
   .home-results-row .home-results-standalone .results-stats .result-card { padding: 18px; }
 }
+
+#home-results .home-compare-header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#fff}
+#home-results .home-compare-header .compare-tag{position:static}
+#home-results .home-compare-header .compare-tag:first-child{color:#fff;background:rgba(33,35,46,.76)}
+#home-results .home-compare-header .compare-tag:last-child{color:var(--ink);background:rgba(242,164,19,.94)}
