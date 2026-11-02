@@ -252,4 +252,3 @@ body:has(#region-schools:not([hidden])) .home-results-row > .results-shared-capt
 #home-results .home-compare-header .compare-tag:first-child{color:#fff;background:rgba(33,35,46,.76)}
 #home-results .home-compare-header .compare-tag:last-child{color:var(--ink);background:rgba(242,164,19,.94)}
 
-#home-results .compare-slide img{object-fit:contain;background:#f5f2eb}
