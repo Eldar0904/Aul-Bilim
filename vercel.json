@@ -37,6 +37,16 @@
       "source": "/conf2024.html",
       "destination": "https://qazaqstanhalqyna.kz/kk/forum/forum2024kz.html",
       "permanent": false
+    },
+    {
+      "source": "/conf2025",
+      "destination": "https://qazaqstanhalqyna.kz/kk/forum/forum2025kz.html",
+      "permanent": false
+    },
+    {
+      "source": "/conf2025.html",
+      "destination": "https://qazaqstanhalqyna.kz/kk/forum/forum2025kz.html",
+      "permanent": false
     }
   ]
 }
