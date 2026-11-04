@@ -26,5 +26,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/conf2024",
+      "destination": "https://qazaqstanhalqyna.kz/ru/forum/forum2024ru.html",
+      "permanent": false
+    },
+    {
+      "source": "/conf2024.html",
+      "destination": "https://qazaqstanhalqyna.kz/ru/forum/forum2024ru.html",
+      "permanent": false
+    }
   ]
 }
