@@ -630,7 +630,6 @@
           '<h4>' + bi(shortSchoolName(s.kk), shortSchoolName(s.ru)) + '</h4>' +
           '<div class="school-card-foot">' +
             teachersHtml +
-            '<span class="school-card-link" aria-hidden="true">↗</span>' +
           '</div>' +
         '</div>' +
       '</a>';
