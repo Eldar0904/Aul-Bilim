@@ -148,7 +148,7 @@
       <button type="button" class="forum-photo" data-index="48" aria-label="Фото 49" hidden><img src="assets/talks-gallery/49.webp" alt="" loading="lazy" width="800" height="533"></button>
       <button type="button" class="forum-photo" data-index="49" aria-label="Фото 50" hidden><img src="assets/talks-gallery/50.webp" alt="" loading="lazy" width="800" height="533"></button>
     </div>
-    <button class="forum-gallery-more" id="forum-gallery-more" type="button"><span lang="kk">Барлық фотоларды көру</span><span lang="ru">Посмотреть все фотографии</span></button>
+    <a class="forum-gallery-more" href="talks-gallery.html"><span lang="kk">Барлық фотоларды көру</span><span lang="ru">Посмотреть все фотографии</span></a>
   </div>
 </section>
 <dialog class="forum-lightbox" id="forum-lightbox" aria-label="Фотогалерея">
@@ -166,7 +166,7 @@
 .forum-photo img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .25s; }
 .forum-photo:hover img { transform:scale(1.04); }
 .forum-photo:focus-visible, .forum-gallery-more:focus-visible { outline:3px solid var(--accent-deep); outline-offset:3px; }
-.forum-gallery-more { margin-top:24px; padding:12px 22px; border:1px solid var(--primary-dark); border-radius:999px; color:var(--primary-dark); background:transparent; font:inherit; font-weight:700; cursor:pointer; }
+.forum-gallery-more { display:inline-block; text-decoration:none; margin-top:24px; padding:12px 22px; border:1px solid var(--primary-dark); border-radius:999px; color:var(--primary-dark); background:transparent; font:inherit; font-weight:700; cursor:pointer; }
 .forum-gallery-more:hover { background:var(--primary-dark); color:white; }
 .forum-lightbox { position:fixed; inset:0; width:100%; max-width:none; height:100%; max-height:none; margin:0; padding:56px 72px 44px; border:0; background:rgba(8,14,26,.96); color:#fff; }
 .forum-lightbox::backdrop { background:rgba(8,14,26,.9); }
@@ -184,7 +184,6 @@
 (() => {
   const gallery = document.getElementById('forum-gallery-grid');
   const photos = Array.from(gallery.querySelectorAll('.forum-photo'));
-  const more = document.getElementById('forum-gallery-more');
   const dialog = document.getElementById('forum-lightbox');
   const image = dialog.querySelector('img');
   const count = dialog.querySelector('.forum-lightbox-count');
@@ -195,10 +194,6 @@
     image.src = photos[current].querySelector('img').src;
     count.textContent = (current + 1) + ' / ' + photos.length;
   }
-  more.addEventListener('click', () => {
-    photos.forEach(photo => { photo.hidden = false; });
-    more.hidden = true;
-  });
   gallery.addEventListener('click', event => {
     const photo = event.target.closest('.forum-photo');
     if (!photo) return;
