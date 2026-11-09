@@ -126,7 +126,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -149,7 +149,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -172,7 +172,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -195,7 +195,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -218,7 +218,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -241,7 +241,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -264,7 +264,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -287,7 +287,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/baidibek.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -310,7 +310,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/baidibek.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -333,7 +333,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/baidibek.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -356,7 +356,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/baidibek.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -379,7 +379,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/baidibek.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -402,7 +402,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -425,7 +425,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -448,7 +448,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -471,7 +471,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -494,7 +494,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -517,7 +517,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -540,7 +540,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -563,7 +563,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -586,7 +586,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -609,7 +609,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -632,7 +632,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -655,7 +655,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -678,7 +678,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -701,7 +701,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -724,7 +724,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -747,7 +747,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -770,7 +770,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -793,7 +793,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -816,7 +816,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -839,7 +839,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -862,7 +862,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -885,7 +885,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -908,7 +908,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -931,7 +931,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -954,7 +954,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -977,7 +977,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1000,7 +1000,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1023,7 +1023,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1046,7 +1046,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1069,7 +1069,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1092,7 +1092,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1115,7 +1115,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1138,7 +1138,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1161,7 +1161,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1184,7 +1184,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1207,7 +1207,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1230,7 +1230,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1253,7 +1253,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1276,7 +1276,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1299,7 +1299,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1322,7 +1322,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1345,7 +1345,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1368,7 +1368,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1391,7 +1391,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1414,7 +1414,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1437,7 +1437,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1460,7 +1460,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1483,7 +1483,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1506,7 +1506,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1529,7 +1529,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1552,7 +1552,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1575,7 +1575,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1598,7 +1598,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1621,7 +1621,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1644,7 +1644,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1667,7 +1667,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1690,7 +1690,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1713,7 +1713,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1736,7 +1736,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1759,7 +1759,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1782,7 +1782,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1805,7 +1805,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1828,7 +1828,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1851,7 +1851,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1874,7 +1874,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1897,7 +1897,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1920,7 +1920,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1943,7 +1943,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1966,7 +1966,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -1989,7 +1989,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2012,7 +2012,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2035,7 +2035,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2058,7 +2058,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2081,7 +2081,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2104,7 +2104,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2127,7 +2127,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2150,7 +2150,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2173,7 +2173,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2196,7 +2196,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2219,7 +2219,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2242,7 +2242,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2265,7 +2265,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2288,7 +2288,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2311,7 +2311,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2334,7 +2334,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2357,7 +2357,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2380,7 +2380,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
@@ -2403,7 +2403,7 @@ window.TURKISTAN_SCHOOLS = {
         "ru": ""
       },
       "image": "",
-      "mapImage": "",
+      "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
       "youtube": ""
