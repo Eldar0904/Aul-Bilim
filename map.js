@@ -602,6 +602,8 @@
 
     function schoolCardPreview(s) {
       if (s.cardImage) return s.cardImage;
+      // Turkistan cards use verified exterior photos; galleries and maps stay on the school page.
+      if (String(s.id || '').indexOf('turkistan-') === 0) return '';
       var gallery = schoolGalleryImages(s);
       if (gallery.length) return gallery[0];
       return s.mapImage || s.image || '';
