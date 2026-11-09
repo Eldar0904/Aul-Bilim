@@ -61,7 +61,7 @@ window.AUL_BILIM_MAP_REGIONS = [
     kk: 'Түркістан облысы',
     ru: 'Туркестанская область',
     en: 'Turkistan Region',
-    total: 43,
+    schoolGlobal: 'TURKISTAN_SCHOOLS',
     packStats: { cabinets: '108', teachers: '500+' }
   },
   {

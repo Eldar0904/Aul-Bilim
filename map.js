@@ -103,6 +103,7 @@
   ];
 
   var REGION_SCHOOL_PACKS = [
+    { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Түркістан облысындағы 100 жобалық мектептің тізімі.', ru: 'Список 100 проектных школ Туркестанской области.' } },
     {
       id: 'west-kazakhstan',
       global: 'WEST_KAZAKHSTAN_SCHOOLS',

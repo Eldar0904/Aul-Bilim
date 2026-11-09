@@ -1,5 +1,6 @@
 /** Shared school region registry for map, school pages, and admin. */
 window.AUL_BILIM_SCHOOL_REGIONS = [
+  { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', kk: 'Түркістан облысы', ru: 'Туркестанская область', en: 'Turkistan Region' },
   { id: 'west-kazakhstan', global: 'WEST_KAZAKHSTAN_SCHOOLS', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область', en: 'West Kazakhstan Region' },
   { id: 'kostanay', global: 'KOSTANAY_SCHOOLS', kk: 'Қостанай облысы', ru: 'Костанайская область', en: 'Kostanay Region' },
   { id: 'akmola', global: 'AKMOLA_SCHOOLS', kk: 'Ақмола облысы', ru: 'Акмолинская область', en: 'Akmola Region' },
