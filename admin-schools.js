@@ -881,7 +881,7 @@ window.adminSchools = (function () {
       galBtn.dataset.bound = '1';
       galBtn.addEventListener('click', function () { galFile.click(); });
       galFile.addEventListener('change', function () {
-        var files = galFile.files;
+        var files = Array.prototype.slice.call(galFile.files || []);
         galFile.value = '';
         if (files && files.length) uploadSchoolGalleryFiles(files);
       });
