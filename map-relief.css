@@ -1,10 +1,5 @@
 /* Relief is confined to the map shapes; labels and hit targets stay in place. */
 .map-pan.is-ready > img { opacity: 0; }
-.map-pan.is-ready .map-hot { animation: map-float 6s ease-in-out infinite; }
-@keyframes map-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
 .map-terrain { filter: drop-shadow(0 1px 0 #b08c60) drop-shadow(0 2px 0 #9f7950) drop-shadow(0 3px 0 #8c6948) drop-shadow(0 7px 5px rgba(62,45,27,.25)); }
 .map-hot .map-region { fill: url(#map-neutral-relief); stroke: rgba(255,255,255,.94); stroke-width: 1.35; }
 .map-hot .map-region.active,
@@ -15,8 +10,6 @@
 .map-hot .map-region.active:focus-visible { fill: url(#map-hover-relief); }
 .map-hot .map-label.active { stroke: rgba(107,67,25,.85); }
 .map-stage.zoomed .map-terrain { filter: drop-shadow(0 2px 2px rgba(62,45,27,.2)); }
-.map-stage.zoomed .map-hot, .map-stage.is-animating .map-hot { animation: none; }
-@media (prefers-reduced-motion: reduce) { .map-pan.is-ready .map-hot { animation: none; } }
 @media (max-width: 640px) {
   .map-terrain { filter: drop-shadow(0 1px 0 #a78055) drop-shadow(0 3px 3px rgba(62,45,27,.25)); }
 }
