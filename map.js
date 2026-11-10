@@ -481,11 +481,12 @@
     /* hover → pulse rings */
     svg.addEventListener('mouseover', function (e) {
       var id = e.target.getAttribute && e.target.getAttribute('data-region');
-      if (id) svg.querySelectorAll('[data-pulse="' + id + '"]').forEach(function (p) { p.classList.add('hovered'); });
+      if (id) svg.querySelectorAll('.map-region[data-region="' + id + '"]').forEach(function (p) { p.classList.add('is-hovered'); });
     });
     svg.addEventListener('mouseout', function (e) {
       var id = e.target.getAttribute && e.target.getAttribute('data-region');
-      if (id) svg.querySelectorAll('[data-pulse="' + id + '"]').forEach(function (p) { p.classList.remove('hovered'); });
+      var nextId = e.relatedTarget && e.relatedTarget.getAttribute && e.relatedTarget.getAttribute('data-region');
+      if (id && id !== nextId) svg.querySelectorAll('.map-region[data-region="' + id + '"]').forEach(function (p) { p.classList.remove('is-hovered'); });
     });
     svg.addEventListener('keydown', function (e) {
       var id = e.target.getAttribute && e.target.getAttribute('data-region');
