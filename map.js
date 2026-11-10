@@ -480,6 +480,7 @@
 
     /* hover → pulse rings */
     svg.addEventListener('mouseover', function (e) {
+      if (!e.target.classList || !e.target.classList.contains('map-region')) return;
       var id = e.target.getAttribute && e.target.getAttribute('data-region');
       if (id) svg.querySelectorAll('[data-pulse="' + id + '"]').forEach(function (p) { p.classList.add('hovered'); });
     });

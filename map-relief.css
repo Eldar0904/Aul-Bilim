@@ -9,6 +9,7 @@
 .map-hot .map-region.active:hover,
 .map-hot .map-region.active:focus-visible { fill: url(#map-hover-relief); }
 .map-hot .map-label.active { stroke: rgba(107,67,25,.85); }
+.map-hot .map-label.active:hover:not(:focus-visible) { fill: #fff; stroke: rgba(107,67,25,.85); }
 .map-stage.zoomed .map-terrain { filter: drop-shadow(0 2px 2px rgba(62,45,27,.2)); }
 @media (max-width: 640px) {
   .map-terrain { filter: drop-shadow(0 1px 0 #a78055) drop-shadow(0 3px 3px rgba(62,45,27,.25)); }
