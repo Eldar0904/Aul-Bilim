@@ -383,6 +383,19 @@
       var svgLabelPositions = readSvgLabelPositions(doc);
       var activePaths = [];
       var labels = [];
+      var defs = el('defs');
+      function gradient(id, top, bottom) {
+        var node = el('linearGradient', { id: id, x1: '0', y1: '0', x2: '0.25', y2: '1' });
+        node.appendChild(el('stop', { offset: '0%', 'stop-color': top }));
+        node.appendChild(el('stop', { offset: '100%', 'stop-color': bottom }));
+        defs.appendChild(node);
+      }
+      gradient('map-gold-relief', '#edbc70', '#bd7d2f');
+      gradient('map-neutral-relief', '#f1f1ef', '#c9cccd');
+      gradient('map-hover-relief', '#f8d492', '#d38e39');
+      svg.appendChild(defs);
+      var terrain = el('g', { 'class': 'map-terrain' });
+      svg.appendChild(terrain);
 
       sourcePaths.forEach(function (sourcePath) {
         var mapId = sourcePath.getAttribute('id');
@@ -399,7 +412,7 @@
           path.setAttribute('tabindex', '0');
           path.setAttribute('role', 'button');
         }
-        svg.appendChild(path);
+        terrain.appendChild(path);
         if (region) activePaths.push({ region: region, path: path });
       });
 
