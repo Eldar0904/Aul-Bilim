@@ -10,7 +10,7 @@
   /* Each region: id, names, total schools, pin centre (fraction of map),
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
   var REGIONS = [
-    { id:'ulytau', kk:'Ұлытау облысы', ru:'Улытауская область', mapId:'KZ62', total:0, districts:[], schools:[], placeholder:true },
+    { id:'ulytau', kk:'Ұлытау облысы', ru:'Улытауская область', mapId:'KZ62', total:0, districts:[], schools:[] },
     { id:'jetisu', kk:'Жетісу облысы', ru:'Область Жетісу', mapId:'KZ33', total:0, districts:[], schools:[], placeholder:true },
     {
       id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область', total: 71,
@@ -103,6 +103,7 @@
   ];
 
   var REGION_SCHOOL_PACKS = [
+    { id: 'ulytau', global: 'ULYTAU_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Ұлытау облысындағы 30 жобалық мектептің тізімі.', ru: 'Список 30 проектных школ Улытауской области.' } },
     { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Түркістан облысындағы 100 жобалық мектептің тізімі.', ru: 'Список 100 проектных школ Туркестанской области.' } },
     {
       id: 'west-kazakhstan',
@@ -616,8 +617,8 @@
 
     function schoolCardPreview(s) {
       if (s.cardImage) return s.cardImage;
-      // Turkistan cards use verified exterior photos; galleries and maps stay on the school page.
-      if (String(s.id || '').indexOf('turkistan-') === 0) return '';
+      // These regions show verified exteriors only in school card previews.
+      if (/^(turkistan|ulytau)-/.test(String(s.id || ''))) return '';
       var gallery = schoolGalleryImages(s);
       if (gallery.length) return gallery[0];
       return s.mapImage || s.image || '';

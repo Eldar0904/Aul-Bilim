@@ -57,6 +57,14 @@ window.AUL_BILIM_MAP_REGIONS = [
     packStats: { cabinets: '125', teachers: '900+' }
   },
   {
+    id: 'ulytau',
+    kk: 'Ұлытау облысы',
+    ru: 'Улытауская область',
+    en: 'Ulytau Region',
+    schoolGlobal: 'ULYTAU_SCHOOLS',
+    packStats: { cabinets: '—', teachers: '—' }
+  },
+  {
     id: 'turkistan',
     kk: 'Түркістан облысы',
     ru: 'Туркестанская область',
