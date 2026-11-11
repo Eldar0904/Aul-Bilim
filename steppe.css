@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
 /* ============================================================
    AUL BILIM — Steppe Sunrise design system
    Shared across all pages
@@ -16,8 +17,8 @@
   --body: #4A4A5E;
   --surface: #FFFFFF;
   --line: rgba(180,140,60,0.18);
-  --fh: 'Raleway', sans-serif;
-  --fb: 'Inter', sans-serif;
+  --fh: 'Segoe UI Variable Display', 'Segoe UI', 'Noto Sans', sans-serif;
+  --fb: 'Segoe UI Variable Display', 'Segoe UI', 'Noto Sans', sans-serif;
   --nav-h: 96px;
   --scroll-pad: calc(var(--nav-h) + 20px);
 }
