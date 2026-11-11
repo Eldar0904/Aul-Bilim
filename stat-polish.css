@@ -1,7 +1,7 @@
 /* Dimension and typography for the five homepage indicators. */
 .home-map-layout .home-scale-grid .home-stat .n,
 .home-map-layout .home-scale-grid .home-stat:first-child .n {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Segoe UI Variable Display', 'Segoe UI', 'Noto Sans', sans-serif;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: -.035em;
