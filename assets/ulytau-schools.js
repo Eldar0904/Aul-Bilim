@@ -55,7 +55,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-satpayev-1/classroom-05.webp",
         "assets/ulytau-media/ulytau-satpayev-1/classroom-06.webp",
         "assets/ulytau-media/ulytau-satpayev-1/classroom-07.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Мәңгілік ел көшесі, 11А",
+        "ru": "Адрес: город Сатпаев, ул. Мәңгілік ел, 11А"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-2",
@@ -67,7 +72,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Сатпаев"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Наурыз көшесі, 144",
+        "ru": "Адрес: город Сатпаев, ул. Наурыз, 144"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-3",
@@ -79,7 +89,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Сатпаев"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Сәтбаев даңғылы, 114А",
+        "ru": "Адрес: город Сатпаев, пр. Сатпаева, 114А"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-4",
@@ -102,7 +117,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-satpayev-4/classroom-08.webp",
         "assets/ulytau-media/ulytau-satpayev-4/classroom-09.webp",
         "assets/ulytau-media/ulytau-satpayev-4/classroom-10.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Тәуелсіздік даңғылы, 20",
+        "ru": "Адрес: город Сатпаев, пр. Независимости, 20"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-5",
@@ -124,7 +144,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-satpayev-5/classroom-07.webp",
         "assets/ulytau-media/ulytau-satpayev-5/classroom-08.webp",
         "assets/ulytau-media/ulytau-satpayev-5/classroom-09.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Сәтбаев даңғылы, 139",
+        "ru": "Адрес: город Сатпаев, пр. Сатпаева, 139"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-6",
@@ -140,7 +165,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-satpayev-6/classroom-01.webp",
         "assets/ulytau-media/ulytau-satpayev-6/classroom-02.webp",
         "assets/ulytau-media/ulytau-satpayev-6/classroom-03.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Наурыз көшесі, 5",
+        "ru": "Адрес: город Сатпаев, ул. Наурыз, 5"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-7",
@@ -152,7 +182,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Сатпаев"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Ерден көшесі, 217",
+        "ru": "Адрес: город Сатпаев, ул. Ердена, 217"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-8",
@@ -164,7 +199,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Сатпаев"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Мәңгілік ел көшесі, 12А",
+        "ru": "Адрес: город Сатпаев, ул. Мәңгілік ел, 12А"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-satpayev-9",
@@ -194,7 +234,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-satpayev-9/classroom-15.webp",
         "assets/ulytau-media/ulytau-satpayev-9/classroom-16.webp",
         "assets/ulytau-media/ulytau-satpayev-9/classroom-17.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Сәтбаев қаласы, Наурыз көшесі, 7",
+        "ru": "Адрес: город Сатпаев, ул. Наурыз, 7"
+      },
+      "mapImage": "assets/ulytau-maps/satpayev.png"
     },
     {
       "id": "ulytau-zhanaarka-10",
@@ -217,7 +262,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhanaarka-10/classroom-08.webp",
         "assets/ulytau-media/ulytau-zhanaarka-10/classroom-09.webp",
         "assets/ulytau-media/ulytau-zhanaarka-10/classroom-10.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Жаңаарқа кенті, Байдалы би көшесі, 11/2",
+        "ru": "Адрес: Жанааркинский район, пос. Жанаарка, ул. Байдалы би, 11/2"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-11",
@@ -237,7 +287,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhanaarka-11/classroom-05.webp",
         "assets/ulytau-media/ulytau-zhanaarka-11/classroom-06.webp",
         "assets/ulytau-media/ulytau-zhanaarka-11/classroom-07.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Жаңаарқа кенті, А. Оспанова көшесі, 36",
+        "ru": "Адрес: Жанааркинский район, пос. Жанаарка, ул. А. Оспановой, 36"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-12",
@@ -261,7 +316,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhanaarka-12/classroom-09.webp",
         "assets/ulytau-media/ulytau-zhanaarka-12/classroom-10.webp",
         "assets/ulytau-media/ulytau-zhanaarka-12/classroom-11.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Қызылжар кенті, Қ. Байдәулетов көшесі, 1",
+        "ru": "Адрес: Жанааркинский район, пос. Кызылжар, ул. К. Байдаулетова, 1"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-13",
@@ -273,7 +333,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "Жанааркинский район"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Жаңаарқа кенті, Абай көшесі, 35/1",
+        "ru": "Адрес: Жанааркинский район, пос. Жанаарка, ул. Абая, 35/1"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-14",
@@ -285,7 +350,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "Жанааркинский район"
       },
       "cardImage": "assets/ulytau-media/ulytau-zhanaarka-14/facade.webp",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Түгіскен ауылы, Ыдырыс Жұмабеков көшесі, 18",
+        "ru": "Адрес: Жанааркинский район, с. Тугискен, ул. Ыдырыса Жумабекова, 18"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-15",
@@ -304,7 +374,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhanaarka-15/classroom-04.webp",
         "assets/ulytau-media/ulytau-zhanaarka-15/classroom-05.webp",
         "assets/ulytau-media/ulytau-zhanaarka-15/classroom-06.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Ынталы ауылы, Бірлік көшесі, 13",
+        "ru": "Адрес: Жанааркинский район, с. Инталы, ул. Бірлік, 13"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-16",
@@ -316,7 +391,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "Жанааркинский район"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Атасу ауылы, С. Сейфуллин көшесі, 1",
+        "ru": "Адрес: Жанааркинский район, с. Атасу, ул. С. Сейфуллина, 1"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-17",
@@ -340,7 +420,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhanaarka-17/classroom-09.webp",
         "assets/ulytau-media/ulytau-zhanaarka-17/classroom-10.webp",
         "assets/ulytau-media/ulytau-zhanaarka-17/classroom-11.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Ералиев ауылы, Мектеп көшесі, 13",
+        "ru": "Адрес: Жанааркинский район, с. Ералиев, ул. Мектеп, 13"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-18",
@@ -352,7 +437,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "Жанааркинский район"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Мұқажан Жұмажанов ауылы, Сәкен Сейфуллин көшесі, 23",
+        "ru": "Адрес: Жанааркинский район, с. Мукажана Жумажанова, ул. Сакена Сейфуллина, 23"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-zhanaarka-19",
@@ -372,7 +462,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhanaarka-19/classroom-05.webp",
         "assets/ulytau-media/ulytau-zhanaarka-19/classroom-06.webp",
         "assets/ulytau-media/ulytau-zhanaarka-19/classroom-07.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жаңаарқа ауданы, Талдыбұлақ ауылы, Тәуелсіздік көшесі, 2",
+        "ru": "Адрес: Жанааркинский район, с. Талдыбулак, ул. Тәуелсіздік, 2"
+      },
+      "mapImage": "assets/ulytau-maps/zhanaarka.png"
     },
     {
       "id": "ulytau-ulytau-20",
@@ -384,7 +479,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "Улытауский район"
       },
       "cardImage": "assets/ulytau-media/ulytau-ulytau-20/facade.webp",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Ұлытау ауданы, Жезді кенті, Сәтбаев көшесі, 9",
+        "ru": "Адрес: Улытауский район, пос. Жезды, ул. Сатпаева, 9"
+      },
+      "mapImage": "assets/ulytau-maps/ulytau.png"
     },
     {
       "id": "ulytau-karazhal-21",
@@ -396,7 +496,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Каражал"
       },
       "cardImage": "assets/ulytau-media/ulytau-karazhal-21/facade.webp",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Қаражал қаласы, Абай көшесі, 11",
+        "ru": "Адрес: город Каражал, ул. Абая, 11"
+      },
+      "mapImage": "assets/ulytau-maps/karazhal.png"
     },
     {
       "id": "ulytau-karazhal-22",
@@ -408,7 +513,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Каражал"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Қаражал қаласы, Жәйрем кенті, Металлургтер көшесі, 85",
+        "ru": "Адрес: город Каражал, пос. Жайрем, ул. Металлургов, 85"
+      },
+      "mapImage": "assets/ulytau-maps/karazhal.png"
     },
     {
       "id": "ulytau-karazhal-23",
@@ -420,7 +530,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Каражал"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Қаражал қаласы, Жәйрем кенті, Ғани Мұратбаев көшесі, 11",
+        "ru": "Адрес: город Каражал, пос. Жайрем, ул. Гани Муратбаева, 11"
+      },
+      "mapImage": "assets/ulytau-maps/karazhal.png"
     },
     {
       "id": "ulytau-zhezkazgan-24",
@@ -446,7 +561,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhezkazgan-24/classroom-11.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-24/classroom-12.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-24/classroom-13.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Кеңгір ауылы, Ы. Алтынсарин көшесі, 2",
+        "ru": "Адрес: город Жезказган, с. Кенгир, ул. Ы. Алтынсарина, 2"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     },
     {
       "id": "ulytau-zhezkazgan-25",
@@ -470,7 +590,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhezkazgan-25/classroom-09.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-25/classroom-10.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-25/classroom-11.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Жалил көшесі, 10",
+        "ru": "Адрес: город Жезказган, ул. Жалиля, 10"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     },
     {
       "id": "ulytau-zhezkazgan-26",
@@ -482,7 +607,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Жезказган"
       },
       "cardImage": "assets/ulytau-media/ulytau-zhezkazgan-26/facade.webp",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Жанасов көшесі, 15",
+        "ru": "Адрес: город Жезказган, ул. Жанасова, 15"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     },
     {
       "id": "ulytau-zhezkazgan-27",
@@ -506,7 +636,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhezkazgan-27/classroom-09.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-27/classroom-10.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-27/classroom-11.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Бауыржан Момышұлы көшесі, 12",
+        "ru": "Адрес: город Жезказган, ул. Бауыржана Момышулы, 12"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     },
     {
       "id": "ulytau-zhezkazgan-28",
@@ -518,7 +653,12 @@ window.ULYTAU_SCHOOLS = {
         "ru": "город Жезказган"
       },
       "cardImage": "",
-      "gallery": []
+      "gallery": [],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Ержанов көшесі, 11",
+        "ru": "Адрес: город Жезказган, ул. Ержанова, 11"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     },
     {
       "id": "ulytau-zhezkazgan-29",
@@ -553,7 +693,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhezkazgan-29/classroom-20.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-29/classroom-21.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-29/classroom-22.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Гагарин көшесі, 38",
+        "ru": "Адрес: город Жезказган, ул. Гагарина, 38"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     },
     {
       "id": "ulytau-zhezkazgan-30",
@@ -579,7 +724,12 @@ window.ULYTAU_SCHOOLS = {
         "assets/ulytau-media/ulytau-zhezkazgan-30/classroom-11.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-30/classroom-12.webp",
         "assets/ulytau-media/ulytau-zhezkazgan-30/classroom-13.webp"
-      ]
+      ],
+      "desc": {
+        "kk": "Мекенжайы: Жезқазған қаласы, Аманжолов көшесі, 18",
+        "ru": "Адрес: город Жезказган, ул. Аманжолова, 18"
+      },
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png"
     }
   ]
 };
