@@ -306,8 +306,14 @@
     if (backLink) {
       backLink.href = 'regions.html#region-' + region.id + '-schools';
     }
-    if (descEl && school.desc) {
-      var description = publicSchoolDescription(bi(school.desc.kk, school.desc.ru));
+    if (descEl) {
+      var desc = school.desc || {};
+      var language = bi('kk', 'ru');
+      var description = publicSchoolDescription(desc[language]);
+      var addresses = window.AUL_BILIM_SCHOOL_ADDRESSES || {};
+      if ((!description || /^director\s*:/i.test(description)) && addresses[school.id]) {
+        description = addresses[school.id][language] || description;
+      }
       var addressLabel = description.indexOf('Мекенжайы:') === 0 ? 'Мекенжайы' :
         (description.indexOf('Мекенжай:') === 0 ? 'Мекенжай' :
           (description.indexOf('Адрес:') === 0 ? 'Адрес' : null));
