@@ -57,6 +57,14 @@ window.AUL_BILIM_MAP_REGIONS = [
     packStats: { cabinets: '125', teachers: '900+' }
   },
   {
+    id: 'jetisu',
+    kk: 'Жетісу облысы',
+    ru: 'Область Жетісу',
+    en: 'Jetisu Region',
+    schoolGlobal: 'JETISU_SCHOOLS',
+    packStats: { cabinets: '—', teachers: '—' }
+  },
+  {
     id: 'ulytau',
     kk: 'Ұлытау облысы',
     ru: 'Улытауская область',

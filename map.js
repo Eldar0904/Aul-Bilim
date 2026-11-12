@@ -11,7 +11,7 @@
      hotspot polygon (in 1150x660 space) and its real districts (auдандар). */
   var REGIONS = [
     { id:'ulytau', kk:'Ұлытау облысы', ru:'Улытауская область', mapId:'KZ62', total:0, districts:[], schools:[] },
-    { id:'jetisu', kk:'Жетісу облысы', ru:'Область Жетісу', mapId:'KZ33', total:0, districts:[], schools:[], placeholder:true },
+    { id:'jetisu', kk:'Жетісу облысы', ru:'Область Жетісу', mapId:'KZ33', total:0, districts:[], schools:[] },
     {
       id: 'west-kazakhstan', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область', total: 71,
       mapId: 'KZ27',
@@ -103,6 +103,7 @@
   ];
 
   var REGION_SCHOOL_PACKS = [
+    { id: 'jetisu', global: 'JETISU_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Жетісу облысындағы жобалық мектептердің тізімі.', ru: 'Список школ проекта в области Жетісу.' } },
     { id: 'ulytau', global: 'ULYTAU_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Ұлытау облысындағы 30 жобалық мектептің тізімі.', ru: 'Список 30 проектных школ Улытауской области.' } },
     { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Түркістан облысындағы 100 жобалық мектептің тізімі.', ru: 'Список 100 проектных школ Туркестанской области.' } },
     {

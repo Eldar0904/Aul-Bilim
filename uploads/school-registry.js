@@ -1,5 +1,6 @@
 /** Shared school region registry for map, school pages, and admin. */
 window.AUL_BILIM_SCHOOL_REGIONS = [
+  { id: 'jetisu', global: 'JETISU_SCHOOLS', kk: 'Жетісу облысы', ru: 'Область Жетісу', en: 'Jetisu Region' },
   { id: 'ulytau', global: 'ULYTAU_SCHOOLS', kk: 'Ұлытау облысы', ru: 'Улытауская область', en: 'Ulytau Region' },
   { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', kk: 'Түркістан облысы', ru: 'Туркестанская область', en: 'Turkistan Region' },
   { id: 'west-kazakhstan', global: 'WEST_KAZAKHSTAN_SCHOOLS', kk: 'Батыс Қазақстан облысы', ru: 'Западно-Казахстанская область', en: 'West Kazakhstan Region' },
