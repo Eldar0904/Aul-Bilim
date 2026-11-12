@@ -269,6 +269,33 @@
     }
   }
 
+  function renderBeforePhotos(school) {
+    var photos = (window.AUL_BILIM_BEFORE_PHOTOS || {})[school.id] || [];
+    var section = document.getElementById('school-before');
+    var after = document.getElementById('school-after-title');
+    section.hidden = after.hidden = !photos.length;
+    section.closest('.school-hero-grid').classList.toggle('school-hero-grid--comparison', !!photos.length);
+    if (!photos.length) return;
+
+    var image = document.getElementById('school-before-img');
+    var prev = document.getElementById('school-before-prev');
+    var next = document.getElementById('school-before-next');
+    var index = 0;
+    document.getElementById('school-before-title').textContent = bi('Дейін', 'До');
+    after.textContent = bi('Кейін', 'После');
+    prev.setAttribute('aria-label', bi('Алдыңғы фото', 'Предыдущее фото'));
+    next.setAttribute('aria-label', bi('Келесі фото', 'Следующее фото'));
+    prev.hidden = next.hidden = photos.length < 2;
+    function showPhoto(offset) {
+      index = (index + offset + photos.length) % photos.length;
+      image.src = photos[index];
+      image.alt = bi('Жабдықтауға дейінгі кабинет', 'Кабинет до оснащения') + ' ' + (index + 1);
+    }
+    prev.onclick = function () { showPhoto(-1); };
+    next.onclick = function () { showPhoto(1); };
+    showPhoto(0);
+  }
+
   function renderPage(result) {
     var main = document.getElementById('main-content');
     var notFound = document.getElementById('school-not-found');
@@ -331,6 +358,7 @@
       }
     }
 
+    renderBeforePhotos(school);
     setupCarousel(images);
     if (videoFrame) renderVideo(videoFrame, school);
   }

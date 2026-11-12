@@ -1084,6 +1084,27 @@ body.map-schools-open .region-schools-block {
   min-width: 0;
 }
 
+.school-stage-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+.school-before-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #f8f3e9;
+}
+@media (max-width: 900px) {
+  .school-hero-grid--comparison .school-hero-left,
+  .school-hero-grid--comparison .school-hero-media-stack { display: contents; }
+  .school-hero-grid--comparison .school-before { order: 1; }
+  .school-hero-grid--comparison .school-media-card-wrap { order: 2; }
+  .school-hero-grid--comparison .school-map-card { order: 3; }
+  .school-hero-grid--comparison .school-hero-meta { order: 4; }
+  .school-hero-grid--comparison .school-yt-slot { order: 5; }
+}
+
 .school-map-card {
   position: relative;
   width: 100%;
