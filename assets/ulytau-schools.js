@@ -267,7 +267,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Жаңаарқа кенті, Байдалы би көшесі, 11/2",
         "ru": "Адрес: Жанааркинский район, пос. Жанаарка, ул. Байдалы би, 11/2"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-11",
@@ -292,7 +292,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Жаңаарқа кенті, А. Оспанова көшесі, 36",
         "ru": "Адрес: Жанааркинский район, пос. Жанаарка, ул. А. Оспановой, 36"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-12",
@@ -321,7 +321,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Қызылжар кенті, Қ. Байдәулетов көшесі, 1",
         "ru": "Адрес: Жанааркинский район, пос. Кызылжар, ул. К. Байдаулетова, 1"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-13",
@@ -338,7 +338,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Жаңаарқа кенті, Абай көшесі, 35/1",
         "ru": "Адрес: Жанааркинский район, пос. Жанаарка, ул. Абая, 35/1"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-14",
@@ -355,7 +355,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Түгіскен ауылы, Ыдырыс Жұмабеков көшесі, 18",
         "ru": "Адрес: Жанааркинский район, с. Тугискен, ул. Ыдырыса Жумабекова, 18"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-15",
@@ -379,7 +379,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Ынталы ауылы, Бірлік көшесі, 13",
         "ru": "Адрес: Жанааркинский район, с. Инталы, ул. Бірлік, 13"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-16",
@@ -396,7 +396,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Атасу ауылы, С. Сейфуллин көшесі, 1",
         "ru": "Адрес: Жанааркинский район, с. Атасу, ул. С. Сейфуллина, 1"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-17",
@@ -425,7 +425,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Ералиев ауылы, Мектеп көшесі, 13",
         "ru": "Адрес: Жанааркинский район, с. Ералиев, ул. Мектеп, 13"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-18",
@@ -442,7 +442,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Мұқажан Жұмажанов ауылы, Сәкен Сейфуллин көшесі, 23",
         "ru": "Адрес: Жанааркинский район, с. Мукажана Жумажанова, ул. Сакена Сейфуллина, 23"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-zhanaarka-19",
@@ -467,7 +467,7 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жаңаарқа ауданы, Талдыбұлақ ауылы, Тәуелсіздік көшесі, 2",
         "ru": "Адрес: Жанааркинский район, с. Талдыбулак, ул. Тәуелсіздік, 2"
       },
-      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhanaarka.png?v=3"
     },
     {
       "id": "ulytau-ulytau-20",
