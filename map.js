@@ -532,6 +532,8 @@
     function parseMapHash() {
       var hash = (location.hash || '').replace(/^#/, '').toLowerCase();
       if (!hash || hash === 'regions') return { view: 'map' };
+      if (hash === 'region-almaty-projects') return { view: 'projects', id: 'almaty' };
+      if (hash === 'region-almaty-2026') return { view: 'project2026', id: 'almaty' };
       if (hash.indexOf('region-') !== 0) return { view: 'map' };
       if (hash.slice(-8) === '-schools') {
         return { view: 'schools', id: hash.slice(7, -8) };
@@ -960,9 +962,50 @@
       showSchoolsView(regionId, { replaceHash: true, districtTarget: districtTarget });
     }
 
-    function openRegion(id) {
-      showSchoolsView(id, { replaceHash: true });
+    function showAlmatyProjects(opts) {
+      if (!mapReady || !schoolsBlock || !mapBlock) return;
+      current = regionById('almaty');
+      view = 'projects';
+      hideTip();
+      mapBlock.hidden = true;
+      schoolsBlock.hidden = false;
+      lockSchoolsScroll();
+      schoolsRoot.innerHTML =
+        '<div class="region-schools-nav"><button type="button" class="region-schools-back" id="projects-map">← ' + bi('Картаны көру', 'К карте') + '</button></div>' +
+        '<h2 class="region-schools-title">' + bi('Алматы облысы', 'Алматинская область') + '</h2>' +
+        '<div class="almaty-project-list">' +
+          '<button type="button" class="region-schools-cta-card" id="project-2023"><span class="cta-text">' + bi('Білім Инновация тәжірибесін енгізу — 2023 ж.', 'Внедрение опыта «Білім-Инновация» — 2023 г.') + '</span><span class="cta-arrow" aria-hidden="true">→</span></button>' +
+          '<button type="button" class="region-schools-cta-card" id="project-2026"><span class="cta-text">' + bi('Ауыл мектебі: тең мүмкіндік — 2026 ж.', 'Сельская школа: равные возможности — 2026 г.') + '</span><span class="cta-arrow" aria-hidden="true">→</span></button>' +
+        '</div>';
+      document.getElementById('projects-map').addEventListener('click', goToMap);
+      document.getElementById('project-2023').addEventListener('click', function () { showSchoolsView('almaty'); });
+      document.getElementById('project-2026').addEventListener('click', function () { showAlmaty2026(); });
+      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-almaty-projects', !!(opts && opts.replaceHash));
     }
+
+    function showAlmaty2026(opts) {
+      if (!mapReady || !schoolsBlock || !mapBlock) return;
+      current = regionById('almaty');
+      view = 'project2026';
+      hideTip();
+      mapBlock.hidden = true;
+      schoolsBlock.hidden = false;
+      lockSchoolsScroll();
+      schoolsRoot.innerHTML =
+        '<div class="region-schools-nav"><button type="button" class="region-schools-back" id="project-back">← ' + bi('Жобаларға оралу', 'К проектам') + '</button><button type="button" class="region-schools-back" id="project-map">← ' + bi('Картаны көру', 'К карте') + '</button></div>' +
+        '<h2 class="region-schools-title">' + bi('Ауыл мектебі: тең мүмкіндік — 2026 ж.', 'Сельская школа: равные возможности — 2026 г.') + '</h2>' +
+        '<p>' + bi('Алматы облысы', 'Алматинская область') + '</p>' +
+        '<p>' + bi('Жоба туралы ақпарат жақында толықтырылады.', 'Информация о проекте будет добавлена позже.') + '</p>';
+      document.getElementById('project-back').addEventListener('click', function () { showAlmatyProjects(); });
+      document.getElementById('project-map').addEventListener('click', goToMap);
+      if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-almaty-2026', !!(opts && opts.replaceHash));
+    }
+
+    function openRegion(id) {
+      if (id === 'almaty') showAlmatyProjects();
+      else showSchoolsView(id, { replaceHash: true });
+    }
+
 
     function goToMap() {
       showMapView({ replaceHash: true });
@@ -981,7 +1024,11 @@
       if (!mapReady) return;
       var parsed = parseMapHash();
       syncingHash = true;
-      if ((parsed.view === 'schools' || parsed.view === 'region') && parsed.id && regionById(parsed.id)) {
+      if (parsed.view === 'projects' || (parsed.view === 'region' && parsed.id === 'almaty')) {
+        showAlmatyProjects({ skipHash: true });
+      } else if (parsed.view === 'project2026') {
+        showAlmaty2026({ skipHash: true });
+      } else if ((parsed.view === 'schools' || parsed.view === 'region') && parsed.id && regionById(parsed.id)) {
         showSchoolsView(parsed.id, { skipHash: true });
       } else if (view !== 'map') {
         showMapView({ skipHash: true, noScroll: true });

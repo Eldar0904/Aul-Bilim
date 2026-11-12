@@ -3253,3 +3253,6 @@ footer.site { background: var(--ink); color: rgba(255,255,255,0.66); padding: 60
 .foundation-profile p { font-size: 16px; line-height: 1.8; }
 .foundation-profile p + p { margin-top: 16px; }
 @media (max-width: 700px) { .about-foundations { padding-top: 32px; padding-bottom: 56px; } .foundation-profile { padding: 26px 0; } }
+
+.almaty-project-list { display: grid; gap: 16px; max-width: 720px; margin-top: 28px; }
+.almaty-project-list .region-schools-cta-card { width: 100%; text-align: left; }
