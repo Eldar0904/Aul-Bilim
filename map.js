@@ -964,6 +964,11 @@
 
     function showAlmatyProjects(opts) {
       if (!mapReady || !schoolsBlock || !mapBlock) return;
+      var projectIcons = '<span class="almaty-project-icons" aria-hidden="true">' +
+        '<span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4h8M14 4v9L8 24a3 3 0 0 0 2.6 4h10.8a3 3 0 0 0 2.6-4l-6-11V4M11 21h10"/><circle cx="15" cy="18" r="1"/><circle cx="19" cy="24" r="1"/></svg></span>' +
+        '<span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l7 7-4 4-7-7zM10 6l2-2M17 13l3 3M20 16a8 8 0 0 1-8 9H9M6 28h21M20 10l2-2M7 25h9"/><circle cx="21" cy="16" r="2"/></svg></span>' +
+        '<span><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 9c-3-3-7-4-12-3v19c5-1 9 0 12 3 3-3 7-4 12-3V6c-5-1-9 0-12 3zm0 0v19M8 11c2-.1 3.5.3 5 1M8 15c2-.1 3.5.3 5 1M19 12c1.5-.7 3-1.1 5-1M19 16c1.5-.7 3-1.1 5-1"/></svg></span>' +
+      '</span>';
       current = regionById('almaty');
       view = 'projects';
       hideTip();
@@ -974,8 +979,8 @@
         '<div class="region-schools-nav"><button type="button" class="region-schools-back" id="projects-map">← ' + bi('Картаны көру', 'К карте') + '</button></div>' +
         '<h2 class="region-schools-title">' + bi('Алматы облысы', 'Алматинская область') + '</h2>' +
         '<div class="almaty-project-list">' +
-          '<button type="button" class="almaty-project-card" id="project-2023"><span class="almaty-project-year">2023</span><span class="almaty-project-name">' + bi('«Білім-инновация» лицейлерінің<br>тәжірибесін енгізу', 'Внедрение опыта «Білім-Инновация»') + '</span></button>' +
-          '<button type="button" class="almaty-project-card almaty-project-card--new" id="project-2026"><span class="almaty-project-year">2026</span><span class="almaty-project-name">' + bi('Ауыл мектебі: тең мүмкіндік', 'Сельская школа: равные возможности') + '</span></button>' +
+          '<button type="button" class="almaty-project-card" id="project-2023"><span class="almaty-project-year">2023</span>' + projectIcons + '<span class="almaty-project-name">' + bi('«Білім-инновация» лицейлерінің<br>тәжірибесін енгізу', 'Внедрение опыта «Білім-Инновация»') + '</span></button>' +
+          '<button type="button" class="almaty-project-card almaty-project-card--new" id="project-2026"><span class="almaty-project-year">2026</span>' + projectIcons + '<span class="almaty-project-name">' + bi('Ауыл мектебі: тең мүмкіндік', 'Сельская школа: равные возможности') + '</span></button>' +
 
         '</div>';
       document.getElementById('projects-map').addEventListener('click', goToMap);
