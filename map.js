@@ -616,6 +616,10 @@
     }
 
     function schoolCardPreview(s) {
+      var hasGallery = Array.isArray(s.gallery) && s.gallery.some(function (src) {
+        return typeof src === 'string' && !!src.trim();
+      });
+      if (!hasGallery && !String(s.youtube || '').trim()) return '';
       if (s.cardImage) return s.cardImage;
       // These regions show verified exteriors only in school card previews.
       if (/^(turkistan|ulytau)-/.test(String(s.id || ''))) return '';
@@ -656,7 +660,7 @@
     function renderSchoolsGrid(r) {
       var schools = r.schools || [];
       if (!schools.length) {
-        return '<div class="schools-empty">' + bi('Фотосы немесе видеосы бар мектептер әзірге жоқ', 'Пока нет школ с фото или видео') + '</div>';
+        return '<div class="schools-empty">' + bi('Мектептер тізімі жақында қосылады', 'Список школ скоро будет добавлен') + '</div>';
       }
 
       var groups = [];
@@ -802,27 +806,9 @@
         return;
       }
 
-      var schools = (r.schools || []).filter(function (school) {
-        return !!String(school.youtube || '').trim() ||
-          (Array.isArray(school.gallery) && school.gallery.some(function (src) {
-            return typeof src === 'string' && !!src.trim();
-          }));
-      });
-      var districtCounts = new Map();
-      schools.forEach(function (school) {
-        var key = school.districtKey || school.location.kk;
-        districtCounts.set(key, (districtCounts.get(key) || 0) + 1);
-      });
-      var visibleRegion = Object.assign({}, r, {
-        schools: schools,
-        districtGroups: (r.districtGroups || []).filter(function (district) {
-          return districtCounts.has(district.key);
-        }).map(function (district) {
-          return Object.assign({}, district, { n: districtCounts.get(district.key) });
-        })
-      });
-      var gridHtml = renderSchoolsGrid(visibleRegion);
-      var districtChips = renderDistrictChips(visibleRegion);
+      var schools = r.schools || [];
+      var gridHtml = renderSchoolsGrid(r);
+      var districtChips = renderDistrictChips(r);
 
       schoolsRoot.innerHTML =
         '<div class="region-schools-nav">' +
