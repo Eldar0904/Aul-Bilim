@@ -974,7 +974,7 @@
         '<div class="region-schools-nav"><button type="button" class="region-schools-back" id="projects-map">← ' + bi('Картаны көру', 'К карте') + '</button></div>' +
         '<h2 class="region-schools-title">' + bi('Алматы облысы', 'Алматинская область') + '</h2>' +
         '<div class="almaty-project-list">' +
-          '<button type="button" class="almaty-project-card" id="project-2023"><span class="almaty-project-year">2023</span><span class="almaty-project-name">' + bi('«Білім-инновация» лицейлерінің тәжірибесін енгізу', 'Внедрение опыта «Білім-Инновация»') + '</span></button>' +
+          '<button type="button" class="almaty-project-card" id="project-2023"><span class="almaty-project-year">2023</span><span class="almaty-project-name">' + bi('«Білім-инновация» лицейлерінің<br>тәжірибесін енгізу', 'Внедрение опыта «Білім-Инновация»') + '</span></button>' +
           '<button type="button" class="almaty-project-card almaty-project-card--new" id="project-2026"><span class="almaty-project-year">2026</span><span class="almaty-project-name">' + bi('Ауыл мектебі: тең мүмкіндік', 'Сельская школа: равные возможности') + '</span></button>' +
 
         '</div>';
