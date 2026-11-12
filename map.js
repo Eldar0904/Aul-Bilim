@@ -373,7 +373,7 @@
     var regionOpenTimer = null;
 
     ensureRegionStatsOverrides().then(function () {
-      if (view === 'schools' && current) renderSchoolsSection(current);
+      if ((view === 'schools' || view === 'project2026') && current) renderSchoolsSection(current);
     });
 
     var regionByMapId = {};
@@ -819,7 +819,7 @@
             '← ' + bi('Картаны көру', 'К карте') +
           '</button>' +
           '<button type="button" class="region-schools-back" id="region-schools-back">' +
-            '← ' + bi('Басты бетке', 'На главную') +
+            '← ' + (r.id === 'almaty-2026' ? bi('Жобаларға оралу', 'К проектам') : bi('Басты бетке', 'На главную')) +
           '</button>' +
         '</div>' +
         '<h2 class="region-schools-title">' +
@@ -846,7 +846,7 @@
         gridHtml;
 
       document.getElementById('region-schools-map').addEventListener('click', goToMap);
-      document.getElementById('region-schools-back').addEventListener('click', goHome);
+      document.getElementById('region-schools-back').addEventListener('click', r.id === 'almaty-2026' ? function () { showAlmatyProjects(); } : goHome);
       bindRegionSchoolSearch(schools.length);
       schoolsRoot.querySelectorAll('.district-chip').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -985,20 +985,26 @@
     }
 
     function showAlmaty2026(opts) {
-      if (!mapReady || !schoolsBlock || !mapBlock) return;
-      current = regionById('almaty');
+      if (!mapReady || !schoolsBlock || !mapBlock || !window.ALMATY_2026_SCHOOLS) return;
+      var project = {
+        id: 'almaty-2026',
+        kk: 'Ауыл мектебі: тең мүмкіндік — 2026 ж.',
+        ru: 'Сельская школа: равные возможности — 2026 г.',
+        schools: window.ALMATY_2026_SCHOOLS.schools,
+        districtGroups: window.ALMATY_2026_SCHOOLS.districts
+      };
+      current = project;
       view = 'project2026';
       hideTip();
       mapBlock.hidden = true;
       schoolsBlock.hidden = false;
       lockSchoolsScroll();
-      schoolsRoot.innerHTML =
-        '<div class="region-schools-nav"><button type="button" class="region-schools-back" id="project-back">← ' + bi('Жобаларға оралу', 'К проектам') + '</button><button type="button" class="region-schools-back" id="project-map">← ' + bi('Картаны көру', 'К карте') + '</button></div>' +
-        '<h2 class="region-schools-title">' + bi('Ауыл мектебі: тең мүмкіндік — 2026 ж.', 'Сельская школа: равные возможности — 2026 г.') + '</h2>' +
-        '<p>' + bi('Алматы облысы', 'Алматинская область') + '</p>' +
-        '<p>' + bi('Жоба туралы ақпарат жақында толықтырылады.', 'Информация о проекте будет добавлена позже.') + '</p>';
-      document.getElementById('project-back').addEventListener('click', function () { showAlmatyProjects(); });
-      document.getElementById('project-map').addEventListener('click', goToMap);
+      renderSchoolsSection(project);
+      regionWithOverrides(project).then(function (merged) {
+        if (view !== 'project2026' || current !== project) return;
+        current = merged;
+        renderSchoolsSection(merged);
+      });
       if (!syncingHash && !(opts && opts.skipHash)) setMapHash('region-almaty-2026', !!(opts && opts.replaceHash));
     }
 

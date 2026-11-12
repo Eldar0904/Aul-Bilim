@@ -304,7 +304,7 @@
 
     if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + name);
     if (backLink) {
-      backLink.href = 'regions.html#region-' + region.id + '-schools';
+      backLink.href = region.id === 'almaty-2026' ? 'regions.html#region-almaty-2026' : 'regions.html#region-' + region.id + '-schools';
     }
     if (descEl) {
       var desc = school.desc || {};

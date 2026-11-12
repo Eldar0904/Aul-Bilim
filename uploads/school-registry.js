@@ -9,6 +9,7 @@ window.AUL_BILIM_SCHOOL_REGIONS = [
   { id: 'karaganda', global: 'KARAGANDA_SCHOOLS', kk: 'Қарағанды облысы', ru: 'Карагандинская область', en: 'Karaganda Region' },
   { id: 'abay', global: 'ABAY_SCHOOLS', kk: 'Абай облысы', ru: 'Абайская область', en: 'Abay Region' },
   { id: 'kyzylorda', global: 'KYZYLORDA_SCHOOLS', kk: 'Қызылорда облысы', ru: 'Кызылординская область', en: 'Kyzylorda Region' },
+  { id: 'almaty-2026', global: 'ALMATY_2026_SCHOOLS', kk: 'Алматы облысы — 2026', ru: 'Алматинская область — 2026', en: 'Almaty Region — 2026' },
   { id: 'almaty', global: 'ALMATY_SCHOOLS', kk: 'Алматы облысы', ru: 'Алматинская область', en: 'Almaty Region' },
   { id: 'jambyl', global: 'ZHAMBYL_SCHOOLS', kk: 'Жамбыл облысы', ru: 'Жамбылская область', en: 'Jambyl Region' },
   { id: 'vko', global: 'VKO_SCHOOLS', kk: 'Шығыс Қазақстан облысы', ru: 'Восточно-Казахстанская область', en: 'East Kazakhstan Region' }
