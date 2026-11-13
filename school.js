@@ -219,9 +219,30 @@
       ? bi(school.youtubeDesc.kk || '', school.youtubeDesc.ru || school.youtubeDesc.en || '')
       : '';
     if (id) {
-      frame.innerHTML =
-        '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="YouTube video" loading="lazy" ' +
-          'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      function loadPlayer(autoplay) {
+        frame.innerHTML =
+          '<iframe src="https://www.youtube-nocookie.com/embed/' + id + (autoplay ? '?autoplay=1' : '') +
+          '" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        if (autoplay) frame.firstElementChild.focus();
+      }
+      var facade = school.cardImage;
+      if (typeof facade === 'string' && facade.indexOf('assets/abay-new-media/') === 0 && facade.endsWith('/facade.webp')) {
+        var play = document.createElement('button');
+        play.type = 'button';
+        play.className = 'school-video-poster';
+        play.setAttribute('aria-label', bi('Бейнені ойнату', 'Воспроизвести видео'));
+        var photo = document.createElement('img');
+        photo.alt = '';
+        photo.src = facade;
+        var icon = document.createElement('span');
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '▶';
+        play.append(photo, icon);
+        play.addEventListener('click', function () { loadPlayer(true); });
+        frame.replaceChildren(play);
+      } else {
+        loadPlayer(false);
+      }
       frame.classList.remove('is-placeholder');
       if (captionBar) captionBar.hidden = false;
       if (descEl) descEl.textContent = desc;
