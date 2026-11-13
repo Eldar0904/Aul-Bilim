@@ -154,7 +154,20 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: ласть Абай,ауданы Аксуат, ау. Кумголь,көш. Абая 14\\1",
         "ru": "Адрес: ласть Абай,district Аксуат, v. Кумголь,St. Абая 14\\1"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-aqsuat-1/classroom-01.webp",
+        "assets/abay-new-media/abay-aqsuat-1/classroom-02.webp",
+        "assets/abay-new-media/abay-aqsuat-1/classroom-03.webp",
+        "assets/abay-new-media/abay-aqsuat-1/classroom-04.webp",
+        "assets/abay-new-media/abay-aqsuat-1/classroom-05.webp",
+        "assets/abay-new-media/abay-aqsuat-1/classroom-06.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-aqsuat-1/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-aqsuat-1/ae3ed4d5-1e25-4758-9ec2-aea5a89f6dfa.webp",
+      "youtube": "6uJxZwDgydo",
+      "previousYoutube": ""
     },
     {
       "id": "abay-aqsuat-2",
@@ -306,7 +319,19 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы,Бесқарағай ауданы,ауылы Карабас,көш. А. Баймухамбетова 11",
         "ru": "Адрес: Abai Region,Бескарагайский district,village Карабас,St. А. Баймухамбетова 11"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-beskaragai-3/classroom-01.webp",
+        "assets/abay-new-media/abay-beskaragai-3/classroom-02.webp",
+        "assets/abay-new-media/abay-beskaragai-3/classroom-03.webp",
+        "assets/abay-new-media/abay-beskaragai-3/classroom-04.webp",
+        "assets/abay-new-media/abay-beskaragai-3/classroom-05.webp",
+        "assets/abay-new-media/abay-beskaragai-3/classroom-06.webp",
+        "assets/abay-new-media/abay-beskaragai-3/classroom-07.webp"
+      ],
+      "galleryFromBatch": true,
+      "youtube": "X-FW2WLxLuQ",
+      "previousYoutube": ""
     },
     {
       "id": "abay-borodulikha-1",
@@ -344,7 +369,18 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Бородулих ауданы ауылы Новопокровка ул Гагарина 101",
         "ru": "Адрес: Бородулихинский district village Новопокровка ул Гагарина 101"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-borodulikha-2/classroom-01.webp",
+        "assets/abay-new-media/abay-borodulikha-2/classroom-02.webp",
+        "assets/abay-new-media/abay-borodulikha-2/classroom-03.webp",
+        "assets/abay-new-media/abay-borodulikha-2/classroom-04.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-borodulikha-2/facade.webp",
+      "previousCardImage": "",
+      "youtube": "Hi3hnoa_jtQ",
+      "previousYoutube": ""
     },
     {
       "id": "abay-borodulikha-3",
@@ -363,7 +399,19 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: ауылы Зенковка , көш. Мектеп 3",
         "ru": "Адрес: village Зенковка , Street Школьная 3"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-borodulikha-3/classroom-01.webp",
+        "assets/abay-new-media/abay-borodulikha-3/classroom-02.webp",
+        "assets/abay-new-media/abay-borodulikha-3/classroom-03.webp",
+        "assets/abay-new-media/abay-borodulikha-3/classroom-04.webp",
+        "assets/abay-new-media/abay-borodulikha-3/classroom-05.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-borodulikha-3/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-borodulikha-3/3023ebeb-c20e-436c-84f5-aeed52356e70.webp",
+      "youtube": "vDsLXYAzL-Y",
+      "previousYoutube": ""
     },
     {
       "id": "abay-zharma-1",
@@ -382,7 +430,21 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: ауылы Батыр Капай",
         "ru": "Адрес: village Батыр Капай"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-zharma-1/classroom-01.webp",
+        "assets/abay-new-media/abay-zharma-1/classroom-02.webp",
+        "assets/abay-new-media/abay-zharma-1/classroom-03.webp",
+        "assets/abay-new-media/abay-zharma-1/classroom-04.webp",
+        "assets/abay-new-media/abay-zharma-1/classroom-05.webp",
+        "assets/abay-new-media/abay-zharma-1/classroom-06.webp",
+        "assets/abay-new-media/abay-zharma-1/classroom-07.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-zharma-1/facade.webp",
+      "previousCardImage": "",
+      "youtube": "51sw8PE0tM4",
+      "previousYoutube": ""
     },
     {
       "id": "abay-zharma-2",
@@ -477,7 +539,20 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы, ауданы Жаңасемей, Иртыш ауылдық округ, ауылы Мукур, көш. Мектеп үй 1",
         "ru": "Адрес: Abai Region, district Жаңасемей, Иртышский rural district, village Мукур, Street Школьная No. 1"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-zhana-semey-3/classroom-01.webp",
+        "assets/abay-new-media/abay-zhana-semey-3/classroom-02.webp",
+        "assets/abay-new-media/abay-zhana-semey-3/classroom-03.webp",
+        "assets/abay-new-media/abay-zhana-semey-3/classroom-04.webp",
+        "assets/abay-new-media/abay-zhana-semey-3/classroom-05.webp",
+        "assets/abay-new-media/abay-zhana-semey-3/classroom-06.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-zhana-semey-3/facade.webp",
+      "previousCardImage": "",
+      "youtube": "98V2mPA4M4U",
+      "previousYoutube": ""
     },
     {
       "id": "abay-kokpekti-1",
@@ -534,7 +609,15 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы, ауданы Көкпекті, ауылы Бигаш, көш. Достық 10",
         "ru": "Адрес: Abai Region, district Кокпектинский, village Бигаш, Street Достық 10"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-kokpekti-3/classroom-01.webp",
+        "assets/abay-new-media/abay-kokpekti-3/classroom-02.webp",
+        "assets/abay-new-media/abay-kokpekti-3/classroom-03.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-kokpekti-3/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-kokpekti-3/35c2c9f4-a170-4f5e-afc2-90fe5116875e.webp"
     },
     {
       "id": "abay-makanshy-1",
@@ -686,7 +769,17 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: ҚР, Абай облысы , ауданы Жаңасемей, п Чаган Железнодорожная1",
         "ru": "Адрес: KZ, Abai Region , district Жаңасемей, п Чаган Железнодорожная1"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-kurchatov-2/classroom-01.webp",
+        "assets/abay-new-media/abay-kurchatov-2/classroom-02.webp",
+        "assets/abay-new-media/abay-kurchatov-2/classroom-03.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-kurchatov-2/facade.webp",
+      "previousCardImage": "",
+      "youtube": "inASMKKZCt8",
+      "previousYoutube": "bagSYbImHmE"
     },
     {
       "id": "abay-kurchatov-3",
@@ -705,7 +798,17 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: ҚР, Абай облысы , ауданы Жаңасемей, ауылы Букенчи, Мектеп 2",
         "ru": "Адрес: KZ, Abai Region , district Жаңасемей, village Букенчи, Школьная 2"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-kurchatov-3/classroom-01.webp",
+        "assets/abay-new-media/abay-kurchatov-3/classroom-02.webp",
+        "assets/abay-new-media/abay-kurchatov-3/classroom-03.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-kurchatov-3/facade.webp",
+      "previousCardImage": "",
+      "youtube": "m8LlllGjWfo",
+      "previousYoutube": "kviU-a2FgYY"
     },
     {
       "id": "abay-beskaragai-4",
