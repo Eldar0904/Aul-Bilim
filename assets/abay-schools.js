@@ -501,7 +501,21 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы ауданы Жаңасемей көш. Комсомоль 26А",
         "ru": "Адрес: Abai Region district Жаңасемей St. Комсомольская 26А"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-01.webp",
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-02.webp",
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-03.webp",
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-04.webp",
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-05.webp",
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-06.webp",
+        "assets/abay-new-media/abay-zhana-semey-1/classroom-07.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-zhana-semey-1/facade.webp",
+      "previousCardImage": "",
+      "youtube": "fegVSvl_qOc",
+      "previousYoutube": "J2vBgEYmSvM"
     },
     {
       "id": "abay-zhana-semey-2",
@@ -655,7 +669,15 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы, ауданы Мақаншы, ау. Кайынды, көш. Бейбитшилик, ғим. 46",
         "ru": "Адрес: Abai Region, district Мақаншы, v. Кайынды, St. Бейбитшилик, Bldg. 46"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-makanshy-2/classroom-01.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-makanshy-2/facade.webp",
+      "previousCardImage": "",
+      "youtube": "QGOGYJ6q0bs",
+      "previousYoutube": "NkcfE9YFoEo"
     },
     {
       "id": "abay-makanshy-3",
@@ -693,7 +715,31 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы, ауданы Урджар, Ельтай ауылдық округ, ауылы Ельтай, көш. Бухар 74",
         "ru": "Адрес: Abai Region, district Урджар, Ельтайский rural district, village Ельтай, Street Бухар 74"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-urzhar-1/classroom-01.webp",
+        "assets/abay-new-media/abay-urzhar-1/classroom-02.webp",
+        "assets/abay-new-media/abay-urzhar-1/classroom-03.webp",
+        "assets/abay-new-media/abay-urzhar-1/classroom-04.webp",
+        "assets/abay-new-media/abay-urzhar-1/classroom-05.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/6b074131-0abf-4fb0-9ae1-9db76519e573.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/f7019591-f183-4068-8348-c208b097d11d.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/3162e9f3-84a0-4ca3-b2d9-917a7c19a3fc.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/919bc6ec-de04-417b-80ba-88b8bcdce2dc.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/cf6e86e1-bc30-4a9b-b0a8-9015c6d291a5.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/abay-new-media/abay-urzhar-1/facade.webp",
+      "previousCardImage": "",
+      "youtube": "xXzQvSSWhDs",
+      "previousYoutube": "hTbYef95MO0",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/6b074131-0abf-4fb0-9ae1-9db76519e573.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/f7019591-f183-4068-8348-c208b097d11d.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/3162e9f3-84a0-4ca3-b2d9-917a7c19a3fc.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/919bc6ec-de04-417b-80ba-88b8bcdce2dc.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/abay/abay-urzhar-1/cf6e86e1-bc30-4a9b-b0a8-9015c6d291a5.webp"
+      ]
     },
     {
       "id": "abay-urzhar-2",
