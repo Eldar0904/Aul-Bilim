@@ -331,7 +331,8 @@ window.ABAY_SCHOOLS = {
       ],
       "galleryFromBatch": true,
       "youtube": "X-FW2WLxLuQ",
-      "previousYoutube": ""
+      "previousYoutube": "",
+      "cardImage": "assets/abay-new-media/abay-beskaragai-3/facade.webp"
     },
     {
       "id": "abay-borodulikha-1",
@@ -463,7 +464,14 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы, Жарма ауданы, ауылы Каратобе, кв. 2, ғим.2",
         "ru": "Адрес: Abai Region, Жарминский district, village Каратобе, block 2, Bldg.2"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "assets/abay-new-media/abay-zharma-2/classroom-01.webp",
+        "assets/abay-new-media/abay-zharma-2/classroom-02.webp",
+        "assets/abay-new-media/abay-zharma-2/classroom-03.webp",
+        "assets/abay-new-media/abay-zharma-2/classroom-04.webp"
+      ],
+      "galleryFromBatch": true
     },
     {
       "id": "abay-zharma-3",
@@ -585,7 +593,8 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы , Көкпекті ауданы, ауылы Шариптогай, көш. 1, ғим. 9",
         "ru": "Адрес: Abai Region , Кокпектинский district, village Шариптогай, Street 1, Bldg. 9"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "v3z3vYnJFpQ"
     },
     {
       "id": "abay-kokpekti-2",
@@ -777,7 +786,8 @@ window.ABAY_SCHOOLS = {
         "kk": "Мекенжай: Абай облысы, ауданы Урджар, Баркытбель ауылдық округ, ауылы Некрасовка, көш. Садовая 2А",
         "ru": "Адрес: Abai Region, district Урджар, Баркытбельский rural district, village Некрасовка, Street Садовая 2А"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "36SkNNqhpFs"
     },
     {
       "id": "abay-kurchatov-1",
