@@ -386,7 +386,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/zhangeldy-1/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-zhangeldy-1/3073618e-8684-4870-b266-b313aec6b6be.webp"
     },
     {
       "id": "kostanay-zhangeldy-2",
@@ -405,7 +407,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/zhangeldy-2/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-zhangeldy-2/ef7ce514-a1d8-4bf3-bcf3-1bcb09e50aec.webp"
     },
     {
       "id": "kostanay-zhangeldy-3",
@@ -444,7 +448,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/zhitikara-1/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-zhitikara-1/ed3b20d7-29c2-45ce-a7b2-e306b6b22fdc.webp"
     },
     {
       "id": "kostanay-zhitikara-2",
@@ -578,7 +584,9 @@ window.KOSTANAY_SCHOOLS = {
         "ru": ""
       },
       "image": "assets/optimized/home-fitout-classroom.jpg",
-      "youtube": "n298uStszMY"
+      "youtube": "n298uStszMY",
+      "cardImage": "assets/kostanay-school-media/kamysty-5/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-kamysty-5/641f4f5b-99b9-4d2f-b57b-b81d7d370f70.webp"
     },
     {
       "id": "kostanay-qarabalyq-1",
@@ -705,7 +713,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/qarasu-2/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-qarasu-2/2248223c-b24e-4262-8364-e23a93b82090.webp"
     },
     {
       "id": "kostanay-qarasu-3",
@@ -1005,7 +1015,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/nauryzym-3/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-nauryzym-3/a8914806-0804-4d25-a500-d2f6bead96b6.webp"
     },
     {
       "id": "kostanay-mailin-1",
@@ -1119,7 +1131,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/sarykol-1/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-sarykol-1/5bdef2bd-5bcc-4b2b-8e03-b89fe1d0a41c.webp"
     },
     {
       "id": "kostanay-sarykol-2",
@@ -1157,7 +1171,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/sarykol-3/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-sarykol-3/4cdc18ee-948f-4fdd-b505-c114dc855ef7.webp"
     },
     {
       "id": "kostanay-uzunkol-1",
@@ -1386,7 +1402,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/arkalyk-2/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-arkalyk-2/07827b7c-9977-436e-9b70-dd026da1ab96.webp"
     },
     {
       "id": "kostanay-arkalyk-3",
