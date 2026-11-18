@@ -385,7 +385,9 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, Поселеок Топар, көш. Сары-Арка, 46 100116",
         "ru": "Адрес: Karaganda Region, Поселеок Топар, Street Сары-Арка, 46 100116"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/karaganda-drive-media/karaganda-abai-1/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "karaganda-abai-2",
@@ -518,7 +520,9 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, ау. Қулаайгыр көш. Бейбітшілік құр. 1 А",
         "ru": "Адрес: Karaganda Region, Абайский district, v. Қулаайгыр Street Бейбітшілік құрылыс 1 А"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/karaganda-drive-media/karaganda-abai-8/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "karaganda-abai-9",
@@ -594,7 +598,9 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, с Самарка ул Сарыарка құр. 1А",
         "ru": "Адрес: Karaganda Region, Абайский district, с Самарка ул Сарыарка Bldg. 1А"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/karaganda-drive-media/karaganda-abai-12/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "karaganda-abai-13",
@@ -670,7 +676,9 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды обл., қала Сарань, микроауданы 1А, құр. 26",
         "ru": "Адрес: Karaganda Region, city Сарань, микроdistrict 1А, Bldg. 26"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/karaganda-drive-media/karaganda-saran-3/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "karaganda-saran-4",
@@ -1069,7 +1077,17 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көш. Северная, ст-е 36",
         "ru": "Адрес: Karaganda Region, Темиртау, Street Северная, ст-е 36"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-01.webp",
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-02.webp",
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-03.webp",
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-04.webp",
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-05.webp",
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-06.webp",
+        "assets/karaganda-drive-media/karaganda-temirtau-7/classroom-07.webp"
+      ]
     },
     {
       "id": "karaganda-temirtau-8",
@@ -1601,7 +1619,9 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: 101604, Қарағанды облысы, қала Шахтинск, елдімекен Долинка, көш. Бурцева, 14",
         "ru": "Адрес: 101604, Karaganda Region, city Шахтинск, settlement Долинка, St. Бурцева, 14"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/karaganda-drive-media/karaganda-shakhtinsk-7/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "karaganda-shakhtinsk-8",
