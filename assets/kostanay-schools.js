@@ -610,7 +610,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/qarabalyq-1/classroom-07.webp",
         "assets/kostanay-school-media/qarabalyq-1/classroom-08.webp",
         "assets/kostanay-school-media/qarabalyq-1/classroom-09.webp"
-      ]
+      ],
+      "youtube": "iV6vc2va0ks"
     },
     {
       "id": "kostanay-qarabalyq-2",
@@ -750,7 +751,8 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "vza67kmkAQQ"
     },
     {
       "id": "kostanay-kostanay-district-2",
@@ -821,7 +823,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/kostanay-district-4/classroom-07.webp",
         "assets/kostanay-school-media/kostanay-district-4/classroom-08.webp",
         "assets/kostanay-school-media/kostanay-district-4/classroom-09.webp"
-      ]
+      ],
+      "youtube": "BI8i8ZCdXVs"
     },
     {
       "id": "kostanay-kostanay-district-5",
@@ -1267,7 +1270,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-2/classroom-05.webp",
         "assets/kostanay-school-media/fedorov-2/classroom-06.webp",
         "assets/kostanay-school-media/fedorov-2/classroom-07.webp"
-      ]
+      ],
+      "youtube": "KkTGv-klw9g"
     },
     {
       "id": "kostanay-fedorov-3",
