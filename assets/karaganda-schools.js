@@ -176,7 +176,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Караганда, көш. Октябрь, 32",
         "ru": "Адрес: Караганда, St. Октябрьская, 32"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "dM1ea80Bd6A"
     },
     {
       "id": "karaganda-karaganda-city-8",
@@ -195,7 +196,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Караганда, Бухар Жырау 72А",
         "ru": "Адрес: Караганда, Бухар Жырау 72А"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "ftIE9ASZq1s"
     },
     {
       "id": "karaganda-karaganda-city-9",
@@ -214,7 +216,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Караганда, көш. Дружбы, 119",
         "ru": "Адрес: Караганда, St. Дружбы, 119"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "t0mAcBccNp4"
     },
     {
       "id": "karaganda-karaganda-city-10",
@@ -271,7 +274,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Караганда, көш. Кузембаева 32",
         "ru": "Адрес: Караганда, St. Кузембаева 32"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "tf_cv-3JkUo"
     },
     {
       "id": "karaganda-karaganda-city-13",
@@ -387,7 +391,8 @@ window.KARAGANDA_SCHOOLS = {
       },
       "image": "assets/optimized/program-fitout-detail.jpg",
       "cardImage": "assets/karaganda-drive-media/karaganda-abai-1/facade.webp",
-      "previousCardImage": "assets/school-hero-placeholder.svg"
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "youtube": "IC_kBRCKCog"
     },
     {
       "id": "karaganda-abai-2",
@@ -425,7 +430,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, ауылы Дубовка, көш. Касыма Аманжолова, 21 101204",
         "ru": "Адрес: Karaganda Region, village Дубовка, Street Касыма Аманжолова, 21 101204"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "KA8sN97UEn4"
     },
     {
       "id": "karaganda-abai-4",
@@ -501,7 +507,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, Абай ауданы, елдімекен Топар, көш. Н.Абдирова 11 құр. Г",
         "ru": "Адрес: Karaganda Region, Абайский district, settlement Топар, St. Н.Абдирова 11 Bldg. Г"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "0d3bxTx-Irc"
     },
     {
       "id": "karaganda-abai-8",
@@ -1039,7 +1046,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, даңғылы Строителей, құр. 27/1",
         "ru": "Адрес: Karaganda Region, Темиртау, Avenue Строителей, Bldg. 27/1"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "AsQ-kZQ6iuo"
     },
     {
       "id": "karaganda-temirtau-6",
@@ -1277,7 +1285,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, 4 мкр. , құр. 17/1",
         "ru": "Адрес: Karaganda Region, Темиртау, 4 microdist. , Bldg. 17/1"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "z5ujPQ1iNRQ"
     },
     {
       "id": "karaganda-temirtau-18",
@@ -1621,7 +1630,8 @@ window.KARAGANDA_SCHOOLS = {
       },
       "image": "assets/optimized/program-fitout-detail.jpg",
       "cardImage": "assets/karaganda-drive-media/karaganda-shakhtinsk-7/facade.webp",
-      "previousCardImage": "assets/school-hero-placeholder.svg"
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "youtube": "NP-VKdC36NU"
     },
     {
       "id": "karaganda-shakhtinsk-8",
@@ -1640,7 +1650,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы қ. Шахтинск көш. Панфилова 4, инд. 101600",
         "ru": "Адрес: Karaganda Region Шахтинск St. Панфилова 4, индекс 101600"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "wR1mFyaqjHM"
     },
     {
       "id": "karaganda-shakhtinsk-9",
@@ -1659,7 +1670,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы қ. Шахтинск, ел. Новодолин, көш. Бобоуха зд.23, инд. 101605",
         "ru": "Адрес: Karaganda Region Шахтинск, settl. Новодолинский, St. Бобоуха зд.23, индекс 101605"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "SSpdXZ_ief0"
     },
     {
       "id": "karaganda-shakhtinsk-10",
