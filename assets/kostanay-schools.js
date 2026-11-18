@@ -678,7 +678,16 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/qarasu-3/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/qarasu-3/classroom-1.webp",
+        "assets/kostanay-school-media/qarasu-3/classroom-2.webp",
+        "assets/kostanay-school-media/qarasu-3/classroom-3.webp",
+        "assets/kostanay-school-media/qarasu-3/classroom-4.webp",
+        "assets/kostanay-school-media/qarasu-3/classroom-5.webp"
+      ]
     },
     {
       "id": "kostanay-kostanay-district-1",
