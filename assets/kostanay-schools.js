@@ -347,7 +347,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/denisov-2/classroom-05.webp",
         "assets/kostanay-school-media/denisov-2/classroom-06.webp",
         "assets/kostanay-school-media/denisov-2/classroom-07.webp"
-      ]
+      ],
+      "youtube": "b1Av_rvL-Lc"
     },
     {
       "id": "kostanay-denisov-3",
@@ -423,7 +424,8 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "q1BOR9IJklY"
     },
     {
       "id": "kostanay-zhitikara-1",
@@ -575,7 +577,8 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "n298uStszMY"
     },
     {
       "id": "kostanay-qarabalyq-1",
@@ -634,7 +637,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/qarabalyq-2/classroom-02.webp",
         "assets/kostanay-school-media/qarabalyq-2/classroom-03.webp",
         "assets/kostanay-school-media/qarabalyq-2/classroom-04.webp"
-      ]
+      ],
+      "youtube": "KnC55fJkLL8"
     },
     {
       "id": "kostanay-qarabalyq-3",
@@ -765,7 +769,8 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "XaHdoGPiVGE"
     },
     {
       "id": "kostanay-kostanay-district-3",
@@ -843,7 +848,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/kostanay-district-5/classroom-02.webp",
         "assets/kostanay-school-media/kostanay-district-5/classroom-03.webp",
         "assets/kostanay-school-media/kostanay-district-5/classroom-04.webp"
-      ]
+      ],
+      "youtube": "0ecucJaa2O4"
     },
     {
       "id": "kostanay-kostanay-district-6",
@@ -862,7 +868,8 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "eGEIvaqxjTY"
     },
     {
       "id": "kostanay-mendykara-1",
@@ -946,7 +953,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/nauryzym-1/classroom-02.webp",
         "assets/kostanay-school-media/nauryzym-1/classroom-03.webp",
         "assets/kostanay-school-media/nauryzym-1/classroom-04.webp"
-      ]
+      ],
+      "youtube": "unhKDdZrEQs"
     },
     {
       "id": "kostanay-nauryzym-2",
@@ -972,7 +980,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/nauryzym-2/classroom-01.webp",
         "assets/kostanay-school-media/nauryzym-2/classroom-02.webp",
         "assets/kostanay-school-media/nauryzym-2/classroom-03.webp"
-      ]
+      ],
+      "youtube": "ep_Y5-voYqk"
     },
     {
       "id": "kostanay-nauryzym-3",
@@ -1227,7 +1236,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-1/classroom-02.webp",
         "assets/kostanay-school-media/fedorov-1/classroom-03.webp",
         "assets/kostanay-school-media/fedorov-1/classroom-04.webp"
-      ]
+      ],
+      "youtube": "XrHBWrZ82js"
     },
     {
       "id": "kostanay-fedorov-2",
@@ -1284,7 +1294,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-3/classroom-02.webp",
         "assets/kostanay-school-media/fedorov-3/classroom-03.webp",
         "assets/kostanay-school-media/fedorov-3/classroom-04.webp"
-      ]
+      ],
+      "youtube": "52pXMLq-NOw"
     },
     {
       "id": "kostanay-fedorov-4",
@@ -1310,7 +1321,8 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-4/classroom-01.webp",
         "assets/kostanay-school-media/fedorov-4/classroom-02.webp",
         "assets/kostanay-school-media/fedorov-4/classroom-03.webp"
-      ]
+      ],
+      "youtube": "69Hkr3UZLXk"
     },
     {
       "id": "kostanay-rudny-1",
