@@ -336,7 +336,18 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/denisov-2/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/denisov-2/classroom-01.webp",
+        "assets/kostanay-school-media/denisov-2/classroom-02.webp",
+        "assets/kostanay-school-media/denisov-2/classroom-03.webp",
+        "assets/kostanay-school-media/denisov-2/classroom-04.webp",
+        "assets/kostanay-school-media/denisov-2/classroom-05.webp",
+        "assets/kostanay-school-media/denisov-2/classroom-06.webp",
+        "assets/kostanay-school-media/denisov-2/classroom-07.webp"
+      ]
     },
     {
       "id": "kostanay-denisov-3",
@@ -583,7 +594,20 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/qarabalyq-1/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/qarabalyq-1/classroom-01.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-02.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-03.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-04.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-05.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-06.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-07.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-08.webp",
+        "assets/kostanay-school-media/qarabalyq-1/classroom-09.webp"
+      ]
     },
     {
       "id": "kostanay-qarabalyq-2",
@@ -602,7 +626,15 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/qarabalyq-2/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/qarabalyq-2/classroom-01.webp",
+        "assets/kostanay-school-media/qarabalyq-2/classroom-02.webp",
+        "assets/kostanay-school-media/qarabalyq-2/classroom-03.webp",
+        "assets/kostanay-school-media/qarabalyq-2/classroom-04.webp"
+      ]
     },
     {
       "id": "kostanay-qarabalyq-3",
@@ -621,7 +653,15 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/qarabalyq-3/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/qarabalyq-3/classroom-01.webp",
+        "assets/kostanay-school-media/qarabalyq-3/classroom-02.webp",
+        "assets/kostanay-school-media/qarabalyq-3/classroom-03.webp",
+        "assets/kostanay-school-media/qarabalyq-3/classroom-04.webp"
+      ]
     },
     {
       "id": "kostanay-qarasu-1",
@@ -763,7 +803,20 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/kostanay-district-4/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/kostanay-district-4/classroom-01.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-02.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-03.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-04.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-05.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-06.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-07.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-08.webp",
+        "assets/kostanay-school-media/kostanay-district-4/classroom-09.webp"
+      ]
     },
     {
       "id": "kostanay-kostanay-district-5",
@@ -782,7 +835,15 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/kostanay-district-5/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/kostanay-district-5/classroom-01.webp",
+        "assets/kostanay-school-media/kostanay-district-5/classroom-02.webp",
+        "assets/kostanay-school-media/kostanay-district-5/classroom-03.webp",
+        "assets/kostanay-school-media/kostanay-district-5/classroom-04.webp"
+      ]
     },
     {
       "id": "kostanay-kostanay-district-6",
@@ -877,7 +938,15 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/nauryzym-1/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/nauryzym-1/classroom-01.webp",
+        "assets/kostanay-school-media/nauryzym-1/classroom-02.webp",
+        "assets/kostanay-school-media/nauryzym-1/classroom-03.webp",
+        "assets/kostanay-school-media/nauryzym-1/classroom-04.webp"
+      ]
     },
     {
       "id": "kostanay-nauryzym-2",
@@ -896,7 +965,14 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/nauryzym-2/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/nauryzym-2/classroom-01.webp",
+        "assets/kostanay-school-media/nauryzym-2/classroom-02.webp",
+        "assets/kostanay-school-media/nauryzym-2/classroom-03.webp"
+      ]
     },
     {
       "id": "kostanay-nauryzym-3",
@@ -1143,7 +1219,15 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/fedorov-1/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/fedorov-1/classroom-01.webp",
+        "assets/kostanay-school-media/fedorov-1/classroom-02.webp",
+        "assets/kostanay-school-media/fedorov-1/classroom-03.webp",
+        "assets/kostanay-school-media/fedorov-1/classroom-04.webp"
+      ]
     },
     {
       "id": "kostanay-fedorov-2",
@@ -1162,7 +1246,18 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/fedorov-2/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/fedorov-2/classroom-01.webp",
+        "assets/kostanay-school-media/fedorov-2/classroom-02.webp",
+        "assets/kostanay-school-media/fedorov-2/classroom-03.webp",
+        "assets/kostanay-school-media/fedorov-2/classroom-04.webp",
+        "assets/kostanay-school-media/fedorov-2/classroom-05.webp",
+        "assets/kostanay-school-media/fedorov-2/classroom-06.webp",
+        "assets/kostanay-school-media/fedorov-2/classroom-07.webp"
+      ]
     },
     {
       "id": "kostanay-fedorov-3",
@@ -1181,7 +1276,15 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/fedorov-3/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/fedorov-3/classroom-01.webp",
+        "assets/kostanay-school-media/fedorov-3/classroom-02.webp",
+        "assets/kostanay-school-media/fedorov-3/classroom-03.webp",
+        "assets/kostanay-school-media/fedorov-3/classroom-04.webp"
+      ]
     },
     {
       "id": "kostanay-fedorov-4",
@@ -1200,7 +1303,14 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/fedorov-4/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kostanay-school-media/fedorov-4/classroom-01.webp",
+        "assets/kostanay-school-media/fedorov-4/classroom-02.webp",
+        "assets/kostanay-school-media/fedorov-4/classroom-03.webp"
+      ]
     },
     {
       "id": "kostanay-rudny-1",
