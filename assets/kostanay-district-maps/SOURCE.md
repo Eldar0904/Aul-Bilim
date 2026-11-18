@@ -1,0 +1,1 @@
+Boundary data: © OpenStreetMap contributors (ODbL), via [Administrative boundaries of Kazakhstan](https://psfsogdc.maps.arcgis.com/home/item.html?id=e7c6ab14781c4729a1cb20ffef9cde0d). [OpenStreetMap copyright and license](https://www.openstreetmap.org/copyright).

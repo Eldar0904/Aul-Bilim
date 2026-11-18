@@ -348,7 +348,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/denisov-2/classroom-06.webp",
         "assets/kostanay-school-media/denisov-2/classroom-07.webp"
       ],
-      "youtube": "b1Av_rvL-Lc"
+      "youtube": "b1Av_rvL-Lc",
+      "mapImage": "assets/kostanay-district-maps/denisov.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-denisov-3",
@@ -619,7 +621,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/qarabalyq-1/classroom-08.webp",
         "assets/kostanay-school-media/qarabalyq-1/classroom-09.webp"
       ],
-      "youtube": "iV6vc2va0ks"
+      "youtube": "iV6vc2va0ks",
+      "mapImage": "assets/kostanay-district-maps/qarabalyq.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-qarabalyq-2",
@@ -647,7 +651,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/qarabalyq-2/classroom-03.webp",
         "assets/kostanay-school-media/qarabalyq-2/classroom-04.webp"
       ],
-      "youtube": "KnC55fJkLL8"
+      "youtube": "KnC55fJkLL8",
+      "mapImage": "assets/kostanay-district-maps/qarabalyq.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-qarabalyq-3",
@@ -675,7 +681,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/qarabalyq-3/classroom-03.webp",
         "assets/kostanay-school-media/qarabalyq-3/classroom-04.webp"
       ],
-      "youtube": "JxefLAW03eA"
+      "youtube": "JxefLAW03eA",
+      "mapImage": "assets/kostanay-district-maps/qarabalyq.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-qarasu-1",
@@ -744,7 +752,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/qarasu-3/classroom-4.webp",
         "assets/kostanay-school-media/qarasu-3/classroom-5.webp"
       ],
-      "youtube": "St8i3WkVaY4"
+      "youtube": "St8i3WkVaY4",
+      "mapImage": "assets/kostanay-district-maps/qarasu.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-kostanay-district-1",
@@ -836,7 +846,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/kostanay-district-4/classroom-08.webp",
         "assets/kostanay-school-media/kostanay-district-4/classroom-09.webp"
       ],
-      "youtube": "BI8i8ZCdXVs"
+      "youtube": "BI8i8ZCdXVs",
+      "mapImage": "assets/kostanay-district-maps/kostanay-district.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-kostanay-district-5",
@@ -864,7 +876,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/kostanay-district-5/classroom-03.webp",
         "assets/kostanay-school-media/kostanay-district-5/classroom-04.webp"
       ],
-      "youtube": "0ecucJaa2O4"
+      "youtube": "0ecucJaa2O4",
+      "mapImage": "assets/kostanay-district-maps/kostanay-district.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-kostanay-district-6",
@@ -969,7 +983,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/nauryzym-1/classroom-03.webp",
         "assets/kostanay-school-media/nauryzym-1/classroom-04.webp"
       ],
-      "youtube": "unhKDdZrEQs"
+      "youtube": "unhKDdZrEQs",
+      "mapImage": "assets/kostanay-district-maps/nauryzym.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-nauryzym-2",
@@ -996,7 +1012,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/nauryzym-2/classroom-02.webp",
         "assets/kostanay-school-media/nauryzym-2/classroom-03.webp"
       ],
-      "youtube": "ep_Y5-voYqk"
+      "youtube": "ep_Y5-voYqk",
+      "mapImage": "assets/kostanay-district-maps/nauryzym.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-nauryzym-3",
@@ -1258,7 +1276,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-1/classroom-03.webp",
         "assets/kostanay-school-media/fedorov-1/classroom-04.webp"
       ],
-      "youtube": "XrHBWrZ82js"
+      "youtube": "XrHBWrZ82js",
+      "mapImage": "assets/kostanay-district-maps/fedorov.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-fedorov-2",
@@ -1289,7 +1309,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-2/classroom-06.webp",
         "assets/kostanay-school-media/fedorov-2/classroom-07.webp"
       ],
-      "youtube": "KkTGv-klw9g"
+      "youtube": "KkTGv-klw9g",
+      "mapImage": "assets/kostanay-district-maps/fedorov.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-fedorov-3",
@@ -1317,7 +1339,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-3/classroom-03.webp",
         "assets/kostanay-school-media/fedorov-3/classroom-04.webp"
       ],
-      "youtube": "52pXMLq-NOw"
+      "youtube": "52pXMLq-NOw",
+      "mapImage": "assets/kostanay-district-maps/fedorov.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "kostanay-fedorov-4",
@@ -1344,7 +1368,9 @@ window.KOSTANAY_SCHOOLS = {
         "assets/kostanay-school-media/fedorov-4/classroom-02.webp",
         "assets/kostanay-school-media/fedorov-4/classroom-03.webp"
       ],
-      "youtube": "69Hkr3UZLXk"
+      "youtube": "69Hkr3UZLXk",
+      "mapImage": "assets/kostanay-district-maps/fedorov.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "kostanay-rudny-1",
