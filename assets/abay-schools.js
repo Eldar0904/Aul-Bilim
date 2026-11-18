@@ -523,7 +523,9 @@ window.ABAY_SCHOOLS = {
       "cardImage": "assets/abay-new-media/abay-zhana-semey-1/facade.webp",
       "previousCardImage": "",
       "youtube": "fegVSvl_qOc",
-      "previousYoutube": "J2vBgEYmSvM"
+      "previousYoutube": "J2vBgEYmSvM",
+      "mapImage": "assets/abay-district-maps/zhana-semey.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "abay-zhana-semey-2",
@@ -686,7 +688,9 @@ window.ABAY_SCHOOLS = {
       "cardImage": "assets/abay-new-media/abay-makanshy-2/facade.webp",
       "previousCardImage": "",
       "youtube": "QGOGYJ6q0bs",
-      "previousYoutube": "NkcfE9YFoEo"
+      "previousYoutube": "NkcfE9YFoEo",
+      "mapImage": "assets/abay-district-maps/makanshy.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "abay-makanshy-3",
@@ -835,7 +839,9 @@ window.ABAY_SCHOOLS = {
       "cardImage": "assets/abay-new-media/abay-kurchatov-2/facade.webp",
       "previousCardImage": "",
       "youtube": "inASMKKZCt8",
-      "previousYoutube": "bagSYbImHmE"
+      "previousYoutube": "bagSYbImHmE",
+      "mapImage": "assets/abay-district-maps/zhana-semey.webp",
+      "previousMapImage": "assets/optimized/program-fitout-detail.jpg"
     },
     {
       "id": "abay-kurchatov-3",
@@ -864,7 +870,9 @@ window.ABAY_SCHOOLS = {
       "cardImage": "assets/abay-new-media/abay-kurchatov-3/facade.webp",
       "previousCardImage": "",
       "youtube": "m8LlllGjWfo",
-      "previousYoutube": "kviU-a2FgYY"
+      "previousYoutube": "kviU-a2FgYY",
+      "mapImage": "assets/abay-district-maps/zhana-semey.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "abay-beskaragai-4",

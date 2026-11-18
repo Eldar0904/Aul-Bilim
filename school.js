@@ -65,8 +65,9 @@
   function mergeSchoolOverride(base, override) {
     if (!override) return base;
     var merged = Object.assign({}, base);
-    if (typeof override.mapImage === 'string' && override.mapImage) merged.mapImage = override.mapImage;
-    else if (typeof override.image === 'string' && override.image) merged.mapImage = override.image;
+    var overrideMap = typeof override.mapImage === 'string' && override.mapImage;
+    if (!overrideMap && typeof override.image === 'string') overrideMap = override.image;
+    if (overrideMap && overrideMap !== base.previousMapImage) merged.mapImage = overrideMap;
     if (Array.isArray(override.gallery) && (override.gallery.length || !base.galleryFromBatch) && (!base.previousGallery || JSON.stringify(override.gallery) !== JSON.stringify(base.previousGallery))) merged.gallery = override.gallery.slice();
     if (override.youtube && override.youtube !== base.previousYoutube) merged.youtube = override.youtube;
     if (override.youtubeDesc) {
