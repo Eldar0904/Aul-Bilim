@@ -1405,7 +1405,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kostanay-school-media/arkalyk-3/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-arkalyk-3/ec788c47-e367-4167-a040-adc5494749cd.webp"
     },
     {
       "id": "kostanay-arkalyk-4",
@@ -1462,7 +1464,9 @@ window.KOSTANAY_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kostanay-school-media/arkalyk-6/facade.webp",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kostanay/kostanay-arkalyk-6/d7f50061-9076-4492-a175-18623fffb804.webp"
     }
   ]
 };
