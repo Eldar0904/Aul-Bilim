@@ -743,7 +743,9 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Сырдарин ауданы, ауылы Н.Ильясова көш. Абая №18",
         "ru": "Адрес: Сырдаринский district, village Н.Ильясова St. Абая №18"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-syrdarya-7/facade-drive.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "kzo-shieli-1",

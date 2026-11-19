@@ -484,7 +484,8 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Ұлытау ауданы, Жезді кенті, Сәтбаев көшесі, 9",
         "ru": "Адрес: Улытауский район, пос. Жезды, ул. Сатпаева, 9"
       },
-      "mapImage": "assets/ulytau-maps/ulytau.png?v=2"
+      "mapImage": "assets/ulytau-maps/ulytau.png?v=2",
+      "showFacadeWithoutGallery": true
     },
     {
       "id": "ulytau-karazhal-21",
@@ -501,7 +502,8 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Қаражал қаласы, Абай көшесі, 11",
         "ru": "Адрес: город Каражал, ул. Абая, 11"
       },
-      "mapImage": "assets/ulytau-maps/karazhal.png?v=2"
+      "mapImage": "assets/ulytau-maps/karazhal.png?v=2",
+      "showFacadeWithoutGallery": true
     },
     {
       "id": "ulytau-karazhal-22",
@@ -612,7 +614,8 @@ window.ULYTAU_SCHOOLS = {
         "kk": "Мекенжайы: Жезқазған қаласы, Жанасов көшесі, 15",
         "ru": "Адрес: город Жезказган, ул. Жанасова, 15"
       },
-      "mapImage": "assets/ulytau-maps/zhezkazgan.png?v=2"
+      "mapImage": "assets/ulytau-maps/zhezkazgan.png?v=2",
+      "showFacadeWithoutGallery": true
     },
     {
       "id": "ulytau-zhezkazgan-27",
