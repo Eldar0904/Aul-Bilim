@@ -308,7 +308,6 @@
     if (notFound) notFound.hidden = true;
     if (main) main.hidden = false;
 
-    var titleEl = document.getElementById('school-hero-title');
     var backLink = document.getElementById('school-back-link');
     var descEl = document.getElementById('school-desc');
     var teachersEl = document.getElementById('school-teachers');
@@ -324,12 +323,6 @@
 
     renderMapCard(school, name);
 
-    var matchedName = (window.AUL_BILIM_INSTITUTION_NAMES || {})[school.id] || {};
-    var legalName = { kk: matchedName.kk || school.kk, ru: matchedName.ru || school.ru || school.kk };
-    var institutionName = bi(legalName.kk.replace(/білім басқармасы(?:ның)?/gi, 'ББ'), legalName.ru || legalName.kk)
-      .replace(/коммунальное государственное учреждение/gi, 'КГУ')
-      .replace(/управления образования/gi, 'УО');
-    if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + institutionName);
     if (backLink) {
       backLink.href = region.id === 'almaty-2026' ? 'regions.html#region-almaty-2026' : 'regions.html#region-' + region.id + '-schools';
     }
