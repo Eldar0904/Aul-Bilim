@@ -326,7 +326,7 @@
 
     var matchedName = (window.AUL_BILIM_INSTITUTION_NAMES || {})[school.id] || {};
     var legalName = { kk: matchedName.kk || school.kk, ru: matchedName.ru || school.ru || school.kk };
-    var institutionName = bi(legalName.kk, legalName.ru || legalName.kk)
+    var institutionName = bi(legalName.kk.replace(/білім басқармасының/gi, 'ББ'), legalName.ru || legalName.kk)
       .replace(/коммунальное государственное учреждение/gi, 'КГУ')
       .replace(/управления образования/gi, 'УО');
     if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + institutionName);
