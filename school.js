@@ -324,7 +324,11 @@
 
     renderMapCard(school, name);
 
-    if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + name);
+    var legalName = school.institutionName || { kk: school.kk, ru: school.ru || school.kk };
+    var institutionName = bi(legalName.kk, legalName.ru || legalName.kk)
+      .replace(/коммуналдық мемлекеттік мекемесі/gi, 'КММ')
+      .replace(/коммунальное государственное учреждение/gi, 'КГУ');
+    if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + institutionName);
     if (backLink) {
       backLink.href = region.id === 'almaty-2026' ? 'regions.html#region-almaty-2026' : 'regions.html#region-' + region.id + '-schools';
     }
