@@ -704,7 +704,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қ. Сарань, микроауданы 2, үй 15 б",
         "ru": "Адрес: Karaganda Region, Сарань, микроdistrict 2, No. 15 б"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "g4aRRUkn-9o"
     },
     {
       "id": "karaganda-saran-5",
@@ -742,7 +743,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қала Сарань, елдімекен Актас, көш. Космиче, құр. 11",
         "ru": "Адрес: Karaganda Region, city Сарань, settlement Актас, Street Космическая, Bldg. 11"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "lmpc0B2xA6A"
     },
     {
       "id": "karaganda-saran-7",
@@ -990,7 +992,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы г Темиртау көш. Абая құр. 39/2",
         "ru": "Адрес: Karaganda Region г Темиртау Street Абая Bldg. 39/2"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "Kcb7xwGOTx4"
     },
     {
       "id": "karaganda-temirtau-3",
@@ -1344,7 +1347,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, көш. Химиков 60/1",
         "ru": "Адрес: Karaganda Region, Темиртау, St. Химиков 60/1"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "Bv1P9fPNxSc"
     },
     {
       "id": "karaganda-temirtau-21",
@@ -1458,7 +1462,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қ. Темиртау, елдімекен Актау 8 кв. ст-е30 Б",
         "ru": "Адрес: Karaganda Region, Темиртау, settlement Актау 8 block ст-е30 Б"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "aiQbchp9Xy0"
     },
     {
       "id": "karaganda-temirtau-27",
@@ -1515,7 +1520,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы, қала Шахтинск, көш. парковая 23/1, 101601",
         "ru": "Адрес: Karaganda Region, city Шахтинск, Street парковая 23/1, 101601"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "-_5F4xciYks"
     },
     {
       "id": "karaganda-shakhtinsk-2",
@@ -1691,7 +1697,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: ел. Шахан кв 14 6а",
         "ru": "Адрес: settl. Шахан кв 14 6а"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "EgGjpdsnphU"
     },
     {
       "id": "karaganda-shakhtinsk-11",
