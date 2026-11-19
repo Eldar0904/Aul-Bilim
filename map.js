@@ -654,7 +654,7 @@
           ? '<div class="school-card-photo"><img src="' + preview + '" alt="" loading="lazy" /></div>'
           : '<div class="school-card-photo school-card-photo--empty"></div>') +
         '<div class="school-card-body">' +
-          '<h4>' + bi((window.AUL_BILIM_INSTITUTION_NAMES || {})[s.id]?.kk || s.kk, (window.AUL_BILIM_INSTITUTION_NAMES || {})[s.id]?.ru || s.ru) + '</h4>' +
+          '<h4>' + bi(((window.AUL_BILIM_INSTITUTION_NAMES || {})[s.id]?.kk || s.kk).replace(/білім басқармасының/gi, 'ББ'), (window.AUL_BILIM_INSTITUTION_NAMES || {})[s.id]?.ru || s.ru) + '</h4>' +
           '<div class="school-card-foot">' +
             teachersHtml +
           '</div>' +
