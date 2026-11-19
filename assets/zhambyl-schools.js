@@ -603,7 +603,18 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбыл облысы Шу ауданы Сауытбек ауылы Несипбай Джанибекұлы 15",
         "ru": "Адрес: Жамбыл облысы Шу ауданы Сауытбек ауылы Несипбай Джанибекұлы 15"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-01.webp",
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-02.webp",
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-03.webp",
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-04.webp",
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-05.webp",
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-06.webp",
+        "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-07.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "jambyl-shu-mksh-2",
