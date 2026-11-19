@@ -745,7 +745,35 @@ window.KYZYLORDA_SCHOOLS = {
       },
       "image": "assets/optimized/home-fitout-classroom.jpg",
       "cardImage": "assets/kyzylorda-school-media/kzo-syrdarya-7/facade-drive.webp",
-      "previousCardImage": "assets/school-hero-placeholder.svg"
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/b6f3c8e7-87c6-44de-a1f9-cb75b602e2eb.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/496ff209-7847-4837-9bb8-ead86117e558.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/0c734e6d-6f29-46a1-8572-2a5f1c4b4fe1.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/47ab111a-de22-4aa3-9b68-7bb3c9cd3171.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/eaf291cc-f461-4f39-be60-b161d9172456.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/81b265d5-fd16-4a1f-8d22-7d909475aa73.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e3360393-1858-4462-88b8-9481c7ebfc05.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/36053e1b-3f61-46a3-874a-d529b96f72c2.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e04c7787-f5c7-4590-9196-85a8c7faaf20.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/519284c9-c8d1-45f2-b4d2-ca45a4f1da63.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e4d846df-58f9-4f1c-ac94-b60068b94955.webp"
+      ],
+      "galleryFromBatch": true,
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/b6f3c8e7-87c6-44de-a1f9-cb75b602e2eb.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/496ff209-7847-4837-9bb8-ead86117e558.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/0c734e6d-6f29-46a1-8572-2a5f1c4b4fe1.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/47ab111a-de22-4aa3-9b68-7bb3c9cd3171.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/eaf291cc-f461-4f39-be60-b161d9172456.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/81b265d5-fd16-4a1f-8d22-7d909475aa73.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e3360393-1858-4462-88b8-9481c7ebfc05.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/36053e1b-3f61-46a3-874a-d529b96f72c2.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e04c7787-f5c7-4590-9196-85a8c7faaf20.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/519284c9-c8d1-45f2-b4d2-ca45a4f1da63.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e4d846df-58f9-4f1c-ac94-b60068b94955.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-7/physics-display-drive.webp"
+      ]
     },
     {
       "id": "kzo-shieli-1",
