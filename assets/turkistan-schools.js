@@ -129,7 +129,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "IO73NlDJBSg"
     },
     {
       "id": "turkistan-saryagash-2",
@@ -191,7 +191,7 @@ window.TURKISTAN_SCHOOLS = {
         "assets/turkistan-school-media/turkistan-saryagash-3/classroom-14.webp",
         "assets/turkistan-school-media/turkistan-saryagash-3/classroom-15.webp"
       ],
-      "youtube": "",
+      "youtube": "pHXNNqGffbk",
       "galleryFromBatch": true
     },
     {
@@ -215,7 +215,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/saryagash.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "6ULjOlvSofk"
     },
     {
       "id": "turkistan-saryagash-5",
@@ -445,7 +445,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "tbwPHyk6EMY"
     },
     {
       "id": "turkistan-kazygurt-3",
@@ -606,7 +606,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/kazygurt.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "FTx-kLLbtwg"
     },
     {
       "id": "turkistan-otyrar-1",
@@ -629,7 +629,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "1t-OyM5hHHY"
     },
     {
       "id": "turkistan-otyrar-2",
@@ -675,7 +675,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "Qz0RYk0GIzA"
     },
     {
       "id": "turkistan-otyrar-4",
@@ -744,7 +744,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/otyrar.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "hf-Oyc7cJn4"
     },
     {
       "id": "turkistan-sauran-1",
@@ -1288,7 +1288,7 @@ window.TURKISTAN_SCHOOLS = {
         "assets/turkistan-school-media/turkistan-tolebi-5/classroom-03.webp",
         "assets/turkistan-school-media/turkistan-tolebi-5/classroom-04.webp"
       ],
-      "youtube": "",
+      "youtube": "w-YEITT69zo",
       "galleryFromBatch": true
     },
     {
@@ -1381,7 +1381,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "5VkSzzFuV3M"
     },
     {
       "id": "turkistan-tulkibas-4",
@@ -1416,7 +1416,7 @@ window.TURKISTAN_SCHOOLS = {
         "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-10.webp",
         "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-11.webp"
       ],
-      "youtube": "",
+      "youtube": "vzSFkKDKIvQ",
       "galleryFromBatch": true
     },
     {
@@ -1624,7 +1624,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "hq2V5Ubx9OQ"
     },
     {
       "id": "turkistan-arys-2",
@@ -1670,7 +1670,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "pLZMgjpVYW8"
     },
     {
       "id": "turkistan-arys-4",
@@ -1762,7 +1762,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "KdJqMa1z9h8"
     },
     {
       "id": "turkistan-sairam-3",
@@ -1831,7 +1831,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sairam.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "9nF8kO056_A"
     },
     {
       "id": "turkistan-sairam-6",
@@ -1923,7 +1923,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "T2y92fPhNV4"
     },
     {
       "id": "turkistan-keles-3",
@@ -1969,7 +1969,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "QCszhdQBRU0"
     },
     {
       "id": "turkistan-keles-5",
@@ -2015,7 +2015,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "6brS8l95M_4"
     },
     {
       "id": "turkistan-keles-7",
@@ -2222,7 +2222,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "5RFM7tzC810"
     },
     {
       "id": "turkistan-ordabasy-6",
@@ -2245,7 +2245,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/ordabasy.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "UVBiouiILLU"
     },
     {
       "id": "turkistan-maktaaral-1",
@@ -2268,7 +2268,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "QV5FKtJHagE"
     },
     {
       "id": "turkistan-maktaaral-2",
@@ -2291,7 +2291,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "k1tcSVCdH3A"
     },
     {
       "id": "turkistan-maktaaral-3",
@@ -2314,7 +2314,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "tHJRUT3XUoI"
     },
     {
       "id": "turkistan-maktaaral-4",
@@ -2383,7 +2383,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/maktaaral.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "MolOubuUV18"
     },
     {
       "id": "turkistan-maktaaral-7",
