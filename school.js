@@ -327,8 +327,8 @@
     var matchedName = (window.AUL_BILIM_INSTITUTION_NAMES || {})[school.id] || {};
     var legalName = { kk: matchedName.kk || school.kk, ru: matchedName.ru || school.ru || school.kk };
     var institutionName = bi(legalName.kk, legalName.ru || legalName.kk)
-      .replace(/коммуналдық мемлекеттік мекемесі/gi, 'КММ')
-      .replace(/коммунальное государственное учреждение/gi, 'КГУ');
+      .replace(/коммунальное государственное учреждение/gi, 'КГУ')
+      .replace(/управления образования/gi, 'УО');
     if (titleEl) setLabeledText(titleEl, bi('Мекеме', 'Учреждение'), bi('Мекеме:', 'Учреждение:') + ' ' + institutionName);
     if (backLink) {
       backLink.href = region.id === 'almaty-2026' ? 'regions.html#region-almaty-2026' : 'regions.html#region-' + region.id + '-schools';
