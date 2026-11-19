@@ -411,7 +411,9 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Қармақшы ауданы, Жосалы кенті, Ы. Қасымов ✓290А",
         "ru": "Адрес: Қызылорда облысы, Қармақшы ауданы, Жосалы кенті, Ы. Қасымов ✓290А"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-karmakshy-5/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "kzo-karmakshy-6",
@@ -468,7 +470,9 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Жалағаш ауданы, Жалағаш кенті, Ұлы Жеңістің 50 жылдығы №20",
         "ru": "Адрес: Жалағаш ауданы, Жалағаш кенті, Ұлы Жеңістің 50 жылдығы №20"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-zhalagash-1/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "kzo-zhalagash-2",
@@ -791,7 +795,9 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Шиелі ауданы, Бестам ауылы, А.Құнанбаев көшесі, №39 үй",
         "ru": "Адрес: Шиелі ауданы, Бестам ауылы, А.Құнанбаев көшесі, №39 үй"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-shieli-4/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "kzo-shieli-5",
@@ -1000,7 +1006,9 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Жаңақорған ауданы Жаманбай батыр ауылдық округі Бесарық ауылы М.Кенебаев №18",
         "ru": "Адрес: Жаңақорған ауданы Жаманбай батыр ауылдық округі Бесарық ауылы М.Кенебаев №18"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-zhanakorgan-8/facade.webp",
+      "previousCardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "kzo-aral-8",
