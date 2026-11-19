@@ -690,7 +690,7 @@ window.KARAGANDA_SCHOOLS = {
     {
       "id": "karaganda-saran-4",
       "districtKey": "Сарань",
-      "kk": "мектебі-интернат №7 мектебі",
+      "kk": "№7 мектеп-интернаты",
       "ru": "Средняя школа №7",
       "location": {
         "kk": "Саран қ.",
