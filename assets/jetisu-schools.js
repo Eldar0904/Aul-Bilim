@@ -912,7 +912,13 @@ window.JETISU_SCHOOLS = {
         "kk": "Сарқан ауданы",
         "ru": "Сарканский район"
       },
-      "gallery": []
+      "gallery": [
+        "assets/jetisu-school-media/jetisu-sarkan-77/classroom-01.webp",
+        "assets/jetisu-school-media/jetisu-sarkan-77/classroom-02.webp",
+        "assets/jetisu-school-media/jetisu-sarkan-77/classroom-03.webp"
+      ],
+      "galleryFromBatch": true,
+      "cardImage": "assets/school-hero-placeholder.svg"
     },
     {
       "id": "jetisu-sarkan-78",
@@ -923,7 +929,9 @@ window.JETISU_SCHOOLS = {
         "kk": "Сарқан ауданы",
         "ru": "Сарканский район"
       },
-      "gallery": []
+      "gallery": [],
+      "cardImage": "assets/jetisu-school-media/jetisu-sarkan-78/facade.webp",
+      "showFacadeWithoutGallery": true
     },
     {
       "id": "jetisu-sarkan-79",
