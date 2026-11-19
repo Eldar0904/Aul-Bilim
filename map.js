@@ -622,6 +622,8 @@
       var hasGallery = Array.isArray(s.gallery) && s.gallery.some(function (src) {
         return typeof src === 'string' && !!src.trim();
       });
+      // Keep verified Turkistan facades visible while a school's gallery is pending.
+      if (String(s.id || '').startsWith('turkistan-') && s.cardImage && !/placeholder/i.test(s.cardImage)) return s.cardImage;
       if (!hasGallery && !String(s.youtube || '').trim()) return '';
       if (s.cardImage) return s.cardImage;
       // These regions show verified exteriors only in school card previews.

@@ -173,9 +173,26 @@ window.TURKISTAN_SCHOOLS = {
       },
       "image": "",
       "mapImage": "assets/turkistan-maps/saryagash.png",
-      "cardImage": "",
-      "gallery": [],
-      "youtube": ""
+      "cardImage": "assets/turkistan-school-media/turkistan-saryagash-3/facade.webp",
+      "gallery": [
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-01.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-02.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-03.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-04.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-05.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-06.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-07.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-08.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-09.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-10.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-11.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-12.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-13.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-14.webp",
+        "assets/turkistan-school-media/turkistan-saryagash-3/classroom-15.webp"
+      ],
+      "youtube": "",
+      "galleryFromBatch": true
     },
     {
       "id": "turkistan-saryagash-4",
@@ -795,8 +812,18 @@ window.TURKISTAN_SCHOOLS = {
       "image": "",
       "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
-      "gallery": [],
-      "youtube": ""
+      "gallery": [
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-01.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-02.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-03.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-04.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-05.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-06.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-07.webp",
+        "assets/turkistan-school-media/turkistan-sauran-3/classroom-08.webp"
+      ],
+      "youtube": "",
+      "galleryFromBatch": true
     },
     {
       "id": "turkistan-sauran-4",
@@ -1255,8 +1282,14 @@ window.TURKISTAN_SCHOOLS = {
       "image": "",
       "mapImage": "assets/turkistan-maps/tolebi.png",
       "cardImage": "",
-      "gallery": [],
-      "youtube": ""
+      "gallery": [
+        "assets/turkistan-school-media/turkistan-tolebi-5/classroom-01.webp",
+        "assets/turkistan-school-media/turkistan-tolebi-5/classroom-02.webp",
+        "assets/turkistan-school-media/turkistan-tolebi-5/classroom-03.webp",
+        "assets/turkistan-school-media/turkistan-tolebi-5/classroom-04.webp"
+      ],
+      "youtube": "",
+      "galleryFromBatch": true
     },
     {
       "id": "turkistan-tolebi-6",
@@ -1369,9 +1402,22 @@ window.TURKISTAN_SCHOOLS = {
       },
       "image": "",
       "mapImage": "assets/turkistan-maps/tulkibas.png",
-      "cardImage": "",
-      "gallery": [],
-      "youtube": ""
+      "cardImage": "assets/turkistan-school-media/turkistan-tulkibas-4/facade.webp",
+      "gallery": [
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-01.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-02.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-03.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-04.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-05.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-06.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-07.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-08.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-09.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-10.webp",
+        "assets/turkistan-school-media/turkistan-tulkibas-4/classroom-11.webp"
+      ],
+      "youtube": "",
+      "galleryFromBatch": true
     },
     {
       "id": "turkistan-tulkibas-5",
