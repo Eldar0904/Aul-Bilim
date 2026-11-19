@@ -875,7 +875,8 @@ window.KARAGANDA_SCHOOLS = {
         "kk": "Мекенжай: Қарағанды облысы Каркаралин ауданы елдімекен Карагайлы 19 кв., құр. 5А",
         "ru": "Адрес: Karaganda Region Каркаралинский district settlement Карагайлы 19 block, Bldg. 5А"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "gP6KPEilvZI"
     },
     {
       "id": "karaganda-karkaraly-7",
