@@ -324,7 +324,8 @@
 
     renderMapCard(school, name);
 
-    var legalName = school.institutionName || { kk: school.kk, ru: school.ru || school.kk };
+    var matchedName = (window.AUL_BILIM_INSTITUTION_NAMES || {})[school.id] || {};
+    var legalName = { kk: matchedName.kk || school.kk, ru: matchedName.ru || school.ru || school.kk };
     var institutionName = bi(legalName.kk, legalName.ru || legalName.kk)
       .replace(/коммуналдық мемлекеттік мекемесі/gi, 'КММ')
       .replace(/коммунальное государственное учреждение/gi, 'КГУ');
