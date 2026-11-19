@@ -69,7 +69,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Арал ауданы, пос Жаксыкылыш, ул Жаксыкылыш №70",
         "ru": "Адрес: Kyzylorda Region, Аральский district, пос Жаксыкылыш, ул Жаксыкылыш №70"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "uk6tbEetYwA"
     },
     {
       "id": "kzo-aral-2",
@@ -88,7 +89,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы,Арал ауданы, ст Камыстыбас, көш. Камыстыбас, 74",
         "ru": "Адрес: Kyzylorda Region,Аральский district, ст Камыстыбас, St. Камыстыбас, 74"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "3MW9rPjLVA8"
     },
     {
       "id": "kzo-aral-3",
@@ -145,7 +147,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы,Арал ауданы, стан. Сексеул , көш. Алтын орда, 7",
         "ru": "Адрес: Kyzylorda Region,Аральский district, stn. Сексеул , St. Алтын орда, 7"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "5I-GViGxQzQ"
     },
     {
       "id": "kzo-aral-6",
@@ -164,7 +167,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы,Арал ауданы, стан. Сексеул , көш. А.Байтурсынов 1А",
         "ru": "Адрес: Kyzylorda Region,Аральский district, stn. Сексеул , St. А.Байтурсынов 1А"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "XjxKEhJsNvY"
     },
     {
       "id": "kzo-aral-7",
@@ -183,7 +187,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы,Арал ауданы, стан. Сексеул , көш. Алтын орда, 9",
         "ru": "Адрес: Kyzylorda Region,Аральский district, stn. Сексеул , St. Алтын орда, 9"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "vLR6cjGUYCo"
     },
     {
       "id": "kzo-kazaly-1",
@@ -202,7 +207,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы,Қазалы ауданы, стан. Айтеке би , көш. Ш.Айманов, 4",
         "ru": "Адрес: Kyzylorda Region,Казалинский district, stn. Айтеке би , St. Ш.Айманов, 4"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "NTib1y91pD8"
     },
     {
       "id": "kzo-kazaly-2",
@@ -221,7 +227,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Қазалы ауданы, ст Айтеке би, ул Ж.Аймауытов,66В",
         "ru": "Адрес: Kyzylorda Region, Казалинский district, ст Айтеке би, ул Ж.Аймауытов,66В"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "IW22Qsr2F2I"
     },
     {
       "id": "kzo-kazaly-3",
@@ -259,7 +266,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қорқыт ата 13В",
         "ru": "Адрес: Қорқыт ата 13В"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "WW-Xe25dfHc"
     },
     {
       "id": "kzo-kazaly-5",
@@ -335,7 +343,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы,Қармақшы ауданы,пос Жосалы,көш. Умирова,27в",
         "ru": "Адрес: Kyzylorda Region,Кармакшинский district,пос Жосалы,Street Умирова,27в"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "YmcEm-YAx1M"
     },
     {
       "id": "kzo-karmakshy-2",
@@ -354,7 +363,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Қармақшы ауданы, аул Акжар, ул Ораз Ахун №12",
         "ru": "Адрес: Kyzylorda Region, Кармакшинский district, аул Акжар, ул Ораз Ахун №12"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "NdJiFme3kEU"
     },
     {
       "id": "kzo-karmakshy-3",
@@ -392,7 +402,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қармақшы ауданы, Ақтөбе ауылы, Кеңсе көшесі №18",
         "ru": "Адрес: Қармақшы ауданы, Ақтөбе ауылы, Кеңсе көшесі №18"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "S0cSCKOUA2o"
     },
     {
       "id": "kzo-karmakshy-5",
@@ -413,7 +424,8 @@ window.KYZYLORDA_SCHOOLS = {
       },
       "image": "assets/optimized/home-fitout-classroom.jpg",
       "cardImage": "assets/kyzylorda-school-media/kzo-karmakshy-5/facade.webp",
-      "previousCardImage": "assets/school-hero-placeholder.svg"
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "youtube": "HqEOd69vfng"
     },
     {
       "id": "kzo-karmakshy-6",
@@ -432,7 +444,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Қармақшы ауданы, Төретам кен",
         "ru": "Адрес: Қызылорда облысы, Қармақшы ауданы, Төретам кен"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "syxXp7BcJSA"
     },
     {
       "id": "kzo-karmakshy-7",
@@ -451,7 +464,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Қармақшы ауданы, Ақай ауылы",
         "ru": "Адрес: Қызылорда облысы, Қармақшы ауданы, Ақай ауылы"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "m8VyBu0CKOE"
     },
     {
       "id": "kzo-zhalagash-1",
@@ -472,7 +486,8 @@ window.KYZYLORDA_SCHOOLS = {
       },
       "image": "assets/optimized/program-fitout-detail.jpg",
       "cardImage": "assets/kyzylorda-school-media/kzo-zhalagash-1/facade.webp",
-      "previousCardImage": "assets/school-hero-placeholder.svg"
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "youtube": "tCYWh32SjbE"
     },
     {
       "id": "kzo-zhalagash-2",
@@ -510,7 +525,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Жалағаш ауданы, Жалағаш кенті, Абай 61",
         "ru": "Адрес: Жалағаш ауданы, Жалағаш кенті, Абай 61"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "CMDrd6DPmu4"
     },
     {
       "id": "kzo-zhalagash-4",
@@ -529,7 +545,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Жалағаш ауданы, Жалағаш кенті, Қазыбек би 40",
         "ru": "Адрес: Жалағаш ауданы, Жалағаш кенті, Қазыбек би 40"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "WxYyn1l7mV4"
     },
     {
       "id": "kzo-zhalagash-5",
@@ -567,7 +584,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Бұқарбай батыр аулы",
         "ru": "Адрес: Бұқарбай батыр аулы"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "LfdELojyV-U"
     },
     {
       "id": "kzo-zhalagash-7",
@@ -586,7 +604,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Жалағаш ауданы, Темірбек Жүргенов ауылы, М.Нұрылдаев №25",
         "ru": "Адрес: Жалағаш ауданы, Темірбек Жүргенов ауылы, М.Нұрылдаев №25"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "RtUx8b0udBM"
     },
     {
       "id": "kzo-syrdarya-1",
@@ -605,7 +624,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Сырдария ауданы Тереңөзек кенті Қонаев №23",
         "ru": "Адрес: Сырдария ауданы Тереңөзек кенті Қонаев №23"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "ElNLWY1gh48"
     },
     {
       "id": "kzo-syrdarya-2",
@@ -624,7 +644,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Сырдария ауданы, ауылы Шаган А.Атакаев №3А",
         "ru": "Адрес: Kyzylorda Region, Сырдарьинский district, village Шаган А.Атакаев №3А"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "gSeC7d_aMrQ"
     },
     {
       "id": "kzo-syrdarya-3",
@@ -643,7 +664,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Сырдария ауданы, ауылы Аманкелді Мәзқожаев №20",
         "ru": "Адрес: Kyzylorda Region, Сырдарьинский district, village Аманкелді Мәзқожаев №20"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "ZrsldC1GGW8"
     },
     {
       "id": "kzo-syrdarya-4",
@@ -662,7 +684,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Сырдария ауданы, ауылы Когалыколь, көш. М.Ауезова,№10",
         "ru": "Адрес: Kyzylorda Region, Сырдарьинский district, village Когалыколь, St. М.Ауезова,№10"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "kl8VuhGpzfg"
     },
     {
       "id": "kzo-syrdarya-5",
@@ -681,7 +704,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Сырдария ауданы, ауылы Ширкейли, көш. Ж.Нурсейтов 1Г",
         "ru": "Адрес: Kyzylorda Region, Сырдарьинский district, village Ширкейли, St. Ж.Нурсейтов 1Г"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "f3cn-pRvxIQ"
     },
     {
       "id": "kzo-syrdarya-6",
@@ -987,7 +1011,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Жаңақорған ауданы, Жайылма ауылы, Б.Сансызбай №21",
         "ru": "Адрес: Жаңақорған ауданы, Жайылма ауылы, Б.Сансызбай №21"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "pmte-_fypvI"
     },
     {
       "id": "kzo-zhanakorgan-8",
@@ -1008,7 +1033,8 @@ window.KYZYLORDA_SCHOOLS = {
       },
       "image": "assets/optimized/program-fitout-detail.jpg",
       "cardImage": "assets/kyzylorda-school-media/kzo-zhanakorgan-8/facade.webp",
-      "previousCardImage": "assets/school-hero-placeholder.svg"
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "youtube": "4KhiQoXAi_o"
     },
     {
       "id": "kzo-aral-8",
@@ -1046,7 +1072,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Арал ауданы, ауылы Акбасты, көш. Акбасты №87",
         "ru": "Адрес: Kyzylorda Region, Аральский district, village Акбасты, Street Акбасты №87"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "JlYcIU1K4NY"
     },
     {
       "id": "kzo-aral-10",
@@ -1103,7 +1130,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Арал ауданы, Аманоткел сел округ, ауылы Акшатау, ул Акшатау 30",
         "ru": "Адрес: Kyzylorda Region, Аралский district, Аманоткелский селский округ, village Акшатау, ул Акшатау 30"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "ffmwKlmvC7g"
     },
     {
       "id": "kzo-kazaly-8",
@@ -1122,7 +1150,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Қазалы ауданы, ау. Шили, ШИЛИ, 24А",
         "ru": "Адрес: Kyzylorda Region, Казалинский district, v. Шили, ШИЛИ, 24А"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "hm0CDhsUnag"
     },
     {
       "id": "kzo-shieli-8",
@@ -1160,7 +1189,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Шиелі ауданы а.о. Енбекши, ауылы Косуйенки, көш. Каратау №15",
         "ru": "Адрес: Шиелийский district А/о Енбекши, village Косуйенки, Street Каратау №15"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "GBUHu-1XITM"
     }
   ]
 };
