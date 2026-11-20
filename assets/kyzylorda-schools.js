@@ -889,7 +889,8 @@ window.KYZYLORDA_SCHOOLS = {
         "assets/kyzylorda-school-media/kzo-shieli-5/classroom-11.webp",
         "assets/kyzylorda-school-media/kzo-shieli-5/classroom-12.webp",
         "assets/kyzylorda-school-media/kzo-shieli-5/classroom-13.webp"
-      ]
+      ],
+      "youtube": "9282Ss2ouWo"
     },
     {
       "id": "kzo-shieli-6",

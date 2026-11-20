@@ -658,7 +658,8 @@ window.ZHAMBYL_SCHOOLS = {
         "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-09.webp",
         "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-10.webp",
         "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-11.webp"
-      ]
+      ],
+      "youtube": "2GweyWihDXA"
     },
     {
       "id": "jambyl-shu-mksh-3",
