@@ -729,7 +729,8 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбылская область,Байзакский район,Бурылский сельский округ,село бурыл,027 учетный квартал,земельный участок №292",
         "ru": "Адрес: Жамбылская область,Байзакский район,Бурылский сельский округ,село бурыл,027 учетный квартал,земельный участок №292"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "XFcq56duIgU"
     },
     {
       "id": "jambyl-baizak-fhb-8",
@@ -1052,7 +1053,8 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Қордай ауданы,Қордай ауылы, Жібек-жолы№393Б",
         "ru": "Адрес: Қордай ауданы,Қордай ауылы, Жібек-жолы№393Б"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "gkhOg1jGT9M"
     },
     {
       "id": "jambyl-merke-fhb-4",
