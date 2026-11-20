@@ -634,7 +634,31 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбыл облысы Шу ауданы Еңбекші ауылы Т.Өмірбеков көшесі №42",
         "ru": "Адрес: Жамбыл облысы Шу ауданы Еңбекші ауылы Т.Өмірбеков көшесі №42"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "previousCardImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/7df987be-9b59-4ad6-b15b-aba90e59cb40.webp",
+      "cardImage": "assets/jambyl-school-media/jambyl-shu-mksh-2/facade-drive.webp",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/90a73380-a741-4d53-a927-9c2e2029a072.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/53f7da1d-c8b1-4565-872c-e5d6eee71382.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/40ab48c2-384f-4dc0-a5f0-83df0cf8732a.webp"
+      ],
+      "galleryFromBatch": true,
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/90a73380-a741-4d53-a927-9c2e2029a072.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/53f7da1d-c8b1-4565-872c-e5d6eee71382.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/40ab48c2-384f-4dc0-a5f0-83df0cf8732a.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-01.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-02.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-03.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-04.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-05.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-06.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-07.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-08.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-09.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-10.webp",
+        "assets/jambyl-school-media/jambyl-shu-mksh-2/classroom-drive-11.webp"
+      ]
     },
     {
       "id": "jambyl-shu-mksh-3",
