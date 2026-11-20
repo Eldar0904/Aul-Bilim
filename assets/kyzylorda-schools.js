@@ -773,7 +773,8 @@ window.KYZYLORDA_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/519284c9-c8d1-45f2-b4d2-ca45a4f1da63.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-7/e4d846df-58f9-4f1c-ac94-b60068b94955.webp",
         "assets/kyzylorda-school-media/kzo-syrdarya-7/physics-display-drive.webp"
-      ]
+      ],
+      "youtube": "Yq0iTLeX0NY"
     },
     {
       "id": "kzo-shieli-1",
