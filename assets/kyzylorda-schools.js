@@ -872,7 +872,24 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Чиилий ауданы, Шиелі ауылы А.Тажибаева көш. Доспан-Шайык №1",
         "ru": "Адрес: Kyzylorda Region, Чиилийский district, Шиелийский village А.Тажибаева Street Доспан-Шайык №1"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-shieli-5/facade.webp",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-01.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-02.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-03.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-04.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-05.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-06.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-07.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-08.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-09.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-10.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-11.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-12.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-5/classroom-13.webp"
+      ]
     },
     {
       "id": "kzo-shieli-6",
