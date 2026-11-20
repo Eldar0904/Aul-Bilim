@@ -1070,7 +1070,8 @@ window.ZHAMBYL_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a2550f31-6e85-4b9a-a4ef-0e7ace3a46b3.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a8b6552e-1064-4936-b266-db7f3b1e85d2.webp",
         "assets/jambyl-school-media/jambyl-korday-fhb-5/classroom-drive-01.webp"
-      ]
+      ],
+      "youtube": "IZsBwAox3nQ"
     },
     {
       "id": "jambyl-korday-fhb-6",
@@ -1433,7 +1434,8 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбыл облысы, Талас ауданы, Т.Төлебаев, №47 ғимарат",
         "ru": "Адрес: Жамбыл облысы, Талас ауданы, Т.Төлебаев, №47 ғимарат"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "youtube": "dLu2nlTWY6U"
     },
     {
       "id": "jambyl-talas-fhb-5",

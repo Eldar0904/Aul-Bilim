@@ -831,7 +831,8 @@ window.KYZYLORDA_SCHOOLS = {
         "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-11.webp"
       ],
       "previousCardImage": "assets/school-hero-placeholder.svg",
-      "cardImage": "assets/kyzylorda-school-media/kzo-shieli-1/facade-drive.webp"
+      "cardImage": "assets/kyzylorda-school-media/kzo-shieli-1/facade-drive.webp",
+      "youtube": "KPBFWx5bELM"
     },
     {
       "id": "kzo-shieli-2",
