@@ -104,7 +104,7 @@
 
   var REGION_SCHOOL_PACKS = [
     { id: 'jetisu', global: 'JETISU_SCHOOLS', stats: { cabinets: '240', teachers: '2 700+', cabinetsPlanned: true, teachersPlanned: true }, desc: { kk: 'Жетісу облысындағы жобалық мектептердің тізімі.', ru: 'Список школ проекта в области Жетісу.' } },
-    { id: 'ulytau', global: 'ULYTAU_SCHOOLS', stats: { cabinets: '90', teachers: '150+', cabinetsPlanned: true }, desc: { kk: 'Ұлытау облысындағы 30 жобалық мектептің тізімі.', ru: 'Список 30 проектных школ Улытауской области.' } },
+    { id: 'ulytau', global: 'ULYTAU_SCHOOLS', stats: { cabinets: '90', teachers: '395', cabinetsPlanned: true }, desc: { kk: 'Ұлытау облысындағы 30 жобалық мектептің тізімі.', ru: 'Список 30 проектных школ Улытауской области.' } },
     { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', stats: { cabinets: '≈300', teachers: '4 600+', cabinetsPlanned: true }, desc: { kk: 'Түркістан облысындағы 100 жобалық мектептің тізімі.', ru: 'Список 100 проектных школ Туркестанской области.' } },
     {
       id: 'west-kazakhstan',
