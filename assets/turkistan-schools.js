@@ -767,7 +767,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "9qh-5GuIx44"
     },
     {
       "id": "turkistan-sauran-2",
@@ -822,7 +822,7 @@ window.TURKISTAN_SCHOOLS = {
         "assets/turkistan-school-media/turkistan-sauran-3/classroom-07.webp",
         "assets/turkistan-school-media/turkistan-sauran-3/classroom-08.webp"
       ],
-      "youtube": "",
+      "youtube": "CheMOAUD2W4",
       "galleryFromBatch": true
     },
     {
@@ -869,7 +869,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sauran.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "zrwV6Q6Gp5k"
     },
     {
       "id": "turkistan-sozak-1",
@@ -892,7 +892,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "LXRZZQYs58s"
     },
     {
       "id": "turkistan-sozak-2",
@@ -915,7 +915,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "jiD3aNT1d9M"
     },
     {
       "id": "turkistan-sozak-3",
@@ -961,7 +961,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/sozak.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "VBzkP-oTIhw"
     },
     {
       "id": "turkistan-sozak-5",
@@ -1030,7 +1030,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "ECXj7zl22fE"
     },
     {
       "id": "turkistan-zhetysai-3",
@@ -1053,7 +1053,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "BUIlksM_-Ag"
     },
     {
       "id": "turkistan-zhetysai-4",
@@ -1076,7 +1076,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "5InMVvHVePI"
     },
     {
       "id": "turkistan-zhetysai-5",
@@ -1099,7 +1099,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "_Mnr24K86is"
     },
     {
       "id": "turkistan-zhetysai-6",
@@ -1122,7 +1122,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/zhetysai.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "4GL7VFMueHs"
     },
     {
       "id": "turkistan-zhetysai-7",
@@ -1440,7 +1440,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/tulkibas.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "bVEQqEAAvTY"
     },
     {
       "id": "turkistan-tulkibas-6",
@@ -1486,7 +1486,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "lPdaQahdUEE"
     },
     {
       "id": "turkistan-shardara-2",
@@ -1555,7 +1555,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "r1iKEHWvSgA"
     },
     {
       "id": "turkistan-shardara-5",
@@ -1601,7 +1601,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/shardara.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "Xhdxs-WbMEM"
     },
     {
       "id": "turkistan-arys-1",
@@ -2038,7 +2038,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/keles.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "HiqyV13gjBQ"
     },
     {
       "id": "turkistan-keles-8",

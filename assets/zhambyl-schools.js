@@ -614,7 +614,8 @@ window.ZHAMBYL_SCHOOLS = {
         "assets/zhambyl-school-media/jambyl-shu-mksh-1/classroom-07.webp"
       ],
       "galleryFromBatch": true,
-      "cardImage": "assets/school-hero-placeholder.svg"
+      "cardImage": "assets/school-hero-placeholder.svg",
+      "youtube": "Jj57rVP_hAY"
     },
     {
       "id": "jambyl-shu-mksh-2",

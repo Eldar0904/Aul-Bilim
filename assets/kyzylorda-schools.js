@@ -565,7 +565,8 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Аққұм ауылы",
         "ru": "Адрес: Аққұм ауылы"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "youtube": "PrAHzc4rqEI"
     },
     {
       "id": "kzo-zhalagash-6",

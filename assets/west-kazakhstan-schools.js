@@ -524,7 +524,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-zhanibek-3/classroom-01.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-3/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-3/classroom-03.webp"
-      ]
+      ],
+      "youtube": "Lj4JM7ElbmU"
     },
     {
       "id": "bko-kaztalov-1",
