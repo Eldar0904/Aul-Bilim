@@ -103,9 +103,9 @@
   ];
 
   var REGION_SCHOOL_PACKS = [
-    { id: 'jetisu', global: 'JETISU_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Жетісу облысындағы жобалық мектептердің тізімі.', ru: 'Список школ проекта в области Жетісу.' } },
-    { id: 'ulytau', global: 'ULYTAU_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Ұлытау облысындағы 30 жобалық мектептің тізімі.', ru: 'Список 30 проектных школ Улытауской области.' } },
-    { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', stats: { cabinets: '—', teachers: '—' }, desc: { kk: 'Түркістан облысындағы 100 жобалық мектептің тізімі.', ru: 'Список 100 проектных школ Туркестанской области.' } },
+    { id: 'jetisu', global: 'JETISU_SCHOOLS', stats: { cabinets: '240', teachers: '2 700+', cabinetsPlanned: true, teachersPlanned: true }, desc: { kk: 'Жетісу облысындағы жобалық мектептердің тізімі.', ru: 'Список школ проекта в области Жетісу.' } },
+    { id: 'ulytau', global: 'ULYTAU_SCHOOLS', stats: { cabinets: '90', teachers: '150+', cabinetsPlanned: true }, desc: { kk: 'Ұлытау облысындағы 30 жобалық мектептің тізімі.', ru: 'Список 30 проектных школ Улытауской области.' } },
+    { id: 'turkistan', global: 'TURKISTAN_SCHOOLS', stats: { cabinets: '≈300', teachers: '4 600+', cabinetsPlanned: true }, desc: { kk: 'Түркістан облысындағы 100 жобалық мектептің тізімі.', ru: 'Список 100 проектных школ Туркестанской области.' } },
     {
       id: 'west-kazakhstan',
       global: 'WEST_KAZAKHSTAN_SCHOOLS',
@@ -172,7 +172,7 @@
     {
       id: 'jambyl',
       global: 'ZHAMBYL_SCHOOLS',
-      stats: { cabinets: '—', teachers: '—' },
+      stats: { cabinets: '207', teachers: '≈3 000' },
       desc: {
         kk: 'Жамбыл облысындағы 30 мектептің тізімі және байланыс деректері.',
         ru: 'Список из 30 школ Жамбылской области и контактные данные.'
@@ -181,7 +181,7 @@
     {
       id: 'vko',
       global: 'VKO_SCHOOLS',
-      stats: { cabinets: '—', teachers: '—' },
+      stats: { cabinets: '151', teachers: '1 200', cabinetsPlanned: true, teachersPlanned: true },
       desc: {
         kk: 'Шығыс Қазақстан облысындағы МКШ және ФХБ мектептерінің тізімі.',
         ru: 'Список школ МКШ и ФХБ Восточно-Казахстанской области.'
@@ -202,11 +202,7 @@
           return { kk: d.kk, ru: d.ru, n: d.n, slug: d.slug };
         });
         r.schools = data.schools;
-        r.stats = {
-          schools: String(data.schools.length),
-          cabinets: pack.stats.cabinets,
-          teachers: pack.stats.teachers
-        };
+        r.stats = Object.assign({ schools: String(data.schools.length) }, pack.stats);
         r.desc = pack.desc;
         break;
       }
@@ -222,9 +218,10 @@
       var o = map[r.id];
       if (!o) return;
       if (!r.stats) r.stats = {};
-      if (o.schools != null && String(o.schools).trim() !== '') r.stats.schools = String(o.schools).trim();
-      if (o.cabinets != null && String(o.cabinets).trim() !== '') r.stats.cabinets = String(o.cabinets).trim();
-      if (o.teachers != null && String(o.teachers).trim() !== '') r.stats.teachers = String(o.teachers).trim();
+      ['schools', 'cabinets', 'teachers'].forEach(function (field) {
+        var value = o[field] == null ? '' : String(o[field]).trim();
+        if (value && !/^[-–—]+$/.test(value)) r.stats[field] = value;
+      });
     });
   }
 
@@ -726,9 +723,8 @@
 
     function renderRegionStats(r) {
       if (!r.stats) return '';
-      var planned = r.stats.planned;
-      var cabinetLabel = planned ? bi('жабдықталатын кабинет', 'кабинетов к оснащению') : bi('кабинет', 'кабинетов');
-      var teacherLabel = planned ? bi('оқытылатын педагог', 'педагогов пройдут обучение') : bi('оқытылған ұстаз', 'обученных педагогов');
+      var cabinetLabel = r.stats.cabinetsPlanned ? bi('жабдықталатын кабинет', 'кабинетов к оснащению') : bi('кабинет', 'кабинетов');
+      var teacherLabel = r.stats.teachersPlanned ? bi('оқытылатын педагог', 'педагогов пройдут обучение') : bi('оқытылған ұстаз', 'обученных педагогов');
       return '<div class="region-schools-stats-bar">' +
         '<div class="rss-cell"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'школ') + '</div></div>' +
         '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + cabinetLabel + '</div></div>' +
@@ -1000,7 +996,7 @@
         id: 'almaty-2026',
         kk: 'Ауыл мектебі: тең мүмкіндік — 2026 ж.',
         ru: 'Сельская школа: равные возможности — 2026 г.',
-        stats: { schools: '75', cabinets: '184', teachers: '2 000', planned: true },
+        stats: { schools: '75', cabinets: '184', teachers: '2 000', cabinetsPlanned: true, teachersPlanned: true },
         schools: window.ALMATY_2026_SCHOOLS.schools,
         districtGroups: window.ALMATY_2026_SCHOOLS.districts
       };
