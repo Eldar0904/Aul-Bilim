@@ -726,10 +726,13 @@
 
     function renderRegionStats(r) {
       if (!r.stats) return '';
+      var planned = r.stats.planned;
+      var cabinetLabel = planned ? bi('жабдықталатын кабинет', 'кабинетов к оснащению') : bi('кабинет', 'кабинетов');
+      var teacherLabel = planned ? bi('оқытылатын педагог', 'педагогов пройдут обучение') : bi('оқытылған ұстаз', 'обученных педагогов');
       return '<div class="region-schools-stats-bar">' +
         '<div class="rss-cell"><div class="n">' + r.stats.schools + '</div><div class="l">' + bi('мектеп', 'школ') + '</div></div>' +
-        '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + bi('кабинет', 'кабинетов') + '</div></div>' +
-        '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + bi('оқытылған ұстаз', 'обученных педагогов') + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.cabinets + '</div><div class="l">' + cabinetLabel + '</div></div>' +
+        '<div class="rss-cell"><div class="n">' + r.stats.teachers + '</div><div class="l">' + teacherLabel + '</div></div>' +
       '</div>';
     }
 
@@ -997,6 +1000,7 @@
         id: 'almaty-2026',
         kk: 'Ауыл мектебі: тең мүмкіндік — 2026 ж.',
         ru: 'Сельская школа: равные возможности — 2026 г.',
+        stats: { schools: '75', cabinets: '184', teachers: '2 000', planned: true },
         schools: window.ALMATY_2026_SCHOOLS.schools,
         districtGroups: window.ALMATY_2026_SCHOOLS.districts
       };
