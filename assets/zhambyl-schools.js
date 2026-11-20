@@ -90,7 +90,28 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбыл облысы,Байзақ ауданы,Сеңкібай ауылы Сатпаева №1/Б",
         "ru": "Адрес: Жамбыл облысы,Байзақ ауданы,Сеңкібай ауылы Сатпаева №1/Б"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/3eb86c1c-e2a4-497e-8cba-88dc4317ee36.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/5bbe1d32-162e-4e44-8e10-0422d30f527c.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/03c42d7a-5ae7-4c18-82fd-deeae6744845.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/cba8ac2c-38be-4fae-83f7-ef905be10195.webp"
+      ],
+      "galleryFromBatch": true,
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/3eb86c1c-e2a4-497e-8cba-88dc4317ee36.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/5bbe1d32-162e-4e44-8e10-0422d30f527c.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/03c42d7a-5ae7-4c18-82fd-deeae6744845.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-1/cba8ac2c-38be-4fae-83f7-ef905be10195.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-01.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-02.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-03.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-04.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-05.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-06.webp",
+        "assets/jambyl-school-media/jambyl-baizak-mksh-1/classroom-drive-07.webp"
+      ],
+      "cardImage": "assets/jambyl-school-media/jambyl-baizak-mksh-1/facade-drive.webp"
     },
     {
       "id": "jambyl-baizak-mksh-2",
@@ -755,7 +776,21 @@ window.ZHAMBYL_SCHOOLS = {
         "ru": "Адрес: Жамбылская область,Байзакский район,Бурылский сельский округ,село бурыл,027 учетный квартал,земельный участок №292"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg",
-      "youtube": "XFcq56duIgU"
+      "youtube": "XFcq56duIgU",
+      "galleryFromBatch": true,
+      "gallery": [
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-01.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-02.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-03.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-04.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-05.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-06.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-07.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-08.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-09.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-10.webp",
+        "assets/jambyl-school-media/jambyl-baizak-fhb-7/classroom-drive-11.webp"
+      ]
     },
     {
       "id": "jambyl-baizak-fhb-8",
@@ -1021,7 +1056,21 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбыл облысы, Қордай ауданы, Қордай ауылы, Жібек -жолы көшесі 300",
         "ru": "Адрес: Жамбыл облысы, Қордай ауданы, Қордай ауылы, Жібек -жолы көшесі 300"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/3c8ff801-de7f-4d87-9bee-29b779daab24.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/1cd5ea38-bec6-486c-a64b-84f1de60c986.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a2550f31-6e85-4b9a-a4ef-0e7ace3a46b3.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a8b6552e-1064-4936-b266-db7f3b1e85d2.webp"
+      ],
+      "galleryFromBatch": true,
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/3c8ff801-de7f-4d87-9bee-29b779daab24.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/1cd5ea38-bec6-486c-a64b-84f1de60c986.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a2550f31-6e85-4b9a-a4ef-0e7ace3a46b3.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a8b6552e-1064-4936-b266-db7f3b1e85d2.webp",
+        "assets/jambyl-school-media/jambyl-korday-fhb-5/classroom-drive-01.webp"
+      ]
     },
     {
       "id": "jambyl-korday-fhb-6",
@@ -1079,7 +1128,8 @@ window.ZHAMBYL_SCHOOLS = {
         "ru": "Адрес: Қордай ауданы,Қордай ауылы, Жібек-жолы№393Б"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg",
-      "youtube": "gkhOg1jGT9M"
+      "youtube": "gkhOg1jGT9M",
+      "cardImage": "assets/jambyl-school-media/jambyl-korday-fhb-8/facade-drive.webp"
     },
     {
       "id": "jambyl-merke-fhb-4",

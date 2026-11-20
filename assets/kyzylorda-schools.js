@@ -725,7 +725,22 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Қызылорда облысы, Сырдария ауданы, ауылы Бесарык, көш. А.Дуйсенбаева,№29",
         "ru": "Адрес: Kyzylorda Region, Сырдарьинский district, village Бесарык, St. А.Дуйсенбаева,№29"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-6/f9ce4f59-e5bb-4029-868e-3201e61e09b7.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-6/d76fb5ed-71b9-482d-ac96-cd2155b0c654.webp"
+      ],
+      "galleryFromBatch": true,
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-6/f9ce4f59-e5bb-4029-868e-3201e61e09b7.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-syrdarya-6/d76fb5ed-71b9-482d-ac96-cd2155b0c654.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-6/classroom-drive-01.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-6/classroom-drive-02.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-6/classroom-drive-03.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-6/classroom-drive-04.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-6/classroom-drive-05.webp",
+        "assets/kyzylorda-school-media/kzo-syrdarya-6/classroom-drive-06.webp"
+      ]
     },
     {
       "id": "kzo-syrdarya-7",
@@ -794,7 +809,29 @@ window.KYZYLORDA_SCHOOLS = {
         "kk": "Мекенжай: Шиелі ауданы ауылы Акмая ,ул Абая 57",
         "ru": "Адрес: Шиелийский district village Акмая ,ул Абая 57"
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-shieli-1/894e75d8-ae95-4957-a2e8-a48aaa61d0d7.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-shieli-1/7008953d-84bc-4b31-b610-aa7d55a55053.webp"
+      ],
+      "galleryFromBatch": true,
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-shieli-1/894e75d8-ae95-4957-a2e8-a48aaa61d0d7.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/kyzylorda/kzo-shieli-1/7008953d-84bc-4b31-b610-aa7d55a55053.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-01.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-02.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-03.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-04.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-05.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-06.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-07.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-08.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-09.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-10.webp",
+        "assets/kyzylorda-school-media/kzo-shieli-1/classroom-drive-11.webp"
+      ],
+      "previousCardImage": "assets/school-hero-placeholder.svg",
+      "cardImage": "assets/kyzylorda-school-media/kzo-shieli-1/facade-drive.webp"
     },
     {
       "id": "kzo-shieli-2",
