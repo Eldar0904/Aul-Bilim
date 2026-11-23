@@ -1647,7 +1647,7 @@ window.TURKISTAN_SCHOOLS = {
       "mapImage": "assets/turkistan-maps/arys.png",
       "cardImage": "",
       "gallery": [],
-      "youtube": ""
+      "youtube": "b_d7jfnbCgA"
     },
     {
       "id": "turkistan-arys-3",
