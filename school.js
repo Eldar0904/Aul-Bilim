@@ -31,9 +31,11 @@
 
   function publicSchoolDescription(value) {
     return String(value || '')
+      .replace(/\\[rn]/g, ' ')
       .replace(/(?:директоры?|директор)\s*:\s*[\s\S]*?(?=(?:мекен\s*[-–]?\s*жай|мекенжай|адрес)\s*[:：]|$)/gi, '')
       .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '')
       .replace(/(?:e-?mail|эл\.?\s*почта|электрон(?:ный|дық)\s*(?:адрес|пошта)?|телефон|тел\.?|phone)\s*[:：-]?\s*(?:\+?\d[\d\s()\-]{5,}\d?)/gi, '')
+      .replace(/\be-?mail\s*[:：-]?/gi, '')
       .replace(/\s{2,}/g, ' ')
       .replace(/\s*[,;|]\s*[,;|]+/g, ', ')
       .replace(/[,;|]\s*$/g, '')
