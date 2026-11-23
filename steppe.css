@@ -1275,6 +1275,9 @@ body.map-schools-open .region-schools-block {
   align-items: center;
   gap: 14px;
 }
+@media (min-width: 901px) {
+  .school-hero-grid .school-carousel-controls { min-height: 34px; }
+}
 .school-carousel-arrow {
   width: 34px;
   height: 34px;
