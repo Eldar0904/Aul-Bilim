@@ -1914,7 +1914,9 @@ window.ZHAMBYL_SCHOOLS = {
         "kk": "Мекенжайы: Жамбыл облысы Шу ауданы Шу қаласы С.Шәкіров көшесі 3А",
         "ru": "Адрес: Жамбыл облысы Шу ауданы Шу қаласы С.Шәкіров көшесі 3А"
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "cardImage": "assets/jambyl-school-media/jambyl-shu-fhb-5/facade-drive.webp",
+      "showFacadeWithoutGallery": true
     },
     {
       "id": "jambyl-shu-fhb-6",
