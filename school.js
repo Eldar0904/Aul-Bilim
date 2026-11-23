@@ -343,6 +343,13 @@
       else descEl.textContent = description;
     }
 
+    var equipmentNote = document.getElementById('school-equipment-note');
+    if (equipmentNote) {
+      var equippedSchools = window.AUL_BILIM_ADDITIONAL_EQUIPMENT || [];
+      equipmentNote.hidden = equippedSchools.indexOf(school.id) === -1;
+      equipmentNote.textContent = equipmentNote.hidden ? '' : 'Мектеп кабинеттерінде қосымша жабдықталу жүргізілді.';
+    }
+
     if (teachersEl) {
       if (school.teachers != null) {
         teachersEl.hidden = false;
