@@ -1225,7 +1225,9 @@ window.ZHAMBYL_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-zhualy-fhb-9/2f2bb211-d8e4-4469-9929-9183d453e6ca.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-zhualy-fhb-9/ce8e4e2a-31d2-410b-817d-85fceda9fd40.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-zhualy-fhb-9/4e96bcbf-c20d-4538-9980-d20ae35cc5e0.webp"
-      ]
+      ],
+      "cardImage": "assets/jambyl-school-media/jambyl-zhualy-fhb-9/facade-drive.webp",
+      "showFacadeWithoutGallery": true
     },
     {
       "id": "jambyl-korday-fhb-4",
