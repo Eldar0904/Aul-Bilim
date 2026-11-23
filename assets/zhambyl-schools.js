@@ -526,7 +526,9 @@ window.ZHAMBYL_SCHOOLS = {
       "excludedClassroomImages": [
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/22ed03ac-98fb-4f50-a255-19d823bfa000.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/73612aba-54a2-418a-b89b-e67837e9742d.webp"
-      ]
+      ],
+      "mapImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-moyynkum-fhb-5/81d7a064-ae72-48a5-9105-554af92e259c.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "jambyl-t-ryskulov-mksh-1",
@@ -1009,7 +1011,9 @@ window.ZHAMBYL_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/053fe011-2570-4d09-81e0-e26afc1dabc9.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/76d6db61-177c-4b00-8347-71c8764206a0.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/cbabda75-88ed-4b37-bd68-9f93c1b5b5ee.webp"
-      ]
+      ],
+      "mapImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-zhambyl-fhb-4/108fb68e-f06c-4c74-9558-f755be80abb2.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "jambyl-zhambyl-fhb-6",
@@ -1077,7 +1081,9 @@ window.ZHAMBYL_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/bf9c0b92-dd81-4c95-bd17-63cd1debf183.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/9f57c8fa-c1ac-4089-a850-8c079c7ddecc.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/b86b1d7d-1715-44b6-8976-dced03d69ed3.webp"
-      ]
+      ],
+      "mapImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-zhambyl-fhb-4/108fb68e-f06c-4c74-9558-f755be80abb2.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "jambyl-zhualy-fhb-4",
@@ -1693,7 +1699,9 @@ window.ZHAMBYL_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/4493d0a0-ad37-4b3e-92b0-ed3d006bf9c4.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/28dc872e-73a2-4681-b2fd-9b60d725fb28.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/f4f7884e-589e-431e-a1c0-cff195388b59.webp"
-      ]
+      ],
+      "mapImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-sarysu-fhb-5/08c99b4b-ebdd-4646-a8c2-b5cc7daded77.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "jambyl-sarysu-fhb-8",
@@ -1713,7 +1721,9 @@ window.ZHAMBYL_SCHOOLS = {
         "ru": "Адрес: Аул .ЖАЙЫЛМА, УЛИЦА ТЫНЫШБАЙ РАКЫМ, 1"
       },
       "image": "assets/optimized/home-fitout-classroom.jpg",
-      "showFacadeWithoutGallery": true
+      "showFacadeWithoutGallery": true,
+      "mapImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-sarysu-fhb-5/08c99b4b-ebdd-4646-a8c2-b5cc7daded77.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "jambyl-talas-fhb-4",
@@ -1761,7 +1771,9 @@ window.ZHAMBYL_SCHOOLS = {
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/797f49cc-c7c5-4747-acab-a4f84fdca2cb.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/e7a79c29-548a-4483-be58-0f2ed7ad3cac.webp",
         "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-baizak-mksh-2/a1bf6599-e295-4dc2-aeb9-caafd3206c48.webp"
-      ]
+      ],
+      "mapImage": "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/jambyl/jambyl-talas-mksh-2/4b2af2cc-d945-48d2-8414-2ed7297f06a7.webp",
+      "previousMapImage": "assets/optimized/home-fitout-classroom.jpg"
     },
     {
       "id": "jambyl-talas-fhb-6",
