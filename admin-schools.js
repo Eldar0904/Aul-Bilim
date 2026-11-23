@@ -175,7 +175,9 @@ window.adminSchools = (function () {
     if (typeof o.mapImage === 'string' && o.mapImage) merged.mapImage = o.mapImage;
     else if (typeof o.image === 'string' && o.image) merged.mapImage = o.image;
     if (typeof o.cardImage === 'string' && o.cardImage) merged.cardImage = o.cardImage;
-    if (Array.isArray(o.gallery)) merged.gallery = o.gallery.slice();
+    if (Array.isArray(o.gallery)) {
+      merged.gallery = o.gallery.filter(function (src) { return !(base.excludedClassroomImages || []).includes(src); });
+    }
     if (o.youtube) merged.youtube = o.youtube;
     if (o.youtubeDesc) {
       merged.youtubeDesc = Object.assign({}, base.youtubeDesc || {});

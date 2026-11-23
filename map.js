@@ -578,7 +578,9 @@
       if (typeof override.cardImage === 'string' && override.cardImage && override.cardImage !== base.previousCardImage) merged.cardImage = override.cardImage;
       if (typeof override.mapImage === 'string' && override.mapImage) merged.mapImage = override.mapImage;
       else if (typeof override.image === 'string' && override.image) merged.mapImage = override.image;
-      if (Array.isArray(override.gallery) && (override.gallery.length || !base.galleryFromBatch) && (!base.previousGallery || JSON.stringify(override.gallery) !== JSON.stringify(base.previousGallery))) merged.gallery = override.gallery.slice();
+      if (Array.isArray(override.gallery) && (override.gallery.length || !base.galleryFromBatch) && (!base.previousGallery || JSON.stringify(override.gallery) !== JSON.stringify(base.previousGallery))) {
+        merged.gallery = override.gallery.filter(function (src) { return !(base.excludedClassroomImages || []).includes(src); });
+      }
       if (override.youtube && override.youtube !== base.previousYoutube) merged.youtube = override.youtube;
       if (override.youtubeDesc) {
         merged.youtubeDesc = Object.assign({}, base.youtubeDesc || {});
@@ -624,7 +626,7 @@
       if (!hasGallery && !String(s.youtube || '').trim()) return '';
       if (s.cardImage) return s.cardImage;
       // These regions show verified exteriors only in school card previews.
-      if (/^(turkistan|ulytau)-/.test(String(s.id || ''))) return '';
+      if (/^(turkistan|ulytau|jambyl)-/.test(String(s.id || ''))) return '';
       var gallery = schoolGalleryImages(s);
       if (gallery.length) return gallery[0];
       return s.mapImage || s.image || '';
