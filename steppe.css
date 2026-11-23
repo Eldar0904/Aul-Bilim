@@ -1077,6 +1077,8 @@ body.map-schools-open .region-schools-block {
   gap: 20px;
   min-width: 0;
 }
+.school-gallery-heading { font-size: 16px; color: var(--primary); margin: 0 0 10px; }
+.school-meta-below { margin-top: 20px; }
 .school-hero-media-stack {
   display: flex;
   flex-direction: column;

@@ -118,6 +118,34 @@
     return s.gallery.filter(function (src) { return !!src; });
   }
 
+  function setupBeforeCarousel(school) {
+    var images = (window.AUL_BILIM_BEFORE_GALLERIES || {})[school.id] || [];
+    var track = document.getElementById('school-before-track');
+    var prev = document.getElementById('school-before-prev');
+    var next = document.getElementById('school-before-next');
+    if (!track || !prev || !next) return;
+    var index = 0;
+    var shown = images.length ? images : [CAROUSEL_PLACEHOLDER];
+    track.replaceChildren();
+    shown.forEach(function (src, i) {
+      var slide = document.createElement('div');
+      slide.className = 'school-carousel-slide' + (i === 0 ? ' is-active' : '') + (!images.length ? ' school-carousel-slide--placeholder' : '');
+      var img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      img.loading = i ? 'lazy' : 'eager';
+      slide.appendChild(img);
+      track.appendChild(slide);
+    });
+    prev.hidden = next.hidden = images.length < 2;
+    function change(delta) {
+      index = (index + delta + shown.length) % shown.length;
+      Array.from(track.children).forEach(function (slide, i) { slide.classList.toggle('is-active', i === index); });
+    }
+    prev.onclick = function () { change(-1); };
+    next.onclick = function () { change(1); };
+  }
+
   function youtubeEmbedId(value) {
     if (!value) return null;
     var v = String(value).trim();
@@ -361,6 +389,7 @@
     }
 
     setupCarousel(images);
+    setupBeforeCarousel(school);
     if (videoFrame) renderVideo(videoFrame, school);
   }
 

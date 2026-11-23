@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="steppe.css?v=equipment-note-1" />
+<link rel="stylesheet" href="steppe.css?v=before-gallery-1" />
 </head>
 <body>
 <div class="grain"></div>
@@ -45,21 +45,25 @@
 
     <div class="school-hero-grid">
       <div class="school-hero-left">
+        <div class="school-media-card-wrap">
+          <h2 class="school-gallery-heading"><span lang="kk">Жабдықтауға дейін</span><span lang="ru">До оснащения</span></h2>
+          <div class="school-media-card"><div class="school-carousel" id="school-before-carousel"><div class="school-carousel-track" id="school-before-track"></div></div></div>
+          <div class="school-carousel-controls">
+            <button type="button" class="school-carousel-arrow" id="school-before-prev" aria-label="Previous photo">←</button>
+            <button type="button" class="school-carousel-arrow" id="school-before-next" aria-label="Next photo">→</button>
+          </div>
+        </div>
         <div class="school-map-card school-map-card--placeholder" id="school-map-card">
           <img id="school-map-img" class="school-map-photo" alt="" hidden />
           <div class="school-map-placeholder" id="school-map-placeholder" aria-hidden="true">
             <img src="assets/school-hero-placeholder.svg" alt="" />
           </div>
         </div>
-        <div class="school-hero-meta">
-          <p class="school-page-desc" id="school-desc"></p>
-          <p class="school-page-desc school-equipment-note" id="school-equipment-note" hidden></p>
-          <p class="school-page-teachers" id="school-teachers" hidden></p>
-        </div>
       </div>
 
       <div class="school-hero-media-stack">
         <div class="school-media-card-wrap">
+          <h2 class="school-gallery-heading"><span lang="kk">Жабдықтаудан кейін</span><span lang="ru">После оснащения</span></h2>
           <div class="school-media-card">
             <div class="school-carousel-col" id="school-carousel-col">
               <div class="school-carousel" id="school-carousel">
@@ -81,6 +85,11 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="school-hero-meta school-meta-below">
+      <p class="school-page-desc" id="school-desc"></p>
+      <p class="school-page-desc school-equipment-note" id="school-equipment-note" hidden></p>
+      <p class="school-page-teachers" id="school-teachers" hidden></p>
     </div>
   </section>
 </main>
@@ -160,8 +169,9 @@
 <script src="assets/almaty-2026-schools.js?v=3"></script>
 <script src="assets/school-addresses.js?v=1"></script>
 <script src="assets/school-equipment-status.js?v=1"></script>
+<script src="assets/school-before-galleries.js?v=1"></script>
 <script src="assets/institution-names.js?v=1"></script>
-<script src="school.js?v=school-meta-7"></script>
+<script src="school.js?v=before-gallery-1"></script>
 </body>
 </html>
 
