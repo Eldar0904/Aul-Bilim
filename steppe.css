@@ -1089,7 +1089,7 @@ body.map-schools-open .region-schools-block {
 .school-map-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   border-radius: 18px;
   overflow: hidden;
   background: #fff;
