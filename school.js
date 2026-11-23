@@ -347,7 +347,7 @@
     if (equipmentNote) {
       var equippedSchools = window.AUL_BILIM_ADDITIONAL_EQUIPMENT || [];
       equipmentNote.hidden = equippedSchools.indexOf(school.id) === -1;
-      equipmentNote.textContent = equipmentNote.hidden ? '' : 'Мектеп кабинеттерінде қосымша жабдықталу жүргізілді.';
+      equipmentNote.textContent = equipmentNote.hidden ? '' : '*Кабинеттер қосымша жабдықталды';
     }
 
     if (teachersEl) {
