@@ -470,7 +470,10 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": ["assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-01.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-02.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-03.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-04.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-05.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-06.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-07.webp"],
+      "galleryFromBatch": true,
+      "cardImage": "assets/west-kazakhstan-school-media/bko-zhanibek-1/facade.webp"
     },
     {
       "id": "bko-zhanibek-2",
