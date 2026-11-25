@@ -525,7 +525,26 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/home-fitout-classroom.jpg"
+      "image": "assets/optimized/home-fitout-classroom.jpg",
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/c46bff2b-793d-4c97-b167-a31a8f216d86.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/d5dd30a4-a7b5-4302-bbf3-80d540feacd6.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/6c61fa92-f7d6-47a3-a222-7b0b30228157.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/b1613885-51d0-4c49-852e-841e4b184b76.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/b7b36327-f15d-4787-a7b4-b9d03d0b8399.webp",
+        "assets/west-kazakhstan-school-media/bko-zhangala-1/pdf-new/pdf-5-0-0.webp",
+        "assets/west-kazakhstan-school-media/bko-zhangala-1/pdf-new/pdf-5-1-0.webp",
+        "assets/west-kazakhstan-school-media/bko-zhangala-1/pdf-new/pdf-10-0-0.webp",
+        "assets/west-kazakhstan-school-media/bko-zhangala-1/pdf-new/pdf-10-1-0.webp"
+      ],
+      "galleryFromBatch": true,
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/c46bff2b-793d-4c97-b167-a31a8f216d86.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/d5dd30a4-a7b5-4302-bbf3-80d540feacd6.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/6c61fa92-f7d6-47a3-a222-7b0b30228157.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/b1613885-51d0-4c49-852e-841e4b184b76.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-zhangala-1/b7b36327-f15d-4787-a7b4-b9d03d0b8399.webp"
+      ]
     },
     {
       "id": "bko-zhangala-2",
