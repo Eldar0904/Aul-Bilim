@@ -1541,7 +1541,9 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-06.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-07.webp",
-        "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-08.webp"
+        "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-08.webp",
+        "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-extra-17.webp",
+        "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-extra-18.webp"
       ]
     },
     {
