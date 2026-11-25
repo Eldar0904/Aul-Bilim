@@ -254,7 +254,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-bokeyordy-1/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-1/classroom-03.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-1/classroom-04.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/bokeyordy.webp"
     },
     {
       "id": "bko-bokeyordy-2",
@@ -281,7 +282,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-bokeyordy-2/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-2/classroom-03.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-2/classroom-04.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/bokeyordy.webp"
     },
     {
       "id": "bko-bokeyordy-3",
@@ -313,7 +315,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-bokeyordy-3/classroom-07.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-3/classroom-08.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-3/classroom-09.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/bokeyordy.webp"
     },
     {
       "id": "bko-burlin-1",
@@ -342,7 +345,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-1/classroom-04.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-1/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-1/classroom-06.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-2",
@@ -368,7 +372,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-2/classroom-01.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-2/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-2/classroom-03.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-3",
@@ -393,7 +398,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "gallery": [
         "assets/west-kazakhstan-school-media/bko-burlin-3/classroom-01.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-3/classroom-02.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-zhangala-1",
@@ -473,7 +479,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "image": "assets/optimized/program-fitout-detail.jpg",
       "gallery": ["assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-01.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-02.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-03.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-04.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-05.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-06.webp", "assets/west-kazakhstan-school-media/bko-zhanibek-1/gallery-07.webp"],
       "galleryFromBatch": true,
-      "cardImage": "assets/west-kazakhstan-school-media/bko-zhanibek-1/facade.webp"
+      "cardImage": "assets/west-kazakhstan-school-media/bko-zhanibek-1/facade.webp",
+      "mapImage": "assets/west-kazakhstan-maps/zhanibek.webp"
     },
     {
       "id": "bko-zhanibek-2",
@@ -502,7 +509,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-zhanibek-2/classroom-04.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-2/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-2/classroom-06.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/zhanibek.webp"
     },
     {
       "id": "bko-zhanibek-3",
@@ -528,7 +536,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-zhanibek-3/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-3/classroom-03.webp"
       ],
-      "youtube": "Lj4JM7ElbmU"
+      "youtube": "Lj4JM7ElbmU",
+      "mapImage": "assets/west-kazakhstan-maps/zhanibek.webp"
     },
     {
       "id": "bko-kaztalov-1",
@@ -672,7 +681,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-syrym-1/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-1/classroom-06.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-1/classroom-07.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/syrym.webp"
     },
     {
       "id": "bko-syrym-2",
@@ -701,7 +711,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-syrym-2/classroom-04.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-2/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-2/classroom-06.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/syrym.webp"
     },
     {
       "id": "bko-syrym-3",
@@ -728,7 +739,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-syrym-3/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-3/classroom-03.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-3/classroom-04.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/syrym.webp"
     },
     {
       "id": "bko-taskala-1",
@@ -1013,7 +1025,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-4/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-4/classroom-03.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-4/classroom-04.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-5",
@@ -1037,7 +1050,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
       "galleryFromBatch": true,
       "gallery": [
         "assets/west-kazakhstan-school-media/bko-burlin-5/classroom-01.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-6",
@@ -1064,7 +1078,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-6/classroom-02.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-6/classroom-03.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-6/classroom-04.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-7",
@@ -1093,7 +1108,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-7/classroom-04.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-7/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-7/classroom-06.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-8",
@@ -1125,7 +1141,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-8/classroom-07.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-8/classroom-08.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-8/classroom-09.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-burlin-9",
@@ -1154,7 +1171,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-9/classroom-04.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-9/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-9/classroom-06.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-terekty-1",
@@ -1413,7 +1431,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-burlin-10/classroom-04.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-10/classroom-05.webp",
         "assets/west-kazakhstan-school-media/bko-burlin-10/classroom-06.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/burlin.webp"
     },
     {
       "id": "bko-bokeyordy-4",
@@ -1448,7 +1467,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-bokeyordy-4/classroom-10.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-4/classroom-11.webp",
         "assets/west-kazakhstan-school-media/bko-bokeyordy-4/classroom-12.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/bokeyordy.webp"
     },
     {
       "id": "bko-zhangala-4",
@@ -1544,7 +1564,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-08.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-extra-17.webp",
         "assets/west-kazakhstan-school-media/bko-zhanibek-4/classroom-extra-18.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/zhanibek.webp"
     },
     {
       "id": "bko-kaztalov-4",
@@ -1658,7 +1679,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-syrym-4/classroom-13.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-4/classroom-14.webp",
         "assets/west-kazakhstan-school-media/bko-syrym-4/classroom-15.webp"
-      ]
+      ],
+      "mapImage": "assets/west-kazakhstan-maps/syrym.webp"
     },
     {
       "id": "bko-terekty-7",
