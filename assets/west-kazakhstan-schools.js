@@ -725,7 +725,8 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "assets/west-kazakhstan-school-media/bko-zhanibek-3/drive-new/1RImT3I3a7JbClW8l_r72iIIqbTcIv1ct.webp"
       ],
       "youtube": "Lj4JM7ElbmU",
-      "mapImage": "assets/west-kazakhstan-maps/zhanibek.webp"
+      "mapImage": "assets/west-kazakhstan-maps/zhanibek.webp",
+      "cardImage": "assets/west-kazakhstan-school-media/bko-zhanibek-3/facade-drive.webp"
     },
     {
       "id": "bko-kaztalov-1",
