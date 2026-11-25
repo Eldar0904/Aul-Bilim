@@ -770,7 +770,32 @@ window.WEST_KAZAKHSTAN_SCHOOLS = {
         "kk": "",
         "ru": ""
       },
-      "image": "assets/optimized/program-fitout-detail.jpg"
+      "image": "assets/optimized/program-fitout-detail.jpg",
+      "gallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/6a8a40b0-0d08-436a-b1e6-fb2e677896d2.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/65d80f57-721b-40af-af5b-006ed469f622.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/a12dcae9-12f6-44a2-9854-92fe5209632a.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/388cd231-508c-4f63-bf67-b34e22c5e3b4.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/7b1586f7-d92d-48b9-8475-63c0f3a4c5d7.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/ba282b7d-315d-48f2-bd17-24b8c586aa45.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/6c728a2f-5c7e-4925-87ae-20e5ce5b240e.webp",
+        "assets/west-kazakhstan-school-media/bko-kaztalov-2/archive-new/archive-2-0.webp",
+        "assets/west-kazakhstan-school-media/bko-kaztalov-2/archive-new/archive-2-1.webp",
+        "assets/west-kazakhstan-school-media/bko-kaztalov-2/archive-new/archive-2-2.webp",
+        "assets/west-kazakhstan-school-media/bko-kaztalov-2/archive-new/archive-2-3.webp",
+        "assets/west-kazakhstan-school-media/bko-kaztalov-2/archive-new/archive-2-4.webp",
+        "assets/west-kazakhstan-school-media/bko-kaztalov-2/archive-new/archive-2-5.webp"
+      ],
+      "galleryFromBatch": true,
+      "previousGallery": [
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/6a8a40b0-0d08-436a-b1e6-fb2e677896d2.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/65d80f57-721b-40af-af5b-006ed469f622.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/a12dcae9-12f6-44a2-9854-92fe5209632a.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/388cd231-508c-4f63-bf67-b34e22c5e3b4.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/7b1586f7-d92d-48b9-8475-63c0f3a4c5d7.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/ba282b7d-315d-48f2-bd17-24b8c586aa45.webp",
+        "https://aulbilim-media-api.aulbilim.workers.dev/uploads/schools/west-kazakhstan/bko-kaztalov-2/6c728a2f-5c7e-4925-87ae-20e5ce5b240e.webp"
+      ]
     },
     {
       "id": "bko-kaztalov-3",
